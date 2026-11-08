@@ -1,0 +1,332 @@
+{
+ "clock_period_ns": 10.0,
+ "tool": "3.1.0",
+ "scope": "before layout: no wire parasitics, ideal clock, serial pins and reset excluded as asynchronous; 30 % of the period reserved on each side of the array interface",
+ "runs": {
+  "ihp": {
+   "library": "IHP SG13G2 sg13g2_stdcell",
+   "trit_code": "two's complement",
+   "netlist": {
+    "cells": 8284,
+    "area_um2": 114540.2,
+    "flip_flops": 837
+   },
+   "corners": {
+    "typ_1p20V_25C": {
+     "worst_slack_by_register_ns": {
+      "u_core.s_sat": 4.71,
+      "u_core.acc": 4.858,
+      "u_core.r_piter": 5.151,
+      "u_core.amp": 5.313,
+      "arr_mask_n": 5.326,
+      "arr_mask_p": 5.326,
+      "arr_op": 5.474,
+      "u_core.pend_p": 5.556
+     },
+     "setup_wns_ns": 4.71,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.184,
+     "worst_path": {
+      "start": "arr_adc[101]",
+      "end": "u_core.s_sat",
+      "arrival_ns": 5.171,
+      "slack_ns": 4.71,
+      "cell_stages": 22
+     },
+     "worst_register_to_register": {
+      "start": "arr_row[3]",
+      "end": "arr_row[0]",
+      "arrival_ns": 4.141,
+      "slack_ns": 5.742,
+      "cell_stages": 45
+     },
+     "limit_violations": {
+      "reset_net": 840,
+      "data_slew": 0,
+      "data_capacitance": 0,
+      "data_fanout": 435
+     }
+    },
+    "slow_1p08V_125C": {
+     "worst_slack_by_register_ns": {
+      "arr_row": 3.337,
+      "u_core.s_sat": 3.398,
+      "u_core.acc": 3.642,
+      "u_core.r_piter": 4.084,
+      "arr_mask_n": 4.341,
+      "arr_mask_p": 4.341,
+      "u_core.amp": 4.342,
+      "arr_op": 4.575
+     },
+     "setup_wns_ns": 3.337,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.289,
+     "worst_path": {
+      "start": "arr_row[3]",
+      "end": "arr_row[0]",
+      "arrival_ns": 6.461,
+      "slack_ns": 3.337,
+      "cell_stages": 45
+     },
+     "worst_register_to_register": {
+      "start": "arr_row[3]",
+      "end": "arr_row[0]",
+      "arrival_ns": 6.461,
+      "slack_ns": 3.337,
+      "cell_stages": 45
+     },
+     "limit_violations": {
+      "reset_net": 840,
+      "data_slew": 0,
+      "data_capacitance": 0,
+      "data_fanout": 435
+     }
+    },
+    "fast_1p32V_m40C": {
+     "worst_slack_by_register_ns": {
+      "u_core.s_sat": 5.498,
+      "u_core.acc": 5.6,
+      "u_core.r_piter": 5.774,
+      "arr_mask_n": 5.882,
+      "arr_mask_p": 5.882,
+      "u_core.amp": 5.889,
+      "arr_op": 5.971,
+      "u_core.pend_p": 6.046
+     },
+     "setup_wns_ns": 5.498,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.123,
+     "worst_path": {
+      "start": "arr_adc[101]",
+      "end": "u_core.s_sat",
+      "arrival_ns": 4.431,
+      "slack_ns": 5.498,
+      "cell_stages": 22
+     },
+     "worst_register_to_register": {
+      "start": "arr_row[3]",
+      "end": "arr_row[0]",
+      "arrival_ns": 2.752,
+      "slack_ns": 7.17,
+      "cell_stages": 45
+     },
+     "limit_violations": {
+      "reset_net": 840,
+      "data_slew": 0,
+      "data_capacitance": 0,
+      "data_fanout": 435
+     }
+    }
+   }
+  },
+  "ihp_pnx": {
+   "library": "IHP SG13G2 sg13g2_stdcell",
+   "trit_code": "BSD-PNX",
+   "netlist": {
+    "cells": 8570,
+    "area_um2": 116843.9,
+    "flip_flops": 837
+   },
+   "corners": {
+    "typ_1p20V_25C": {
+     "worst_slack_by_register_ns": {
+      "u_core.s_sat": 4.789,
+      "u_core.acc": 4.85,
+      "arr_mask_n": 4.923,
+      "arr_mask_p": 4.995,
+      "u_core.amp": 5.142,
+      "arr_op": 5.187,
+      "u_core.pend_n": 5.419,
+      "u_core.pend_p": 5.455
+     },
+     "setup_wns_ns": 4.789,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.184,
+     "worst_path": {
+      "start": "arr_adc[121]",
+      "end": "u_core.s_sat",
+      "arrival_ns": 5.088,
+      "slack_ns": 4.789,
+      "cell_stages": 20
+     },
+     "worst_register_to_register": {
+      "start": "arr_row[3]",
+      "end": "arr_row[0]",
+      "arrival_ns": 4.276,
+      "slack_ns": 5.604,
+      "cell_stages": 47
+     },
+     "limit_violations": {
+      "reset_net": 840,
+      "data_slew": 0,
+      "data_capacitance": 0,
+      "data_fanout": 431
+     }
+    },
+    "slow_1p08V_125C": {
+     "worst_slack_by_register_ns": {
+      "arr_row": 3.098,
+      "u_core.s_sat": 3.514,
+      "u_core.acc": 3.639,
+      "arr_mask_n": 3.732,
+      "arr_mask_p": 3.834,
+      "u_core.amp": 4.074,
+      "arr_op": 4.14,
+      "u_core.pend_n": 4.5
+     },
+     "setup_wns_ns": 3.098,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.289,
+     "worst_path": {
+      "start": "arr_row[3]",
+      "end": "arr_row[0]",
+      "arrival_ns": 6.708,
+      "slack_ns": 3.098,
+      "cell_stages": 47
+     },
+     "worst_register_to_register": {
+      "start": "arr_row[3]",
+      "end": "arr_row[0]",
+      "arrival_ns": 6.708,
+      "slack_ns": 3.098,
+      "cell_stages": 47
+     },
+     "limit_violations": {
+      "reset_net": 840,
+      "data_slew": 0,
+      "data_capacitance": 0,
+      "data_fanout": 431
+     }
+    },
+    "fast_1p32V_m40C": {
+     "worst_slack_by_register_ns": {
+      "u_core.s_sat": 5.553,
+      "u_core.acc": 5.582,
+      "arr_mask_n": 5.628,
+      "arr_mask_p": 5.667,
+      "u_core.amp": 5.752,
+      "arr_op": 5.812,
+      "u_core.pend_n": 5.948,
+      "u_core.pend_p": 5.967
+     },
+     "setup_wns_ns": 5.553,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.123,
+     "worst_path": {
+      "start": "arr_adc[121]",
+      "end": "u_core.s_sat",
+      "arrival_ns": 4.373,
+      "slack_ns": 5.553,
+      "cell_stages": 20
+     },
+     "worst_register_to_register": {
+      "start": "arr_row[3]",
+      "end": "arr_row[0]",
+      "arrival_ns": 2.835,
+      "slack_ns": 7.093,
+      "cell_stages": 47
+     },
+     "limit_violations": {
+      "reset_net": 840,
+      "data_slew": 0,
+      "data_capacitance": 0,
+      "data_fanout": 431
+     }
+    }
+   }
+  },
+  "ihp_rev4": {
+   "library": "IHP SG13G2 sg13g2_stdcell",
+   "trit_code": "two's complement",
+   "rtl": "tests/equiv/rtl_rev4",
+   "netlist": {
+    "cells": 8114,
+    "area_um2": 114413.4,
+    "flip_flops": 844
+   },
+   "corners": {
+    "typ_1p20V_25C": {
+     "worst_slack_by_register_ns": {
+      "u_spi.shift_out": -4.019,
+      "u_core.s_sat": 4.531,
+      "u_core.acc": 4.813,
+      "arr_mask_n": 5.112,
+      "arr_mask_p": 5.112,
+      "u_core.amp": 5.47,
+      "arr_op": 5.474,
+      "u_core.pend_n": 5.568
+     },
+     "setup_wns_ns": -4.019,
+     "setup_tns_ns": -25.034,
+     "hold_wns_ns": 0.184,
+     "worst_path": {
+      "start": "u_core.r_piter[4]",
+      "end": "u_spi.shift_out[11]",
+      "arrival_ns": 13.894,
+      "slack_ns": -4.019,
+      "cell_stages": 96
+     },
+     "worst_register_to_register": {
+      "start": "u_core.r_piter[4]",
+      "end": "u_spi.shift_out[11]",
+      "arrival_ns": 13.894,
+      "slack_ns": -4.019,
+      "cell_stages": 96
+     },
+     "limit_violations": {
+      "reset_net": 847,
+      "data_slew": 0,
+      "data_capacitance": 0,
+      "data_fanout": 405
+     }
+    }
+   }
+  },
+  "sky130": {
+   "library": "SkyWater SKY130 sky130_fd_sc_hd",
+   "trit_code": "two's complement",
+   "netlist": {
+    "cells": 8372,
+    "area_um2": 63714.9,
+    "flip_flops": 837
+   },
+   "corners": {
+    "tt_1p80V_25C": {
+     "worst_slack_by_register_ns": {
+      "u_core.s_sat": 2.561,
+      "u_core.acc": 2.842,
+      "arr_row": 3.975,
+      "u_core.pend_n": 4.731,
+      "u_core.pend_p": 4.731,
+      "arr_mask_n": 4.757,
+      "arr_mask_p": 4.764,
+      "arr_op": 5.182
+     },
+     "setup_wns_ns": 2.561,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.331,
+     "worst_path": {
+      "start": "arr_adc[191]",
+      "end": "u_core.s_sat",
+      "arrival_ns": 7.304,
+      "slack_ns": 2.561,
+      "cell_stages": 19
+     },
+     "worst_register_to_register": {
+      "start": "arr_row[3]",
+      "end": "arr_row[0]",
+      "arrival_ns": 5.904,
+      "slack_ns": 3.975,
+      "cell_stages": 45
+     },
+     "limit_violations": {
+      "reset_net": 839,
+      "data_slew": 0,
+      "data_capacitance": 0,
+      "data_fanout": 0
+     }
+    }
+   }
+  }
+ }
+}

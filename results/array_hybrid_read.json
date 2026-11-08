@@ -1,0 +1,650 @@
+{
+ "note": "relaxation scenarios are assumptions, not data; statistics: Perez et al. 2021 (IHP 4-kbit, read right after programming)",
+ "relaxation_scenarios": {
+  "none": {
+   "lrs_mean_factor": 1.0,
+   "hrs_mean_factor": 1.0,
+   "sigma_factor": 1.0
+  },
+  "mild": {
+   "lrs_mean_factor": 0.9,
+   "hrs_mean_factor": 1.3,
+   "sigma_factor": 1.5
+  },
+  "strong": {
+   "lrs_mean_factor": 0.8,
+   "hrs_mean_factor": 1.6,
+   "sigma_factor": 2.0
+  }
+ },
+ "part_a": {
+  "LRS3 spread x1 relaxation none": {
+   "iref_uA": 25.02,
+   "at_design_reference": {
+    "reference": {
+     "nonzero_read_as_zero": 0.0,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 0.0,
+     "total": 0.0
+    },
+    "hybrid": {
+     "nonzero_read_as_zero": 0.0,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 0.0,
+     "total": 0.0
+    }
+   },
+   "best_reference": {
+    "reference": {
+     "iref_uA": 13.0,
+     "nonzero_read_as_zero": 0.0,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 0.0,
+     "total": 0.0
+    },
+    "hybrid": {
+     "iref_uA": 13.0,
+     "nonzero_read_as_zero": 0.0,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 0.0,
+     "total": 0.0
+    }
+   }
+  },
+  "LRS3 spread x1 relaxation mild": {
+   "iref_uA": 25.02,
+   "at_design_reference": {
+    "reference": {
+     "nonzero_read_as_zero": 0.0,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 0.0,
+     "total": 0.0
+    },
+    "hybrid": {
+     "nonzero_read_as_zero": 0.0,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 0.0,
+     "total": 0.0
+    }
+   },
+   "best_reference": {
+    "reference": {
+     "iref_uA": 18.5,
+     "nonzero_read_as_zero": 0.0,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 0.0,
+     "total": 0.0
+    },
+    "hybrid": {
+     "iref_uA": 18.5,
+     "nonzero_read_as_zero": 0.0,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 0.0,
+     "total": 0.0
+    }
+   }
+  },
+  "LRS3 spread x1 relaxation strong": {
+   "iref_uA": 25.02,
+   "at_design_reference": {
+    "reference": {
+     "nonzero_read_as_zero": 0.000762,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 0.0,
+     "total": 0.000508
+    },
+    "hybrid": {
+     "nonzero_read_as_zero": 0.000762,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 0.0,
+     "total": 0.000508
+    }
+   },
+   "best_reference": {
+    "reference": {
+     "iref_uA": 21.0,
+     "nonzero_read_as_zero": 6.75e-06,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 7.25e-06,
+     "total": 6.916666666666667e-06
+    },
+    "hybrid": {
+     "iref_uA": 21.0,
+     "nonzero_read_as_zero": 3e-06,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 7.25e-06,
+     "total": 4.416666666666667e-06
+    }
+   }
+  },
+  "LRS3 spread x2 relaxation none": {
+   "iref_uA": 25.02,
+   "at_design_reference": {
+    "reference": {
+     "nonzero_read_as_zero": 0.0,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 0.0,
+     "total": 0.0
+    },
+    "hybrid": {
+     "nonzero_read_as_zero": 0.0,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 0.0,
+     "total": 0.0
+    }
+   },
+   "best_reference": {
+    "reference": {
+     "iref_uA": 22.0,
+     "nonzero_read_as_zero": 0.0,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 0.0,
+     "total": 0.0
+    },
+    "hybrid": {
+     "iref_uA": 22.0,
+     "nonzero_read_as_zero": 0.0,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 0.0,
+     "total": 0.0
+    }
+   }
+  },
+  "LRS3 spread x2 relaxation mild": {
+   "iref_uA": 25.02,
+   "at_design_reference": {
+    "reference": {
+     "nonzero_read_as_zero": 0.0011815,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 0.00012175,
+     "total": 0.00082825
+    },
+    "hybrid": {
+     "nonzero_read_as_zero": 0.001121,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 0.00012175,
+     "total": 0.0007879166666666667
+    }
+   },
+   "best_reference": {
+    "reference": {
+     "iref_uA": 23.5,
+     "nonzero_read_as_zero": 0.00053,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 0.00036475,
+     "total": 0.00047491666666666667
+    },
+    "hybrid": {
+     "iref_uA": 23.0,
+     "nonzero_read_as_zero": 0.00023425,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 0.00050275,
+     "total": 0.00032375000000000004
+    }
+   }
+  },
+  "LRS3 spread x2 relaxation strong": {
+   "iref_uA": 25.02,
+   "at_design_reference": {
+    "reference": {
+     "nonzero_read_as_zero": 0.05847425,
+     "sign_flipped": 0.0001625,
+     "zero_read_as_nonzero": 0.00570575,
+     "total": 0.04099308333333333
+    },
+    "hybrid": {
+     "nonzero_read_as_zero": 0.05574725,
+     "sign_flipped": 0.000352,
+     "zero_read_as_nonzero": 0.0057115,
+     "total": 0.03930333333333333
+    }
+   },
+   "best_reference": {
+    "reference": {
+     "iref_uA": 22.0,
+     "nonzero_read_as_zero": 0.027882,
+     "sign_flipped": 0.000171,
+     "zero_read_as_nonzero": 0.01816425,
+     "total": 0.024756750000000004
+    },
+    "hybrid": {
+     "iref_uA": 21.0,
+     "nonzero_read_as_zero": 0.012426,
+     "sign_flipped": 0.0006025,
+     "zero_read_as_nonzero": 0.025956,
+     "total": 0.017337666666666668
+    }
+   }
+  },
+  "LRS3 spread x3 relaxation none": {
+   "iref_uA": 25.02,
+   "at_design_reference": {
+    "reference": {
+     "nonzero_read_as_zero": 6.475e-05,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 5.8e-05,
+     "total": 6.25e-05
+    },
+    "hybrid": {
+     "nonzero_read_as_zero": 3.3e-05,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 5.8e-05,
+     "total": 4.133333333333333e-05
+    }
+   },
+   "best_reference": {
+    "reference": {
+     "iref_uA": 25.5,
+     "nonzero_read_as_zero": 7.05e-05,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 3.9e-05,
+     "total": 6e-05
+    },
+    "hybrid": {
+     "iref_uA": 25.0,
+     "nonzero_read_as_zero": 3.3e-05,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 5.9e-05,
+     "total": 4.1666666666666665e-05
+    }
+   }
+  },
+  "LRS3 spread x3 relaxation mild": {
+   "iref_uA": 25.02,
+   "at_design_reference": {
+    "reference": {
+     "nonzero_read_as_zero": 0.0258415,
+     "sign_flipped": 0.00010675,
+     "zero_read_as_nonzero": 0.0104395,
+     "total": 0.020778666666666668
+    },
+    "hybrid": {
+     "nonzero_read_as_zero": 0.0207035,
+     "sign_flipped": 0.00030525,
+     "zero_read_as_nonzero": 0.01046525,
+     "total": 0.01749425
+    }
+   },
+   "best_reference": {
+    "reference": {
+     "iref_uA": 24.0,
+     "nonzero_read_as_zero": 0.02169175,
+     "sign_flipped": 0.0001045,
+     "zero_read_as_nonzero": 0.0146635,
+     "total": 0.019418666666666667
+    },
+    "hybrid": {
+     "iref_uA": 22.5,
+     "nonzero_read_as_zero": 0.0081145,
+     "sign_flipped": 0.00038625,
+     "zero_read_as_nonzero": 0.02385125,
+     "total": 0.013617583333333334
+    }
+   }
+  },
+  "LRS3 spread x3 relaxation strong": {
+   "iref_uA": 25.02,
+   "at_design_reference": {
+    "reference": {
+     "nonzero_read_as_zero": 0.16775,
+     "sign_flipped": 0.0046895,
+     "zero_read_as_nonzero": 0.06306,
+     "total": 0.1359796666666667
+    },
+    "hybrid": {
+     "nonzero_read_as_zero": 0.13979125,
+     "sign_flipped": 0.00937075,
+     "zero_read_as_nonzero": 0.06411875,
+     "total": 0.12081425000000001
+    }
+   },
+   "best_reference": {
+    "reference": {
+     "iref_uA": 22.5,
+     "nonzero_read_as_zero": 0.13531,
+     "sign_flipped": 0.00481025,
+     "zero_read_as_nonzero": 0.100408,
+     "total": 0.12688283333333333
+    },
+    "hybrid": {
+     "iref_uA": 20.5,
+     "nonzero_read_as_zero": 0.0564545,
+     "sign_flipped": 0.0133375,
+     "zero_read_as_nonzero": 0.14536075,
+     "total": 0.09498158333333333
+    }
+   }
+  },
+  "LRS1 spread x1 relaxation none": {
+   "iref_uA": 10.25,
+   "at_design_reference": {
+    "reference": {
+     "nonzero_read_as_zero": 6.875e-05,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 6.3e-05,
+     "total": 6.683333333333334e-05
+    },
+    "hybrid": {
+     "nonzero_read_as_zero": 3.3e-05,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 6.3e-05,
+     "total": 4.2999999999999995e-05
+    }
+   },
+   "best_reference": {
+    "reference": {
+     "iref_uA": 10.5,
+     "nonzero_read_as_zero": 7.25e-05,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 3.55e-05,
+     "total": 6.016666666666667e-05
+    },
+    "hybrid": {
+     "iref_uA": 10.5,
+     "nonzero_read_as_zero": 5.325e-05,
+     "sign_flipped": 0.0,
+     "zero_read_as_nonzero": 3.55e-05,
+     "total": 4.7333333333333336e-05
+    }
+   }
+  },
+  "LRS1 spread x1 relaxation mild": {
+   "iref_uA": 10.25,
+   "at_design_reference": {
+    "reference": {
+     "nonzero_read_as_zero": 0.02906875,
+     "sign_flipped": 0.0001805,
+     "zero_read_as_nonzero": 0.01818475,
+     "total": 0.025561083333333335
+    },
+    "hybrid": {
+     "nonzero_read_as_zero": 0.02000625,
+     "sign_flipped": 0.00043175,
+     "zero_read_as_nonzero": 0.01826875,
+     "total": 0.01971491666666667
+    }
+   },
+   "best_reference": {
+    "reference": {
+     "iref_uA": 10.5,
+     "nonzero_read_as_zero": 0.03164,
+     "sign_flipped": 0.0001735,
+     "zero_read_as_nonzero": 0.0141565,
+     "total": 0.025927833333333334
+    },
+    "hybrid": {
+     "iref_uA": 10.0,
+     "nonzero_read_as_zero": 0.0163105,
+     "sign_flipped": 0.00047375,
+     "zero_read_as_nonzero": 0.02308675,
+     "total": 0.01888508333333333
+    }
+   }
+  },
+  "LRS1 spread x1 relaxation strong": {
+   "iref_uA": 10.25,
+   "at_design_reference": {
+    "reference": {
+     "nonzero_read_as_zero": 0.18519475,
+     "sign_flipped": 0.008681,
+     "zero_read_as_nonzero": 0.11663625,
+     "total": 0.16812925
+    },
+    "hybrid": {
+     "nonzero_read_as_zero": 0.131979,
+     "sign_flipped": 0.016253,
+     "zero_read_as_nonzero": 0.12057525,
+     "total": 0.13901308333333331
+    }
+   },
+   "best_reference": {
+    "reference": {
+     "iref_uA": 10.5,
+     "nonzero_read_as_zero": 0.19285575,
+     "sign_flipped": 0.00839025,
+     "zero_read_as_nonzero": 0.10251575,
+     "total": 0.16833591666666667
+    },
+    "hybrid": {
+     "iref_uA": 9.5,
+     "nonzero_read_as_zero": 0.0930225,
+     "sign_flipped": 0.0197465,
+     "zero_read_as_nonzero": 0.173551,
+     "total": 0.13302966666666668
+    }
+   }
+  },
+  "LRS1 spread x2 relaxation none": {
+   "iref_uA": 10.25,
+   "at_design_reference": {
+    "reference": {
+     "nonzero_read_as_zero": 0.0444485,
+     "sign_flipped": 0.0005365,
+     "zero_read_as_nonzero": 0.04453625,
+     "total": 0.04483541666666666
+    },
+    "hybrid": {
+     "nonzero_read_as_zero": 0.02225525,
+     "sign_flipped": 0.00139125,
+     "zero_read_as_nonzero": 0.04505725,
+     "total": 0.030783416666666664
+    }
+   },
+   "best_reference": {
+    "reference": {
+     "iref_uA": 11.0,
+     "nonzero_read_as_zero": 0.0482265,
+     "sign_flipped": 0.0005155,
+     "zero_read_as_nonzero": 0.0271615,
+     "total": 0.0415485
+    },
+    "hybrid": {
+     "iref_uA": 10.5,
+     "nonzero_read_as_zero": 0.0260225,
+     "sign_flipped": 0.00130525,
+     "zero_read_as_nonzero": 0.038261,
+     "total": 0.030972166666666672
+    }
+   }
+  },
+  "LRS1 spread x2 relaxation mild": {
+   "iref_uA": 10.25,
+   "at_design_reference": {
+    "reference": {
+     "nonzero_read_as_zero": 0.23548875,
+     "sign_flipped": 0.01823175,
+     "zero_read_as_nonzero": 0.21003425,
+     "total": 0.23915841666666668
+    },
+    "hybrid": {
+     "nonzero_read_as_zero": 0.13459475,
+     "sign_flipped": 0.0353645,
+     "zero_read_as_nonzero": 0.2243055,
+     "total": 0.1880746666666667
+    }
+   },
+   "best_reference": {
+    "reference": {
+     "iref_uA": 11.5,
+     "nonzero_read_as_zero": 0.25513025,
+     "sign_flipped": 0.01673825,
+     "zero_read_as_nonzero": 0.14742175,
+     "total": 0.23038625000000001
+    },
+    "hybrid": {
+     "iref_uA": 10.0,
+     "nonzero_read_as_zero": 0.1247225,
+     "sign_flipped": 0.036699,
+     "zero_read_as_nonzero": 0.24005075,
+     "total": 0.18763125
+    }
+   }
+  },
+  "LRS1 spread x2 relaxation strong": {
+   "iref_uA": 10.25,
+   "at_design_reference": {
+    "reference": {
+     "nonzero_read_as_zero": 0.3860335,
+     "sign_flipped": 0.06521125,
+     "zero_read_as_nonzero": 0.344315,
+     "total": 0.41560149999999996
+    },
+    "hybrid": {
+     "nonzero_read_as_zero": 0.23022775,
+     "sign_flipped": 0.109548,
+     "zero_read_as_nonzero": 0.3931715,
+     "total": 0.3575743333333334
+    }
+   },
+   "best_reference": {
+    "reference": {
+     "iref_uA": 12.0,
+     "nonzero_read_as_zero": 0.41549275,
+     "sign_flipped": 0.05910825,
+     "zero_read_as_nonzero": 0.26530625,
+     "total": 0.4048360833333334
+    },
+    "hybrid": {
+     "iref_uA": 9.5,
+     "nonzero_read_as_zero": 0.19708725,
+     "sign_flipped": 0.1182225,
+     "zero_read_as_nonzero": 0.44053775,
+     "total": 0.35705241666666665
+    }
+   }
+  },
+  "LRS1 spread x3 relaxation none": {
+   "iref_uA": 10.25,
+   "at_design_reference": {
+    "reference": {
+     "nonzero_read_as_zero": 0.16570625,
+     "sign_flipped": 0.008356,
+     "zero_read_as_nonzero": 0.16613325,
+     "total": 0.17141925000000002
+    },
+    "hybrid": {
+     "nonzero_read_as_zero": 0.08289825,
+     "sign_flipped": 0.0183505,
+     "zero_read_as_nonzero": 0.17454975,
+     "total": 0.12568241666666666
+    }
+   },
+   "best_reference": {
+    "reference": {
+     "iref_uA": 11.5,
+     "nonzero_read_as_zero": 0.17507425,
+     "sign_flipped": 0.00784775,
+     "zero_read_as_nonzero": 0.11217175,
+     "total": 0.1593385833333333
+    },
+    "hybrid": {
+     "iref_uA": 10.5,
+     "nonzero_read_as_zero": 0.09026975,
+     "sign_flipped": 0.01764425,
+     "zero_read_as_nonzero": 0.16126825,
+     "total": 0.12569875
+    }
+   }
+  },
+  "LRS1 spread x3 relaxation mild": {
+   "iref_uA": 10.25,
+   "at_design_reference": {
+    "reference": {
+     "nonzero_read_as_zero": 0.3561705,
+     "sign_flipped": 0.0534,
+     "zero_read_as_nonzero": 0.338977,
+     "total": 0.38603933333333335
+    },
+    "hybrid": {
+     "nonzero_read_as_zero": 0.19373675,
+     "sign_flipped": 0.09533325,
+     "zero_read_as_nonzero": 0.38576775,
+     "total": 0.32130258333333334
+    }
+   },
+   "best_reference": {
+    "reference": {
+     "iref_uA": 13.0,
+     "nonzero_read_as_zero": 0.39368375,
+     "sign_flipped": 0.046905,
+     "zero_read_as_nonzero": 0.22932025,
+     "total": 0.37016591666666665
+    },
+    "hybrid": {
+     "iref_uA": 10.0,
+     "nonzero_read_as_zero": 0.184801,
+     "sign_flipped": 0.09744825,
+     "zero_read_as_nonzero": 0.39938175,
+     "total": 0.32129341666666666
+    }
+   }
+  },
+  "LRS1 spread x3 relaxation strong": {
+   "iref_uA": 10.25,
+   "at_design_reference": {
+    "reference": {
+     "nonzero_read_as_zero": 0.44512725,
+     "sign_flipped": 0.109535,
+     "zero_read_as_nonzero": 0.42371975,
+     "total": 0.5110147500000001
+    },
+    "hybrid": {
+     "nonzero_read_as_zero": 0.250473,
+     "sign_flipped": 0.17678325,
+     "zero_read_as_nonzero": 0.51632625,
+     "total": 0.45694624999999994
+    }
+   },
+   "best_reference": {
+    "reference": {
+     "iref_uA": 14.5,
+     "nonzero_read_as_zero": 0.50056175,
+     "sign_flipped": 0.092983,
+     "zero_read_as_nonzero": 0.3019015,
+     "total": 0.4963303333333334
+    },
+    "hybrid": {
+     "iref_uA": 10.0,
+     "nonzero_read_as_zero": 0.24236175,
+     "sign_flipped": 0.179518,
+     "zero_read_as_nonzero": 0.52696575,
+     "total": 0.45690841666666665
+    }
+   }
+  }
+ },
+ "part_b": {
+  "LRS3 spread x2 offset 2 mV": {
+   "weights": 103680,
+   "products": 600,
+   "reference_wrong_weights": 0,
+   "hybrid_wrong_weights": 0,
+   "reference_inexact_products": 0,
+   "hybrid_inexact_products": 0
+  },
+  "LRS3 spread x3 offset 2 mV": {
+   "weights": 103680,
+   "products": 600,
+   "reference_wrong_weights": 9,
+   "hybrid_wrong_weights": 7,
+   "reference_inexact_products": 56,
+   "hybrid_inexact_products": 43
+  },
+  "LRS1 spread x1 offset 2 mV": {
+   "weights": 103680,
+   "products": 600,
+   "reference_wrong_weights": 6,
+   "hybrid_wrong_weights": 4,
+   "reference_inexact_products": 36,
+   "hybrid_inexact_products": 28
+  },
+  "LRS1 spread x2 offset 2 mV": {
+   "weights": 103680,
+   "products": 600,
+   "reference_wrong_weights": 4601,
+   "hybrid_wrong_weights": 3188,
+   "reference_inexact_products": 600,
+   "hybrid_inexact_products": 600
+  }
+ }
+}

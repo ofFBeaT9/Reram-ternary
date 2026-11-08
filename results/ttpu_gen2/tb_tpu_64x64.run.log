@@ -1,0 +1,69 @@
+External memory initialized:
+  Weights: 0x0000 - 0x0FFF (64 rows × 4 words)
+  Activations: 0x1000 - 0x2FFF (64 K-steps × 32 words)
+
+================================================================
+  TPU 64×64 Array Verification Testbench (Phase 4)
+================================================================
+
+Configuration:
+  ARRAY_SIZE = 64 × 64 = 4096 PEs
+  USE_HIERARCHICAL_ARRAY = 1 (8×8 PE clusters)
+  NUM_BANKS = 32 (weight) + 64 (activation)
+  MAX_K = 4096
+
+--- Test 1: Verify Array Info (Version 2.1, 64×64) ---
+  Array Info: 0x02404020
+    Version: 0x0240 (expected: 0x0240 for v2.4)
+    Array Size: 64 (expected: 64)
+    ACC Bits: 32 (expected: 32)
+  PASS
+
+--- Test 2: Performance Counter Reset ---
+  PASS: All counters cleared
+
+--- Test 3: DMA Weight Load (64 rows) ---
+  DMA Status: 0x04000002
+    Bytes transferred: 1024
+    Transfer time: 2900000
+  PASS
+
+--- Test 4: DMA Activation Load (64 K-steps) ---
+  Bytes transferred: 8192
+  Transfer time: 23100000
+  PASS
+
+--- Test 5: Run 64×64×64 GEMM ---
+  Starting GEMM: M=64, N=64, K=64
+  Total MACs: 262144
+  TPU Status: 0x00000100
+    Busy: 0, Done: 1, Error: 0
+    Compute time: 2640000
+  PASS
+
+--- Test 6: Performance Counter Analysis ---
+  PERF_CNT_0 (cycles while busy): 257
+  PERF_CNT_1 (zero-skip count): 0
+    Expected ~1/3 of 262144 = 87381 (for random ternary weights)
+  PERF_CNT_2 (bank conflicts): 0
+  PERF_CNT_3 (DMA bytes): 9216
+  Estimated Utilization: 24.9%
+  PASS
+
+--- Test 7: Final Error Check ---
+  PASS: No errors detected
+
+================================================================
+  Test Summary
+================================================================
+  Total Tests: 7
+  Errors: 0
+
+  *** ALL TESTS PASSED ***
+  64×64 Hierarchical Array Verification: SUCCESS
+================================================================
+
+- tb/tpu/tb_tpu_64x64.sv:538: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.053 devel
+- Verilator: $finish at 30us; walltime 0.002 s; speed 14.196 ms/s
+- Verilator: cpu 0.002 s on 1 threads; allocated 4 MB

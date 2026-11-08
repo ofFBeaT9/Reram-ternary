@@ -1,0 +1,50 @@
+LRS3 | A: BL Metal2-5 0.4um, SL Metal2-5 1um, one end | rows/read 72 | spread x1: raw rms 0.55 exact 63% | calibrated rms 0.45 exact 73% within1 100% max 2.1
+LRS3 | A: BL Metal2-5 0.4um, SL Metal2-5 1um, one end | rows/read 72 | spread x2: raw rms 0.82 exact 45% | calibrated rms 0.77 exact 49% within1 95% max 3.4
+LRS3 | A: BL Metal2-5 0.4um, SL Metal2-5 1um, one end | rows/read 24 | spread x1: raw rms 0.45 exact 73% | calibrated rms 0.43 exact 75% within1 100% max 1.9
+LRS3 | A: BL Metal2-5 0.4um, SL Metal2-5 1um, one end | rows/read 24 | spread x2: raw rms 0.76 exact 49% | calibrated rms 0.76 exact 49% within1 95% max 3.2
+LRS3 | B: BL TopMetal1, SL Metal2-5 1um, one end | rows/read 72 | spread x1: raw rms 0.43 exact 75% | calibrated rms 0.42 exact 77% within1 100% max 1.8
+LRS3 | B: BL TopMetal1, SL Metal2-5 1um, one end | rows/read 72 | spread x2: raw rms 0.74 exact 50% | calibrated rms 0.75 exact 49% within1 95% max 3.1
+LRS3 | B: BL TopMetal1, SL Metal2-5 1um, one end | rows/read 24 | spread x1: raw rms 0.41 exact 77% | calibrated rms 0.41 exact 77% within1 100% max 1.8
+LRS3 | B: BL TopMetal1, SL Metal2-5 1um, one end | rows/read 24 | spread x2: raw rms 0.74 exact 50% | calibrated rms 0.75 exact 50% within1 95% max 3.1
+LRS3 | C: BL TopMetal1, SL TopMetal1, one end | rows/read 72 | spread x1: raw rms 0.41 exact 78% | calibrated rms 0.41 exact 77% within1 100% max 1.7
+LRS3 | C: BL TopMetal1, SL TopMetal1, one end | rows/read 72 | spread x2: raw rms 0.73 exact 50% | calibrated rms 0.75 exact 50% within1 95% max 3.0
+LRS3 | C: BL TopMetal1, SL TopMetal1, one end | rows/read 24 | spread x1: raw rms 0.41 exact 78% | calibrated rms 0.41 exact 77% within1 100% max 1.7
+LRS3 | C: BL TopMetal1, SL TopMetal1, one end | rows/read 24 | spread x2: raw rms 0.73 exact 50% | calibrated rms 0.75 exact 50% within1 95% max 3.0
+LRS3 | D: BL TopMetal1, SL TopMetal1, both ends | rows/read 72 | spread x1: raw rms 0.41 exact 78% | calibrated rms 0.41 exact 77% within1 100% max 1.7
+LRS3 | D: BL TopMetal1, SL TopMetal1, both ends | rows/read 72 | spread x2: raw rms 0.73 exact 50% | calibrated rms 0.75 exact 49% within1 95% max 3.0
+LRS3 | D: BL TopMetal1, SL TopMetal1, both ends | rows/read 24 | spread x1: raw rms 0.41 exact 78% | calibrated rms 0.41 exact 77% within1 100% max 1.7
+LRS3 | D: BL TopMetal1, SL TopMetal1, both ends | rows/read 24 | spread x2: raw rms 0.73 exact 50% | calibrated rms 0.75 exact 49% within1 95% max 3.0
+LRS3 | E: ideal wires | rows/read 72 | spread x1: raw rms 0.41 exact 78% | calibrated rms 0.41 exact 77% within1 100% max 1.7
+LRS3 | E: ideal wires | rows/read 72 | spread x2: raw rms 0.73 exact 50% | calibrated rms 0.75 exact 50% within1 95% max 3.0
+LRS3 | E: ideal wires | rows/read 24 | spread x1: raw rms 0.41 exact 78% | calibrated rms 0.41 exact 77% within1 100% max 1.7
+LRS3 | E: ideal wires | rows/read 24 | spread x2: raw rms 0.73 exact 50% | calibrated rms 0.75 exact 50% within1 95% max 3.0
+LRS1 | A: BL Metal2-5 0.4um, SL Metal2-5 1um, one end | rows/read 72 | spread x1: raw rms 1.16 exact 34% | calibrated rms 1.20 exact 33% within1 79% max 5.2
+LRS1 | A: BL Metal2-5 0.4um, SL Metal2-5 1um, one end | rows/read 72 | spread x2: raw rms 2.11 exact 19% | calibrated rms 2.26 exact 18% within1 50% max 10.1
+LRS1 | A: BL Metal2-5 0.4um, SL Metal2-5 1um, one end | rows/read 24 | spread x1: raw rms 1.16 exact 34% | calibrated rms 1.20 exact 33% within1 79% max 5.2
+LRS1 | A: BL Metal2-5 0.4um, SL Metal2-5 1um, one end | rows/read 24 | spread x2: raw rms 2.13 exact 19% | calibrated rms 2.26 exact 18% within1 50% max 10.1
+LRS1 | B: BL TopMetal1, SL Metal2-5 1um, one end | rows/read 72 | spread x1: raw rms 1.16 exact 34% | calibrated rms 1.20 exact 33% within1 79% max 5.1
+LRS1 | B: BL TopMetal1, SL Metal2-5 1um, one end | rows/read 72 | spread x2: raw rms 2.13 exact 19% | calibrated rms 2.26 exact 18% within1 50% max 10.1
+LRS1 | B: BL TopMetal1, SL Metal2-5 1um, one end | rows/read 24 | spread x1: raw rms 1.17 exact 34% | calibrated rms 1.20 exact 33% within1 79% max 5.1
+LRS1 | B: BL TopMetal1, SL Metal2-5 1um, one end | rows/read 24 | spread x2: raw rms 2.14 exact 19% | calibrated rms 2.26 exact 18% within1 50% max 10.1
+LRS1 | C: BL TopMetal1, SL TopMetal1, one end | rows/read 72 | spread x1: raw rms 1.17 exact 33% | calibrated rms 1.19 exact 33% within1 79% max 5.1
+LRS1 | C: BL TopMetal1, SL TopMetal1, one end | rows/read 72 | spread x2: raw rms 2.15 exact 19% | calibrated rms 2.26 exact 18% within1 50% max 10.1
+LRS1 | C: BL TopMetal1, SL TopMetal1, one end | rows/read 24 | spread x1: raw rms 1.17 exact 33% | calibrated rms 1.20 exact 33% within1 79% max 5.1
+LRS1 | C: BL TopMetal1, SL TopMetal1, one end | rows/read 24 | spread x2: raw rms 2.15 exact 19% | calibrated rms 2.26 exact 18% within1 50% max 10.1
+LRS1 | D: BL TopMetal1, SL TopMetal1, both ends | rows/read 72 | spread x1: raw rms 1.17 exact 33% | calibrated rms 1.20 exact 33% within1 79% max 5.1
+LRS1 | D: BL TopMetal1, SL TopMetal1, both ends | rows/read 72 | spread x2: raw rms 2.15 exact 19% | calibrated rms 2.26 exact 18% within1 50% max 10.1
+LRS1 | D: BL TopMetal1, SL TopMetal1, both ends | rows/read 24 | spread x1: raw rms 1.17 exact 33% | calibrated rms 1.20 exact 33% within1 79% max 5.1
+LRS1 | D: BL TopMetal1, SL TopMetal1, both ends | rows/read 24 | spread x2: raw rms 2.15 exact 18% | calibrated rms 2.26 exact 18% within1 50% max 10.1
+LRS1 | E: ideal wires | rows/read 72 | spread x1: raw rms 1.17 exact 33% | calibrated rms 1.20 exact 33% within1 79% max 5.1
+LRS1 | E: ideal wires | rows/read 72 | spread x2: raw rms 2.15 exact 18% | calibrated rms 2.26 exact 18% within1 50% max 10.1
+LRS1 | E: ideal wires | rows/read 24 | spread x1: raw rms 1.17 exact 33% | calibrated rms 1.20 exact 33% within1 79% max 5.1
+LRS1 | E: ideal wires | rows/read 24 | spread x2: raw rms 2.15 exact 18% | calibrated rms 2.26 exact 18% within1 50% max 10.1
+LRS3 | D | rows/read 72 | spread x1 | clamp input resistance 0.2 ohm: raw rms 0.41 exact 78% | calibrated rms 0.41 exact 77% within1 100%
+LRS3 | D | rows/read 72 | spread x1 | clamp input resistance 1 ohm: raw rms 0.41 exact 78% | calibrated rms 0.41 exact 77% within1 100%
+LRS3 | D | rows/read 72 | spread x1 | clamp input resistance 5 ohm: raw rms 0.41 exact 77% | calibrated rms 0.41 exact 77% within1 100%
+LRS3 | D | rows/read 72 | spread x1 | clamp input resistance 20 ohm: raw rms 0.46 exact 72% | calibrated rms 0.42 exact 77% within1 100%
+LRS3 | D | rows/read 72 | spread x1 | clamp input resistance 50 ohm: raw rms 0.67 exact 56% | calibrated rms 0.43 exact 76% within1 100%
+LRS3 | D | rows/read 72 | spread x1 | clamp offset 0.5 mV, mirror gain error 0%: raw rms 0.41 | calibrated rms 0.41 exact 78% within1 100%
+LRS3 | D | rows/read 72 | spread x1 | clamp offset 2 mV, mirror gain error 0%: raw rms 0.41 | calibrated rms 0.42 exact 77% within1 100%
+LRS3 | D | rows/read 72 | spread x1 | clamp offset 0 mV, mirror gain error 1%: raw rms 0.41 | calibrated rms 0.42 exact 77% within1 100%
+LRS3 | D | rows/read 72 | spread x1 | clamp offset 2 mV, mirror gain error 1%: raw rms 0.41 | calibrated rms 0.42 exact 78% within1 100%
+done in 599 s

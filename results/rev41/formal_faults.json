@@ -1,0 +1,32 @@
+[
+ {
+  "fault": "pulse amplitude may reach 21",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "set pulse reaches devices that must stay in HRS",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "a reset pulse after the set phase has begun",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "PDATA writable while a program command runs",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "product scan stalls on a row with input 0",
+  "proof": "progress",
+  "result": "FAIL",
+  "caught": true
+ }
+]

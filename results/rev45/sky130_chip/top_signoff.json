@@ -1,0 +1,12 @@
+{
+ "gds": "chip/sky130/caravan/gds/user_analog_project_wrapper.gds",
+ "gds_md5": "37a6fb425f7dbea11b9ea7c1be3c6352",
+ "drc_rules": "Magic drc(full), sky130B, commands of cf-precheck magic_drc_check.tcl",
+ "drc_markers": 0,
+ "drc_by_rule": {},
+ "drc_boxes": [],
+ "antenna_rules": "Magic antennacheck, sky130B tech (partial model)",
+ "antenna_violations": [],
+ "antenna_violation_count": 0,
+ "antenna_feedback_count": 65
+}

@@ -1,0 +1,14 @@
+Running gdsArea0 on file=/w/chip/sky130/caravan/gds/user_analog_project_wrapper.gds (passive, no gdsFileOut)
+  args: '-V','-m','/w/flow/eda/precheck_cfenv4_sky130B/outputs/reports/spike_check.xml','/w/chip/sky130/caravan/gds/user_analog_project_wrapper.gds'
+dbu=0.001 Float inv:1000.0
+number shapes: box=36661 path=115627 poly=1895
+writing marker-DB: /w/flow/eda/precheck_cfenv4_sky130B/outputs/reports/spike_check.xml ...
+       0 area-zero shapes,         0 zero-area shapes deleted.
+       0 zero-length paths,        0 zero-length paths deleted.
+       0 path spikes
+       0 path octagonal acute angles
+       0 path any-angle acute angles
+       0 paths2poly
+       0 total errors,             0 total shapes deleted, 0 exit-status.
+VmPeak:	  701244 kB
+VmHWM:	  490548 kB

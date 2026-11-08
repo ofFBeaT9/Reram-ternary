@@ -1,0 +1,19 @@
+tt {'trip_uA': np.float64(24.63), 'bl_V_at_1uA': 0.314, 'bl_V_at_3uA': 0.3, 'bl_V_at_14uA': 0.245, 'bl_V_at_24uA': 0.204}
+ss {'trip_uA': np.float64(24.62), 'bl_V_at_1uA': 0.313, 'bl_V_at_3uA': 0.299, 'bl_V_at_14uA': 0.243, 'bl_V_at_24uA': 0.202}
+ff {'trip_uA': np.float64(24.66), 'bl_V_at_1uA': 0.314, 'bl_V_at_3uA': 0.3, 'bl_V_at_14uA': 0.246, 'bl_V_at_24uA': 0.207}
+sf {'trip_uA': np.float64(24.61), 'bl_V_at_1uA': 0.314, 'bl_V_at_3uA': 0.299, 'bl_V_at_14uA': 0.244, 'bl_V_at_24uA': 0.203}
+fs {'trip_uA': np.float64(24.64), 'bl_V_at_1uA': 0.314, 'bl_V_at_3uA': 0.3, 'bl_V_at_14uA': 0.246, 'bl_V_at_24uA': 0.205}
+tt LRS3 mean 43.6 uA others LRS3 {'bl_idle_V': 0.3225, 'bl_end_V': 0.1188, 'bl_max_V': 0.3272, 'out_end_V': 1.2, 't_out_ns': 2.1, 'i_vdd_idle_uA': 65.0, 'i_vdd_end_uA': 90.27, 'e_supply_pJ': 1.0801, 'window_ns': 10.0} 31 s
+tt LRS3 mean 43.6 uA others HRS {'bl_idle_V': 0.3225, 'bl_end_V': 0.1191, 'bl_max_V': 0.3331, 'out_end_V': 1.2, 't_out_ns': 2.2, 'i_vdd_idle_uA': 65.0, 'i_vdd_end_uA': 90.27, 'e_supply_pJ': 1.082, 'window_ns': 10.0} 24 s
+tt LRS3 mean-6sigma 34.3 uA others LRS3 {'bl_idle_V': 0.3225, 'bl_end_V': 0.1507, 'bl_max_V': 0.3271, 'out_end_V': 1.2, 't_out_ns': 2.9, 'i_vdd_idle_uA': 65.0, 'i_vdd_end_uA': 90.23, 'e_supply_pJ': 1.0777, 'window_ns': 10.0} 30 s
+tt LRS3 mean-6sigma 34.3 uA others HRS {'bl_idle_V': 0.3225, 'bl_end_V': 0.1511, 'bl_max_V': 0.3328, 'out_end_V': 1.2, 't_out_ns': 3.1, 'i_vdd_idle_uA': 65.0, 'i_vdd_end_uA': 90.23, 'e_supply_pJ': 1.0792, 'window_ns': 10.0} 27 s
+tt HRS mean+6sigma 14 uA others LRS3 {'bl_idle_V': 0.3225, 'bl_end_V': 0.2344, 'bl_max_V': 0.326, 'out_end_V': 0.0, 't_out_ns': None, 'i_vdd_idle_uA': 65.0, 'i_vdd_end_uA': 81.72, 'e_supply_pJ': 0.9528, 'window_ns': 10.0} 21 s
+tt HRS mean+6sigma 14 uA others HRS {'bl_idle_V': 0.3225, 'bl_end_V': 0.2344, 'bl_max_V': 0.3306, 'out_end_V': 0.0, 't_out_ns': None, 'i_vdd_idle_uA': 65.0, 'i_vdd_end_uA': 81.72, 'e_supply_pJ': 0.9526, 'window_ns': 10.0} 20 s
+tt reset target 6 uA others LRS3 {'bl_idle_V': 0.3225, 'bl_end_V': 0.2693, 'bl_max_V': 0.3247, 'out_end_V': 0.0, 't_out_ns': None, 'i_vdd_idle_uA': 65.0, 'i_vdd_end_uA': 73.42, 'e_supply_pJ': 0.8629, 'window_ns': 10.0} 21 s
+tt reset target 6 uA others HRS {'bl_idle_V': 0.3225, 'bl_end_V': 0.2693, 'bl_max_V': 0.3277, 'out_end_V': 0.0, 't_out_ns': None, 'i_vdd_idle_uA': 65.0, 'i_vdd_end_uA': 73.42, 'e_supply_pJ': 0.8629, 'window_ns': 10.0} 20 s
+tt HRS mean 2.85 uA others LRS3 {'bl_idle_V': 0.3225, 'bl_end_V': 0.2909, 'bl_max_V': 0.3238, 'out_end_V': 0.0, 't_out_ns': None, 'i_vdd_idle_uA': 65.0, 'i_vdd_end_uA': 69.38, 'e_supply_pJ': 0.8214, 'window_ns': 10.0} 21 s
+tt HRS mean 2.85 uA others HRS {'bl_idle_V': 0.3225, 'bl_end_V': 0.291, 'bl_max_V': 0.3255, 'out_end_V': 0.0, 't_out_ns': None, 'i_vdd_idle_uA': 65.0, 'i_vdd_end_uA': 69.37, 'e_supply_pJ': 0.8214, 'window_ns': 10.0} 21 s
+ss LRS3 mean-6sigma 34.3 uA others LRS3 {'bl_idle_V': 0.3215, 'bl_end_V': 0.1518, 'bl_max_V': 0.3261, 'out_end_V': 1.2, 't_out_ns': 3.1, 'i_vdd_idle_uA': 65.0, 'i_vdd_end_uA': 90.15, 'e_supply_pJ': 1.069, 'window_ns': 10.0} 31 s
+ss HRS mean+6sigma 14 uA others LRS3 {'bl_idle_V': 0.3215, 'bl_end_V': 0.2332, 'bl_max_V': 0.325, 'out_end_V': 0.0, 't_out_ns': None, 'i_vdd_idle_uA': 65.0, 'i_vdd_end_uA': 81.55, 'e_supply_pJ': 0.9502, 'window_ns': 10.0} 30 s
+ff LRS3 mean-6sigma 34.3 uA others LRS3 {'bl_idle_V': 0.3227, 'bl_end_V': 0.1497, 'bl_max_V': 0.3268, 'out_end_V': 1.2, 't_out_ns': 2.75, 'i_vdd_idle_uA': 65.0, 'i_vdd_end_uA': 90.34, 'e_supply_pJ': 1.0911, 'window_ns': 10.0} 31 s
+ff HRS mean+6sigma 14 uA others LRS3 {'bl_idle_V': 0.3227, 'bl_end_V': 0.2354, 'bl_max_V': 0.326, 'out_end_V': 0.0, 't_out_ns': None, 'i_vdd_idle_uA': 65.0, 'i_vdd_end_uA': 81.9, 'e_supply_pJ': 0.9556, 'window_ns': 10.0} 30 s

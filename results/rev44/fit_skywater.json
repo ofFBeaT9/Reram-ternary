@@ -1,0 +1,998 @@
+{
+ "n_cells": 400,
+ "ks": [
+  0.0,
+  0.5,
+  1.0,
+  1.5,
+  2.0,
+  2.5,
+  3.0,
+  4.0
+ ],
+ "widths": [
+  1.0,
+  2.0,
+  4.0
+ ],
+ "criteria": {
+  "6/20": [
+   6e-06,
+   2e-05
+  ],
+  "10/30": [
+   1e-05,
+   3e-05
+  ],
+  "15/40": [
+   1.5e-05,
+   4e-05
+  ]
+ },
+ "cases": {
+  "W 1.0 um, criteria 6/20": {
+   "nominal_set_read_uS": 22.58,
+   "rows": [
+    {
+     "k": 0.0,
+     "log10F": 7.188,
+     "reset_yield": 0.91,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 1.89
+    },
+    {
+     "k": 0.5,
+     "log10F": 7.21,
+     "reset_yield": 0.9075,
+     "set_yield": 0.9807,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 1.96
+    },
+    {
+     "k": 1.0,
+     "log10F": 7.375,
+     "reset_yield": 0.9125,
+     "set_yield": 0.8685,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 4,
+     "crit_logF_spread_decades_10_90": 2.23
+    },
+    {
+     "k": 1.5,
+     "log10F": 7.591,
+     "reset_yield": 0.9075,
+     "set_yield": 0.8044,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 4,
+     "crit_logF_spread_decades_10_90": 2.69
+    },
+    {
+     "k": 2.0,
+     "log10F": 7.825,
+     "reset_yield": 0.9075,
+     "set_yield": 0.7686,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 5,
+     "crit_logF_spread_decades_10_90": 3.16
+    },
+    {
+     "k": 2.5,
+     "log10F": 8.125,
+     "reset_yield": 0.91,
+     "set_yield": 0.7088,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 5,
+     "crit_logF_spread_decades_10_90": 3.72
+    },
+    {
+     "k": 3.0,
+     "log10F": 8.391,
+     "reset_yield": 0.91,
+     "set_yield": 0.6731,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 6,
+     "crit_logF_spread_decades_10_90": 4.32
+    },
+    {
+     "k": 4.0,
+     "log10F": 8.899,
+     "reset_yield": 0.9075,
+     "set_yield": 0.6281,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 22,
+     "crit_logF_spread_decades_10_90": 5.38
+    }
+   ],
+   "k_fit": 0.53
+  },
+  "W 1.0 um, criteria 10/30": {
+   "nominal_set_read_uS": 22.58,
+   "rows": [
+    {
+     "k": 0.0,
+     "log10F": 7.188,
+     "reset_yield": 0.91,
+     "set_yield": 0.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 1.91
+    },
+    {
+     "k": 0.5,
+     "log10F": 7.21,
+     "reset_yield": 0.9075,
+     "set_yield": 0.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 1.97
+    },
+    {
+     "k": 1.0,
+     "log10F": 7.375,
+     "reset_yield": 0.9125,
+     "set_yield": 0.011,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 4,
+     "crit_logF_spread_decades_10_90": 2.25
+    },
+    {
+     "k": 1.5,
+     "log10F": 7.591,
+     "reset_yield": 0.9075,
+     "set_yield": 0.0882,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 4,
+     "crit_logF_spread_decades_10_90": 2.69
+    },
+    {
+     "k": 2.0,
+     "log10F": 7.825,
+     "reset_yield": 0.9075,
+     "set_yield": 0.1653,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 5,
+     "crit_logF_spread_decades_10_90": 3.18
+    },
+    {
+     "k": 2.5,
+     "log10F": 8.116,
+     "reset_yield": 0.91,
+     "set_yield": 0.217,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 5,
+     "crit_logF_spread_decades_10_90": 3.72
+    },
+    {
+     "k": 3.0,
+     "log10F": 8.391,
+     "reset_yield": 0.91,
+     "set_yield": 0.2637,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 6,
+     "crit_logF_spread_decades_10_90": 4.3
+    },
+    {
+     "k": 4.0,
+     "log10F": 8.899,
+     "reset_yield": 0.9075,
+     "set_yield": 0.3168,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 22,
+     "crit_logF_spread_decades_10_90": 5.4
+    }
+   ],
+   "k_fit": null
+  },
+  "W 1.0 um, criteria 15/40": {
+   "nominal_set_read_uS": 22.58,
+   "rows": [
+    {
+     "k": 0.0,
+     "log10F": 7.188,
+     "reset_yield": 0.91,
+     "set_yield": 0.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 1.92
+    },
+    {
+     "k": 0.5,
+     "log10F": 7.21,
+     "reset_yield": 0.9075,
+     "set_yield": 0.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 1.99
+    },
+    {
+     "k": 1.0,
+     "log10F": 7.375,
+     "reset_yield": 0.9125,
+     "set_yield": 0.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 4,
+     "crit_logF_spread_decades_10_90": 2.27
+    },
+    {
+     "k": 1.5,
+     "log10F": 7.591,
+     "reset_yield": 0.9075,
+     "set_yield": 0.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 4,
+     "crit_logF_spread_decades_10_90": 2.71
+    },
+    {
+     "k": 2.0,
+     "log10F": 7.825,
+     "reset_yield": 0.9075,
+     "set_yield": 0.0083,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 5,
+     "crit_logF_spread_decades_10_90": 3.18
+    },
+    {
+     "k": 2.5,
+     "log10F": 8.116,
+     "reset_yield": 0.91,
+     "set_yield": 0.0357,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 5,
+     "crit_logF_spread_decades_10_90": 3.73
+    },
+    {
+     "k": 3.0,
+     "log10F": 8.391,
+     "reset_yield": 0.91,
+     "set_yield": 0.0769,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 6,
+     "crit_logF_spread_decades_10_90": 4.3
+    },
+    {
+     "k": 4.0,
+     "log10F": 8.899,
+     "reset_yield": 0.9075,
+     "set_yield": 0.1598,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 22,
+     "crit_logF_spread_decades_10_90": 5.43
+    }
+   ],
+   "k_fit": null
+  },
+  "W 2.0 um, criteria 6/20": {
+   "nominal_set_read_uS": 59.1,
+   "rows": [
+    {
+     "k": 0.0,
+     "log10F": 4.547,
+     "reset_yield": 0.915,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 1.09
+    },
+    {
+     "k": 0.5,
+     "log10F": 4.616,
+     "reset_yield": 0.91,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 1.22
+    },
+    {
+     "k": 1.0,
+     "log10F": 4.788,
+     "reset_yield": 0.9075,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 1.61
+    },
+    {
+     "k": 1.5,
+     "log10F": 5.022,
+     "reset_yield": 0.915,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 2.1
+    },
+    {
+     "k": 2.0,
+     "log10F": 5.241,
+     "reset_yield": 0.9075,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 2.62
+    },
+    {
+     "k": 2.5,
+     "log10F": 5.522,
+     "reset_yield": 0.9075,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 4,
+     "crit_logF_spread_decades_10_90": 3.13
+    },
+    {
+     "k": 3.0,
+     "log10F": 5.819,
+     "reset_yield": 0.9075,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 4,
+     "crit_logF_spread_decades_10_90": 3.71
+    },
+    {
+     "k": 4.0,
+     "log10F": 6.46,
+     "reset_yield": 0.9075,
+     "set_yield": 0.9972,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 4,
+     "crit_logF_spread_decades_10_90": 4.88
+    }
+   ],
+   "k_fit": null
+  },
+  "W 2.0 um, criteria 10/30": {
+   "nominal_set_read_uS": 59.1,
+   "rows": [
+    {
+     "k": 0.0,
+     "log10F": 4.538,
+     "reset_yield": 0.91,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 1.14
+    },
+    {
+     "k": 0.5,
+     "log10F": 4.609,
+     "reset_yield": 0.91,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 1.27
+    },
+    {
+     "k": 1.0,
+     "log10F": 4.788,
+     "reset_yield": 0.91,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 1.66
+    },
+    {
+     "k": 1.5,
+     "log10F": 5.006,
+     "reset_yield": 0.9075,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 2.11
+    },
+    {
+     "k": 2.0,
+     "log10F": 5.234,
+     "reset_yield": 0.91,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 2.62
+    },
+    {
+     "k": 2.5,
+     "log10F": 5.506,
+     "reset_yield": 0.9075,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 4,
+     "crit_logF_spread_decades_10_90": 3.16
+    },
+    {
+     "k": 3.0,
+     "log10F": 5.803,
+     "reset_yield": 0.91,
+     "set_yield": 0.9945,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 4,
+     "crit_logF_spread_decades_10_90": 3.75
+    },
+    {
+     "k": 4.0,
+     "log10F": 6.401,
+     "reset_yield": 0.9075,
+     "set_yield": 0.9532,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 4,
+     "crit_logF_spread_decades_10_90": 4.88
+    }
+   ],
+   "k_fit": 3.48
+  },
+  "W 2.0 um, criteria 15/40": {
+   "nominal_set_read_uS": 59.1,
+   "rows": [
+    {
+     "k": 0.0,
+     "log10F": 4.531,
+     "reset_yield": 0.91,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 1.2
+    },
+    {
+     "k": 0.5,
+     "log10F": 4.609,
+     "reset_yield": 0.91,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 1.31
+    },
+    {
+     "k": 1.0,
+     "log10F": 4.772,
+     "reset_yield": 0.9075,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 1.67
+    },
+    {
+     "k": 1.5,
+     "log10F": 5.006,
+     "reset_yield": 0.91,
+     "set_yield": 0.9918,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 2.13
+    },
+    {
+     "k": 2.0,
+     "log10F": 5.225,
+     "reset_yield": 0.9125,
+     "set_yield": 0.9753,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 2.64
+    },
+    {
+     "k": 2.5,
+     "log10F": 5.497,
+     "reset_yield": 0.9075,
+     "set_yield": 0.9421,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 4,
+     "crit_logF_spread_decades_10_90": 3.16
+    },
+    {
+     "k": 3.0,
+     "log10F": 5.781,
+     "reset_yield": 0.91,
+     "set_yield": 0.9093,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 4,
+     "crit_logF_spread_decades_10_90": 3.74
+    },
+    {
+     "k": 4.0,
+     "log10F": 6.369,
+     "reset_yield": 0.9075,
+     "set_yield": 0.854,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 4,
+     "crit_logF_spread_decades_10_90": 4.86
+    }
+   ],
+   "k_fit": 2.01
+  },
+  "W 4.0 um, criteria 6/20": {
+   "nominal_set_read_uS": 97.39,
+   "rows": [
+    {
+     "k": 0.0,
+     "log10F": 2.438,
+     "reset_yield": 0.9175,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 0.42
+    },
+    {
+     "k": 0.5,
+     "log10F": 2.569,
+     "reset_yield": 0.9125,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 0.7
+    },
+    {
+     "k": 1.0,
+     "log10F": 2.866,
+     "reset_yield": 0.91,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 1.24
+    },
+    {
+     "k": 1.5,
+     "log10F": 3.141,
+     "reset_yield": 0.91,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 1.78
+    },
+    {
+     "k": 2.0,
+     "log10F": 3.428,
+     "reset_yield": 0.9075,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 2.38
+    },
+    {
+     "k": 2.5,
+     "log10F": 3.725,
+     "reset_yield": 0.9075,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 2.94
+    },
+    {
+     "k": 3.0,
+     "log10F": 3.988,
+     "reset_yield": 0.9075,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 3.49
+    },
+    {
+     "k": 4.0,
+     "log10F": 4.56,
+     "reset_yield": 0.9075,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 4,
+     "crit_logF_spread_decades_10_90": 4.5
+    }
+   ],
+   "k_fit": null
+  },
+  "W 4.0 um, criteria 10/30": {
+   "nominal_set_read_uS": 97.39,
+   "rows": [
+    {
+     "k": 0.0,
+     "log10F": 2.391,
+     "reset_yield": 0.9175,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 0.5
+    },
+    {
+     "k": 0.5,
+     "log10F": 2.516,
+     "reset_yield": 0.9175,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 0.75
+    },
+    {
+     "k": 1.0,
+     "log10F": 2.766,
+     "reset_yield": 0.91,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 1.25
+    },
+    {
+     "k": 1.5,
+     "log10F": 3.069,
+     "reset_yield": 0.9125,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 1.81
+    },
+    {
+     "k": 2.0,
+     "log10F": 3.328,
+     "reset_yield": 0.91,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 2.33
+    },
+    {
+     "k": 2.5,
+     "log10F": 3.609,
+     "reset_yield": 0.91,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 2.94
+    },
+    {
+     "k": 3.0,
+     "log10F": 3.91,
+     "reset_yield": 0.9075,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 3.47
+    },
+    {
+     "k": 4.0,
+     "log10F": 4.463,
+     "reset_yield": 0.9075,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 4,
+     "crit_logF_spread_decades_10_90": 4.39
+    }
+   ],
+   "k_fit": null
+  },
+  "W 4.0 um, criteria 15/40": {
+   "nominal_set_read_uS": 97.39,
+   "rows": [
+    {
+     "k": 0.0,
+     "log10F": 2.344,
+     "reset_yield": 0.915,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 0.61
+    },
+    {
+     "k": 0.5,
+     "log10F": 2.46,
+     "reset_yield": 0.91,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 0.78
+    },
+    {
+     "k": 1.0,
+     "log10F": 2.694,
+     "reset_yield": 0.9075,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 1.28
+    },
+    {
+     "k": 1.5,
+     "log10F": 3.0,
+     "reset_yield": 0.91,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 2,
+     "crit_logF_spread_decades_10_90": 1.82
+    },
+    {
+     "k": 2.0,
+     "log10F": 3.272,
+     "reset_yield": 0.91,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 2.35
+    },
+    {
+     "k": 2.5,
+     "log10F": 3.531,
+     "reset_yield": 0.91,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 2.88
+    },
+    {
+     "k": 3.0,
+     "log10F": 3.803,
+     "reset_yield": 0.9075,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 3,
+     "crit_logF_spread_decades_10_90": 3.44
+    },
+    {
+     "k": 4.0,
+     "log10F": 4.388,
+     "reset_yield": 0.9075,
+     "set_yield": 1.0,
+     "ladder_yield": 1.0,
+     "ladder_pulses_max": 4,
+     "crit_logF_spread_decades_10_90": 4.33
+    }
+   ],
+   "k_fit": null
+  }
+ },
+ "k_fit_range": [
+  0.53,
+  3.48
+ ],
+ "transfer_ihp_reset_gate": {
+  "n_cells": 200,
+  "note": "IHP model (ispva.CAL, sg13_hv_nmos W 4.5 um), 21-step reset ladder 0.5-2.5 V, target 6 uA; spread = fitted k in program_mc '1x' units; no reset-rate correction applied to IHP (its reset voltage already matches IHP's published 0.6-0.9 V)",
+  "runs": {
+   "tt k=0.53": {
+    "vg 2.5": {
+     "failed": 5,
+     "pulses_max": 21,
+     "pulses_mean": 14.16
+    },
+    "vg 2.6": {
+     "failed": 0,
+     "pulses_max": 19,
+     "pulses_mean": 11.26
+    },
+    "vg 2.7": {
+     "failed": 0,
+     "pulses_max": 14,
+     "pulses_mean": 9.98
+    },
+    "vg 2.8": {
+     "failed": 0,
+     "pulses_max": 12,
+     "pulses_mean": 9.21
+    },
+    "vg 2.9": {
+     "failed": 0,
+     "pulses_max": 11,
+     "pulses_mean": 8.79
+    },
+    "vg 3.0": {
+     "failed": 0,
+     "pulses_max": 10,
+     "pulses_mean": 8.44
+    },
+    "vg 3.1": {
+     "failed": 0,
+     "pulses_max": 10,
+     "pulses_mean": 8.24
+    },
+    "vg 3.3": {
+     "failed": 0,
+     "pulses_max": 9,
+     "pulses_mean": 8.01
+    }
+   },
+   "ss k=0.53": {
+    "vg 2.5": {
+     "failed": 69,
+     "pulses_max": 21,
+     "pulses_mean": 18.56
+    },
+    "vg 2.6": {
+     "failed": 3,
+     "pulses_max": 21,
+     "pulses_mean": 14.02
+    },
+    "vg 2.7": {
+     "failed": 0,
+     "pulses_max": 19,
+     "pulses_mean": 11.23
+    },
+    "vg 2.8": {
+     "failed": 0,
+     "pulses_max": 14,
+     "pulses_mean": 9.99
+    },
+    "vg 2.9": {
+     "failed": 0,
+     "pulses_max": 12,
+     "pulses_mean": 9.26
+    },
+    "vg 3.0": {
+     "failed": 0,
+     "pulses_max": 11,
+     "pulses_mean": 8.83
+    },
+    "vg 3.1": {
+     "failed": 0,
+     "pulses_max": 10,
+     "pulses_mean": 8.49
+    },
+    "vg 3.3": {
+     "failed": 0,
+     "pulses_max": 10,
+     "pulses_mean": 8.13
+    }
+   },
+   "tt k=2.01": {
+    "vg 2.5": {
+     "failed": 54,
+     "pulses_max": 21,
+     "pulses_mean": 14.04
+    },
+    "vg 2.6": {
+     "failed": 32,
+     "pulses_max": 21,
+     "pulses_mean": 12.41
+    },
+    "vg 2.7": {
+     "failed": 18,
+     "pulses_max": 21,
+     "pulses_mean": 10.99
+    },
+    "vg 2.8": {
+     "failed": 9,
+     "pulses_max": 21,
+     "pulses_mean": 10.09
+    },
+    "vg 2.9": {
+     "failed": 1,
+     "pulses_max": 21,
+     "pulses_mean": 9.44
+    },
+    "vg 3.0": {
+     "failed": 1,
+     "pulses_max": 21,
+     "pulses_mean": 8.85
+    },
+    "vg 3.1": {
+     "failed": 1,
+     "pulses_max": 21,
+     "pulses_mean": 8.52
+    },
+    "vg 3.3": {
+     "failed": 0,
+     "pulses_max": 20,
+     "pulses_mean": 8.18
+    }
+   },
+   "ss k=2.01": {
+    "vg 2.5": {
+     "failed": 85,
+     "pulses_max": 21,
+     "pulses_mean": 16.16
+    },
+    "vg 2.6": {
+     "failed": 54,
+     "pulses_max": 21,
+     "pulses_mean": 13.96
+    },
+    "vg 2.7": {
+     "failed": 32,
+     "pulses_max": 21,
+     "pulses_mean": 12.4
+    },
+    "vg 2.8": {
+     "failed": 18,
+     "pulses_max": 21,
+     "pulses_mean": 11.03
+    },
+    "vg 2.9": {
+     "failed": 10,
+     "pulses_max": 21,
+     "pulses_mean": 10.15
+    },
+    "vg 3.0": {
+     "failed": 2,
+     "pulses_max": 21,
+     "pulses_mean": 9.47
+    },
+    "vg 3.1": {
+     "failed": 1,
+     "pulses_max": 21,
+     "pulses_mean": 8.89
+    },
+    "vg 3.3": {
+     "failed": 1,
+     "pulses_max": 21,
+     "pulses_mean": 8.33
+    }
+   },
+   "tt k=3.48": {
+    "vg 2.5": {
+     "failed": 66,
+     "pulses_max": 21,
+     "pulses_mean": 13.62
+    },
+    "vg 2.6": {
+     "failed": 54,
+     "pulses_max": 21,
+     "pulses_mean": 12.43
+    },
+    "vg 2.7": {
+     "failed": 43,
+     "pulses_max": 21,
+     "pulses_mean": 11.64
+    },
+    "vg 2.8": {
+     "failed": 30,
+     "pulses_max": 21,
+     "pulses_mean": 10.85
+    },
+    "vg 2.9": {
+     "failed": 19,
+     "pulses_max": 21,
+     "pulses_mean": 10.14
+    },
+    "vg 3.0": {
+     "failed": 18,
+     "pulses_max": 21,
+     "pulses_mean": 9.64
+    },
+    "vg 3.1": {
+     "failed": 13,
+     "pulses_max": 21,
+     "pulses_mean": 9.29
+    },
+    "vg 3.3": {
+     "failed": 4,
+     "pulses_max": 21,
+     "pulses_mean": 8.71
+    }
+   },
+   "ss k=3.48": {
+    "vg 2.5": {
+     "failed": 87,
+     "pulses_max": 21,
+     "pulses_mean": 14.97
+    },
+    "vg 2.6": {
+     "failed": 66,
+     "pulses_max": 21,
+     "pulses_mean": 13.54
+    },
+    "vg 2.7": {
+     "failed": 54,
+     "pulses_max": 21,
+     "pulses_mean": 12.41
+    },
+    "vg 2.8": {
+     "failed": 44,
+     "pulses_max": 21,
+     "pulses_mean": 11.65
+    },
+    "vg 2.9": {
+     "failed": 31,
+     "pulses_max": 21,
+     "pulses_mean": 10.91
+    },
+    "vg 3.0": {
+     "failed": 19,
+     "pulses_max": 21,
+     "pulses_mean": 10.23
+    },
+    "vg 3.1": {
+     "failed": 18,
+     "pulses_max": 21,
+     "pulses_mean": 9.7
+    },
+    "vg 3.3": {
+     "failed": 10,
+     "pulses_max": 21,
+     "pulses_mean": 9.04
+    }
+   }
+  }
+ }
+}

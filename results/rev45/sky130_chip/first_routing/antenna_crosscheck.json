@@ -1,0 +1,217 @@
+{
+ "openroad": {
+  "net_violations": 0,
+  "pin_violations": 0,
+  "rules": "sky130_fd_sc_hd technology LEF: metal side-area ratio 400 (PWL with diode area), via cut-area ratio 6"
+ },
+ "magic": {
+  "violations": 4,
+  "rules": "Magic antennacheck, sky130B tech (partial model)"
+ },
+ "hits": [
+  {
+   "magic": {
+    "cell": "sky130_fd_sc_hd__nand2_1_53",
+    "plane": "metal3",
+    "ratio": 403.603,
+    "limit": 400.0,
+    "gate_rect_um": [
+     787.535,
+     1558.475,
+     787.685,
+     1559.125
+    ]
+   },
+   "instance": "_09982_",
+   "distance_um": 1.05,
+   "openroad_pins": {
+    "B": {
+     "net": "net575",
+     "openroad_worst": [
+      [
+       0.9575,
+       "met3",
+       "Side area",
+       383.0,
+       400.0
+      ],
+      [
+       0.04,
+       "mcon",
+       "Gate area",
+       0.12,
+       3.0
+      ]
+     ]
+    },
+    "A": {
+     "net": "u_core.u_top.u_core.r_x\\[8\\]",
+     "openroad_worst": [
+      [
+       0.04,
+       "mcon",
+       "Gate area",
+       0.12,
+       3.0
+      ],
+      [
+       0.0381,
+       "met1",
+       "Side area",
+       15.23,
+       400.0
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "magic": {
+    "cell": "sky130_fd_sc_hd__o22ai_1_52",
+    "plane": "metal4 contact",
+    "ratio": 419.844,
+    "limit": 400.0,
+    "gate_rect_um": [
+     928.79,
+     1631.915,
+     928.94,
+     1632.555
+    ]
+   },
+   "instance": null,
+   "distance_um": 19.48,
+   "openroad_pins": {}
+  },
+  {
+   "magic": {
+    "cell": "sky130_fd_sc_hd__o21ai_0_148",
+    "plane": "metal4 contact",
+    "ratio": 1073.38,
+    "limit": 400.0,
+    "gate_rect_um": [
+     930.1,
+     1604.715,
+     930.25,
+     1605.355
+    ]
+   },
+   "instance": "_10531_",
+   "distance_um": 1.47,
+   "openroad_pins": {
+    "A1": {
+     "net": "_04822_",
+     "openroad_worst": [
+      [
+       0.06,
+       "mcon",
+       "Gate area",
+       0.18,
+       3.0
+      ],
+      [
+       0.0408,
+       "met2",
+       "Side area",
+       16.33,
+       400.0
+      ]
+     ]
+    },
+    "A2": {
+     "net": "_04854_",
+     "openroad_worst": [
+      [
+       0.6717,
+       "via4",
+       "Gate area",
+       4.03,
+       6.0
+      ],
+      [
+       0.2318,
+       "met3",
+       "Side area",
+       92.73,
+       400.0
+      ]
+     ]
+    },
+    "B1": {
+     "net": "_04855_",
+     "openroad_worst": [
+      [
+       0.06,
+       "mcon",
+       "Gate area",
+       0.18,
+       3.0
+      ],
+      [
+       0.0024,
+       "met1",
+       "Side area",
+       6.74,
+       2775.6
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "magic": {
+    "cell": "sky130_fd_sc_hd__dlclkp_1_3",
+    "plane": "metal4 contact",
+    "ratio": 1073.38,
+    "limit": 400.0,
+    "gate_rect_um": [
+     875.89,
+     1504.435,
+     876.04,
+     1504.855
+    ]
+   },
+   "instance": "_12789_",
+   "distance_um": 2.71,
+   "openroad_pins": {
+    "GATE": {
+     "net": "_01927_",
+     "openroad_worst": [
+      [
+       0.6717,
+       "via4",
+       "Gate area",
+       4.03,
+       6.0
+      ],
+      [
+       0.5038,
+       "met3",
+       "Side area",
+       201.51,
+       400.0
+      ]
+     ]
+    },
+    "CLK": {
+     "net": "clknet_leaf_9_clk",
+     "openroad_worst": [
+      [
+       0.0217,
+       "via2",
+       "Gate area",
+       0.13,
+       6.0
+      ],
+      [
+       0.0151,
+       "met3",
+       "Side area",
+       58.48,
+       3872.32
+      ]
+     ]
+    }
+   }
+  }
+ ]
+}

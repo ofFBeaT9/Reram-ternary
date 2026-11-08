@@ -1,0 +1,54 @@
+2026-11-07 14:56:32 [INFO] Extracting compressed files in: /w/chip/sky130/caravan
+2026-11-07 14:56:33 [INFO] make uncompress produced 1 gds/*.gds file(s): user_analog_project_wrapper.gds (make exit 0)
+2026-11-07 14:56:33 [INFO] Project type: analog
+2026-11-07 14:56:33 [INFO] GDS hash (user_analog_project_wrapper): 49b1a80fafc827031bdb747913f3777a03d7dd95
+2026-11-07 14:56:33 [INFO] Tools: KLayout v0.29.12 | Magic v8.3.471
+2026-11-07 14:56:33 [INFO] PDK: SKY130B unknown
+2026-11-07 14:56:34 [INFO] Running 14 checks: [topcell_check, gpio_defines, xor, magic_drc, klayout_feol, klayout_beol, klayout_offgrid, klayout_met_min_ca_density, klayout_pin_label_purposes_overlapping_drawing, klayout_zeroarea, spike_check, illegal_cellname_check, lvs, oeb]
+2026-11-07 14:56:34 [INFO] Single top cell 'user_analog_project_wrapper' found
+2026-11-07 14:56:34 [INFO] GPIO defines: parsing verilog/rtl/user_defines.v
+2026-11-07 14:56:35 [INFO] GPIO defines report: /w/flow/eda/precheck_cfenv4_sky130B/outputs/reports/gpio_defines.report
+2026-11-07 14:56:41 [INFO] Total XOR differences: 0
+2026-11-07 14:57:15 [INFO] Found 0 violations
+2026-11-07 14:57:15 [INFO] 0 DRC violations
+2026-11-07 14:57:15 [INFO] Running: klayout -b -r /tmp/v/lib/python3.12/site-packages/cf_precheck/drc_scripts/sky130B_mr.drc -rd input=/w/chip/sky130/caravan/gds/user_analog_project_wrapper.gds -rd topcell=user_analog_project_wrapper -rd report=/w/flow/eda/precheck_cfenv4_sky130B/outputs/reports/klayout_feol_check.xml -rd thr=32 -rd feol=true
+2026-11-07 14:57:31 [INFO] No DRC violations found
+2026-11-07 14:57:31 [INFO] Running: klayout -b -r /tmp/v/lib/python3.12/site-packages/cf_precheck/drc_scripts/sky130B_mr.drc -rd input=/w/chip/sky130/caravan/gds/user_analog_project_wrapper.gds -rd topcell=user_analog_project_wrapper -rd report=/w/flow/eda/precheck_cfenv4_sky130B/outputs/reports/klayout_beol_check.xml -rd thr=32 -rd beol=true
+2026-11-07 14:58:17 [INFO] No DRC violations found
+2026-11-07 14:58:17 [INFO] Running: klayout -b -r /tmp/v/lib/python3.12/site-packages/cf_precheck/drc_scripts/sky130B_mr.drc -rd input=/w/chip/sky130/caravan/gds/user_analog_project_wrapper.gds -rd topcell=user_analog_project_wrapper -rd report=/w/flow/eda/precheck_cfenv4_sky130B/outputs/reports/klayout_offgrid_check.xml -rd thr=32 -rd offgrid=true
+2026-11-07 14:58:28 [INFO] No DRC violations found
+2026-11-07 14:58:28 [INFO] Running: klayout -b -r /tmp/v/lib/python3.12/site-packages/cf_precheck/drc_scripts/met_min_ca_density.lydrc -rd input=/w/chip/sky130/caravan/gds/user_analog_project_wrapper.gds -rd topcell=user_analog_project_wrapper -rd report=/w/flow/eda/precheck_cfenv4_sky130B/outputs/reports/klayout_met_min_ca_density_check.xml -rd thr=32
+2026-11-07 14:58:34 [INFO] No DRC violations found
+2026-11-07 14:58:34 [INFO] Running: klayout -b -r /tmp/v/lib/python3.12/site-packages/cf_precheck/drc_scripts/pin_label_purposes_overlapping_drawing.rb.drc -rd input=/w/chip/sky130/caravan/gds/user_analog_project_wrapper.gds -rd topcell=user_analog_project_wrapper -rd report=/w/flow/eda/precheck_cfenv4_sky130B/outputs/reports/klayout_pin_label_purposes_overlapping_drawing_check.xml -rd thr=32 -rd top_cell_name=user_analog_project_wrapper
+2026-11-07 14:58:37 [INFO] No DRC violations found
+2026-11-07 14:58:37 [INFO] Running: klayout -b -r /tmp/v/lib/python3.12/site-packages/cf_precheck/drc_scripts/zeroarea.rb.drc -rd input=/w/chip/sky130/caravan/gds/user_analog_project_wrapper.gds -rd topcell=user_analog_project_wrapper -rd report=/w/flow/eda/precheck_cfenv4_sky130B/outputs/reports/klayout_zeroarea_check.xml -rd thr=32 -rd cleaned_output=/w/flow/eda/precheck_cfenv4_sky130B/outputs/user_analog_project_wrapper_no_zero_areas.gds
+2026-11-07 14:58:41 [INFO] No DRC violations found
+2026-11-07 14:58:41 [INFO] Running: bash /tmp/v/lib/python3.12/site-packages/cf_precheck/drc_scripts/gdsArea0 -V -m /w/flow/eda/precheck_cfenv4_sky130B/outputs/reports/spike_check.xml /w/chip/sky130/caravan/gds/user_analog_project_wrapper.gds
+2026-11-07 14:58:44 [INFO] No spikes found
+2026-11-07 14:58:45 [INFO] Loading LVS environment from /w/chip/sky130/caravan/lvs/user_analog_project_wrapper/lvs_config.json
+2026-11-07 14:58:45 [INFO] Loading LVS environment from /tmp/v/lib/python3.12/site-packages/cf_precheck/be_checks/tech/sky130B/lvs_config.base.json
+2026-11-07 14:58:45 [INFO] EXTRACT_FLATGLOB: *sky130_fd_pr__*[A-Z]* 
+2026-11-07 14:58:45 [INFO] EXTRACT_ABSTRACT: *__fill_* *__fakediode_* *__tapvpwrvgnd_* 
+2026-11-07 14:58:45 [INFO] EXTRACT_CREATE_SUBCUT: 
+2026-11-07 14:58:45 [INFO] LVS_FLATTEN: 
+2026-11-07 14:58:45 [INFO] LVS_NOFLATTEN: 
+2026-11-07 14:58:45 [INFO] LVS_IGNORE: 
+2026-11-07 14:58:45 [INFO] LVS_SPICE_FILES: /opt/cfpdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/*.spice /w/chip/sky130/caravan/netgen/user_analog_project_wrapper.spice
+2026-11-07 14:58:45 [INFO] LVS_VERILOG_FILES: 
+2026-11-07 14:58:45 [INFO] LAYOUT_FILE: /w/chip/sky130/caravan/gds/user_analog_project_wrapper.gds
+2026-11-07 14:58:45 [INFO] Running: run_be_checks --nooeb
+2026-11-07 14:58:45 [INFO] LVS output directory: /w/flow/eda/precheck_cfenv4_sky130B
+2026-11-07 15:00:28 [WARNING] ERC check failed (stat=4), see /w/flow/eda/precheck_cfenv4_sky130B/logs/LVS_check.log
+2026-11-07 15:00:28 [INFO] Loading LVS environment from /w/chip/sky130/caravan/lvs/user_analog_project_wrapper/lvs_config.json
+2026-11-07 15:00:28 [INFO] Loading LVS environment from /tmp/v/lib/python3.12/site-packages/cf_precheck/be_checks/tech/sky130B/lvs_config.base.json
+2026-11-07 15:00:28 [INFO] EXTRACT_FLATGLOB: *sky130_fd_pr__*[A-Z]* 
+2026-11-07 15:00:28 [INFO] EXTRACT_ABSTRACT: *__fill_* *__fakediode_* *__tapvpwrvgnd_* 
+2026-11-07 15:00:28 [INFO] EXTRACT_CREATE_SUBCUT: 
+2026-11-07 15:00:28 [INFO] LVS_FLATTEN: 
+2026-11-07 15:00:28 [INFO] LVS_NOFLATTEN: 
+2026-11-07 15:00:28 [INFO] LVS_IGNORE: 
+2026-11-07 15:00:28 [INFO] LVS_SPICE_FILES: /opt/cfpdk/sky130B/libs.ref/sky130_fd_sc_hd/spice/*.spice /w/chip/sky130/caravan/netgen/user_analog_project_wrapper.spice
+2026-11-07 15:00:28 [INFO] LVS_VERILOG_FILES: 
+2026-11-07 15:00:28 [INFO] LAYOUT_FILE: /w/chip/sky130/caravan/gds/user_analog_project_wrapper.gds
+2026-11-07 15:00:28 [INFO] Running: run_oeb_check --noextract
+2026-11-07 15:00:28 [INFO] OEB output directory: /w/flow/eda/precheck_cfenv4_sky130B

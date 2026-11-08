@@ -1,0 +1,88 @@
+1055aef39749b24f74212e597e5c8283  /w/chip/sky130/caravan/gds/user_analog_project_wrapper.gds
+KLayout 0.29.12
+GNU Awk 5.2.1, API 3.2, PMA Avon 8-g1, (GNU MPFR 4.2.1, GNU MP 6.3.0)
+=== mutation (background)
+=== cvc
+/usr/local/bin/cvc_rv
+CVC_OK
+cf-precheck 1.3.7
+=== precheck (all but the KLayout BEOL deck)
+
+╭────────────────────────────────── Precheck ──────────────────────────────────╮
+│ CF Precheck v1.3.7                                                           │
+│ Project: caravan (analog, sky130B)                                           │
+│ Checks:  13                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+  [ 1/13] Top Cell .......................................... PASS  (0.7s)
+  [ 2/13] GPIO Defines ...................................... PASS  (1.4s)
+  [ 3/13] XOR ............................................... PASS  (9.9s)
+  [ 4/13] Magic DRC ......................................... PASS  (17.4s)
+  [ 5/13] Klayout FEOL ...................................... PASS  (31.6s)
+  [ 6/13] Klayout Offgrid ................................... PASS  (26.9s)
+  [ 7/13] Klayout Metal Density ............................. PASS  (14.4s)
+  [ 8/13] Klayout Pin Label ................................. PASS  (8.4s)
+  [ 9/13] Klayout ZeroArea .................................. PASS  (5.6s)
+  [10/13] Spike Check ....................................... PASS  (6.1s)
+  [11/13] Illegal Cellname .................................. PASS  (1.9s)
+  [12/13] LVS ............................................... PASS  (117.4s)
+  [13/13] OEB ............................................... PASS  (3.7s)
+
+                Precheck Summary                 
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Check                 ┃  Status  ┃   Duration ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━┩
+│ Top Cell              │   PASS   │       0.7s │
+│ GPIO Defines          │   PASS   │       1.4s │
+│ XOR                   │   PASS   │       9.9s │
+│ Magic DRC             │   PASS   │      17.4s │
+│ Klayout FEOL          │   PASS   │      31.6s │
+│ Klayout Offgrid       │   PASS   │      26.9s │
+│ Klayout Metal Density │   PASS   │      14.4s │
+│ Klayout Pin Label     │   PASS   │       8.4s │
+│ Klayout ZeroArea      │   PASS   │       5.6s │
+│ Spike Check           │   PASS   │       6.1s │
+│ Illegal Cellname      │   PASS   │       1.9s │
+│ LVS                   │   PASS   │     117.4s │
+│ OEB                   │   PASS   │       3.7s │
+└───────────────────────┴──────────┴────────────┘
+Results saved to /w/chip/sky130/caravan/.cf/project.json
+Full log at /w/chip/sky130/caravan/precheck_results
+PRECHECK_RC=0
+=== metal diagnostic
+top cell user_analog_project_wrapper dbu 0.001
+met2 top only: shapes 1258, merged polygons 792, max vertices 12, max holes 0, 0.0 s; largest [(12, 0, '(941610,1384700;942210,1444400)'), (12, 0, '(940690,1385700;941290,1444400)'), (12, 0, '(939770,1386700;940370,1444400)')]
+met2 hierarchy: shapes 92488, merged polygons 25788, max vertices 110, max holes 0, 1.2 s; largest [(110, 0, '(431640,1662630;434200,1738770)'), (90, 0, '(583900,1693230;585540,1755090)'), (70, 0, '(850700,1695270;851420,1736050)')]
+met3 top only: shapes 1727, merged polygons 425, max vertices 20, max holes 0, 0.0 s; largest [(20, 0, '(857890,1412700;2882300,1413300)'), (20, 0, '(845930,1413700;2881300,1414300)'), (20, 0, '(682170,1791195;1572300,1791795)')]
+met3 hierarchy: shapes 15800, merged polygons 6521, max vertices 44, max holes 0, 0.2 s; largest [(44, 0, '(772465,1657015;867555,1658705)'), (40, 0, '(735205,1612135;823395,1613810)'), (40, 0, '(696105,1663150;914015,1665505)')]
+met4 top only: shapes 568, merged polygons 254, max vertices 12, max holes 0, 0.0 s; largest [(12, 0, '(879470,3439200;904470,3524000)'), (12, 0, '(612670,3491200;614270,3505300)'), (12, 0, '(44700,1384700;45300,2102370)')]
+met4 hierarchy: shapes 2809, merged polygons 472, max vertices 28, max holes 0, 0.1 s; largest [(28, 0, '(888615,1725695;888945,1752545)'), (24, 0, '(860095,1541415;861345,1637625)'), (22, 0, '(738655,1595815;739905,1632865)')]
+=== KLayout BEOL deck
+BEOL_RC=0 items 0
+real	1m37.141s
+user	1m45.261s
+sys	0m6.298s
+=== waiting for the mutation test
+default 75 of 75 caught
+_pnx 81 of 81 caught
+unchanged RTL: {'default': True, '_pnx': True}
+MUTATION_EXIT=0
+/w/flow/eda/mutpack11/baseline.json
+/w/flow/eda/mutpack11/manifest.json
+/w/flow/eda/mutpack11/rtl_mutation_0_74.json
+/w/flow/eda/mutpack11/rtl_mutation_pnx_0_80.json
+=== formal
+read_slang needs the plugin: loading it in copies of the .sby files
+SBY  9:25:48 [tcim_spi] DONE (PASS, rc=0)
+SBY  9:29:13 [tcim_core_safety] DONE (PASS, rc=0)
+pulse amplitude may reach 21 safety FAIL
+set pulse reaches devices that must stay in HRS safety FAIL
+a reset pulse after the set phase has begun safety FAIL
+PDATA writable while a program command runs safety FAIL
+product reads the same row again and again progress FAIL
+product reads rows with input 0 safety FAIL
+product skips rows with input -1 safety FAIL
+an all-zero product ends without DONE safety FAIL
+product ends before the last row safety FAIL
+9 of 9 faults make a proof fail
+BATCH12_DONE

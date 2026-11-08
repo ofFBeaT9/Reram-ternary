@@ -1,0 +1,84 @@
+Mutation test, revision 4.3 (9 October 2026), BSD-PNX build.
+Run on the owner's PC in openroad/orfs:26Q4-71-g9b26ff8ff, 30 parallel jobs: tb/mutation_remote.py gen (cloud) + run (PC).
+The unchanged RTL passed in the same environment (results/rtl_mutation_baseline.json).
+0 caught | sign of a +1 weight in the accumulator | FAIL: product 0 column 0: got -45 expected 7 | 10
+1 caught | sign of a -1 weight in the accumulator | FAIL: product 0 column 0: got 45 expected 7 | 10
+2 caught | a cell with both devices in LRS counted as +1 | FAIL: cell with both devices in LRS not counted as 0 (got 1) | 82
+3 caught | last row never read | FAIL: product 0 column 11: got -6 expected -5 | 11
+4 caught | rows with a -1 input skipped | FAIL: product 1 column 0: got 0 expected -7 | 12
+5 caught | rows with a 0 input read as well | FAIL: product 2 column 0: got -7 expected 0 | 12
+6 caught | invalid cell not flagged during a product | FAIL: invalid cell not reported | 82
+7 caught | invalid cell not flagged during read-back | FAIL: invalid cell not reported by read-back | 83
+8 caught | wrong row sent to the array in a product | FAIL: product 4 column 0: got 3 expected 4 | 12
+9 caught | product read uses the set-verify reference | FAIL: 30 uA device not read as LRS (got 0) | 85
+10 caught | reset phase skipped when programming | FAIL: device that never resets not reported | 87
+11 caught | set phase programs the wrong side | FAIL: pulse on a device that must not change (row 0, 167 times) | 1
+12 caught | reset verify polarity | FAIL: device that never resets not reported | 81
+13 caught | set verify polarity | FAIL: device state after programming r0 c1 | 6
+14 caught | no pulse limit in the reset phase | FAIL: PITER 61 differs from the 52143 pulses the array received (row 6) | 90
+15 caught | no pulse limit in the set phase | FAIL: PITER 61 differs from the 52143 pulses the array received (row 5) | 90
+16 caught | verify failure not reported (set phase) | FAIL: stuck device not reported | 86
+17 caught | pulse amplitude not driven | FAIL: pulse amplitude did not start at 0 and rise by one per pulse (row 0, 20 pulses out of sequence) | 1
+18 caught | set pulses not counted in PITER | FAIL: PITER 0 differs from the 15 pulses the array received (row 0) | 1
+19 caught | reset pulses not counted in PITER | FAIL: PITER 21 differs from the 34 pulses the array received (row 5) | 81
+20 caught | analog difference has the wrong sign | FAIL: analog count 0 column 0: got -7 expected -25 | 69
+21 caught | analog phases use the same rows | FAIL: analog count 0 column 0: got 0 expected -25 | 67
+22 caught | positive clip limit off by one | FAIL: 365 not clipped, column 0: -364 | 84
+23 caught | negative clip limit off by one | FAIL: -365 not clipped, column 0: 364 | 83
+24 caught | SAT flag never set | FAIL: SAT not set on positive overflow | 87
+25 caught | DONE not cleared by reading STAT | FAIL: interrupt not cleared by reading STAT | 66
+26 caught | interrupt ignores the enable trit | FAIL: interrupt raised with IE = 0 | 90
+27 caught | row index 72 accepted | FAIL: row index 72 accepted | 86
+28 caught | negative row index accepted | FAIL: row index -1 accepted | 83
+29 caught | read-back swaps +1 and -1 | FAIL: read-back row 0 | 6
+30 caught | register writes accepted while busy | FAIL: result changed by writes during BUSY, column 0 | 92
+31 caught | program command works without EN | FAIL: array accessed with EN = 0 | 89
+32 caught | GO works without EN | FAIL: array accessed with EN = 0 | 91
+33 caught | MODE read from the wrong trit | FAIL: analog count 0 column 0: got -6 expected -25 | 67
+34 caught | WERR not cleared by GO | FAIL: WERR not cleared by the next GO | 86
+35 caught | X1 and X2 exchanged | FAIL: product 3 column 0: got -1 expected 1 | 12
+36 caught | Y index off by one | FAIL: product 0 column 0: got 2 expected 7 | 10
+37 caught | tryte access to a word register accepted | FAIL: tryte access to a word register not flagged | 1
+38 caught | balanced-ternary conversion: digit -1 written as +1 | FAIL: PITER 39 differs from the 15 pulses the array received (row 0) | 1
+39 caught | balanced-ternary conversion: wrong carry | FAIL: PITER 6 differs from the 15 pulses the array received (row 0) | 1
+40 caught | tryte decoding uses base 2 | FAIL: pulse on another row than 2 | 1
+41 caught | code 10 treated as -1 | FAIL: row 0 failed to program | 1
+42 caught | serial port: error flag not reported | FAIL: unmapped address 3: data not zero or error flag missing | 0
+43 caught | serial port: interrupt flag not reported | FAIL: interrupt not reported in the serial status byte | 67
+44 caught | serial port: write strobe one bit early | FAIL: CTRL EN readback | 0
+45 caught | serial port: address bit lost | FAIL: unmapped address 3: data not zero or error flag missing | 1
+46 caught | serial port: read data shifted by one bit | FAIL: tryte register 0 not zero after reset | 0
+47 caught | serial port: word flag ignored | FAIL: X0 readback | 0
+48 caught | interrupt held by WERR (revision 3 behaviour) | FAIL: interrupt after a failed command not cleared by reading STAT | 117
+49 caught | serial port: bit counter wraps on a long frame (revision 3 behaviour) | FAIL: clocks after the 8-byte frame were decoded as another frame | 117
+50 caught | set pulses repeated on devices that already passed verify | FAIL: pulse on a device that had already passed verify (row 0, 63 times) | 1
+51 caught | reset pulses repeated on devices that already passed verify | FAIL: pulse on a device that had already passed verify (row 5, 210 times) | 76
+52 caught | set amplitude not restarted after the reset phase | FAIL: pulse amplitude did not start at 0 and rise by one per pulse (row 5, 8 pulses out of sequence) | 76
+53 caught | amplitude not restarted by a new program command | FAIL: pulse amplitude did not start at 0 and rise by one per pulse (row 5, 1 pulses out of sequence) | 75
+54 caught | PITER not restarted by a new program command | FAIL: PITER 30 differs from the 15 pulses the array received (row 1) | 1
+55 caught | accumulators not cleared by GO | FAIL: product 1 column 0: got 0 expected -7 | 12
+56 caught | SAT not cleared by GO | FAIL: SAT not cleared by a digital product | 114
+57 caught | SAT not cleared by a read-back command | FAIL: SAT not cleared by a read-back command | 112
+58 caught | DONE not cleared by GO | FAIL: DONE not cleared by GO | 108
+59 caught | DONE never set | FAIL: DONE not set at the end of a product | 10
+60 caught | MODE changed while busy | FAIL: MODE changed while BUSY | 74
+61 caught | read-back works without EN | FAIL: array accessed with EN = 0 | 74
+62 caught | serial port: a write frame also launches a read | FAIL: DONE cleared by a write to STAT | 107
+63 caught | first row never read | FAIL: product 0 column 0: got 6 expected 7 | 11
+64 caught | pulse limit one step short | FAIL: stuck device: 20 set pulses instead of the full ladder of 21 | 68
+65 caught | read-back of an invalid cell returns +1 | FAIL: read-back of a row with an invalid cell | 67
+66 caught | result conversion: remainder 2 gives +1 instead of -1 | FAIL: PITER 39 differs from the 15 pulses the array received (row 0) | 1
+67 caught | result conversion: table read with a signed index (negative results read as 0) | FAIL: product 0 column 3: got 0 expected -1 | 10
+68 caught | result conversion: table read one entry too high | FAIL: tryte register 49 not zero after reset | 0
+69 caught | product: the row after a read is the next row, not the next non-zero row | FAIL: product 3 column 0: got -1 expected 1 | 11
+70 caught | product: the next row search starts at the row just read (same row again) | FAIL: product did not finish | 14
+71 caught | product: request dropped between rows | FAIL: product did not finish | 13
+72 caught | product: an all-zero input vector never finishes | FAIL: DONE not set at the end of a product | 10
+73 caught | product: accumulation uses the input of the next row | FAIL: product 3 column 1: got 1 expected -3 | 11
+74 caught | PNX: X registers reset to 0 bits instead of zero trits | FAIL: word register 4 not zero after reset | 0
+75 caught | PNX: PROW and PDATA reset to 0 bits instead of zero trits | FAIL: tryte register 40 not zero after reset | 0
+76 caught | PNX: TILE resets to 0 bits instead of zero trits | FAIL: tryte register 2 not zero after reset | 0
+77 caught | PNX: unused trits of a read value are 0 bits | FAIL: tryte register 0 not zero after reset | 0
+78 caught | PNX: codes of +1 and -1 exchanged | FAIL: CTRL EN readback | 0
+79 caught | PNX: zero trit produced as the illegal pair 00 | FAIL: tryte register 0 not zero after reset | 0
+80 of 80 faults detected

@@ -1,0 +1,2 @@
+LVS:        Netlists match uniquely. Final result: Circuits match uniquely. 
+LVS fault:  Netlists do not match. Final result: Top level cell failed pin matching. 

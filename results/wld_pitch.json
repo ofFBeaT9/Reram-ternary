@@ -1,0 +1,15 @@
+{
+ "gds": "layout/tcim_wld72.gds",
+ "cdl": "layout/tcim_wld72.cdl",
+ "cell": "tcim_wld72",
+ "rows": 72,
+ "slice_height_um": 2.17,
+ "row_pitch_um": 1.085,
+ "column_height_um": 78.12,
+ "width_um": 26.42,
+ "nmos": "6/0.45 um",
+ "pmos": "12/0.45 um",
+ "transistors": 144,
+ "shapes": 6560,
+ "self_check_errors_two_slices": []
+}

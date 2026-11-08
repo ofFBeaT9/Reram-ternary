@@ -1,0 +1,37 @@
+[
+ {
+  "fault": "none (the design as it is)",
+  "frames": 200000,
+  "fuzz_passed": true,
+  "ok": true,
+  "summary": "spi fuzz: 200000 frames (50223 aborted, 52007 writes, 49747 reads), 15625 read-back checks, 0 mismatches, 0 bad status bytes, 74097855 clock cycles"
+ },
+ {
+  "fault": "a frame cut at 55 clocks writes",
+  "frames": 20000,
+  "fuzz_passed": false,
+  "ok": true,
+  "summary": "spi fuzz: 20000 frames (4969 aborted, 5149 writes, 4955 reads), 1565 read-back checks, 1518 mismatches, 0 bad status bytes, 7361944 clock cycles"
+ },
+ {
+  "fault": "bit counter not cleared when CS rises",
+  "frames": 20000,
+  "fuzz_passed": false,
+  "ok": true,
+  "summary": "spi fuzz: 20000 frames (4969 aborted, 5149 writes, 4955 reads), 1565 read-back checks, 1565 mismatches, 10103 bad status bytes, 7361944 clock cycles"
+ },
+ {
+  "fault": "error flag not latched on a write",
+  "frames": 20000,
+  "fuzz_passed": false,
+  "ok": true,
+  "summary": "spi fuzz: 20000 frames (4969 aborted, 5149 writes, 4955 reads), 1565 read-back checks, 0 mismatches, 2185 bad status bytes, 7361944 clock cycles"
+ },
+ {
+  "fault": "read launched one bit late (address shifted)",
+  "frames": 20000,
+  "fuzz_passed": false,
+  "ok": true,
+  "summary": "spi fuzz: 20000 frames (4969 aborted, 5149 writes, 4955 reads), 1565 read-back checks, 1558 mismatches, 4101 bad status bytes, 7361944 clock cycles"
+ }
+]

@@ -1,0 +1,35 @@
+{
+ "rows_read_per_product": 47.891666666666666,
+ "sense_branch_uA": {
+  "LRS": 30.27,
+  "HRS_mean": 9.38,
+  "shared_references": 60.0
+ },
+ "sense_power_per_row_read_mW": 1.0134,
+ "slowest_valid_output_ns": 3.1,
+ "keep_alive_power_mW": 0.36,
+ "window_4ns": {
+  "sense_amplifiers_nJ": 0.1941,
+  "array_at_0p2V_nJ": 0.0303
+ },
+ "window_10ns": {
+  "sense_amplifiers_nJ": 0.4853,
+  "array_at_0p2V_nJ": 0.0758
+ },
+ "word_lines_nJ": 0.0628,
+ "digital_logic_as_synthesized": {
+  "nJ_per_product": 3.432,
+  "cycles": 122.7,
+  "pJ_per_cycle": 27.31,
+  "of_which_clock_pJ": 20.39,
+  "note": "no clock gating, no clock tree, zero-delay toggles; see synth/power_estimate.py"
+ },
+ "digital_yardsticks": {
+  "tmac24_pJ_per_step": 6.65,
+  "tmac24_72_steps_nJ": 0.479,
+  "flipflop_tile_nJ_per_product": 10.1,
+  "flipflop_tile_area_mm2": 0.322,
+  "tcim_top_area_mm2": 0.112,
+  "tmac24_area_mm2": 0.0112
+ }
+}

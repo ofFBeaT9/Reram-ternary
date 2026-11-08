@@ -1,0 +1,34 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 10/10/2026 11:23
+
+.SUBCKT tcim_form bl blsa dis en enb vcas vform vmid vmuxa vmuxb vss
+M$1 vss en \$10 vss sg13_hv_nmos L=0.6u W=2u AS=0.68p AD=0.68p PS=4.68u
++ PD=4.68u rfmode=0
+M$2 \$10 vcas \$11 vss sg13_hv_nmos L=0.6u W=2u AS=0.68p AD=0.68p PS=4.68u
++ PD=4.68u rfmode=0
+M$3 vss enb \$12 vss sg13_hv_nmos L=0.6u W=2u AS=0.68p AD=0.68p PS=4.68u
++ PD=4.68u rfmode=0
+M$4 \$12 vcas \$13 vss sg13_hv_nmos L=0.6u W=2u AS=0.68p AD=0.68p PS=4.68u
++ PD=4.68u rfmode=0
+M$5 \$5 dis vss vss sg13_hv_nmos L=0.6u W=10u AS=2.65p AD=2.65p PS=16.06u
++ PD=16.06u rfmode=0
+M$7 bl vcas \$5 vss sg13_hv_nmos L=0.6u W=10u AS=2.65p AD=2.65p PS=16.06u
++ PD=16.06u rfmode=0
+M$9 \$7 vmuxa bl vss sg13_hv_nmos L=0.6u W=10u AS=2.65p AD=2.65p PS=16.06u
++ PD=16.06u rfmode=0
+M$11 blsa vmuxb \$7 vss sg13_hv_nmos L=0.6u W=10u AS=2.65p AD=2.65p PS=16.06u
++ PD=16.06u rfmode=0
+M$13 vform \$1 \$4 vform sg13_hv_pmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$14 vform \$4 \$1 vform sg13_hv_pmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$15 \$2 \$1 vmid \$2 sg13_hv_pmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$16 \$4 vmid \$11 \$4 sg13_hv_pmos L=0.5u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u rfmode=0
+M$17 \$1 vmid \$13 \$1 sg13_hv_pmos L=0.5u W=4u AS=1.36p AD=1.36p PS=8.68u
++ PD=8.68u rfmode=0
+M$18 vform \$4 \$2 vform sg13_hv_pmos L=0.5u W=20u AS=5.3p AD=5.3p PS=31.06u
++ PD=31.06u rfmode=0
+M$20 \$2 vmid bl \$2 sg13_hv_pmos L=0.5u W=20u AS=5.3p AD=5.3p PS=31.06u
++ PD=31.06u rfmode=0
+.ENDS tcim_form

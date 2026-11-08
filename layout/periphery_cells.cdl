@@ -1,0 +1,16 @@
+* schematic netlists of layout/tcim_periphery.gds (from circuits/gnucap/periphery.py sizes)
+.SUBCKT tcim_ls in out vdd vddh vss
+M0 inb in vss vss sg13_lv_nmos w=0.3u l=0.13u ng=1 m=1
+M1 inb in vdd vdd sg13_lv_pmos w=0.6u l=0.13u ng=1 m=1
+M2 x in vss vss sg13_hv_nmos w=1u l=0.45u ng=1 m=1
+M3 xb inb vss vss sg13_hv_nmos w=1u l=0.45u ng=1 m=1
+M4 out x vss vss sg13_hv_nmos w=1u l=0.45u ng=1 m=1
+M5 x xb vddh vddh sg13_hv_pmos w=0.3u l=0.45u ng=1 m=1
+M6 xb x vddh vddh sg13_hv_pmos w=0.3u l=0.45u ng=1 m=1
+M7 out x vddh vddh sg13_hv_pmos w=2u l=0.45u ng=1 m=1
+.ENDS tcim_ls
+
+.SUBCKT tcim_wld in out vr vss
+M0 out in vss vss sg13_hv_nmos w=6u l=0.45u ng=1 m=1
+M1 out in vr vr sg13_hv_pmos w=12u l=0.45u ng=2 m=1
+.ENDS tcim_wld

@@ -1,0 +1,47 @@
+[
+ {
+  "check": "tile solver equals element-by-element nodal analysis",
+  "passed": true,
+  "detail": "largest relative difference 5.2e-11 over 8 configurations"
+ },
+ {
+  "check": "analog RMS error equals the closed-form value",
+  "passed": true,
+  "detail": "closed form 0.422 steps, tile model 0.407 steps"
+ },
+ {
+  "check": "digital-mode misread probabilities and Monte Carlo counts agree",
+  "passed": true,
+  "detail": "mc_LRS3_x3_vos2mV: 4 observed, 6.7 expected; mc_LRS1_x1_vos0mV: 2 observed, 6.6 expected; mc_LRS1_x2_vos2mV: 4616 observed, 4732.2 expected"
+ },
+ {
+  "check": "set voltage in the ramp, general ODE solver against the three implementations",
+  "passed": true,
+  "detail": "LSODA 0.66949 V; largest difference 0.26 mV"
+ },
+ {
+  "check": "published kinetic values give a set voltage far below the measured 0.65-0.75 V",
+  "passed": true,
+  "detail": "0.213 V"
+ },
+ {
+  "check": "read-disturb time at 0.29 V, ODE solver against the reference model",
+  "passed": true,
+  "detail": "LSODA 183 s (cell alone), reference model 200 s (with transistor)"
+ },
+ {
+  "check": "static cell currents at the published gap values",
+  "passed": true,
+  "detail": "0.95 nm: 17.31 uA, 0.85 nm: 24.74 uA, 0.73 nm: 37.98 uA, 1.88 nm: 0.62 uA"
+ },
+ {
+  "check": "energy table recomputed from the raw currents, capacitance and toggle counts",
+  "passed": true,
+  "detail": "sense amplifiers 0.1941 nJ, word lines 0.0628 nJ, logic 1.540 nJ"
+ },
+ {
+  "check": "clock energy per flip-flop is in the range of the library data",
+  "passed": true,
+  "detail": "30.5 fJ per flip-flop per cycle, 661 flip-flops"
+ }
+]

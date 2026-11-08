@@ -1,0 +1,1 @@
+A 5.0 tt -40 {'bl_on_V': 4.8483, 'drop_mV': 151.7, 'bl_rise_90_ns': np.float64(2.35), 'bl_after_pulldown_V': 0.0006, 'blsa_max_V': 0.4325, 'settled_worst_device': 'nb1', 'settled_worst_V': 3.001, 'transient_worst_device': 'pa2', 'transient_worst_V': 3.48, 'ns_above_limit_max': 0.6, 'junction_max_V': 5.006}

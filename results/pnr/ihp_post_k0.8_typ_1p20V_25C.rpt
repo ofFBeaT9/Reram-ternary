@@ -1,0 +1,174 @@
+OpenSTA 3.1.0 b7d866ff69 Copyright (c) 2026, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 113131, net ANTENNA_1 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 127967, net ANTENNA_1 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 137972, net ANTENNA_3 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 164798, instance ANTENNA_11:A not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 164803, net ANTENNA_11 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 164834, net ANTENNA_11 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 164916, instance ANTENNA_12:A not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 164921, net ANTENNA_12 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 164995, net ANTENNA_12 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 170656, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 179051, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 179053, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 212132, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 243229, net ANTENNA_10 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 286896, instance ANTENNA_6:A not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 286901, net ANTENNA_6 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 286955, net ANTENNA_6 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 287266, instance ANTENNA_5:A not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 287271, net ANTENNA_5 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 287353, net ANTENNA_5 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 287360, instance ANTENNA_13:A not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 287365, net ANTENNA_13 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 287418, net ANTENNA_13 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 287425, instance ANTENNA_4:A not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 287430, net ANTENNA_4 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 287440, net ANTENNA_4 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 287491, net ANTENNA_4 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 290920, instance ANTENNA_3:A not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 290925, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 290933, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 290960, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 290962, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 290963, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 290965, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 290977, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 290987, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 290988, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 290991, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 290993, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 291004, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 291005, net ANTENNA_3 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 291145, instance ANTENNA_2:A not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 291150, net ANTENNA_2 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 291186, net ANTENNA_2 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 291187, net ANTENNA_2 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 291476, instance ANTENNA_1:A not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 291481, net ANTENNA_1 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 291489, net ANTENNA_1 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 291492, net ANTENNA_1 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 291499, net ANTENNA_1 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 297397, instance ANTENNA_9:A not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 297399, instance ANTENNA_7:A not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 297400, instance ANTENNA_8:A not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 297402, instance ANTENNA_10:A not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 297406, net ANTENNA_9 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 297408, net ANTENNA_7 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 297409, net ANTENNA_8 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 297411, net ANTENNA_10 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 297478, net ANTENNA_10 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 297515, net ANTENNA_10 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 297541, net ANTENNA_10 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 297543, net ANTENNA_8 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 297544, net ANTENNA_7 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 297546, net ANTENNA_9 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 304179, net ANTENNA_10 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 323966, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 350601, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 350650, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 351251, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 416566, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/ihp/spef_k0.8/6_final.spef line 438122, net ANTENNA_4 not found.
+@@ setup_wns 4.367682215900004e-9
+@@ setup_tns 0.0
+@@ hold_wns 1.675128924460978e-10
+@@ BEGIN max path
+Startpoint: arr_adc[30] (input port clocked by clk)
+Endpoint: u_core.s_sat$_DFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+   Delay     Time   Description
+-----------------------------------------------------------
+   0.000    0.000   clock clk (rise edge)
+   0.000    0.000   clock network delay (propagated)
+   3.000    3.000 ^ input external delay
+   0.000    3.000 ^ arr_adc[30] (in)
+   0.095    3.095 ^ input165/X (sg13g2_buf_1)
+   0.243    3.337 ^ _18562_/Y (sg13g2_nor2b_1)
+   0.217    3.554 v _18565_/Y (sg13g2_o21ai_1)
+   0.150    3.705 ^ _18574_/Y (sg13g2_a21oi_2)
+   0.117    3.821 v _18585_/Y (sg13g2_a22oi_1)
+   0.516    4.338 ^ _18599_/Y (sg13g2_nor4_1)
+   0.159    4.496 v _18601_/Y (sg13g2_nand2_2)
+   0.134    4.631 v _18603_/X (sg13g2_and2_1)
+   0.230    4.861 ^ _18606_/Y (sg13g2_a21oi_1)
+   0.111    4.972 v _18697_/Y (sg13g2_nor4_1)
+   0.526    5.497 ^ _18702_/Y (sg13g2_nor4_1)
+   0.302    5.799 ^ _18763_/X (sg13g2_and4_1)
+   0.204    6.003 v _20593_/Y (sg13g2_nand4_1)
+   0.158    6.161 ^ _20603_/Y (sg13g2_nor3_1)
+   0.083    6.245 v _20608_/Y (sg13g2_a21oi_1)
+   0.000    6.245 v u_core.s_sat$_DFFE_PN0P_/D (sg13g2_dfrbpq_1)
+            6.245   data arrival time
+
+  10.000   10.000   clock clk (rise edge)
+   0.737   10.737   clock network delay (propagated)
+   0.000   10.737   clock reconvergence pessimism
+           10.737 ^ u_core.s_sat$_DFFE_PN0P_/CLK (sg13g2_dfrbpq_1)
+  -0.124   10.612   library setup time
+           10.612   data required time
+-----------------------------------------------------------
+           10.612   data required time
+           -6.245   data arrival time
+-----------------------------------------------------------
+            4.368   slack (MET)
+
+
+@@ END
+@@ BEGIN min path
+Startpoint: u_spi.shift_in[24]$_DFFE_PN0P_
+            (rising edge-triggered flip-flop clocked by clk)
+Endpoint: bus_wdata[25]$_DFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+   Delay     Time   Description
+-----------------------------------------------------------
+   0.000    0.000   clock clk (rise edge)
+   0.692    0.692   clock network delay (propagated)
+   0.000    0.692 ^ u_spi.shift_in[24]$_DFFE_PN0P_/CLK (sg13g2_dfrbpq_1)
+   0.161    0.853 v u_spi.shift_in[24]$_DFFE_PN0P_/Q (sg13g2_dfrbpq_1)
+   0.000    0.853 v bus_wdata[25]$_DFFE_PN0P_/D (sg13g2_dfrbpq_1)
+            0.853   data arrival time
+
+   0.000    0.000   clock clk (rise edge)
+   0.730    0.730   clock network delay (propagated)
+  -0.010    0.720   clock reconvergence pessimism
+            0.720 ^ bus_wdata[25]$_DFFE_PN0P_/CLK (sg13g2_dfrbpq_1)
+  -0.034    0.686   library hold time
+            0.686   data required time
+-----------------------------------------------------------
+            0.686   data required time
+           -0.853   data arrival time
+-----------------------------------------------------------
+            0.168   slack (MET)
+
+
+@@ END
+@@ BEGIN limits
+max fanout
+
+Pin                                   Limit Fanout  Slack
+---------------------------------------------------------
+clkbuf_0__10772_/X                        8     16     -8 (VIOLATED)
+clkbuf_0__10786_/X                        8     16     -8 (VIOLATED)
+
+@@ END
+@@ BEGIN skew
+Clock clk
+   0.78 source latency u_core.state[2]$_DFFE_PN0P_/CLK ^
+  -0.22 target latency _20719_/CLK ^
+  -0.00 CRPR
+--------------
+   0.55 setup skew
+
+@@ END

@@ -1,0 +1,57 @@
+{
+ "gds": "layout/tcim_periphery.gds",
+ "cdl": "layout/periphery_cells.cdl",
+ "cells": {
+  "tcim_ls": {
+   "ports": [
+    "in",
+    "out",
+    "vdd",
+    "vddh",
+    "vss"
+   ],
+   "transistors": [
+    "M0 inb in vss vss sg13_lv_nmos w=0.3u l=0.13u ng=1 m=1",
+    "M1 inb in vdd vdd sg13_lv_pmos w=0.6u l=0.13u ng=1 m=1",
+    "M2 x in vss vss sg13_hv_nmos w=1u l=0.45u ng=1 m=1",
+    "M3 xb inb vss vss sg13_hv_nmos w=1u l=0.45u ng=1 m=1",
+    "M4 out x vss vss sg13_hv_nmos w=1u l=0.45u ng=1 m=1",
+    "M5 x xb vddh vddh sg13_hv_pmos w=0.3u l=0.45u ng=1 m=1",
+    "M6 xb x vddh vddh sg13_hv_pmos w=0.3u l=0.45u ng=1 m=1",
+    "M7 out x vddh vddh sg13_hv_pmos w=2u l=0.45u ng=1 m=1"
+   ],
+   "shapes": 163,
+   "width_um": 25.615,
+   "height_um": 11.68,
+   "area_um2": 299.18,
+   "self_check_errors": [],
+   "drc_clean": true,
+   "lvs_match": true,
+   "lvs_detects_injected_fault": true
+  },
+  "tcim_wld": {
+   "ports": [
+    "in",
+    "out",
+    "vr",
+    "vss"
+   ],
+   "transistors": [
+    "M0 out in vss vss sg13_hv_nmos w=6u l=0.45u ng=1 m=1",
+    "M1 out in vr vr sg13_hv_pmos w=12u l=0.45u ng=2 m=1"
+   ],
+   "shapes": 124,
+   "width_um": 9.95,
+   "height_um": 11.48,
+   "area_um2": 114.23,
+   "self_check_errors": [],
+   "drc_clean": true,
+   "lvs_match": true,
+   "lvs_detects_injected_fault": true
+  }
+ },
+ "not_included": "first-cut sizes; no layout-extracted simulation yet; the word-line driver is not pitch-matched to the 2T2R row (it is drawn as a standalone cell); no guard rings beyond the ties",
+ "checks": {
+  "tool": "KLayout 0.30.12 in openroad/orfs:26Q4-71-g9b26ff8ff, IHP-Open-PDK 5e6d592e decks (DRC without density; LVS run_lvs.py defaults)"
+ }
+}

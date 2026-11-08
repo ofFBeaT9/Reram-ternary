@@ -1,0 +1,170 @@
+[
+ {
+  "fault": "pulse amplitude may reach 21",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "set pulse reaches devices that must stay in HRS",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "a reset pulse after the set phase has begun",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "PDATA writable while a program command runs",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "product reads the same row again and again",
+  "proof": "progress",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "product reads rows with input 0",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "product skips rows with input -1",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "an all-zero product ends without DONE",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "product ends before the last row",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "fixed latency: the same row read twice",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "fixed latency: product ends one row early",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "LOCK cleared by a write",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "LOCK does not clear the options",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "LOCK does not hide PITER",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "margin check pulses the array",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "empty pulses in stop-at-verify programming",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "dummy accumulators updated only when the result is",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "miter: programming stops at verify (revision 4.5 behaviour)",
+  "proof": "prove",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "miter: a failed reset phase ends the command",
+  "proof": "prove",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "miter: products skip rows with input 0 (revision 4.5 behaviour)",
+  "proof": "prove",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "miter: product ends at the last non-zero input",
+  "proof": "prove",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "NOSHUF ignored",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "a product drops its request between rows",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "start row: LFSR mod 72 without the 65536 term",
+  "proof": "lfsr",
+  "result": "OTHER",
+  "caught": false
+ },
+ {
+  "fault": "result accumulators keep the offset",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "read-back runs under LOCK",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "margin check writes PDATA under LOCK",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "miter: start row from the input of row 0",
+  "proof": "prove",
+  "result": "FAIL",
+  "caught": true
+ }
+]

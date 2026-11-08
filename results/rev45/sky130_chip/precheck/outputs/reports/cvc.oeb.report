@@ -1,0 +1,30 @@
+ gpio/user/analog |   in   |   out  | analog |  oeb min/sim/max  | configuration
+   0 /  0 /       |        |        |        |      /     /      | FIXED_STD_INPUT_NOPULL 
+   1 /  1 /       |        |        |        |      /     /      | FIXED_STD_INPUT_NOPULL 
+   2 /  2 /       |        |        |        |      /     /      | FIXED_STD_INPUT_NOPULL 
+   3 /  3 /       |        |        |        |      /     /      | FIXED_STD_INPUT_PULLUP 
+   4 /  4 /       |        |        |        |      /     /      | FIXED_STD_INPUT_NOPULL 
+   5 /  5 /       |      4 |  vssa* |        | vccd*/vccd*/vccd* | USER_STD_INPUT_NOPULL 
+   6 /  6 /       |      2 |  vssa* |        | vccd*/vccd*/vccd* | USER_STD_INPUT_NOPULL 
+   7 /  7 /   0   |      2 |  vssa* |        | vccd*/vccd*/vccd* | USER_STD_INPUT_NOPULL 
+   8 /  8 /   1   |      2 |  vssa* |        | vccd*/vccd*/vccd* | USER_STD_INPUT_NOPULL 
+   9 /  9 /   2   |      2 |  vssa* |        | vccd*/vccd*/vccd* | USER_STD_INPUT_NOPULL 
+  10 / 10 /   3   |        |      2 |        | vssa*/vssa*/vssa* | USER_STD_OUTPUT 
+  11 / 11 /   4   |        |      2 |        | vssa*/vssa*/vssa* | USER_STD_OUTPUT 
+  12 / 12 /   5   |        |      2 |        | vssa*/vssa*/vssa* | USER_STD_OUTPUT 
+  13 / 13 /   6   |        |      2 |        | vssa*/vssa*/vssa* | USER_STD_OUTPUT 
+  25 / 14 /   7   |        |      2 |        | vssa*/vssa*/vssa* | USER_STD_OUTPUT 
+  26 / 15 /   8   |        |      2 |        | vssa*/vssa*/vssa* | USER_STD_OUTPUT 
+  27 / 16 /   9   |        |      2 |        | vssa*/vssa*/vssa* | USER_STD_OUTPUT 
+  28 / 17 /  10   |        |      2 |        | vssa*/vssa*/vssa* | USER_STD_OUTPUT 
+  29 / 18 /  11   |        |      2 |        | vssa*/vssa*/vssa* | USER_STD_OUTPUT 
+  30 / 19 /  12   |      2 |  vssa* |        | vccd*/vccd*/vccd* | USER_STD_INPUT_NOPULL 
+  31 / 20 /  13   |      2 |  vssa* |        | vccd*/vccd*/vccd* | USER_STD_INPUT_NOPULL 
+  32 / 21 /  14   |      2 |  vssa* |        | vccd*/vccd*/vccd* | USER_STD_INPUT_NOPULL 
+  33 / 22 /  15   |      2 |  vssa* |        | vccd*/vccd*/vccd* | USER_STD_INPUT_NOPULL 
+  34 / 23 /  16   |      2 |  vssa* |        | vccd*/vccd*/vccd* | USER_STD_INPUT_NOPULL 
+  35 / 24 /  17   |      2 |  vssa* |        | vccd*/vccd*/vccd* | USER_STD_INPUT_NOPULL 
+  36 / 25 /       |      2 |  vssa* |        | vccd*/vccd*/vccd* | USER_STD_INPUT_NOPULL 
+  37 / 26 /       |      2 |  vssa* |        | vccd*/vccd*/vccd* | USER_STD_INPUT_NOPULL 
+
+No warnings or errors detected

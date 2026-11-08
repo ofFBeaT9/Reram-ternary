@@ -1,0 +1,8 @@
+half period 1 clock cycles (sck = clk/2): 200 of 200 write-read pairs wrong
+half period 2 clock cycles (sck = clk/4): 200 of 200 write-read pairs wrong
+half period 3 clock cycles (sck = clk/6): 0 of 200 write-read pairs wrong
+half period 4 clock cycles (sck = clk/8): 0 of 200 write-read pairs wrong
+half period 5 clock cycles (sck = clk/10): 0 of 200 write-read pairs wrong
+half period 6 clock cycles (sck = clk/12): 0 of 200 write-read pairs wrong
+half period 7 clock cycles (sck = clk/14): 0 of 200 write-read pairs wrong
+half period 8 clock cycles (sck = clk/16): 0 of 200 write-read pairs wrong

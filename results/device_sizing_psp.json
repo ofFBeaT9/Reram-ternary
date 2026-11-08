@@ -1,0 +1,404 @@
+{
+ "W1.5_tt": {
+  "read_uA_at_published_gaps": {
+   "0.95nm": 14.85,
+   "0.85nm": 20.02,
+   "0.73nm": 27.96,
+   "1.88nm": 0.62
+  },
+  "quasi_static": {
+   "vg1.0": {
+    "vset": 0.7,
+    "gap_nm": 0.999,
+    "read_uA": 12.74,
+    "r_kohm": 15.69,
+    "vreset": 0.6
+   },
+   "vg1.2": {
+    "vset": 0.7,
+    "gap_nm": 0.79,
+    "read_uA": 23.77,
+    "r_kohm": 8.41,
+    "vreset": 0.65
+   },
+   "vg1.6": {
+    "vset": 0.7,
+    "gap_nm": 0.554,
+    "read_uA": 42.46,
+    "r_kohm": 4.71,
+    "vreset": 0.85
+   }
+  },
+  "LRS1": {
+   "vg": 1.6,
+   "amp": 2.1,
+   "pulses": 17,
+   "iread_uA": 18.15,
+   "gap_nm": 0.8834
+  },
+  "LRS2": {
+   "vg": 2.15,
+   "amp": 2.4,
+   "pulses": 20,
+   "iread_uA": 31.29,
+   "gap_nm": 0.6859
+  },
+  "LRS3": {
+   "vg": 2.95,
+   "amp": 2.4,
+   "pulses": 20,
+   "iread_uA": 43.64,
+   "gap_nm": 0.5409
+  },
+  "gap_for_LRS3_nm": 0.5414,
+  "reset_LRS3_vg2.7": {
+   "ok": false,
+   "amp": 2.5,
+   "pulses": 21,
+   "iread_uA": 43.59,
+   "gap_nm": 0.5415
+  },
+  "reset_LRS3_vg3.3": {
+   "ok": false,
+   "amp": 2.5,
+   "pulses": 21,
+   "iread_uA": 43.4,
+   "gap_nm": 0.5436
+  }
+ },
+ "W3.0_tt": {
+  "read_uA_at_published_gaps": {
+   "0.95nm": 16.02,
+   "0.85nm": 22.19,
+   "0.73nm": 32.31,
+   "1.88nm": 0.62
+  },
+  "quasi_static": {
+   "vg1.0": {
+    "vset": 0.7,
+    "gap_nm": 0.792,
+    "read_uA": 26.66,
+    "r_kohm": 7.5,
+    "vreset": 0.55
+   },
+   "vg1.2": {
+    "vset": 0.7,
+    "gap_nm": 0.585,
+    "read_uA": 49.42,
+    "r_kohm": 4.05,
+    "vreset": 0.65
+   },
+   "vg1.6": {
+    "vset": 0.7,
+    "gap_nm": 0.351,
+    "read_uA": 87.86,
+    "r_kohm": 2.28,
+    "vreset": 0.85
+   }
+  },
+  "LRS1": {
+   "vg": 1.2,
+   "amp": 2.2,
+   "pulses": 18,
+   "iread_uA": 18.09,
+   "gap_nm": 0.913
+  },
+  "LRS2": {
+   "vg": 1.45,
+   "amp": 2.3,
+   "pulses": 19,
+   "iread_uA": 31.44,
+   "gap_nm": 0.739
+  },
+  "LRS3": {
+   "vg": 1.7,
+   "amp": 2.3,
+   "pulses": 19,
+   "iread_uA": 44.18,
+   "gap_nm": 0.6242
+  },
+  "gap_for_LRS3_nm": 0.6289,
+  "reset_LRS3_vg2.7": {
+   "ok": true,
+   "amp": 2.1,
+   "pulses": 17,
+   "iread_uA": 0.83,
+   "gap_nm": 1.8
+  },
+  "reset_LRS3_vg3.3": {
+   "ok": true,
+   "amp": 1.4,
+   "pulses": 10,
+   "iread_uA": 0.83,
+   "gap_nm": 1.8
+  }
+ },
+ "W4.5_tt": {
+  "read_uA_at_published_gaps": {
+   "0.95nm": 16.42,
+   "0.85nm": 22.97,
+   "0.73nm": 33.97,
+   "1.88nm": 0.62
+  },
+  "quasi_static": {
+   "vg1.0": {
+    "vset": 0.7,
+    "gap_nm": 0.708,
+    "read_uA": 36.43,
+    "r_kohm": 5.49,
+    "vreset": 0.55
+   },
+   "vg1.2": {
+    "vset": 0.7,
+    "gap_nm": 0.488,
+    "read_uA": 70.64,
+    "r_kohm": 2.83,
+    "vreset": 0.65
+   },
+   "vg1.6": {
+    "vset": 0.7,
+    "gap_nm": 0.242,
+    "read_uA": 130.06,
+    "r_kohm": 1.54,
+    "vreset": 0.85
+   }
+  },
+  "LRS1": {
+   "vg": 1.1,
+   "amp": 2.1,
+   "pulses": 17,
+   "iread_uA": 18.24,
+   "gap_nm": 0.919
+  },
+  "LRS2": {
+   "vg": 1.3,
+   "amp": 1.8,
+   "pulses": 14,
+   "iread_uA": 31.13,
+   "gap_nm": 0.7571
+  },
+  "LRS3": {
+   "vg": 1.45,
+   "amp": 2.0,
+   "pulses": 16,
+   "iread_uA": 44.03,
+   "gap_nm": 0.6476
+  },
+  "gap_for_LRS3_nm": 0.6508,
+  "reset_LRS3_vg2.7": {
+   "ok": true,
+   "amp": 1.4,
+   "pulses": 10,
+   "iread_uA": 0.83,
+   "gap_nm": 1.8
+  },
+  "reset_LRS3_vg3.3": {
+   "ok": true,
+   "amp": 1.2,
+   "pulses": 8,
+   "iread_uA": 0.83,
+   "gap_nm": 1.8
+  }
+ },
+ "W6.0_tt": {
+  "read_uA_at_published_gaps": {
+   "0.95nm": 16.63,
+   "0.85nm": 23.38,
+   "0.73nm": 34.88,
+   "1.88nm": 0.62
+  },
+  "quasi_static": {
+   "vg1.0": {
+    "vset": 0.7,
+    "gap_nm": 0.64,
+    "read_uA": 46.7,
+    "r_kohm": 4.28,
+    "vreset": 0.55
+   },
+   "vg1.2": {
+    "vset": 0.7,
+    "gap_nm": 0.415,
+    "read_uA": 92.26,
+    "r_kohm": 2.17,
+    "vreset": 0.65
+   },
+   "vg1.6": {
+    "vset": 0.7,
+    "gap_nm": 0.164,
+    "read_uA": 172.58,
+    "r_kohm": 1.16,
+    "vreset": 0.85
+   }
+  },
+  "LRS1": {
+   "vg": 1.05,
+   "amp": 1.8,
+   "pulses": 14,
+   "iread_uA": 18.11,
+   "gap_nm": 0.9252
+  },
+  "LRS2": {
+   "vg": 1.2,
+   "amp": 1.8,
+   "pulses": 14,
+   "iread_uA": 31.34,
+   "gap_nm": 0.7624
+  },
+  "LRS3": {
+   "vg": 1.3,
+   "amp": 2.2,
+   "pulses": 18,
+   "iread_uA": 44.19,
+   "gap_nm": 0.6571
+  },
+  "gap_for_LRS3_nm": 0.6614,
+  "reset_LRS3_vg2.7": {
+   "ok": true,
+   "amp": 1.2,
+   "pulses": 8,
+   "iread_uA": 0.83,
+   "gap_nm": 1.8
+  },
+  "reset_LRS3_vg3.3": {
+   "ok": true,
+   "amp": 1.1,
+   "pulses": 7,
+   "iread_uA": 0.83,
+   "gap_nm": 1.8
+  }
+ },
+ "W4.5_ss": {
+  "read_uA_at_published_gaps": {
+   "0.95nm": 16.34,
+   "0.85nm": 22.8,
+   "0.73nm": 33.61,
+   "1.88nm": 0.62
+  },
+  "quasi_static": {
+   "vg1.0": {
+    "vset": 0.7,
+    "gap_nm": 0.829,
+    "read_uA": 24.44,
+    "r_kohm": 8.18,
+    "vreset": 0.55
+   },
+   "vg1.2": {
+    "vset": 0.7,
+    "gap_nm": 0.568,
+    "read_uA": 55.02,
+    "r_kohm": 3.64,
+    "vreset": 0.6
+   },
+   "vg1.6": {
+    "vset": 0.7,
+    "gap_nm": 0.293,
+    "read_uA": 111.94,
+    "r_kohm": 1.79,
+    "vreset": 0.8
+   }
+  },
+  "LRS1": {
+   "vg": 1.2,
+   "amp": 1.9,
+   "pulses": 15,
+   "iread_uA": 18.45,
+   "gap_nm": 0.9138
+  },
+  "LRS2": {
+   "vg": 1.35,
+   "amp": 2.5,
+   "pulses": 21,
+   "iread_uA": 31.19,
+   "gap_nm": 0.7535
+  },
+  "LRS3": {
+   "vg": 1.55,
+   "amp": 2.1,
+   "pulses": 17,
+   "iread_uA": 43.82,
+   "gap_nm": 0.6447
+  },
+  "gap_for_LRS3_nm": 0.6464,
+  "reset_LRS3_vg2.7": {
+   "ok": true,
+   "amp": 1.5,
+   "pulses": 11,
+   "iread_uA": 0.83,
+   "gap_nm": 1.8
+  },
+  "reset_LRS3_vg3.3": {
+   "ok": true,
+   "amp": 1.2,
+   "pulses": 8,
+   "iread_uA": 0.83,
+   "gap_nm": 1.8
+  }
+ },
+ "W4.5_ff": {
+  "read_uA_at_published_gaps": {
+   "0.95nm": 16.5,
+   "0.85nm": 23.11,
+   "0.73nm": 34.29,
+   "1.88nm": 0.62
+  },
+  "quasi_static": {
+   "vg1.0": {
+    "vset": 0.7,
+    "gap_nm": 0.604,
+    "read_uA": 50.93,
+    "r_kohm": 3.93,
+    "vreset": 0.6
+   },
+   "vg1.2": {
+    "vset": 0.7,
+    "gap_nm": 0.416,
+    "read_uA": 88.12,
+    "r_kohm": 2.27,
+    "vreset": 0.65
+   },
+   "vg1.6": {
+    "vset": 0.7,
+    "gap_nm": 0.195,
+    "read_uA": 149.47,
+    "r_kohm": 1.34,
+    "vreset": 0.9
+   }
+  },
+  "LRS1": {
+   "vg": 1.0,
+   "amp": 2.5,
+   "pulses": 21,
+   "iread_uA": 18.26,
+   "gap_nm": 0.9201
+  },
+  "LRS2": {
+   "vg": 1.2,
+   "amp": 1.9,
+   "pulses": 15,
+   "iread_uA": 31.47,
+   "gap_nm": 0.7564
+  },
+  "LRS3": {
+   "vg": 1.35,
+   "amp": 1.9,
+   "pulses": 15,
+   "iread_uA": 43.64,
+   "gap_nm": 0.6543
+  },
+  "gap_for_LRS3_nm": 0.6547,
+  "reset_LRS3_vg2.7": {
+   "ok": true,
+   "amp": 1.3,
+   "pulses": 9,
+   "iread_uA": 0.83,
+   "gap_nm": 1.8
+  },
+  "reset_LRS3_vg3.3": {
+   "ok": true,
+   "amp": 1.2,
+   "pulses": 8,
+   "iread_uA": 0.83,
+   "gap_nm": 1.8
+  }
+ }
+}

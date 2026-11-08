@@ -1,0 +1,302 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 10/10/2026 11:23
+
+.SUBCKT tcim_wld72 in0 in1 in10 in11 in12 in13 in14 in15 in16 in17 in18 in19
++ in2 in20 in21 in22 in23 in24 in25 in26 in27 in28 in29 in3 in30 in31 in32 in33
++ in34 in35 in36 in37 in38 in39 in4 in40 in41 in42 in43 in44 in45 in46 in47
++ in48 in49 in5 in50 in51 in52 in53 in54 in55 in56 in57 in58 in59 in6 in60 in61
++ in62 in63 in64 in65 in66 in67 in68 in69 in7 in70 in71 in8 in9 out0 out1 out10
++ out11 out12 out13 out14 out15 out16 out17 out18 out19 out2 out20 out21 out22
++ out23 out24 out25 out26 out27 out28 out29 out3 out30 out31 out32 out33 out34
++ out35 out36 out37 out38 out39 out4 out40 out41 out42 out43 out44 out45 out46
++ out47 out48 out49 out5 out50 out51 out52 out53 out54 out55 out56 out57 out58
++ out59 out6 out60 out61 out62 out63 out64 out65 out66 out67 out68 out69 out7
++ out70 out71 out8 out9 vr vss
+M$1 out0 in0 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$2 vss in1 out1 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$3 out2 in2 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$4 vss in3 out3 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$5 out4 in4 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$6 vss in5 out5 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$7 out6 in6 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$8 vss in7 out7 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$9 out8 in8 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$10 vss in9 out9 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$11 out10 in10 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$12 vss in11 out11 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$13 out12 in12 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$14 vss in13 out13 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$15 out14 in14 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$16 vss in15 out15 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$17 out16 in16 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$18 vss in17 out17 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$19 out18 in18 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$20 vss in19 out19 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$21 out20 in20 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$22 vss in21 out21 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$23 out22 in22 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$24 vss in23 out23 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$25 out24 in24 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$26 vss in25 out25 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$27 out26 in26 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$28 vss in27 out27 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$29 out28 in28 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$30 vss in29 out29 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$31 out30 in30 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$32 vss in31 out31 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$33 out32 in32 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$34 vss in33 out33 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$35 out34 in34 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$36 vss in35 out35 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$37 out36 in36 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$38 vss in37 out37 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$39 out38 in38 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$40 vss in39 out39 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$41 out40 in40 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$42 vss in41 out41 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$43 out42 in42 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$44 vss in43 out43 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$45 out44 in44 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$46 vss in45 out45 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$47 out46 in46 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$48 vss in47 out47 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$49 out48 in48 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$50 vss in49 out49 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$51 out50 in50 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$52 vss in51 out51 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$53 out52 in52 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$54 vss in53 out53 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$55 out54 in54 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$56 vss in55 out55 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$57 out56 in56 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$58 vss in57 out57 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$59 out58 in58 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$60 vss in59 out59 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$61 out60 in60 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$62 vss in61 out61 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$63 out62 in62 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$64 vss in63 out63 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$65 out64 in64 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$66 vss in65 out65 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$67 out66 in66 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$68 vss in67 out67 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$69 out68 in68 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$70 vss in69 out69 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$71 out70 in70 vss vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=1.14p PS=12.68u
++ PD=6.38u rfmode=0
+M$72 vss in71 out71 vss sg13_hv_nmos L=0.45u W=6u AS=1.14p AD=2.04p PS=6.38u
++ PD=12.68u rfmode=0
+M$73 out0 in0 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$74 vr in1 out1 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$75 out2 in2 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$76 vr in3 out3 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$77 out4 in4 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$78 vr in5 out5 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$79 out6 in6 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$80 vr in7 out7 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$81 out8 in8 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$82 vr in9 out9 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$83 out10 in10 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$84 vr in11 out11 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$85 out12 in12 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$86 vr in13 out13 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$87 out14 in14 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$88 vr in15 out15 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$89 out16 in16 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$90 vr in17 out17 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$91 out18 in18 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$92 vr in19 out19 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$93 out20 in20 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$94 vr in21 out21 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$95 out22 in22 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$96 vr in23 out23 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$97 out24 in24 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$98 vr in25 out25 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$99 out26 in26 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$100 vr in27 out27 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$101 out28 in28 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$102 vr in29 out29 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$103 out30 in30 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$104 vr in31 out31 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$105 out32 in32 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$106 vr in33 out33 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$107 out34 in34 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$108 vr in35 out35 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$109 out36 in36 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$110 vr in37 out37 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$111 out38 in38 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$112 vr in39 out39 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$113 out40 in40 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$114 vr in41 out41 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$115 out42 in42 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$116 vr in43 out43 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$117 out44 in44 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$118 vr in45 out45 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$119 out46 in46 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$120 vr in47 out47 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$121 out48 in48 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$122 vr in49 out49 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$123 out50 in50 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$124 vr in51 out51 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$125 out52 in52 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$126 vr in53 out53 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$127 out54 in54 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$128 vr in55 out55 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$129 out56 in56 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$130 vr in57 out57 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$131 out58 in58 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$132 vr in59 out59 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$133 out60 in60 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$134 vr in61 out61 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$135 out62 in62 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$136 vr in63 out63 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$137 out64 in64 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$138 vr in65 out65 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$139 out66 in66 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$140 vr in67 out67 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$141 out68 in68 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$142 vr in69 out69 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+M$143 out70 in70 vr vr sg13_hv_pmos L=0.45u W=12u AS=4.08p AD=2.28p PS=24.68u
++ PD=12.38u rfmode=0
+M$144 vr in71 out71 vr sg13_hv_pmos L=0.45u W=12u AS=2.28p AD=4.08p PS=12.38u
++ PD=24.68u rfmode=0
+.ENDS tcim_wld72

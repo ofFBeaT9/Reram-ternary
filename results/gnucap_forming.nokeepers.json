@@ -1,0 +1,6308 @@
+{
+ "sizes_um": {
+  "n_in": 2.0,
+  "n_cas": 2.0,
+  "p_cas": 4.0,
+  "p_x": 1.0,
+  "p_sw": 20.0,
+  "n_pd": 10.0,
+  "n_mux": 10.0
+ },
+ "vmax": 3.3,
+ "part_a": {
+  "3.6 V tt -40 C": {
+   "vform": 3.6,
+   "bl_on_V": 3.4913,
+   "drop_mV": 108.7,
+   "bl_rise_90_ns": 1.85,
+   "bl_after_pulldown_V": 0.0006,
+   "blsa_max_V": 0.4325,
+   "settled_worst_device": "na1",
+   "settled_worst_V": 3.0,
+   "transient_worst_device": "nb2",
+   "transient_worst_V": 3.122,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 3.6,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.269,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.269
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.12,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.901,
+      "gd": 3.913,
+      "gb": 3.0,
+      "ds": 1.816
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.08,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.08
+     }
+    },
+    "pa1": {
+     "settled_max": 2.587,
+     "any_time_max": 2.587,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.465,
+     "pairs": {
+      "gs": 2.587,
+      "gd": 4.816,
+      "gb": 2.587,
+      "ds": 5.657
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.318,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.318
+     }
+    },
+    "nb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.122,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.122,
+      "gd": 3.117,
+      "gb": 3.0,
+      "ds": 1.785
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.995,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.215
+     }
+    },
+    "pb1": {
+     "settled_max": 2.587,
+     "any_time_max": 2.587,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.587,
+     "pairs": {
+      "gs": 5.657,
+      "gd": 4.816,
+      "gb": 5.657,
+      "ds": 2.587
+     }
+    },
+    "ps1": {
+     "settled_max": 2.582,
+     "any_time_max": 2.582,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.582,
+     "pairs": {
+      "gs": 5.657,
+      "gd": 5.335,
+      "gb": 5.657,
+      "ds": 2.582
+     }
+    },
+    "ps2": {
+     "settled_max": 2.942,
+     "any_time_max": 2.942,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.873,
+     "pairs": {
+      "gs": 2.942,
+      "gd": 2.891,
+      "gb": 2.942,
+      "ds": 2.251
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.942,
+     "pairs": {
+      "gs": 1.84,
+      "gd": 3.0,
+      "gb": 1.84,
+      "ds": 2.942
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.045,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.491,
+     "pairs": {
+      "gs": 3.042,
+      "gd": 3.045,
+      "gb": 3.0,
+      "ds": 1.458
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.017,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.132,
+     "pairs": {
+      "gs": 3.017,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.132
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.05,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.491,
+     "pairs": {
+      "gs": 3.05,
+      "gd": 3.042,
+      "gb": 3.0,
+      "ds": 1.521
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.002,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.971,
+     "pairs": {
+      "gs": 3.002,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.539
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 228",
+    "open circuit: internal node 229",
+    "open circuit: internal node 230"
+   ]
+  },
+  "3.6 V tt 27 C": {
+   "vform": 3.6,
+   "bl_on_V": 3.4773,
+   "drop_mV": 122.7,
+   "bl_rise_90_ns": 2.25,
+   "bl_after_pulldown_V": 0.0008,
+   "blsa_max_V": 0.4603,
+   "settled_worst_device": "nb1",
+   "settled_worst_V": 3.001,
+   "transient_worst_device": "na1",
+   "transient_worst_V": 6.942,
+   "ns_above_limit_max": 10.3,
+   "junction_max_V": 6.942,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 6.942,
+     "ns_above_limit": 10.3,
+     "junction_max": 6.942,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 56.259,
+      "gb": 3.0,
+      "ds": 56.259
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.942,
+     "ns_above_limit": 10.2,
+     "junction_max": 6.942,
+     "pairs": {
+      "gs": 53.259,
+      "gd": 3.129,
+      "gb": 3.0,
+      "ds": 52.659
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.039,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.039
+     }
+    },
+    "pa1": {
+     "settled_max": 2.675,
+     "any_time_max": 3.136,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.56,
+     "pairs": {
+      "gs": 3.136,
+      "gd": 3.006,
+      "gb": 3.136,
+      "ds": 2.56
+     }
+    },
+    "nb1": {
+     "settled_max": 3.001,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.372,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 2.372
+     }
+    },
+    "nb2": {
+     "settled_max": 3.001,
+     "any_time_max": 3.145,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.145,
+      "gd": 3.139,
+      "gb": 3.0,
+      "ds": 1.78
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.881,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.881
+     }
+    },
+    "pb1": {
+     "settled_max": 2.675,
+     "any_time_max": 3.136,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.136,
+     "pairs": {
+      "gs": 2.56,
+      "gd": 3.006,
+      "gb": 2.56,
+      "ds": 3.136
+     }
+    },
+    "ps1": {
+     "settled_max": 2.67,
+     "any_time_max": 3.065,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.065,
+     "pairs": {
+      "gs": 2.56,
+      "gd": 3.002,
+      "gb": 2.56,
+      "ds": 3.065
+     }
+    },
+    "ps2": {
+     "settled_max": 2.935,
+     "any_time_max": 2.935,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.806,
+     "pairs": {
+      "gs": 2.935,
+      "gd": 2.877,
+      "gb": 2.935,
+      "ds": 1.806
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.935,
+     "pairs": {
+      "gs": 1.861,
+      "gd": 3.0,
+      "gb": 1.861,
+      "ds": 2.935
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.049,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.478,
+     "pairs": {
+      "gs": 3.045,
+      "gd": 3.049,
+      "gb": 3.0,
+      "ds": 1.407
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.02,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.193,
+     "pairs": {
+      "gs": 3.02,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.193
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.061,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.478,
+     "pairs": {
+      "gs": 3.061,
+      "gd": 3.045,
+      "gb": 3.0,
+      "ds": 1.486
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.992,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 2.999,
+      "gb": 3.0,
+      "ds": 1.531
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 228",
+    "open circuit: internal node 230",
+    "open circuit: internal node 75"
+   ]
+  },
+  "3.6 V tt 125 C": {
+   "vform": 3.6,
+   "bl_on_V": 3.4563,
+   "drop_mV": 143.7,
+   "bl_rise_90_ns": 2.55,
+   "bl_after_pulldown_V": 0.0011,
+   "blsa_max_V": 0.51,
+   "settled_worst_device": "na1",
+   "settled_worst_V": 3.0,
+   "transient_worst_device": "pa1",
+   "transient_worst_V": 3.193,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 3.6,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.504,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.504
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.152,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.152,
+      "gd": 3.143,
+      "gb": 3.0,
+      "ds": 2.104
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.858,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.858
+     }
+    },
+    "pa1": {
+     "settled_max": 2.85,
+     "any_time_max": 3.193,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.728,
+     "pairs": {
+      "gs": 3.193,
+      "gd": 3.068,
+      "gb": 3.193,
+      "ds": 2.728
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.454,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.454
+     }
+    },
+    "nb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.16,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.16,
+      "gd": 3.152,
+      "gb": 3.0,
+      "ds": 1.976
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.854,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.854
+     }
+    },
+    "pb1": {
+     "settled_max": 2.85,
+     "any_time_max": 3.193,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.193,
+     "pairs": {
+      "gs": 2.728,
+      "gd": 3.068,
+      "gb": 2.728,
+      "ds": 3.193
+     }
+    },
+    "ps1": {
+     "settled_max": 2.845,
+     "any_time_max": 3.046,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.046,
+     "pairs": {
+      "gs": 2.728,
+      "gd": 2.995,
+      "gb": 2.728,
+      "ds": 3.046
+     }
+    },
+    "ps2": {
+     "settled_max": 2.926,
+     "any_time_max": 2.926,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.782,
+     "pairs": {
+      "gs": 2.926,
+      "gd": 2.857,
+      "gb": 2.926,
+      "ds": 1.782
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.926,
+     "pairs": {
+      "gs": 1.902,
+      "gd": 3.0,
+      "gb": 1.902,
+      "ds": 2.926
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.056,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.457,
+     "pairs": {
+      "gs": 3.053,
+      "gd": 3.056,
+      "gb": 3.0,
+      "ds": 1.322
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.027,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.291,
+     "pairs": {
+      "gs": 3.027,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.291
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.081,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.457,
+     "pairs": {
+      "gs": 3.081,
+      "gd": 3.053,
+      "gb": 3.0,
+      "ds": 1.427
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.029,
+     "pairs": {
+      "gs": 2.998,
+      "gd": 2.998,
+      "gb": 3.0,
+      "ds": 1.519
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 195",
+    "open circuit: internal node 105",
+    "open circuit: internal node 120",
+    "open circuit: internal node 90",
+    "open circuit: internal node 75"
+   ]
+  },
+  "3.6 V ss -40 C": {
+   "vform": 3.6,
+   "bl_on_V": 3.466,
+   "drop_mV": 134.0,
+   "bl_rise_90_ns": 2.55,
+   "bl_after_pulldown_V": 0.0006,
+   "blsa_max_V": 0.3914,
+   "settled_worst_device": "na1",
+   "settled_worst_V": 3.0,
+   "transient_worst_device": "pa1",
+   "transient_worst_V": 3.136,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 3.6,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.216,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.216
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.123,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.123,
+      "gd": 3.118,
+      "gb": 3.0,
+      "ds": 1.867
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.134,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.134
+     }
+    },
+    "pa1": {
+     "settled_max": 2.507,
+     "any_time_max": 3.136,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.404,
+     "pairs": {
+      "gs": 3.136,
+      "gd": 3.007,
+      "gb": 3.136,
+      "ds": 2.404
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.259,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.259
+     }
+    },
+    "nb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.132,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.132,
+      "gd": 3.127,
+      "gb": 3.0,
+      "ds": 1.816
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.012,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.012
+     }
+    },
+    "pb1": {
+     "settled_max": 2.507,
+     "any_time_max": 3.136,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.136,
+     "pairs": {
+      "gs": 2.404,
+      "gd": 3.007,
+      "gb": 2.404,
+      "ds": 3.136
+     }
+    },
+    "ps1": {
+     "settled_max": 2.542,
+     "any_time_max": 3.085,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.085,
+     "pairs": {
+      "gs": 2.404,
+      "gd": 3.0,
+      "gb": 2.404,
+      "ds": 3.085
+     }
+    },
+    "ps2": {
+     "settled_max": 2.929,
+     "any_time_max": 2.929,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.818,
+     "pairs": {
+      "gs": 2.929,
+      "gd": 2.866,
+      "gb": 2.929,
+      "ds": 1.818
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.929,
+     "pairs": {
+      "gs": 1.776,
+      "gd": 3.0,
+      "gb": 1.776,
+      "ds": 2.929
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.046,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.466,
+     "pairs": {
+      "gs": 3.041,
+      "gd": 3.046,
+      "gb": 3.0,
+      "ds": 1.484
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.017,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.077,
+     "pairs": {
+      "gs": 3.017,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.077
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.051,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.466,
+     "pairs": {
+      "gs": 3.051,
+      "gd": 3.041,
+      "gb": 3.0,
+      "ds": 1.545
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.003,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.921,
+     "pairs": {
+      "gs": 3.003,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.53
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 228",
+    "open circuit: internal node 229",
+    "open circuit: internal node 230"
+   ]
+  },
+  "3.6 V ss 27 C": {
+   "vform": 3.6,
+   "bl_on_V": 3.4498,
+   "drop_mV": 150.2,
+   "bl_rise_90_ns": 2.65,
+   "bl_after_pulldown_V": 0.0008,
+   "blsa_max_V": 0.4203,
+   "settled_worst_device": "nb1",
+   "settled_worst_V": 3.001,
+   "transient_worst_device": "nb2",
+   "transient_worst_V": 3.15,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 3.6,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.36,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.36
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.14,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.14,
+      "gd": 3.134,
+      "gb": 3.0,
+      "ds": 2.03
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.096,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.096
+     }
+    },
+    "pa1": {
+     "settled_max": 2.602,
+     "any_time_max": 3.144,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.505,
+     "pairs": {
+      "gs": 3.144,
+      "gd": 3.008,
+      "gb": 3.144,
+      "ds": 2.505
+     }
+    },
+    "nb1": {
+     "settled_max": 3.001,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.317,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 2.317
+     }
+    },
+    "nb2": {
+     "settled_max": 3.001,
+     "any_time_max": 3.15,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.15,
+      "gd": 3.144,
+      "gb": 3.0,
+      "ds": 1.854
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.916,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.916
+     }
+    },
+    "pb1": {
+     "settled_max": 2.602,
+     "any_time_max": 3.144,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.144,
+     "pairs": {
+      "gs": 2.505,
+      "gd": 3.008,
+      "gb": 2.505,
+      "ds": 3.144
+     }
+    },
+    "ps1": {
+     "settled_max": 2.625,
+     "any_time_max": 3.071,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.071,
+     "pairs": {
+      "gs": 2.505,
+      "gd": 3.007,
+      "gb": 2.505,
+      "ds": 3.071
+     }
+    },
+    "ps2": {
+     "settled_max": 2.921,
+     "any_time_max": 2.921,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.813,
+     "pairs": {
+      "gs": 2.921,
+      "gd": 2.85,
+      "gb": 2.921,
+      "ds": 1.813
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.921,
+     "pairs": {
+      "gs": 1.796,
+      "gd": 3.0,
+      "gb": 1.796,
+      "ds": 2.921
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.049,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.45,
+     "pairs": {
+      "gs": 3.045,
+      "gd": 3.049,
+      "gb": 3.0,
+      "ds": 1.429
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.021,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.138,
+     "pairs": {
+      "gs": 3.021,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.138
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.062,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.45,
+     "pairs": {
+      "gs": 3.062,
+      "gd": 3.045,
+      "gb": 3.0,
+      "ds": 1.507
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.943,
+     "pairs": {
+      "gs": 2.999,
+      "gd": 2.999,
+      "gb": 3.0,
+      "ds": 1.522
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 228",
+    "open circuit: internal node 230",
+    "open circuit: internal node 75"
+   ]
+  },
+  "3.6 V ss 125 C": {
+   "vform": 3.6,
+   "bl_on_V": 3.4254,
+   "drop_mV": 174.6,
+   "bl_rise_90_ns": 2.95,
+   "bl_after_pulldown_V": 0.0011,
+   "blsa_max_V": 0.4709,
+   "settled_worst_device": "na1",
+   "settled_worst_V": 3.0,
+   "transient_worst_device": "pa1",
+   "transient_worst_V": 3.172,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 3.6,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.445,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.445
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.156,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.156,
+      "gd": 3.148,
+      "gb": 3.0,
+      "ds": 2.137
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.909,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.909
+     }
+    },
+    "pa1": {
+     "settled_max": 2.785,
+     "any_time_max": 3.172,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.673,
+     "pairs": {
+      "gs": 3.172,
+      "gd": 3.043,
+      "gb": 3.172,
+      "ds": 2.673
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.407,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.407
+     }
+    },
+    "nb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.166,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.166,
+      "gd": 3.158,
+      "gb": 3.0,
+      "ds": 2.037
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.873,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.873
+     }
+    },
+    "pb1": {
+     "settled_max": 2.785,
+     "any_time_max": 3.172,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.172,
+     "pairs": {
+      "gs": 2.673,
+      "gd": 3.043,
+      "gb": 2.673,
+      "ds": 3.172
+     }
+    },
+    "ps1": {
+     "settled_max": 2.795,
+     "any_time_max": 3.061,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.061,
+     "pairs": {
+      "gs": 2.673,
+      "gd": 2.993,
+      "gb": 2.673,
+      "ds": 3.061
+     }
+    },
+    "ps2": {
+     "settled_max": 2.91,
+     "any_time_max": 2.91,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.803,
+     "pairs": {
+      "gs": 2.91,
+      "gd": 2.826,
+      "gb": 2.91,
+      "ds": 1.803
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.91,
+     "pairs": {
+      "gs": 1.839,
+      "gd": 3.0,
+      "gb": 1.839,
+      "ds": 2.91
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.055,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.426,
+     "pairs": {
+      "gs": 3.054,
+      "gd": 3.055,
+      "gb": 3.0,
+      "ds": 1.341
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.027,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.236,
+     "pairs": {
+      "gs": 3.027,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.236
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.082,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.426,
+     "pairs": {
+      "gs": 3.082,
+      "gd": 3.054,
+      "gb": 3.0,
+      "ds": 1.445
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.981,
+     "pairs": {
+      "gs": 2.998,
+      "gd": 2.998,
+      "gb": 3.0,
+      "ds": 1.51
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 15",
+    "open circuit: internal node 30",
+    "open circuit: internal node 180",
+    "open circuit: internal node 195",
+    "open circuit: internal node 231"
+   ]
+  },
+  "3.6 V ff -40 C": {
+   "vform": 3.6,
+   "bl_on_V": 3.5084,
+   "drop_mV": 91.6,
+   "bl_rise_90_ns": 1.75,
+   "bl_after_pulldown_V": 0.0005,
+   "blsa_max_V": 0.4754,
+   "settled_worst_device": "nb2",
+   "settled_worst_V": 3.001,
+   "transient_worst_device": "pa1",
+   "transient_worst_V": 3.135,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 3.6,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.39,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.39
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.113,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.113,
+      "gd": 3.108,
+      "gb": 3.0,
+      "ds": 1.787
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.065,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.065
+     }
+    },
+    "pa1": {
+     "settled_max": 2.669,
+     "any_time_max": 3.135,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.527,
+     "pairs": {
+      "gs": 3.135,
+      "gd": 3.005,
+      "gb": 3.135,
+      "ds": 2.527
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.368,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.368
+     }
+    },
+    "nb2": {
+     "settled_max": 3.001,
+     "any_time_max": 3.111,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.111,
+      "gd": 3.106,
+      "gb": 3.0,
+      "ds": 1.749
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.974,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.974
+     }
+    },
+    "pb1": {
+     "settled_max": 2.669,
+     "any_time_max": 3.135,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.135,
+     "pairs": {
+      "gs": 2.527,
+      "gd": 3.005,
+      "gb": 2.527,
+      "ds": 3.135
+     }
+    },
+    "ps1": {
+     "settled_max": 2.624,
+     "any_time_max": 3.05,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.05,
+     "pairs": {
+      "gs": 2.527,
+      "gd": 2.985,
+      "gb": 2.527,
+      "ds": 3.05
+     }
+    },
+    "ps2": {
+     "settled_max": 2.951,
+     "any_time_max": 2.951,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.799,
+     "pairs": {
+      "gs": 2.951,
+      "gd": 2.909,
+      "gb": 2.951,
+      "ds": 1.799
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.951,
+     "pairs": {
+      "gs": 1.902,
+      "gd": 3.0,
+      "gb": 1.902,
+      "ds": 2.951
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.048,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.509,
+     "pairs": {
+      "gs": 3.043,
+      "gd": 3.048,
+      "gb": 3.0,
+      "ds": 1.423
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.016,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.189,
+     "pairs": {
+      "gs": 3.016,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.189
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.049,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.509,
+     "pairs": {
+      "gs": 3.049,
+      "gd": 3.043,
+      "gb": 3.0,
+      "ds": 1.486
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.004,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.022,
+     "pairs": {
+      "gs": 3.004,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 1.547
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 228",
+    "open circuit: internal node 229",
+    "open circuit: internal node 230"
+   ]
+  },
+  "3.6 V ff 27 C": {
+   "vform": 3.6,
+   "bl_on_V": 3.4959,
+   "drop_mV": 104.1,
+   "bl_rise_90_ns": 1.95,
+   "bl_after_pulldown_V": 0.0007,
+   "blsa_max_V": 0.5026,
+   "settled_worst_device": "na1",
+   "settled_worst_V": 3.0,
+   "transient_worst_device": "nb2",
+   "transient_worst_V": 3.131,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 3.6,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.599,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 267.29,
+      "gb": 3.0,
+      "ds": 267.29
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.128,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 264.29,
+      "gd": 3.122,
+      "gb": 3.0,
+      "ds": 263.69
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.002,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.002
+     }
+    },
+    "pa1": {
+     "settled_max": 2.751,
+     "any_time_max": 3.118,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.617,
+     "pairs": {
+      "gs": 3.118,
+      "gd": 2.994,
+      "gb": 3.118,
+      "ds": 2.617
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.416,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.416
+     }
+    },
+    "nb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.131,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.131,
+      "gd": 3.125,
+      "gb": 3.0,
+      "ds": 1.763
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.861,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.861
+     }
+    },
+    "pb1": {
+     "settled_max": 2.751,
+     "any_time_max": 3.118,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.118,
+     "pairs": {
+      "gs": 2.617,
+      "gd": 2.994,
+      "gb": 2.617,
+      "ds": 3.118
+     }
+    },
+    "ps1": {
+     "settled_max": 2.718,
+     "any_time_max": 3.069,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.069,
+     "pairs": {
+      "gs": 2.617,
+      "gd": 2.992,
+      "gb": 2.617,
+      "ds": 3.069
+     }
+    },
+    "ps2": {
+     "settled_max": 2.945,
+     "any_time_max": 2.945,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.799,
+     "pairs": {
+      "gs": 2.945,
+      "gd": 2.896,
+      "gb": 2.945,
+      "ds": 1.799
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.945,
+     "pairs": {
+      "gs": 1.92,
+      "gd": 3.0,
+      "gb": 1.92,
+      "ds": 2.945
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.05,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.496,
+     "pairs": {
+      "gs": 3.046,
+      "gd": 3.05,
+      "gb": 3.0,
+      "ds": 1.375
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.02,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.249,
+     "pairs": {
+      "gs": 3.02,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.249
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.06,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.496,
+     "pairs": {
+      "gs": 3.06,
+      "gd": 3.046,
+      "gb": 3.0,
+      "ds": 1.453
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.043,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 2.999,
+      "gb": 3.0,
+      "ds": 1.54
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 75",
+    "open circuit: internal node 226",
+    "open circuit: internal node 195",
+    "open circuit: internal node 105",
+    "open circuit: internal node 120"
+   ]
+  },
+  "3.6 V ff 125 C": {
+   "vform": 3.6,
+   "bl_on_V": 3.4767,
+   "drop_mV": 123.3,
+   "bl_rise_90_ns": 2.15,
+   "bl_after_pulldown_V": 0.001,
+   "blsa_max_V": 0.5513,
+   "settled_worst_device": "nb1",
+   "settled_worst_V": 3.001,
+   "transient_worst_device": "nb2",
+   "transient_worst_V": 3.154,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 3.6,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.495,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.495
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.147,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.147,
+      "gd": 3.139,
+      "gb": 3.0,
+      "ds": 2.049
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.806,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.806
+     }
+    },
+    "pa1": {
+     "settled_max": 2.916,
+     "any_time_max": 3.149,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.784,
+     "pairs": {
+      "gs": 3.149,
+      "gd": 3.038,
+      "gb": 3.149,
+      "ds": 2.784
+     }
+    },
+    "nb1": {
+     "settled_max": 3.001,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.49,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 2.49
+     }
+    },
+    "nb2": {
+     "settled_max": 3.001,
+     "any_time_max": 3.154,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.154,
+      "gd": 3.145,
+      "gb": 3.0,
+      "ds": 1.897
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.827,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.827
+     }
+    },
+    "pb1": {
+     "settled_max": 2.916,
+     "any_time_max": 3.149,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.149,
+     "pairs": {
+      "gs": 2.784,
+      "gd": 3.038,
+      "gb": 2.784,
+      "ds": 3.149
+     }
+    },
+    "ps1": {
+     "settled_max": 2.894,
+     "any_time_max": 3.057,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.057,
+     "pairs": {
+      "gs": 2.784,
+      "gd": 2.995,
+      "gb": 2.784,
+      "ds": 3.057
+     }
+    },
+    "ps2": {
+     "settled_max": 2.937,
+     "any_time_max": 2.937,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.778,
+     "pairs": {
+      "gs": 2.937,
+      "gd": 2.877,
+      "gb": 2.937,
+      "ds": 1.778
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.937,
+     "pairs": {
+      "gs": 1.963,
+      "gd": 3.0,
+      "gb": 1.963,
+      "ds": 2.937
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.057,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.477,
+     "pairs": {
+      "gs": 3.052,
+      "gd": 3.057,
+      "gb": 3.0,
+      "ds": 1.293
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.026,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.346,
+     "pairs": {
+      "gs": 3.026,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.346
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.079,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.477,
+     "pairs": {
+      "gs": 3.079,
+      "gd": 3.052,
+      "gb": 3.0,
+      "ds": 1.397
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.08,
+     "pairs": {
+      "gs": 2.998,
+      "gd": 2.999,
+      "gb": 3.0,
+      "ds": 1.528
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 15",
+    "open circuit: internal node 195",
+    "open circuit: internal node 195",
+    "open circuit: internal node 195"
+   ]
+  },
+  "3.6 V sf -40 C": {
+   "vform": 3.6,
+   "bl_on_V": 3.5011,
+   "drop_mV": 98.9,
+   "bl_rise_90_ns": 1.95,
+   "bl_after_pulldown_V": 0.0006,
+   "blsa_max_V": 0.4118,
+   "settled_worst_device": "nb2",
+   "settled_worst_V": 3.001,
+   "transient_worst_device": "pa1",
+   "transient_worst_V": 3.137,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 3.6,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.307,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.307
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.132,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.128,
+      "gd": 3.132,
+      "gb": 3.0,
+      "ds": 1.905
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.057,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.057
+     }
+    },
+    "pa1": {
+     "settled_max": 2.628,
+     "any_time_max": 3.137,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.493,
+     "pairs": {
+      "gs": 3.137,
+      "gd": 3.007,
+      "gb": 3.137,
+      "ds": 2.493
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.286,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 2.286
+     }
+    },
+    "nb2": {
+     "settled_max": 3.001,
+     "any_time_max": 3.128,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.128,
+      "gd": 3.123,
+      "gb": 3.0,
+      "ds": 1.81
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.953,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.953
+     }
+    },
+    "pb1": {
+     "settled_max": 2.628,
+     "any_time_max": 3.137,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.137,
+     "pairs": {
+      "gs": 2.493,
+      "gd": 3.007,
+      "gb": 2.493,
+      "ds": 3.137
+     }
+    },
+    "ps1": {
+     "settled_max": 2.603,
+     "any_time_max": 3.081,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.081,
+     "pairs": {
+      "gs": 2.493,
+      "gd": 2.996,
+      "gb": 2.493,
+      "ds": 3.081
+     }
+    },
+    "ps2": {
+     "settled_max": 2.947,
+     "any_time_max": 2.947,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.805,
+     "pairs": {
+      "gs": 2.947,
+      "gd": 2.901,
+      "gb": 2.947,
+      "ds": 1.805
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.947,
+     "pairs": {
+      "gs": 1.871,
+      "gd": 3.0,
+      "gb": 1.871,
+      "ds": 2.947
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.045,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.501,
+     "pairs": {
+      "gs": 3.041,
+      "gd": 3.045,
+      "gb": 3.0,
+      "ds": 1.497
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.017,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.105,
+     "pairs": {
+      "gs": 3.017,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.105
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.051,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.501,
+     "pairs": {
+      "gs": 3.051,
+      "gd": 3.041,
+      "gb": 3.0,
+      "ds": 1.555
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.002,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.946,
+     "pairs": {
+      "gs": 3.002,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.535
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 228",
+    "open circuit: internal node 229",
+    "open circuit: internal node 230"
+   ]
+  },
+  "3.6 V sf 27 C": {
+   "vform": 3.6,
+   "bl_on_V": 3.488,
+   "drop_mV": 112.0,
+   "bl_rise_90_ns": 2.05,
+   "bl_after_pulldown_V": 0.0008,
+   "blsa_max_V": 0.4402,
+   "settled_worst_device": "nb1",
+   "settled_worst_V": 3.001,
+   "transient_worst_device": "nb2",
+   "transient_worst_V": 3.146,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 3.6,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.349,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.349
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.137,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.137,
+      "gd": 3.131,
+      "gb": 3.0,
+      "ds": 2.045
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.987,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.987
+     }
+    },
+    "pa1": {
+     "settled_max": 2.713,
+     "any_time_max": 3.077,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.59,
+     "pairs": {
+      "gs": 3.077,
+      "gd": 2.957,
+      "gb": 3.077,
+      "ds": 2.59
+     }
+    },
+    "nb1": {
+     "settled_max": 3.001,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.345,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 2.345
+     }
+    },
+    "nb2": {
+     "settled_max": 3.001,
+     "any_time_max": 3.146,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.146,
+      "gd": 3.14,
+      "gb": 3.0,
+      "ds": 1.866
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.879,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.879
+     }
+    },
+    "pb1": {
+     "settled_max": 2.713,
+     "any_time_max": 3.077,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.077,
+     "pairs": {
+      "gs": 2.59,
+      "gd": 2.957,
+      "gb": 2.59,
+      "ds": 3.077
+     }
+    },
+    "ps1": {
+     "settled_max": 2.694,
+     "any_time_max": 3.102,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.102,
+     "pairs": {
+      "gs": 2.59,
+      "gd": 3.029,
+      "gb": 2.59,
+      "ds": 3.102
+     }
+    },
+    "ps2": {
+     "settled_max": 2.941,
+     "any_time_max": 2.941,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.799,
+     "pairs": {
+      "gs": 2.941,
+      "gd": 2.888,
+      "gb": 2.941,
+      "ds": 1.799
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.941,
+     "pairs": {
+      "gs": 1.892,
+      "gd": 3.0,
+      "gb": 1.892,
+      "ds": 2.941
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.049,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.488,
+     "pairs": {
+      "gs": 3.045,
+      "gd": 3.049,
+      "gb": 3.0,
+      "ds": 1.448
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.021,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.166,
+     "pairs": {
+      "gs": 3.021,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.166
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.062,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.488,
+     "pairs": {
+      "gs": 3.062,
+      "gd": 3.045,
+      "gb": 3.0,
+      "ds": 1.521
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.967,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 2.999,
+      "gb": 3.0,
+      "ds": 1.527
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 229",
+    "open circuit: internal node 231",
+    "open circuit: internal node 195"
+   ]
+  },
+  "3.6 V sf 125 C": {
+   "vform": 3.6,
+   "bl_on_V": 3.468,
+   "drop_mV": 132.0,
+   "bl_rise_90_ns": 2.35,
+   "bl_after_pulldown_V": 0.0011,
+   "blsa_max_V": 0.4903,
+   "settled_worst_device": "na1",
+   "settled_worst_V": 3.0,
+   "transient_worst_device": "nb2",
+   "transient_worst_V": 3.162,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 3.6,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.476,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.476
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.154,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.154,
+      "gd": 3.146,
+      "gb": 3.0,
+      "ds": 2.148
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.772,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.772
+     }
+    },
+    "pa1": {
+     "settled_max": 2.883,
+     "any_time_max": 3.154,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.756,
+     "pairs": {
+      "gs": 3.154,
+      "gd": 3.03,
+      "gb": 3.154,
+      "ds": 2.756
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.432,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.432
+     }
+    },
+    "nb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.162,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.162,
+      "gd": 3.154,
+      "gb": 3.0,
+      "ds": 2.042
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.803,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.803
+     }
+    },
+    "pb1": {
+     "settled_max": 2.883,
+     "any_time_max": 3.154,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.154,
+     "pairs": {
+      "gs": 2.756,
+      "gd": 3.03,
+      "gb": 2.756,
+      "ds": 3.154
+     }
+    },
+    "ps1": {
+     "settled_max": 2.87,
+     "any_time_max": 3.045,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.045,
+     "pairs": {
+      "gs": 2.756,
+      "gd": 2.993,
+      "gb": 2.756,
+      "ds": 3.045
+     }
+    },
+    "ps2": {
+     "settled_max": 2.932,
+     "any_time_max": 2.932,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.783,
+     "pairs": {
+      "gs": 2.932,
+      "gd": 2.868,
+      "gb": 2.932,
+      "ds": 1.783
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.932,
+     "pairs": {
+      "gs": 1.934,
+      "gd": 3.0,
+      "gb": 1.934,
+      "ds": 2.932
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.055,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.468,
+     "pairs": {
+      "gs": 3.053,
+      "gd": 3.055,
+      "gb": 3.0,
+      "ds": 1.364
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.027,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.264,
+     "pairs": {
+      "gs": 3.027,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.264
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.082,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.468,
+     "pairs": {
+      "gs": 3.082,
+      "gd": 3.053,
+      "gb": 3.0,
+      "ds": 1.463
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.006,
+     "pairs": {
+      "gs": 2.999,
+      "gd": 2.999,
+      "gb": 3.0,
+      "ds": 1.515
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 15",
+    "open circuit: internal node 30",
+    "open circuit: internal node 195",
+    "open circuit: internal node 75",
+    "open circuit: internal node 180"
+   ]
+  },
+  "3.6 V fs -40 C": {
+   "vform": 3.6,
+   "bl_on_V": 3.48,
+   "drop_mV": 120.0,
+   "bl_rise_90_ns": 2.25,
+   "bl_after_pulldown_V": 0.0006,
+   "blsa_max_V": 0.4536,
+   "settled_worst_device": "nb2",
+   "settled_worst_V": 3.001,
+   "transient_worst_device": "pa1",
+   "transient_worst_V": 3.141,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 3.6,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.376,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.376
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.117,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.117,
+      "gd": 3.112,
+      "gb": 3.0,
+      "ds": 1.791
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.183,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.183
+     }
+    },
+    "pa1": {
+     "settled_max": 2.546,
+     "any_time_max": 3.141,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.437,
+     "pairs": {
+      "gs": 3.141,
+      "gd": 3.007,
+      "gb": 3.141,
+      "ds": 2.437
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.346,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.346
+     }
+    },
+    "nb2": {
+     "settled_max": 3.001,
+     "any_time_max": 3.121,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.121,
+      "gd": 3.116,
+      "gb": 3.0,
+      "ds": 1.755
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.019,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.019
+     }
+    },
+    "pb1": {
+     "settled_max": 2.546,
+     "any_time_max": 3.141,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.141,
+     "pairs": {
+      "gs": 2.437,
+      "gd": 3.007,
+      "gb": 2.437,
+      "ds": 3.141
+     }
+    },
+    "ps1": {
+     "settled_max": 2.561,
+     "any_time_max": 3.084,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.084,
+     "pairs": {
+      "gs": 2.437,
+      "gd": 3.0,
+      "gb": 2.437,
+      "ds": 3.084
+     }
+    },
+    "ps2": {
+     "settled_max": 2.936,
+     "any_time_max": 2.936,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.806,
+     "pairs": {
+      "gs": 2.936,
+      "gd": 2.88,
+      "gb": 2.936,
+      "ds": 1.806
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.936,
+     "pairs": {
+      "gs": 1.809,
+      "gd": 3.0,
+      "gb": 1.809,
+      "ds": 2.936
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.045,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.48,
+     "pairs": {
+      "gs": 3.042,
+      "gd": 3.045,
+      "gb": 3.0,
+      "ds": 1.416
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.016,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.16,
+     "pairs": {
+      "gs": 3.016,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.16
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.05,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.48,
+     "pairs": {
+      "gs": 3.05,
+      "gd": 3.042,
+      "gb": 3.0,
+      "ds": 1.484
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.003,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.996,
+     "pairs": {
+      "gs": 3.003,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 1.542
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 228",
+    "open circuit: internal node 229",
+    "open circuit: internal node 230"
+   ]
+  },
+  "3.6 V fs 27 C": {
+   "vform": 3.6,
+   "bl_on_V": 3.4651,
+   "drop_mV": 134.9,
+   "bl_rise_90_ns": 2.45,
+   "bl_after_pulldown_V": 0.0007,
+   "blsa_max_V": 0.4814,
+   "settled_worst_device": "na1",
+   "settled_worst_V": 3.0,
+   "transient_worst_device": "na1",
+   "transient_worst_V": 9.986,
+   "ns_above_limit_max": 10.3,
+   "junction_max_V": 9.986,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 9.986,
+     "ns_above_limit": 10.3,
+     "junction_max": 9.986,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 9.992,
+      "gb": 3.0,
+      "ds": 9.992
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 6.986,
+     "ns_above_limit": 10.2,
+     "junction_max": 9.986,
+     "pairs": {
+      "gs": 6.992,
+      "gd": 3.125,
+      "gb": 3.0,
+      "ds": 6.392
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.08,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.08
+     }
+    },
+    "pa1": {
+     "settled_max": 2.638,
+     "any_time_max": 3.137,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.531,
+     "pairs": {
+      "gs": 3.137,
+      "gd": 3.007,
+      "gb": 3.137,
+      "ds": 2.531
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.396,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.396
+     }
+    },
+    "nb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.141,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.141,
+      "gd": 3.135,
+      "gb": 3.0,
+      "ds": 1.766
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.932,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.932
+     }
+    },
+    "pb1": {
+     "settled_max": 2.638,
+     "any_time_max": 3.137,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.137,
+     "pairs": {
+      "gs": 2.531,
+      "gd": 3.007,
+      "gb": 2.531,
+      "ds": 3.137
+     }
+    },
+    "ps1": {
+     "settled_max": 2.647,
+     "any_time_max": 3.072,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.072,
+     "pairs": {
+      "gs": 2.531,
+      "gd": 3.003,
+      "gb": 2.531,
+      "ds": 3.072
+     }
+    },
+    "ps2": {
+     "settled_max": 2.929,
+     "any_time_max": 2.929,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.812,
+     "pairs": {
+      "gs": 2.929,
+      "gd": 2.865,
+      "gb": 2.929,
+      "ds": 1.812
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.929,
+     "pairs": {
+      "gs": 1.827,
+      "gd": 3.0,
+      "gb": 1.827,
+      "ds": 2.929
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.05,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.465,
+     "pairs": {
+      "gs": 3.046,
+      "gd": 3.05,
+      "gb": 3.0,
+      "ds": 1.364
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.02,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.221,
+     "pairs": {
+      "gs": 3.02,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.221
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.061,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.465,
+     "pairs": {
+      "gs": 3.061,
+      "gd": 3.046,
+      "gb": 3.0,
+      "ds": 1.449
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.017,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 2.999,
+      "gb": 3.0,
+      "ds": 1.535
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 228",
+    "open circuit: internal node 230",
+    "open circuit: internal node 195"
+   ]
+  },
+  "3.6 V fs 125 C": {
+   "vform": 3.6,
+   "bl_on_V": 3.4427,
+   "drop_mV": 157.3,
+   "bl_rise_90_ns": 2.65,
+   "bl_after_pulldown_V": 0.001,
+   "blsa_max_V": 0.5305,
+   "settled_worst_device": "nb1",
+   "settled_worst_V": 3.001,
+   "transient_worst_device": "nb2",
+   "transient_worst_V": 3.158,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 3.6,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.512,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.512
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.149,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.149,
+      "gd": 3.141,
+      "gb": 3.0,
+      "ds": 2.046
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.945,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.945
+     }
+    },
+    "pa1": {
+     "settled_max": 2.817,
+     "any_time_max": 3.148,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.7,
+     "pairs": {
+      "gs": 3.148,
+      "gd": 3.022,
+      "gb": 3.148,
+      "ds": 2.7
+     }
+    },
+    "nb1": {
+     "settled_max": 3.001,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.473,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 2.473
+     }
+    },
+    "nb2": {
+     "settled_max": 3.001,
+     "any_time_max": 3.158,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.6,
+     "pairs": {
+      "gs": 3.158,
+      "gd": 3.149,
+      "gb": 3.0,
+      "ds": 1.895
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.878,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.878
+     }
+    },
+    "pb1": {
+     "settled_max": 2.817,
+     "any_time_max": 3.148,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.148,
+     "pairs": {
+      "gs": 2.7,
+      "gd": 3.022,
+      "gb": 2.7,
+      "ds": 3.148
+     }
+    },
+    "ps1": {
+     "settled_max": 2.82,
+     "any_time_max": 3.042,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.042,
+     "pairs": {
+      "gs": 2.7,
+      "gd": 2.987,
+      "gb": 2.7,
+      "ds": 3.042
+     }
+    },
+    "ps2": {
+     "settled_max": 2.919,
+     "any_time_max": 2.919,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.799,
+     "pairs": {
+      "gs": 2.919,
+      "gd": 2.843,
+      "gb": 2.919,
+      "ds": 1.799
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.919,
+     "pairs": {
+      "gs": 1.871,
+      "gd": 3.0,
+      "gb": 1.871,
+      "ds": 2.919
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.057,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.443,
+     "pairs": {
+      "gs": 3.052,
+      "gd": 3.057,
+      "gb": 3.0,
+      "ds": 1.278
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.026,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.318,
+     "pairs": {
+      "gs": 3.026,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.318
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.08,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.443,
+     "pairs": {
+      "gs": 3.08,
+      "gd": 3.052,
+      "gb": 3.0,
+      "ds": 1.389
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.054,
+     "pairs": {
+      "gs": 2.999,
+      "gd": 2.999,
+      "gb": 3.0,
+      "ds": 1.524
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 231",
+    "open circuit: internal node 195",
+    "open circuit: internal node 195",
+    "open circuit: internal node 195",
+    "open circuit: internal node 105"
+   ]
+  },
+  "4.4 V tt -40 C": {
+   "vform": 4.4,
+   "bl_on_V": 4.2668,
+   "drop_mV": 133.2,
+   "bl_rise_90_ns": 2.25,
+   "bl_after_pulldown_V": 0.0006,
+   "blsa_max_V": 0.4323,
+   "settled_worst_device": "na1",
+   "settled_worst_V": 3.0,
+   "transient_worst_device": "pa1",
+   "transient_worst_V": 3.151,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 4.401,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.348,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.348
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.121,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.121,
+      "gd": 3.117,
+      "gb": 3.0,
+      "ds": 2.598
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.892,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.892
+     }
+    },
+    "pa1": {
+     "settled_max": 2.579,
+     "any_time_max": 3.151,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.468,
+     "pairs": {
+      "gs": 3.151,
+      "gd": 3.016,
+      "gb": 3.151,
+      "ds": 2.468
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.331,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 2.331
+     }
+    },
+    "nb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.125,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.401,
+     "pairs": {
+      "gs": 3.125,
+      "gd": 3.12,
+      "gb": 3.0,
+      "ds": 2.57
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.824,
+     "pairs": {
+      "gs": 3.001,
+      "gd": 3.001,
+      "gb": 3.001,
+      "ds": 2.824
+     }
+    },
+    "pb1": {
+     "settled_max": 2.579,
+     "any_time_max": 3.151,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.151,
+     "pairs": {
+      "gs": 2.468,
+      "gd": 3.016,
+      "gb": 2.468,
+      "ds": 3.151
+     }
+    },
+    "ps1": {
+     "settled_max": 2.677,
+     "any_time_max": 3.037,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.037,
+     "pairs": {
+      "gs": 2.468,
+      "gd": 2.95,
+      "gb": 2.468,
+      "ds": 3.037
+     }
+    },
+    "ps2": {
+     "settled_max": 2.928,
+     "any_time_max": 2.928,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.609,
+     "pairs": {
+      "gs": 2.928,
+      "gd": 2.867,
+      "gb": 2.928,
+      "ds": 2.609
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.928,
+     "pairs": {
+      "gs": 1.8,
+      "gd": 3.001,
+      "gb": 1.8,
+      "ds": 2.928
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.048,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.267,
+     "pairs": {
+      "gs": 3.044,
+      "gd": 3.048,
+      "gb": 3.0,
+      "ds": 2.216
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.016,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.145,
+     "pairs": {
+      "gs": 3.016,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.145
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.05,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.267,
+     "pairs": {
+      "gs": 3.05,
+      "gd": 3.044,
+      "gb": 3.0,
+      "ds": 2.283
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.003,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.984,
+     "pairs": {
+      "gs": 3.003,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.551
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 228",
+    "open circuit: internal node 229",
+    "open circuit: internal node 230"
+   ]
+  },
+  "4.4 V tt 27 C": {
+   "vform": 4.4,
+   "bl_on_V": 4.2496,
+   "drop_mV": 150.4,
+   "bl_rise_90_ns": 2.45,
+   "bl_after_pulldown_V": 0.0008,
+   "blsa_max_V": 0.4604,
+   "settled_worst_device": "nb1",
+   "settled_worst_V": 3.001,
+   "transient_worst_device": "na1",
+   "transient_worst_V": 9.979,
+   "ns_above_limit_max": 10.3,
+   "junction_max_V": 9.979,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 9.979,
+     "ns_above_limit": 10.3,
+     "junction_max": 9.979,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 9.983,
+      "gb": 3.0,
+      "ds": 9.983
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 6.979,
+     "ns_above_limit": 10.2,
+     "junction_max": 9.979,
+     "pairs": {
+      "gs": 6.983,
+      "gd": 3.129,
+      "gb": 3.0,
+      "ds": 5.583
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.858,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.858
+     }
+    },
+    "pa1": {
+     "settled_max": 2.666,
+     "any_time_max": 3.142,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.562,
+     "pairs": {
+      "gs": 3.142,
+      "gd": 3.012,
+      "gb": 3.142,
+      "ds": 2.562
+     }
+    },
+    "nb1": {
+     "settled_max": 3.001,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.386,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 2.386
+     }
+    },
+    "nb2": {
+     "settled_max": 3.001,
+     "any_time_max": 3.145,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.145,
+      "gd": 3.139,
+      "gb": 3.0,
+      "ds": 2.565
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.674,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.674
+     }
+    },
+    "pb1": {
+     "settled_max": 2.666,
+     "any_time_max": 3.142,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.142,
+     "pairs": {
+      "gs": 2.562,
+      "gd": 3.012,
+      "gb": 2.562,
+      "ds": 3.142
+     }
+    },
+    "ps1": {
+     "settled_max": 2.75,
+     "any_time_max": 3.025,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.025,
+     "pairs": {
+      "gs": 2.562,
+      "gd": 2.957,
+      "gb": 2.562,
+      "ds": 3.025
+     }
+    },
+    "ps2": {
+     "settled_max": 2.92,
+     "any_time_max": 2.92,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.602,
+     "pairs": {
+      "gs": 2.92,
+      "gd": 2.85,
+      "gb": 2.92,
+      "ds": 2.602
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.92,
+     "pairs": {
+      "gs": 1.813,
+      "gd": 3.0,
+      "gb": 1.813,
+      "ds": 2.92
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.05,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.25,
+     "pairs": {
+      "gs": 3.045,
+      "gd": 3.05,
+      "gb": 3.0,
+      "ds": 2.161
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.02,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.206,
+     "pairs": {
+      "gs": 3.02,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.206
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.061,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.25,
+     "pairs": {
+      "gs": 3.061,
+      "gd": 3.045,
+      "gb": 3.0,
+      "ds": 2.245
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.005,
+     "pairs": {
+      "gs": 2.999,
+      "gd": 2.999,
+      "gb": 3.0,
+      "ds": 1.544
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 228",
+    "open circuit: internal node 230",
+    "open circuit: internal node 75"
+   ]
+  },
+  "4.4 V tt 125 C": {
+   "vform": 4.4,
+   "bl_on_V": 4.2238,
+   "drop_mV": 176.2,
+   "bl_rise_90_ns": 2.35,
+   "bl_after_pulldown_V": 0.0011,
+   "blsa_max_V": 1.3069,
+   "settled_worst_device": "na1",
+   "settled_worst_V": 3.0,
+   "transient_worst_device": "pa1",
+   "transient_worst_V": 3.703,
+   "ns_above_limit_max": 1.5,
+   "junction_max_V": 4.4,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.337,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.337
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.168,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.615,
+      "gd": 3.633,
+      "gb": 3.0,
+      "ds": 2.866
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.633,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.633
+     }
+    },
+    "pa1": {
+     "settled_max": 2.842,
+     "any_time_max": 3.703,
+     "ns_above_limit": 1.5,
+     "junction_max": 3.703,
+     "pairs": {
+      "gs": 2.842,
+      "gd": 4.639,
+      "gb": 2.842,
+      "ds": 5.684
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.468,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.468
+     }
+    },
+    "nb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.159,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.159,
+      "gd": 3.151,
+      "gb": 3.0,
+      "ds": 2.753
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.679,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.679
+     }
+    },
+    "pb1": {
+     "settled_max": 2.842,
+     "any_time_max": 3.703,
+     "ns_above_limit": 1.5,
+     "junction_max": 2.842,
+     "pairs": {
+      "gs": 5.684,
+      "gd": 4.639,
+      "gb": 5.684,
+      "ds": 2.842
+     }
+    },
+    "ps1": {
+     "settled_max": 2.894,
+     "any_time_max": 3.703,
+     "ns_above_limit": 1.5,
+     "junction_max": 2.894,
+     "pairs": {
+      "gs": 5.684,
+      "gd": 5.226,
+      "gb": 5.684,
+      "ds": 2.894
+     }
+    },
+    "ps2": {
+     "settled_max": 2.909,
+     "any_time_max": 2.909,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.699,
+     "pairs": {
+      "gs": 2.909,
+      "gd": 2.824,
+      "gb": 2.909,
+      "ds": 4.177
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.909,
+     "pairs": {
+      "gs": 1.85,
+      "gd": 3.0,
+      "gb": 1.85,
+      "ds": 2.909
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.002,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.224,
+     "pairs": {
+      "gs": 3.242,
+      "gd": 3.298,
+      "gb": 3.0,
+      "ds": 2.068
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.002,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.304,
+     "pairs": {
+      "gs": 3.298,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.304
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.224,
+     "pairs": {
+      "gs": 3.486,
+      "gd": 3.242,
+      "gb": 3.0,
+      "ds": 2.182
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.042,
+     "pairs": {
+      "gs": 3.478,
+      "gd": 3.486,
+      "gb": 3.0,
+      "ds": 1.532
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 195",
+    "open circuit: internal node 15",
+    "open circuit: internal node 30",
+    "open circuit: internal node 195",
+    "open circuit: internal node 75"
+   ]
+  },
+  "4.4 V ss -40 C": {
+   "vform": 4.4,
+   "bl_on_V": 4.2358,
+   "drop_mV": 164.2,
+   "bl_rise_90_ns": 2.65,
+   "bl_after_pulldown_V": 0.0006,
+   "blsa_max_V": 0.3914,
+   "settled_worst_device": "na1",
+   "settled_worst_V": 3.0,
+   "transient_worst_device": "na1",
+   "transient_worst_V": 5.165,
+   "ns_above_limit_max": 10.3,
+   "junction_max_V": 5.165,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 5.165,
+     "ns_above_limit": 10.3,
+     "junction_max": 5.165,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 5.0,
+      "gb": 3.0,
+      "ds": 5.165
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.124,
+     "ns_above_limit": 0.0,
+     "junction_max": 5.165,
+     "pairs": {
+      "gs": 3.124,
+      "gd": 3.119,
+      "gb": 3.0,
+      "ds": 4.406
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.928,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.928
+     }
+    },
+    "pa1": {
+     "settled_max": 2.498,
+     "any_time_max": 3.15,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.407,
+     "pairs": {
+      "gs": 3.15,
+      "gd": 3.016,
+      "gb": 3.15,
+      "ds": 2.407
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.273,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 2.273
+     }
+    },
+    "nb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.135,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.402,
+     "pairs": {
+      "gs": 3.135,
+      "gd": 3.13,
+      "gb": 3.0,
+      "ds": 2.601
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.002,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.838,
+     "pairs": {
+      "gs": 3.002,
+      "gd": 3.002,
+      "gb": 3.002,
+      "ds": 2.838
+     }
+    },
+    "pb1": {
+     "settled_max": 2.498,
+     "any_time_max": 3.15,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.15,
+     "pairs": {
+      "gs": 2.407,
+      "gd": 3.016,
+      "gb": 2.407,
+      "ds": 3.15
+     }
+    },
+    "ps1": {
+     "settled_max": 2.644,
+     "any_time_max": 3.075,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.075,
+     "pairs": {
+      "gs": 2.407,
+      "gd": 2.994,
+      "gb": 2.407,
+      "ds": 3.075
+     }
+    },
+    "ps2": {
+     "settled_max": 2.913,
+     "any_time_max": 2.913,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.619,
+     "pairs": {
+      "gs": 2.913,
+      "gd": 2.836,
+      "gb": 2.913,
+      "ds": 2.619
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.002,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.913,
+     "pairs": {
+      "gs": 1.73,
+      "gd": 3.002,
+      "gb": 1.73,
+      "ds": 2.913
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.046,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.236,
+     "pairs": {
+      "gs": 3.041,
+      "gd": 3.046,
+      "gb": 3.0,
+      "ds": 2.236
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.017,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.089,
+     "pairs": {
+      "gs": 3.017,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.089
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.051,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.236,
+     "pairs": {
+      "gs": 3.051,
+      "gd": 3.041,
+      "gb": 3.0,
+      "ds": 2.302
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.003,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.934,
+     "pairs": {
+      "gs": 3.003,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.542
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 228",
+    "open circuit: internal node 229",
+    "open circuit: internal node 230"
+   ]
+  },
+  "4.4 V ss 27 C": {
+   "vform": 4.4,
+   "bl_on_V": 4.2158,
+   "drop_mV": 184.2,
+   "bl_rise_90_ns": 2.85,
+   "bl_after_pulldown_V": 0.0008,
+   "blsa_max_V": 0.4205,
+   "settled_worst_device": "nb1",
+   "settled_worst_V": 3.001,
+   "transient_worst_device": "pa1",
+   "transient_worst_V": 3.152,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 4.4,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.277,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.277
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.14,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.14,
+      "gd": 3.134,
+      "gb": 3.0,
+      "ds": 2.802
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.913,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.913
+     }
+    },
+    "pa1": {
+     "settled_max": 2.595,
+     "any_time_max": 3.152,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.507,
+     "pairs": {
+      "gs": 3.152,
+      "gd": 3.016,
+      "gb": 3.152,
+      "ds": 2.507
+     }
+    },
+    "nb1": {
+     "settled_max": 3.001,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.33,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 2.33
+     }
+    },
+    "nb2": {
+     "settled_max": 3.001,
+     "any_time_max": 3.15,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.15,
+      "gd": 3.144,
+      "gb": 3.0,
+      "ds": 2.631
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.708,
+     "pairs": {
+      "gs": 3.001,
+      "gd": 3.0,
+      "gb": 3.001,
+      "ds": 2.708
+     }
+    },
+    "pb1": {
+     "settled_max": 2.595,
+     "any_time_max": 3.152,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.152,
+     "pairs": {
+      "gs": 2.507,
+      "gd": 3.016,
+      "gb": 2.507,
+      "ds": 3.152
+     }
+    },
+    "ps1": {
+     "settled_max": 2.715,
+     "any_time_max": 3.051,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.051,
+     "pairs": {
+      "gs": 2.507,
+      "gd": 2.982,
+      "gb": 2.507,
+      "ds": 3.051
+     }
+    },
+    "ps2": {
+     "settled_max": 2.903,
+     "any_time_max": 2.903,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.614,
+     "pairs": {
+      "gs": 2.903,
+      "gd": 2.816,
+      "gb": 2.903,
+      "ds": 2.614
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.903,
+     "pairs": {
+      "gs": 1.746,
+      "gd": 3.001,
+      "gb": 1.746,
+      "ds": 2.903
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.053,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.216,
+     "pairs": {
+      "gs": 3.046,
+      "gd": 3.053,
+      "gb": 3.0,
+      "ds": 2.178
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.021,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.15,
+     "pairs": {
+      "gs": 3.021,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.15
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.062,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.216,
+     "pairs": {
+      "gs": 3.062,
+      "gd": 3.046,
+      "gb": 3.0,
+      "ds": 2.261
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.955,
+     "pairs": {
+      "gs": 2.999,
+      "gd": 2.999,
+      "gb": 3.0,
+      "ds": 1.535
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 228",
+    "open circuit: internal node 230",
+    "open circuit: internal node 75"
+   ]
+  },
+  "4.4 V ss 125 C": {
+   "vform": 4.4,
+   "bl_on_V": 4.1858,
+   "drop_mV": 214.2,
+   "bl_rise_90_ns": 3.15,
+   "bl_after_pulldown_V": 0.0011,
+   "blsa_max_V": 0.471,
+   "settled_worst_device": "na1",
+   "settled_worst_V": 3.0,
+   "transient_worst_device": "na1",
+   "transient_worst_V": 5.136,
+   "ns_above_limit_max": 10.3,
+   "junction_max_V": 5.136,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 5.136,
+     "ns_above_limit": 10.3,
+     "junction_max": 5.136,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 260.25,
+      "gb": 3.0,
+      "ds": 260.25
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.157,
+     "ns_above_limit": 0.0,
+     "junction_max": 5.136,
+     "pairs": {
+      "gs": 257.25,
+      "gd": 3.149,
+      "gb": 3.0,
+      "ds": 255.85
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.718,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.718
+     }
+    },
+    "pa1": {
+     "settled_max": 2.78,
+     "any_time_max": 3.208,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.676,
+     "pairs": {
+      "gs": 3.208,
+      "gd": 3.081,
+      "gb": 3.208,
+      "ds": 2.676
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.42,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.42
+     }
+    },
+    "nb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.166,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.166,
+      "gd": 3.16,
+      "gb": 3.0,
+      "ds": 2.817
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.696,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.696
+     }
+    },
+    "pb1": {
+     "settled_max": 2.78,
+     "any_time_max": 3.208,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.208,
+     "pairs": {
+      "gs": 2.676,
+      "gd": 3.081,
+      "gb": 2.676,
+      "ds": 3.208
+     }
+    },
+    "ps1": {
+     "settled_max": 2.856,
+     "any_time_max": 3.043,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.043,
+     "pairs": {
+      "gs": 2.676,
+      "gd": 2.968,
+      "gb": 2.676,
+      "ds": 3.043
+     }
+    },
+    "ps2": {
+     "settled_max": 2.89,
+     "any_time_max": 2.89,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.601,
+     "pairs": {
+      "gs": 2.89,
+      "gd": 2.786,
+      "gb": 2.89,
+      "ds": 2.601
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.89,
+     "pairs": {
+      "gs": 1.781,
+      "gd": 3.0,
+      "gb": 1.781,
+      "ds": 2.89
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.055,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.186,
+     "pairs": {
+      "gs": 3.054,
+      "gd": 3.055,
+      "gb": 3.0,
+      "ds": 2.081
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.027,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.249,
+     "pairs": {
+      "gs": 3.027,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.249
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.082,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.186,
+     "pairs": {
+      "gs": 3.082,
+      "gd": 3.054,
+      "gb": 3.0,
+      "ds": 2.192
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.994,
+     "pairs": {
+      "gs": 2.998,
+      "gd": 2.998,
+      "gb": 3.0,
+      "ds": 1.523
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 210",
+    "open circuit: internal node 90",
+    "open circuit: internal node 75",
+    "open circuit: internal node 135",
+    "open circuit: internal node 195"
+   ]
+  },
+  "4.4 V ff -40 C": {
+   "vform": 4.4,
+   "bl_on_V": 4.2878,
+   "drop_mV": 112.2,
+   "bl_rise_90_ns": 1.85,
+   "bl_after_pulldown_V": 0.0005,
+   "blsa_max_V": 0.4754,
+   "settled_worst_device": "na1",
+   "settled_worst_V": 3.0,
+   "transient_worst_device": "pa1",
+   "transient_worst_V": 3.144,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 4.401,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.389,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.389
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.113,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.113,
+      "gd": 3.109,
+      "gb": 3.0,
+      "ds": 2.573
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.865,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.865
+     }
+    },
+    "pa1": {
+     "settled_max": 2.661,
+     "any_time_max": 3.144,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.53,
+     "pairs": {
+      "gs": 3.144,
+      "gd": 3.013,
+      "gb": 3.144,
+      "ds": 2.53
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.382,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 2.382
+     }
+    },
+    "nb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.112,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.401,
+     "pairs": {
+      "gs": 3.112,
+      "gd": 3.107,
+      "gb": 3.0,
+      "ds": 2.533
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.002,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.804,
+     "pairs": {
+      "gs": 3.002,
+      "gd": 3.001,
+      "gb": 3.002,
+      "ds": 2.804
+     }
+    },
+    "pb1": {
+     "settled_max": 2.661,
+     "any_time_max": 3.144,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.144,
+     "pairs": {
+      "gs": 2.53,
+      "gd": 3.013,
+      "gb": 2.53,
+      "ds": 3.144
+     }
+    },
+    "ps1": {
+     "settled_max": 2.711,
+     "any_time_max": 3.072,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.072,
+     "pairs": {
+      "gs": 2.53,
+      "gd": 3.011,
+      "gb": 2.53,
+      "ds": 3.072
+     }
+    },
+    "ps2": {
+     "settled_max": 2.94,
+     "any_time_max": 2.94,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.606,
+     "pairs": {
+      "gs": 2.94,
+      "gd": 2.888,
+      "gb": 2.94,
+      "ds": 2.606
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.002,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.94,
+     "pairs": {
+      "gs": 1.865,
+      "gd": 3.002,
+      "gb": 1.865,
+      "ds": 2.94
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.047,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.288,
+     "pairs": {
+      "gs": 3.044,
+      "gd": 3.047,
+      "gb": 3.0,
+      "ds": 2.186
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.016,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.202,
+     "pairs": {
+      "gs": 3.016,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.202
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.049,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.288,
+     "pairs": {
+      "gs": 3.049,
+      "gd": 3.044,
+      "gb": 3.0,
+      "ds": 2.253
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.004,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.035,
+     "pairs": {
+      "gs": 3.004,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 1.56
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 228",
+    "open circuit: internal node 229",
+    "open circuit: internal node 230"
+   ]
+  },
+  "4.4 V ff 27 C": {
+   "vform": 4.4,
+   "bl_on_V": 4.2725,
+   "drop_mV": 127.5,
+   "bl_rise_90_ns": 2.05,
+   "bl_after_pulldown_V": 0.0007,
+   "blsa_max_V": 0.5027,
+   "settled_worst_device": "nb1",
+   "settled_worst_V": 3.001,
+   "transient_worst_device": "na1",
+   "transient_worst_V": 5.09,
+   "ns_above_limit_max": 10.2,
+   "junction_max_V": 5.09,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 5.09,
+     "ns_above_limit": 10.2,
+     "junction_max": 5.09,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 10.976,
+      "gb": 3.0,
+      "ds": 10.976
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.128,
+     "ns_above_limit": 0.0,
+     "junction_max": 5.09,
+     "pairs": {
+      "gs": 7.976,
+      "gd": 3.122,
+      "gb": 3.0,
+      "ds": 6.576
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.823,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.823
+     }
+    },
+    "pa1": {
+     "settled_max": 2.741,
+     "any_time_max": 3.163,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.62,
+     "pairs": {
+      "gs": 3.163,
+      "gd": 3.041,
+      "gb": 3.163,
+      "ds": 2.62
+     }
+    },
+    "nb1": {
+     "settled_max": 3.001,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.43,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 2.43
+     }
+    },
+    "nb2": {
+     "settled_max": 3.001,
+     "any_time_max": 3.133,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.133,
+      "gd": 3.127,
+      "gb": 3.0,
+      "ds": 2.548
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.68,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.68
+     }
+    },
+    "pb1": {
+     "settled_max": 2.741,
+     "any_time_max": 3.163,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.163,
+     "pairs": {
+      "gs": 2.62,
+      "gd": 3.041,
+      "gb": 2.62,
+      "ds": 3.163
+     }
+    },
+    "ps1": {
+     "settled_max": 2.786,
+     "any_time_max": 3.15,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.15,
+     "pairs": {
+      "gs": 2.62,
+      "gd": 3.071,
+      "gb": 2.62,
+      "ds": 3.15
+     }
+    },
+    "ps2": {
+     "settled_max": 2.933,
+     "any_time_max": 2.933,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.6,
+     "pairs": {
+      "gs": 2.933,
+      "gd": 2.873,
+      "gb": 2.933,
+      "ds": 2.6
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.933,
+     "pairs": {
+      "gs": 1.879,
+      "gd": 3.0,
+      "gb": 1.879,
+      "ds": 2.933
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.052,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.273,
+     "pairs": {
+      "gs": 3.046,
+      "gd": 3.052,
+      "gb": 3.0,
+      "ds": 2.133
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.02,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.263,
+     "pairs": {
+      "gs": 3.02,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.263
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.06,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.273,
+     "pairs": {
+      "gs": 3.06,
+      "gd": 3.046,
+      "gb": 3.0,
+      "ds": 2.217
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.056,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 2.999,
+      "gb": 3.0,
+      "ds": 1.553
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 75",
+    "open circuit: internal node 195",
+    "open circuit: internal node 135",
+    "open circuit: internal node 210",
+    "open circuit: internal node 135"
+   ]
+  },
+  "4.4 V ff 125 C": {
+   "vform": 4.4,
+   "bl_on_V": 4.2489,
+   "drop_mV": 151.1,
+   "bl_rise_90_ns": 2.25,
+   "bl_after_pulldown_V": 0.001,
+   "blsa_max_V": 0.5513,
+   "settled_worst_device": "nb1",
+   "settled_worst_V": 3.001,
+   "transient_worst_device": "nb2",
+   "transient_worst_V": 3.154,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 4.4,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.791,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.791
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.148,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.148,
+      "gd": 3.14,
+      "gb": 3.0,
+      "ds": 3.632
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.595,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.595
+     }
+    },
+    "pa1": {
+     "settled_max": 2.907,
+     "any_time_max": 3.125,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.786,
+     "pairs": {
+      "gs": 3.125,
+      "gd": 3.015,
+      "gb": 3.125,
+      "ds": 2.786
+     }
+    },
+    "nb1": {
+     "settled_max": 3.001,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.504,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 2.504
+     }
+    },
+    "nb2": {
+     "settled_max": 3.001,
+     "any_time_max": 3.154,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.154,
+      "gd": 3.145,
+      "gb": 3.0,
+      "ds": 2.671
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.649,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.649
+     }
+    },
+    "pb1": {
+     "settled_max": 2.907,
+     "any_time_max": 3.125,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.125,
+     "pairs": {
+      "gs": 2.786,
+      "gd": 3.015,
+      "gb": 2.786,
+      "ds": 3.125
+     }
+    },
+    "ps1": {
+     "settled_max": 2.931,
+     "any_time_max": 3.059,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.059,
+     "pairs": {
+      "gs": 2.786,
+      "gd": 2.994,
+      "gb": 2.786,
+      "ds": 3.059
+     }
+    },
+    "ps2": {
+     "settled_max": 2.923,
+     "any_time_max": 2.923,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.579,
+     "pairs": {
+      "gs": 2.923,
+      "gd": 2.849,
+      "gb": 2.923,
+      "ds": 2.579
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.923,
+     "pairs": {
+      "gs": 1.914,
+      "gd": 3.0,
+      "gb": 1.914,
+      "ds": 2.923
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.057,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.249,
+     "pairs": {
+      "gs": 3.052,
+      "gd": 3.057,
+      "gb": 3.0,
+      "ds": 2.045
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.026,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.359,
+     "pairs": {
+      "gs": 3.026,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.359
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.079,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.249,
+     "pairs": {
+      "gs": 3.079,
+      "gd": 3.052,
+      "gb": 3.0,
+      "ds": 2.156
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.093,
+     "pairs": {
+      "gs": 2.998,
+      "gd": 2.999,
+      "gb": 3.0,
+      "ds": 1.542
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 15",
+    "open circuit: internal node 195",
+    "open circuit: internal node 30",
+    "open circuit: internal node 30"
+   ]
+  },
+  "4.4 V sf -40 C": {
+   "vform": 4.4,
+   "bl_on_V": 4.2788,
+   "drop_mV": 121.2,
+   "bl_rise_90_ns": 2.05,
+   "bl_after_pulldown_V": 0.0006,
+   "blsa_max_V": 0.4119,
+   "settled_worst_device": "nb2",
+   "settled_worst_V": 3.001,
+   "transient_worst_device": "pa1",
+   "transient_worst_V": 3.148,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 4.401,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.265,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.265
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.123,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.123,
+      "gd": 3.119,
+      "gb": 3.0,
+      "ds": 2.68
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.87,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.87
+     }
+    },
+    "pa1": {
+     "settled_max": 2.619,
+     "any_time_max": 3.148,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.497,
+     "pairs": {
+      "gs": 3.148,
+      "gd": 3.015,
+      "gb": 3.148,
+      "ds": 2.497
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.303,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 2.303
+     }
+    },
+    "nb2": {
+     "settled_max": 3.001,
+     "any_time_max": 3.128,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.401,
+     "pairs": {
+      "gs": 3.128,
+      "gd": 3.123,
+      "gb": 3.0,
+      "ds": 2.595
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.777,
+     "pairs": {
+      "gs": 3.001,
+      "gd": 3.001,
+      "gb": 3.001,
+      "ds": 2.777
+     }
+    },
+    "pb1": {
+     "settled_max": 2.619,
+     "any_time_max": 3.148,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.148,
+     "pairs": {
+      "gs": 2.497,
+      "gd": 3.015,
+      "gb": 2.497,
+      "ds": 3.148
+     }
+    },
+    "ps1": {
+     "settled_max": 2.693,
+     "any_time_max": 3.073,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.073,
+     "pairs": {
+      "gs": 2.497,
+      "gd": 2.986,
+      "gb": 2.497,
+      "ds": 3.073
+     }
+    },
+    "ps2": {
+     "settled_max": 2.935,
+     "any_time_max": 2.935,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.602,
+     "pairs": {
+      "gs": 2.935,
+      "gd": 2.879,
+      "gb": 2.935,
+      "ds": 2.602
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.935,
+     "pairs": {
+      "gs": 1.833,
+      "gd": 3.001,
+      "gb": 1.833,
+      "ds": 2.935
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.044,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.279,
+     "pairs": {
+      "gs": 3.042,
+      "gd": 3.044,
+      "gb": 3.0,
+      "ds": 2.258
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.017,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.118,
+     "pairs": {
+      "gs": 3.017,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.118
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.051,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.279,
+     "pairs": {
+      "gs": 3.051,
+      "gd": 3.042,
+      "gb": 3.0,
+      "ds": 2.32
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.003,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.959,
+     "pairs": {
+      "gs": 3.003,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.547
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 228",
+    "open circuit: internal node 229",
+    "open circuit: internal node 230"
+   ]
+  },
+  "4.4 V sf 27 C": {
+   "vform": 4.4,
+   "bl_on_V": 4.2627,
+   "drop_mV": 137.3,
+   "bl_rise_90_ns": 2.25,
+   "bl_after_pulldown_V": 0.0008,
+   "blsa_max_V": 0.4405,
+   "settled_worst_device": "nb1",
+   "settled_worst_V": 3.001,
+   "transient_worst_device": "pa1",
+   "transient_worst_V": 3.148,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 4.4,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.302,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.302
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.138,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.138,
+      "gd": 3.132,
+      "gb": 3.0,
+      "ds": 2.821
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.799,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.799
+     }
+    },
+    "pa1": {
+     "settled_max": 2.704,
+     "any_time_max": 3.148,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.592,
+     "pairs": {
+      "gs": 3.148,
+      "gd": 3.029,
+      "gb": 3.148,
+      "ds": 2.592
+     }
+    },
+    "nb1": {
+     "settled_max": 3.001,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.359,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 2.359
+     }
+    },
+    "nb2": {
+     "settled_max": 3.001,
+     "any_time_max": 3.146,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.146,
+      "gd": 3.14,
+      "gb": 3.0,
+      "ds": 2.643
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.676,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.676
+     }
+    },
+    "pb1": {
+     "settled_max": 2.704,
+     "any_time_max": 3.148,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.148,
+     "pairs": {
+      "gs": 2.592,
+      "gd": 3.029,
+      "gb": 2.592,
+      "ds": 3.148
+     }
+    },
+    "ps1": {
+     "settled_max": 2.767,
+     "any_time_max": 3.094,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.094,
+     "pairs": {
+      "gs": 2.592,
+      "gd": 3.018,
+      "gb": 2.592,
+      "ds": 3.094
+     }
+    },
+    "ps2": {
+     "settled_max": 2.927,
+     "any_time_max": 2.927,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.595,
+     "pairs": {
+      "gs": 2.927,
+      "gd": 2.863,
+      "gb": 2.927,
+      "ds": 2.595
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.927,
+     "pairs": {
+      "gs": 1.847,
+      "gd": 3.0,
+      "gb": 1.847,
+      "ds": 2.927
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.049,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.263,
+     "pairs": {
+      "gs": 3.045,
+      "gd": 3.049,
+      "gb": 3.0,
+      "ds": 2.204
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.021,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.178,
+     "pairs": {
+      "gs": 3.021,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.178
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.062,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.263,
+     "pairs": {
+      "gs": 3.062,
+      "gd": 3.045,
+      "gb": 3.0,
+      "ds": 2.283
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.98,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 2.999,
+      "gb": 3.0,
+      "ds": 1.54
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 229",
+    "open circuit: internal node 231",
+    "open circuit: internal node 210"
+   ]
+  },
+  "4.4 V sf 125 C": {
+   "vform": 4.4,
+   "bl_on_V": 4.2382,
+   "drop_mV": 161.8,
+   "bl_rise_90_ns": 2.45,
+   "bl_after_pulldown_V": 0.0011,
+   "blsa_max_V": 0.4904,
+   "settled_worst_device": "na1",
+   "settled_worst_V": 3.0,
+   "transient_worst_device": "na1",
+   "transient_worst_V": 5.124,
+   "ns_above_limit_max": 10.3,
+   "junction_max_V": 5.124,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 5.124,
+     "ns_above_limit": 10.3,
+     "junction_max": 5.124,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 411.49,
+      "gb": 3.0,
+      "ds": 411.49
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.155,
+     "ns_above_limit": 0.0,
+     "junction_max": 5.124,
+     "pairs": {
+      "gs": 408.49,
+      "gd": 3.147,
+      "gb": 3.0,
+      "ds": 407.09
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.57,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.57
+     }
+    },
+    "pa1": {
+     "settled_max": 2.874,
+     "any_time_max": 3.135,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.759,
+     "pairs": {
+      "gs": 3.135,
+      "gd": 3.01,
+      "gb": 3.135,
+      "ds": 2.759
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.445,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.445
+     }
+    },
+    "nb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.163,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.163,
+      "gd": 3.155,
+      "gb": 3.0,
+      "ds": 2.822
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.627,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.627
+     }
+    },
+    "pb1": {
+     "settled_max": 2.874,
+     "any_time_max": 3.135,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.135,
+     "pairs": {
+      "gs": 2.759,
+      "gd": 3.01,
+      "gb": 2.759,
+      "ds": 3.135
+     }
+    },
+    "ps1": {
+     "settled_max": 2.913,
+     "any_time_max": 3.062,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.062,
+     "pairs": {
+      "gs": 2.759,
+      "gd": 2.997,
+      "gb": 2.759,
+      "ds": 3.062
+     }
+    },
+    "ps2": {
+     "settled_max": 2.917,
+     "any_time_max": 2.917,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.592,
+     "pairs": {
+      "gs": 2.917,
+      "gd": 2.838,
+      "gb": 2.917,
+      "ds": 2.592
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.917,
+     "pairs": {
+      "gs": 1.883,
+      "gd": 3.0,
+      "gb": 1.883,
+      "ds": 2.917
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.055,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.238,
+     "pairs": {
+      "gs": 3.053,
+      "gd": 3.055,
+      "gb": 3.0,
+      "ds": 2.114
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.027,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.277,
+     "pairs": {
+      "gs": 3.027,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.277
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.082,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.238,
+     "pairs": {
+      "gs": 3.082,
+      "gd": 3.053,
+      "gb": 3.0,
+      "ds": 2.22
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.018,
+     "pairs": {
+      "gs": 2.999,
+      "gd": 2.999,
+      "gb": 3.0,
+      "ds": 1.528
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 15",
+    "open circuit: internal node 195",
+    "open circuit: internal node 30",
+    "open circuit: internal node 195"
+   ]
+  },
+  "4.4 V fs -40 C": {
+   "vform": 4.4,
+   "bl_on_V": 4.253,
+   "drop_mV": 147.0,
+   "bl_rise_90_ns": 2.45,
+   "bl_after_pulldown_V": 0.0006,
+   "blsa_max_V": 0.4537,
+   "settled_worst_device": "nb2",
+   "settled_worst_V": 3.001,
+   "transient_worst_device": "pa1",
+   "transient_worst_V": 3.152,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 4.402,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.402,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.402
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.117,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.117,
+      "gd": 3.113,
+      "gb": 3.0,
+      "ds": 2.575
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.991,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.991
+     }
+    },
+    "pa1": {
+     "settled_max": 2.538,
+     "any_time_max": 3.152,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.44,
+     "pairs": {
+      "gs": 3.152,
+      "gd": 3.016,
+      "gb": 3.152,
+      "ds": 2.44
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.359,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.359
+     }
+    },
+    "nb2": {
+     "settled_max": 3.001,
+     "any_time_max": 3.121,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.402,
+     "pairs": {
+      "gs": 3.121,
+      "gd": 3.116,
+      "gb": 3.0,
+      "ds": 2.54
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.002,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.849,
+     "pairs": {
+      "gs": 3.002,
+      "gd": 3.002,
+      "gb": 3.002,
+      "ds": 2.849
+     }
+    },
+    "pb1": {
+     "settled_max": 2.538,
+     "any_time_max": 3.152,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.152,
+     "pairs": {
+      "gs": 2.44,
+      "gd": 3.016,
+      "gb": 2.44,
+      "ds": 3.152
+     }
+    },
+    "ps1": {
+     "settled_max": 2.662,
+     "any_time_max": 3.079,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.079,
+     "pairs": {
+      "gs": 2.44,
+      "gd": 2.994,
+      "gb": 2.44,
+      "ds": 3.079
+     }
+    },
+    "ps2": {
+     "settled_max": 2.921,
+     "any_time_max": 2.921,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.611,
+     "pairs": {
+      "gs": 2.921,
+      "gd": 2.853,
+      "gb": 2.921,
+      "ds": 2.611
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.002,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.921,
+     "pairs": {
+      "gs": 1.764,
+      "gd": 3.002,
+      "gb": 1.764,
+      "ds": 2.921
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.045,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.253,
+     "pairs": {
+      "gs": 3.042,
+      "gd": 3.045,
+      "gb": 3.0,
+      "ds": 2.172
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.016,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.173,
+     "pairs": {
+      "gs": 3.016,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.173
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.048,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.253,
+     "pairs": {
+      "gs": 3.048,
+      "gd": 3.042,
+      "gb": 3.0,
+      "ds": 2.244
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.003,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.009,
+     "pairs": {
+      "gs": 3.003,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 1.555
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 228",
+    "open circuit: internal node 229",
+    "open circuit: internal node 230"
+   ]
+  },
+  "4.4 V fs 27 C": {
+   "vform": 4.4,
+   "bl_on_V": 4.2347,
+   "drop_mV": 165.3,
+   "bl_rise_90_ns": 2.55,
+   "bl_after_pulldown_V": 0.0007,
+   "blsa_max_V": 0.4817,
+   "settled_worst_device": "na1",
+   "settled_worst_V": 3.0,
+   "transient_worst_device": "pa1",
+   "transient_worst_V": 3.141,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 4.4,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.354,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.354
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.132,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.132,
+      "gd": 3.126,
+      "gb": 3.0,
+      "ds": 2.648
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.885,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.885
+     }
+    },
+    "pa1": {
+     "settled_max": 2.63,
+     "any_time_max": 3.141,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.533,
+     "pairs": {
+      "gs": 3.141,
+      "gd": 3.015,
+      "gb": 3.141,
+      "ds": 2.533
+     }
+    },
+    "nb1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.41,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.41
+     }
+    },
+    "nb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.138,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.138,
+      "gd": 3.132,
+      "gb": 3.0,
+      "ds": 2.551
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.753,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.753
+     }
+    },
+    "pb1": {
+     "settled_max": 2.63,
+     "any_time_max": 3.141,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.141,
+     "pairs": {
+      "gs": 2.533,
+      "gd": 3.015,
+      "gb": 2.533,
+      "ds": 3.141
+     }
+    },
+    "ps1": {
+     "settled_max": 2.734,
+     "any_time_max": 3.08,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.08,
+     "pairs": {
+      "gs": 2.533,
+      "gd": 2.996,
+      "gb": 2.533,
+      "ds": 3.08
+     }
+    },
+    "ps2": {
+     "settled_max": 2.913,
+     "any_time_max": 2.913,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.611,
+     "pairs": {
+      "gs": 2.913,
+      "gd": 2.835,
+      "gb": 2.913,
+      "ds": 2.611
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.913,
+     "pairs": {
+      "gs": 1.78,
+      "gd": 3.0,
+      "gb": 1.78,
+      "ds": 2.913
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.05,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.235,
+     "pairs": {
+      "gs": 3.046,
+      "gd": 3.05,
+      "gb": 3.0,
+      "ds": 2.115
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.02,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.234,
+     "pairs": {
+      "gs": 3.02,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.234
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.061,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.235,
+     "pairs": {
+      "gs": 3.061,
+      "gd": 3.046,
+      "gb": 3.0,
+      "ds": 2.205
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.03,
+     "pairs": {
+      "gs": 2.999,
+      "gd": 2.999,
+      "gb": 3.0,
+      "ds": 1.548
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 228",
+    "open circuit: internal node 230",
+    "open circuit: internal node 75"
+   ]
+  },
+  "4.4 V fs 125 C": {
+   "vform": 4.4,
+   "bl_on_V": 4.2071,
+   "drop_mV": 192.9,
+   "bl_rise_90_ns": 2.85,
+   "bl_after_pulldown_V": 0.001,
+   "blsa_max_V": 0.5306,
+   "settled_worst_device": "nb1",
+   "settled_worst_V": 3.001,
+   "transient_worst_device": "pa1",
+   "transient_worst_V": 3.233,
+   "ns_above_limit_max": 0.0,
+   "junction_max_V": 4.4,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.563,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.563
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.15,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.15,
+      "gd": 3.142,
+      "gb": 3.0,
+      "ds": 2.828
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.733,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.733
+     }
+    },
+    "pa1": {
+     "settled_max": 2.811,
+     "any_time_max": 3.233,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.703,
+     "pairs": {
+      "gs": 3.233,
+      "gd": 3.107,
+      "gb": 3.233,
+      "ds": 2.703
+     }
+    },
+    "nb1": {
+     "settled_max": 3.001,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.487,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 2.487
+     }
+    },
+    "nb2": {
+     "settled_max": 3.001,
+     "any_time_max": 3.158,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.4,
+     "pairs": {
+      "gs": 3.158,
+      "gd": 3.149,
+      "gb": 3.0,
+      "ds": 2.67
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.691,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.691
+     }
+    },
+    "pb1": {
+     "settled_max": 2.811,
+     "any_time_max": 3.233,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.233,
+     "pairs": {
+      "gs": 2.703,
+      "gd": 3.107,
+      "gb": 2.703,
+      "ds": 3.233
+     }
+    },
+    "ps1": {
+     "settled_max": 2.876,
+     "any_time_max": 3.057,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.057,
+     "pairs": {
+      "gs": 2.703,
+      "gd": 2.998,
+      "gb": 2.703,
+      "ds": 3.057
+     }
+    },
+    "ps2": {
+     "settled_max": 2.901,
+     "any_time_max": 2.901,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.588,
+     "pairs": {
+      "gs": 2.901,
+      "gd": 2.807,
+      "gb": 2.901,
+      "ds": 2.588
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.901,
+     "pairs": {
+      "gs": 1.816,
+      "gd": 3.0,
+      "gb": 1.816,
+      "ds": 2.901
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.057,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.207,
+     "pairs": {
+      "gs": 3.052,
+      "gd": 3.057,
+      "gb": 3.0,
+      "ds": 2.022
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.026,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.331,
+     "pairs": {
+      "gs": 3.026,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.331
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.08,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.207,
+     "pairs": {
+      "gs": 3.08,
+      "gd": 3.052,
+      "gb": 3.0,
+      "ds": 2.14
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.067,
+     "pairs": {
+      "gs": 2.999,
+      "gd": 2.999,
+      "gb": 3.0,
+      "ds": 1.536
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 210",
+    "open circuit: internal node 210",
+    "open circuit: internal node 135",
+    "open circuit: internal node 195",
+    "open circuit: internal node 15"
+   ]
+  },
+  "5.0 V tt -40 C": {
+   "vform": 5.0,
+   "bl_on_V": 4.8483,
+   "drop_mV": 151.7,
+   "bl_rise_90_ns": 2.35,
+   "bl_after_pulldown_V": 0.0006,
+   "blsa_max_V": 0.4325,
+   "settled_worst_device": "nb1",
+   "settled_worst_V": 3.001,
+   "transient_worst_device": "pa2",
+   "transient_worst_V": 3.48,
+   "ns_above_limit_max": 0.6,
+   "junction_max_V": 5.006,
+   "devices": {
+    "na1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.0,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.3,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.3
+     }
+    },
+    "na2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.191,
+     "ns_above_limit": 0.0,
+     "junction_max": 5.0,
+     "pairs": {
+      "gs": 3.121,
+      "gd": 3.117,
+      "gb": 3.0,
+      "ds": 3.191
+     }
+    },
+    "pa2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.48,
+     "ns_above_limit": 0.6,
+     "junction_max": 3.48,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 3.48
+     }
+    },
+    "pa1": {
+     "settled_max": 2.572,
+     "any_time_max": 3.158,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.471,
+     "pairs": {
+      "gs": 3.158,
+      "gd": 3.022,
+      "gb": 3.158,
+      "ds": 2.471
+     }
+    },
+    "nb1": {
+     "settled_max": 3.001,
+     "any_time_max": 3.001,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.341,
+     "pairs": {
+      "gs": 3.0,
+      "gd": 3.001,
+      "gb": 3.0,
+      "ds": 2.341
+     }
+    },
+    "nb2": {
+     "settled_max": 3.001,
+     "any_time_max": 3.159,
+     "ns_above_limit": 0.0,
+     "junction_max": 5.006,
+     "pairs": {
+      "gs": 3.125,
+      "gd": 3.12,
+      "gb": 3.0,
+      "ds": 3.159
+     }
+    },
+    "pb2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.444,
+     "ns_above_limit": 0.2,
+     "junction_max": 3.444,
+     "pairs": {
+      "gs": 3.005,
+      "gd": 3.006,
+      "gb": 3.005,
+      "ds": 3.444
+     }
+    },
+    "pb1": {
+     "settled_max": 2.572,
+     "any_time_max": 3.158,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.158,
+     "pairs": {
+      "gs": 2.471,
+      "gd": 3.022,
+      "gb": 2.471,
+      "ds": 3.158
+     }
+    },
+    "ps1": {
+     "settled_max": 2.746,
+     "any_time_max": 3.102,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.102,
+     "pairs": {
+      "gs": 2.471,
+      "gd": 3.016,
+      "gb": 2.471,
+      "ds": 3.102
+     }
+    },
+    "ps2": {
+     "settled_max": 2.919,
+     "any_time_max": 3.211,
+     "ns_above_limit": 0.0,
+     "junction_max": 3.211,
+     "pairs": {
+      "gs": 2.919,
+      "gd": 2.848,
+      "gb": 2.919,
+      "ds": 3.211
+     }
+    },
+    "pc": {
+     "settled_max": 3.0,
+     "any_time_max": 3.005,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.919,
+     "pairs": {
+      "gs": 1.77,
+      "gd": 3.005,
+      "gb": 1.77,
+      "ds": 2.919
+     }
+    },
+    "nd2": {
+     "settled_max": 3.0,
+     "any_time_max": 3.045,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.848,
+     "pairs": {
+      "gs": 3.042,
+      "gd": 3.045,
+      "gb": 3.0,
+      "ds": 2.786
+     }
+    },
+    "nd1": {
+     "settled_max": 3.0,
+     "any_time_max": 3.016,
+     "ns_above_limit": 0.0,
+     "junction_max": 2.155,
+     "pairs": {
+      "gs": 3.016,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 2.155
+     }
+    },
+    "nma": {
+     "settled_max": 3.0,
+     "any_time_max": 3.05,
+     "ns_above_limit": 0.0,
+     "junction_max": 4.848,
+     "pairs": {
+      "gs": 3.05,
+      "gd": 3.042,
+      "gb": 3.0,
+      "ds": 2.855
+     }
+    },
+    "nmb": {
+     "settled_max": 3.0,
+     "any_time_max": 3.003,
+     "ns_above_limit": 0.0,
+     "junction_max": 1.993,
+     "pairs": {
+      "gs": 3.003,
+      "gd": 3.0,
+      "gb": 3.0,
+      "ds": 1.561
+     }
+    }
+   },
+   "problems": [
+    "open circuit: internal node 226",
+    "open circuit: internal node 227",
+    "open circuit: internal node 228",
+    "open circuit: internal node 229",
+    "open circuit: internal node 230"
+   ]
+  }
+ },
+ "part_b": {}
+}

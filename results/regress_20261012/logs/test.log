@@ -1,0 +1,523 @@
+python3 tests/test_independent.py
+PASS  tile solver equals element-by-element nodal analysis: largest relative difference 5.2e-11 over 8 configurations
+PASS  analog RMS error equals the closed-form value: closed form 0.422 steps, tile model 0.407 steps
+PASS  digital-mode misread probabilities and Monte Carlo counts agree: mc_LRS3_x3_vos2mV: 4 observed, 6.7 expected; mc_LRS1_x1_vos0mV: 2 observed, 6.6 expected; mc_LRS1_x2_vos2mV: 4616 observed, 4732.2 expected
+PASS  set voltage in the ramp, general ODE solver against the three implementations: LSODA 0.66949 V; largest difference 0.26 mV
+PASS  published kinetic values give a set voltage far below the measured 0.65-0.75 V: 0.213 V
+PASS  read-disturb time at 0.29 V, ODE solver against the reference model: LSODA 183 s (cell alone), reference model 200 s (with transistor)
+PASS  static cell currents at the published gap values: 0.95 nm: 17.31 uA, 0.85 nm: 24.74 uA, 0.73 nm: 37.98 uA, 1.88 nm: 0.62 uA
+PASS  energy table recomputed from the raw currents, capacitance and toggle counts: sense amplifiers 0.1941 nJ, word lines 0.0628 nJ, logic 1.540 nJ
+PASS  clock energy per flip-flop is in the range of the library data: 30.5 fJ per flip-flop per cycle, 661 flip-flops
+
+0 failures
+python3 tests/test_claims.py
+ok    three solvers, ramp spread (mV): quoted 0.26, results 0.26
+ok    three solvers, gap spread (pm): quoted 0.5, results 0.5
+ok    three solvers, set time spread (%): quoted 0.11, results 0.11
+ok    three solvers, reset time spread (%): quoted 1.0, results 1.02
+ok    re-fitted v0 (m/s): quoted 2.79, results 2.79379
+ok    HRS gap after 1 s at 0.2 V: shift (pm): quoted 0.006, results 0.00621006
+ok    HRS gap after 1000 s at 0.2 V: shift (pm): quoted 6.0, results 6.22369
+ok    W 1.5 um, gate voltage for LRS1: quoted 1.6, results 1.6
+ok    W 1.5 um, gate voltage for LRS2: quoted 2.15, results 2.15
+ok    W 1.5 um, gate voltage for LRS3: quoted 2.95, results 2.95
+ok    W 1.5 um, reset fails at 2.7 V and 3.3 V (0 = fails): quoted 0, results 0
+ok    W 3.0 um, gate voltage for LRS1: quoted 1.2, results 1.2
+ok    W 3.0 um, gate voltage for LRS2: quoted 1.45, results 1.45
+ok    W 3.0 um, gate voltage for LRS3: quoted 1.7, results 1.7
+ok    W 3.0 um, reset amplitude: quoted 2.1, results 2.1
+ok    W 3.0 um, reset pulses: quoted 17, results 17
+ok    W 4.5 um, gate voltage for LRS1: quoted 1.1, results 1.1
+ok    W 4.5 um, gate voltage for LRS2: quoted 1.3, results 1.3
+ok    W 4.5 um, gate voltage for LRS3: quoted 1.45, results 1.45
+ok    W 4.5 um, reset amplitude: quoted 1.4, results 1.4
+ok    W 4.5 um, reset pulses: quoted 10, results 10
+ok    W 6.0 um, gate voltage for LRS1: quoted 1.05, results 1.05
+ok    W 6.0 um, gate voltage for LRS2: quoted 1.2, results 1.2
+ok    W 6.0 um, gate voltage for LRS3: quoted 1.3, results 1.3
+ok    W 6.0 um, reset amplitude: quoted 1.2, results 1.2
+ok    W 6.0 um, reset pulses: quoted 8, results 8
+ok    1T1R resistance at 0.95nm, W 1.5 um (kOhm): quoted 13.5, results 13.468
+ok    1T1R resistance at 0.85nm, W 1.5 um (kOhm): quoted 10.0, results 9.99001
+ok    1T1R resistance at 0.73nm, W 1.5 um (kOhm): quoted 7.2, results 7.15308
+ok    1T1R resistance at 1.88nm, W 1.5 um (kOhm): quoted 323, results 322.581
+ok    saturation current tt (uA/um): quoted 547, results 547.5
+ok    saturation current ss (uA/um): quoted 479, results 478.8
+ok    saturation current ff (uA/um): quoted 619, results 618.9
+ok    on-resistance at read, W 1.5 um (kOhm): quoted 1.76, results 1.764
+ok    on-resistance at read, W 3.0 um (kOhm): quoted 0.85, results 0.851
+ok    on-resistance at read, W 4.5 um (kOhm): quoted 0.57, results 0.57
+ok    tt set LRS1 with typical gate voltage (uA): quoted 18.2, results 18.21
+ok    tt set LRS2 with typical gate voltage (uA): quoted 31.1, results 31.1
+ok    tt set LRS3 with typical gate voltage (uA): quoted 44.0, results 44
+ok    tt two-state set current (uA): quoted 44.2, results 44.24
+ok    tt two-state amplitude: quoted 1.3, results 1.3
+ok    tt two-state pulses: quoted 9, results 9
+ok    tt reset amplitude: quoted 1.4, results 1.4
+ok    tt reset pulses: quoted 10, results 10
+ok    ss set LRS1 with typical gate voltage (uA): quoted 13.8, results 13.8
+ok    ss set LRS2 with typical gate voltage (uA): quoted 27.5, results 27.48
+ok    ss set LRS3 with typical gate voltage (uA): quoted 38.7, results 38.66
+ok    ss two-state set current (uA): quoted 45.6, results 45.64
+ok    ss two-state amplitude: quoted 1.5, results 1.5
+ok    ss two-state pulses: quoted 11, results 11
+ok    ss reset amplitude: quoted 1.6, results 1.6
+ok    ss reset pulses: quoted 12, results 12
+ok    ff set LRS1 with typical gate voltage (uA): quoted 18.2, results 18.22
+ok    ff set LRS2 with typical gate voltage (uA): quoted 32.5, results 32.54
+ok    ff set LRS3 with typical gate voltage (uA): quoted 44.9, results 44.94
+ok    ff two-state set current (uA): quoted 50.3, results 50.28
+ok    ff two-state amplitude: quoted 1.3, results 1.3
+ok    ff two-state pulses: quoted 9, results 9
+ok    ff reset amplitude: quoted 1.4, results 1.4
+ok    ff reset pulses: quoted 10, results 10
+ok    slow corner misses every level (number of levels reached): quoted 0, results 0
+ok    set current per device (mA): quoted 0.5, results 0.5009
+ok    reset peak current, 1.4 V (mA): quoted 0.52, results 0.5195
+ok    reset peak current, worst case (mA): quoted 0.6, results 0.5967
+ok    analog RMS [LRS3 | D: BL TopMetal1, SL.. cal]: quoted 0.41, results 0.412946
+ok       exact (%): quoted 77, results 77.3889
+ok       within +-1 (%): quoted 99.97, results 99.9653
+ok       largest: quoted 1.7, results 1.70348
+ok    analog RMS [LRS3 | D: BL TopMetal1, SL.. cal]: quoted 0.75, results 0.750067
+ok       exact (%): quoted 49, results 49.4722
+ok       within +-1 (%): quoted 95.4, results 95.4097
+ok       largest: quoted 3.0, results 3.01374
+ok    analog RMS [LRS3 | A: BL Metal2-5 0.4u.. raw]: quoted 0.55, results 0.553834
+ok       exact (%): quoted 63, results 63.4444
+ok       within +-1 (%): quoted 99.3, results 99.2639
+ok       largest: quoted 2.2, results 2.20909
+ok    analog RMS [LRS3 | A: BL Metal2-5 0.4u.. cal]: quoted 0.45, results 0.448264
+ok       exact (%): quoted 73, results 73.1875
+ok       within +-1 (%): quoted 99.9, results 99.9306
+ok       largest: quoted 2.1, results 2.08313
+ok    analog RMS [LRS1 | D: BL TopMetal1, SL.. cal]: quoted 1.2, results 1.19505
+ok       exact (%): quoted 33, results 32.7778
+ok       within +-1 (%): quoted 79, results 78.8889
+ok       largest: quoted 5.1, results 5.06884
+ok    analog RMS [LRS1 | D: BL TopMetal1, SL.. cal]: quoted 2.26, results 2.25943
+ok       exact (%): quoted 18, results 18.125
+ok       within +-1 (%): quoted 50, results 49.8264
+ok       largest: quoted 10.1, results 10.1467
+ok    clamp 20 ohm, uncalibrated RMS: quoted 0.46, results 0.459985
+ok    clamp 50 ohm, uncalibrated RMS: quoted 0.67, results 0.665474
+ok    digital mode mc_LRS3_x1_vos0mV: wrong weights: quoted 0, results 0
+ok       products with an error: quoted 0, results 0
+ok    digital mode mc_LRS3_x2_vos2mV: wrong weights: quoted 0, results 0
+ok       products with an error: quoted 0, results 0
+ok    digital mode mc_LRS3_x3_vos2mV: wrong weights: quoted 4, results 4
+ok       products with an error: quoted 24, results 24
+ok    digital mode mc_LRS1_x1_vos0mV: wrong weights: quoted 2, results 2
+ok       products with an error: quoted 14, results 14
+ok    digital mode mc_LRS1_x2_vos2mV: wrong weights: quoted 4616, results 4616
+ok       products with an error: quoted 600, results 600
+ok    network software accuracy (%): quoted 94.7, results 94.7222
+ok    network digital accuracy (%): quoted 94.7, results 94.7222
+ok    network analog accuracy, lowest (%): quoted 94.6, results 94.6296
+ok    network analog accuracy, highest (%): quoted 95.3, results 95.2778
+ok    first-layer sums differing, lowest (%): quoted 25, results 25.1247
+ok    first-layer sums differing, highest (%): quoted 83, results 83.2472
+ok    trip current, lowest corner (uA): quoted 24.61, results 24.61
+ok    trip current, highest corner (uA): quoted 24.66, results 24.66
+ok    LRS3 mean, output delay (ns): quoted 2.1, results 2.1
+ok    LRS3 -6 sigma, typical (ns): quoted 2.9, results 2.9
+ok    LRS3 -6 sigma, slow (ns): quoted 3.1, results 3.1
+ok    LRS3 -6 sigma, fast (ns): quoted 2.75, results 2.75
+ok    HRS +6 sigma never trips (number of runs that tripped): quoted 0, results 0
+ok    bit line, mean HRS cell (V): quoted 0.29, results 0.2909
+ok    bit line, HRS +6 sigma (V): quoted 0.23, results 0.2344
+ok    bit line, idle (V): quoted 0.32, results 0.3225
+ok    trip current mismatch, mean (uA): quoted 24.64, results 24.6447
+ok    trip current mismatch, sigma (uA): quoted 0.24, results 0.240077
+ok    trip current mismatch, min (uA): quoted 24.03, results 24.0301
+ok    trip current mismatch, max (uA): quoted 25.37, results 25.3692
+ok    Monte Carlo runs: quoted 200, results 200
+ok    reads to +10 % at 0.20 V (1e11): quoted 7, results 7.46
+ok    reads to +10 % at 0.29 V (1e10): quoted 5, results 5.01
+ok    TCIM0 with serial port: cells: quoted 7560, results 7560
+ok       flip-flops: quoted 844, results 844
+ok       area (mm2): quoted 0.111, results 0.110805
+ok    TCIM0 core: cells: quoted 7146, results 7146
+ok       flip-flops: quoted 668, results 668
+ok       area (mm2): quoted 0.098, results 0.098279
+ok       pJ per cycle: quoted 27.8, results 27.8384
+ok       of which clock: quoted 20.4, results 20.3883
+ok    dot-product block: cells: quoted 680, results 680
+ok       pJ per step: quoted 6.65, results 6.64863
+ok    flip-flop tile: cells: quoted 12452, results 12452
+ok       flip-flops: quoted 3848, results 3848
+ok       area (mm2): quoted 0.322, results 0.321675
+ok       nJ per product: quoted 10.1, results 10.0977
+ok    cell currents at 0.2 V (nJ): quoted 0.03, results 0.0303
+ok    sense amplifiers, 4 ns (nJ): quoted 0.19, results 0.1941
+ok    sense amplifiers, 10 ns (nJ): quoted 0.49, results 0.4853
+ok    word lines (nJ): quoted 0.06, results 0.0628
+ok    digital logic (nJ): quoted 3.5, results 3.498
+ok    clock cycles per product: quoted 123, results 122.7
+ok    72 dot-product steps (nJ): quoted 0.48, results 0.479
+ok    analog mode, supply energy at 200 ns per phase (nJ): quoted 9, results 9.08357
+ok    rows read per product: quoted 47.9, results 47.8917
+ok    PDK reference tests identical: quoted 26, results 26
+ok    sweeps compared with the PDK's ngspice reference: quoted 16, results 16
+ok       points above 100 nA: quoted 4264, results 4264
+ok       largest relative difference below 0.1 % (1 = yes): quoted 1, results 1
+ok    test bench: checks: quoted 81966, results 81966
+ok       failures: quoted 0, results 0
+ok       clock cycles (million): quoted 44.8, results 44.7848
+ok       test passed (1 = yes): quoted 1, results 1
+ok    test bench, BSD-PNX build: checks: quoted 81966, results 81966
+ok       failures: quoted 0, results 0
+ok       test passed in that code (1 = yes): quoted 1, results 1
+ok    serial clock at clk/4: wrong transfers of 200: quoted 200, results 200
+ok       at clk/6: quoted 0, results 0
+ok       at clk/8: quoted 0, results 0
+ok    mutation test: faults: quoted 69, results 69
+ok       detected: quoted 69, results 69
+ok    mutation test, BSD-PNX build: faults: quoted 75, results 75
+ok       detected: quoted 75, results 75
+ok    audit: test bench checks: quoted 71598, results 71598
+ok       failures: quoted 0, results 0
+ok       clock cycles (million): quoted 44.8, results 44.7583
+ok    audit: faults: quoted 66, results 66
+ok       detected by the revision 4 test bench: quoted 66, results 66
+ok       detected by the revision 3 test bench: quoted 36, results 36
+ok    revision 4: cells with serial port: quoted 7737, results 7737
+ok       core cells: quoted 7234, results 7234
+ok       area (mm2): quoted 0.1116, results 0.111588
+ok       pJ per cycle: quoted 27.3, results 27.31
+ok       nJ per product: quoted 3.43, results 3.432
+ok    revision 4.1: area with serial port (mm2): quoted 0.1108, results 0.110805
+ok       pJ per cycle: quoted 27.8, results 27.84
+ok       nJ per product: quoted 3.5, results 3.498
+ok    timing, revision 4 logic: setup slack (ns): quoted -4.02, results -4.019
+ok       worst path (ns): quoted 13.9, results 13.894
+ok       slack of the next-worst register (ns): quoted 4.5, results 4.531
+ok       cells on that path: quoted 96, results 96
+ok       cells in the netlist: quoted 8114, results 8114
+ok    timing, ihp: cells: quoted 7951, results 7951
+ok       typ_1p20V_25C: setup slack (ns): quoted 4.67, results 4.669
+ok       typ_1p20V_25C: longest register-to-register path (ns): quoted 3.3, results 3.329
+ok       typ_1p20V_25C: hold slack (ns): quoted 0.18, results 0.184
+ok       slow_1p08V_125C: setup slack (ns): quoted 3.35, results 3.345
+ok       slow_1p08V_125C: longest register-to-register path (ns): quoted 5.2, results 5.186
+ok       slow_1p08V_125C: hold slack (ns): quoted 0.29, results 0.289
+ok       fast_1p32V_m40C: setup slack (ns): quoted 5.47, results 5.47
+ok       fast_1p32V_m40C: longest register-to-register path (ns): quoted 2.2, results 2.233
+ok       fast_1p32V_m40C: hold slack (ns): quoted 0.12, results 0.123
+ok    timing, ihp_pnx: cells: quoted 8238, results 8238
+ok       typ_1p20V_25C: setup slack (ns): quoted 4.82, results 4.824
+ok       typ_1p20V_25C: longest register-to-register path (ns): quoted 3.5, results 3.454
+ok       typ_1p20V_25C: hold slack (ns): quoted 0.18, results 0.184
+ok       slow_1p08V_125C: setup slack (ns): quoted 3.59, results 3.586
+ok       slow_1p08V_125C: longest register-to-register path (ns): quoted 5.4, results 5.395
+ok       slow_1p08V_125C: hold slack (ns): quoted 0.29, results 0.289
+ok       fast_1p32V_m40C: setup slack (ns): quoted 5.58, results 5.579
+ok       fast_1p32V_m40C: longest register-to-register path (ns): quoted 2.3, results 2.303
+ok       fast_1p32V_m40C: hold slack (ns): quoted 0.12, results 0.123
+ok    timing, sky130: cells: quoted 8014, results 8014
+ok       tt_1p80V_25C: setup slack (ns): quoted 2.62, results 2.616
+ok       tt_1p80V_25C: longest register-to-register path (ns): quoted 5.1, results 5.091
+ok       tt_1p80V_25C: hold slack (ns): quoted 0.33, results 0.331
+ok    timing: flip-flops: quoted 844, results 844
+ok       nets above fan-out 8 (IHP): quoted 431, results 431
+ok       area of the timing-driven netlist, IHP (mm2): quoted 0.114, results 0.113642
+ok       area of the timing-driven netlist, SKY130 (mm2): quoted 0.063, results 0.0634271
+ok    proof: comparison points: quoted 2410, results 2410
+ok       unproven: quoted 0, results 0
+ok       table equals definition in both codes (2 = both): quoted 2, results 2
+ok       place-and-route source: unproven points: quoted 0, results 0
+ok    conversion alone, chain of dividers (ns): quoted 12.3, results 12.34
+ok       cells: quoted 482, results 482
+ok    conversion alone, table (ns): quoted 1.7, results 1.66
+ok       cells: quoted 392, results 392
+ok    cell footprint: row pitch (um): quoted 1.085, results 1.085
+ok       device pitch (um): quoted 4.71, results 4.71
+ok       area per device (um2): quoted 5.1, results 5.11
+ok       array, rule count (mm2): quoted 0.018, results 0.01766
+ok       array, assumed pitch (mm2): quoted 0.023, results 0.02267
+ok       block height (um): quoted 78, results 78.1
+ok       block width (um): quoted 226, results 226.1
+ok       flip-flop storage (mm2): quoted 0.17, results 0.1693
+ok       contacts that fit per terminal: quoted 13, results 13
+ok    row pitch 2.0 um, thin metal, uncalibrated RMS: quoted 0.55, results 0.553834
+ok    row pitch 1.085 um, thin metal, uncalibrated RMS: quoted 0.46, results 0.458347
+ok    independent re-derivations: quoted 9, results 9
+ok       of which agree: quoted 9, results 9
+ok    4.2 rtl_test.log: checks: quoted 82512, results 82512
+ok    4.2 rtl_test.log: failures: quoted 0, results 0
+ok    4.2 rtl_test_pnx.log: checks: quoted 82512, results 82512
+ok    4.2 rtl_test_pnx.log: failures: quoted 0, results 0
+ok    4.2 rtl_test_verilator.log: checks: quoted 82512, results 82512
+ok    4.2 rtl_test_verilator.log: failures: quoted 0, results 0
+ok    4.2 rtl_test_verilator_pnx.log: checks: quoted 82512, results 82512
+ok    4.2 rtl_test_verilator_pnx.log: failures: quoted 0, results 0
+ok    4.2 gls_ihp_routed.log: checks: quoted 82512, results 82512
+ok    4.2 gls_ihp_routed.log: failures: quoted 0, results 0
+ok    4.2 gls_sky130_routed.log: checks: quoted 82512, results 82512
+ok    4.2 gls_sky130_routed.log: failures: quoted 0, results 0
+ok    4.2 gate-level fault: failures (must be > 0, quoted as detected = 1): quoted 1, results 1
+ok    4.2 mutation: faults: quoted 74, results 74
+ok    4.2 mutation: detected: quoted 74, results 74
+ok    4.2 mutation BSD-PNX: faults: quoted 80, results 80
+ok    4.2 mutation BSD-PNX: detected: quoted 80, results 80
+ok    4.2 formal faults caught: quoted 9, results 9
+ok    4.2 lint warnings: quoted 0, results 0
+ok    4.2 P&R source unproven points: quoted 0, results 0
+ok    4.2 energy per product (nJ): quoted 1.54, results 1.54
+ok    4.2 cycles per product: quoted 49.7, results 49.7
+ok    4.2 IHP after layout typ_1p20V_25C: setup slack (ns): quoted 3.91, results 3.914
+ok    4.2 IHP after layout typ_1p20V_25C: hold slack (ns): quoted 0.147, results 0.147
+ok    4.2 IHP after layout slow_1p08V_125C: setup slack (ns): quoted 1.9, results 1.903
+ok    4.2 IHP after layout slow_1p08V_125C: hold slack (ns): quoted 0.263, results 0.263
+ok    4.2 IHP after layout fast_1p32V_m40C: setup slack (ns): quoted 5.01, results 5.012
+ok    4.2 IHP after layout fast_1p32V_m40C: hold slack (ns): quoted 0.079, results 0.079
+ok    4.2 SKY130 after layout: setup slack (ns): quoted 1.85, results 1.85
+ok    4.2 IHP DRC markers: quoted 5, results 5
+ok    4.2 SKY130 DRC violations: quoted 0, results 0
+ok    4.2 SKY130 LVS match (1 = yes): quoted 1, results 1
+ok    4.2 IHP standard cells: quoted 12033, results 12033
+ok    4.2 IHP block area (mm2): quoted 0.434, results 0.434439
+ok    4.2 layout device pitch (um): quoted 4.75, results 4.75
+ok    4.2 layout tile (mm2): quoted 0.0206, results 0.0206
+ok    4.2 layout DRC clean (1 = yes): quoted 1, results 1
+ok    4.2 sense trip min (uA): quoted 24.24, results 24.242
+ok    4.2 sense trip max (uA): quoted 24.86, results 24.856
+ok    4.2 sense margin min (uA): quoted 9.44, results 9.44
+ok    4.2 word line far settle max (ns): quoted 4.1, results 4.102
+ok    4.2 column switch drop max (mV): quoted 190, results 189.7
+ok    4.2 level shifter delay max (ns): quoted 2.74, results 2.737
+ok    4.2 program MC ss 1x: reset failures: quoted 1, results 1
+ok    4.2 program MC tt 2x: reset failures: quoted 7, results 7
+ok    4.2 program MC ss 2x: reset failures: quoted 12, results 12
+ok    4.2 program MC ff 2x: reset failures: quoted 7, results 7
+ok    4.2 program MC: set failures, all cases: quoted 0, results 0
+ok    4.2 reset at 3.0 V gate: failures, all cases: quoted 0, results 0
+ok    4.2 SKY130 port: read current identical (relative difference): quoted 0.0, results 0
+ok    4.2 SKY130 port: reset at published conditions works anywhere (0 = nowhere): quoted 0, results 0
+ok    4.3 rtl_test.log: checks: quoted 82512, results 82512
+ok    4.3 rtl_test.log: failures: quoted 0, results 0
+ok    4.3 rtl_test_pnx.log: checks: quoted 82512, results 82512
+ok    4.3 rtl_test_pnx.log: failures: quoted 0, results 0
+ok    4.3 rtl_test_verilator.log: checks: quoted 82512, results 82512
+ok    4.3 rtl_test_verilator.log: failures: quoted 0, results 0
+ok    4.3 rtl_test_verilator_pnx.log: checks: quoted 82512, results 82512
+ok    4.3 rtl_test_verilator_pnx.log: failures: quoted 0, results 0
+ok    4.3 gls_ihp_synth_cg.log: checks: quoted 82512, results 82512
+ok    4.3 gls_ihp_synth_cg.log: failures: quoted 0, results 0
+ok    4.3 gls_ihp_routed.log: checks: quoted 82512, results 82512
+ok    4.3 gls_ihp_routed.log: failures: quoted 0, results 0
+ok    4.3 gls_sky130_routed.log: checks: quoted 82512, results 82512
+ok    4.3 gls_sky130_routed.log: failures: quoted 0, results 0
+ok    4.3 RTL clock cycles of the test bench: quoted 43694575, results 4.36946e+07
+ok    4.3 gls_ihp_synth_cg_fault_icg.log: fault detected (1 = yes): quoted 1, results 1
+ok    4.3 gls_ihp_fault_icg.log: fault detected (1 = yes): quoted 1, results 1
+ok    4.3 gls_ihp_fault_xnor.log: fault detected (1 = yes): quoted 1, results 1
+ok    4.3 gls_sky130_fault_icg.log: fault detected (1 = yes): quoted 1, results 1
+ok    4.3 mutation: detected of 74: quoted 74, results 74
+ok    4.3 mutation BSD-PNX: detected of 80: quoted 80, results 80
+ok    4.3 mutation: unchanged RTL passes in the PC environment (both codes): quoted 2, results 2
+ok    4.3 energy per product, gated (nJ): quoted 0.8, results 0.804
+ok    4.3 energy per product, ungated (nJ): quoted 1.54, results 1.54
+ok    4.3 gated pJ per cycle: quoted 15.27, results 15.27
+ok    4.3 gated clock pJ per cycle: quoted 7.86, results 7.86
+ok    4.3 gating cells pJ per cycle: quoted 1.53, results 1.53
+ok    4.3 gating cells: quoted 49, results 49
+ok    4.3 gated flip-flops: quoted 612, results 612
+ok    4.3 flip-flop tile gated (nJ): quoted 2.27, results 2.27
+ok    4.3 tcim_top area gated (mm2): quoted 0.104, results 0.104027
+ok    4.3 IHP routed standard cells: quoted 10630, results 10630
+ok    4.3 IHP routed block (mm2): quoted 0.393, results 0.392772
+ok    4.3 IHP clock-gate cells: quoted 49, results 49
+ok    4.3 SKY130 clock-gate cells: quoted 49, results 49
+ok    4.3 IHP DRC markers: quoted 5, results 5
+ok    4.3 SKY130 DRC: quoted 0, results 0
+ok    4.3 SKY130 LVS match (1 = yes): quoted 1, results 1
+ok    4.3 SKY130 routed standard cells: quoted 11157, results 11157
+ok    4.3 SKY130 routed block (mm2): quoted 0.174, results 0.174436
+ok    4.3 IHP slow setup slack (ns): quoted 1.4, results 1.395
+ok    4.3 IHP slow setup slack, parasitics x1.2 (ns): quoted 0.75, results 0.747
+ok    4.3 IHP fast hold slack, min over parasitic cases (ps): quoted 109, results 109
+ok    4.3 SKY130 slow setup slack (ns): quoted -5.4, results -5.396
+ok    4.3 SKY130 slow limit violations: quoted 354, results 354
+ok    4.3 SKY130 typical setup slack (ns): quoted 2.28, results 2.278
+ok    4.3 IHP shortest period slow (ns): quoted 8.61, results 8.61
+ok    4.3 IHP shortest period slow, x1.2 (ns): quoted 9.27, results 9.27
+ok    4.3 SKY130 shortest period slow (ns): quoted 15.43, results 15.43
+ok    4.3 SKY130 shortest period slow, x1.2 (ns): quoted 16.17, results 16.17
+ok    4.3 reset: slow devices not reset at 2.7 V: quoted 3, results 3
+ok    4.3 reset: all devices reset at 3.0 and 3.3 V (1 = yes): quoted 1, results 1
+ok    4.3 reset peak current bound (mA): quoted 0.76, results 0.7569
+ok    4.3 read reference cases: quoted 27, results 27
+ok    4.3 trip conductance min (uS): quoted 103, results 103.38
+ok    4.3 trip conductance max (uS): quoted 147, results 146.79
+ok    4.3 margin to HRS tail (uS): quoted 33, results 33.38
+ok    4.3 margin to LRS tail (uS): quoted 25, results 24.71
+ok    4.3 column switch drop 0.6 mA (mV): quoted 95, results 94.7
+ok    4.3 column switch test current = reset bound rounded up (mA): quoted 0.8, results 0.8
+ok    4.3 column switch drop at that current (mV, rounded up): quoted 127, results 126.3
+ok    4.3 test mux R_on max (ohm): quoted 630, results 630
+ok    4.3 test mux leakage max (nA): quoted 37.9, results 37.853
+ok    4.3 tcim_ls: DRC clean, LVS match, LVS fault detected (3 = all): quoted 3, results 3
+ok    4.3 tcim_ls: self-check errors: quoted 0, results 0
+ok    4.3 tcim_wld: DRC clean, LVS match, LVS fault detected (3 = all): quoted 3, results 3
+ok    4.3 tcim_wld: self-check errors: quoted 0, results 0
+ok    4.3 word-line driver height (um): quoted 11.5, results 11.48
+ok    4.4 fit: spread k, low end: quoted 0.53, results 0.53
+ok    4.4 fit: spread k, high end: quoted 3.48, results 3.48
+ok    4.4 fit: combinations that fit: quoted 3, results 3
+ok    4.4 fit: reset-rate factor, log10 min: quoted 2.3, results 2.344
+ok    4.4 fit: reset-rate factor, log10 max: quoted 8.9, results 8.899
+ok    4.4 transfer: tt k=3.48 not reset at 3.3 V: quoted 4, results 4
+ok    4.4 transfer: ss k=3.48 not reset at 3.3 V: quoted 10, results 10
+ok    4.4 transfer: ss k=2.01 not reset at 3.3 V: quoted 1, results 1
+ok    4.4 transfer: k=0.53 not reset at 2.7 V, tt + ss: quoted 0, results 0
+ok    4.4 SKY130 array devices: quoted 6912, results 6912
+ok    4.4 SKY130 array DRC flat errors: quoted 0, results 0
+ok    4.4 SKY130 array LVS match, faults detected (4 = all): quoted 4, results 4
+ok    4.4 SKY130 cell area (um2): quoted 10.8, results 10.8
+ok    4.4 sky130B stdcells: quoted 11302, results 11302
+ok    4.4 sky130B slow setup slack at 16 ns (ns): quoted 0.762, results 0.762
+ok    4.4 sky130B DRC: quoted 0, results 0
+ok    4.4 sky130B shortest period (ns): quoted 15.24, results 15.24
+ok    4.4 sky130B shortest period x1.2 (ns): quoted 15.75, results 15.75
+ok    4.4 sky130B gate-level checks: quoted 82512, results 82512
+ok    4.4 sky130B gate-level failures: quoted 0, results 0
+ok    4.4 sky130B gating fault detected (1 = yes): quoted 1, results 1
+ok    4.4 SKY130 read trip min (uS): quoted 12.46, results 12.456
+ok    4.4 SKY130 read trip max (uS): quoted 13.29, results 13.286
+ok    4.4 SKY130 read mismatch sigma (uS): quoted 0.43, results 0.428
+ok    4.4 SKY130 read settle max (ns): quoted 7.7, results 7.72
+ok    4.4 hybrid tiles LRS3 x3: wrong weights reference: quoted 9, results 9
+ok    4.4 hybrid tiles LRS3 x3: wrong weights hybrid: quoted 7, results 7
+ok    4.4 hybrid tiles LRS1 x2: reference: quoted 4601, results 4601
+ok    4.4 hybrid tiles LRS1 x2: hybrid: quoted 3188, results 3188
+ok    4.4 drawn word-line driver: far settle max (ns): quoted 4.125, results 4.125
+ok    4.4 drawn word-line driver: change vs 4.3 (ps): quoted 23, results 23
+ok    4.4 driver column width (um): quoted 26.42, results 26.42
+ok    4.4 forming switch area (um2): quoted 1483, results 1482.7
+ok    4.4 IHP checks: DRC passed, LVS matched (4 = all): quoted 4, results 4
+ok    4.4 IHP checks: LVS faults detected: quoted 2, results 2
+ok    4.4 FPGA sim bank 0: wrong weights: quoted 0, results 0
+ok    4.4 FPGA sim bank 0: inexact digital products: quoted 0, results 0
+ok    4.4 FPGA sim bank 1: wrong weights: quoted 214, results 214
+ok    4.4 FPGA sim bank 2: wrong weights: quoted 677, results 677
+ok    4.4 FPGA gate level identical to RTL (1 = yes): quoted 1, results 1
+ok    4.4 FPGA fmax (MHz): quoted 26.0, results 26.0213
+ok    4.4 FPGA board netlist has no signed multiplier: quoted 0, results 0
+ok    4.4 FPGA board bank 0: wrong weights: quoted 0, results 0
+ok    4.4 FPGA board bank 1: wrong weights: quoted 378, results 378
+ok    4.4 FPGA board bank 2: wrong weights: quoted 624, results 624
+ok    4.4 FPGA board bank 0: inexact digital products: quoted 0, results 0
+ok    4.4 FPGA board bank 0: analog max error: quoted 1, results 1
+ok    4.4 FPGA board, first bitstream: analog max error: quoted 364, results 364
+ok    4.4 forming cases: quoted 45, results 45
+ok    4.4 forming settled max (V): quoted 3.0, results 3.001
+ok    4.4 forming transient max (V): quoted 3.6, results 3.597
+ok    4.4 forming time above 3.3 V max (ns): quoted 0.8, results 0.8
+ok    4.4 forming bit-line drop max (mV): quoted 244, results 244.2
+ok    4.4 forming: cell voltage with column source line, 5 V (V): quoted 3.0, results 3
+ok    4.4 forming: cell voltage with row source line, 5 V (V): quoted 5.0, results 5
+ok    4.5 chip rtl_chip_000.log: checks: quoted 76823, results 76823
+ok    4.5 chip rtl_chip_000.log: failures: quoted 0, results 0
+ok    4.5 chip rtl_chip_110.log: checks: quoted 76973, results 76973
+ok    4.5 chip rtl_chip_110.log: failures: quoted 0, results 0
+ok    4.5 chip rtl_chip_321.log: checks: quoted 79228, results 79228
+ok    4.5 chip rtl_chip_321.log: failures: quoted 0, results 0
+ok    4.5 chip rtl_chip_verilator_110.log: checks: quoted 76973, results 76973
+ok    4.5 chip rtl_chip_verilator_110.log: failures: quoted 0, results 0
+ok    4.5 chip gls_chip_routed.log: checks: quoted 76975, results 76975
+ok    4.5 chip gls_chip_routed.log: failures: quoted 0, results 0
+ok    4.5 chip gate-level faults detected (xnor, icg; 2 = both): quoted 2, results 2
+ok    4.5 controller faults injected: quoted 26, results 26
+ok    4.5 controller faults detected: quoted 26, results 26
+ok    4.5 chip block stdcells incl. 610 antenna diodes: quoted 10248, results 10248
+ok    4.5 chip block flip-flops: quoted 1074, results 1074
+ok    4.5 chip block clock gates: quoted 56, results 56
+ok    4.5 chip block area (um2): quoted 188757, results 188757
+ok    4.5 chip block utilization: quoted 0.479, results 0.479
+ok    4.5 chip block DRC: quoted 0, results 0
+ok    4.5 chip block equivalence (1 = identical): quoted 1, results 1
+ok    4.5 chip block worst setup slack (ns): quoted 9.72, results 9.716
+ok    4.5 chip block worst hold slack (ps): quoted 145, results 145
+ok    4.5 chip block shortest period (ns): quoted 14.73, results 14.73
+ok    4.5 chip block shortest period x1.2 (ns): quoted 15.31, results 15.31
+ok    4.5 chip block antenna diodes (DEF): quoted 610, results 610
+ok    4.5 ChipFoundry precheck: checks passed of 14: quoted 14, results 14
+ok    4.5 precheck ran on the GDS in the project folder (1 = same md5): quoted 1, results 1
+ok    4.5 precheck md5 = sign-off md5 (1 = same): quoted 1, results 1
+ok    4.5 precheck in ChipFoundry's pinned versions: checks passed of 14: quoted 14, results 14
+ok    4.5 precheck in ChipFoundry's versions ran on the final GDS (1 = same md5): quoted 1, results 1
+ok    4.5 chip Magic DRC markers, ChipFoundry's Magic and tech: quoted 0, results 0
+ok    4.5 chip Magic antenna violations, ChipFoundry's Magic and tech: quoted 0, results 0
+ok    4.5 ChipFoundry-version sign-off on the final GDS (1 = same md5): quoted 1, results 1
+ok    4.5 batch 21 (all cells from 3e0e31d): checks passed of 14: quoted 13, results 13
+ok    4.5 batch 21 FEOL markers (npc.2 at and2_0): quoted 1, results 1
+ok    4.5 standard-cell GDS of the chip (md5 as documented, 1 = same): quoted 1, results 1
+ok    4.5 formal proofs passed (spi, safety, safety_pnx, progress): quoted 4, results 4
+ok    4.5 formal faults caught: quoted 9, results 9
+ok    4.5 periphery cells drawn: quoted 12, results 12
+ok    4.5 periphery cells clean, matched, fault caught (36 = all): quoted 36, results 36
+ok    4.5 macro DRC: quoted 0, results 0
+ok    4.5 macro LVS match and fault caught (2 = both): quoted 2, results 2
+ok    4.5 macro width (um): quoted 1436.7, results 1436.7
+ok    4.5 macro height (um): quoted 1391.7, results 1391.7
+ok    4.5 macro 1.8 V pins: quoted 175, results 175
+ok    4.5 chip LVS match and planted swap caught (2 = both): quoted 2, results 2
+ok    4.5 chip LVS cells with property errors: quoted 0, results 0
+ok    4.5 chip antenna diodes at the top level: quoted 61, results 61
+ok    4.5 chip pad signals: quoted 57, results 57
+ok    4.5 chip Magic DRC markers (full rules): quoted 0, results 0
+ok    4.5 chip Magic antenna violations: quoted 0, results 0
+ok    4.5 first routing: Magic antenna violations: quoted 4, results 4
+ok    4.5 first routing: Magic antenna largest ratio: quoted 1073.4, results 1073.38
+ok    4.5 final block OpenROAD antenna violations (nets + pins): quoted 0, results 0
+ok    4.5 first routing: OpenROAD antenna violations (nets + pins): quoted 0, results 0
+ok    4.5 Magic metal3 hit: OpenROAD side-area ratio of the same gate: quoted 383, results 383
+ok    4.5 Magic metal4-contact hits: OpenROAD via4 ratio of the same gates: quoted 4.03, results 4.03
+ok    4.5 trip reset cases: quoted 45, results 45
+ok    4.5 trip reset min (uS): quoted 7.93, results 7.928
+ok    4.5 trip reset max (uS): quoted 8.37, results 8.374
+ok    4.5 trip read cases: quoted 45, results 45
+ok    4.5 trip read min (uS): quoted 11.95, results 11.953
+ok    4.5 trip read max (uS): quoted 12.81, results 12.813
+ok    4.5 trip set cases: quoted 45, results 45
+ok    4.5 trip set min (uS): quoted 23.71, results 23.713
+ok    4.5 trip set max (uS): quoted 27.36, results 27.359
+ok    4.5 trip reset mismatch mean (uS): quoted 8.2, results 8.203
+ok    4.5 trip reset mismatch sigma (uS): quoted 0.46, results 0.458
+ok    4.5 trip read mismatch mean (uS): quoted 12.31, results 12.314
+ok    4.5 trip read mismatch sigma (uS): quoted 0.71, results 0.713
+ok    4.5 trip set mismatch mean (uS): quoted 25.62, results 25.616
+ok    4.5 trip set mismatch sigma (uS): quoted 1.22, results 1.221
+ok    4.5 full-library mismatch runs per reference: quoted 48, results 48
+ok    4.5 full vs reduced library: means agree (3 = all): quoted 3, results 3
+ok    4.5 full-library set-target sigma (uS): quoted 1.51, results 1.508
+ok    4.5 full / reduced set-target sigma ratio: quoted 1.24, results 1.235
+ok    4.5 full-library set-target max (uS): quoted 28.78, results 28.778
+ok    4.5 worst bit line R incl. array (ohm): quoted 595, results 595
+ok    4.5 worst source line R (ohm): quoted 442, results 442.3
+ok    4.5 worst word-line route R (ohm): quoted 815, results 814.9
+ok    4.5 worst bit-line route C (fF): quoted 172, results 171.9
+ok    4.5 resim: all read and verify decisions correct (1 = yes): quoted 1, results 1
+ok    4.5 resim: read settle max (ns): quoted 13.68, results 13.68
+ok    4.5 resim: verify settle max (ns): quoted 25.42, results 25.42
+ok    4.5 resim: word line far end rise max (ns): quoted 2.79, results 2.79
+ok    4.5 resim: word line far end fall max (ns): quoted 3.52, results 3.524
+ok    4.5 mutation: faults: quoted 75, results 75
+ok    4.5 mutation: detected: quoted 75, results 75
+ok    4.5 mutation_pnx: faults: quoted 81, results 81
+ok    4.5 mutation_pnx: detected: quoted 81, results 81
+ok    4.5 mutation baseline checks (unchanged RTL, both codes): quoted 165108, results 165108
+ok    4.5 set at 2.0 V: all reached (1 = yes): quoted 1, results 1
+ok    4.5 set at 2.0 V: most pulses: quoted 8, results 8
+ok    4.5 set at 1.7 V, ss -40 C: final (uS): quoted 21.75, results 21.75
+ok    4.5 reset up to 3 decades slower: most pulses: quoted 7, results 7
+ok    4.5 programming disturb max (uS): quoted 0.0, results 0
+ok    4.5 worst wiring: set target used (uS): quoted 29.84, results 29.844
+ok    4.5 worst wiring: set at 2.0 V all reached (1 = yes): quoted 1, results 1
+ok    4.5 worst wiring: set at 2.0 V fewest pulses: quoted 9, results 9
+ok    4.5 worst wiring: set at 2.0 V most pulses: quoted 11, results 11
+ok    4.5 worst wiring: reset up to 3 decades slower, most pulses: quoted 8, results 8
+ok    4.5 worst wiring: reset 4 decades slower fails only at ss -40 C (1 = yes): quoted 1, results 1
+
+508 numbers checked, 0 stale

@@ -1,0 +1,61 @@
+=== tools
+8.3.685
+Netgen 1.5.324 compiled on Fri Oct  9 22:56:30 UTC 2026
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+1e3554706ddbb2529193bdabbc7128296f3cb44a
+KLayout 0.29.12
+cf-precheck 1.3.7
+=== precheck
+
+╭────────────────────────────────── Precheck ──────────────────────────────────╮
+│ CF Precheck v1.3.7                                                           │
+│ Project: caravan (analog, sky130B)                                           │
+│ Checks:  14                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+  [ 1/14] Top Cell .......................................... PASS  (0.7s)
+  [ 2/14] GPIO Defines ...................................... PASS  (0.7s)
+  [ 3/14] XOR ............................................... PASS  (5.1s)
+  [ 4/14] Magic DRC ......................................... FAIL  (8.3s)
+         Violation: 'This layer can't abut or partially overlap between 
+subcells' found 16 times
+  [ 5/14] Klayout FEOL ...................................... FAIL  (11.8s)
+         356 DRC violations. See 
+/w/flow/eda/precheck_out/outputs/reports/klayout_feol_check.xml
+  [ 6/14] Klayout BEOL ...................................... FAIL  (30.9s)
+         3 DRC violations. See 
+/w/flow/eda/precheck_out/outputs/reports/klayout_beol_check.xml
+  [ 7/14] Klayout Offgrid ................................... PASS  (8.0s)
+  [ 8/14] Klayout Metal Density ............................. PASS  (4.8s)
+  [ 9/14] Klayout Pin Label ................................. PASS  (3.1s)
+  [10/14] Klayout ZeroArea .................................. PASS  (2.8s)
+  [11/14] Spike Check ....................................... PASS  (1.8s)
+  [12/14] Illegal Cellname .................................. PASS  (0.7s)
+  [13/14] LVS ............................................... FAIL  (64.7s)
+         LVS FAILED (stat=1), see /w/flow/eda/precheck_out/logs/LVS_check.log
+  [14/14] OEB ............................................... FAIL  (0.3s)
+         OEB FAILED (stat=127), see /w/flow/eda/precheck_out/logs/OEB_check.log
+
+                Precheck Summary                 
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Check                 ┃  Status  ┃   Duration ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━┩
+│ Top Cell              │   PASS   │       0.7s │
+│ GPIO Defines          │   PASS   │       0.7s │
+│ XOR                   │   PASS   │       5.1s │
+│ Magic DRC             │   FAIL   │       8.3s │
+│ Klayout FEOL          │   FAIL   │      11.8s │
+│ Klayout BEOL          │   FAIL   │      30.9s │
+│ Klayout Offgrid       │   PASS   │       8.0s │
+│ Klayout Metal Density │   PASS   │       4.8s │
+│ Klayout Pin Label     │   PASS   │       3.1s │
+│ Klayout ZeroArea      │   PASS   │       2.8s │
+│ Spike Check           │   PASS   │       1.8s │
+│ Illegal Cellname      │   PASS   │       0.7s │
+│ LVS                   │   FAIL   │      64.7s │
+│ OEB                   │   FAIL   │       0.3s │
+└───────────────────────┴──────────┴────────────┘
+Results saved to /w/chip/sky130/caravan/.cf/project.json
+Full log at /w/chip/sky130/caravan/precheck_results
+PRECHECK_RC=2
+=== antenna

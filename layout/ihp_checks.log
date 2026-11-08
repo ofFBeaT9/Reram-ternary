@@ -1,0 +1,12 @@
+KLayout 0.30.12
+tcim_form DRC: 10-Oct-2026 11:23:01 | INFO    | ✅ --- KLayout DRC Check Passed: No DRC violations detected in the layout. --- ✅
+tcim_form LVS: 10-Oct-2026 11:23:04 | INFO    | | Outcome          | Comparison mode: PASS (netlists match).                      |
+tcim_form LVS with fault: 10-Oct-2026 11:23:08 | INFO    | | Outcome          | Comparison mode: FAIL (netlists do not match).               |
+tcim_wld72 DRC: 10-Oct-2026 11:23:30 | INFO    | ✅ --- KLayout DRC Check Passed: No DRC violations detected in the layout. --- ✅
+tcim_wld72 LVS: 10-Oct-2026 11:23:35 | INFO    | | Outcome          | Comparison mode: PASS (netlists match).                      |
+tcim_wld72 LVS with fault: 10-Oct-2026 11:23:38 | INFO    | | Outcome          | Comparison mode: FAIL (netlists do not match).               |
+lvs_run_2026_10_10_11_05_57.log
+lvs_run_2026_10_10_11_23_31.log
+tcim_wld72.log
+tcim_wld72.lvsdb
+tcim_wld72_extracted.cir

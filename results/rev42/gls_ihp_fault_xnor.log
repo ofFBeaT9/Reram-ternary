@@ -1,0 +1,54 @@
+trit code of the device under test: two's complement (+1 = 01, 0 = 00, -1 = 11, 10 illegal)
+1. register access
+2. programming all 72 rows with verify
+   pulses per row: mean 15.1, max 18
+3. digital products against the exact dot product
+  FAIL: product 0 column 3: got -55 expected -1
+  FAIL: product 1 column 3: got -55 expected 1
+  FAIL: product 3 column 3: got -43 expected -5
+  FAIL: product 4 column 3: got -42 expected -8
+  FAIL: product 5 column 3: got -37 expected -3
+  FAIL: product 6 column 3: got -34 expected -10
+  FAIL: product 7 column 3: got -37 expected -1
+  FAIL: product 8 column 3: got -36 expected 8
+  FAIL: product 9 column 3: got -30 expected -6
+  FAIL: product 10 column 3: got -32 expected 0
+  FAIL: product 11 column 3: got -33 expected 1
+  FAIL: product 12 column 3: got -42 expected 0
+  FAIL: product 13 column 3: got -31 expected 1
+  FAIL: product 14 column 3: got -41 expected -1
+  FAIL: product 15 column 3: got -33 expected -1
+  FAIL: product 16 column 3: got -30 expected -14
+  FAIL: product 17 column 3: got -44 expected -6
+  FAIL: product 18 column 3: got -42 expected 14
+  FAIL: product 19 column 3: got -35 expected 13
+  FAIL: product 20 column 3: got -42 expected -4
+  FAIL: product 21 column 3: got -36 expected 0
+  FAIL: product 22 column 3: got -41 expected -3
+  FAIL: product 23 column 3: got -37 expected -3
+  FAIL: product 24 column 3: got -37 expected 7
+  FAIL: product 25 column 3: got -40 expected -2
+  FAIL: product 26 column 3: got -36 expected -4
+  FAIL: product 27 column 3: got -34 expected 12
+  FAIL: product 28 column 3: got -39 expected -7
+  FAIL: product 29 column 3: got -39 expected 19
+  FAIL: product 30 column 3: got -31 expected -5
+  FAIL: product 31 column 3: got -39 expected 3
+  FAIL: product 32 column 3: got -37 expected -3
+  FAIL: product 33 column 3: got -34 expected -2
+  FAIL: product 34 column 3: got -41 expected 3
+  FAIL: product 35 column 3: got -30 expected 0
+  FAIL: product 36 column 3: got -38 expected -2
+  FAIL: product 37 column 3: got -38 expected -4
+  FAIL: product 38 column 3: got -35 expected -5
+  FAIL: product 39 column 3: got -32 expected 0
+4. analog-mode raw counts
+5. error paths
+5b. directed tests: read reference, saturation, interrupt enable, busy and enable guards
+5c. illegal code, exhaustive conversions, flag and interrupt behaviour, serial frame lengths
+6. ternary digits network through the RTL
+   360 samples: RTL correct 317, software correct 341, same class as software 331, layer-1 mismatches 1080
+array operations: 91366 reads, 8992 pulses, 1558 sums; 43694575 clock cycles
+82512 checks, 159 failures
+TEST FAILED
+EXIT=1

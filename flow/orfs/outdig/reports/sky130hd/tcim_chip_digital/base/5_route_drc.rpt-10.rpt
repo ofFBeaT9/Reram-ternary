@@ -1,0 +1,21 @@
+violation type: Metal Spacing
+	srcs: net:net812
+	bbox = (368.3050, 227.5100) - (368.4500, 227.5600) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812 net:u_core.u_top.u_core.r_pdata\[18\]
+	bbox = (412.3650, 221.8400) - (412.4750, 221.9650) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812 net:u_core.u_top.u_core.r_pdata\[18\]
+	bbox = (412.3650, 221.8400) - (412.4900, 221.9650) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812 net:u_core.u_top.u_core.r_pdata\[18\]
+	bbox = (412.4600, 221.8400) - (412.4750, 221.8650) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812 net:u_core.u_top.u_core.r_pdata\[18\]
+	bbox = (412.4600, 221.8400) - (412.4900, 221.8650) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812
+	bbox = (422.1100, 227.0200) - (422.3450, 227.1200) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812
+	bbox = (427.4250, 227.0800) - (427.7150, 227.1750) on Layer met1

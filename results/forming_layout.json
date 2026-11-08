@@ -1,0 +1,40 @@
+{
+ "gds": "layout/tcim_form.gds",
+ "cdl": "layout/tcim_form.cdl",
+ "cell": "tcim_form",
+ "ports": [
+  "en",
+  "enb",
+  "dis",
+  "vcas",
+  "vmuxa",
+  "vmuxb",
+  "vform",
+  "vmid",
+  "bl",
+  "blsa",
+  "vss"
+ ],
+ "transistors": [
+  "M0 a1 en vss vss sg13_hv_nmos w=2u l=0.6u ng=1 m=1",
+  "M1 xa vcas a1 vss sg13_hv_nmos w=2u l=0.6u ng=1 m=1",
+  "M2 b1 enb vss vss sg13_hv_nmos w=2u l=0.6u ng=1 m=1",
+  "M3 xb vcas b1 vss sg13_hv_nmos w=2u l=0.6u ng=1 m=1",
+  "M4 vss dis d1 vss sg13_hv_nmos w=10u l=0.6u ng=2 m=1",
+  "M5 d1 vcas bl vss sg13_hv_nmos w=10u l=0.6u ng=2 m=1",
+  "M6 bl vmuxa ca vss sg13_hv_nmos w=10u l=0.6u ng=2 m=1",
+  "M7 ca vmuxb blsa vss sg13_hv_nmos w=10u l=0.6u ng=2 m=1",
+  "M8 ya yb vform vform sg13_hv_pmos w=1u l=0.5u ng=1 m=1",
+  "M9 yb ya vform vform sg13_hv_pmos w=1u l=0.5u ng=1 m=1",
+  "M10 m ya vform vform sg13_hv_pmos w=20u l=0.5u ng=2 m=1",
+  "M11 xa vmid ya ya sg13_hv_pmos w=4u l=0.5u ng=1 m=1",
+  "M12 xb vmid yb yb sg13_hv_pmos w=4u l=0.5u ng=1 m=1",
+  "M13 bl vmid m m sg13_hv_pmos w=20u l=0.5u ng=2 m=1",
+  "M14 vmid yb m m sg13_hv_pmos w=1u l=0.5u ng=1 m=1"
+ ],
+ "shapes": 685,
+ "width_um": 55.16,
+ "height_um": 26.88,
+ "area_um2": 1482.7,
+ "self_check_errors": []
+}

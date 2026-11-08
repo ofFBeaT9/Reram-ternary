@@ -1,0 +1,7 @@
+{
+ "old": "results/rev47/tcim_core_batch27.sv",
+ "old_md5": "d41aed6c6da4d1c9734c9bc5b4ba8eb5",
+ "new": "rtl/tcim_core.sv",
+ "new_md5": "8cc900b8e643c14d4f1db6fb1b8e5569",
+ "same_logic_outside_formal_block_and_comments": true
+}

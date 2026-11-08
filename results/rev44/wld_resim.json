@@ -1,0 +1,234 @@
+{
+ "wiring": {
+  "r_in_total_ohm": 338.9,
+  "r_out_ohm": 11.06,
+  "c_out_fF": 0.36
+ },
+ "runs": {
+  "tt 27 C 1.7 V cx1": {
+   "r_line_ohm": 3993.9,
+   "near_rise_10_90_ns": 1.655,
+   "near_fall_90_10_ns": 0.223,
+   "near_settle_90_ns": 1.72,
+   "far_rise_10_90_ns": 2.644,
+   "far_fall_90_10_ns": 1.916,
+   "far_settle_90_ns": 3.155,
+   "rev43_far_settle_90_ns": 3.135,
+   "rev43_far_fall_90_10_ns": 1.907
+  },
+  "tt 27 C 1.7 V cx3": {
+   "r_line_ohm": 3993.9,
+   "near_rise_10_90_ns": 1.658,
+   "near_fall_90_10_ns": 0.223,
+   "near_settle_90_ns": 1.723,
+   "far_rise_10_90_ns": 2.645,
+   "far_fall_90_10_ns": 1.916,
+   "far_settle_90_ns": 3.157,
+   "rev43_far_settle_90_ns": 3.135,
+   "rev43_far_fall_90_10_ns": 1.907
+  },
+  "tt 27 C 3.3 V cx1": {
+   "r_line_ohm": 3993.9,
+   "near_rise_10_90_ns": 0.724,
+   "near_fall_90_10_ns": 0.26,
+   "near_settle_90_ns": 0.752,
+   "far_rise_10_90_ns": 2.125,
+   "far_fall_90_10_ns": 1.922,
+   "far_settle_90_ns": 2.478,
+   "rev43_far_settle_90_ns": 2.461,
+   "rev43_far_fall_90_10_ns": 1.912
+  },
+  "tt 27 C 3.3 V cx3": {
+   "r_line_ohm": 3993.9,
+   "near_rise_10_90_ns": 0.725,
+   "near_fall_90_10_ns": 0.26,
+   "near_settle_90_ns": 0.753,
+   "far_rise_10_90_ns": 2.125,
+   "far_fall_90_10_ns": 1.922,
+   "far_settle_90_ns": 2.479,
+   "rev43_far_settle_90_ns": 2.461,
+   "rev43_far_fall_90_10_ns": 1.912
+  },
+  "ss 125 C 1.7 V cx1": {
+   "r_line_ohm": 5199.8,
+   "near_rise_10_90_ns": 2.187,
+   "near_fall_90_10_ns": 0.354,
+   "near_settle_90_ns": 2.264,
+   "far_rise_10_90_ns": 3.466,
+   "far_fall_90_10_ns": 2.525,
+   "far_settle_90_ns": 4.122,
+   "rev43_far_settle_90_ns": 4.102,
+   "rev43_far_fall_90_10_ns": 2.515
+  },
+  "ss 125 C 1.7 V cx3": {
+   "r_line_ohm": 5199.8,
+   "near_rise_10_90_ns": 2.19,
+   "near_fall_90_10_ns": 0.355,
+   "near_settle_90_ns": 2.268,
+   "far_rise_10_90_ns": 3.468,
+   "far_fall_90_10_ns": 2.525,
+   "far_settle_90_ns": 4.125,
+   "rev43_far_settle_90_ns": 4.102,
+   "rev43_far_fall_90_10_ns": 2.515
+  },
+  "ss 125 C 3.3 V cx1": {
+   "r_line_ohm": 5199.8,
+   "near_rise_10_90_ns": 1.139,
+   "near_fall_90_10_ns": 0.407,
+   "near_settle_90_ns": 1.171,
+   "far_rise_10_90_ns": 2.864,
+   "far_fall_90_10_ns": 2.533,
+   "far_settle_90_ns": 3.331,
+   "rev43_far_settle_90_ns": 3.313,
+   "rev43_far_fall_90_10_ns": 2.524
+  },
+  "ss 125 C 3.3 V cx3": {
+   "r_line_ohm": 5199.8,
+   "near_rise_10_90_ns": 1.14,
+   "near_fall_90_10_ns": 0.407,
+   "near_settle_90_ns": 1.173,
+   "far_rise_10_90_ns": 2.864,
+   "far_fall_90_10_ns": 2.534,
+   "far_settle_90_ns": 3.332,
+   "rev43_far_settle_90_ns": 3.313,
+   "rev43_far_fall_90_10_ns": 2.524
+  },
+  "ff -40 C 1.7 V cx1": {
+   "r_line_ohm": 3169.5,
+   "near_rise_10_90_ns": 1.264,
+   "near_fall_90_10_ns": 0.156,
+   "near_settle_90_ns": 1.32,
+   "far_rise_10_90_ns": 2.066,
+   "far_fall_90_10_ns": 1.512,
+   "far_settle_90_ns": 2.472,
+   "rev43_far_settle_90_ns": 2.452,
+   "rev43_far_fall_90_10_ns": 1.502
+  },
+  "ff -40 C 1.7 V cx3": {
+   "r_line_ohm": 3169.5,
+   "near_rise_10_90_ns": 1.266,
+   "near_fall_90_10_ns": 0.156,
+   "near_settle_90_ns": 1.322,
+   "far_rise_10_90_ns": 2.067,
+   "far_fall_90_10_ns": 1.512,
+   "far_settle_90_ns": 2.474,
+   "rev43_far_settle_90_ns": 2.452,
+   "rev43_far_fall_90_10_ns": 1.502
+  },
+  "ff -40 C 3.3 V cx1": {
+   "r_line_ohm": 3169.5,
+   "near_rise_10_90_ns": 0.505,
+   "near_fall_90_10_ns": 0.187,
+   "near_settle_90_ns": 0.531,
+   "far_rise_10_90_ns": 1.657,
+   "far_fall_90_10_ns": 1.516,
+   "far_settle_90_ns": 1.937,
+   "rev43_far_settle_90_ns": 1.919,
+   "rev43_far_fall_90_10_ns": 1.507
+  },
+  "ff -40 C 3.3 V cx3": {
+   "r_line_ohm": 3169.5,
+   "near_rise_10_90_ns": 0.506,
+   "near_fall_90_10_ns": 0.188,
+   "near_settle_90_ns": 0.531,
+   "far_rise_10_90_ns": 1.657,
+   "far_fall_90_10_ns": 1.516,
+   "far_settle_90_ns": 1.937,
+   "rev43_far_settle_90_ns": 1.919,
+   "rev43_far_fall_90_10_ns": 1.507
+  },
+  "ss 27 C 1.7 V cx1": {
+   "r_line_ohm": 3993.9,
+   "near_rise_10_90_ns": 1.952,
+   "near_fall_90_10_ns": 0.251,
+   "near_settle_90_ns": 2.027,
+   "far_rise_10_90_ns": 2.854,
+   "far_fall_90_10_ns": 1.93,
+   "far_settle_90_ns": 3.409,
+   "rev43_far_settle_90_ns": 3.389,
+   "rev43_far_fall_90_10_ns": 1.92
+  },
+  "ss 27 C 1.7 V cx3": {
+   "r_line_ohm": 3993.9,
+   "near_rise_10_90_ns": 1.954,
+   "near_fall_90_10_ns": 0.252,
+   "near_settle_90_ns": 2.031,
+   "far_rise_10_90_ns": 2.856,
+   "far_fall_90_10_ns": 1.93,
+   "far_settle_90_ns": 3.412,
+   "rev43_far_settle_90_ns": 3.389,
+   "rev43_far_fall_90_10_ns": 1.92
+  },
+  "ss 27 C 3.3 V cx1": {
+   "r_line_ohm": 3993.9,
+   "near_rise_10_90_ns": 0.992,
+   "near_fall_90_10_ns": 0.303,
+   "near_settle_90_ns": 1.022,
+   "far_rise_10_90_ns": 2.262,
+   "far_fall_90_10_ns": 1.938,
+   "far_settle_90_ns": 2.637,
+   "rev43_far_settle_90_ns": 2.619,
+   "rev43_far_fall_90_10_ns": 1.928
+  },
+  "ss 27 C 3.3 V cx3": {
+   "r_line_ohm": 3993.9,
+   "near_rise_10_90_ns": 0.993,
+   "near_fall_90_10_ns": 0.304,
+   "near_settle_90_ns": 1.024,
+   "far_rise_10_90_ns": 2.263,
+   "far_fall_90_10_ns": 1.938,
+   "far_settle_90_ns": 2.637,
+   "rev43_far_settle_90_ns": 2.619,
+   "rev43_far_fall_90_10_ns": 1.928
+  },
+  "ff 27 C 1.7 V cx1": {
+   "r_line_ohm": 3993.9,
+   "near_rise_10_90_ns": 1.404,
+   "near_fall_90_10_ns": 0.192,
+   "near_settle_90_ns": 1.462,
+   "far_rise_10_90_ns": 2.479,
+   "far_fall_90_10_ns": 1.902,
+   "far_settle_90_ns": 2.954,
+   "rev43_far_settle_90_ns": 2.933,
+   "rev43_far_fall_90_10_ns": 1.892
+  },
+  "ff 27 C 1.7 V cx3": {
+   "r_line_ohm": 3993.9,
+   "near_rise_10_90_ns": 1.406,
+   "near_fall_90_10_ns": 0.192,
+   "near_settle_90_ns": 1.464,
+   "far_rise_10_90_ns": 2.48,
+   "far_fall_90_10_ns": 1.902,
+   "far_settle_90_ns": 2.956,
+   "rev43_far_settle_90_ns": 2.933,
+   "rev43_far_fall_90_10_ns": 1.892
+  },
+  "ff 27 C 3.3 V cx1": {
+   "r_line_ohm": 3993.9,
+   "near_rise_10_90_ns": 0.549,
+   "near_fall_90_10_ns": 0.222,
+   "near_settle_90_ns": 0.575,
+   "far_rise_10_90_ns": 2.048,
+   "far_fall_90_10_ns": 1.906,
+   "far_settle_90_ns": 2.387,
+   "rev43_far_settle_90_ns": 2.369,
+   "rev43_far_fall_90_10_ns": 1.896
+  },
+  "ff 27 C 3.3 V cx3": {
+   "r_line_ohm": 3993.9,
+   "near_rise_10_90_ns": 0.55,
+   "near_fall_90_10_ns": 0.222,
+   "near_settle_90_ns": 0.576,
+   "far_rise_10_90_ns": 2.048,
+   "far_fall_90_10_ns": 1.906,
+   "far_settle_90_ns": 2.387,
+   "rev43_far_settle_90_ns": 2.369,
+   "rev43_far_fall_90_10_ns": 1.896
+  }
+ },
+ "summary": {
+  "far_settle_90_max_ns": 4.125,
+  "far_fall_max_ns": 2.534,
+  "max_change_vs_rev43_ns": 0.02300000000000013
+ }
+}

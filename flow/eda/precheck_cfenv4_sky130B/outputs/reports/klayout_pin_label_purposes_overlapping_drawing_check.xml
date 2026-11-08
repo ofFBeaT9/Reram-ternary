@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report-database>
+ <description>pin_label_purposes_overlapping_drawing.rb.drc, input=/w/chip/sky130/caravan/gds/user_analog_project_wrapper.gds, topcell=user_analog_project_wrapper</description>
+ <original-file/>
+ <generator>drc: script='/tmp/v/lib/python3.12/site-packages/cf_precheck/drc_scripts/pin_label_purposes_overlapping_drawing.rb.drc'</generator>
+ <top-cell>user_analog_project_wrapper</top-cell>
+ <tags>
+ </tags>
+ <categories>
+ </categories>
+ <cells>
+  <cell>
+   <name>user_analog_project_wrapper</name>
+   <variant/>
+   <layout-name/>
+   <references>
+   </references>
+  </cell>
+ </cells>
+ <items>
+ </items>
+</report-database>

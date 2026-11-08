@@ -1,0 +1,85 @@
+
+================================================================
+  Tritone TPU Phase 7 - Benchmark Suite
+================================================================
+
+  TPU Array Info: 0x02404020
+    Version:   2.64
+    Array:     64x64
+    Acc Bits:  32
+
+
+================================================================
+  Benchmark 1: 64x64 Dense GEMM
+================================================================
+  M=64, N=64, K=64
+  Total MACs:        262144
+  Cycles:            257
+  Zero Skips:        0 (0.0%)
+  Bank Conflicts:    0
+  Utilization:       100.0%
+  Dense TOPS:        2.0400
+  Effective TOPS:    2.0400
+  PASS
+
+================================================================
+  Benchmark 2: FEP Energy Update
+================================================================
+  Configs=256, Terms=128, Dim=64
+  GEMM Cycles:       2049
+  Nonlinear Cycles:  98304
+  Reduction Cycles:  34816
+  Total Cycles:      135169
+  Zero Skips:        0
+  Utilization:       100.0%
+  Dense TOPS:        0.0315
+  PASS
+
+================================================================
+  Benchmark 3: Molecular Forces
+================================================================
+  Particles=1024, Neighbors=50
+  RSQRT Cycles:      460800
+  Force Cycles:      102400
+  Reduction Cycles:  51200
+  Total Cycles:      614400
+  Utilization:       100.0%
+  Dense TOPS:        0.0007
+  PASS
+
+
+================================================================
+  TRITONE TPU Phase 7 - TOPS Benchmark Report
+================================================================
+
+  Target Frequency:  1000 MHz (1 GHz)
+  Array Size:        64x64 (4096 PEs)
+  Accumulator Bits:  32
+  Activation Bits:   16
+
+  ------------------------------------------------------------------
+  Benchmark              Dense TOPS    Eff. TOPS     Util % Zero Skip%
+  ------------------------------------------------------------------
+  GEMM_64x64                 2.0400       2.0400     100.0%       0.0%
+  FEP_Energy                 0.0315       0.0315     100.0%       0.0%
+  MD_Forces                  0.0007       0.0007     100.0%       0.0%
+  ------------------------------------------------------------------
+
+  Notes:
+    - Dense TOPS: 2 * MAC_count / runtime (no sparsity assumptions)
+    - Effective TOPS: Accounts for zero-weight skipping
+    - Utilization: Active compute cycles / total cycles
+================================================================
+
+
+================================================================
+  Phase 7 Benchmark Suite Complete
+================================================================
+  All benchmarks executed successfully.
+  *** TOPS VERIFICATION PASSED ***
+================================================================
+
+- tb/tpu/tb_tpu_benchmarks.sv:620: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.053 devel
+- Verilator: $finish at 4us; walltime 0.006 s; speed 584.995 us/s
+- Verilator: cpu 0.003 s on 1 threads; allocated 4 MB

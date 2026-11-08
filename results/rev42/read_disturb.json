@@ -1,0 +1,65 @@
+{
+ "HRS at the published mean current (gap 1.4526 nm)": {
+  "read_uA": 2.85,
+  "bias": {
+   "0.20 V": {
+    "seconds_to_plus_10_percent": 2980.0,
+    "reads_of_4ns": 746000000000.0
+   },
+   "0.25 V": {
+    "seconds_to_plus_10_percent": 665.0,
+    "reads_of_4ns": 166000000000.0
+   },
+   "0.29 V": {
+    "seconds_to_plus_10_percent": 200.0,
+    "reads_of_4ns": 50100000000.0
+   },
+   "0.33 V": {
+    "seconds_to_plus_10_percent": 60.5,
+    "reads_of_4ns": 15100000000.0
+   }
+  }
+ },
+ "HRS at the 14 uA tail (gap 0.9969 nm)": {
+  "read_uA": 14.0,
+  "bias": {
+   "0.20 V": {
+    "seconds_to_plus_10_percent": 2950.0,
+    "reads_of_4ns": 736000000000.0
+   },
+   "0.25 V": {
+    "seconds_to_plus_10_percent": 653.0,
+    "reads_of_4ns": 163000000000.0
+   },
+   "0.29 V": {
+    "seconds_to_plus_10_percent": 196.0,
+    "reads_of_4ns": 49100000000.0
+   },
+   "0.33 V": {
+    "seconds_to_plus_10_percent": 59.4,
+    "reads_of_4ns": 14800000000.0
+   }
+  }
+ },
+ "fully reset (gap 1.8 nm)": {
+  "read_uA": 0.83,
+  "bias": {
+   "0.20 V": {
+    "seconds_to_plus_10_percent": 4060.0,
+    "reads_of_4ns": 1010000000000.0
+   },
+   "0.25 V": {
+    "seconds_to_plus_10_percent": 977.0,
+    "reads_of_4ns": 244000000000.0
+   },
+   "0.29 V": {
+    "seconds_to_plus_10_percent": 313.0,
+    "reads_of_4ns": 78300000000.0
+   },
+   "0.33 V": {
+    "seconds_to_plus_10_percent": 100.0,
+    "reads_of_4ns": 25100000000.0
+   }
+  }
+ }
+}

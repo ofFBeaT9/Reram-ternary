@@ -1,0 +1,116 @@
+{
+ "date": "2026-10-12",
+ "suites": [
+  {
+   "key": "test",
+   "what": "every number quoted in the status report against the result files; 9 results re-derived by a second method",
+   "how": "make test",
+   "result": "508 numbers, 0 stale; 9 second-method checks, 0 failures",
+   "ok": true,
+   "ran": true,
+   "minutes": 0.016666666666666666
+  },
+  {
+   "key": "lint",
+   "what": "Verilator lint with all warnings, both trit codes",
+   "how": "make lint",
+   "result": "0 warnings",
+   "ok": true,
+   "ran": true,
+   "minutes": 0.03333333333333333
+  },
+  {
+   "key": "equiv",
+   "what": "formal proofs: the trit-conversion table equals its definition (both codes); the netlist handed to place and route equals the RTL",
+   "how": "make equiv",
+   "result": "tables 2 of 2 proven; netlist 1,697 points proven, 0 unproven",
+   "ok": true,
+   "ran": true,
+   "minutes": 2.5166666666666666
+  },
+  {
+   "key": "equiv_chip",
+   "what": "the chip's logic: lint, and proof that the netlist handed to place and route equals the RTL",
+   "how": "make equiv-chip",
+   "result": "lint 0 warnings; 1,954 points proven, 0 unproven",
+   "ok": true,
+   "ran": true,
+   "minutes": 1.0
+  },
+  {
+   "key": "rtl",
+   "what": "TCIM0 test bench on CXXRTL, two's-complement trit code (registers, programming with verify, products against exact arithmetic, error paths, a ternary network)",
+   "how": "make rtl",
+   "result": "82,554 checks in 1 run, 0 failures",
+   "ok": true,
+   "ran": true,
+   "minutes": 7.766666666666667
+  },
+  {
+   "key": "rtl_pnx",
+   "what": "the same test bench, BSD-PNX trit code",
+   "how": "make rtl-pnx",
+   "result": "82,554 checks in 1 run, 0 failures",
+   "ok": true,
+   "ran": true,
+   "minutes": 7.233333333333333
+  },
+  {
+   "key": "rtl_verilator",
+   "what": "the same on a second simulator (Verilator), both codes",
+   "how": "make rtl-verilator",
+   "result": "165,108 checks in 2 runs, 0 failures",
+   "ok": true,
+   "ran": true,
+   "minutes": 2.1333333333333333
+  },
+  {
+   "key": "rtl_chip",
+   "what": "the chip's logic through the array controller and a line-level model of the analog macro, 3 timing settings, every electrical rule checked each cycle",
+   "how": "make rtl-chip",
+   "result": "233,024 checks in 3 runs, 0 failures",
+   "ok": true,
+   "ran": true,
+   "minutes": 21.983333333333334
+  },
+  {
+   "key": "rtl_chip_verilator",
+   "what": "the same on Verilator",
+   "how": "make rtl-chip-verilator",
+   "result": "76,973 checks in 1 run, 0 failures",
+   "ok": true,
+   "ran": true,
+   "minutes": 0.9666666666666667
+  },
+  {
+   "key": "mutation_chip",
+   "what": "array controller: 26 copies, each with one deliberate bug; the chip test bench must fail on every one",
+   "how": "tb/chip/mutation_chip.py",
+   "result": "26 of 26 injected faults detected; each fault caught by the same first failure as in the stored run",
+   "ok": true,
+   "ran": true,
+   "minutes": 77.99379617373148
+  },
+  {
+   "key": "fpga",
+   "what": "the FPGA design in simulation: RTL at 3 spreads, the synthesized netlist at gate level, and a check that the board netlist has no signed multiplier",
+   "how": "tb/fpga/run_fpga_checks.sh",
+   "result": "wrong weights at spread \u00d71/\u00d72/\u00d73: 0, 214, 677; gate level identical to RTL: yes; signed multipliers in the board netlist: 0",
+   "ok": true,
+   "ran": true,
+   "minutes": 3.8666666666666667
+  },
+  {
+   "key": "check_model",
+   "what": "the ReRAM device model: Python reference, ngspice and Gnucap (Verilog-A) must agree on 4 set/reset cases",
+   "how": "make check-model",
+   "result": "3 solvers agree within 0.26 mV, 0.5 pm, 0.11 %, 1.02 %",
+   "ok": true,
+   "ran": true,
+   "minutes": 0.11666666666666667
+  }
+ ],
+ "files_identical": 21,
+ "files_identical_apart_from_run_times": 6,
+ "files_differing": []
+}

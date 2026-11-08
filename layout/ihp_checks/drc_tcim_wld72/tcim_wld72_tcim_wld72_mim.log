@@ -1,0 +1,1427 @@
+# Logfile created on 2026-10-10 11:05:52 +0000 by logger.rb/v1.4.3
+2026-10-10 11:05:52 +0000: Memory Usage (429716K) : Starting running IHP-SG13G2 KLayout DRC runset on /w/tcim_wld72.gds
+2026-10-10 11:05:52 +0000: Memory Usage (429716K) : Ruby Version for klayout: 3.0.2
+2026-10-10 11:05:52 +0000: Memory Usage (430740K) : Loading database to memory is complete.
+2026-10-10 11:05:52 +0000: Memory Usage (430740K) : IHP-SG13G2 KLayout DRC runset output at: /w/ihp_checks/drc_tcim_wld72/tcim_wld72_tcim_wld72_mim.lyrdb
+2026-10-10 11:05:52 +0000: Memory Usage (430740K) : Evaluate switches.
+2026-10-10 11:05:52 +0000: Memory Usage (430740K) : tables selected: mim
+2026-10-10 11:05:52 +0000: Memory Usage (430740K) : KLayout will use 32 thread(s) in tiling mode.
+2026-10-10 11:05:52 +0000: Memory Usage (430740K) : deep mode is enabled.
+2026-10-10 11:05:52 +0000: Memory Usage (430740K) : FEOL enabled: false
+2026-10-10 11:05:52 +0000: Memory Usage (430740K) : BEOL enabled: false
+2026-10-10 11:05:52 +0000: Memory Usage (430740K) : OFFGRID enabled: true
+2026-10-10 11:05:52 +0000: Memory Usage (430740K) : ANGLE enabled: true
+2026-10-10 11:05:52 +0000: Memory Usage (430740K) : PIN enabled: false
+2026-10-10 11:05:52 +0000: Memory Usage (430740K) : FORBIDDEN enabled: false
+2026-10-10 11:05:52 +0000: Memory Usage (430740K) : RECOMMENDED enabled: true
+2026-10-10 11:05:52 +0000: Memory Usage (430740K) : PreCheck DRC enabled: false
+2026-10-10 11:05:52 +0000: Memory Usage (430740K) : CONNECTIVITY_RULES enabled: false.
+2026-10-10 11:05:52 +0000: Memory Usage (430740K) : Read in polygons from layers.
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : activ_drw has 74 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : activ_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : activ_mask has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : activ_filler has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : activ_nofill has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : activ_opc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : activ_iopc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : activ_noqrc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : biwind_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : biwind_opc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : pemwind_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : gatpoly_drw has 72 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : gatpoly_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : gatpoly_filler has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : gatpoly_nofill has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : gatpoly_opc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : gatpoly_iopc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : gatpoly_noqrc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (431764K) : cont_drw has 5760 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (432020K) : cont_opc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (432020K) : nsd_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (432020K) : nsd_block has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (432020K) : metal1_drw has 288 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (432020K) : metal1_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (432276K) : metal1_mask has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (432276K) : metal1_filler has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (432276K) : metal1_nofill has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (432276K) : metal1_slit has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (432532K) : metal1_text has 72 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (432788K) : metal1_opc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (432788K) : metal1_noqrc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (432788K) : metal1_res has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (432788K) : metal1_iprobe has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (432788K) : metal1_diffprb has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (432788K) : passiv_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (432788K) : passiv_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433044K) : passiv_sbump has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433044K) : passiv_pillar has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433044K) : passiv_pdl has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433044K) : metal2_drw has 146 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433044K) : metal2_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433044K) : metal2_mask has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433300K) : metal2_filler has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433300K) : metal2_nofill has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433300K) : metal2_slit has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433300K) : metal2_text has 74 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433300K) : metal2_opc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433556K) : metal2_noqrc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433556K) : metal2_res has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433556K) : metal2_iprobe has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433556K) : metal2_diffprb has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433812K) : baspoly_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433812K) : baspoly_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433812K) : psd_drw has 2 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (433812K) : nldb_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434068K) : digibnd_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434068K) : via1_drw has 216 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434068K) : backmetal1_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434068K) : backmetal1_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434068K) : backmetal1_mask has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434324K) : backmetal1_filler has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434324K) : backmetal1_nofill has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434324K) : backmetal1_slit has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434324K) : backmetal1_text has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434324K) : backmetal1_opc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434324K) : backmetal1_noqrc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434580K) : backmetal1_res has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434580K) : backmetal1_iprobe has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434580K) : backmetal1_diffprb has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434580K) : backpassiv_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434580K) : res_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434580K) : sram_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434836K) : trans_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434836K) : ind_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434836K) : ind_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (434836K) : ind_text has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (435092K) : salblock_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (435092K) : via2_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (435092K) : metal3_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (435092K) : metal3_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (435092K) : metal3_mask has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (435348K) : metal3_filler has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (435348K) : metal3_nofill has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (435348K) : metal3_slit has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (435348K) : metal3_text has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (435348K) : metal3_opc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (435604K) : metal3_noqrc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (435604K) : metal3_res has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (435604K) : metal3_iprobe has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (435604K) : metal3_diffprb has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (435860K) : nwell_drw has 1 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (435860K) : nwell_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (435860K) : nbulay_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (435860K) : nbulay_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436116K) : nbulay_block has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436116K) : emwind_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436116K) : emwind_opc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436116K) : deepco_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436116K) : deepco_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436372K) : mim_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436372K) : edgeseal_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436372K) : edgeseal_bound has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436372K) : substrate_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436628K) : substrate_text has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436628K) : dfpad_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436628K) : dfpad_pillar has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436628K) : dfpad_sbump has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436628K) : thickgateox_drw has 1 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436884K) : pldb_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436884K) : pwell_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436884K) : pwell_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436884K) : pwell_block has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (436884K) : ic_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (437140K) : via3_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (437140K) : metal4_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (437140K) : metal4_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (437140K) : metal4_mask has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (437140K) : metal4_filler has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (437396K) : metal4_nofill has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (437396K) : metal4_slit has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (437396K) : metal4_text has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (437396K) : metal4_opc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (437652K) : metal4_noqrc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (437652K) : metal4_res has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (437652K) : metal4_iprobe has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (437652K) : metal4_diffprb has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (437908K) : heattrans_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (437908K) : heatres_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (437908K) : pempoly_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (437908K) : fbe_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (437908K) : empoly_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438164K) : ldmos_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438164K) : pbiwind_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438164K) : digisub_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438164K) : nodrc_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438420K) : text_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438420K) : via4_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438420K) : metal5_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438420K) : metal5_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438420K) : metal5_mask has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438420K) : metal5_filler has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438420K) : metal5_nofill has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438676K) : metal5_slit has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438676K) : metal5_text has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438676K) : metal5_opc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438676K) : metal5_noqrc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438932K) : metal5_res has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438932K) : metal5_iprobe has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438932K) : metal5_diffprb has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438932K) : radhard_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (438932K) : memcap_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (439188K) : varicap_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (439188K) : flash_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (439188K) : intbondvia_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (439188K) : intbondmet_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (439444K) : devbondvia_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (439444K) : devbondmet_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (439444K) : devtrench_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (439444K) : redist_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (439700K) : graphbot_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (439700K) : graphtop_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (439700K) : antvia1_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (439700K) : antmetal2_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (439700K) : graphcont_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (439956K) : siwg_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (439956K) : siwg_filler has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (439956K) : siwg_nofill has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (439956K) : sigrating_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (440212K) : singrating_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (440212K) : graphpas_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (440212K) : emwind3_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (440212K) : emwihv3_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (440212K) : redbulay_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (440468K) : smos_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (440468K) : graphpad_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (440468K) : polimide_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (440468K) : polimide_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (440724K) : recog_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (440724K) : recog_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (440724K) : recog_esd has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (440724K) : recog_diode has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (440980K) : recog_tsv has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (440980K) : recog_iprobe has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (440980K) : recog_diffprb has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (440980K) : recog_pillar has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (440980K) : recog_sbump has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (441236K) : recog_otp has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (441236K) : recog_pdiode has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (441236K) : recog_mom has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (441236K) : recog_momf has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (441492K) : recog_pcm has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (441492K) : colopen_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (441492K) : graphmetal1_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (441492K) : graphmetal1_filler has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (441492K) : graphmetal1_nofill has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (441748K) : graphmetal1_slit has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (441748K) : graphmetal1_opc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (441748K) : graphmet1l_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (441748K) : graphmet1l_filler has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (442004K) : graphmet1l_nofill has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (442004K) : graphmet1l_slit has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (442004K) : graphmet1l_opc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (442004K) : extblock_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (442260K) : nldd_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (442260K) : pldd_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (442260K) : next_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (442260K) : pext_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (442260K) : nexthv_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (442516K) : pexthv_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (442516K) : graphgate_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (442516K) : sinwg_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (442516K) : sinwg_filler has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (442772K) : sinwg_nofill has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (442772K) : mempad_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (442772K) : topvia1_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (442772K) : topmetal1_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (442772K) : topmetal1_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443028K) : topmetal1_mask has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443028K) : topmetal1_filler has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443028K) : topmetal1_nofill has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443028K) : topmetal1_slit has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443284K) : topmetal1_text has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443284K) : topmetal1_noqrc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443284K) : topmetal1_res has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443284K) : topmetal1_iprobe has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443284K) : topmetal1_diffprb has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443540K) : inldpwl_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443540K) : polyres_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443540K) : polyres_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443540K) : vmim_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443540K) : nbulaycut_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443540K) : antmetal1_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443540K) : topvia2_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443540K) : topmetal2_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443796K) : topmetal2_pin has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443796K) : topmetal2_mask has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443796K) : topmetal2_filler has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443796K) : topmetal2_nofill has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (443796K) : topmetal2_slit has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (444052K) : topmetal2_text has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (444052K) : topmetal2_noqrc has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (444052K) : topmetal2_res has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (444052K) : topmetal2_iprobe has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (444308K) : topmetal2_diffprb has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (444308K) : snsring_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (444308K) : sensor_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (444308K) : snsarms_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (444564K) : snscmosvia_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (444564K) : colwind_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (444564K) : flm_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (444564K) : hafniumox_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (444564K) : memvia_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (444820K) : thinfilmres_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (444820K) : rfmem_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (444820K) : norcx_drw has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (444820K) : norcx_m2m3 has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (444820K) : norcx_m2m4 has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (445076K) : norcx_m2m5 has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (445076K) : norcx_m2tm1 has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (445076K) : norcx_m2tm2 has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (445076K) : norcx_m3m4 has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (445332K) : norcx_m3m5 has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (445332K) : norcx_m3tm1 has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (445332K) : norcx_m3tm2 has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (445332K) : norcx_m4m5 has 0 polygons
+2026-10-10 11:05:52 +0000: Memory Usage (445588K) : norcx_m4tm1 has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (445588K) : norcx_m4tm2 has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (445588K) : norcx_m5tm1 has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (445588K) : norcx_m5tm2 has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (445588K) : norcx_tm1tm2 has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (445844K) : norcx_m1sub has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (445844K) : norcx_m2sub has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (445844K) : norcx_m3sub has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (445844K) : norcx_m4sub has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (446100K) : norcx_m5sub has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (446100K) : norcx_tm1sub has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (446100K) : norcx_tm2sub has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (446100K) : snsbotvia_drw has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (446356K) : snstopvia_drw has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (446356K) : deepvia_drw has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (446356K) : fgetch_drw has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (446356K) : ctrgat_drw has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (446356K) : fgimp_drw has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (446612K) : emwihv_drw has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (446612K) : lbe_drw has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (446612K) : alcustop_drw has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (446612K) : nometfiller_drw has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (446868K) : prboundary_drw has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (446868K) : exchange0_drw has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (446868K) : exchange0_pin has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (446868K) : exchange0_text has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (446868K) : exchange1_drw has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (447124K) : exchange1_pin has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (447124K) : exchange1_text has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (447124K) : exchange2_drw has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (447124K) : exchange2_pin has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (447380K) : exchange2_text has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (447380K) : exchange3_drw has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (447380K) : exchange3_pin has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (447380K) : exchange3_text has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (447380K) : exchange4_drw has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) : exchange4_pin has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) : exchange4_text has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) : isonwell_drw has 0 polygons
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) : Total no. of polygons in the design is 6706
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) : Loaded default DRC rules values from /tmp/k/IHP-Open-PDK/ihp-sg13g2/libs.tech/klayout/tech/drc/rule_decks/sg13g2_tech_default.json
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) : The following rules values were missing in tech json and default values were used:
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - grid
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NW_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NW_a1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NW_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NW_b1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NW_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NW_c1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NW_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NW_d1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NW_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NW_e1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NW_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NW_f1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NW_f1_digibnd
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NW_NBL
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - PWB_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - PWB_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - PWB_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - PWB_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - PWB_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - PWB_e1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - PWB_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - PWB_f1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - PWB_g
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NBL_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NBL_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NBL_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NBL_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NBL_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NBL_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NBLB_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NBLB_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NBLB_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - NBLB_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Act_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Act_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Act_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Act_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Act_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_a1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_c1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_g
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_g1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_g2
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_g3
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_g_w
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_h
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_i
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_j
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_size_x
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_size_y
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_space
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_offset
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - AFil_BigSmall_space
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TGO_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TGO_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TGO_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TGO_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TGO_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TGO_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Gat_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Gat_a1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Gat_a2
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Gat_a3
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Gat_a4
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Gat_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Gat_b1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Gat_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Gat_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Gat_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Gat_g
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Gat_g_min
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - GFil_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - GFil_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - GFil_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - GFil_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - GFil_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - GFil_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - GFil_g
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - GFil_h
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - GFil_i
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - GFil_j
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - GFil_k
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - GFil_size_x
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - GFil_size_y
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - GFil_space
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - GFil_offset
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - GFil_space_GFil
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_c1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_d1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_g
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_h
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_h1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_i
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_i1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_j
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_j1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_k
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_l
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_m
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - pSD_n
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - nSDB_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - nSDB_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - nSDB_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - nSDB_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - nSDB_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - EXTB_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - EXTB_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - EXTB_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - EXTB_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Sal_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Sal_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Sal_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Sal_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Sal_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Cnt_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Cnt_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Cnt_b1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Cnt_b1_nr
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Cnt_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Cnt_c_digibnd
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Cnt_c_sram
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Cnt_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Cnt_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Cnt_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Cnt_g1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Cnt_g2
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - CntB_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - CntB_a1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - CntB_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - CntB_b1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - CntB_b1_l
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - CntB_b2
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - CntB_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - CntB_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - CntB_d1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - CntB_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - CntB_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - CntB_g1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - CntB_g2
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - CntB_h1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rsil_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rsil_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rsil_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rsil_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rsil_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rsil_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rpnd_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rpnd_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rpnd_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rpnd_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rpnd_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rppd_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rppd_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rppd_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rppd_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rppd_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rhi_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rhi_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rhi_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rhi_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rhi_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Rhi_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - nmosi_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - nmosi_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - nmosi_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - nmosi_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - nmosi_g
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - npn_ring
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - npn13G2_bR
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - npn13G2L_cR
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - npn13G2V_cR
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Sdiod_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Sdiod_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Sdiod_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Sdiod_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Ant_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Ant_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Ant_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Ant_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Ant_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Ant_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Ant_g
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - LU_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - LU_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - LU_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - LU_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - M1_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - M1_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - M1_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - M1_c1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - M1_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - M1_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - M1_e_w
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - M1_e_cr
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - M1_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - M1_f_w
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - M1_f_cr
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - M1_g
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - M1_g_min
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - M1_i
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - M1_j
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - M1_k
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - V1_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - V1_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - V1_b1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - V1_b1_nr
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - V1_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - V1_c1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Vn_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Vn_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Vn_b1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Vn_b1_nr
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Vn_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Vn_c1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mn_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mn_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mn_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mn_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mn_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mn_e_w
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mn_e_cr
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mn_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mn_f_w
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mn_f_cr
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mn_g
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mn_g_min
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mn_i
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mn_j
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mn_k
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TV1_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TV1_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TV1_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TV1_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM1_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM1_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM1_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM1_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TV2_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TV2_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TV2_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TV2_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2_bR
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2_bR_w
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2_bR_cr
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BM1_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BM1_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BM1_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BM1_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Pas_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Pas_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Pas_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BPas_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BPas_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BPas_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - MFil_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - MFil_a1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - MFil_a2
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - MFil_a_w
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - MFil_a_l
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - MFil_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - MFil_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - MFil_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - MFil_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - MFil_g
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - MFil_h
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - MFil_k
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - MFil_h_w
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - MFil_size_x
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - MFil_size_y
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - MFil_space
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - MFil_offset
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM1Fil_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM1Fil_a1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM1Fil_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM1Fil_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM1Fil_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM1Fil_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM1Fil_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM1Fil_g
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM1Fil_size_x
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM1Fil_size_y
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM1Fil_space
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM1Fil_offset
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2Fil_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2Fil_a1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2Fil_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2Fil_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2Fil_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2Fil_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2Fil_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2Fil_g
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2Fil_size_x
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2Fil_size_y
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2Fil_space
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - TM2Fil_offset
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BM1Fil_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BM1Fil_a1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BM1Fil_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BM1Fil_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BM1Fil_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BM1Fil_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BM1Fil_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BM1Fil_g
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BM1Fil_size_x
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BM1Fil_size_y
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BM1Fil_space
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - BM1Fil_offset
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Slt_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Slt_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Slt_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Slt_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Slt_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Slt_g
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Slt_h1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Slt_h2
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Slt_h3
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Slt_i
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Slt_i_w
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - LBE_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - LBE_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - LBE_b1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - LBE_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - LBE_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - LBE_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - LBE_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - LBE_g
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - LBE_h
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - LBE_i
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Pad_aR
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Pad_bR
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Pad_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Pad_dR
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Pad_d1R
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Pad_eR
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Pad_fR
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Pad_gR
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Pad_i
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Padb_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Padb_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Padb_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Padb_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Padc_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Padc_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Padc_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Seal_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Seal_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Seal_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Seal_c1
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Seal_c2
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Seal_c3
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Seal_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Seal_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Seal_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Seal_k
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mim_a
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mim_b
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mim_c
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mim_d
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mim_e
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mim_f
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mim_g
+2026-10-10 11:05:53 +0000: Memory Usage (445080K) :   - Mim_gR
+2026-10-10 11:05:53 +0000: Memory Usage (446104K) : Total area of the design is 2116.7704 um^2.
+2026-10-10 11:05:53 +0000: Memory Usage (446104K) : The design dimensions are 26.42 µm * 80.12 µm.
+2026-10-10 11:05:53 +0000: Memory Usage (446104K) : Starting general IHP-SG13G2 derivations.
+2026-10-10 11:05:53 +0000: Memory Usage (446104K) : Starting Pwell derivations
+2026-10-10 11:05:53 +0000: Memory Usage (448920K) : Starting IHP-SG13G2 DRC rules.
+2026-10-10 11:05:53 +0000: Memory Usage (448920K) : Starting 6.11 MIM table
+2026-10-10 11:05:53 +0000: Memory Usage (448920K) : Executing rule MIM.c
+2026-10-10 11:05:53 +0000: Memory Usage (448920K) : Executing rule MIM.d
+2026-10-10 11:05:53 +0000: Memory Usage (448920K) : Executing rule MIM.gR
+2026-10-10 11:05:53 +0000: Memory Usage (448920K) : KLayout DRC run for tables 'mim' completed in 0.98 seconds
+2026-10-10 11:23:23 +0000: Memory Usage (429868K) : Starting running IHP-SG13G2 KLayout DRC runset on /w/tcim_wld72.gds
+2026-10-10 11:23:23 +0000: Memory Usage (429868K) : Ruby Version for klayout: 3.0.2
+2026-10-10 11:23:23 +0000: Memory Usage (430892K) : Loading database to memory is complete.
+2026-10-10 11:23:23 +0000: Memory Usage (430892K) : IHP-SG13G2 KLayout DRC runset output at: /w/ihp_checks/drc_tcim_wld72/tcim_wld72_tcim_wld72_mim.lyrdb
+2026-10-10 11:23:23 +0000: Memory Usage (431148K) : Evaluate switches.
+2026-10-10 11:23:23 +0000: Memory Usage (431148K) : tables selected: mim
+2026-10-10 11:23:23 +0000: Memory Usage (431148K) : KLayout will use 32 thread(s) in tiling mode.
+2026-10-10 11:23:23 +0000: Memory Usage (431148K) : deep mode is enabled.
+2026-10-10 11:23:23 +0000: Memory Usage (431148K) : FEOL enabled: false
+2026-10-10 11:23:23 +0000: Memory Usage (431148K) : BEOL enabled: false
+2026-10-10 11:23:23 +0000: Memory Usage (431148K) : OFFGRID enabled: true
+2026-10-10 11:23:23 +0000: Memory Usage (431148K) : ANGLE enabled: true
+2026-10-10 11:23:23 +0000: Memory Usage (431148K) : PIN enabled: false
+2026-10-10 11:23:23 +0000: Memory Usage (431148K) : FORBIDDEN enabled: false
+2026-10-10 11:23:23 +0000: Memory Usage (431148K) : RECOMMENDED enabled: true
+2026-10-10 11:23:23 +0000: Memory Usage (431148K) : PreCheck DRC enabled: false
+2026-10-10 11:23:23 +0000: Memory Usage (431148K) : CONNECTIVITY_RULES enabled: false.
+2026-10-10 11:23:23 +0000: Memory Usage (431148K) : Read in polygons from layers.
+2026-10-10 11:23:23 +0000: Memory Usage (431916K) : activ_drw has 74 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (431916K) : activ_pin has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (431916K) : activ_mask has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (431916K) : activ_filler has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (431916K) : activ_nofill has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (431916K) : activ_opc has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (431916K) : activ_iopc has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (431916K) : activ_noqrc has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (431916K) : biwind_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (431916K) : biwind_opc has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (431916K) : pemwind_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (431916K) : gatpoly_drw has 72 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (431916K) : gatpoly_pin has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (431916K) : gatpoly_filler has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (431916K) : gatpoly_nofill has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (431916K) : gatpoly_opc has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (431916K) : gatpoly_iopc has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (431916K) : gatpoly_noqrc has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (432172K) : cont_drw has 5760 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (432428K) : cont_opc has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (432428K) : nsd_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (432428K) : nsd_block has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (432428K) : metal1_drw has 288 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (432428K) : metal1_pin has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (432428K) : metal1_mask has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (432428K) : metal1_filler has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (432428K) : metal1_nofill has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (432428K) : metal1_slit has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (432684K) : metal1_text has 72 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (432940K) : metal1_opc has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (432940K) : metal1_noqrc has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (432940K) : metal1_res has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (432940K) : metal1_iprobe has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (432940K) : metal1_diffprb has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (432940K) : passiv_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (432940K) : passiv_pin has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (433196K) : passiv_sbump has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (433196K) : passiv_pillar has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (433196K) : passiv_pdl has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (433196K) : metal2_drw has 146 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (433452K) : metal2_pin has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (433452K) : metal2_mask has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (433452K) : metal2_filler has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (433452K) : metal2_nofill has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (433452K) : metal2_slit has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (433708K) : metal2_text has 74 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (433708K) : metal2_opc has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (433708K) : metal2_noqrc has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (433708K) : metal2_res has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (433708K) : metal2_iprobe has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (433964K) : metal2_diffprb has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (433964K) : baspoly_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (433964K) : baspoly_pin has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (433964K) : psd_drw has 2 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434220K) : nldb_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434220K) : digibnd_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434220K) : via1_drw has 216 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434220K) : backmetal1_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434220K) : backmetal1_pin has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434476K) : backmetal1_mask has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434476K) : backmetal1_filler has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434476K) : backmetal1_nofill has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434476K) : backmetal1_slit has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434732K) : backmetal1_text has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434732K) : backmetal1_opc has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434732K) : backmetal1_noqrc has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434732K) : backmetal1_res has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434732K) : backmetal1_iprobe has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434732K) : backmetal1_diffprb has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434732K) : backpassiv_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434732K) : res_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434988K) : sram_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434988K) : trans_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434988K) : ind_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (434988K) : ind_pin has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (435244K) : ind_text has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (435244K) : salblock_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (435244K) : via2_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (435244K) : metal3_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (435500K) : metal3_pin has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (435500K) : metal3_mask has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (435500K) : metal3_filler has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (435500K) : metal3_nofill has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (435500K) : metal3_slit has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (435756K) : metal3_text has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (435756K) : metal3_opc has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (435756K) : metal3_noqrc has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (435756K) : metal3_res has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (436012K) : metal3_iprobe has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (436012K) : metal3_diffprb has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (436012K) : nwell_drw has 1 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (436012K) : nwell_pin has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (436012K) : nbulay_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (436268K) : nbulay_pin has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (436268K) : nbulay_block has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (436268K) : emwind_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (436268K) : emwind_opc has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (436524K) : deepco_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (436524K) : deepco_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (436524K) : mim_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (436524K) : edgeseal_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (436524K) : edgeseal_bound has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (436780K) : substrate_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (436780K) : substrate_text has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (436780K) : dfpad_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (436780K) : dfpad_pillar has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (437036K) : dfpad_sbump has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (437036K) : thickgateox_drw has 1 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (437036K) : pldb_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (437036K) : pwell_drw has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (437292K) : pwell_pin has 0 polygons
+2026-10-10 11:23:23 +0000: Memory Usage (437292K) : pwell_block has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (437292K) : ic_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (437292K) : via3_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (437292K) : metal4_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (437292K) : metal4_pin has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (437548K) : metal4_mask has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (437548K) : metal4_filler has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (437548K) : metal4_nofill has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (437548K) : metal4_slit has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (437548K) : metal4_text has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (437804K) : metal4_opc has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (437804K) : metal4_noqrc has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (437804K) : metal4_res has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (437804K) : metal4_iprobe has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438060K) : metal4_diffprb has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438060K) : heattrans_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438060K) : heatres_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438060K) : pempoly_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438316K) : fbe_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438316K) : empoly_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438316K) : ldmos_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438316K) : pbiwind_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438316K) : digisub_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438572K) : nodrc_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438572K) : text_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438572K) : via4_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438572K) : metal5_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438572K) : metal5_pin has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438828K) : metal5_mask has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438828K) : metal5_filler has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438828K) : metal5_nofill has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438828K) : metal5_slit has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438828K) : metal5_text has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438828K) : metal5_opc has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (439084K) : metal5_noqrc has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (439084K) : metal5_res has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (439084K) : metal5_iprobe has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (439084K) : metal5_diffprb has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (439340K) : radhard_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (439340K) : memcap_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (439340K) : varicap_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (439340K) : flash_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (439340K) : intbondvia_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (439596K) : intbondmet_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (439596K) : devbondvia_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (439596K) : devbondmet_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (439596K) : devtrench_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (439852K) : redist_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (439852K) : graphbot_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (439852K) : graphtop_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (439852K) : antvia1_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (440108K) : antmetal2_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (440108K) : graphcont_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (440108K) : siwg_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (440108K) : siwg_filler has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (440108K) : siwg_nofill has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (440364K) : sigrating_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (440364K) : singrating_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (440364K) : graphpas_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (440364K) : emwind3_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (440620K) : emwihv3_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (440620K) : redbulay_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (440620K) : smos_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (440620K) : graphpad_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (440620K) : polimide_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (440876K) : polimide_pin has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (440876K) : recog_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (440876K) : recog_pin has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (440876K) : recog_esd has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (441132K) : recog_diode has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (441132K) : recog_tsv has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (441132K) : recog_iprobe has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (441132K) : recog_diffprb has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (441388K) : recog_pillar has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (441388K) : recog_sbump has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (441388K) : recog_otp has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (441388K) : recog_pdiode has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (441388K) : recog_mom has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (441644K) : recog_momf has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (441644K) : recog_pcm has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : colopen_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : graphmetal1_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : graphmetal1_filler has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : graphmetal1_nofill has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : graphmetal1_slit has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : graphmetal1_opc has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : graphmet1l_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : graphmet1l_filler has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : graphmet1l_nofill has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : graphmet1l_slit has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : graphmet1l_opc has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : extblock_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : nldd_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : pldd_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : next_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : pext_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : nexthv_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : pexthv_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : graphgate_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : sinwg_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : sinwg_filler has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : sinwg_nofill has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : mempad_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topvia1_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal1_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal1_pin has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal1_mask has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal1_filler has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal1_nofill has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal1_slit has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal1_text has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal1_noqrc has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal1_res has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal1_iprobe has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal1_diffprb has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : inldpwl_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : polyres_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : polyres_pin has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : vmim_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : nbulaycut_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : antmetal1_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topvia2_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal2_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal2_pin has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal2_mask has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal2_filler has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal2_nofill has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal2_slit has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal2_text has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal2_noqrc has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal2_res has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal2_iprobe has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : topmetal2_diffprb has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : snsring_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : sensor_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : snsarms_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : snscmosvia_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : colwind_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : flm_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : hafniumox_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : memvia_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : thinfilmres_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : rfmem_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : norcx_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : norcx_m2m3 has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (438212K) : norcx_m2m4 has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (433952K) : norcx_m2m5 has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (433952K) : norcx_m2tm1 has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (433952K) : norcx_m2tm2 has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (433952K) : norcx_m3m4 has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (433952K) : norcx_m3m5 has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (434208K) : norcx_m3tm1 has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (434208K) : norcx_m3tm2 has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (434208K) : norcx_m4m5 has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (434208K) : norcx_m4tm1 has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (434464K) : norcx_m4tm2 has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (434464K) : norcx_m5tm1 has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (434464K) : norcx_m5tm2 has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (434464K) : norcx_tm1tm2 has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (434464K) : norcx_m1sub has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (434720K) : norcx_m2sub has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (434720K) : norcx_m3sub has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (434720K) : norcx_m4sub has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (434720K) : norcx_m5sub has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (434976K) : norcx_tm1sub has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (434976K) : norcx_tm2sub has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (434976K) : snsbotvia_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (434976K) : snstopvia_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (435232K) : deepvia_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (435232K) : fgetch_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (435232K) : ctrgat_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (435232K) : fgimp_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (435232K) : emwihv_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (435488K) : lbe_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (435488K) : alcustop_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (435488K) : nometfiller_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (435488K) : prboundary_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (435744K) : exchange0_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (435744K) : exchange0_pin has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (435744K) : exchange0_text has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (435744K) : exchange1_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (435744K) : exchange1_pin has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (436000K) : exchange1_text has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (436000K) : exchange2_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (436000K) : exchange2_pin has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (436000K) : exchange2_text has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (436256K) : exchange3_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (436256K) : exchange3_pin has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (436256K) : exchange3_text has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (436256K) : exchange4_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (436256K) : exchange4_pin has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) : exchange4_text has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) : isonwell_drw has 0 polygons
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) : Total no. of polygons in the design is 6706
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) : Loaded default DRC rules values from /tmp/k/IHP-Open-PDK/ihp-sg13g2/libs.tech/klayout/tech/drc/rule_decks/sg13g2_tech_default.json
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) : The following rules values were missing in tech json and default values were used:
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - grid
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NW_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NW_a1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NW_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NW_b1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NW_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NW_c1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NW_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NW_d1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NW_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NW_e1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NW_f
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NW_f1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NW_f1_digibnd
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NW_NBL
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - PWB_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - PWB_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - PWB_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - PWB_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - PWB_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - PWB_e1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - PWB_f
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - PWB_f1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - PWB_g
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NBL_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NBL_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NBL_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NBL_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NBL_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NBL_f
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NBLB_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NBLB_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NBLB_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - NBLB_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Act_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Act_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Act_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Act_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Act_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_a1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_c1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_g
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_g1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_g2
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_g3
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_g_w
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_h
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_i
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_j
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_size_x
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_size_y
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_space
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_offset
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - AFil_BigSmall_space
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TGO_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TGO_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TGO_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TGO_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TGO_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TGO_f
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Gat_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Gat_a1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Gat_a2
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Gat_a3
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Gat_a4
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Gat_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Gat_b1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Gat_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Gat_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Gat_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Gat_g
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Gat_g_min
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - GFil_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - GFil_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - GFil_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - GFil_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - GFil_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - GFil_f
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - GFil_g
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - GFil_h
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - GFil_i
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - GFil_j
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - GFil_k
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - GFil_size_x
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - GFil_size_y
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - GFil_space
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - GFil_offset
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - GFil_space_GFil
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_c1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_d1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_f
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_g
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_h
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_h1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_i
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_i1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_j
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_j1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_k
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_l
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_m
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - pSD_n
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - nSDB_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - nSDB_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - nSDB_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - nSDB_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - nSDB_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - EXTB_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - EXTB_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - EXTB_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - EXTB_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Sal_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Sal_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Sal_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Sal_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Sal_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Cnt_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Cnt_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Cnt_b1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Cnt_b1_nr
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Cnt_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Cnt_c_digibnd
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Cnt_c_sram
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Cnt_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Cnt_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Cnt_f
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Cnt_g1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Cnt_g2
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - CntB_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - CntB_a1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - CntB_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - CntB_b1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - CntB_b1_l
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - CntB_b2
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - CntB_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - CntB_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - CntB_d1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - CntB_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - CntB_f
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - CntB_g1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - CntB_g2
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - CntB_h1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rsil_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rsil_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rsil_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rsil_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rsil_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rsil_f
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rpnd_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rpnd_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rpnd_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rpnd_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rpnd_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rppd_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rppd_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rppd_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rppd_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rppd_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rhi_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rhi_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rhi_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rhi_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rhi_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Rhi_f
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - nmosi_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - nmosi_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - nmosi_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - nmosi_f
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - nmosi_g
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - npn_ring
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - npn13G2_bR
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - npn13G2L_cR
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - npn13G2V_cR
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Sdiod_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Sdiod_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Sdiod_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Sdiod_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Ant_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Ant_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Ant_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Ant_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Ant_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Ant_f
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Ant_g
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - LU_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - LU_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - LU_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - LU_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - M1_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - M1_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - M1_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - M1_c1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - M1_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - M1_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - M1_e_w
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - M1_e_cr
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - M1_f
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - M1_f_w
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - M1_f_cr
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - M1_g
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - M1_g_min
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - M1_i
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - M1_j
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - M1_k
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - V1_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - V1_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - V1_b1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - V1_b1_nr
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - V1_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - V1_c1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Vn_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Vn_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Vn_b1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Vn_b1_nr
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Vn_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Vn_c1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Mn_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Mn_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Mn_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Mn_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Mn_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Mn_e_w
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Mn_e_cr
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Mn_f
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Mn_f_w
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Mn_f_cr
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Mn_g
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Mn_g_min
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Mn_i
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Mn_j
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Mn_k
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TV1_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TV1_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TV1_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TV1_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM1_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM1_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM1_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM1_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TV2_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TV2_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TV2_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TV2_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM2_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM2_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM2_bR
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM2_bR_w
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM2_bR_cr
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM2_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM2_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - BM1_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - BM1_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - BM1_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - BM1_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Pas_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Pas_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - Pas_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - BPas_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - BPas_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - BPas_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - MFil_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - MFil_a1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - MFil_a2
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - MFil_a_w
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - MFil_a_l
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - MFil_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - MFil_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - MFil_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - MFil_f
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - MFil_g
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - MFil_h
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - MFil_k
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - MFil_h_w
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - MFil_size_x
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - MFil_size_y
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - MFil_space
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - MFil_offset
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM1Fil_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM1Fil_a1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM1Fil_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM1Fil_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM1Fil_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM1Fil_e
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM1Fil_f
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM1Fil_g
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM1Fil_size_x
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM1Fil_size_y
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM1Fil_space
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM1Fil_offset
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM2Fil_a
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM2Fil_a1
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM2Fil_b
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM2Fil_c
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM2Fil_d
+2026-10-10 11:23:24 +0000: Memory Usage (436512K) :   - TM2Fil_e
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - TM2Fil_f
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - TM2Fil_g
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - TM2Fil_size_x
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - TM2Fil_size_y
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - TM2Fil_space
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - TM2Fil_offset
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - BM1Fil_a
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - BM1Fil_a1
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - BM1Fil_b
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - BM1Fil_c
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - BM1Fil_d
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - BM1Fil_e
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - BM1Fil_f
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - BM1Fil_g
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - BM1Fil_size_x
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - BM1Fil_size_y
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - BM1Fil_space
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - BM1Fil_offset
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Slt_a
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Slt_b
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Slt_c
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Slt_e
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Slt_f
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Slt_g
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Slt_h1
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Slt_h2
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Slt_h3
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Slt_i
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Slt_i_w
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - LBE_a
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - LBE_b
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - LBE_b1
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - LBE_c
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - LBE_d
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - LBE_e
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - LBE_f
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - LBE_g
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - LBE_h
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - LBE_i
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Pad_aR
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Pad_bR
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Pad_d
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Pad_dR
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Pad_d1R
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Pad_eR
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Pad_fR
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Pad_gR
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Pad_i
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Padb_a
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Padb_b
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Padb_c
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Padb_d
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Padc_a
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Padc_b
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Padc_c
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Seal_a
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Seal_b
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Seal_c
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Seal_c1
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Seal_c2
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Seal_c3
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Seal_d
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Seal_e
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Seal_f
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Seal_k
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Mim_a
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Mim_b
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Mim_c
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Mim_d
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Mim_e
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Mim_f
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Mim_g
+2026-10-10 11:23:25 +0000: Memory Usage (436512K) :   - Mim_gR
+2026-10-10 11:23:25 +0000: Memory Usage (437536K) : Total area of the design is 2116.7704 um^2.
+2026-10-10 11:23:25 +0000: Memory Usage (437536K) : The design dimensions are 26.42 µm * 80.12 µm.
+2026-10-10 11:23:25 +0000: Memory Usage (437536K) : Starting general IHP-SG13G2 derivations.
+2026-10-10 11:23:25 +0000: Memory Usage (437536K) : Starting Pwell derivations
+2026-10-10 11:23:25 +0000: Memory Usage (440352K) : Starting IHP-SG13G2 DRC rules.
+2026-10-10 11:23:25 +0000: Memory Usage (440352K) : Starting 6.11 MIM table
+2026-10-10 11:23:25 +0000: Memory Usage (440352K) : Executing rule MIM.c
+2026-10-10 11:23:25 +0000: Memory Usage (440608K) : Executing rule MIM.d
+2026-10-10 11:23:25 +0000: Memory Usage (440608K) : Executing rule MIM.gR
+2026-10-10 11:23:25 +0000: Memory Usage (440608K) : KLayout DRC run for tables 'mim' completed in 1.46 seconds

@@ -1,0 +1,17 @@
+[PASS] default: SEC reads 0
+[PASS] default: STATUS[31:16] reads 0
+[PASS] default: PERF_CNT_1 reads 0
+[PASS] opt-in: SEC reads 1
+[PASS] opt-in: STATUS[31:16] counts
+[PASS] opt-in: PERF_CNT_1 counts
+[PASS] LOCK: SEC reads 0x80000000 (opt-in cleared)
+[PASS] LOCK: STATUS[31:16] reads 0
+[PASS] LOCK: PERF_CNT_1 reads 0
+[PASS] LOCK: writes cannot clear LOCK or set the opt-in
+[PASS] reset clears SEC
+TTPU-Gen2 SEC test: 11 checks, 0 failures
+   1033875565463093135800489333661261297437713955989943364138
+- tb/tpu/tb_ttpu_gen2_sec.sv:67: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.053 devel
+- Verilator: $finish at 860ns; walltime 0.000 s; speed 4.787 ms/s
+- Verilator: cpu 0.000 s on 1 threads; allocated 4 MB

@@ -1,0 +1,72 @@
+=================================================
+  Tritone SoC v2 Testbench - Questa Sim
+  Testing Phase 1/2/3 (Banks, DMA, Command Queue)
+=================================================
+
+--- Test Section 1: Reset and Initialization ---
+[INFO] Reset complete
+
+--- Test Section 2: Register Interface ---
+[PASS] Test 1: ARRAY_INFO version = 0x00000240
+[PASS] Test 2: ARRAY_INFO array_size = 0x00000008
+[PASS] Test 3: ARRAY_INFO acc_bits = 0x00000020
+[PASS] Test 4: WEIGHT_ADDR write/read = 0x00001000
+[PASS] Test 5: ACT_ADDR write/read = 0x00082000
+[PASS] Test 6: OUT_ADDR write/read = 0x00003000
+[PASS] Test 7: LAYER_CFG write/read = 0x00080008
+
+--- Test Section 3: Performance Counters ---
+[PASS] Test 8: PERF_CNT_0 after clear = 0x00000000
+[PASS] Test 9: PERF_CNT_2 (bank conflicts) after clear = 0x00000000
+
+--- Test Section 4: Status Signals ---
+[PASS] Test 10: STATUS busy bit (idle) = 0x00000000
+[PASS] Test 11: STATUS done bit (idle) = 0x00000000
+[PASS] Test 12: STATUS error bit (no error) = 0x00000000
+
+--- Test Section 5: DMA Registers ---
+[PASS] Test 13: DMA_SRC write/read = 0x00000200
+[PASS] Test 14: DMA_DST write/read = 0x00000000
+[PASS] Test 15: DMA_LEN write/read = 0x00000040
+[PASS] Test 16: DMA_STATUS busy (idle) = 0x00000000
+
+--- Test Section 6: Output Port Signals ---
+[PASS] Test 17: tpu_busy port (idle) = 0x00000000
+[PASS] Test 18: tpu_done port (idle) = 0x00000000
+[PASS] Test 19: tpu_error port (no error) = 0x00000000
+
+--- Test Section 7: Compute Start ---
+[INFO] STATUS after start: 0x00000002 (busy=1)
+[INFO] STATUS after wait: 0x00000100
+[INFO] PERF_CNT_0 (busy cycles): 33
+
+--- Test Section 8: Command Queue Registers ---
+[PASS] Test 20: CMDQ_STATUS empty bit (initial) = 0x00000001
+[PASS] Test 21: CMDQ_STATUS full bit (initial) = 0x00000000
+[PASS] Test 22: CMDQ_STATUS count (initial) = 0x00000000
+[PASS] Test 23: CMDQ_DATA0 write/read = 0x08080000
+[PASS] Test 24: CMDQ_DATA1 write/read = 0x00002000
+[PASS] Test 25: CMDQ_DATA2 write/read = 0x00003000
+[PASS] Test 26: CMDQ_STATUS count after push = 0x00000001
+[PASS] Test 27: CMDQ_STATUS empty after push = 0x00000000
+[PASS] Test 28: CMDQ_STATUS count after 2nd push = 0x00000002
+[PASS] Test 29: CMDQ_STATUS count after flush = 0x00000000
+[PASS] Test 30: CMDQ_STATUS empty after flush = 0x00000001
+
+--- Test Section 9: Command Queue Mode ---
+[INFO] STATUS in cmdq mode: 0x00000102 (busy=1)
+[INFO] CMDQ_STATUS after exec: 0x00000010 (count=0, empty=1)
+
+=================================================
+  Test Summary:
+    Total:  30
+    Passed: 30
+    Failed: 0
+=================================================
+
+*** ALL TESTS PASSED ***
+
+- tb/soc/tb_tritone_soc_v2.sv:407: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.053 devel
+- Verilator: $finish at 13us; walltime 0.004 s; speed 3.075 ms/s
+- Verilator: cpu 0.004 s on 1 threads; allocated 5 MB

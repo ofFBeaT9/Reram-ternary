@@ -1,0 +1,40 @@
+{
+ "table_equals_definition_default": true,
+ "table_equals_definition_pnx": true,
+ "reference": "tests/equiv/rtl_rev41 (the RTL of roadmap revision 4.1); differences expected in the product sequencer",
+ "unproven_signals": [
+  "arr_amp",
+  "arr_mask_n",
+  "arr_mask_p",
+  "arr_op",
+  "arr_req",
+  "arr_row",
+  "arr_row_mask",
+  "u_core.acc",
+  "u_core.amp",
+  "u_core.arr_amp",
+  "u_core.arr_mask_n",
+  "u_core.arr_mask_p",
+  "u_core.arr_op",
+  "u_core.arr_req",
+  "u_core.arr_row",
+  "u_core.arr_row_mask",
+  "u_core.cur_pos",
+  "u_core.pend_n",
+  "u_core.pend_p",
+  "u_core.r_pdata",
+  "u_core.r_piter",
+  "u_core.req",
+  "u_core.s_done",
+  "u_core.s_sat",
+  "u_core.s_werr",
+  "u_core.state"
+ ],
+ "equivalence_points": 2392,
+ "proven": 1764,
+ "unproven": 628,
+ "place_and_route_source": {
+  "proven": 1697,
+  "unproven": 0
+ }
+}

@@ -1,0 +1,23 @@
+pulse amplitude may reach 21 safety FAIL
+set pulse reaches devices that must stay in HRS safety FAIL
+a reset pulse after the set phase has begun safety FAIL
+PDATA writable while a program command runs safety FAIL
+product reads the same row again and again progress FAIL
+product reads rows with input 0 safety FAIL
+product skips rows with input -1 safety FAIL
+an all-zero product ends without DONE safety FAIL
+product ends before the last row safety FAIL
+fixed latency: the same row read twice safety FAIL
+fixed latency: product ends one row early safety FAIL
+LOCK cleared by a write safety FAIL
+LOCK does not clear the options safety FAIL
+LOCK does not hide PITER safety FAIL
+margin check pulses the array safety FAIL
+empty pulses in stop-at-verify programming safety FAIL
+dummy accumulators updated only when the result is safety FAIL
+miter: programming stops at verify (revision 4.5 behaviour) prove FAIL
+miter: a failed reset phase ends the command prove FAIL
+miter: products skip rows with input 0 (revision 4.5 behaviour) prove FAIL
+miter: product ends at the last non-zero input prove FAIL
+miter: start row from the weights of row 0 prove OTHER
+21 of 22 faults make a proof fail

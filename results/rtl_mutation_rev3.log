@@ -1,0 +1,66 @@
+0 caught | sign of a +1 weight in the accumulator | FAIL: product 0 column 0: got -45 expected 7 | 4
+1 caught | sign of a -1 weight in the accumulator | FAIL: product 0 column 0: got 45 expected 7 | 4
+2 SURVIVED | a cell with both devices in LRS counted as +1 |  | 220
+3 caught | last row never read | FAIL: product 0 column 11: got -6 expected -5 | 4
+4 caught | rows with a -1 input skipped | FAIL: product 1 column 0: got 0 expected -7 | 4
+5 caught | rows with a 0 input read as well | FAIL: product 2 column 0: got -7 expected 0 | 4
+6 caught | invalid cell not flagged during a product | FAIL: invalid cell not reported | 30
+7 SURVIVED | invalid cell not flagged during read-back |  | 271
+8 caught | wrong row sent to the array in a product | FAIL: product 0 column 0: got 72 expected 7 | 6
+9 SURVIVED | product read uses the set-verify reference |  | 339
+10 caught | reset phase skipped when programming | FAIL: layer-1 results differ from the exact values (24252) | 225
+11 caught | set phase programs the wrong side | FAIL: device state after programming r0 c0 | 2
+12 caught | reset verify polarity | FAIL: layer-1 results differ from the exact values (24871) | 223
+13 caught | set verify polarity | FAIL: device state after programming r0 c1 | 2
+14 SURVIVED | no pulse limit in the reset phase |  | 225
+15 SURVIVED | no pulse limit in the set phase |  | 231
+16 caught | verify failure not reported (set phase) | FAIL: stuck device not reported | 29
+17 caught | pulse amplitude not driven | FAIL: row 0 failed to program | 0
+18 caught | set pulses not counted in PITER | FAIL: stuck device: too few pulses (13) | 28
+19 SURVIVED | reset pulses not counted in PITER |  | 224
+20 caught | analog difference has the wrong sign | FAIL: analog count 0 column 0: got -7 expected -25 | 22
+21 caught | analog phases use the same rows | FAIL: analog count 0 column 0: got 0 expected -25 | 22
+22 SURVIVED | positive clip limit off by one |  | 215
+23 SURVIVED | negative clip limit off by one |  | 210
+24 SURVIVED | SAT flag never set |  | 216
+25 caught | DONE not cleared by reading STAT | FAIL: interrupt not cleared by reading STAT | 20
+26 SURVIVED | interrupt ignores the enable trit |  | 295
+27 caught | row index 72 accepted | FAIL: row index 72 accepted | 37
+28 SURVIVED | negative row index accepted |  | 290
+29 caught | read-back swaps +1 and -1 | FAIL: read-back row 0 | 3
+30 SURVIVED | register writes accepted while busy |  | 291
+31 SURVIVED | program command works without EN |  | 291
+32 SURVIVED | GO works without EN |  | 289
+33 caught | MODE read from the wrong trit | FAIL: analog count 0 column 0: got -6 expected -25 | 46
+34 SURVIVED | WERR not cleared by GO |  | 276
+35 caught | X1 and X2 exchanged | FAIL: product 3 column 0: got -1 expected 1 | 7
+36 caught | Y index off by one | FAIL: product 0 column 0: got 2 expected 7 | 6
+37 caught | tryte access to a word register accepted | FAIL: tryte access to a word register not flagged | 0
+38 caught | balanced-ternary conversion: digit -1 written as +1 | FAIL: product 0 column 0: got 13 expected 7 | 6
+39 caught | balanced-ternary conversion: wrong carry | FAIL: product 0 column 0: got -2 expected 7 | 6
+40 caught | tryte decoding uses base 2 | FAIL: device state after programming r1 c0 | 3
+41 SURVIVED | code 10 treated as -1 |  | 252
+42 caught | serial port: error flag not reported | FAIL: misaligned word read not flagged | 0
+43 SURVIVED | serial port: interrupt flag not reported |  | 221
+44 caught | serial port: write strobe one bit early | FAIL: CTRL EN readback | 0
+45 caught | serial port: address bit lost | FAIL: misaligned word read not flagged | 0
+46 caught | serial port: read data shifted by one bit | FAIL: CTRL EN readback | 0
+47 caught | serial port: word flag ignored | FAIL: X0 readback | 0
+48 SURVIVED | interrupt held by WERR (revision 3 behaviour) |  | 221
+49 SURVIVED | serial port: bit counter wraps on a long frame (revision 3 behaviour) |  | 225
+50 caught | set pulses repeated on devices that already passed verify | FAIL: device state after programming r0 c18 | 2
+51 SURVIVED | reset pulses repeated on devices that already passed verify |  | 234
+52 SURVIVED | set amplitude not restarted after the reset phase |  | 221
+53 caught | amplitude not restarted by a new program command | FAIL: row 5 could not be re-programmed | 29
+54 SURVIVED | PITER not restarted by a new program command |  | 216
+55 caught | accumulators not cleared by GO | FAIL: product 1 column 0: got 0 expected -7 | 4
+56 SURVIVED | SAT not cleared by GO |  | 213
+57 SURVIVED | SAT not cleared by a read-back command |  | 210
+58 SURVIVED | DONE not cleared by GO |  | 292
+59 caught | DONE never set | FAIL: interrupt not raised after a product | 31
+60 SURVIVED | MODE changed while busy |  | 292
+61 SURVIVED | read-back works without EN |  | 289
+62 SURVIVED | serial port: a write frame also launches a read |  | 290
+63 caught | first row never read | FAIL: product 0 column 0: got 6 expected 7 | 5
+64 SURVIVED | pulse limit one step short |  | 291
+65 SURVIVED | read-back of an invalid cell returns +1 |  | 290

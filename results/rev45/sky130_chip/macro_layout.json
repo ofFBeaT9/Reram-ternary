@@ -1,0 +1,13 @@
+{
+ "ybot": -1175.68,
+ "xright": 1434.9300000000035,
+ "ytop": 216.0,
+ "slices": 144,
+ "lv_pins": 175,
+ "drc_errors": 0,
+ "drc_why": "",
+ "width_um": 1436.7,
+ "height_um": 1391.7,
+ "lvs_match": true,
+ "fault_lvs_match": false
+}

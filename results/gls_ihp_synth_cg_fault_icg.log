@@ -1,0 +1,6 @@
+trit code of the device under test: two's complement (+1 = 01, 0 = 00, -1 = 11, 10 illegal)
+1. register access
+2. programming all 72 rows with verify
+  FAIL: row 0 failed to program
+TEST FAILED
+EXIT=1

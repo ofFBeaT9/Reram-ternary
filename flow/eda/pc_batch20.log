@@ -1,0 +1,9 @@
+no sky130_fd_pr_reram in libs.ref
+sky130_fd_io
+sky130_fd_pr
+sky130_fd_sc_hd
+sky130_fd_sc_hvl
+sky130_ml_xx_hd
+sky130_sram_macros
+359M	/w/flow/eda/cfpdk_3e0e31d
+BATCH20_DONE

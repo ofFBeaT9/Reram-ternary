@@ -1,0 +1,317 @@
+{
+ "tg": {
+  "cell": "tg",
+  "drc_errors": 0,
+  "drc_why": "",
+  "lvs_match": true,
+  "fault_lvs_match": false,
+  "fault_drc": 0,
+  "width_um": 11.48,
+  "height_um": 14.57,
+  "bbox": [
+   -1.0,
+   -8.285,
+   10.48,
+   6.285
+  ],
+  "port_y": {
+   "a": 4.485,
+   "b": 5.485,
+   "en": -4.485,
+   "enb": -5.485,
+   "vdda": -6.485,
+   "vss": -7.485
+  }
+ },
+ "wld": {
+  "cell": "wld",
+  "drc_errors": 0,
+  "drc_why": "",
+  "lvs_match": true,
+  "fault_lvs_match": false,
+  "fault_drc": 0,
+  "width_um": 17.88,
+  "height_um": 15.57,
+  "bbox": [
+   -1.0,
+   -8.285,
+   16.88,
+   7.285
+  ],
+  "port_y": {
+   "vwl": 5.485,
+   "wl": 6.485,
+   "sel": -4.485,
+   "selb": -5.485,
+   "vdda": -6.485,
+   "vss": 4.485
+  }
+ },
+ "bld": {
+  "cell": "bld",
+  "drc_errors": 0,
+  "drc_why": "",
+  "lvs_match": true,
+  "fault_lvs_match": false,
+  "fault_drc": 0,
+  "width_um": 21.28,
+  "height_um": 22.57,
+  "bbox": [
+   -1.0,
+   -12.285,
+   20.28,
+   10.285
+  ],
+  "port_y": {
+   "vprg": 8.485,
+   "bl": 6.485,
+   "sa": 7.485,
+   "prg": -7.485,
+   "prgb": -8.485,
+   "dn": -6.485,
+   "sen": -9.485,
+   "vdda": -10.485,
+   "vss": 9.485
+  }
+ },
+ "sld": {
+  "cell": "sld",
+  "drc_errors": 0,
+  "drc_why": "",
+  "lvs_match": true,
+  "fault_lvs_match": false,
+  "fault_drc": 0,
+  "width_um": 33.28,
+  "height_um": 28.57,
+  "bbox": [
+   -16.4,
+   -15.285,
+   16.88,
+   13.285
+  ],
+  "port_y": {
+   "vprg": 11.485,
+   "sl": 10.485,
+   "prg": -11.485,
+   "prgb": -12.485,
+   "dn": -10.485,
+   "vdda": -13.485,
+   "vss": 12.485
+  }
+ },
+ "ls_lv2hv": {
+  "cell": "ls_lv2hv",
+  "drc_errors": 0,
+  "drc_why": "",
+  "lvs_match": true,
+  "fault_lvs_match": false,
+  "fault_drc": 0,
+  "width_um": 58.14,
+  "height_um": 23.18,
+  "bbox": [
+   -1.0,
+   -11.09,
+   57.14,
+   12.09
+  ],
+  "port_y": {
+   "in": -4.29,
+   "out": 5.29,
+   "outb": 6.29,
+   "vccd": 7.29,
+   "vdda": 8.29,
+   "vss": 9.29
+  }
+ },
+ "sa": {
+  "cell": "sa",
+  "drc_errors": 0,
+  "drc_why": "",
+  "lvs_match": true,
+  "fault_lvs_match": false,
+  "fault_drc": 0,
+  "width_um": 26.94,
+  "height_um": 17.79,
+  "bbox": [
+   -1.0,
+   -8.895,
+   25.94,
+   8.895
+  ],
+  "port_y": {
+   "sa": 5.095,
+   "out": 4.095,
+   "vbp": -5.095,
+   "vcl": -7.095,
+   "vccd": 7.095,
+   "vss": 8.095
+  }
+ },
+ "refbias": {
+  "cell": "refbias",
+  "drc_errors": 0,
+  "drc_why": "",
+  "lvs_match": true,
+  "fault_lvs_match": false,
+  "fault_drc": 0,
+  "width_um": 115.83,
+  "height_um": 24.79,
+  "bbox": [
+   -1.0,
+   -11.895,
+   114.83,
+   12.895
+  ],
+  "port_y": {
+   "ib": 7.095,
+   "r0": -5.095,
+   "r1": -6.095,
+   "r2": -7.095,
+   "vref": 11.095,
+   "vbp": 8.095,
+   "vcl": 10.095,
+   "vccd": 9.095,
+   "vss": 12.095
+  }
+ },
+ "nor3hv": {
+  "cell": "nor3hv",
+  "drc_errors": 0,
+  "drc_why": "",
+  "lvs_match": true,
+  "fault_lvs_match": false,
+  "fault_drc": 0,
+  "width_um": 30.64,
+  "height_um": 16.57,
+  "bbox": [
+   -1.0,
+   -8.285,
+   29.64,
+   8.285
+  ],
+  "port_y": {
+   "a": -3.485,
+   "b": -4.485,
+   "c": -5.485,
+   "y": 7.485,
+   "vdda": 5.485,
+   "vss": 6.485
+  }
+ },
+ "nor2hv": {
+  "cell": "nor2hv",
+  "drc_errors": 0,
+  "drc_why": "",
+  "lvs_match": true,
+  "fault_lvs_match": false,
+  "fault_drc": 0,
+  "width_um": 22.06,
+  "height_um": 20.57,
+  "bbox": [
+   -1.0,
+   -10.285,
+   21.06,
+   10.285
+  ],
+  "port_y": {
+   "a": -6.485,
+   "b": -7.485,
+   "y": 9.485,
+   "vdda": 7.485,
+   "vss": 8.485
+  }
+ },
+ "rowslice": {
+  "cell": "rowslice",
+  "drc_errors": 0,
+  "drc_why": "",
+  "lvs_match": true,
+  "fault_lvs_match": false,
+  "fault_drc": 0,
+  "width_um": 85.22,
+  "height_um": 27.57,
+  "bbox": [
+   -11.6,
+   -13.285,
+   73.62,
+   14.285
+  ],
+  "port_y": {
+   "sel_lv": -8.485,
+   "wl": 13.485,
+   "vwl": 12.485,
+   "vccd": 9.485,
+   "vdda": 10.485,
+   "vss": 11.485
+  }
+ },
+ "blslice": {
+  "cell": "blslice",
+  "drc_errors": 0,
+  "drc_why": "",
+  "lvs_match": true,
+  "fault_lvs_match": false,
+  "fault_drc": 0,
+  "width_um": 152.0,
+  "height_um": 43.57,
+  "bbox": [
+   -21.2,
+   -21.285,
+   130.8,
+   22.285
+  ],
+  "port_y": {
+   "prg_lv": -13.485,
+   "bl": 12.485,
+   "out": 14.485,
+   "vprg": 20.485,
+   "sen": -15.485,
+   "flt": -11.485,
+   "vbp": -16.485,
+   "vcl": -18.485,
+   "vccd": 18.485,
+   "vdda": 19.485,
+   "vss": 21.485
+  }
+ },
+ "ctrlglob": {
+  "cell": "ctrlglob",
+  "drc_errors": 0,
+  "drc_why": "",
+  "lvs_match": true,
+  "fault_lvs_match": false,
+  "fault_drc": 0,
+  "width_um": 379.61,
+  "height_um": 84.57,
+  "bbox": [
+   -1.0,
+   -39.285,
+   378.61,
+   45.285
+  ],
+  "port_y": {
+   "sen_lv": -28.485,
+   "flt_lv": -23.485,
+   "slprg_lv": -30.485,
+   "wlprog_lv": -36.485,
+   "r0": -25.485,
+   "r1": -26.485,
+   "r2": -27.485,
+   "ib": 28.485,
+   "vref": 38.485,
+   "vwlr": 42.485,
+   "vwlp": 41.485,
+   "sen": 29.485,
+   "flt": 26.485,
+   "slprg": 32.485,
+   "slprgb": 33.485,
+   "sldn": 31.485,
+   "vwl": 40.485,
+   "vbp": 34.485,
+   "vcl": 36.485,
+   "vccd": 35.485,
+   "vdda": 37.485,
+   "vss": 39.485
+  }
+ }
+}

@@ -1,0 +1,109 @@
+=== ihp-sg13g2 drc 
+cp /design/ihp-sg13g2/constraint.sdc /design/out/results/ihp-sg13g2/tcim_top/base/1_2_yosys.sdc
+touch -r /design/ihp-sg13g2/constraint.sdc /design/out/results/ihp-sg13g2/tcim_top/base/1_2_yosys.sdc
+/usr/bin/python3 /OpenROAD-flow-scripts/flow/scripts/run_command.py --log /design/out/logs/ihp-sg13g2/tcim_top/base/6_drc.log --tee -- \
+        /OpenROAD-flow-scripts/flow/scripts/klayout.sh -zz -rd in_gds="/design/out/results/ihp-sg13g2/tcim_top/base/6_final.gds" \
+        -rd report_file=/design/out/reports/ihp-sg13g2/tcim_top/base/6_drc.lyrdb \
+        -r /OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/drc/sg13g2_minimal.lydrc
+KLayout 0.30.12
+DRC: batch mode
+Act.a: 0
+Act.b: 0
+AFil.g/g1: 0
+AFil.g2/g3: 0
+TGO.f: 0
+Gat.a: 0
+Gat.b: 0
+Gat.d: 0
+GFil.g: 0
+Cnt.a: 0
+Cnt.b: 0
+M1.a: 0
+M1.b: 0
+M1.j/k: 0
+M2.a: 0
+M2.b: 0
+M2.j/k: 1
+M3.a: 0
+M3.b: 0
+M3.j/k: 1
+M4.a: 0
+M4.b: 0
+M4.j/k: 1
+M5.a: 0
+M5.b: 0
+M5.j/k: 0
+M1Fil.h/k: 0
+M2Fil.h/k: 1
+M3Fil.h/k: 1
+M4Fil.h/k: 0
+M5Fil.h/k: 0
+V1.a: 0
+V1.b: 0
+V2.a: 0
+V2.b: 0
+V3.a: 0
+V3.b: 0
+V4.a: 0
+V4.b: 0
+TV1.a: 0
+TV1.b: 0
+TM1.a: 0
+TM1.b: 0
+TM1.c/d: 0
+TV2.a: 0
+TV2.b: 0
+TM2.a: 0
+TM2.b: 0
+TM2.c/d: 0
+Pas.a: 0
+Pas.b: 0
+Pin.a: 0
+Pin.b: 0
+Pin.e: 0
+Pin.f.M2: 0
+Pin.f.M3: 0
+Pin.f.M4: 0
+Pin.f.M5: 0
+Pin.g: 0
+Pin.h: 0
+LBE.a: 0
+LBE.b: 0
+LBE.b1: 0
+LBE.c: 0
+LBE.d: 0
+LBE.h: 0
+LBE.i: 0
+forbidden.BiWind: 0
+forbidden.PEmWind: 0
+forbidden.BasPoly: 0
+forbidden.DeepCo: 0
+forbidden.PEmPoly: 0
+forbidden.EmPoly: 0
+forbidden.LDMOS: 0
+forbidden.PBiWind: 0
+forbidden.Flash: 0
+forbidden.ColWind: 0
+Number of DRC errors: 5
+Runtime in seconds: 47.6
+Elapsed time: 0:50.01[h:]min:sec. CPU time: user 48.52 sys 0.68 (98%). Peak memory: 784208KB.
+# Hacky way of getting DRV count (don't error on no matches)
+grep -c "<value>" /design/out/reports/ihp-sg13g2/tcim_top/base/6_drc.lyrdb > /design/out/reports/ihp-sg13g2/tcim_top/base/6_drc_count.rpt || [[ $? == 1 ]]
+=== ihp-sg13g2 lvs 
+cp /design/ihp-sg13g2/constraint.sdc /design/out/results/ihp-sg13g2/tcim_top/base/1_2_yosys.sdc
+touch -r /design/ihp-sg13g2/constraint.sdc /design/out/results/ihp-sg13g2/tcim_top/base/1_2_yosys.sdc
+/usr/bin/python3 /OpenROAD-flow-scripts/flow/scripts/run_command.py --log /design/out/logs/ihp-sg13g2/tcim_top/base/6_cdl.log --tee -- /OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad -exit -no_init -threads 32  /OpenROAD-flow-scripts/flow/scripts/cdl.tcl
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 32 thread(s).
+source /OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/suppress_message.tcl
+read_liberty /OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/lib/sg13g2_stdcell_typ_1p20V_25C.lib
+read_db /design/out/results/ihp-sg13g2/tcim_top/base/6_final.odb
+read_sdc /design/out/results/ihp-sg13g2/tcim_top/base/6_final.sdc
+source /OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/setRC.tcl
+Elapsed time: 0:04.01[h:]min:sec. CPU time: user 0.17 sys 0.14 (7%). Peak memory: 122624KB.
+cat /design/out/results/ihp-sg13g2/tcim_top/base/6_final.cdl /OpenROAD-flow-scripts/flow/platforms/ihp-sg13g2/cdl/sg13g2_stdcell.cdl > /design/out/objects/ihp-sg13g2/tcim_top/base/6_final_concat.cdl
+echo "LVS not supported on this platform" > /design/out/results/ihp-sg13g2/tcim_top/base/6_lvs.lvsdb
+=== ihp-sg13g2 end 

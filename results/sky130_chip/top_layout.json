@@ -1,0 +1,12 @@
+{
+ "digital_die_um": [
+  550.32,
+  342.995
+ ],
+ "pad_signals": 57,
+ "antenna_diodes": 61,
+ "property_errors_in": [],
+ "lvs_match": true,
+ "lvs_tail": "               \nwbs_dat_o[31]                              |wbs_dat_o[31]                              \nwbs_dat_o[3]                               |wbs_dat_o[3]                               \nwbs_dat_o[4]                               |wbs_dat_o[4]                               \nwbs_dat_o[5]                               |wbs_dat_o[5]                               \nwbs_dat_o[6]                               |wbs_dat_o[6]                               \nwbs_dat_o[7]                               |wbs_dat_o[7]                               \nwbs_dat_o[8]                               |wbs_dat_o[8]                               \nwbs_dat_o[9]                               |wbs_dat_o[9]                               \nwbs_sel_i[0]                               |wbs_sel_i[0]                               \nwbs_sel_i[1]                               |wbs_sel_i[1]                               \nwbs_sel_i[2]                               |wbs_sel_i[2]                               \nwbs_sel_i[3]                               |wbs_sel_i[3]                               \nwbs_stb_i                                  |wbs_stb_i                                  \nwbs_we_i                                   |wbs_we_i                                   \n---------------------------------------------------------------------------------------\nCell pin lists are equivalent.\nDevice classes user_analog_project_wrapper and user_analog_project_wrapper are equivalent.\n\nFinal result: Circuits match uniquely.\n.\n",
+ "fault_lvs_match": false
+}

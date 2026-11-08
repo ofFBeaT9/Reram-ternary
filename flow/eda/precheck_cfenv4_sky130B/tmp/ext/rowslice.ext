@@ -1,0 +1,122 @@
+timestamp 1791761768
+version 8.3
+tech sky130B
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use d_nfet_01v8_w0p5_l0p15 d_nfet_01v8_w0p5_l0p15_0 1 0 1153 0 1 0
+use d_nfet_g5v0d10v5_w1_l0p5 d_nfet_g5v0d10v5_w1_l0p5_0 1 0 7332 0 1 0
+use d_nfet_g5v0d10v5_w1_l0p5 d_nfet_g5v0d10v5_w1_l0p5_1 1 0 9548 0 1 0
+use d_nfet_g5v0d10v5_w1_l0p5 d_nfet_g5v0d10v5_w1_l0p5_2 1 0 12444 0 1 0
+use d_nfet_g5v0d10v5_w2_l0p5 d_nfet_g5v0d10v5_w2_l0p5_0 1 0 10228 0 1 0
+use d_nfet_g5v0d10v5_w4_l0p5 d_nfet_g5v0d10v5_w4_l0p5_0 1 0 2164 0 1 0
+use d_nfet_g5v0d10v5_w4_l0p5 d_nfet_g5v0d10v5_w4_l0p5_1 1 0 2844 0 1 0
+use d_pfet_01v8_w1_l0p15 d_pfet_01v8_w1_l0p15_0 1 0 211 0 1 0
+use d_pfet_g5v0d10v5_w0p42_l1 d_pfet_g5v0d10v5_w0p42_l1_0 1 0 4002 0 1 0
+use d_pfet_g5v0d10v5_w0p42_l1 d_pfet_g5v0d10v5_w0p42_l1_1 1 0 5138 0 1 0
+use d_pfet_g5v0d10v5_w2_l0p5 d_pfet_g5v0d10v5_w2_l0p5_0 1 0 6224 0 1 0
+use d_pfet_g5v0d10v5_w2_l0p5 d_pfet_g5v0d10v5_w2_l0p5_1 1 0 8440 0 1 0
+use d_pfet_g5v0d10v5_w4_l0p5 d_pfet_g5v0d10v5_w4_l0p5_0 1 0 11336 0 1 0
+port "sel_lv" 1 -2320 -1757 -2240 -1637 m3
+port "wl" 2 -2320 2637 -2240 2757 m3
+port "vwl" 3 -2320 2437 -2240 2557 m3
+port "vdda" 5 -2320 2037 -2240 2157 m3
+port "vccd" 4 -2320 1837 -2240 1957 m3
+port "vss" 6 -2320 2237 -2240 2357 m3
+node "sel_lv" 0 0 -2320 -1757 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "wl" 0 0 -2320 2637 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vwl" 0 0 -2320 2437 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_8184_n50#" 0 0 8184 -50 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_5968_n50#" 0 0 5968 -50 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_2588_n50#" 0 0 2588 -50 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_1908_n50#" 0 0 1908 -50 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_n10_n50#" 0 0 -10 -50 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_12404_132#" 0 0 12404 132 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_9508_132#" 0 0 9508 132 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_7292_132#" 0 0 7292 132 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_5098_83#" 0 0 5098 83 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_3962_83#" 0 0 3962 83 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_1113_82#" 0 0 1113 82 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_171_141#" 0 0 171 141 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_10188_232#" 0 0 10188 232 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_8400_241#" 0 0 8400 241 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_6184_241#" 0 0 6184 241 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_11296_441#" 0 0 11296 441 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_2804_432#" 0 0 2804 432 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "m1_2124_432#" 0 0 2124 432 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdda" 0 0 -2320 2037 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vccd" 0 0 -2320 1837 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vss" 0 0 -2320 2237 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "d_nfet_g5v0d10v5_w1_l0p5_1/G" "m1_9508_132#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "m1_9508_132#" "d_pfet_g5v0d10v5_w2_l0p5_1/G"
+merge "d_pfet_g5v0d10v5_w2_l0p5_1/G" "m1_8400_241#"
+merge "m1_8400_241#" "d_pfet_g5v0d10v5_w0p42_l1_1/D"
+merge "d_pfet_g5v0d10v5_w0p42_l1_1/D" "d_pfet_g5v0d10v5_w0p42_l1_0/G"
+merge "d_pfet_g5v0d10v5_w0p42_l1_0/G" "m1_3962_83#"
+merge "m1_3962_83#" "d_nfet_g5v0d10v5_w4_l0p5_1/D"
+merge "d_nfet_g5v0d10v5_w4_l0p5_1/D" "m1_2588_n50#"
+merge "d_nfet_g5v0d10v5_w1_l0p5_2/B" "d_nfet_g5v0d10v5_w1_l0p5_2/S" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "d_nfet_g5v0d10v5_w1_l0p5_2/S" "d_pfet_g5v0d10v5_w4_l0p5_0/VSUBS"
+merge "d_pfet_g5v0d10v5_w4_l0p5_0/VSUBS" "d_nfet_g5v0d10v5_w2_l0p5_0/B"
+merge "d_nfet_g5v0d10v5_w2_l0p5_0/B" "d_nfet_g5v0d10v5_w1_l0p5_1/B"
+merge "d_nfet_g5v0d10v5_w1_l0p5_1/B" "d_nfet_g5v0d10v5_w1_l0p5_1/S"
+merge "d_nfet_g5v0d10v5_w1_l0p5_1/S" "d_pfet_g5v0d10v5_w2_l0p5_1/VSUBS"
+merge "d_pfet_g5v0d10v5_w2_l0p5_1/VSUBS" "d_nfet_g5v0d10v5_w1_l0p5_0/B"
+merge "d_nfet_g5v0d10v5_w1_l0p5_0/B" "d_nfet_g5v0d10v5_w1_l0p5_0/S"
+merge "d_nfet_g5v0d10v5_w1_l0p5_0/S" "d_pfet_g5v0d10v5_w2_l0p5_0/VSUBS"
+merge "d_pfet_g5v0d10v5_w2_l0p5_0/VSUBS" "d_pfet_g5v0d10v5_w0p42_l1_1/VSUBS"
+merge "d_pfet_g5v0d10v5_w0p42_l1_1/VSUBS" "d_pfet_g5v0d10v5_w0p42_l1_0/VSUBS"
+merge "d_pfet_g5v0d10v5_w0p42_l1_0/VSUBS" "d_nfet_g5v0d10v5_w4_l0p5_1/B"
+merge "d_nfet_g5v0d10v5_w4_l0p5_1/B" "d_nfet_g5v0d10v5_w4_l0p5_1/S"
+merge "d_nfet_g5v0d10v5_w4_l0p5_1/S" "d_nfet_g5v0d10v5_w4_l0p5_0/B"
+merge "d_nfet_g5v0d10v5_w4_l0p5_0/B" "d_nfet_g5v0d10v5_w4_l0p5_0/S"
+merge "d_nfet_g5v0d10v5_w4_l0p5_0/S" "d_nfet_01v8_w0p5_l0p15_0/B"
+merge "d_nfet_01v8_w0p5_l0p15_0/B" "d_pfet_01v8_w1_l0p15_0/VSUBS"
+merge "d_pfet_01v8_w1_l0p15_0/VSUBS" "VSUBS"
+merge "VSUBS" "d_nfet_01v8_w0p5_l0p15_0/S"
+merge "d_nfet_01v8_w0p5_l0p15_0/S" "vss"
+merge "d_nfet_g5v0d10v5_w4_l0p5_0/G" "m1_2124_432#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "m1_2124_432#" "d_nfet_01v8_w0p5_l0p15_0/G"
+merge "d_nfet_01v8_w0p5_l0p15_0/G" "m1_1113_82#"
+merge "m1_1113_82#" "d_pfet_01v8_w1_l0p15_0/G"
+merge "d_pfet_01v8_w1_l0p15_0/G" "sel_lv"
+merge "sel_lv" "m1_171_141#"
+merge "d_pfet_g5v0d10v5_w4_l0p5_0/D" "d_nfet_g5v0d10v5_w2_l0p5_0/D" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "d_nfet_g5v0d10v5_w2_l0p5_0/D" "vwl"
+merge "d_pfet_g5v0d10v5_w4_l0p5_0/B" "d_pfet_g5v0d10v5_w2_l0p5_1/B" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "d_pfet_g5v0d10v5_w2_l0p5_1/B" "d_pfet_g5v0d10v5_w2_l0p5_1/S"
+merge "d_pfet_g5v0d10v5_w2_l0p5_1/S" "d_pfet_g5v0d10v5_w2_l0p5_0/S"
+merge "d_pfet_g5v0d10v5_w2_l0p5_0/S" "d_pfet_g5v0d10v5_w2_l0p5_0/B"
+merge "d_pfet_g5v0d10v5_w2_l0p5_0/B" "d_pfet_g5v0d10v5_w0p42_l1_1/B"
+merge "d_pfet_g5v0d10v5_w0p42_l1_1/B" "d_pfet_g5v0d10v5_w0p42_l1_1/S"
+merge "d_pfet_g5v0d10v5_w0p42_l1_1/S" "d_pfet_g5v0d10v5_w0p42_l1_0/B"
+merge "d_pfet_g5v0d10v5_w0p42_l1_0/B" "d_pfet_g5v0d10v5_w0p42_l1_0/S"
+merge "d_pfet_g5v0d10v5_w0p42_l1_0/S" "vdda"
+merge "d_nfet_g5v0d10v5_w1_l0p5_2/G" "m1_11296_441#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "m1_11296_441#" "m1_12404_132#"
+merge "m1_12404_132#" "d_pfet_g5v0d10v5_w4_l0p5_0/G"
+merge "d_pfet_g5v0d10v5_w4_l0p5_0/G" "d_nfet_g5v0d10v5_w1_l0p5_1/D"
+merge "d_nfet_g5v0d10v5_w1_l0p5_1/D" "d_pfet_g5v0d10v5_w2_l0p5_1/D"
+merge "d_pfet_g5v0d10v5_w2_l0p5_1/D" "m1_8184_n50#"
+merge "d_nfet_g5v0d10v5_w2_l0p5_0/G" "m1_10188_232#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "m1_10188_232#" "d_nfet_g5v0d10v5_w1_l0p5_0/D"
+merge "d_nfet_g5v0d10v5_w1_l0p5_0/D" "d_pfet_g5v0d10v5_w2_l0p5_0/D"
+merge "d_pfet_g5v0d10v5_w2_l0p5_0/D" "m1_5968_n50#"
+merge "d_nfet_g5v0d10v5_w4_l0p5_1/G" "m1_2804_432#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "m1_2804_432#" "d_nfet_01v8_w0p5_l0p15_0/D"
+merge "d_nfet_01v8_w0p5_l0p15_0/D" "d_pfet_01v8_w1_l0p15_0/D"
+merge "d_pfet_01v8_w1_l0p15_0/D" "m1_n10_n50#"
+merge "d_pfet_01v8_w1_l0p15_0/B" "d_pfet_01v8_w1_l0p15_0/S" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "d_pfet_01v8_w1_l0p15_0/S" "vccd"
+merge "d_nfet_g5v0d10v5_w1_l0p5_0/G" "m1_7292_132#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "m1_7292_132#" "d_pfet_g5v0d10v5_w2_l0p5_0/G"
+merge "d_pfet_g5v0d10v5_w2_l0p5_0/G" "m1_6184_241#"
+merge "m1_6184_241#" "d_pfet_g5v0d10v5_w0p42_l1_1/G"
+merge "d_pfet_g5v0d10v5_w0p42_l1_1/G" "m1_5098_83#"
+merge "m1_5098_83#" "d_pfet_g5v0d10v5_w0p42_l1_0/D"
+merge "d_pfet_g5v0d10v5_w0p42_l1_0/D" "d_nfet_g5v0d10v5_w4_l0p5_0/D"
+merge "d_nfet_g5v0d10v5_w4_l0p5_0/D" "m1_1908_n50#"
+merge "d_nfet_g5v0d10v5_w1_l0p5_2/D" "d_pfet_g5v0d10v5_w4_l0p5_0/S" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "d_pfet_g5v0d10v5_w4_l0p5_0/S" "d_nfet_g5v0d10v5_w2_l0p5_0/S"
+merge "d_nfet_g5v0d10v5_w2_l0p5_0/S" "wl"

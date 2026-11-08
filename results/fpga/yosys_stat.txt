@@ -1,0 +1,38 @@
+
+4. Printing statistics.
+
+=== tcim_fpga_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     8914 wires
+    16523 wire bits
+     8914 public wires
+    16523 public wire bits
+        5 ports
+       10 port bits
+     9654 cells
+     1980   ALU
+       46   DFF
+      108   DFFC
+     1781   DFFCE
+       16   DFFP
+       10   DFFPE
+        8   DFFRE
+        4   DPB
+        1   GND
+        3   IBUF
+      464   LUT1
+      799   LUT2
+     1089   LUT3
+     2441   LUT4
+        1   MULT18X18
+      693   MUX2_LUT5
+      134   MUX2_LUT6
+       60   MUX2_LUT7
+        5   MUX2_LUT8
+        7   OBUF
+        2   SPX9
+        1   VCC
+        1   rPLL
+

@@ -1,0 +1,35 @@
+mkdir -p results/sky130_chip
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/ext/verilator/bin/verilator --cc --exe --build -j 2 -O3 --top-module tcim_chip_core -CFLAGS "-std=c++17 -O2 -DTCIM_CHIP -I/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/regress/reram-ternary/tb/verilator" \
+  -Mdir tb/build_vl_chip rtl/tcim_pkg.sv rtl/tcim_core.sv rtl/tcim_spi.sv rtl/tcim_top.sv rtl/chip/tcim_actl.sv rtl/chip/tcim_chip_core.sv tb/tb_tcim.cc -o tb_vl_chip
+make[1]: Entering directory '/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/regress/reram-ternary/tb/build_vl_chip'
+g++  -I.  -MMD -I/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/ext/verilator/include -I/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/ext/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++17 -O2 -DTCIM_CHIP -I/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/regress/reram-ternary/tb/verilator   -Os  -c -o tb_tcim.o ../../tb/tb_tcim.cc
+g++ -Os  -I.  -MMD -I/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/ext/verilator/include -I/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/ext/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++17 -O2 -DTCIM_CHIP -I/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/regress/reram-ternary/tb/verilator   -c -o verilated.o /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/ext/verilator/include/verilated.cpp
+g++ -Os  -I.  -MMD -I/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/ext/verilator/include -I/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/ext/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++17 -O2 -DTCIM_CHIP -I/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/regress/reram-ternary/tb/verilator   -c -o verilated_threads.o /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/ext/verilator/include/verilated_threads.cpp
+python3 /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/ext/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vtcim_chip_core.cpp Vtcim_chip_core___024root__DepSet_haf314ed1__0.cpp Vtcim_chip_core___024root__DepSet_h9b49a63e__0.cpp Vtcim_chip_core__ConstPool_0.cpp Vtcim_chip_core___024root__Slow.cpp Vtcim_chip_core___024root__DepSet_haf314ed1__0__Slow.cpp Vtcim_chip_core___024root__DepSet_h9b49a63e__0__Slow.cpp Vtcim_chip_core_tcim_pkg__Slow.cpp Vtcim_chip_core_tcim_pkg__DepSet_hf130076e__0__Slow.cpp Vtcim_chip_core__Syms.cpp > Vtcim_chip_core__ALL.cpp
+echo "" > Vtcim_chip_core__ALL.verilator_deplist.tmp
+g++ -Os  -I.  -MMD -I/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/ext/verilator/include -I/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/ext/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -DVM_TRACE_SAIF=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -std=c++17 -O2 -DTCIM_CHIP -I/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/regress/reram-ternary/tb/verilator   -c -o Vtcim_chip_core__ALL.o Vtcim_chip_core__ALL.cpp
+g++    tb_tcim.o verilated.o verilated_threads.o Vtcim_chip_core__ALL.a    -pthread -lpthread -latomic   -o tb_vl_chip
+rm Vtcim_chip_core__ALL.verilator_deplist.tmp
+make[1]: Leaving directory '/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/regress/reram-ternary/tb/build_vl_chip'
+- V e r i l a t i o n   R e p o r t: Verilator 5.040 2025-08-30 rev v5.040
+- Verilator: Built from 0.214 MB sources in 7 modules, into 0.500 MB in 10 C++ files needing 0.000 MB
+- Verilator: Walltime 7.723 s (elab=0.288, cvt=0.059, bld=7.354); cpu 0.380 s on 2 threads; alloced 444.465 MB
+TB_CFG=1,1,0 tb/build_vl_chip/tb_vl_chip tb/vectors | tee results/sky130_chip/rtl_chip_verilator_110.log
+chip build: controller configuration ts 1 tp 1 tr 0
+trit code of the device under test: two's complement (+1 = 01, 0 = 00, -1 = 11, 10 illegal)
+1. register access
+2. programming all 72 rows with verify
+   pulses per row: mean 15.1, max 18
+3. digital products against the exact dot product
+4. analog-mode raw counts
+5. error paths
+5b. directed tests: read reference, saturation, interrupt enable, busy and enable guards
+5c. illegal code, exhaustive conversions, flag and interrupt behaviour, serial frame lengths
+6. ternary digits network through the RTL
+   360 samples: RTL correct 341, software correct 341, same class as software 360, layer-1 mismatches 0
+chip (cfg ts 1 tp 1 tr 0): electrical violations: short 0, two word lines 0, floating 0, switching under a word line 0,
+   read setup 0, program setup 0, strobe 0, reference 0, sense time 0, pulse time 0, settle time 0, mixed pulse 0, pk 0, break-before-make 0, flt order 0
+array operations: 90750 reads, 9017 pulses, 0 sums; 42694269 clock cycles
+76973 checks, 0 failures
+TEST PASSED
+grep -q "TEST PASSED" results/sky130_chip/rtl_chip_verilator_110.log

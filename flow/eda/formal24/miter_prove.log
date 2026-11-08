@@ -1,0 +1,398 @@
+SBY  8:48:45 [tcim_miter_prove] Removing directory '/w/formal/tcim_miter_prove'.
+SBY  8:48:45 [tcim_miter_prove] Copy '/w/formal/../rtl/tcim_pkg.sv' to '/w/formal/tcim_miter_prove/src/tcim_pkg.sv'.
+SBY  8:48:45 [tcim_miter_prove] Copy '/w/formal/../rtl/tcim_core.sv' to '/w/formal/tcim_miter_prove/src/tcim_core.sv'.
+SBY  8:48:45 [tcim_miter_prove] Copy '/w/formal/tcim_miter.sv' to '/w/formal/tcim_miter_prove/src/tcim_miter.sv'.
+SBY  8:48:45 [tcim_miter_prove] engine_0: abc pdr
+SBY  8:48:45 [tcim_miter_prove] base: starting process "cd tcim_miter_prove/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY  8:48:48 [tcim_miter_prove] base: finished (returncode=0)
+SBY  8:48:48 [tcim_miter_prove] prep: starting process "cd tcim_miter_prove/model; yosys -ql design_prep.log design_prep.ys"
+SBY  8:48:49 [tcim_miter_prove] prep: finished (returncode=0)
+SBY  8:48:49 [tcim_miter_prove] aig: starting process "cd tcim_miter_prove/model; yosys -ql design_aiger.log design_aiger.ys"
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\clk like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [0] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [1] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [2] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [3] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [4] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [5] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [6] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [7] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [8] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [9] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [10] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [11] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [12] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [13] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [14] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [15] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [16] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [17] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [18] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [19] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [20] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [21] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [22] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [23] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [24] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [25] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [26] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [27] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [28] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [29] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [30] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [31] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [32] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [33] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [34] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [35] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [36] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [37] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [38] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [39] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [40] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [41] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [42] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [43] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [44] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [45] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [46] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd1 [47] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [0] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [1] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [2] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [3] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [4] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [5] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [6] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [7] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [8] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [9] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [10] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [11] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [12] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [13] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [14] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [15] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [16] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [17] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [18] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [19] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [20] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [21] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [22] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [23] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [24] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [25] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [26] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [27] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [28] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [29] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [30] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [31] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [32] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [33] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [34] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [35] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [36] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [37] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [38] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [39] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [40] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [41] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [42] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [43] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [44] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [45] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [46] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\wd0 [47] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [0] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [1] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [2] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [3] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [4] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [5] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [6] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [7] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [8] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [9] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [10] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [11] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [12] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [13] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [14] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [15] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [16] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [17] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [18] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [19] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [20] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [21] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [22] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p1 [23] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [0] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [1] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [2] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [3] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [4] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [5] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [6] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [7] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [8] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [9] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [10] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [11] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [12] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [13] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [14] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [15] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [16] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [17] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [18] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [19] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [20] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [21] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [22] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_p0 [23] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [0] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [1] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [2] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [3] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [4] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [5] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [6] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [7] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [8] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [9] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [10] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [11] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [12] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [13] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [14] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [15] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [16] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [17] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [18] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [19] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [20] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [21] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [22] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n1 [23] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [0] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [1] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [2] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [3] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [4] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [5] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [6] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [7] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [8] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [9] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [10] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [11] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [12] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [13] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [14] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [15] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [16] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [17] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [18] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [19] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [20] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [21] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [22] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\sa_n0 [23] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\rst_n like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\bus_word like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\bus_we like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\bus_re like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\bus_addr [0] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\bus_addr [1] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\bus_addr [2] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\bus_addr [3] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\bus_addr [4] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\bus_addr [5] like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating undriven bit tcim_miter.\arr_ack like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: Warning: Treating a total of 204 undriven bits in tcim_miter like $anyseq.
+SBY  8:48:51 [tcim_miter_prove] aig: finished (returncode=0)
+SBY  8:48:51 [tcim_miter_prove] engine_0: starting process "cd tcim_miter_prove; yosys-abc -c 'read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw'"
+SBY  8:48:51 [tcim_miter_prove] engine_0: ======== ABC command line "read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw"
+SBY  8:48:51 [tcim_miter_prove] engine_0: Warning: The last 5 outputs are interpreted as constraints.
+SBY  8:48:51 [tcim_miter_prove] engine_0: VarMax = 300. FrameMax = 10000. QueMax = 0. TimeMax = 199. MonoCNF = no. SkipGen = no. SolveAll = no.
+SBY  8:48:52 [tcim_miter_prove] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY  8:48:52 [tcim_miter_prove] engine_0: 1 : 0 1                                                                 1     1      0.03 sec  T/O =  0  PRV =  0
+SBY  8:48:52 [tcim_miter_prove] engine_0: 2 : 0 48 74                                                             4    78      0.23 sec  T/O =  0  PRV =  0
+SBY  8:48:52 [tcim_miter_prove] engine_0: 3 : 0 34 33 33 ~8                                                        0    78      0.30 sec  T/O =  0  PRV =  0
+SBY  8:48:52 [tcim_miter_prove] engine_0: 4 : 0 34 44 35 21 ~8                                                    16    90      0.44 sec  T/O =  0  PRV =  0
+SBY  8:48:52 [tcim_miter_prove] engine_0: Timing out on output 0 in frame 4 (retrying in next anytime pass).
+SBY  8:48:52 [tcim_miter_prove] engine_0: 4 : 0 37 45 59 39 ~8                                                    10    97      0.60 sec  T/O =  1  PRV =  0
+SBY  8:48:52 [tcim_miter_prove] engine_0: 4 : 0 37 45 62 42 ~8                                                    10    99      0.63 sec  T/O =  1  PRV =  0
+SBY  8:48:52 [tcim_miter_prove] engine_0: Timing out on output 1 in frame 4 (retrying in next anytime pass).
+SBY  8:48:52 [tcim_miter_prove] engine_0: 4 : 0 41 49 73 60 ~8                                                     6   105      0.73 sec  T/O =  2  PRV =  0
+SBY  8:48:52 [tcim_miter_prove] engine_0: Timing out on output 2 in frame 4 (retrying in next anytime pass).
+SBY  8:48:52 [tcim_miter_prove] engine_0: 4 : 0 41 49 73 60 ~8                                                     0   105      0.73 sec  T/O =  3  PRV =  0
+SBY  8:48:53 [tcim_miter_prove] engine_0: 5 : 0 41 33 46 78 48 ~9                                                 9   116      1.04 sec  T/O =  3  PRV =  0
+SBY  8:48:53 [tcim_miter_prove] engine_0: 6 : 0 41 32 33 34 63 26 ~11                                              8   124      1.24 sec  T/O =  3  PRV =  0
+SBY  8:48:53 [tcim_miter_prove] engine_0: Timing out on output 4 in frame 6 (retrying in next anytime pass).
+SBY  8:48:53 [tcim_miter_prove] engine_0: 6 : 0 41 32 33 34 63 26 ~11                                              0   124      1.24 sec  T/O =  4  PRV =  0
+SBY  8:48:53 [tcim_miter_prove] engine_0: 7 : 0 41 32 41 43 65 18 12 ~13                                          17   143      1.52 sec  T/O =  4  PRV =  0
+SBY  8:48:53 [tcim_miter_prove] engine_0: Timing out on output 3 in frame 7 (retrying in next anytime pass).
+SBY  8:48:53 [tcim_miter_prove] engine_0: 7 : 0 41 32 41 43 65 18 12 ~13                                           0   143      1.52 sec  T/O =  5  PRV =  0
+SBY  8:48:53 [tcim_miter_prove] engine_0: 8 : 0 41 32 36 36 28 46 17 7 ~14                                         0   143      1.63 sec  T/O =  5  PRV =  0
+SBY  8:48:53 [tcim_miter_prove] engine_0: All outputs solved or timed out in frame 8.
+SBY  8:48:53 [tcim_miter_prove] engine_0: Starting new anytime pass, reusing clauses.
+SBY  8:48:53 [tcim_miter_prove] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY  8:48:53 [tcim_miter_prove] engine_0: 1 : 0 236 ~14                                                            0     0      0.11 sec  T/O =  0  PRV =  0
+SBY  8:48:53 [tcim_miter_prove] engine_0: 2 : 0 41 195 ~14                                                         0     0      0.12 sec  T/O =  0  PRV =  0
+SBY  8:48:53 [tcim_miter_prove] engine_0: 3 : 0 41 32 163 ~14                                                      0     0      0.13 sec  T/O =  0  PRV =  0
+SBY  8:48:53 [tcim_miter_prove] engine_0: 4 : 0 48 48 57 147 ~14                                                  17    38      0.31 sec  T/O =  0  PRV =  0
+SBY  8:48:53 [tcim_miter_prove] engine_0: 4 : 0 48 48 62 156 ~14                                                  13    39      0.36 sec  T/O =  0  PRV =  0
+SBY  8:48:53 [tcim_miter_prove] engine_0: Timing out on output 2 in frame 4 (retrying in next anytime pass).
+SBY  8:48:53 [tcim_miter_prove] engine_0: 4 : 0 48 48 62 156 ~14                                                   0    39      0.36 sec  T/O =  1  PRV =  0
+SBY  8:48:54 [tcim_miter_prove] engine_0: 5 : 0 46 40 57 59 97 ~15                                                 0    39      0.54 sec  T/O =  1  PRV =  0
+SBY  8:48:54 [tcim_miter_prove] engine_0: 6 : 0 46 40 56 59 26 72 ~15                                              5    42      0.63 sec  T/O =  1  PRV =  0
+SBY  8:48:54 [tcim_miter_prove] engine_0: 7 : 0 46 40 59 63 34 56 37 ~17                                          10    65      0.86 sec  T/O =  1  PRV =  0
+SBY  8:48:54 [tcim_miter_prove] engine_0: 8 : 0 46 40 58 61 25 14 52 37 ~17                                        5    65      1.02 sec  T/O =  1  PRV =  0
+SBY  8:48:54 [tcim_miter_prove] engine_0: 9 : 0 46 40 58 61 25 10 13 20 70 ~17                                     6    69      1.16 sec  T/O =  1  PRV =  0
+SBY  8:48:54 [tcim_miter_prove] engine_0: 10 : 0 46 40 58 62 25 12 7 12 55 28 ~17                                  10    70      1.32 sec  T/O =  1  PRV =  0
+SBY  8:48:54 [tcim_miter_prove] engine_0: Timing out on output 0 in frame 10 (retrying in next anytime pass).
+SBY  8:48:54 [tcim_miter_prove] engine_0: 10 : 0 46 40 58 62 25 12 7 12 55 28 ~17                                   0    70      1.32 sec  T/O =  2  PRV =  0
+SBY  8:48:55 [tcim_miter_prove] engine_0: 11 : 0 46 40 58 62 25 12 7 9 8 51 24 ~17                                  0    70      1.44 sec  T/O =  2  PRV =  0
+SBY  8:48:55 [tcim_miter_prove] engine_0: 12 : 0 46 40 58 62 25 12 7 9 9 53 47 26 ~17                              11    91      1.67 sec  T/O =  2  PRV =  0
+SBY  8:48:55 [tcim_miter_prove] engine_0: 12 : 0 46 40 58 62 25 12 7 9 9 53 57 37 ~17                               5    91      1.72 sec  T/O =  2  PRV =  0
+SBY  8:48:55 [tcim_miter_prove] engine_0: Timing out on output 1 in frame 12 (retrying in next anytime pass).
+SBY  8:48:55 [tcim_miter_prove] engine_0: 12 : 0 46 40 58 62 25 12 7 9 9 57 60 52 ~17                               6    97      1.77 sec  T/O =  3  PRV =  0
+SBY  8:48:55 [tcim_miter_prove] engine_0: 13 : 0 46 40 58 62 25 12 7 9 5 5 4 3 93 ~17                               0    97      1.89 sec  T/O =  3  PRV =  0
+SBY  8:48:55 [tcim_miter_prove] engine_0: 14 : 0 46 40 58 62 25 12 7 9 5 5 4 3 8 79 ~17                             0    97      1.98 sec  T/O =  3  PRV =  0
+SBY  8:48:55 [tcim_miter_prove] engine_0: 15 : 0 46 40 58 62 25 12 7 9 5 5 4 3 8 50 29 ~17                          0    97      2.08 sec  T/O =  3  PRV =  0
+SBY  8:48:56 [tcim_miter_prove] engine_0: 16 : 0 46 40 58 62 27 14 10 12 11 9 7 5 11 56 40 22 ~17                  17    97      2.46 sec  T/O =  3  PRV =  0
+SBY  8:48:56 [tcim_miter_prove] engine_0: Timing out on output 4 in frame 16 (retrying in next anytime pass).
+SBY  8:48:56 [tcim_miter_prove] engine_0: 16 : 0 46 40 58 62 27 14 10 12 11 9 7 5 11 56 40 22 ~17                   0    97      2.46 sec  T/O =  4  PRV =  0
+SBY  8:48:56 [tcim_miter_prove] engine_0: 17 : 0 46 40 58 62 25 12 9 3 8 6 4 3 4 5 8 36 62 ~17                      5   101      2.64 sec  T/O =  4  PRV =  0
+SBY  8:48:56 [tcim_miter_prove] engine_0: Timing out on output 3 in frame 17 (retrying in next anytime pass).
+SBY  8:48:56 [tcim_miter_prove] engine_0: 17 : 0 46 40 58 62 25 12 9 3 8 6 4 3 4 5 8 36 62 ~17                      0   101      2.64 sec  T/O =  5  PRV =  0
+SBY  8:48:56 [tcim_miter_prove] engine_0: 18 : 0 46 40 58 62 25 12 9 3 8 6 4 3 4 5 5 8 16 74 ~17                    0   101      2.78 sec  T/O =  5  PRV =  0
+SBY  8:48:56 [tcim_miter_prove] engine_0: All outputs solved or timed out in frame 18.
+SBY  8:48:56 [tcim_miter_prove] engine_0: Starting new anytime pass, reusing clauses.
+SBY  8:48:56 [tcim_miter_prove] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY  8:48:56 [tcim_miter_prove] engine_0: 1 : 0 388 ~17                                                            0     0      0.36 sec  T/O =  0  PRV =  0
+SBY  8:48:56 [tcim_miter_prove] engine_0: 2 : 0 46 342 ~17                                                         0     0      0.36 sec  T/O =  0  PRV =  0
+SBY  8:48:56 [tcim_miter_prove] engine_0: 3 : 0 46 40 302 ~17                                                      0     0      0.38 sec  T/O =  0  PRV =  0
+SBY  8:48:56 [tcim_miter_prove] engine_0: 4 : 0 46 40 58 244 ~17                                                   0     0      0.43 sec  T/O =  0  PRV =  0
+SBY  8:48:57 [tcim_miter_prove] engine_0: 5 : 0 49 47 70 80 207 ~17                                               16    30      0.62 sec  T/O =  0  PRV =  0
+SBY  8:48:57 [tcim_miter_prove] engine_0: 5 : 0 49 47 70 92 224 ~17                                                6    38      0.69 sec  T/O =  0  PRV =  0
+SBY  8:48:57 [tcim_miter_prove] engine_0: 6 : 0 49 43 57 86 84 202 ~17                                            11    49      1.21 sec  T/O =  0  PRV =  0
+SBY  8:48:57 [tcim_miter_prove] engine_0: Timing out on output 2 in frame 6 (retrying in next anytime pass).
+SBY  8:48:57 [tcim_miter_prove] engine_0: 6 : 0 49 43 57 86 84 202 ~17                                             0    49      1.21 sec  T/O =  1  PRV =  0
+SBY  8:48:58 [tcim_miter_prove] engine_0: 7 : 0 49 43 55 69 55 42 181 ~17                                          0    49      1.59 sec  T/O =  1  PRV =  0
+SBY  8:48:58 [tcim_miter_prove] engine_0: 8 : 0 49 43 55 69 53 42 34 147 ~17                                       0    49      1.69 sec  T/O =  1  PRV =  0
+SBY  8:48:58 [tcim_miter_prove] engine_0: 9 : 0 49 43 55 69 53 42 34 7 140 ~17                                     0    49      1.80 sec  T/O =  1  PRV =  0
+SBY  8:48:58 [tcim_miter_prove] engine_0: 10 : 0 49 43 55 69 53 42 34 7 11 129 ~17                                  0    49      1.92 sec  T/O =  1  PRV =  0
+SBY  8:48:58 [tcim_miter_prove] engine_0: 11 : 0 49 43 55 68 53 43 34 7 11 8 121 ~17                                0    49      2.02 sec  T/O =  1  PRV =  0
+SBY  8:48:58 [tcim_miter_prove] engine_0: 12 : 0 49 43 55 68 51 44 32 10 11 8 6 115 ~17                             0    49      2.12 sec  T/O =  1  PRV =  0
+SBY  8:48:58 [tcim_miter_prove] engine_0: 13 : 0 49 43 55 68 51 43 31 8 12 9 8 3 112 ~17                            0    49      2.21 sec  T/O =  1  PRV =  0
+SBY  8:48:58 [tcim_miter_prove] engine_0: 14 : 0 49 43 55 68 51 43 31 8 12 9 8 3 4 108 ~17                          0    49      2.33 sec  T/O =  1  PRV =  0
+SBY  8:48:58 [tcim_miter_prove] engine_0: 15 : 0 49 43 55 68 51 43 31 8 12 9 8 3 4 5 103 ~17                        0    49      2.44 sec  T/O =  1  PRV =  0
+SBY  8:48:59 [tcim_miter_prove] engine_0: 16 : 0 49 43 55 68 51 43 31 8 12 9 8 3 4 5 5 98 ~17                       0    49      2.55 sec  T/O =  1  PRV =  0
+SBY  8:48:59 [tcim_miter_prove] engine_0: 17 : 0 49 43 55 68 51 43 31 8 12 9 8 3 4 5 5 8 93 ~17                     3    54      2.69 sec  T/O =  1  PRV =  0
+SBY  8:48:59 [tcim_miter_prove] engine_0: 18 : 0 49 43 55 68 51 43 31 15 23 20 15 7 6 6 5 8 15 78 ~17              23    68      3.28 sec  T/O =  1  PRV =  0
+SBY  8:48:59 [tcim_miter_prove] engine_0: Timing out on output 0 in frame 18 (retrying in next anytime pass).
+SBY  8:48:59 [tcim_miter_prove] engine_0: 18 : 0 49 43 55 68 51 43 31 15 23 20 15 7 6 6 5 8 15 78 ~17               0    68      3.28 sec  T/O =  2  PRV =  0
+SBY  8:48:59 [tcim_miter_prove] engine_0: 19 : 0 49 43 55 68 51 43 31 15 22 19 15 6 7 6 5 3 8 43 47 ~17             0    68      3.47 sec  T/O =  2  PRV =  0
+SBY  8:49:00 [tcim_miter_prove] engine_0: 20 : ... 49 43 55 68 51 43 31 19 28 26 22 15 10 8 8 5 9 43 54 5 ~17      28    75      4.01 sec  T/O =  2  PRV =  0
+SBY  8:49:00 [tcim_miter_prove] engine_0: Timing out on output 1 in frame 20 (retrying in next anytime pass).
+SBY  8:49:00 [tcim_miter_prove] engine_0: 20 : ... 43 55 68 51 43 31 20 34 31 29 22 19 21 18 13 9 45 63 28 ~17     28    89      4.49 sec  T/O =  3  PRV =  0
+SBY  8:49:00 [tcim_miter_prove] engine_0: 20 : ... 43 55 68 51 43 31 20 34 31 29 22 19 21 18 13 9 45 63 28 ~17     31    89      4.49 sec  T/O =  3  PRV =  0
+SBY  8:49:00 [tcim_miter_prove] engine_0: Timing out on output 4 in frame 20 (retrying in next anytime pass).
+SBY  8:49:00 [tcim_miter_prove] engine_0: 20 : ... 43 55 68 51 43 31 20 34 31 29 22 19 21 18 13 9 45 63 28 ~17      0    89      4.49 sec  T/O =  4  PRV =  0
+SBY  8:49:01 [tcim_miter_prove] engine_0: 21 : ... 55 68 51 43 31 20 33 29 22 13 10 10 10 9 13 24 53 32 13 ~17      0    89      4.74 sec  T/O =  4  PRV =  0
+SBY  8:49:01 [tcim_miter_prove] engine_0: 22 : ... 68 51 43 31 20 35 29 22 13 10 10 9 9 13 23 55 41 32 17 ~17      15    91      5.08 sec  T/O =  4  PRV =  0
+SBY  8:49:01 [tcim_miter_prove] engine_0: 22 : ... 51 43 31 20 35 30 25 20 15 16 16 12 13 23 55 41 32 17 ~17       19    91      5.23 sec  T/O =  4  PRV =  0
+SBY  8:49:01 [tcim_miter_prove] engine_0: Timing out on output 3 in frame 22 (retrying in next anytime pass).
+SBY  8:49:01 [tcim_miter_prove] engine_0: 22 : ... 51 43 31 20 35 30 25 20 15 16 16 12 13 23 55 41 32 17 ~17        0    91      5.23 sec  T/O =  5  PRV =  0
+SBY  8:49:01 [tcim_miter_prove] engine_0: 23 : ... 51 43 31 20 35 30 20 13 10 11 14 8 16 31 55 34 25 17 4 ~19       0    91      5.45 sec  T/O =  5  PRV =  0
+SBY  8:49:01 [tcim_miter_prove] engine_0: All outputs solved or timed out in frame 23.
+SBY  8:49:01 [tcim_miter_prove] engine_0: Starting new anytime pass, reusing clauses.
+SBY  8:49:01 [tcim_miter_prove] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY  8:49:02 [tcim_miter_prove] engine_0: 1 : 0 681 ~19                                                            0     0      0.75 sec  T/O =  0  PRV =  0
+SBY  8:49:02 [tcim_miter_prove] engine_0: 2 : 0 49 632 ~19                                                         0     0      0.76 sec  T/O =  0  PRV =  0
+SBY  8:49:02 [tcim_miter_prove] engine_0: 3 : 0 49 43 589 ~19                                                      0     0      0.77 sec  T/O =  0  PRV =  0
+SBY  8:49:02 [tcim_miter_prove] engine_0: 4 : 0 49 43 55 534 ~19                                                   0     0      0.81 sec  T/O =  0  PRV =  0
+SBY  8:49:02 [tcim_miter_prove] engine_0: 5 : 0 49 43 55 68 466 ~19                                                0     0      0.86 sec  T/O =  0  PRV =  0
+SBY  8:49:02 [tcim_miter_prove] engine_0: 6 : 0 49 43 55 68 51 415 ~19                                             0     0      0.92 sec  T/O =  0  PRV =  0
+SBY  8:49:02 [tcim_miter_prove] engine_0: 7 : 0 49 43 55 68 51 43 372 ~19                                          0     0      1.00 sec  T/O =  0  PRV =  0
+SBY  8:49:03 [tcim_miter_prove] engine_0: 8 : 0 49 43 55 69 53 46 36 361 ~19                                       8    27      1.17 sec  T/O =  0  PRV =  0
+SBY  8:49:03 [tcim_miter_prove] engine_0: 9 : 0 49 43 55 67 42 31 17 15 343 ~19                                    0    27      1.74 sec  T/O =  0  PRV =  0
+SBY  8:49:03 [tcim_miter_prove] engine_0: 10 : 0 49 43 55 67 42 31 17 15 15 309 ~19                                 0    27      1.85 sec  T/O =  0  PRV =  0
+SBY  8:49:03 [tcim_miter_prove] engine_0: 11 : 0 49 43 55 67 42 31 17 15 15 8 289 ~19                               0    27      1.96 sec  T/O =  0  PRV =  0
+SBY  8:49:03 [tcim_miter_prove] engine_0: 12 : 0 49 43 55 67 42 31 17 15 15 8 6 275 ~19                             0    27      2.08 sec  T/O =  0  PRV =  0
+SBY  8:49:04 [tcim_miter_prove] engine_0: 13 : 0 49 43 55 67 42 31 17 15 15 8 6 5 268 ~19                           0    27      2.18 sec  T/O =  0  PRV =  0
+SBY  8:49:04 [tcim_miter_prove] engine_0: 14 : 0 49 43 55 67 42 31 17 15 15 8 6 5 8 256 ~19                         0    27      2.28 sec  T/O =  0  PRV =  0
+SBY  8:49:04 [tcim_miter_prove] engine_0: 15 : 0 49 43 55 67 42 31 17 15 15 8 6 5 8 7 243 ~19                       0    27      2.40 sec  T/O =  0  PRV =  0
+SBY  8:49:04 [tcim_miter_prove] engine_0: 16 : 0 49 43 55 67 42 31 17 15 15 8 6 5 8 7 7 232 ~19                     0    27      2.52 sec  T/O =  0  PRV =  0
+SBY  8:49:04 [tcim_miter_prove] engine_0: 17 : 0 49 43 55 67 42 31 17 15 15 8 6 5 8 7 7 4 220 ~19                   0    27      2.64 sec  T/O =  0  PRV =  0
+SBY  8:49:04 [tcim_miter_prove] engine_0: 18 : 0 49 43 55 67 42 31 17 15 15 8 6 5 8 7 7 4 22 198 ~19                0    27      2.75 sec  T/O =  0  PRV =  0
+SBY  8:49:04 [tcim_miter_prove] engine_0: 19 : ... 49 43 55 67 42 31 20 17 20 11 10 8 12 10 12 9 26 36 166 ~19     19    39      3.08 sec  T/O =  0  PRV =  0
+SBY  8:49:05 [tcim_miter_prove] engine_0: 19 : ... 43 55 68 44 36 28 23 31 16 11 9 12 11 12 10 27 38 166 ~19       32    57      3.31 sec  T/O =  0  PRV =  0
+SBY  8:49:05 [tcim_miter_prove] engine_0: 19 : ... 43 55 68 44 37 34 24 32 16 11 12 18 17 20 13 28 41 166 ~19      37    59      3.50 sec  T/O =  0  PRV =  0
+SBY  8:49:05 [tcim_miter_prove] engine_0: 19 : ... 43 55 68 44 37 34 24 32 16 11 12 18 17 20 13 29 55 192 ~19      21    63      3.68 sec  T/O =  0  PRV =  0
+SBY  8:49:05 [tcim_miter_prove] engine_0: 20 : 0 49 43 55 68 43 34 27 21 14 7 4 3 4 6 5 3 4 6 5 170 ~51             0    63      3.96 sec  T/O =  0  PRV =  0
+SBY  8:49:06 [tcim_miter_prove] engine_0: 21 : 0 49 43 55 68 43 34 27 21 13 7 4 3 4 6 5 3 4 6 5 19 137 ~51          0    63      4.10 sec  T/O =  0  PRV =  0
+SBY  8:49:06 [tcim_miter_prove] engine_0: 22 : ... 43 55 68 43 34 27 21 13 7 4 5 7 10 8 5 5 7 5 19 85 77 ~51       22    63      4.47 sec  T/O =  0  PRV =  0
+SBY  8:49:06 [tcim_miter_prove] engine_0: 23 : ... 43 55 68 43 34 27 21 13 7 4 3 4 4 6 3 3 6 5 3 3 7 131 ~51        0    63      4.67 sec  T/O =  0  PRV =  0
+SBY  8:49:06 [tcim_miter_prove] engine_0: 24 : ... 55 68 43 34 27 21 13 7 4 3 4 4 6 3 3 6 5 3 3 7 23 108 ~51        0    63      4.81 sec  T/O =  0  PRV =  0
+SBY  8:49:06 [tcim_miter_prove] engine_0: 25 : ... 55 68 43 34 27 21 13 7 4 3 4 4 6 3 3 6 5 3 3 7 24 75 38 ~51      4    63      4.98 sec  T/O =  0  PRV =  0
+SBY  8:49:06 [tcim_miter_prove] engine_0: Timing out on output 0 in frame 25 (retrying in next anytime pass).
+SBY  8:49:07 [tcim_miter_prove] engine_0: 25 : ... 55 68 43 34 27 21 13 7 4 3 4 4 6 3 3 6 5 3 3 7 24 87 54 ~51      5    63      5.11 sec  T/O =  1  PRV =  0
+SBY  8:49:07 [tcim_miter_prove] engine_0: 26 : ... 68 43 34 27 21 13 7 4 3 4 4 6 3 3 6 5 3 3 7 8 5 23 110 ~51       0    63      5.33 sec  T/O =  1  PRV =  0
+SBY  8:49:07 [tcim_miter_prove] engine_0: 27 : ... 44 35 27 21 13 7 5 5 5 4 6 3 3 6 5 4 4 8 9 6 19 80 52 ~51       34    63      5.71 sec  T/O =  1  PRV =  0
+SBY  8:49:07 [tcim_miter_prove] engine_0: 27 : ... 44 36 30 23 17 7 5 5 5 4 6 3 3 6 5 4 4 8 9 7 20 82 59 ~51       34    64      5.80 sec  T/O =  1  PRV =  0
+SBY  8:49:07 [tcim_miter_prove] engine_0: 28 : ... 44 36 29 21 13 7 3 2 3 4 5 4 3 4 5 4 2 4 7 5 4 2 5 126 ~51       0    64      6.04 sec  T/O =  1  PRV =  0
+SBY  8:49:08 [tcim_miter_prove] engine_0: 29 : ... 36 29 21 13 7 3 2 3 4 4 4 3 4 5 4 2 4 7 5 4 2 5 2 124 ~51        0    64      6.22 sec  T/O =  1  PRV =  0
+SBY  8:49:08 [tcim_miter_prove] engine_0: 30 : ... 29 21 13 7 3 2 3 4 4 4 3 4 5 4 2 4 7 5 4 2 5 2 17 107 ~51        0    64      6.36 sec  T/O =  1  PRV =  0
+SBY  8:49:08 [tcim_miter_prove] engine_0: 31 : ... 29 21 13 7 3 2 3 4 4 4 3 4 5 4 2 4 7 5 4 2 5 2 18 72 41 ~51      6    64      6.56 sec  T/O =  1  PRV =  0
+SBY  8:49:08 [tcim_miter_prove] engine_0: Timing out on output 2 in frame 31 (retrying in next anytime pass).
+SBY  8:49:08 [tcim_miter_prove] engine_0: 31 : ... 29 21 13 7 3 2 3 4 4 4 3 4 5 4 2 4 7 5 4 2 5 2 18 72 41 ~51      0    64      6.56 sec  T/O =  2  PRV =  0
+SBY  8:49:08 [tcim_miter_prove] engine_0: 32 : ... 21 13 7 3 2 3 4 4 4 3 4 5 4 2 4 7 5 4 2 5 2 2 21 85 19 ~51       0    64      6.78 sec  T/O =  2  PRV =  0
+SBY  8:49:09 [tcim_miter_prove] engine_0: 33 : ... 18 8 3 2 3 6 5 6 3 4 5 4 2 4 7 5 5 3 7 3 2 22 85 28 8 ~51       42    66      7.16 sec  T/O =  2  PRV =  0
+SBY  8:49:09 [tcim_miter_prove] engine_0: 33 : ... 18 8 3 2 3 6 5 6 3 4 5 4 2 4 7 5 5 3 7 4 3 23 98 42 12 ~51      16    66      7.34 sec  T/O =  2  PRV =  0
+SBY  8:49:09 [tcim_miter_prove] engine_0: 33 : ... 18 8 3 2 3 6 5 6 3 4 5 4 2 4 7 5 5 3 7 4 4 24 101 65 43 ~51     17    93      7.53 sec  T/O =  2  PRV =  0
+SBY  8:49:09 [tcim_miter_prove] engine_0: 33 : ... 18 8 3 2 3 6 5 6 3 4 5 4 2 4 7 5 5 3 7 4 4 24 101 75 74 ~51      4   117      7.63 sec  T/O =  2  PRV =  0
+SBY  8:49:09 [tcim_miter_prove] engine_0: 34 : ... 17 8 3 2 3 3 4 2 4 4 3 2 4 5 7 5 1 1 5 1 1 6 4 2 2 135 ~51       0   117      7.91 sec  T/O =  2  PRV =  0
+SBY  8:49:09 [tcim_miter_prove] engine_0: 35 : ... 8 3 2 3 3 4 2 4 4 3 2 4 5 7 5 1 1 5 1 1 6 4 2 2 18 113 ~51       0   117      8.06 sec  T/O =  2  PRV =  0
+SBY  8:49:10 [tcim_miter_prove] engine_0: 36 : ... 3 2 3 3 4 2 4 4 3 2 4 5 7 5 1 1 5 1 1 6 4 2 2 18 65 48 ~51       0   117      8.22 sec  T/O =  2  PRV =  0
+SBY  8:49:10 [tcim_miter_prove] engine_0: 37 : ... 2 3 3 4 2 4 4 3 2 4 5 7 5 1 1 5 1 1 6 4 2 3 19 70 65 13 ~51     16   117      8.52 sec  T/O =  2  PRV =  0
+SBY  8:49:10 [tcim_miter_prove] engine_0: Timing out on output 1 in frame 37 (retrying in next anytime pass).
+SBY  8:49:10 [tcim_miter_prove] engine_0: 37 : ... 2 3 3 4 2 4 4 3 2 4 5 7 5 1 1 5 1 1 6 4 2 3 19 70 70 32 ~51      4   117      8.57 sec  T/O =  3  PRV =  0
+SBY  8:49:10 [tcim_miter_prove] engine_0: 38 : ... 2 3 3 4 2 4 4 3 2 4 5 7 5 1 1 5 1 1 6 4 2 1 2 2 2 1 129 ~52      0   117      8.80 sec  T/O =  3  PRV =  0
+SBY  8:49:10 [tcim_miter_prove] engine_0: 39 : ... 3 3 4 2 4 4 3 2 4 5 7 5 1 1 5 1 1 6 4 2 1 2 2 2 1 1 128 ~52      0   117      8.96 sec  T/O =  3  PRV =  0
+SBY  8:49:11 [tcim_miter_prove] engine_0: 40 : ... 3 4 2 4 4 3 2 4 5 7 5 1 1 5 1 1 6 4 2 1 2 2 2 1 1 0 128 ~52      0   117      9.12 sec  T/O =  3  PRV =  0
+SBY  8:49:11 [tcim_miter_prove] engine_0: Proved output 3 in frame 5 (converged).
+SBY  8:49:11 [tcim_miter_prove] engine_0: Proved output 4 in frame 5 (converged).
+SBY  8:49:11 [tcim_miter_prove] engine_0: Starting new anytime pass, reusing clauses.
+SBY  8:49:11 [tcim_miter_prove] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY  8:49:11 [tcim_miter_prove] engine_0: Proved output 0 in frame 0.
+SBY  8:49:11 [tcim_miter_prove] engine_0: Proved output 1 in frame 0.
+SBY  8:49:11 [tcim_miter_prove] engine_0: Proved output 2 in frame 0.
+SBY  8:49:11 [tcim_miter_prove] engine_0: 1 : 0 265 ~180                                                           0     0      0.32 sec  T/O =  0  PRV =  5
+SBY  8:49:11 [tcim_miter_prove] engine_0: 2 : 0 16 249 ~180                                                        0     0      0.32 sec  T/O =  0  PRV =  5
+SBY  8:49:11 [tcim_miter_prove] engine_0: All outputs solved or timed out in frame 2.
+SBY  8:49:11 [tcim_miter_prove] engine_0: Block =   50  Oblig =  3376  Clause =  1688  Call = 55441 (sat=70.3%)  Cex =   0  Start = 134
+SBY  8:49:11 [tcim_miter_prove] engine_0: SAT solving =    14.24 sec ( 73.33 %)
+SBY  8:49:11 [tcim_miter_prove] engine_0: unsat     =     2.53 sec ( 13.05 %)
+SBY  8:49:11 [tcim_miter_prove] engine_0: sat       =    11.70 sec ( 60.27 %)
+SBY  8:49:11 [tcim_miter_prove] engine_0: Generalize  =     5.08 sec ( 26.16 %)
+SBY  8:49:11 [tcim_miter_prove] engine_0: Push clause =     9.65 sec ( 49.71 %)
+SBY  8:49:11 [tcim_miter_prove] engine_0: Ternary sim =     0.75 sec (  3.87 %)
+SBY  8:49:11 [tcim_miter_prove] engine_0: Containment =     0.01 sec (  0.06 %)
+SBY  8:49:11 [tcim_miter_prove] engine_0: CNF compute =     0.58 sec (  3.01 %)
+SBY  8:49:11 [tcim_miter_prove] engine_0: Refinement  =     0.00 sec (  0.00 %)
+SBY  8:49:11 [tcim_miter_prove] engine_0: TOTAL       =    19.42 sec (100.00 %)
+SBY  8:49:11 [tcim_miter_prove] engine_0: Property proved.  Time =    19.42 sec
+SBY  8:49:11 [tcim_miter_prove] engine_0: Counter-example is not available.
+SBY  8:49:11 [tcim_miter_prove] engine_0: finished (returncode=0)
+SBY  8:49:11 [tcim_miter_prove] engine_0: Status returned by engine: PASS
+SBY  8:49:11 [tcim_miter_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:26 (26)
+SBY  8:49:11 [tcim_miter_prove] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:26 (26)
+SBY  8:49:11 [tcim_miter_prove] summary: engine_0 (abc pdr) returned PASS
+SBY  8:49:11 [tcim_miter_prove] summary: engine_0 did not produce any traces
+SBY  8:49:11 [tcim_miter_prove] DONE (PASS, rc=0)

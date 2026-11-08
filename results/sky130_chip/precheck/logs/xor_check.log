@@ -1,0 +1,371 @@
+Reading file /w/chip/sky130/caravan/gds/user_analog_project_wrapper.gds for cell user_analog_project_wrapper
+dbu=0.001
+cell user_analog_project_wrapper dbu-bbox(ll;ur)=(-4000,-4000;2924000,3524000)
+cell user_analog_project_wrapper dbu-bbox(left,bottom,right,top)=(-4000,-4000,2924000,3524000)
+cell user_analog_project_wrapper dbu-size(width,height)=(2928000,3528000)
+cell user_analog_project_wrapper micron-bbox(left,bottom,right,top)=(-4.0,-4.0,2924.0,3524.0)
+cell user_analog_project_wrapper micron-size(width,height)=(2928.0,3528.0)
+Done.
+
+Magic 8.3 revision 471 - Compiled on Mon Oct 12 16:00:31 UTC 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130B ...
+2 Magic internal units = 1 Lambda
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130B Device Generator Menu ...
+Loading "/tmp/v/lib/python3.12/site-packages/cf_precheck/drc_scripts/erase_box.tcl" from command line.
+Input style sky130(vendor): scaleFactor=2, multiplier=2
+CIF input style is now "sky130(vendor)"
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 3.0
+Library name: user_analog_project_wrapper
+Reading "rr2t2r".
+Reading "sky130_fd_sc_hd__diode_2".
+Reading "sky130_fd_sc_hd__clkdlybuf4s15_1".
+Reading "sky130_fd_sc_hd__fill_2".
+Reading "sky130_fd_sc_hd__fill_1".
+Reading "sky130_fd_sc_hd__fill_8".
+Reading "sky130_fd_sc_hd__fill_4".
+Reading "sky130_fd_sc_hd__tapvpwrvgnd_1".
+Reading "sky130_fd_sc_hd__conb_1".
+Reading "sky130_fd_sc_hd__dfrtp_1".
+Reading "sky130_fd_sc_hd__clkbuf_16".
+Reading "sky130_fd_sc_hd__nand2_1".
+Reading "sky130_fd_sc_hd__o21ai_0".
+Reading "sky130_fd_sc_hd__ha_1".
+Reading "sky130_fd_sc_hd__nand3_1".
+Reading "sky130_fd_sc_hd__o21a_1".
+Reading "sky130_fd_sc_hd__a21oi_1".
+Reading "sky130_fd_sc_hd__nand4_1".
+Reading "sky130_fd_sc_hd__nor2_1".
+Reading "sky130_fd_sc_hd__a31oi_1".
+Reading "sky130_fd_sc_hd__and3_1".
+Reading "sky130_fd_sc_hd__xor2_1".
+Reading "sky130_fd_sc_hd__dfstp_2".
+Reading "sky130_fd_sc_hd__and4b_1".
+Reading "sky130_fd_sc_hd__xnor2_1".
+Reading "sky130_fd_sc_hd__inv_1".
+Reading "sky130_fd_sc_hd__dlclkp_1".
+Reading "sky130_fd_sc_hd__clkbuf_1".
+Reading "sky130_fd_sc_hd__dfrtp_4".
+Reading "sky130_fd_sc_hd__nor2b_1".
+Reading "sky130_fd_sc_hd__nor3_1".
+Reading "sky130_fd_sc_hd__or4_1".
+Reading "sky130_fd_sc_hd__and2_1".
+Reading "sky130_fd_sc_hd__nand3b_1".
+Reading "sky130_fd_sc_hd__a211oi_1".
+Reading "sky130_fd_sc_hd__nor3b_2".
+Reading "sky130_fd_sc_hd__or3_1".
+Reading "sky130_fd_sc_hd__a21boi_0".
+Reading "sky130_fd_sc_hd__buf_2".
+Reading "sky130_fd_sc_hd__nand2b_1".
+Reading "sky130_fd_sc_hd__or2_2".
+Reading "sky130_fd_sc_hd__mux2_1".
+Reading "sky130_fd_sc_hd__mux2i_1".
+Reading "sky130_fd_sc_hd__o211ai_1".
+Reading "sky130_fd_sc_hd__nor3_2".
+Reading "sky130_fd_sc_hd__o221ai_1".
+Reading "sky130_fd_sc_hd__o31ai_1".
+Reading "sky130_fd_sc_hd__nor4_1".
+Reading "sky130_fd_sc_hd__nor4_4".
+Reading "sky130_fd_sc_hd__o22a_1".
+Reading "sky130_fd_sc_hd__xnor2_2".
+Reading "sky130_fd_sc_hd__xor2_4".
+Reading "sky130_fd_sc_hd__o311ai_2".
+Reading "sky130_fd_sc_hd__or3_4".
+Reading "sky130_fd_sc_hd__o21ai_1".
+Reading "sky130_fd_sc_hd__nor4_2".
+Reading "sky130_fd_sc_hd__a41o_1".
+Reading "sky130_fd_sc_hd__a311o_2".
+Reading "sky130_fd_sc_hd__or2_1".
+Reading "sky130_fd_sc_hd__a21o_1".
+Reading "sky130_fd_sc_hd__and2_4".
+Reading "sky130_fd_sc_hd__o21a_2".
+Reading "sky130_fd_sc_hd__a311oi_1".
+Reading "sky130_fd_sc_hd__o211ai_2".
+Reading "sky130_fd_sc_hd__a2111oi_2".
+Reading "sky130_fd_sc_hd__a211o_1".
+Reading "sky130_fd_sc_hd__a31o_1".
+Reading "sky130_fd_sc_hd__a22oi_1".
+Reading "sky130_fd_sc_hd__and4_1".
+Reading "sky130_fd_sc_hd__a221o_1".
+Reading "sky130_fd_sc_hd__a2111o_1".
+Reading "sky130_fd_sc_hd__o2111ai_1".
+Reading "sky130_fd_sc_hd__a21oi_2".
+Reading "sky130_fd_sc_hd__xnor3_1".
+Reading "sky130_fd_sc_hd__and3_2".
+Reading "sky130_fd_sc_hd__o2bb2a_1".
+Reading "sky130_fd_sc_hd__o31ai_2".
+Reading "sky130_fd_sc_hd__o2bb2ai_1".
+Reading "sky130_fd_sc_hd__xor2_2".
+Reading "sky130_fd_sc_hd__o2bb2ai_2".
+Reading "sky130_fd_sc_hd__mux2i_4".
+Reading "sky130_fd_sc_hd__a31oi_2".
+Reading "sky130_fd_sc_hd__o22ai_1".
+Reading "sky130_fd_sc_hd__buf_4".
+Reading "sky130_fd_sc_hd__nor3b_1".
+Reading "sky130_fd_sc_hd__dfrtp_2".
+Reading "sky130_fd_sc_hd__o31a_1".
+Reading "sky130_fd_sc_hd__o311ai_0".
+Reading "sky130_fd_sc_hd__o21bai_1".
+Reading "sky130_fd_sc_hd__a41oi_1".
+Reading "sky130_fd_sc_hd__a221oi_1".
+Reading "sky130_fd_sc_hd__a22o_1".
+Reading "sky130_fd_sc_hd__clkinv_1".
+Reading "sky130_fd_sc_hd__o221ai_2".
+Reading "sky130_fd_sc_hd__a311o_4".
+Reading "sky130_fd_sc_hd__or4b_4".
+Reading "sky130_fd_sc_hd__nand4b_1".
+Reading "sky130_fd_sc_hd__and2_2".
+Reading "sky130_fd_sc_hd__inv_6".
+Reading "sky130_fd_sc_hd__clkinv_2".
+Reading "sky130_fd_sc_hd__mux4_2".
+Reading "sky130_fd_sc_hd__a222oi_1".
+CIF file read warning: CIF style sky130(vendor): units rescaled by factor of 5 / 1
+Reading "sky130_fd_sc_hd__o22ai_2".
+Reading "sky130_fd_sc_hd__a32o_1".
+Reading "sky130_fd_sc_hd__mux2_2".
+Reading "sky130_fd_sc_hd__a32oi_1".
+Reading "sky130_fd_sc_hd__nor4b_1".
+Reading "sky130_fd_sc_hd__o41ai_1".
+Reading "sky130_fd_sc_hd__clkinv_4".
+Reading "sky130_fd_sc_hd__or3b_2".
+Reading "sky130_fd_sc_hd__clkinvlp_4".
+Reading "sky130_fd_sc_hd__o311ai_1".
+Reading "sky130_fd_sc_hd__bufinv_16".
+Reading "sky130_fd_sc_hd__a32oi_4".
+Reading "sky130_fd_sc_hd__nand2_2".
+Reading "sky130_fd_sc_hd__o31ai_4".
+Reading "sky130_fd_sc_hd__o21ba_1".
+Reading "sky130_fd_sc_hd__and2_0".
+Reading "sky130_fd_sc_hd__o32ai_1".
+Reading "sky130_fd_sc_hd__mux2_4".
+Reading "sky130_fd_sc_hd__a211oi_2".
+Reading "sky130_fd_sc_hd__or3b_4".
+Reading "sky130_fd_sc_hd__clkbuf_8".
+Reading "sky130_fd_sc_hd__a2111oi_0".
+Reading "sky130_fd_sc_hd__nor2_4".
+Reading "sky130_fd_sc_hd__a311o_1".
+Reading "sky130_fd_sc_hd__a22o_2".
+Reading "sky130_fd_sc_hd__a22oi_2".
+Reading "sky130_fd_sc_hd__o211a_1".
+Reading "sky130_fd_sc_hd__a22oi_4".
+Reading "sky130_fd_sc_hd__a2bb2oi_1".
+Reading "sky130_fd_sc_hd__and3b_1".
+Reading "sky130_fd_sc_hd__clkdlybuf4s15_2".
+Reading "sky130_fd_sc_hd__clkdlybuf4s18_2".
+Reading "sky130_fd_sc_hd__and4_2".
+Reading "sky130_fd_sc_hd__nand4b_2".
+Reading "sky130_fd_sc_hd__clkbuf_2".
+Reading "sky130_fd_sc_hd__a2111oi_1".
+CIF file read warning: Input off lambda grid by 2/5; snapped to grid.
+Reading "sky130_fd_sc_hd__nor3_4".
+Reading "sky130_fd_sc_hd__a2bb2oi_2".
+Reading "sky130_fd_sc_hd__a211oi_4".
+Reading "sky130_fd_sc_hd__nand3_4".
+Reading "sky130_fd_sc_hd__nor4b_4".
+Reading "sky130_fd_sc_hd__nor4bb_1".
+Reading "sky130_fd_sc_hd__o2111a_1".
+Reading "sky130_fd_sc_hd__nor4b_2".
+Reading "sky130_fd_sc_hd__nand2_4".
+Reading "sky130_fd_sc_hd__nand3_2".
+Reading "sky130_fd_sc_hd__nor2b_2".
+Reading "sky130_fd_sc_hd__clkbuf_4".
+Reading "sky130_fd_sc_hd__fa_1".
+Reading "sky130_fd_sc_hd__o2111ai_2".
+Reading "sky130_fd_sc_hd__ha_2".
+Reading "sky130_fd_sc_hd__inv_2".
+Reading "sky130_fd_sc_hd__inv_8".
+Reading "sky130_fd_sc_hd__nor3b_4".
+Reading "sky130_fd_sc_hd__o311a_1".
+Reading "sky130_fd_sc_hd__and4b_2".
+Reading "sky130_fd_sc_hd__nand4bb_1".
+Reading "sky130_fd_sc_hd__nand3b_4".
+Reading "VIA_M1M2_PR".
+Reading "VIA_L1M1_PR_MR".
+Reading "VIA_via5_6_3100_3100_2_2_1600_1600".
+Reading "VIA_via5_6_1600_3100_2_1_1600_1600".
+Reading "VIA_via4_5_1600_480_1_4_400_400".
+Reading "VIA_via3_4_1600_480_1_4_400_400".
+Reading "VIA_via2_3_1600_480_1_5_320_320".
+Reading "VIA_via5_6_1600_1600_1_1_1600_1600".
+Reading "VIA_via5_6_3100_1600_1_2_1600_1600".
+Reading "VIA_M2M3_PR".
+Reading "VIA_M3M4_PR".
+Reading "VIA_M1M2_PR_MR".
+Reading "tcim_chip_digital".
+    5000 uses
+    10000 uses
+    15000 uses
+    20000 uses
+    25000 uses
+    30000 uses
+    35000 uses
+    40000 uses
+    45000 uses
+    50000 uses
+    55000 uses
+    60000 uses
+    65000 uses
+    70000 uses
+    75000 uses
+    80000 uses
+    85000 uses
+Reading "tcim_sky130_array".
+Reading "d_pfet_g5v0d10v5_w16_l0p5".
+Reading "d_nfet_g5v0d10v5_w8_l0p5".
+Reading "d_nfet_g5v0d10v5_w4_l0p5".
+Reading "sld".
+Reading "d_pfet_g5v0d10v5_w4_l0p5".
+Reading "d_pfet_g5v0d10v5_w2_l0p5".
+Reading "d_pfet_g5v0d10v5_w0p42_l1".
+Reading "d_pfet_01v8_w1_l0p15".
+Reading "d_nfet_g5v0d10v5_w2_l0p5".
+Reading "d_nfet_g5v0d10v5_w1_l0p5".
+Reading "d_nfet_01v8_w0p5_l0p15".
+Reading "rowslice".
+Reading "d_pfet_g5v0d10v5_w8_l0p5".
+Reading "d_pfet_01v8_w4_l4".
+Reading "d_nfet_01v8_w2_l4".
+Reading "d_nfet_01v8_w2_l1".
+Reading "d_nfet_01v8_w1_l0p15".
+Reading "ctrlglob".
+Reading "blslice".
+Reading "tcim_macro".
+Reading "user_analog_project_wrapper".
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  43.630 x 3520.000  (-43.630,  0.000), ( 0.000,  3520.000)  153577.594
+lambda:   4363.00 x 352000.00  (-4363.00,  0.00 ), (  0.00,  352000.00)  1535776000.00
+internal:   8726 x 704000  ( -8726,  0    ), (     0,  704000)  6143104000
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  43.250 x 3520.000  ( 2920.000,  0.000), ( 2963.250,  3520.000)  152240.000
+lambda:   4325.00 x 352000.00  ( 292000.00,  0.00 ), ( 296325.00,  352000.00)  1522400000.00
+internal:   8650 x 704000  ( 584000,  0    ), ( 592650,  704000)  6089600000
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  3006.880 x 38.270  (-43.630, -38.270), ( 2963.250,  0.000)  115073.289
+lambda:   300688.00 x 3827.00  (-4363.00, -3827.00), ( 296325.00,  0.00 )  1150732928.00
+internal: 601376 x 7654    ( -8726, -7654 ), ( 592650,  0    )  4602931904
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  3006.880 x 37.950  (-43.630,  3520.000), ( 2963.250,  3557.950)  114111.086
+lambda:   300688.00 x 3795.00  (-4363.00,  352000.00), ( 296325.00,  355795.00)  1141110912.00
+internal: 601376 x 7590    ( -8726,  704000), ( 592650,  711590)  4564443840
+   Generating output for cell xor_target
+
+Magic 8.3 revision 471 - Compiled on Mon Oct 12 16:00:31 UTC 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130B ...
+2 Magic internal units = 1 Lambda
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130B Device Generator Menu ...
+Loading "/tmp/v/lib/python3.12/site-packages/cf_precheck/drc_scripts/erase_box.tcl" from command line.
+Input style sky130(vendor): scaleFactor=2, multiplier=2
+CIF input style is now "sky130(vendor)"
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 6.0
+Library name: user_analog_project_wrapper_empty
+Reading "user_analog_project_wrapper".
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  43.630 x 3520.000  (-43.630,  0.000), ( 0.000,  3520.000)  153577.594
+lambda:   4363.00 x 352000.00  (-4363.00,  0.00 ), (  0.00,  352000.00)  1535776000.00
+internal:   8726 x 704000  ( -8726,  0    ), (     0,  704000)  6143104000
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  43.250 x 3520.000  ( 2920.000,  0.000), ( 2963.250,  3520.000)  152240.000
+lambda:   4325.00 x 352000.00  ( 292000.00,  0.00 ), ( 296325.00,  352000.00)  1522400000.00
+internal:   8650 x 704000  ( 584000,  0    ), ( 592650,  704000)  6089600000
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  3006.880 x 38.270  (-43.630, -38.270), ( 2963.250,  0.000)  115073.289
+lambda:   300688.00 x 3827.00  (-4363.00, -3827.00), ( 296325.00,  0.00 )  1150732928.00
+internal: 601376 x 7654    ( -8726, -7654 ), ( 592650,  0    )  4602931904
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  3006.880 x 37.950  (-43.630,  3520.000), ( 2963.250,  3557.950)  114111.086
+lambda:   300688.00 x 3795.00  (-4363.00,  352000.00), ( 296325.00,  355795.00)  1141110912.00
+internal: 601376 x 7590    ( -8726,  704000), ( 592650,  711590)  4564443840
+   Generating output for cell xor_target
+Reading /w/flow/eda/precheck_cfenv3_sky130B/outputs/user_analog_project_wrapper_erased.gds ..
+Reading /w/flow/eda/precheck_cfenv3_sky130B/outputs/user_analog_project_wrapper_empty_erased.gds ..
+--- Running XOR for 69/20 ---
+"input" in: xor.rb.drc:39
+    Polygons (raw): 494 (flat)  494 (hierarchical)
+    Elapsed: 0.010s  Memory: 611.00M
+"input" in: xor.rb.drc:39
+    Polygons (raw): 494 (flat)  494 (hierarchical)
+    Elapsed: 0.000s  Memory: 611.00M
+"^" in: xor.rb.drc:39
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 611.00M
+XOR differences: 0
+"output" in: xor.rb.drc:43
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 611.00M
+--- Running XOR for 70/20 ---
+"input" in: xor.rb.drc:39
+    Polygons (raw): 184 (flat)  184 (hierarchical)
+    Elapsed: 0.000s  Memory: 611.00M
+"input" in: xor.rb.drc:39
+    Polygons (raw): 184 (flat)  184 (hierarchical)
+    Elapsed: 0.000s  Memory: 611.00M
+"^" in: xor.rb.drc:39
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 611.00M
+XOR differences: 0
+"output" in: xor.rb.drc:43
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 611.00M
+--- Running XOR for 72/20 ---
+"input" in: xor.rb.drc:39
+    Polygons (raw): 6 (flat)  6 (hierarchical)
+    Elapsed: 0.000s  Memory: 611.00M
+"input" in: xor.rb.drc:39
+    Polygons (raw): 6 (flat)  6 (hierarchical)
+    Elapsed: 0.000s  Memory: 611.00M
+"^" in: xor.rb.drc:39
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 611.00M
+XOR differences: 0
+"output" in: xor.rb.drc:43
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.010s  Memory: 611.00M
+--- Running XOR for 81/14 ---
+"input" in: xor.rb.drc:39
+    Polygons (raw): 1 (flat)  1 (hierarchical)
+    Elapsed: 0.000s  Memory: 611.00M
+"input" in: xor.rb.drc:39
+    Polygons (raw): 1 (flat)  1 (hierarchical)
+    Elapsed: 0.000s  Memory: 611.00M
+"^" in: xor.rb.drc:39
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 611.00M
+XOR differences: 0
+"output" in: xor.rb.drc:43
+    Polygons (raw): 0 (flat)  0 (hierarchical)
+    Elapsed: 0.000s  Memory: 612.00M
+Writing layout file: /w/flow/eda/precheck_cfenv3_sky130B/outputs/user_analog_project_wrapper.xor.gds ..
+Total elapsed: 0.030s  Memory: 612.00M

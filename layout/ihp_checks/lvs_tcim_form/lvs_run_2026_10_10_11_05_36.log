@@ -1,0 +1,16 @@
+10-Oct-2026 11:05:37 | INFO    | Your Klayout version is: KLayout 0.30.12 (required >= 0.30.5)
+10-Oct-2026 11:05:37 | INFO    | Running SG13G2 LVS checks on design /w/tcim_form.gds on cell tcim_form
+10-Oct-2026 11:05:39 | INFO    | ==============================================================================
+10-Oct-2026 11:05:39 | INFO    | Important Summary
+10-Oct-2026 11:05:39 | INFO    | +------------------+--------------------------------------------------------------+
+10-Oct-2026 11:05:39 | INFO    | | Status           | PASS                                                         |
+10-Oct-2026 11:05:39 | INFO    | | Mode             | COMPARE                                                      |
+10-Oct-2026 11:05:39 | INFO    | | Outcome          | Comparison mode: PASS (netlists match).                      |
+10-Oct-2026 11:05:39 | INFO    | | Layout           | tcim_form.gds                                                |
+10-Oct-2026 11:05:39 | INFO    | | Top Cell         | tcim_form                                                    |
+10-Oct-2026 11:05:39 | INFO    | | Results Dir      | /w/ihp_checks/lvs_tcim_form                                  |
+10-Oct-2026 11:05:39 | INFO    | | Warnings         | 0                                                            |
+10-Oct-2026 11:05:39 | INFO    | | Errors           | 0                                                            |
+10-Oct-2026 11:05:39 | INFO    | | Run Time (s)     | 2.31                                                         |
+10-Oct-2026 11:05:39 | INFO    | +------------------+--------------------------------------------------------------+
+10-Oct-2026 11:05:39 | INFO    | ==============================================================================

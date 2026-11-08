@@ -1,0 +1,9 @@
+trained in 11 s: train 98.8 %, test 94.7 % (360 samples); non-zero weights 83 % / 97 %, inputs 74 %, hidden 59 %
+digital, LRS3, published spread, poor wiring: accuracy 94.7 % (min 94.7, max 94.7); layer-1 results differing from exact 0.00 %; reads per inference 203; sum of read powers 34.70 mW
+digital, LRS3, spread x2, poor wiring: accuracy 94.7 % (min 94.7, max 94.7); layer-1 results differing from exact 0.00 %; reads per inference 203; sum of read powers 35.21 mW
+analog, LRS3, published spread, best wiring, calibrated: accuracy 94.9 % (min 94.7, max 95.3); layer-1 results differing from exact 25.12 %; reads per inference 8; sum of read powers 35.09 mW
+analog, LRS3, spread x2, best wiring, calibrated: accuracy 94.6 % (min 94.4, max 95.0); layer-1 results differing from exact 53.45 %; reads per inference 8; sum of read powers 35.60 mW
+analog, LRS3, spread x3, best wiring, calibrated: accuracy 94.7 % (min 93.9, max 95.8); layer-1 results differing from exact 67.06 %; reads per inference 8; sum of read powers 36.36 mW
+analog, LRS1, published spread, best wiring, calibrated: accuracy 94.7 % (min 93.9, max 95.8); layer-1 results differing from exact 70.05 %; reads per inference 8; sum of read powers 16.66 mW
+analog, LRS3, published spread, poor wiring, calibrated: accuracy 95.3 % (min 95.0, max 95.8); layer-1 results differing from exact 47.04 %; reads per inference 8; sum of read powers 29.47 mW
+analog, LRS3, published spread, poor wiring, not calibrated: accuracy 95.0 % (min 94.7, max 95.3); layer-1 results differing from exact 83.25 %; reads per inference 8; sum of read powers 28.71 mW

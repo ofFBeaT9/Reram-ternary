@@ -1,0 +1,73 @@
+// Stanford-PKU ReRAM compact model, IHP-style parameters, written for OSDI/Verilog-A compilers.
+//
+//   I      = I0 * exp(-g/g0) * sinh(V/V0)
+//   dg/dt  = -v0 * exp(-Ea/kT) * sinh(gamma * a0 * V / (tox * kT/q)),  gamma = gamma0 - beta*(g/1nm)^alpha
+//   T      = T0 + |V*I| * Rth
+//
+// The gap is an explicit state on the terminal "gap": V(gap) is the gap in nanometres.
+// The state is integrated with ddt() on that node (no manual time stepping), so the model works in
+// any simulator that supports Verilog-A. The starting gap is the parameter gap_ini: in every static
+// (DC / operating-point) analysis the node is held at gap_ini, in transient it follows the rate equation.
+// A linear window of width wsoft stops the gap at gap_min and gap_max.
+//
+// Default kinetics (Ea, v0) are the values re-fitted in this project (model/calibrate.py);
+// the static parameters are Table 3 of Perez-Bosch Quesada et al., Electronics 10, 645 (2021).
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module reram_stanford_ihp(te, be, gap);
+    inout te, be, gap;
+    electrical te, be, gap;
+
+    parameter real I0      = 854e-6  from (0:inf);    // A
+    parameter real g0      = 0.28    from (0:inf);    // nm
+    parameter real V0      = 0.35    from (0:inf);    // V
+    parameter real v0      = 2.79e9  from (0:inf);    // nm/s
+    parameter real Ea      = 1.0     from (0:inf);    // eV
+    parameter real a0      = 0.25    from (0:inf);    // nm
+    parameter real tox     = 6.0     from (0:inf);    // nm
+    parameter real gamma0  = 20.0;
+    parameter real beta    = 0.4;
+    parameter real alpha   = 3.0;
+    parameter real Rth     = 1500.0  from [0:inf);    // K/W
+    parameter real T0      = 300.0   from (0:inf);    // K
+    parameter real gap_min = 0.10    from (0:inf);    // nm
+    parameter real gap_max = 1.80    from (0:inf);    // nm
+    parameter real gap_ini = 1.80    from (0:inf);    // nm, gap at the start of a transient and in DC
+    parameter real wsoft   = 0.01    from (0:inf);    // nm, width of the gap window
+    parameter real cstate  = 1e-9    from (0:inf);    // F, scaling of the state equation
+
+    real vtb, g, icell, temp, kt, gam, x, rate, win, xs, sh;
+
+    analog begin
+        vtb   = V(te, be);
+        g     = V(gap);
+        // sinh with a linear continuation beyond |V/V0| = 15 (|V| = 5.25 V at the default V0): identical to
+        // sinh() over the whole physical range, but finite for the wild voltages a Newton iteration may try
+        xs    = vtb / V0;
+        if (xs > 15.0)
+            sh = sinh(15.0) + cosh(15.0) * (xs - 15.0);
+        else if (xs < -15.0)
+            sh = -sinh(15.0) + cosh(15.0) * (xs + 15.0);
+        else
+            sh = sinh(xs);
+        icell = I0 * limexp(-g / g0) * sh;
+        temp  = T0 + abs(vtb * icell) * Rth;
+        kt    = 8.617333262e-5 * temp;                       // eV
+        gam   = gamma0 - beta * pow(max(g, 0.0), alpha);
+        x     = gam * a0 * vtb / (tox * kt);
+        if (x > 200.0)  x = 200.0;
+        if (x < -200.0) x = -200.0;
+        rate  = -v0 * exp(-Ea / kt) * sinh(x);               // nm/s
+        if (rate < 0.0)
+            win = min(1.0, max(0.0, (g - gap_min) / wsoft));     // closes to exactly zero at the floor
+        else
+            win = min(1.0, max(0.0, (gap_max - g) / wsoft));
+        I(te, be) <+ icell;
+        if (analysis("static"))
+            I(gap) <+ V(gap) - gap_ini;                       // hold the state in DC / operating point
+        else
+            I(gap) <+ cstate * ddt(V(gap)) - cstate * rate * win;
+    end
+endmodule

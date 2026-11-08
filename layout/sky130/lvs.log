@@ -1,0 +1,70 @@
+Netgen 1.5.324 compiled on Fri Oct  9 22:56:30 UTC 2026
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Generating JSON file result
+Reading netlist file tcim_sky130_array.spice for tcim_sky130_array.spice tcim_sky130_array
+Call to undefined subcircuit sky130_fd_pr__nfet_g5v0d10v5
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_pr_reram__reram_cell
+Creating placeholder cell definition.
+Reading netlist file schematic.spice for schematic.spice tcim_sky130_array
+Call to undefined subcircuit sky130_fd_pr__nfet_g5v0d10v5
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_pr_reram__reram_cell
+Creating placeholder cell definition.
+
+Reading setup file /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pdk/sky130B/libs.tech/netgen/sky130B_setup.tcl
+
+Model sky130_fd_pr__nfet_g5v0d10v5 pin 1 == 3
+No property mult found for device sky130_fd_pr__nfet_g5v0d10v5
+No property sa found for device sky130_fd_pr__nfet_g5v0d10v5
+No property sb found for device sky130_fd_pr__nfet_g5v0d10v5
+No property sd found for device sky130_fd_pr__nfet_g5v0d10v5
+No property nf found for device sky130_fd_pr__nfet_g5v0d10v5
+No property nrd found for device sky130_fd_pr__nfet_g5v0d10v5
+No property nrs found for device sky130_fd_pr__nfet_g5v0d10v5
+No property area found for device sky130_fd_pr__nfet_g5v0d10v5
+No property perim found for device sky130_fd_pr__nfet_g5v0d10v5
+No property topography found for device sky130_fd_pr__nfet_g5v0d10v5
+Model sky130_fd_pr__nfet_g5v0d10v5 pin 1 == 3
+No property as found for device sky130_fd_pr__nfet_g5v0d10v5
+No property ad found for device sky130_fd_pr__nfet_g5v0d10v5
+No property ps found for device sky130_fd_pr__nfet_g5v0d10v5
+No property pd found for device sky130_fd_pr__nfet_g5v0d10v5
+No property mult found for device sky130_fd_pr__nfet_g5v0d10v5
+No property sa found for device sky130_fd_pr__nfet_g5v0d10v5
+No property sb found for device sky130_fd_pr__nfet_g5v0d10v5
+No property sd found for device sky130_fd_pr__nfet_g5v0d10v5
+No property nf found for device sky130_fd_pr__nfet_g5v0d10v5
+No property nrd found for device sky130_fd_pr__nfet_g5v0d10v5
+No property nrs found for device sky130_fd_pr__nfet_g5v0d10v5
+No property area found for device sky130_fd_pr__nfet_g5v0d10v5
+No property perim found for device sky130_fd_pr__nfet_g5v0d10v5
+No property topography found for device sky130_fd_pr__nfet_g5v0d10v5
+No property Tfilament_0 found for device sky130_fd_pr_reram__reram_cell
+No property Tfilament_0 found for device sky130_fd_pr_reram__reram_cell
+Comparison output logged to file lvs.out
+Logging to file "lvs.out" enabled
+Circuit sky130_fd_pr__nfet_g5v0d10v5 contains no devices.
+Circuit sky130_fd_pr_reram__reram_cell contains no devices.
+
+Contents of circuit 1:  Circuit: 'tcim_sky130_array'
+Circuit tcim_sky130_array contains 6912 device instances.
+  Class: sky130_fd_pr_reram__reram_cell instances: 3456
+  Class: sky130_fd_pr__nfet_g5v0d10v5 instances: 3456
+Circuit contains 3601 nets.
+Contents of circuit 2:  Circuit: 'tcim_sky130_array'
+Circuit tcim_sky130_array contains 6912 device instances.
+  Class: sky130_fd_pr_reram__reram_cell instances: 3456
+  Class: sky130_fd_pr__nfet_g5v0d10v5 instances: 3456
+Circuit contains 3601 nets.
+
+Circuit 1 contains 6912 devices, Circuit 2 contains 6912 devices.
+Circuit 1 contains 3601 nets,    Circuit 2 contains 3601 nets.
+
+
+Final result: 
+Circuits match uniquely.
+.
+Logging to file "lvs.out" disabled
+LVS Done.

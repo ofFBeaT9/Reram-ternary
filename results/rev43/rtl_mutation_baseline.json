@@ -1,0 +1,26 @@
+{
+ "default": {
+  "name": "unchanged RTL (must pass)",
+  "status": "SURVIVED",
+  "first_failure": "",
+  "in_test": "82512 checks, 0 failures",
+  "seconds": 561,
+  "summary": [
+   "82512 checks, 0 failures",
+   "TEST PASSED"
+  ],
+  "passed": true
+ },
+ "_pnx": {
+  "name": "unchanged RTL (must pass)",
+  "status": "SURVIVED",
+  "first_failure": "",
+  "in_test": "82512 checks, 0 failures",
+  "seconds": 465,
+  "summary": [
+   "82512 checks, 0 failures",
+   "TEST PASSED"
+  ],
+  "passed": true
+ }
+}

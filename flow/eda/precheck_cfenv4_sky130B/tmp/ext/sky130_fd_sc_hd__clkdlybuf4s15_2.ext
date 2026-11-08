@@ -1,0 +1,41 @@
+timestamp 1
+version 8.3
+tech sky130B
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+parameters sky130_fd_pr__special_nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__special_pfet_01v8_hvt l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__pfet_01v8_hvt l=l w=w a1=as p1=ps a2=ad p2=pd
+port "VGND" 5 30 -17 64 17 m1
+port "X" 6 673 85 707 119 li
+port "X" 6 673 153 707 187 li
+port "X" 6 673 221 707 255 li
+port "X" 6 673 289 707 323 li
+port "X" 6 673 357 707 391 li
+port "X" 6 673 425 707 459 li
+port "VPWR" 4 30 527 64 561 m1
+port "A" 7 30 221 64 255 li
+port "A" 7 30 289 64 323 li
+port "VPB" 3 30 527 64 561 nw
+port "VNB" 2 30 -17 64 17 pw
+node "VGND" 0 0 30 -17 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "X" 0 0 673 425 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VPWR" 0 0 30 527 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_362_333#" 0 0 362 333 pdif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_228_47#" 0 0 228 47 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_27_47#" 0 0 27 47 ndif 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "A" 0 0 30 289 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VPB" 0 0 30 527 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VNB" 0 0 30 -17 pw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+device msubckt sky130_fd_pr__nfet_01v8 673 47 674 48 l=30 w=84 "VNB" "a_362_333#" 60 0 "X" 84 2352,140 "VGND" 84 8232,364
+device msubckt sky130_fd_pr__nfet_01v8 587 47 588 48 l=30 w=84 "VNB" "a_362_333#" 60 0 "VGND" 84 7183,272 "X" 84 2352,140
+device msubckt sky130_fd_pr__nfet_01v8 415 47 416 48 l=30 w=130 "VNB" "a_228_47#" 60 0 "a_362_333#" 130 6760,364 "VGND" 130 7183,272
+device msubckt sky130_fd_pr__nfet_01v8 198 47 199 48 l=30 w=130 "VNB" "a_27_47#" 60 0 "VGND" 130 5149,217 "a_228_47#" 130 10530,422
+device msubckt sky130_fd_pr__nfet_01v8 81 47 82 48 l=30 w=84 "VNB" "A" 60 0 "a_27_47#" 84 4536,276 "VGND" 84 5149,217
+device msubckt sky130_fd_pr__pfet_01v8_hvt 673 297 674 298 l=30 w=200 "VPB" "a_362_333#" 60 0 "X" 200 5600,256 "VPWR" 200 19600,596
+device msubckt sky130_fd_pr__pfet_01v8_hvt 587 297 588 298 l=30 w=200 "VPB" "a_362_333#" 60 0 "VPWR" 200 12544,342 "X" 200 5600,256
+device msubckt sky130_fd_pr__pfet_01v8_hvt 415 333 416 334 l=30 w=164 "VPB" "a_228_47#" 60 0 "a_362_333#" 164 8692,434 "VPWR" 164 12544,342
+device msubckt sky130_fd_pr__pfet_01v8_hvt 198 333 199 334 l=30 w=164 "VPB" "a_27_47#" 60 0 "VPWR" 164 8034,287 "a_228_47#" 164 12464,480
+device msubckt sky130_fd_pr__pfet_01v8_hvt 81 297 82 298 l=30 w=200 "VPB" "A" 60 0 "a_27_47#" 200 10800,508 "VPWR" 200 8034,287

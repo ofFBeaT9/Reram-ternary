@@ -1,0 +1,12 @@
+{
+ "table_equals_definition_default": true,
+ "table_equals_definition_pnx": true,
+ "reference": "tests/equiv/rtl_rev4 (the RTL of roadmap revision 4)",
+ "equivalence_points": 2410,
+ "proven": 2410,
+ "unproven": 0,
+ "place_and_route_source": {
+  "proven": 1618,
+  "unproven": 0
+ }
+}

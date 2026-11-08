@@ -1,0 +1,26 @@
+# Two-copy miter: TCIM0's request sequence and DONE timing do not depend on inputs, weights or array answers
+# (revision 4.6, security study). Run: cd formal && $SBY -f tcim_miter.sby prove   (and the fault check: check_faults.py)
+[tasks]
+prove
+prove_pnx
+
+[options]
+mode prove
+
+[engines]
+abc pdr
+
+[script]
+prove:     read_slang --top tcim_miter tcim_pkg.sv tcim_core.sv tcim_miter.sv
+prove_pnx: read_slang -D TCIM_ENC_PNX --top tcim_miter tcim_pkg.sv tcim_core.sv tcim_miter.sv
+prep -top tcim_miter
+memory_map
+techmap -map +/techmap.v t:$shiftx t:$shift
+opt -fast
+setundef -undriven -anyseq
+setundef -anyseq
+
+[files]
+../rtl/tcim_pkg.sv
+../rtl/tcim_core.sv
+tcim_miter.sv

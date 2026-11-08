@@ -1,0 +1,5 @@
+table = definition, defines '': SUCCESS!
+table = definition, defines '-D TCIM_ENC_PNX': SUCCESS!
+Of those cells 2410 are proven and 0 are unproven.
+Equivalence successfully proven!
+place-and-route source: Of those cells 1618 are proven and 0 are unproven.

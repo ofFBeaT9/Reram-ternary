@@ -1,0 +1,880 @@
+OpenSTA 3.1.0 b7d866ff69 Copyright (c) 2026, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Warning 1171: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/sky130libs/sky130_fd_sc_hd__ss_100C_1v60.lib line 24, default_fanout_load is 0.0.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 37988, instance ANTENNA_15:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 37994, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38012, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38013, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38014, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38015, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38016, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38017, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38018, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38019, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38020, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38094, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38096, net ANTENNA_15 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38135, instance ANTENNA_16:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38141, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38146, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38147, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38148, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38149, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38150, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38151, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38152, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38153, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38154, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38155, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38190, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38192, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 38717, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 40828, net ANTENNA_7 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 51270, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 55198, net ANTENNA_16 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 73851, instance ANTENNA_17:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 73856, net ANTENNA_17 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 73861, net ANTENNA_17 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 73862, net ANTENNA_17 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 73863, net ANTENNA_17 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 73864, net ANTENNA_17 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 73865, net ANTENNA_17 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 73866, net ANTENNA_17 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 73879, net ANTENNA_17 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 73885, net ANTENNA_17 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 84070, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 89761, net ANTENNA_23 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 95243, net ANTENNA_14 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 104650, instance ANTENNA_18:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 104657, net ANTENNA_18 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 104667, net ANTENNA_18 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 104668, net ANTENNA_18 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 104669, net ANTENNA_18 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 104764, net ANTENNA_18 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 105272, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 119349, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 124771, net ANTENNA_8 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 154029, net ANTENNA_20 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 154793, net ANTENNA_20 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 155862, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 156648, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 156682, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 156683, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 157396, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 163099, net ANTENNA_23 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 172810, net ANTENNA_21 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 219258, net ANTENNA_17 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 219605, net ANTENNA_17 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 225751, instance ANTENNA_20:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 225756, net ANTENNA_20 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 225764, net ANTENNA_20 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 225765, net ANTENNA_20 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 225795, net ANTENNA_20 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 225800, net ANTENNA_20 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 225801, net ANTENNA_20 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 225818, net ANTENNA_20 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 225827, net ANTENNA_20 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 226250, net ANTENNA_18 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 226251, net ANTENNA_18 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 226782, net ANTENNA_14 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 226786, net ANTENNA_14 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 231070, net ANTENNA_20 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 231748, instance ANTENNA_21:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 231753, net ANTENNA_21 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 231806, net ANTENNA_21 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 231828, net ANTENNA_21 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 231936, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 233819, net ANTENNA_18 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 233976, instance ANTENNA_14:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 233981, net ANTENNA_14 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 233988, net ANTENNA_14 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 234030, net ANTENNA_14 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 234034, net ANTENNA_14 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 234049, net ANTENNA_14 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 234056, net ANTENNA_14 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 234063, instance ANTENNA_13:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 234068, net ANTENNA_13 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 234100, net ANTENNA_13 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 234318, instance ANTENNA_12:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 234323, net ANTENNA_12 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 234341, net ANTENNA_12 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 234709, instance ANTENNA_11:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 234714, net ANTENNA_11 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 234727, net ANTENNA_11 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 236121, instance ANTENNA_10:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 236126, net ANTENNA_10 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 236142, net ANTENNA_10 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 236149, instance ANTENNA_9:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 236154, net ANTENNA_9 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 236185, net ANTENNA_9 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 236454, instance ANTENNA_8:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 236459, net ANTENNA_8 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 236503, net ANTENNA_8 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 236511, net ANTENNA_8 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 236579, instance ANTENNA_7:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 236584, net ANTENNA_7 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 236611, net ANTENNA_7 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 236620, net ANTENNA_7 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237025, instance ANTENNA_19:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237030, net ANTENNA_19 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237037, net ANTENNA_19 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237038, net ANTENNA_19 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237039, net ANTENNA_19 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237040, net ANTENNA_19 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237111, net ANTENNA_19 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237358, instance ANTENNA_6:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237363, net ANTENNA_6 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237389, net ANTENNA_6 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237474, instance ANTENNA_5:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237479, net ANTENNA_5 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237503, net ANTENNA_5 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237739, instance ANTENNA_4:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237744, net ANTENNA_4 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237766, net ANTENNA_4 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237773, instance ANTENNA_3:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237778, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237782, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237783, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237824, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237850, net ANTENNA_3 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237857, instance ANTENNA_2:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237862, net ANTENNA_2 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237868, net ANTENNA_2 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237869, net ANTENNA_2 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237870, net ANTENNA_2 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 237943, net ANTENNA_2 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 238106, instance ANTENNA_1:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 238111, net ANTENNA_1 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 238135, net ANTENNA_1 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 247111, net ANTENNA_17 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 267023, net ANTENNA_2 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 267049, net ANTENNA_2 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 271750, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 275020, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 280515, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 283363, net ANTENNA_16 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 283744, net ANTENNA_17 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 287454, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 295608, net ANTENNA_14 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 298984, net ANTENNA_2 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 300858, net ANTENNA_20 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 300870, net ANTENNA_20 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 303592, net ANTENNA_20 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 312855, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 312856, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 313432, net ANTENNA_17 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 318587, instance ANTENNA_24:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 318599, net ANTENNA_24 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 318697, net ANTENNA_17 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 318767, net ANTENNA_24 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 318777, net ANTENNA_24 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 318835, net ANTENNA_24 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 321853, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 324691, net ANTENNA_17 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 350864, net ANTENNA_19 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 351051, net ANTENNA_19 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 351052, net ANTENNA_19 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 351325, net ANTENNA_19 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 367542, net ANTENNA_15 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 367543, net ANTENNA_15 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 370781, instance ANTENNA_22:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 370789, net ANTENNA_22 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 370908, net ANTENNA_22 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 372554, net ANTENNA_24 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 377818, net ANTENNA_24 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 386352, net ANTENNA_23 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 389145, instance ANTENNA_23:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 389151, net ANTENNA_23 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 389193, net ANTENNA_23 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 389195, net ANTENNA_23 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 389212, net ANTENNA_23 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 389223, net ANTENNA_23 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr43/sky/spef_k1.2/6_final.spef line 389225, net ANTENNA_23 not found.
+@@ setup_wns -6.147875986073359e-9
+@@ setup_tns -8.003505058695737e-7
+@@ hold_wns 5.728435503726814e-10
+@@ BEGIN max path
+Startpoint: u_core.r_prow[1]$_DFFE_PN0P_
+            (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _15762_ (rising clock gating-check end-point clocked by clk)
+Path Group: clk
+Path Type: max
+
+   Delay     Time   Description
+-----------------------------------------------------------
+   0.000    0.000   clock clk (rise edge)
+   2.065    2.065   clock network delay (propagated)
+   0.000    2.065 ^ u_core.r_prow[1]$_DFFE_PN0P_/CLK (sky130_fd_sc_hd__dfrtp_1)
+   1.097    3.162 ^ u_core.r_prow[1]$_DFFE_PN0P_/Q (sky130_fd_sc_hd__dfrtp_1)
+   0.503    3.664 v _08843_/Y (sky130_fd_sc_hd__nand2_1)
+   0.852    4.516 v _16152_/SUM (sky130_fd_sc_hd__ha_1)
+   0.453    4.969 v _08696_/X (sky130_fd_sc_hd__xor2_1)
+   0.436    5.405 ^ _08801_/Y (sky130_fd_sc_hd__o21ai_1)
+   0.181    5.586 v _08802_/Y (sky130_fd_sc_hd__inv_1)
+   0.636    6.222 v _16066_/SUM (sky130_fd_sc_hd__ha_1)
+   0.257    6.479 v _08691_/Y (sky130_fd_sc_hd__xnor2_1)
+   0.392    6.871 v _08692_/X (sky130_fd_sc_hd__and2_1)
+   0.744    7.615 v _08702_/X (sky130_fd_sc_hd__or2_2)
+   0.623    8.239 v _16076_/SUM (sky130_fd_sc_hd__ha_1)
+   0.550    8.789 v _08728_/X (sky130_fd_sc_hd__mux2_2)
+   0.113    8.902 ^ _08729_/Y (sky130_fd_sc_hd__nand2_1)
+   0.587    9.488 ^ _08730_/X (sky130_fd_sc_hd__o31a_1)
+   0.641   10.129 v _15888_/SUM (sky130_fd_sc_hd__ha_1)
+   0.541   10.670 v _08732_/X (sky130_fd_sc_hd__mux2_2)
+   0.111   10.782 ^ _08733_/Y (sky130_fd_sc_hd__nand2_1)
+   0.337   11.118 ^ _08734_/X (sky130_fd_sc_hd__o21a_1)
+   0.159   11.277 v _08735_/Y (sky130_fd_sc_hd__inv_1)
+   0.252   11.529 ^ _10687_/Y (sky130_fd_sc_hd__nor2_1)
+   0.226   11.754 v _10688_/Y (sky130_fd_sc_hd__o31ai_1)
+   0.580   12.335 ^ _10689_/Y (sky130_fd_sc_hd__nor4_1)
+   0.422   12.756 v _10690_/Y (sky130_fd_sc_hd__nand3_1)
+   0.748   13.505 ^ _10691_/Y (sky130_fd_sc_hd__nor4_1)
+   0.282   13.787 v _10693_/Y (sky130_fd_sc_hd__a2111oi_4)
+   0.918   14.705 ^ _10694_/X (sky130_fd_sc_hd__xor2_2)
+   0.855   15.559 v _10726_/Y (sky130_fd_sc_hd__nand4_1)
+   1.451   17.010 ^ _15606_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.006   17.016 ^ _15762_/GATE (sky130_fd_sc_hd__dlclkp_1)
+           17.016   data arrival time
+
+  10.000   10.000   clock clk (rise edge)
+   1.489   11.489   clock network delay (propagated)
+   0.000   11.489   clock reconvergence pessimism
+           11.489 ^ _15762_/CLK (sky130_fd_sc_hd__dlclkp_1)
+  -0.621   10.868   library setup time
+           10.868   data required time
+-----------------------------------------------------------
+           10.868   data required time
+          -17.016   data arrival time
+-----------------------------------------------------------
+           -6.148   slack (VIOLATED)
+
+
+@@ END
+@@ BEGIN min path
+Startpoint: u_spi.cmd[3]$_DFFE_PN0P_
+            (rising edge-triggered flip-flop clocked by clk)
+Endpoint: bus_addr[4]$_DFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+   Delay     Time   Description
+-----------------------------------------------------------
+   0.000    0.000   clock clk (rise edge)
+   2.060    2.060   clock network delay (propagated)
+   0.000    2.060 ^ u_spi.cmd[3]$_DFFE_PN0P_/CLK (sky130_fd_sc_hd__dfrtp_1)
+   0.681    2.741 ^ u_spi.cmd[3]$_DFFE_PN0P_/Q (sky130_fd_sc_hd__dfrtp_1)
+   0.000    2.741 ^ bus_addr[4]$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)
+            2.741   data arrival time
+
+   0.000    0.000   clock clk (rise edge)
+   2.259    2.259   clock network delay (propagated)
+   0.000    2.259   clock reconvergence pessimism
+            2.259 ^ bus_addr[4]$_DFFE_PN0P_/CLK (sky130_fd_sc_hd__dfrtp_1)
+  -0.091    2.168   library hold time
+            2.168   data required time
+-----------------------------------------------------------
+            2.168   data required time
+           -2.741   data arrival time
+-----------------------------------------------------------
+            0.573   slack (MET)
+
+
+@@ END
+@@ BEGIN limits
+max slew
+
+Pin                                    Limit    Slew   Slack
+------------------------------------------------------------
+_15529_/Y                               1.49    2.68   -1.19 (VIOLATED)
+_15763_/GATE                            1.50    2.68   -1.18 (VIOLATED)
+_13547_/Y                               1.50    2.66   -1.16 (VIOLATED)
+_15663_/C                               1.50    2.66   -1.16 (VIOLATED)
+_13560_/B                               1.50    2.66   -1.16 (VIOLATED)
+_13566_/B_N                             1.50    2.66   -1.16 (VIOLATED)
+_13573_/B                               1.50    2.66   -1.16 (VIOLATED)
+_13576_/C                               1.50    2.66   -1.16 (VIOLATED)
+_13548_/B_N                             1.50    2.66   -1.16 (VIOLATED)
+_13554_/B                               1.50    2.66   -1.16 (VIOLATED)
+_15511_/Y                               1.47    2.30   -0.84 (VIOLATED)
+_15585_/Y                               1.48    2.30   -0.82 (VIOLATED)
+_15742_/GATE                            1.50    2.30   -0.80 (VIOLATED)
+_15727_/B_N                             1.50    2.30   -0.80 (VIOLATED)
+_15779_/GATE                            1.50    2.30   -0.80 (VIOLATED)
+_15587_/Y                               1.48    2.27   -0.79 (VIOLATED)
+_15729_/Y                               1.49    2.26   -0.77 (VIOLATED)
+_15764_/GATE                            1.50    2.27   -0.77 (VIOLATED)
+_15738_/GATE                            1.50    2.26   -0.76 (VIOLATED)
+_08684_/Y                               1.49    2.23   -0.75 (VIOLATED)
+_09146_/B                               1.50    2.23   -0.73 (VIOLATED)
+_08921_/A2                              1.50    2.23   -0.73 (VIOLATED)
+_09166_/B                               1.50    2.23   -0.73 (VIOLATED)
+_09180_/A2                              1.50    2.23   -0.73 (VIOLATED)
+_09246_/A2                              1.50    2.23   -0.73 (VIOLATED)
+_09210_/A2                              1.50    2.23   -0.73 (VIOLATED)
+_09227_/A2                              1.50    2.23   -0.73 (VIOLATED)
+_09216_/B                               1.50    2.23   -0.73 (VIOLATED)
+_09187_/B                               1.50    2.23   -0.73 (VIOLATED)
+_09147_/A2                              1.50    2.23   -0.73 (VIOLATED)
+_09127_/B                               1.50    2.23   -0.73 (VIOLATED)
+_09157_/B                               1.50    2.23   -0.73 (VIOLATED)
+_09158_/A2                              1.50    2.23   -0.73 (VIOLATED)
+_09108_/B                               1.50    2.23   -0.73 (VIOLATED)
+_09109_/A2                              1.50    2.23   -0.73 (VIOLATED)
+place701/A                              1.50    2.23   -0.73 (VIOLATED)
+_09117_/B                               1.50    2.23   -0.73 (VIOLATED)
+_09277_/A2                              1.50    2.23   -0.73 (VIOLATED)
+_09199_/A2                              1.50    2.23   -0.73 (VIOLATED)
+_09136_/B                               1.50    2.23   -0.73 (VIOLATED)
+_09096_/B                               1.50    2.23   -0.73 (VIOLATED)
+_09060_/A2                              1.50    2.23   -0.73 (VIOLATED)
+_09486_/A2                              1.50    2.23   -0.73 (VIOLATED)
+_09083_/A2                              1.50    2.23   -0.73 (VIOLATED)
+_09238_/A2                              1.50    2.23   -0.73 (VIOLATED)
+_09269_/A2                              1.50    2.23   -0.73 (VIOLATED)
+_09666_/A2                              1.50    2.23   -0.73 (VIOLATED)
+_09017_/A2                              1.50    2.23   -0.73 (VIOLATED)
+_09289_/A2                              1.50    2.23   -0.73 (VIOLATED)
+_09510_/A2                              1.50    2.23   -0.73 (VIOLATED)
+_11745_/Y                               1.50    2.18   -0.68 (VIOLATED)
+_12223_/A2                              1.50    2.18   -0.68 (VIOLATED)
+_12661_/A2                              1.50    2.18   -0.68 (VIOLATED)
+_12654_/A2                              1.50    2.18   -0.68 (VIOLATED)
+_13345_/A2                              1.50    2.18   -0.68 (VIOLATED)
+_13004_/A2                              1.50    2.18   -0.68 (VIOLATED)
+_12998_/A2                              1.50    2.18   -0.68 (VIOLATED)
+_13902_/A2                              1.50    2.18   -0.68 (VIOLATED)
+_12781_/A2                              1.50    2.18   -0.68 (VIOLATED)
+_12775_/A2                              1.50    2.18   -0.68 (VIOLATED)
+_13895_/A2                              1.50    2.18   -0.68 (VIOLATED)
+_11761_/A2                              1.50    2.18   -0.68 (VIOLATED)
+_11753_/A2                              1.50    2.18   -0.68 (VIOLATED)
+place696/A                              1.50    2.18   -0.68 (VIOLATED)
+_15300_/Y                               1.50    2.11   -0.61 (VIOLATED)
+_15357_/B                               1.50    2.11   -0.61 (VIOLATED)
+_15358_/A1                              1.50    2.11   -0.61 (VIOLATED)
+_15365_/B                               1.50    2.11   -0.61 (VIOLATED)
+_15309_/A1                              1.50    2.11   -0.61 (VIOLATED)
+_15366_/A1                              1.50    2.11   -0.61 (VIOLATED)
+_15308_/B                               1.50    2.11   -0.61 (VIOLATED)
+_15333_/B                               1.50    2.11   -0.61 (VIOLATED)
+_15334_/A1                              1.50    2.11   -0.61 (VIOLATED)
+_15341_/B                               1.50    2.11   -0.61 (VIOLATED)
+_15342_/A1                              1.50    2.11   -0.61 (VIOLATED)
+_15329_/B                               1.50    2.11   -0.61 (VIOLATED)
+_15330_/A1                              1.50    2.11   -0.61 (VIOLATED)
+_15353_/B                               1.50    2.11   -0.61 (VIOLATED)
+_15354_/A1                              1.50    2.11   -0.61 (VIOLATED)
+_15361_/B                               1.50    2.11   -0.61 (VIOLATED)
+_15362_/A1                              1.50    2.11   -0.61 (VIOLATED)
+_15325_/B                               1.50    2.11   -0.61 (VIOLATED)
+_15326_/A1                              1.50    2.11   -0.61 (VIOLATED)
+_15345_/B                               1.50    2.11   -0.61 (VIOLATED)
+_15349_/B                               1.50    2.11   -0.61 (VIOLATED)
+_15350_/A1                              1.50    2.11   -0.61 (VIOLATED)
+_15346_/A1                              1.50    2.11   -0.61 (VIOLATED)
+_15316_/B                               1.50    2.11   -0.61 (VIOLATED)
+_15317_/A1                              1.50    2.11   -0.61 (VIOLATED)
+_15337_/B                               1.50    2.11   -0.61 (VIOLATED)
+_15338_/A1                              1.50    2.11   -0.61 (VIOLATED)
+_15321_/B                               1.50    2.11   -0.61 (VIOLATED)
+_15322_/A1                              1.50    2.11   -0.61 (VIOLATED)
+_15302_/B                               1.50    2.11   -0.61 (VIOLATED)
+_15303_/A2                              1.50    2.11   -0.61 (VIOLATED)
+_15312_/B                               1.50    2.11   -0.61 (VIOLATED)
+_15313_/A1                              1.50    2.11   -0.61 (VIOLATED)
+_15093_/A1                              1.50    2.10   -0.60 (VIOLATED)
+_15507_/A2                              1.50    2.10   -0.60 (VIOLATED)
+_13475_/X                               1.49    2.09   -0.60 (VIOLATED)
+_15085_/Y                               1.50    2.10   -0.60 (VIOLATED)
+_13501_/B                               1.50    2.09   -0.59 (VIOLATED)
+_13551_/B                               1.50    2.09   -0.59 (VIOLATED)
+_13476_/C                               1.50    2.09   -0.59 (VIOLATED)
+_13564_/A4                              1.50    2.09   -0.59 (VIOLATED)
+_13479_/C                               1.50    2.09   -0.59 (VIOLATED)
+_13579_/B                               1.50    2.09   -0.59 (VIOLATED)
+_13500_/B                               1.50    2.09   -0.59 (VIOLATED)
+_13583_/S                               1.50    2.09   -0.59 (VIOLATED)
+_14946_/Y                               1.48    2.07   -0.59 (VIOLATED)
+_15172_/Y                               1.48    2.06   -0.58 (VIOLATED)
+_14956_/B1                              1.50    2.07   -0.57 (VIOLATED)
+_14970_/B1                              1.50    2.07   -0.57 (VIOLATED)
+_14958_/B1                              1.50    2.07   -0.57 (VIOLATED)
+_14961_/B1                              1.50    2.07   -0.57 (VIOLATED)
+_14964_/B1                              1.50    2.07   -0.57 (VIOLATED)
+_14967_/B1                              1.50    2.07   -0.57 (VIOLATED)
+_14952_/B1                              1.50    2.07   -0.57 (VIOLATED)
+_14984_/B1                              1.50    2.07   -0.57 (VIOLATED)
+_14948_/B1                              1.50    2.07   -0.57 (VIOLATED)
+_14982_/B1                              1.50    2.07   -0.57 (VIOLATED)
+_14975_/B1                              1.50    2.07   -0.57 (VIOLATED)
+_14987_/B1                              1.50    2.07   -0.57 (VIOLATED)
+_14973_/B1                              1.50    2.07   -0.57 (VIOLATED)
+_14979_/B1                              1.50    2.07   -0.57 (VIOLATED)
+_14990_/B1                              1.50    2.07   -0.57 (VIOLATED)
+_14977_/B1                              1.50    2.07   -0.57 (VIOLATED)
+_15126_/Y                               1.49    2.05   -0.56 (VIOLATED)
+_15174_/B1                              1.50    2.06   -0.56 (VIOLATED)
+_15178_/B1                              1.50    2.06   -0.56 (VIOLATED)
+_15215_/B1                              1.50    2.06   -0.56 (VIOLATED)
+_15203_/B1                              1.50    2.06   -0.56 (VIOLATED)
+_15212_/B1                              1.50    2.06   -0.56 (VIOLATED)
+_15209_/B1                              1.50    2.06   -0.56 (VIOLATED)
+_15221_/B1                              1.50    2.06   -0.56 (VIOLATED)
+_15206_/B1                              1.50    2.06   -0.56 (VIOLATED)
+_15218_/B1                              1.50    2.06   -0.56 (VIOLATED)
+_15200_/B1                              1.50    2.06   -0.56 (VIOLATED)
+_15181_/B1                              1.50    2.06   -0.56 (VIOLATED)
+_15184_/B1                              1.50    2.06   -0.56 (VIOLATED)
+_15187_/B1                              1.50    2.06   -0.56 (VIOLATED)
+_15191_/B1                              1.50    2.06   -0.56 (VIOLATED)
+_15194_/B1                              1.50    2.06   -0.56 (VIOLATED)
+_15197_/B1                              1.50    2.06   -0.56 (VIOLATED)
+_15160_/B                               1.50    2.05   -0.55 (VIOLATED)
+_15161_/A3                              1.50    2.05   -0.55 (VIOLATED)
+_15156_/B                               1.50    2.05   -0.55 (VIOLATED)
+_15157_/A3                              1.50    2.05   -0.55 (VIOLATED)
+_15138_/B                               1.50    2.05   -0.55 (VIOLATED)
+_15139_/A3                              1.50    2.05   -0.55 (VIOLATED)
+_15140_/B                               1.50    2.05   -0.55 (VIOLATED)
+_15141_/A3                              1.50    2.05   -0.55 (VIOLATED)
+_15148_/B                               1.50    2.05   -0.55 (VIOLATED)
+_15152_/B                               1.50    2.05   -0.55 (VIOLATED)
+_15153_/A3                              1.50    2.05   -0.55 (VIOLATED)
+_15149_/A3                              1.50    2.05   -0.55 (VIOLATED)
+_15154_/B                               1.50    2.05   -0.55 (VIOLATED)
+_15155_/A3                              1.50    2.05   -0.55 (VIOLATED)
+_15150_/B                               1.50    2.05   -0.55 (VIOLATED)
+_15151_/A3                              1.50    2.05   -0.55 (VIOLATED)
+_15144_/B                               1.50    2.05   -0.55 (VIOLATED)
+_15145_/A3                              1.50    2.05   -0.55 (VIOLATED)
+_15133_/B                               1.50    2.05   -0.55 (VIOLATED)
+_15134_/A3                              1.50    2.05   -0.55 (VIOLATED)
+_15129_/B                               1.50    2.05   -0.55 (VIOLATED)
+_15130_/A3                              1.50    2.05   -0.55 (VIOLATED)
+_15131_/B                               1.50    2.05   -0.55 (VIOLATED)
+_15132_/A3                              1.50    2.05   -0.55 (VIOLATED)
+_15158_/B                               1.50    2.05   -0.55 (VIOLATED)
+_15159_/A3                              1.50    2.05   -0.55 (VIOLATED)
+_15142_/B                               1.50    2.05   -0.55 (VIOLATED)
+_15143_/A3                              1.50    2.05   -0.55 (VIOLATED)
+_15146_/B                               1.50    2.05   -0.55 (VIOLATED)
+_15147_/A3                              1.50    2.05   -0.55 (VIOLATED)
+_15136_/A3                              1.50    2.05   -0.55 (VIOLATED)
+_15135_/B                               1.50    2.05   -0.55 (VIOLATED)
+_13761_/Y                               1.49    2.03   -0.54 (VIOLATED)
+_13884_/Y                               1.49    2.02   -0.53 (VIOLATED)
+_15660_/C                               1.50    2.03   -0.53 (VIOLATED)
+_13800_/B                               1.50    2.03   -0.53 (VIOLATED)
+_13798_/A1                              1.50    2.03   -0.53 (VIOLATED)
+_13762_/B                               1.50    2.03   -0.53 (VIOLATED)
+_13779_/A1                              1.50    2.03   -0.53 (VIOLATED)
+_13785_/A1                              1.50    2.03   -0.53 (VIOLATED)
+_15663_/D                               1.50    2.02   -0.52 (VIOLATED)
+_13885_/B_N                             1.50    2.02   -0.52 (VIOLATED)
+_13893_/B_N                             1.50    2.02   -0.52 (VIOLATED)
+_13900_/B_N                             1.50    2.02   -0.52 (VIOLATED)
+_13906_/B_N                             1.50    2.02   -0.52 (VIOLATED)
+_13909_/A2                              1.50    2.02   -0.52 (VIOLATED)
+_13915_/C                               1.50    2.02   -0.52 (VIOLATED)
+_15591_/Y                               1.48    2.00   -0.52 (VIOLATED)
+_15774_/GATE                            1.50    2.00   -0.50 (VIOLATED)
+_14942_/Y                               1.48    1.96   -0.48 (VIOLATED)
+_09098_/Y                               1.49    1.95   -0.47 (VIOLATED)
+_15589_/Y                               1.48    1.94   -0.46 (VIOLATED)
+_14952_/A2                              1.50    1.96   -0.46 (VIOLATED)
+_14984_/A2                              1.50    1.96   -0.46 (VIOLATED)
+_14948_/A2                              1.50    1.96   -0.46 (VIOLATED)
+_14982_/A2                              1.50    1.96   -0.46 (VIOLATED)
+_14975_/A2                              1.50    1.96   -0.46 (VIOLATED)
+_14979_/A2                              1.50    1.96   -0.46 (VIOLATED)
+_14990_/A2                              1.50    1.96   -0.46 (VIOLATED)
+_14977_/A2                              1.50    1.96   -0.46 (VIOLATED)
+_14973_/A2                              1.50    1.96   -0.46 (VIOLATED)
+_14987_/A2                              1.50    1.96   -0.46 (VIOLATED)
+_14956_/A2                              1.50    1.96   -0.46 (VIOLATED)
+_14964_/A2                              1.50    1.96   -0.46 (VIOLATED)
+_14967_/A2                              1.50    1.96   -0.46 (VIOLATED)
+_14970_/A2                              1.50    1.96   -0.46 (VIOLATED)
+_14961_/A2                              1.50    1.96   -0.46 (VIOLATED)
+_14958_/A2                              1.50    1.96   -0.46 (VIOLATED)
+_09101_/A1                              1.50    1.95   -0.45 (VIOLATED)
+_15593_/Y                               1.48    1.93   -0.45 (VIOLATED)
+_11848_/Y                               1.50    1.94   -0.44 (VIOLATED)
+_15665_/D                               1.50    1.94   -0.44 (VIOLATED)
+_11863_/A1                              1.50    1.94   -0.44 (VIOLATED)
+_11884_/B                               1.50    1.94   -0.44 (VIOLATED)
+_11869_/A1                              1.50    1.94   -0.44 (VIOLATED)
+_11882_/A1                              1.50    1.94   -0.44 (VIOLATED)
+_11849_/B                               1.50    1.94   -0.44 (VIOLATED)
+_15758_/GATE                            1.50    1.94   -0.44 (VIOLATED)
+_15765_/GATE                            1.50    1.93   -0.43 (VIOLATED)
+_12643_/Y                               1.49    1.91   -0.42 (VIOLATED)
+_15661_/A                               1.50    1.91   -0.41 (VIOLATED)
+_12665_/B_N                             1.50    1.91   -0.41 (VIOLATED)
+_12668_/A2                              1.50    1.91   -0.41 (VIOLATED)
+_12674_/C                               1.50    1.91   -0.41 (VIOLATED)
+_12652_/B_N                             1.50    1.91   -0.41 (VIOLATED)
+_12644_/B_N                             1.50    1.91   -0.41 (VIOLATED)
+_12659_/B_N                             1.50    1.91   -0.41 (VIOLATED)
+_13653_/Y                               1.49    1.87   -0.38 (VIOLATED)
+_15660_/A                               1.50    1.87   -0.37 (VIOLATED)
+_13687_/B                               1.50    1.87   -0.37 (VIOLATED)
+_13690_/B                               1.50    1.87   -0.37 (VIOLATED)
+_13654_/B                               1.50    1.87   -0.37 (VIOLATED)
+_13669_/A1                              1.50    1.87   -0.37 (VIOLATED)
+_13676_/A1                              1.50    1.87   -0.37 (VIOLATED)
+_14222_/Y                               1.46    1.81   -0.35 (VIOLATED)
+_14330_/A2                              1.50    1.85   -0.35 (VIOLATED)
+_14321_/A1                              1.50    1.85   -0.35 (VIOLATED)
+_14376_/A2                              1.50    1.85   -0.35 (VIOLATED)
+_14632_/A2                              1.50    1.85   -0.35 (VIOLATED)
+_14372_/B                               1.50    1.85   -0.35 (VIOLATED)
+_14340_/A2                              1.50    1.85   -0.35 (VIOLATED)
+_14259_/A                               1.50    1.85   -0.35 (VIOLATED)
+_14269_/B                               1.50    1.85   -0.35 (VIOLATED)
+_14258_/Y                               1.50    1.85   -0.35 (VIOLATED)
+_15555_/Y                               1.48    1.81   -0.33 (VIOLATED)
+_15595_/Y                               1.48    1.80   -0.32 (VIOLATED)
+_15756_/GATE                            1.50    1.81   -0.31 (VIOLATED)
+_14386_/B                               1.50    1.81   -0.31 (VIOLATED)
+_14223_/B                               1.50    1.81   -0.31 (VIOLATED)
+_13930_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13943_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13934_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13938_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13933_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13936_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13931_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13937_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13932_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13939_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13935_/B                               1.50    1.80   -0.30 (VIOLATED)
+_15754_/GATE                            1.50    1.80   -0.30 (VIOLATED)
+_13967_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13960_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13956_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13957_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13958_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13965_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13968_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13942_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13961_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13955_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13971_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13963_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13946_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13970_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13964_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13945_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13950_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13969_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13941_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13975_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13972_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13944_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13966_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13977_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13974_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13959_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13949_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13976_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13973_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13952_/B                               1.50    1.80   -0.30 (VIOLATED)
+_13953_/B                               1.50    1.79   -0.29 (VIOLATED)
+_13978_/B                               1.50    1.79   -0.29 (VIOLATED)
+_13954_/B                               1.50    1.79   -0.29 (VIOLATED)
+_13948_/B                               1.50    1.79   -0.29 (VIOLATED)
+_13947_/B                               1.50    1.79   -0.29 (VIOLATED)
+_13928_/Y                               1.50    1.79   -0.29 (VIOLATED)
+_15597_/Y                               1.48    1.73   -0.25 (VIOLATED)
+_11039_/Y                               1.49    1.74   -0.25 (VIOLATED)
+_11074_/S1                              1.50    1.74   -0.24 (VIOLATED)
+_11068_/S1                              1.50    1.74   -0.24 (VIOLATED)
+_11138_/A1                              1.50    1.74   -0.24 (VIOLATED)
+_11137_/C1                              1.50    1.74   -0.24 (VIOLATED)
+_11132_/C1                              1.50    1.74   -0.24 (VIOLATED)
+_11162_/C1                              1.50    1.74   -0.24 (VIOLATED)
+_11149_/C1                              1.50    1.74   -0.24 (VIOLATED)
+_11133_/A1                              1.50    1.74   -0.24 (VIOLATED)
+_11142_/C1                              1.50    1.74   -0.24 (VIOLATED)
+_11163_/A1                              1.50    1.74   -0.24 (VIOLATED)
+_11166_/C1                              1.50    1.74   -0.24 (VIOLATED)
+_11048_/C                               1.50    1.74   -0.24 (VIOLATED)
+_11052_/C                               1.50    1.74   -0.24 (VIOLATED)
+_11053_/A3                              1.50    1.74   -0.24 (VIOLATED)
+_11097_/S1                              1.50    1.74   -0.24 (VIOLATED)
+_11157_/A1                              1.50    1.74   -0.24 (VIOLATED)
+_11104_/S1                              1.50    1.74   -0.24 (VIOLATED)
+_11044_/A1                              1.50    1.74   -0.24 (VIOLATED)
+_15760_/GATE                            1.50    1.73   -0.23 (VIOLATED)
+_15553_/Y                               1.48    1.71   -0.23 (VIOLATED)
+_15757_/GATE                            1.50    1.71   -0.21 (VIOLATED)
+_09506_/Y                               1.49    1.70   -0.20 (VIOLATED)
+_09515_/A2                              1.50    1.70   -0.20 (VIOLATED)
+_14766_/B2                              1.50    1.68   -0.18 (VIOLATED)
+_15107_/A1                              1.50    1.68   -0.18 (VIOLATED)
+_14765_/Y                               1.50    1.68   -0.18 (VIOLATED)
+_10363_/Y                               1.50    1.67   -0.17 (VIOLATED)
+_10730_/A                               1.50    1.67   -0.17 (VIOLATED)
+_15523_/A1                              1.50    1.67   -0.17 (VIOLATED)
+_10468_/A                               1.50    1.67   -0.17 (VIOLATED)
+_15664_/Y                               1.49    1.66   -0.17 (VIOLATED)
+_15667_/B                               1.50    1.66   -0.16 (VIOLATED)
+_09837_/Y                               1.49    1.64   -0.14 (VIOLATED)
+_09856_/A3                              1.50    1.64   -0.14 (VIOLATED)
+_10048_/Y                               1.47    1.57   -0.10 (VIOLATED)
+_11968_/Y                               1.49    1.59   -0.10 (VIOLATED)
+_14303_/Y                               1.49    1.59   -0.10 (VIOLATED)
+_11185_/Y                               1.49    1.59   -0.10 (VIOLATED)
+_11969_/B                               1.50    1.59   -0.09 (VIOLATED)
+_11975_/B                               1.50    1.59   -0.09 (VIOLATED)
+_11980_/B                               1.50    1.59   -0.09 (VIOLATED)
+_11985_/B                               1.50    1.59   -0.09 (VIOLATED)
+_11994_/B                               1.50    1.59   -0.09 (VIOLATED)
+_11999_/C                               1.50    1.59   -0.09 (VIOLATED)
+_15671_/B                               1.50    1.59   -0.09 (VIOLATED)
+_14352_/B                               1.50    1.59   -0.09 (VIOLATED)
+_14306_/A                               1.50    1.59   -0.09 (VIOLATED)
+_14325_/A1                              1.50    1.59   -0.09 (VIOLATED)
+_11190_/A                               1.50    1.59   -0.09 (VIOLATED)
+_11252_/A                               1.50    1.59   -0.09 (VIOLATED)
+_11191_/A2                              1.50    1.59   -0.09 (VIOLATED)
+_15675_/A                               1.50    1.59   -0.09 (VIOLATED)
+_11272_/A1                              1.50    1.59   -0.09 (VIOLATED)
+_11271_/A                               1.50    1.59   -0.09 (VIOLATED)
+_11283_/B                               1.50    1.59   -0.09 (VIOLATED)
+_11253_/A                               1.50    1.59   -0.09 (VIOLATED)
+_11296_/S                               1.50    1.59   -0.09 (VIOLATED)
+_11304_/B                               1.50    1.59   -0.09 (VIOLATED)
+_11795_/Y                               1.49    1.57   -0.08 (VIOLATED)
+_10054_/B1                              1.50    1.57   -0.07 (VIOLATED)
+_11890_/S                               1.50    1.57   -0.07 (VIOLATED)
+_11887_/S                               1.50    1.57   -0.07 (VIOLATED)
+_11799_/C                               1.50    1.57   -0.07 (VIOLATED)
+_11796_/C                               1.50    1.57   -0.07 (VIOLATED)
+_11872_/A_N                             1.50    1.57   -0.07 (VIOLATED)
+_11871_/B                               1.50    1.57   -0.07 (VIOLATED)
+_11808_/B                               1.50    1.57   -0.07 (VIOLATED)
+_11859_/B                               1.50    1.57   -0.07 (VIOLATED)
+_11809_/A1                              1.50    1.57   -0.07 (VIOLATED)
+_11860_/A1                              1.50    1.57   -0.07 (VIOLATED)
+_09017_/Y                               1.49    1.55   -0.06 (VIOLATED)
+_14540_/Y                               1.47    1.52   -0.05 (VIOLATED)
+_09018_/C                               1.50    1.55   -0.05 (VIOLATED)
+_15755_/GATE                            1.50    1.53   -0.03 (VIOLATED)
+_15535_/Y                               1.50    1.53   -0.03 (VIOLATED)
+_15087_/X                               1.50    1.53   -0.03 (VIOLATED)
+_15110_/B                               1.50    1.53   -0.03 (VIOLATED)
+_15094_/B                               1.50    1.53   -0.03 (VIOLATED)
+_15092_/B                               1.50    1.53   -0.03 (VIOLATED)
+_15116_/B                               1.50    1.53   -0.03 (VIOLATED)
+_15104_/B                               1.50    1.53   -0.03 (VIOLATED)
+_15114_/B                               1.50    1.53   -0.03 (VIOLATED)
+_15098_/B                               1.50    1.53   -0.03 (VIOLATED)
+_15108_/B                               1.50    1.53   -0.03 (VIOLATED)
+_15096_/B                               1.50    1.53   -0.03 (VIOLATED)
+_15120_/B                               1.50    1.53   -0.03 (VIOLATED)
+_15100_/B                               1.50    1.53   -0.03 (VIOLATED)
+_15122_/B                               1.50    1.53   -0.03 (VIOLATED)
+_15106_/B                               1.50    1.53   -0.03 (VIOLATED)
+_15118_/B                               1.50    1.53   -0.03 (VIOLATED)
+_15102_/B                               1.50    1.53   -0.03 (VIOLATED)
+_15112_/B                               1.50    1.53   -0.03 (VIOLATED)
+_08955_/Y                               1.49    1.52   -0.03 (VIOLATED)
+_15089_/A_N                             1.50    1.53   -0.03 (VIOLATED)
+_11510_/Y                               1.50    1.52   -0.02 (VIOLATED)
+_15669_/B                               1.50    1.52   -0.02 (VIOLATED)
+_11536_/A1                              1.50    1.52   -0.02 (VIOLATED)
+_11540_/B                               1.50    1.52   -0.02 (VIOLATED)
+_11526_/A1                              1.50    1.52   -0.02 (VIOLATED)
+_11511_/B                               1.50    1.52   -0.02 (VIOLATED)
+_11520_/A1                              1.50    1.52   -0.02 (VIOLATED)
+_10747_/Y                               1.49    1.51   -0.02 (VIOLATED)
+_15762_/GATE                            1.50    1.52   -0.02 (VIOLATED)
+_15165_/Y                               1.49    1.51   -0.02 (VIOLATED)
+_15606_/Y                               1.50    1.52   -0.02 (VIOLATED)
+_08956_/C1                              1.50    1.52   -0.02 (VIOLATED)
+_15599_/Y                               1.48    1.50   -0.02 (VIOLATED)
+_14545_/C1                              1.50    1.52   -0.02 (VIOLATED)
+_13811_/X                               1.49    1.50   -0.02 (VIOLATED)
+_11740_/Y                               1.50    1.52   -0.02 (VIOLATED)
+_15663_/A                               1.50    1.52   -0.02 (VIOLATED)
+_11765_/A2                              1.50    1.52   -0.02 (VIOLATED)
+_11774_/C                               1.50    1.52   -0.02 (VIOLATED)
+_11759_/B_N                             1.50    1.52   -0.02 (VIOLATED)
+_11767_/A2                              1.50    1.52   -0.02 (VIOLATED)
+_11741_/B_N                             1.50    1.52   -0.02 (VIOLATED)
+_11750_/B_N                             1.50    1.52   -0.02 (VIOLATED)
+_09602_/A2                              1.50    1.51   -0.01 (VIOLATED)
+_10467_/Y                               1.49    1.50   -0.01 (VIOLATED)
+_14402_/A3                              1.50    1.51   -0.01 (VIOLATED)
+_14544_/A                               1.50    1.51   -0.01 (VIOLATED)
+_14481_/A1                              1.50    1.51   -0.01 (VIOLATED)
+_14417_/B                               1.50    1.51   -0.01 (VIOLATED)
+_14589_/A                               1.50    1.51   -0.01 (VIOLATED)
+_14617_/A1                              1.50    1.51   -0.01 (VIOLATED)
+_14401_/A                               1.50    1.51   -0.01 (VIOLATED)
+_14616_/B                               1.50    1.51   -0.01 (VIOLATED)
+_15642_/A1                              1.50    1.51   -0.01 (VIOLATED)
+_15533_/A                               1.50    1.51   -0.01 (VIOLATED)
+_15701_/A2                              1.50    1.51   -0.01 (VIOLATED)
+_15692_/A1                              1.50    1.51   -0.01 (VIOLATED)
+_10749_/C                               1.50    1.51   -0.01 (VIOLATED)
+_15528_/A2                              1.50    1.51   -0.01 (VIOLATED)
+_15234_/B                               1.50    1.51   -0.01 (VIOLATED)
+_15292_/A2                              1.50    1.51   -0.01 (VIOLATED)
+_15267_/B                               1.50    1.51   -0.01 (VIOLATED)
+_15275_/B                               1.50    1.51   -0.01 (VIOLATED)
+_15252_/A2                              1.50    1.51   -0.01 (VIOLATED)
+_15283_/B                               1.50    1.51   -0.01 (VIOLATED)
+_15255_/B                               1.50    1.51   -0.01 (VIOLATED)
+_15259_/B                               1.50    1.51   -0.01 (VIOLATED)
+_15243_/B                               1.50    1.51   -0.01 (VIOLATED)
+_15287_/B                               1.50    1.51   -0.01 (VIOLATED)
+_15279_/B                               1.50    1.51   -0.01 (VIOLATED)
+_15263_/B                               1.50    1.51   -0.01 (VIOLATED)
+_15229_/B                               1.50    1.51   -0.01 (VIOLATED)
+_12121_/X                               1.49    1.49   -0.01 (VIOLATED)
+_15247_/B                               1.50    1.51   -0.01 (VIOLATED)
+_15238_/B                               1.50    1.51   -0.01 (VIOLATED)
+_15271_/B                               1.50    1.51   -0.01 (VIOLATED)
+_15167_/B1                              1.50    1.51   -0.01 (VIOLATED)
+_15172_/B                               1.50    1.51   -0.01 (VIOLATED)
+_15224_/A2                              1.50    1.51   -0.01 (VIOLATED)
+_13890_/A2                              1.50    1.50   -0.00 (VIOLATED)
+_13854_/A                               1.50    1.50   -0.00 (VIOLATED)
+_13889_/B                               1.50    1.50   -0.00 (VIOLATED)
+_13855_/A2                              1.50    1.50   -0.00 (VIOLATED)
+_13816_/C                               1.50    1.50   -0.00 (VIOLATED)
+_13903_/D                               1.50    1.50   -0.00 (VIOLATED)
+_13812_/C                               1.50    1.50   -0.00 (VIOLATED)
+_13904_/A4                              1.50    1.50   -0.00 (VIOLATED)
+_13919_/A2                              1.50    1.50   -0.00 (VIOLATED)
+_13918_/B                               1.50    1.50   -0.00 (VIOLATED)
+_13922_/B                               1.50    1.50   -0.00 (VIOLATED)
+_08986_/Y                               1.49    1.49   -0.00 (VIOLATED)
+_09168_/Y                               1.49    1.49   -0.00 (VIOLATED)
+
+max capacitance
+
+Pin                                    Limit     Cap   Slack
+------------------------------------------------------------
+_11745_/Y                               0.12    0.18   -0.06 (VIOLATED)
+
+_08684_/Y                               0.09    0.15   -0.05 (VIOLATED)
+
+_15126_/Y                               0.09    0.14   -0.04 (VIOLATED)
+
+_13928_/Y                               0.18    0.23   -0.04 (VIOLATED)
+
+_13547_/Y                               0.05    0.09   -0.04 (VIOLATED)
+
+_15300_/Y                               0.08    0.12   -0.04 (VIOLATED)
+
+_15585_/Y                               0.05    0.08   -0.03 (VIOLATED)
+
+_15587_/Y                               0.05    0.08   -0.03 (VIOLATED)
+
+_15729_/Y                               0.04    0.06   -0.02 (VIOLATED)
+
+_15529_/Y                               0.03    0.05   -0.02 (VIOLATED)
+
+_14946_/Y                               0.05    0.07   -0.02 (VIOLATED)
+
+_15172_/Y                               0.05    0.07   -0.02 (VIOLATED)
+
+_13475_/X                               0.05    0.07   -0.02 (VIOLATED)
+
+_15085_/Y                               0.04    0.06   -0.02 (VIOLATED)
+
+_11039_/Y                               0.09    0.11   -0.02 (VIOLATED)
+
+_15591_/Y                               0.05    0.07   -0.02 (VIOLATED)
+
+_14942_/Y                               0.05    0.07   -0.02 (VIOLATED)
+
+_15511_/Y                               0.03    0.05   -0.02 (VIOLATED)
+
+_15589_/Y                               0.05    0.07   -0.02 (VIOLATED)
+
+_15593_/Y                               0.05    0.07   -0.02 (VIOLATED)
+
+_09098_/Y                               0.04    0.06   -0.02 (VIOLATED)
+
+_11848_/Y                               0.05    0.06   -0.02 (VIOLATED)
+
+_15555_/Y                               0.05    0.06   -0.01 (VIOLATED)
+
+_15595_/Y                               0.05    0.06   -0.01 (VIOLATED)
+
+_14258_/Y                               0.04    0.06   -0.01 (VIOLATED)
+
+_13761_/Y                               0.03    0.04   -0.01 (VIOLATED)
+
+_13884_/Y                               0.03    0.04   -0.01 (VIOLATED)
+
+_15597_/Y                               0.05    0.06   -0.01 (VIOLATED)
+
+_15553_/Y                               0.05    0.06   -0.01 (VIOLATED)
+
+_12643_/Y                               0.03    0.04   -0.01 (VIOLATED)
+
+_14222_/Y                               0.03    0.03   -0.01 (VIOLATED)
+
+_13653_/Y                               0.03    0.03   -0.01 (VIOLATED)
+
+_10363_/Y                               0.05    0.06   -0.01 (VIOLATED)
+
+_14765_/Y                               0.04    0.05   -0.01 (VIOLATED)
+
+_15664_/Y                               0.05    0.06   -0.01 (VIOLATED)
+
+_11185_/Y                               0.04    0.05   -0.00 (VIOLATED)
+
+_15165_/Y                               0.09    0.10   -0.00 (VIOLATED)
+
+_09506_/Y                               0.03    0.03   -0.00 (VIOLATED)
+
+_11795_/Y                               0.04    0.04   -0.00 (VIOLATED)
+
+_10747_/Y                               0.09    0.10   -0.00 (VIOLATED)
+
+_09837_/Y                               0.03    0.03   -0.00 (VIOLATED)
+
+_15087_/X                               0.11    0.11   -0.00 (VIOLATED)
+
+_14303_/Y                               0.03    0.03   -0.00 (VIOLATED)
+
+_11968_/Y                               0.03    0.03   -0.00 (VIOLATED)
+
+_15535_/Y                               0.04    0.05   -0.00 (VIOLATED)
+
+_15606_/Y                               0.04    0.05   -0.00 (VIOLATED)
+
+_11510_/Y                               0.05    0.05   -0.00 (VIOLATED)
+
+_15599_/Y                               0.05    0.05   -0.00 (VIOLATED)
+
+_13811_/X                               0.05    0.05   -0.00 (VIOLATED)
+
+_14540_/Y                               0.01    0.01   -0.00 (VIOLATED)
+
+_11740_/Y                               0.05    0.05   -0.00 (VIOLATED)
+
+_10467_/Y                               0.05    0.05   -0.00 (VIOLATED)
+
+@@ END
+@@ BEGIN skew
+Clock clk
+   2.26 source latency bus_addr[5]$_DFFE_PN0P_/CLK ^
+  -0.81 target latency _15777_/CLK ^
+   0.00 CRPR
+--------------
+   1.45 setup skew
+
+@@ END

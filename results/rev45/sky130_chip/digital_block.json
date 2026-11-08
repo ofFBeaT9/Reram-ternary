@@ -1,0 +1,74 @@
+{
+ "flow_library": "sky130_fd_sc_hd__ss_100C_1v60 (flow optimised at the slow corner)",
+ "clock_period_ns": 25.0,
+ "stdcells": 10248,
+ "sequential": 1074,
+ "clock_gates": 56,
+ "die_area_um2": 188757,
+ "utilization": 0.479,
+ "flow_setup_ws_ns": 10.298,
+ "flow_hold_ws_ns": 0.57,
+ "ir_drop_worst_mV": 0.144,
+ "drc_violations": 0,
+ "lec_identical": true,
+ "corners": {
+  "ff_n40C_1v95": {
+   "setup_wns_ns": 16.07,
+   "hold_wns_ns": 0.152
+  },
+  "k0.8_ff_n40C_1v95": {
+   "setup_wns_ns": 16.152,
+   "hold_wns_ns": 0.159
+  },
+  "k0.8_ss_100C_1v60": {
+   "setup_wns_ns": 10.882,
+   "hold_wns_ns": 0.567
+  },
+  "k0.8_tt_025C_1v80": {
+   "setup_wns_ns": 15.48,
+   "hold_wns_ns": 0.263
+  },
+  "k1.2_ff_n40C_1v95": {
+   "setup_wns_ns": 15.985,
+   "hold_wns_ns": 0.145
+  },
+  "k1.2_ss_100C_1v60": {
+   "setup_wns_ns": 9.716,
+   "hold_wns_ns": 0.533
+  },
+  "k1.2_tt_025C_1v80": {
+   "setup_wns_ns": 15.219,
+   "hold_wns_ns": 0.243
+  },
+  "ss_100C_1v60": {
+   "setup_wns_ns": 10.303,
+   "hold_wns_ns": 0.55
+  },
+  "tt_025C_1v80": {
+   "setup_wns_ns": 15.351,
+   "hold_wns_ns": 0.253
+  }
+ },
+ "min_period": [
+  {
+   "platform": "sky130hd",
+   "liberty": "sky130_fd_sc_hd__ss_100C_1v60.lib",
+   "spef_scale": 1.0,
+   "min_period_ns": 14.73,
+   "f_max_MHz": 67.9,
+   "setup_wns_ns": 0.029,
+   "hold_wns_ns": 0.55
+  },
+  {
+   "platform": "sky130hd",
+   "liberty": "sky130_fd_sc_hd__ss_100C_1v60.lib",
+   "spef_scale": 1.2,
+   "min_period_ns": 15.31,
+   "f_max_MHz": 65.3,
+   "setup_wns_ns": 0.029,
+   "hold_wns_ns": 0.533
+  }
+ ],
+ "setup_wns_min_ns": 9.716,
+ "hold_wns_min_ns": 0.145
+}

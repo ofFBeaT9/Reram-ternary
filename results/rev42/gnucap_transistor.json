@@ -1,0 +1,122 @@
+{
+ "tt_W1.5": {
+  "idsat_3v3_uA": 806.3,
+  "idsat_per_um_uA": 537.5,
+  "id_vg1v7_vd0v05_uA": 28.35,
+  "ron_vg1v7_ohm": 1764.0,
+  "ron_vg3v3_ohm": 984.0,
+  "vth_lin_extrap_V": 0.641
+ },
+ "tt_W3.0": {
+  "idsat_3v3_uA": 1637.7,
+  "idsat_per_um_uA": 545.9,
+  "id_vg1v7_vd0v05_uA": 58.74,
+  "ron_vg1v7_ohm": 851.0,
+  "ron_vg3v3_ohm": 479.0,
+  "vth_lin_extrap_V": 0.641
+ },
+ "tt_W4.5": {
+  "idsat_3v3_uA": 2463.7,
+  "idsat_per_um_uA": 547.5,
+  "id_vg1v7_vd0v05_uA": 87.76,
+  "ron_vg1v7_ohm": 570.0,
+  "ron_vg3v3_ohm": 317.0,
+  "vth_lin_extrap_V": 0.667
+ },
+ "ss_W1.5": {
+  "idsat_3v3_uA": 703.6,
+  "idsat_per_um_uA": 469.1,
+  "id_vg1v7_vd0v05_uA": 25.79,
+  "ron_vg1v7_ohm": 1939.0,
+  "ron_vg3v3_ohm": 1047.0,
+  "vth_lin_extrap_V": 0.711
+ },
+ "ss_W3.0": {
+  "idsat_3v3_uA": 1431.8,
+  "idsat_per_um_uA": 477.3,
+  "id_vg1v7_vd0v05_uA": 53.51,
+  "ron_vg1v7_ohm": 934.0,
+  "ron_vg3v3_ohm": 509.0,
+  "vth_lin_extrap_V": 0.71
+ },
+ "ss_W4.5": {
+  "idsat_3v3_uA": 2154.6,
+  "idsat_per_um_uA": 478.8,
+  "id_vg1v7_vd0v05_uA": 79.64,
+  "ron_vg1v7_ohm": 628.0,
+  "ron_vg3v3_ohm": 336.0,
+  "vth_lin_extrap_V": 0.736
+ },
+ "ff_W1.5": {
+  "idsat_3v3_uA": 912.9,
+  "idsat_per_um_uA": 608.6,
+  "id_vg1v7_vd0v05_uA": 31.11,
+  "ron_vg1v7_ohm": 1607.0,
+  "ron_vg3v3_ohm": 917.0,
+  "vth_lin_extrap_V": 0.57
+ },
+ "ff_W3.0": {
+  "idsat_3v3_uA": 1851.6,
+  "idsat_per_um_uA": 617.2,
+  "id_vg1v7_vd0v05_uA": 64.37,
+  "ron_vg1v7_ohm": 777.0,
+  "ron_vg3v3_ohm": 447.0,
+  "vth_lin_extrap_V": 0.571
+ },
+ "ff_W4.5": {
+  "idsat_3v3_uA": 2785.0,
+  "idsat_per_um_uA": 618.9,
+  "id_vg1v7_vd0v05_uA": 96.48,
+  "ron_vg1v7_ohm": 518.0,
+  "ron_vg3v3_ohm": 295.0,
+  "vth_lin_extrap_V": 0.597
+ },
+ "sf_W1.5": {
+  "idsat_3v3_uA": 752.8,
+  "idsat_per_um_uA": 501.9,
+  "id_vg1v7_vd0v05_uA": 27.06,
+  "ron_vg1v7_ohm": 1848.0,
+  "ron_vg3v3_ohm": 1015.0,
+  "vth_lin_extrap_V": 0.676
+ },
+ "sf_W3.0": {
+  "idsat_3v3_uA": 1530.4,
+  "idsat_per_um_uA": 510.1,
+  "id_vg1v7_vd0v05_uA": 56.1,
+  "ron_vg1v7_ohm": 891.0,
+  "ron_vg3v3_ohm": 494.0,
+  "vth_lin_extrap_V": 0.675
+ },
+ "sf_W4.5": {
+  "idsat_3v3_uA": 2302.7,
+  "idsat_per_um_uA": 511.7,
+  "id_vg1v7_vd0v05_uA": 83.66,
+  "ron_vg1v7_ohm": 598.0,
+  "ron_vg3v3_ohm": 326.0,
+  "vth_lin_extrap_V": 0.701
+ },
+ "fs_W1.5": {
+  "idsat_3v3_uA": 857.7,
+  "idsat_per_um_uA": 571.8,
+  "id_vg1v7_vd0v05_uA": 29.71,
+  "ron_vg1v7_ohm": 1683.0,
+  "ron_vg3v3_ohm": 950.0,
+  "vth_lin_extrap_V": 0.605
+ },
+ "fs_W3.0": {
+  "idsat_3v3_uA": 1740.8,
+  "idsat_per_um_uA": 580.3,
+  "id_vg1v7_vd0v05_uA": 61.52,
+  "ron_vg1v7_ohm": 813.0,
+  "ron_vg3v3_ohm": 463.0,
+  "vth_lin_extrap_V": 0.606
+ },
+ "fs_W4.5": {
+  "idsat_3v3_uA": 2618.6,
+  "idsat_per_um_uA": 581.9,
+  "id_vg1v7_vd0v05_uA": 92.07,
+  "ron_vg1v7_ohm": 543.0,
+  "ron_vg3v3_ohm": 306.0,
+  "vth_lin_extrap_V": 0.631
+ }
+}

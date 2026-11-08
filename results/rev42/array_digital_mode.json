@@ -1,0 +1,92 @@
+{
+ "analytic_LRS1_x1": {
+  "z": 3.997375328083989,
+  "p": 3.202435221827769e-05,
+  "iref_uA": 10.24514435695538
+ },
+ "analytic_LRS1_x1.5": {
+  "z": 2.664916885389326,
+  "p": 0.003850367634781268,
+  "iref_uA": 10.24514435695538
+ },
+ "analytic_LRS1_x2": {
+  "z": 1.9986876640419946,
+  "p": 0.02282107928059711,
+  "iref_uA": 10.24514435695538
+ },
+ "analytic_LRS1_x3": {
+  "z": 1.332458442694663,
+  "p": 0.09135479431163174,
+  "iref_uA": 10.24514435695538
+ },
+ "analytic_LRS2_x1": {
+  "z": 8.16231884057971,
+  "p": 1.6432663961437046e-16,
+  "iref_uA": 17.950289855072466
+ },
+ "analytic_LRS2_x1.5": {
+  "z": 5.441545893719806,
+  "p": 2.6410090506644666e-08,
+  "iref_uA": 17.950289855072466
+ },
+ "analytic_LRS2_x2": {
+  "z": 4.081159420289855,
+  "p": 2.2405802355456787e-05,
+  "iref_uA": 17.950289855072466
+ },
+ "analytic_LRS2_x3": {
+  "z": 2.720772946859903,
+  "p": 0.0032564739542886925,
+  "iref_uA": 17.950289855072466
+ },
+ "analytic_LRS3_x1": {
+  "z": 11.98235294117647,
+  "p": 2.1983255168089823e-33,
+  "iref_uA": 25.017352941176473
+ },
+ "analytic_LRS3_x1.5": {
+  "z": 7.988235294117646,
+  "p": 6.844200307965904e-16,
+  "iref_uA": 25.017352941176473
+ },
+ "analytic_LRS3_x2": {
+  "z": 5.991176470588235,
+  "p": 1.0416421378726531e-09,
+  "iref_uA": 25.017352941176473
+ },
+ "analytic_LRS3_x3": {
+  "z": 3.994117647058823,
+  "p": 3.246780851110005e-05,
+  "iref_uA": 25.017352941176473
+ },
+ "mc_LRS3_x1_vos0mV": {
+  "weights": 103680,
+  "weight_errors": 0,
+  "products": 600,
+  "products_with_any_error": 0
+ },
+ "mc_LRS3_x2_vos2mV": {
+  "weights": 103680,
+  "weight_errors": 0,
+  "products": 600,
+  "products_with_any_error": 0
+ },
+ "mc_LRS3_x3_vos2mV": {
+  "weights": 103680,
+  "weight_errors": 4,
+  "products": 600,
+  "products_with_any_error": 24
+ },
+ "mc_LRS1_x1_vos0mV": {
+  "weights": 103680,
+  "weight_errors": 2,
+  "products": 600,
+  "products_with_any_error": 14
+ },
+ "mc_LRS1_x2_vos2mV": {
+  "weights": 103680,
+  "weight_errors": 4616,
+  "products": 600,
+  "products_with_any_error": 600
+ }
+}

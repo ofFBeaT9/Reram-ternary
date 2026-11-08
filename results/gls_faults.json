@@ -1,0 +1,7 @@
+{
+ "gls_ihp_synth_cg_fault_icg.log": "icg fault in sg13g2_lgcp_1 _12844_ ( .CLK(clk), .GATE(_00004_), .GCLK(_06321_)",
+ "gls_ihp_fault_icg.log": "icg fault in sg13g2_lgcp_1 _20673_ (.GATE(_0698_), .CLK(delaynet_5_clk), .GCLK(_10740",
+ "gls_sky130_fault_icg.log": "icg fault in sky130_fd_sc_hd__dlclkp_1 _15731_ (.GATE(_0698_), .GCLK(_08463_), .CLK(d",
+ "gls_ihp_fault_xnor.log": "the first sg13g2_xnor2_1 instance of the routed netlist replaced by sg13g2_xor2_1",
+ "note": "flow/orfs/post/gls.sh; with a fault the test bench stops at the first failure (TB_FAIL_FAST)"
+}

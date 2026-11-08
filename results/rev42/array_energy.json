@@ -1,0 +1,42 @@
+{
+ "LRS3": {
+  "sum_power_digital_mW": 7.583047958609359,
+  "reads_digital": 47.891666666666666,
+  "sum_power_analog_mW": 7.5696450342536235,
+  "reads_analog": 2.0,
+  "digital_E_nJ_tsense_10ns": 0.07583047958609358,
+  "digital_E_nJ_tsense_20ns": 0.15166095917218717,
+  "digital_E_nJ_tsense_50ns": 0.3791523979304679,
+  "analog_E_nJ_tconv_50ns": 0.37848225171268113,
+  "analog_E_nJ_tconv_200ns": 1.5139290068507245,
+  "analog_E_nJ_tconv_1600ns": 12.111432054805796
+ },
+ "LRS2": {
+  "sum_power_digital_mW": 5.66247966024884,
+  "reads_digital": 48.041666666666664,
+  "sum_power_analog_mW": 5.655079226529618,
+  "reads_analog": 2.0,
+  "digital_E_nJ_tsense_10ns": 0.0566247966024884,
+  "digital_E_nJ_tsense_20ns": 0.1132495932049768,
+  "digital_E_nJ_tsense_50ns": 0.28312398301244196,
+  "analog_E_nJ_tconv_50ns": 0.2827539613264809,
+  "analog_E_nJ_tconv_200ns": 1.1310158453059236,
+  "analog_E_nJ_tconv_1600ns": 9.048126762447389
+ },
+ "LRS1": {
+  "sum_power_digital_mW": 3.7175113512483406,
+  "reads_digital": 48.733333333333334,
+  "sum_power_analog_mW": 3.71430383437814,
+  "reads_analog": 2.0,
+  "digital_E_nJ_tsense_10ns": 0.037175113512483406,
+  "digital_E_nJ_tsense_20ns": 0.07435022702496681,
+  "digital_E_nJ_tsense_50ns": 0.18587556756241702,
+  "analog_E_nJ_tconv_50ns": 0.185715191718907,
+  "analog_E_nJ_tconv_200ns": 0.742860766875628,
+  "analog_E_nJ_tconv_1600ns": 5.942886135005024
+ },
+ "wordline": {
+  "gate_cap_fF": 453.56409729729717,
+  "energy_per_row_read_pJ": 1.3108002411891886
+ }
+}

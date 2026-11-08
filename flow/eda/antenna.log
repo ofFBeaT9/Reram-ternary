@@ -1,0 +1,1582 @@
+
+Magic 8.3 revision 685 - Compiled on Fri Oct  9 22:56:16 UTC 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=1048576]
+Using NULL graphics device.
+Processing system .magicrc file
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Sourcing design .magicrc for technology sky130B ...
+2 Magic internal units = 1 Lambda
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130B Device Generator Menu ...
+Loading "ant.tcl" from command line.
+Warning: Calma reading is not undoable!  I hope that's OK.
+Library written using GDS-II Release 3.0
+Library name: user_analog_project_wrapper
+Reading "rr2t2r".
+Reading "sky130_fd_sc_hd__fill_8".
+Reading "sky130_fd_sc_hd__clkdlybuf4s15_1".
+Reading "sky130_fd_sc_hd__fill_2".
+Reading "sky130_fd_sc_hd__fill_1".
+Reading "sky130_fd_sc_hd__tapvpwrvgnd_1".
+Reading "sky130_fd_sc_hd__conb_1".
+Reading "sky130_fd_sc_hd__fill_4".
+Reading "sky130_fd_sc_hd__dfrtp_1".
+Reading "sky130_fd_sc_hd__clkbuf_16".
+Reading "sky130_fd_sc_hd__xor2_1".
+Reading "sky130_fd_sc_hd__nand2_1".
+Reading "sky130_fd_sc_hd__and3_1".
+Reading "sky130_fd_sc_hd__o21a_1".
+Reading "sky130_fd_sc_hd__a31oi_1".
+Reading "sky130_fd_sc_hd__nor2_1".
+Reading "sky130_fd_sc_hd__nand4_1".
+Reading "sky130_fd_sc_hd__nand3_1".
+Reading "sky130_fd_sc_hd__a21oi_1".
+Reading "sky130_fd_sc_hd__ha_1".
+Reading "sky130_fd_sc_hd__o21ai_0".
+Reading "sky130_fd_sc_hd__dfstp_2".
+Reading "sky130_fd_sc_hd__inv_1".
+Reading "sky130_fd_sc_hd__dlclkp_1".
+Reading "sky130_fd_sc_hd__xnor2_1".
+Reading "sky130_fd_sc_hd__clkbuf_1".
+Reading "sky130_fd_sc_hd__and4b_1".
+Reading "sky130_fd_sc_hd__dfrtp_4".
+Reading "sky130_fd_sc_hd__nor3_1".
+Reading "sky130_fd_sc_hd__or4_1".
+Reading "sky130_fd_sc_hd__nand3b_1".
+Reading "sky130_fd_sc_hd__nor2b_1".
+Reading "sky130_fd_sc_hd__nor3b_2".
+Reading "sky130_fd_sc_hd__and2_1".
+Reading "sky130_fd_sc_hd__a211oi_1".
+Reading "sky130_fd_sc_hd__or3_1".
+Reading "sky130_fd_sc_hd__buf_2".
+Reading "sky130_fd_sc_hd__a21boi_0".
+Reading "sky130_fd_sc_hd__nand2b_1".
+Reading "sky130_fd_sc_hd__or2_2".
+Reading "sky130_fd_sc_hd__mux2_1".
+Reading "sky130_fd_sc_hd__mux2i_1".
+Reading "sky130_fd_sc_hd__o211ai_1".
+Reading "sky130_fd_sc_hd__nor3_2".
+Reading "sky130_fd_sc_hd__o221ai_1".
+Reading "sky130_fd_sc_hd__o31ai_1".
+Reading "sky130_fd_sc_hd__nor4_1".
+Reading "sky130_fd_sc_hd__nor4_4".
+Reading "sky130_fd_sc_hd__o22a_1".
+Reading "sky130_fd_sc_hd__xor2_4".
+Reading "sky130_fd_sc_hd__xnor2_2".
+Reading "sky130_fd_sc_hd__a41o_1".
+Reading "sky130_fd_sc_hd__o21ai_1".
+Reading "sky130_fd_sc_hd__a311o_2".
+Reading "sky130_fd_sc_hd__or2_1".
+Reading "sky130_fd_sc_hd__or3_4".
+Reading "sky130_fd_sc_hd__o311ai_2".
+Reading "sky130_fd_sc_hd__nor4_2".
+Reading "sky130_fd_sc_hd__and2_4".
+Reading "sky130_fd_sc_hd__o211ai_2".
+Reading "sky130_fd_sc_hd__a2111oi_2".
+Reading "sky130_fd_sc_hd__a21o_1".
+Reading "sky130_fd_sc_hd__a311oi_1".
+Reading "sky130_fd_sc_hd__a211o_1".
+Reading "sky130_fd_sc_hd__o21a_2".
+Reading "sky130_fd_sc_hd__a31o_1".
+Reading "sky130_fd_sc_hd__o2111ai_1".
+Reading "sky130_fd_sc_hd__a2111o_1".
+CIF file read warning: CIF style sky130(): units rescaled by factor of 5 / 1
+CIF file read warning: Input off lambda grid by 2/5; snapped to grid.
+Reading "sky130_fd_sc_hd__a22oi_1".
+Reading "sky130_fd_sc_hd__and4_1".
+Reading "sky130_fd_sc_hd__a21oi_2".
+Reading "sky130_fd_sc_hd__a221o_1".
+Reading "sky130_fd_sc_hd__xnor3_1".
+Reading "sky130_fd_sc_hd__and3_2".
+Reading "sky130_fd_sc_hd__o2bb2a_1".
+Reading "sky130_fd_sc_hd__o31ai_2".
+Reading "sky130_fd_sc_hd__o2bb2ai_1".
+Reading "sky130_fd_sc_hd__xor2_2".
+Reading "sky130_fd_sc_hd__o2bb2ai_2".
+Reading "sky130_fd_sc_hd__mux2i_4".
+Reading "sky130_fd_sc_hd__a31oi_2".
+Reading "sky130_fd_sc_hd__o22ai_1".
+Reading "sky130_fd_sc_hd__buf_4".
+Reading "sky130_fd_sc_hd__nor3b_1".
+Reading "sky130_fd_sc_hd__dfrtp_2".
+Reading "sky130_fd_sc_hd__o311ai_0".
+Reading "sky130_fd_sc_hd__o31a_1".
+Reading "sky130_fd_sc_hd__a221oi_1".
+Reading "sky130_fd_sc_hd__a41oi_1".
+Reading "sky130_fd_sc_hd__a22o_1".
+Reading "sky130_fd_sc_hd__o21bai_1".
+Reading "sky130_fd_sc_hd__a311o_4".
+Reading "sky130_fd_sc_hd__o221ai_2".
+Reading "sky130_fd_sc_hd__or4b_4".
+Reading "sky130_fd_sc_hd__clkinv_1".
+Reading "sky130_fd_sc_hd__nand4b_1".
+Reading "sky130_fd_sc_hd__and2_2".
+Reading "sky130_fd_sc_hd__inv_6".
+Reading "sky130_fd_sc_hd__clkinv_2".
+Reading "sky130_fd_sc_hd__mux4_2".
+Reading "sky130_fd_sc_hd__o22ai_2".
+Reading "sky130_fd_sc_hd__a222oi_1".
+Reading "sky130_fd_sc_hd__a32oi_1".
+Reading "sky130_fd_sc_hd__mux2_2".
+Reading "sky130_fd_sc_hd__a32o_1".
+Reading "sky130_fd_sc_hd__o41ai_1".
+Reading "sky130_fd_sc_hd__nor4b_1".
+Reading "sky130_fd_sc_hd__clkinv_4".
+Reading "sky130_fd_sc_hd__or3b_2".
+Reading "sky130_fd_sc_hd__diode_2".
+Reading "sky130_fd_sc_hd__clkinvlp_4".
+Reading "sky130_fd_sc_hd__bufinv_16".
+Reading "sky130_fd_sc_hd__o311ai_1".
+Reading "sky130_fd_sc_hd__a32oi_4".
+Reading "sky130_fd_sc_hd__nand2_2".
+Reading "sky130_fd_sc_hd__o31ai_4".
+Reading "sky130_fd_sc_hd__o21ba_1".
+Reading "sky130_fd_sc_hd__and2_0".
+Reading "sky130_fd_sc_hd__o32ai_1".
+Reading "sky130_fd_sc_hd__a211oi_2".
+Reading "sky130_fd_sc_hd__or3b_4".
+Reading "sky130_fd_sc_hd__mux2_4".
+Reading "sky130_fd_sc_hd__clkbuf_8".
+Reading "sky130_fd_sc_hd__a2111oi_0".
+Reading "sky130_fd_sc_hd__nor2_4".
+Reading "sky130_fd_sc_hd__a311o_1".
+Reading "sky130_fd_sc_hd__a22oi_2".
+Reading "sky130_fd_sc_hd__o211a_1".
+Reading "sky130_fd_sc_hd__a22o_2".
+Reading "sky130_fd_sc_hd__a22oi_4".
+Reading "sky130_fd_sc_hd__a2bb2oi_1".
+Reading "sky130_fd_sc_hd__and3b_1".
+Reading "sky130_fd_sc_hd__clkdlybuf4s15_2".
+Reading "sky130_fd_sc_hd__clkdlybuf4s18_2".
+Reading "sky130_fd_sc_hd__and4_2".
+Reading "sky130_fd_sc_hd__nand4b_2".
+Reading "sky130_fd_sc_hd__clkbuf_2".
+Reading "sky130_fd_sc_hd__a2111oi_1".
+Reading "sky130_fd_sc_hd__nor3_4".
+Reading "sky130_fd_sc_hd__a2bb2oi_2".
+Reading "sky130_fd_sc_hd__a211oi_4".
+Reading "sky130_fd_sc_hd__nand3_4".
+Reading "sky130_fd_sc_hd__nor4b_4".
+Reading "sky130_fd_sc_hd__nor4bb_1".
+Reading "sky130_fd_sc_hd__o2111a_1".
+Reading "sky130_fd_sc_hd__nor4b_2".
+Reading "sky130_fd_sc_hd__nand2_4".
+Reading "sky130_fd_sc_hd__nand3_2".
+Reading "sky130_fd_sc_hd__nor2b_2".
+Reading "sky130_fd_sc_hd__clkbuf_4".
+Reading "sky130_fd_sc_hd__ha_2".
+Reading "sky130_fd_sc_hd__o2111ai_2".
+Reading "sky130_fd_sc_hd__fa_1".
+Reading "sky130_fd_sc_hd__inv_2".
+Reading "sky130_fd_sc_hd__inv_8".
+Reading "sky130_fd_sc_hd__nor3b_4".
+Reading "sky130_fd_sc_hd__o311a_1".
+Reading "sky130_fd_sc_hd__and4b_2".
+Reading "sky130_fd_sc_hd__nand4bb_1".
+Reading "sky130_fd_sc_hd__nand3b_4".
+Reading "VIA_L1M1_PR_MR".
+Reading "VIA_via5_6_3100_3100_2_2_1600_1600".
+Reading "VIA_M1M2_PR".
+Reading "VIA_via4_5_1600_480_1_4_400_400".
+Reading "VIA_via2_3_1600_480_1_5_320_320".
+Reading "VIA_via5_6_1600_3100_2_1_1600_1600".
+Reading "VIA_via3_4_1600_480_1_4_400_400".
+Reading "VIA_via5_6_1600_1600_1_1_1600_1600".
+Reading "VIA_via5_6_3100_1600_1_2_1600_1600".
+Reading "VIA_M2M3_PR".
+Reading "VIA_M3M4_PR".
+Reading "VIA_M1M2_PR_MR".
+Reading "VIA_M4M5_PR".
+Reading "tcim_chip_digital".
+    5000 uses
+    10000 uses
+    15000 uses
+    20000 uses
+    25000 uses
+    30000 uses
+    35000 uses
+    40000 uses
+    45000 uses
+    50000 uses
+    55000 uses
+    60000 uses
+    65000 uses
+    70000 uses
+    75000 uses
+    80000 uses
+    85000 uses
+Reading "tcim_sky130_array".
+Reading "d_pfet_g5v0d10v5_w16_l0p5".
+Reading "d_nfet_g5v0d10v5_w8_l0p5".
+Reading "d_nfet_g5v0d10v5_w4_l0p5".
+Reading "sld".
+Reading "d_pfet_g5v0d10v5_w4_l0p5".
+Reading "d_pfet_g5v0d10v5_w2_l0p5".
+Reading "d_pfet_g5v0d10v5_w0p42_l1".
+Reading "d_pfet_01v8_w1_l0p15".
+Reading "d_nfet_g5v0d10v5_w2_l0p5".
+Reading "d_nfet_g5v0d10v5_w1_l0p5".
+Reading "d_nfet_01v8_w0p5_l0p15".
+Reading "rowslice".
+Reading "d_pfet_g5v0d10v5_w8_l0p5".
+Reading "d_pfet_01v8_w4_l4".
+Reading "d_nfet_01v8_w2_l4".
+Reading "d_nfet_01v8_w2_l1".
+Reading "d_nfet_01v8_w1_l0p15".
+Reading "ctrlglob".
+Reading "blslice".
+Reading "tcim_macro".
+Reading "user_analog_project_wrapper".
+Extracting d_nfet_01v8_w0p5_l0p15 into d_nfet_01v8_w0p5_l0p15.ext:
+Processing d_nfet_01v8_w0p5_l0p15
+Extracting d_nfet_01v8_w2_l1 into d_nfet_01v8_w2_l1.ext:
+Processing d_nfet_01v8_w2_l1
+Extracting d_nfet_g5v0d10v5_w1_l0p5 into d_nfet_g5v0d10v5_w1_l0p5.ext:
+Processing d_nfet_g5v0d10v5_w1_l0p5
+Extracting d_nfet_g5v0d10v5_w2_l0p5 into d_nfet_g5v0d10v5_w2_l0p5.ext:
+Processing d_nfet_g5v0d10v5_w2_l0p5
+Extracting d_nfet_g5v0d10v5_w4_l0p5 into d_nfet_g5v0d10v5_w4_l0p5.ext:
+Processing d_nfet_g5v0d10v5_w4_l0p5
+Extracting d_pfet_01v8_w1_l0p15 into d_pfet_01v8_w1_l0p15.ext:
+Processing d_pfet_01v8_w1_l0p15
+Extracting d_pfet_01v8_w4_l4 into d_pfet_01v8_w4_l4.ext:
+Processing d_pfet_01v8_w4_l4
+Extracting d_pfet_g5v0d10v5_w0p42_l1 into d_pfet_g5v0d10v5_w0p42_l1.ext:
+Processing d_pfet_g5v0d10v5_w0p42_l1
+Extracting d_pfet_g5v0d10v5_w2_l0p5 into d_pfet_g5v0d10v5_w2_l0p5.ext:
+Processing d_pfet_g5v0d10v5_w2_l0p5
+Extracting d_pfet_g5v0d10v5_w8_l0p5 into d_pfet_g5v0d10v5_w8_l0p5.ext:
+Processing d_pfet_g5v0d10v5_w8_l0p5
+Extracting blslice into blslice.ext:
+Processing blslice
+Extracting d_nfet_01v8_w1_l0p15 into d_nfet_01v8_w1_l0p15.ext:
+Processing d_nfet_01v8_w1_l0p15
+Extracting d_nfet_01v8_w2_l4 into d_nfet_01v8_w2_l4.ext:
+Processing d_nfet_01v8_w2_l4
+Extracting d_nfet_g5v0d10v5_w8_l0p5 into d_nfet_g5v0d10v5_w8_l0p5.ext:
+Processing d_nfet_g5v0d10v5_w8_l0p5
+Extracting d_pfet_g5v0d10v5_w16_l0p5 into d_pfet_g5v0d10v5_w16_l0p5.ext:
+Processing d_pfet_g5v0d10v5_w16_l0p5
+Extracting ctrlglob into ctrlglob.ext:
+Processing ctrlglob
+Extracting d_pfet_g5v0d10v5_w4_l0p5 into d_pfet_g5v0d10v5_w4_l0p5.ext:
+Processing d_pfet_g5v0d10v5_w4_l0p5
+Extracting rowslice into rowslice.ext:
+Processing rowslice
+Extracting sld into sld.ext:
+Processing sld
+Extracting rr2t2r into rr2t2r.ext:
+Processing rr2t2r
+Extracting tcim_sky130_array into tcim_sky130_array.ext:
+Processing tcim_sky130_array
+Extracting tcim_macro into tcim_macro.ext:
+Processing tcim_macro
+Extracting sky130_fd_sc_hd__fill_8 into sky130_fd_sc_hd__fill_8.ext:
+Processing sky130_fd_sc_hd__fill_8
+Extracting sky130_fd_sc_hd__clkdlybuf4s15_1 into sky130_fd_sc_hd__clkdlybuf4s15_1.ext:
+Processing sky130_fd_sc_hd__clkdlybuf4s15_1
+Extracting sky130_fd_sc_hd__fill_2 into sky130_fd_sc_hd__fill_2.ext:
+Processing sky130_fd_sc_hd__fill_2
+Extracting sky130_fd_sc_hd__fill_1 into sky130_fd_sc_hd__fill_1.ext:
+Processing sky130_fd_sc_hd__fill_1
+Extracting sky130_fd_sc_hd__tapvpwrvgnd_1 into sky130_fd_sc_hd__tapvpwrvgnd_1.ext:
+Processing sky130_fd_sc_hd__tapvpwrvgnd_1
+Extracting sky130_fd_sc_hd__conb_1 into sky130_fd_sc_hd__conb_1.ext:
+Processing sky130_fd_sc_hd__conb_1
+Extracting sky130_fd_sc_hd__fill_4 into sky130_fd_sc_hd__fill_4.ext:
+Processing sky130_fd_sc_hd__fill_4
+Extracting sky130_fd_sc_hd__dfrtp_1 into sky130_fd_sc_hd__dfrtp_1.ext:
+Processing sky130_fd_sc_hd__dfrtp_1
+Extracting sky130_fd_sc_hd__clkbuf_16 into sky130_fd_sc_hd__clkbuf_16.ext:
+Processing sky130_fd_sc_hd__clkbuf_16
+Extracting sky130_fd_sc_hd__xor2_1 into sky130_fd_sc_hd__xor2_1.ext:
+Processing sky130_fd_sc_hd__xor2_1
+Extracting sky130_fd_sc_hd__nand2_1 into sky130_fd_sc_hd__nand2_1.ext:
+Processing sky130_fd_sc_hd__nand2_1
+Extracting sky130_fd_sc_hd__and3_1 into sky130_fd_sc_hd__and3_1.ext:
+Processing sky130_fd_sc_hd__and3_1
+Extracting sky130_fd_sc_hd__o21a_1 into sky130_fd_sc_hd__o21a_1.ext:
+Processing sky130_fd_sc_hd__o21a_1
+Extracting sky130_fd_sc_hd__a31oi_1 into sky130_fd_sc_hd__a31oi_1.ext:
+Processing sky130_fd_sc_hd__a31oi_1
+Extracting sky130_fd_sc_hd__nor2_1 into sky130_fd_sc_hd__nor2_1.ext:
+Processing sky130_fd_sc_hd__nor2_1
+Extracting sky130_fd_sc_hd__nand4_1 into sky130_fd_sc_hd__nand4_1.ext:
+Processing sky130_fd_sc_hd__nand4_1
+Extracting sky130_fd_sc_hd__nand3_1 into sky130_fd_sc_hd__nand3_1.ext:
+Processing sky130_fd_sc_hd__nand3_1
+Extracting sky130_fd_sc_hd__a21oi_1 into sky130_fd_sc_hd__a21oi_1.ext:
+Processing sky130_fd_sc_hd__a21oi_1
+Extracting sky130_fd_sc_hd__ha_1 into sky130_fd_sc_hd__ha_1.ext:
+Processing sky130_fd_sc_hd__ha_1
+Extracting sky130_fd_sc_hd__o21ai_0 into sky130_fd_sc_hd__o21ai_0.ext:
+Processing sky130_fd_sc_hd__o21ai_0
+Extracting sky130_fd_sc_hd__dfstp_2 into sky130_fd_sc_hd__dfstp_2.ext:
+Processing sky130_fd_sc_hd__dfstp_2
+Extracting sky130_fd_sc_hd__inv_1 into sky130_fd_sc_hd__inv_1.ext:
+Processing sky130_fd_sc_hd__inv_1
+Extracting sky130_fd_sc_hd__dlclkp_1 into sky130_fd_sc_hd__dlclkp_1.ext:
+Processing sky130_fd_sc_hd__dlclkp_1
+Extracting sky130_fd_sc_hd__xnor2_1 into sky130_fd_sc_hd__xnor2_1.ext:
+Processing sky130_fd_sc_hd__xnor2_1
+Extracting sky130_fd_sc_hd__clkbuf_1 into sky130_fd_sc_hd__clkbuf_1.ext:
+Processing sky130_fd_sc_hd__clkbuf_1
+Extracting sky130_fd_sc_hd__and4b_1 into sky130_fd_sc_hd__and4b_1.ext:
+Processing sky130_fd_sc_hd__and4b_1
+Extracting sky130_fd_sc_hd__dfrtp_4 into sky130_fd_sc_hd__dfrtp_4.ext:
+Processing sky130_fd_sc_hd__dfrtp_4
+Extracting sky130_fd_sc_hd__nor3_1 into sky130_fd_sc_hd__nor3_1.ext:
+Processing sky130_fd_sc_hd__nor3_1
+Extracting sky130_fd_sc_hd__or4_1 into sky130_fd_sc_hd__or4_1.ext:
+Processing sky130_fd_sc_hd__or4_1
+Extracting sky130_fd_sc_hd__nand3b_1 into sky130_fd_sc_hd__nand3b_1.ext:
+Processing sky130_fd_sc_hd__nand3b_1
+Extracting sky130_fd_sc_hd__nor2b_1 into sky130_fd_sc_hd__nor2b_1.ext:
+Processing sky130_fd_sc_hd__nor2b_1
+Extracting sky130_fd_sc_hd__nor3b_2 into sky130_fd_sc_hd__nor3b_2.ext:
+Processing sky130_fd_sc_hd__nor3b_2
+Extracting sky130_fd_sc_hd__and2_1 into sky130_fd_sc_hd__and2_1.ext:
+Processing sky130_fd_sc_hd__and2_1
+Extracting sky130_fd_sc_hd__a211oi_1 into sky130_fd_sc_hd__a211oi_1.ext:
+Processing sky130_fd_sc_hd__a211oi_1
+Extracting sky130_fd_sc_hd__or3_1 into sky130_fd_sc_hd__or3_1.ext:
+Processing sky130_fd_sc_hd__or3_1
+Extracting sky130_fd_sc_hd__buf_2 into sky130_fd_sc_hd__buf_2.ext:
+Processing sky130_fd_sc_hd__buf_2
+Extracting sky130_fd_sc_hd__a21boi_0 into sky130_fd_sc_hd__a21boi_0.ext:
+Processing sky130_fd_sc_hd__a21boi_0
+Extracting sky130_fd_sc_hd__nand2b_1 into sky130_fd_sc_hd__nand2b_1.ext:
+Processing sky130_fd_sc_hd__nand2b_1
+Extracting sky130_fd_sc_hd__or2_2 into sky130_fd_sc_hd__or2_2.ext:
+Processing sky130_fd_sc_hd__or2_2
+Extracting sky130_fd_sc_hd__mux2_1 into sky130_fd_sc_hd__mux2_1.ext:
+Processing sky130_fd_sc_hd__mux2_1
+Extracting sky130_fd_sc_hd__mux2i_1 into sky130_fd_sc_hd__mux2i_1.ext:
+Processing sky130_fd_sc_hd__mux2i_1
+Extracting sky130_fd_sc_hd__o211ai_1 into sky130_fd_sc_hd__o211ai_1.ext:
+Processing sky130_fd_sc_hd__o211ai_1
+Extracting sky130_fd_sc_hd__nor3_2 into sky130_fd_sc_hd__nor3_2.ext:
+Processing sky130_fd_sc_hd__nor3_2
+Extracting sky130_fd_sc_hd__o221ai_1 into sky130_fd_sc_hd__o221ai_1.ext:
+Processing sky130_fd_sc_hd__o221ai_1
+Extracting sky130_fd_sc_hd__o31ai_1 into sky130_fd_sc_hd__o31ai_1.ext:
+Processing sky130_fd_sc_hd__o31ai_1
+Extracting sky130_fd_sc_hd__nor4_1 into sky130_fd_sc_hd__nor4_1.ext:
+Processing sky130_fd_sc_hd__nor4_1
+Extracting sky130_fd_sc_hd__nor4_4 into sky130_fd_sc_hd__nor4_4.ext:
+Processing sky130_fd_sc_hd__nor4_4
+Extracting sky130_fd_sc_hd__o22a_1 into sky130_fd_sc_hd__o22a_1.ext:
+Processing sky130_fd_sc_hd__o22a_1
+Extracting sky130_fd_sc_hd__xor2_4 into sky130_fd_sc_hd__xor2_4.ext:
+Processing sky130_fd_sc_hd__xor2_4
+Extracting sky130_fd_sc_hd__xnor2_2 into sky130_fd_sc_hd__xnor2_2.ext:
+Processing sky130_fd_sc_hd__xnor2_2
+Extracting sky130_fd_sc_hd__a41o_1 into sky130_fd_sc_hd__a41o_1.ext:
+Processing sky130_fd_sc_hd__a41o_1
+Extracting sky130_fd_sc_hd__o21ai_1 into sky130_fd_sc_hd__o21ai_1.ext:
+Processing sky130_fd_sc_hd__o21ai_1
+Extracting sky130_fd_sc_hd__a311o_2 into sky130_fd_sc_hd__a311o_2.ext:
+Processing sky130_fd_sc_hd__a311o_2
+Extracting sky130_fd_sc_hd__or2_1 into sky130_fd_sc_hd__or2_1.ext:
+Processing sky130_fd_sc_hd__or2_1
+Extracting sky130_fd_sc_hd__or3_4 into sky130_fd_sc_hd__or3_4.ext:
+Processing sky130_fd_sc_hd__or3_4
+Extracting sky130_fd_sc_hd__o311ai_2 into sky130_fd_sc_hd__o311ai_2.ext:
+Processing sky130_fd_sc_hd__o311ai_2
+Extracting sky130_fd_sc_hd__nor4_2 into sky130_fd_sc_hd__nor4_2.ext:
+Processing sky130_fd_sc_hd__nor4_2
+Extracting sky130_fd_sc_hd__and2_4 into sky130_fd_sc_hd__and2_4.ext:
+Processing sky130_fd_sc_hd__and2_4
+Extracting sky130_fd_sc_hd__o211ai_2 into sky130_fd_sc_hd__o211ai_2.ext:
+Processing sky130_fd_sc_hd__o211ai_2
+Extracting sky130_fd_sc_hd__a2111oi_2 into sky130_fd_sc_hd__a2111oi_2.ext:
+Processing sky130_fd_sc_hd__a2111oi_2
+Extracting sky130_fd_sc_hd__a21o_1 into sky130_fd_sc_hd__a21o_1.ext:
+Processing sky130_fd_sc_hd__a21o_1
+Extracting sky130_fd_sc_hd__a311oi_1 into sky130_fd_sc_hd__a311oi_1.ext:
+Processing sky130_fd_sc_hd__a311oi_1
+Extracting sky130_fd_sc_hd__a211o_1 into sky130_fd_sc_hd__a211o_1.ext:
+Processing sky130_fd_sc_hd__a211o_1
+Extracting sky130_fd_sc_hd__o21a_2 into sky130_fd_sc_hd__o21a_2.ext:
+Processing sky130_fd_sc_hd__o21a_2
+Extracting sky130_fd_sc_hd__a31o_1 into sky130_fd_sc_hd__a31o_1.ext:
+Processing sky130_fd_sc_hd__a31o_1
+Extracting sky130_fd_sc_hd__o2111ai_1 into sky130_fd_sc_hd__o2111ai_1.ext:
+Processing sky130_fd_sc_hd__o2111ai_1
+Extracting sky130_fd_sc_hd__a2111o_1 into sky130_fd_sc_hd__a2111o_1.ext:
+Processing sky130_fd_sc_hd__a2111o_1
+Extracting sky130_fd_sc_hd__a22oi_1 into sky130_fd_sc_hd__a22oi_1.ext:
+Processing sky130_fd_sc_hd__a22oi_1
+Extracting sky130_fd_sc_hd__and4_1 into sky130_fd_sc_hd__and4_1.ext:
+Processing sky130_fd_sc_hd__and4_1
+Extracting sky130_fd_sc_hd__a21oi_2 into sky130_fd_sc_hd__a21oi_2.ext:
+Processing sky130_fd_sc_hd__a21oi_2
+Extracting sky130_fd_sc_hd__a221o_1 into sky130_fd_sc_hd__a221o_1.ext:
+Processing sky130_fd_sc_hd__a221o_1
+Extracting sky130_fd_sc_hd__xnor3_1 into sky130_fd_sc_hd__xnor3_1.ext:
+Processing sky130_fd_sc_hd__xnor3_1
+Extracting sky130_fd_sc_hd__and3_2 into sky130_fd_sc_hd__and3_2.ext:
+Processing sky130_fd_sc_hd__and3_2
+Extracting sky130_fd_sc_hd__o2bb2a_1 into sky130_fd_sc_hd__o2bb2a_1.ext:
+Processing sky130_fd_sc_hd__o2bb2a_1
+Extracting sky130_fd_sc_hd__o31ai_2 into sky130_fd_sc_hd__o31ai_2.ext:
+Processing sky130_fd_sc_hd__o31ai_2
+Extracting sky130_fd_sc_hd__o2bb2ai_1 into sky130_fd_sc_hd__o2bb2ai_1.ext:
+Processing sky130_fd_sc_hd__o2bb2ai_1
+Extracting sky130_fd_sc_hd__xor2_2 into sky130_fd_sc_hd__xor2_2.ext:
+Processing sky130_fd_sc_hd__xor2_2
+Extracting sky130_fd_sc_hd__o2bb2ai_2 into sky130_fd_sc_hd__o2bb2ai_2.ext:
+Processing sky130_fd_sc_hd__o2bb2ai_2
+Extracting sky130_fd_sc_hd__mux2i_4 into sky130_fd_sc_hd__mux2i_4.ext:
+Processing sky130_fd_sc_hd__mux2i_4
+Extracting sky130_fd_sc_hd__a31oi_2 into sky130_fd_sc_hd__a31oi_2.ext:
+Processing sky130_fd_sc_hd__a31oi_2
+Extracting sky130_fd_sc_hd__o22ai_1 into sky130_fd_sc_hd__o22ai_1.ext:
+Processing sky130_fd_sc_hd__o22ai_1
+Extracting sky130_fd_sc_hd__buf_4 into sky130_fd_sc_hd__buf_4.ext:
+Processing sky130_fd_sc_hd__buf_4
+Extracting sky130_fd_sc_hd__nor3b_1 into sky130_fd_sc_hd__nor3b_1.ext:
+Processing sky130_fd_sc_hd__nor3b_1
+Extracting sky130_fd_sc_hd__dfrtp_2 into sky130_fd_sc_hd__dfrtp_2.ext:
+Processing sky130_fd_sc_hd__dfrtp_2
+Extracting sky130_fd_sc_hd__o311ai_0 into sky130_fd_sc_hd__o311ai_0.ext:
+Processing sky130_fd_sc_hd__o311ai_0
+Extracting sky130_fd_sc_hd__o31a_1 into sky130_fd_sc_hd__o31a_1.ext:
+Processing sky130_fd_sc_hd__o31a_1
+Extracting sky130_fd_sc_hd__a221oi_1 into sky130_fd_sc_hd__a221oi_1.ext:
+Processing sky130_fd_sc_hd__a221oi_1
+Extracting sky130_fd_sc_hd__a41oi_1 into sky130_fd_sc_hd__a41oi_1.ext:
+Processing sky130_fd_sc_hd__a41oi_1
+Extracting sky130_fd_sc_hd__a22o_1 into sky130_fd_sc_hd__a22o_1.ext:
+Processing sky130_fd_sc_hd__a22o_1
+Extracting sky130_fd_sc_hd__o21bai_1 into sky130_fd_sc_hd__o21bai_1.ext:
+Processing sky130_fd_sc_hd__o21bai_1
+Extracting sky130_fd_sc_hd__a311o_4 into sky130_fd_sc_hd__a311o_4.ext:
+Processing sky130_fd_sc_hd__a311o_4
+Extracting sky130_fd_sc_hd__o221ai_2 into sky130_fd_sc_hd__o221ai_2.ext:
+Processing sky130_fd_sc_hd__o221ai_2
+Extracting sky130_fd_sc_hd__or4b_4 into sky130_fd_sc_hd__or4b_4.ext:
+Processing sky130_fd_sc_hd__or4b_4
+Extracting sky130_fd_sc_hd__clkinv_1 into sky130_fd_sc_hd__clkinv_1.ext:
+Processing sky130_fd_sc_hd__clkinv_1
+Extracting sky130_fd_sc_hd__nand4b_1 into sky130_fd_sc_hd__nand4b_1.ext:
+Processing sky130_fd_sc_hd__nand4b_1
+Extracting sky130_fd_sc_hd__and2_2 into sky130_fd_sc_hd__and2_2.ext:
+Processing sky130_fd_sc_hd__and2_2
+Extracting sky130_fd_sc_hd__inv_6 into sky130_fd_sc_hd__inv_6.ext:
+Processing sky130_fd_sc_hd__inv_6
+Extracting sky130_fd_sc_hd__clkinv_2 into sky130_fd_sc_hd__clkinv_2.ext:
+Processing sky130_fd_sc_hd__clkinv_2
+Extracting sky130_fd_sc_hd__mux4_2 into sky130_fd_sc_hd__mux4_2.ext:
+Processing sky130_fd_sc_hd__mux4_2
+Extracting sky130_fd_sc_hd__o22ai_2 into sky130_fd_sc_hd__o22ai_2.ext:
+Processing sky130_fd_sc_hd__o22ai_2
+Extracting sky130_fd_sc_hd__a222oi_1 into sky130_fd_sc_hd__a222oi_1.ext:
+Processing sky130_fd_sc_hd__a222oi_1
+Extracting sky130_fd_sc_hd__a32oi_1 into sky130_fd_sc_hd__a32oi_1.ext:
+Processing sky130_fd_sc_hd__a32oi_1
+Extracting sky130_fd_sc_hd__mux2_2 into sky130_fd_sc_hd__mux2_2.ext:
+Processing sky130_fd_sc_hd__mux2_2
+Extracting sky130_fd_sc_hd__a32o_1 into sky130_fd_sc_hd__a32o_1.ext:
+Processing sky130_fd_sc_hd__a32o_1
+Extracting sky130_fd_sc_hd__o41ai_1 into sky130_fd_sc_hd__o41ai_1.ext:
+Processing sky130_fd_sc_hd__o41ai_1
+Extracting sky130_fd_sc_hd__nor4b_1 into sky130_fd_sc_hd__nor4b_1.ext:
+Processing sky130_fd_sc_hd__nor4b_1
+Extracting sky130_fd_sc_hd__clkinv_4 into sky130_fd_sc_hd__clkinv_4.ext:
+Processing sky130_fd_sc_hd__clkinv_4
+Extracting sky130_fd_sc_hd__or3b_2 into sky130_fd_sc_hd__or3b_2.ext:
+Processing sky130_fd_sc_hd__or3b_2
+Extracting sky130_fd_sc_hd__diode_2 into sky130_fd_sc_hd__diode_2.ext:
+Processing sky130_fd_sc_hd__diode_2
+sky130_fd_sc_hd__diode_2: 1 warning
+Extracting sky130_fd_sc_hd__clkinvlp_4 into sky130_fd_sc_hd__clkinvlp_4.ext:
+Processing sky130_fd_sc_hd__clkinvlp_4
+Extracting sky130_fd_sc_hd__bufinv_16 into sky130_fd_sc_hd__bufinv_16.ext:
+Processing sky130_fd_sc_hd__bufinv_16
+Extracting sky130_fd_sc_hd__o311ai_1 into sky130_fd_sc_hd__o311ai_1.ext:
+Processing sky130_fd_sc_hd__o311ai_1
+Extracting sky130_fd_sc_hd__a32oi_4 into sky130_fd_sc_hd__a32oi_4.ext:
+Processing sky130_fd_sc_hd__a32oi_4
+Extracting sky130_fd_sc_hd__nand2_2 into sky130_fd_sc_hd__nand2_2.ext:
+Processing sky130_fd_sc_hd__nand2_2
+Extracting sky130_fd_sc_hd__o31ai_4 into sky130_fd_sc_hd__o31ai_4.ext:
+Processing sky130_fd_sc_hd__o31ai_4
+Extracting sky130_fd_sc_hd__o21ba_1 into sky130_fd_sc_hd__o21ba_1.ext:
+Processing sky130_fd_sc_hd__o21ba_1
+Extracting sky130_fd_sc_hd__and2_0 into sky130_fd_sc_hd__and2_0.ext:
+Processing sky130_fd_sc_hd__and2_0
+Extracting sky130_fd_sc_hd__o32ai_1 into sky130_fd_sc_hd__o32ai_1.ext:
+Processing sky130_fd_sc_hd__o32ai_1
+Extracting sky130_fd_sc_hd__a211oi_2 into sky130_fd_sc_hd__a211oi_2.ext:
+Processing sky130_fd_sc_hd__a211oi_2
+Extracting sky130_fd_sc_hd__or3b_4 into sky130_fd_sc_hd__or3b_4.ext:
+Processing sky130_fd_sc_hd__or3b_4
+Extracting sky130_fd_sc_hd__mux2_4 into sky130_fd_sc_hd__mux2_4.ext:
+Processing sky130_fd_sc_hd__mux2_4
+Extracting sky130_fd_sc_hd__clkbuf_8 into sky130_fd_sc_hd__clkbuf_8.ext:
+Processing sky130_fd_sc_hd__clkbuf_8
+Extracting sky130_fd_sc_hd__a2111oi_0 into sky130_fd_sc_hd__a2111oi_0.ext:
+Processing sky130_fd_sc_hd__a2111oi_0
+Extracting sky130_fd_sc_hd__nor2_4 into sky130_fd_sc_hd__nor2_4.ext:
+Processing sky130_fd_sc_hd__nor2_4
+Extracting sky130_fd_sc_hd__a311o_1 into sky130_fd_sc_hd__a311o_1.ext:
+Processing sky130_fd_sc_hd__a311o_1
+Extracting sky130_fd_sc_hd__a22oi_2 into sky130_fd_sc_hd__a22oi_2.ext:
+Processing sky130_fd_sc_hd__a22oi_2
+Extracting sky130_fd_sc_hd__o211a_1 into sky130_fd_sc_hd__o211a_1.ext:
+Processing sky130_fd_sc_hd__o211a_1
+Extracting sky130_fd_sc_hd__a22o_2 into sky130_fd_sc_hd__a22o_2.ext:
+Processing sky130_fd_sc_hd__a22o_2
+Extracting sky130_fd_sc_hd__a22oi_4 into sky130_fd_sc_hd__a22oi_4.ext:
+Processing sky130_fd_sc_hd__a22oi_4
+Extracting sky130_fd_sc_hd__a2bb2oi_1 into sky130_fd_sc_hd__a2bb2oi_1.ext:
+Processing sky130_fd_sc_hd__a2bb2oi_1
+Extracting sky130_fd_sc_hd__and3b_1 into sky130_fd_sc_hd__and3b_1.ext:
+Processing sky130_fd_sc_hd__and3b_1
+Extracting sky130_fd_sc_hd__clkdlybuf4s15_2 into sky130_fd_sc_hd__clkdlybuf4s15_2.ext:
+Processing sky130_fd_sc_hd__clkdlybuf4s15_2
+Extracting sky130_fd_sc_hd__clkdlybuf4s18_2 into sky130_fd_sc_hd__clkdlybuf4s18_2.ext:
+Processing sky130_fd_sc_hd__clkdlybuf4s18_2
+Extracting sky130_fd_sc_hd__and4_2 into sky130_fd_sc_hd__and4_2.ext:
+Processing sky130_fd_sc_hd__and4_2
+Extracting sky130_fd_sc_hd__nand4b_2 into sky130_fd_sc_hd__nand4b_2.ext:
+Processing sky130_fd_sc_hd__nand4b_2
+Extracting sky130_fd_sc_hd__clkbuf_2 into sky130_fd_sc_hd__clkbuf_2.ext:
+Processing sky130_fd_sc_hd__clkbuf_2
+Extracting sky130_fd_sc_hd__a2111oi_1 into sky130_fd_sc_hd__a2111oi_1.ext:
+Processing sky130_fd_sc_hd__a2111oi_1
+Extracting sky130_fd_sc_hd__nor3_4 into sky130_fd_sc_hd__nor3_4.ext:
+Processing sky130_fd_sc_hd__nor3_4
+Extracting sky130_fd_sc_hd__a2bb2oi_2 into sky130_fd_sc_hd__a2bb2oi_2.ext:
+Processing sky130_fd_sc_hd__a2bb2oi_2
+Extracting sky130_fd_sc_hd__a211oi_4 into sky130_fd_sc_hd__a211oi_4.ext:
+Processing sky130_fd_sc_hd__a211oi_4
+Extracting sky130_fd_sc_hd__nand3_4 into sky130_fd_sc_hd__nand3_4.ext:
+Processing sky130_fd_sc_hd__nand3_4
+Extracting sky130_fd_sc_hd__nor4b_4 into sky130_fd_sc_hd__nor4b_4.ext:
+Processing sky130_fd_sc_hd__nor4b_4
+Extracting sky130_fd_sc_hd__nor4bb_1 into sky130_fd_sc_hd__nor4bb_1.ext:
+Processing sky130_fd_sc_hd__nor4bb_1
+Extracting sky130_fd_sc_hd__o2111a_1 into sky130_fd_sc_hd__o2111a_1.ext:
+Processing sky130_fd_sc_hd__o2111a_1
+Extracting sky130_fd_sc_hd__nor4b_2 into sky130_fd_sc_hd__nor4b_2.ext:
+Processing sky130_fd_sc_hd__nor4b_2
+Extracting sky130_fd_sc_hd__nand2_4 into sky130_fd_sc_hd__nand2_4.ext:
+Processing sky130_fd_sc_hd__nand2_4
+Extracting sky130_fd_sc_hd__nand3_2 into sky130_fd_sc_hd__nand3_2.ext:
+Processing sky130_fd_sc_hd__nand3_2
+Extracting sky130_fd_sc_hd__nor2b_2 into sky130_fd_sc_hd__nor2b_2.ext:
+Processing sky130_fd_sc_hd__nor2b_2
+Extracting sky130_fd_sc_hd__clkbuf_4 into sky130_fd_sc_hd__clkbuf_4.ext:
+Processing sky130_fd_sc_hd__clkbuf_4
+Extracting sky130_fd_sc_hd__ha_2 into sky130_fd_sc_hd__ha_2.ext:
+Processing sky130_fd_sc_hd__ha_2
+Extracting sky130_fd_sc_hd__o2111ai_2 into sky130_fd_sc_hd__o2111ai_2.ext:
+Processing sky130_fd_sc_hd__o2111ai_2
+Extracting sky130_fd_sc_hd__fa_1 into sky130_fd_sc_hd__fa_1.ext:
+Processing sky130_fd_sc_hd__fa_1
+Extracting sky130_fd_sc_hd__inv_2 into sky130_fd_sc_hd__inv_2.ext:
+Processing sky130_fd_sc_hd__inv_2
+Extracting sky130_fd_sc_hd__inv_8 into sky130_fd_sc_hd__inv_8.ext:
+Processing sky130_fd_sc_hd__inv_8
+Extracting sky130_fd_sc_hd__nor3b_4 into sky130_fd_sc_hd__nor3b_4.ext:
+Processing sky130_fd_sc_hd__nor3b_4
+Extracting sky130_fd_sc_hd__o311a_1 into sky130_fd_sc_hd__o311a_1.ext:
+Processing sky130_fd_sc_hd__o311a_1
+Extracting sky130_fd_sc_hd__and4b_2 into sky130_fd_sc_hd__and4b_2.ext:
+Processing sky130_fd_sc_hd__and4b_2
+Extracting sky130_fd_sc_hd__nand4bb_1 into sky130_fd_sc_hd__nand4bb_1.ext:
+Processing sky130_fd_sc_hd__nand4bb_1
+Extracting sky130_fd_sc_hd__nand3b_4 into sky130_fd_sc_hd__nand3b_4.ext:
+Processing sky130_fd_sc_hd__nand3b_4
+Extracting VIA_L1M1_PR_MR into VIA_L1M1_PR_MR.ext:
+Processing VIA_L1M1_PR_MR
+Extracting VIA_via5_6_3100_3100_2_2_1600_1600 into VIA_via5_6_3100_3100_2_2_1600_1600.ext:
+Processing VIA_via5_6_3100_3100_2_2_1600_1600
+Extracting VIA_M1M2_PR into VIA_M1M2_PR.ext:
+Processing VIA_M1M2_PR
+Extracting VIA_via4_5_1600_480_1_4_400_400 into VIA_via4_5_1600_480_1_4_400_400.ext:
+Processing VIA_via4_5_1600_480_1_4_400_400
+Extracting VIA_via2_3_1600_480_1_5_320_320 into VIA_via2_3_1600_480_1_5_320_320.ext:
+Processing VIA_via2_3_1600_480_1_5_320_320
+Extracting VIA_via5_6_1600_3100_2_1_1600_1600 into VIA_via5_6_1600_3100_2_1_1600_1600.ext:
+Processing VIA_via5_6_1600_3100_2_1_1600_1600
+Extracting VIA_via3_4_1600_480_1_4_400_400 into VIA_via3_4_1600_480_1_4_400_400.ext:
+Processing VIA_via3_4_1600_480_1_4_400_400
+Extracting VIA_via5_6_1600_1600_1_1_1600_1600 into VIA_via5_6_1600_1600_1_1_1600_1600.ext:
+Processing VIA_via5_6_1600_1600_1_1_1600_1600
+Extracting VIA_via5_6_3100_1600_1_2_1600_1600 into VIA_via5_6_3100_1600_1_2_1600_1600.ext:
+Processing VIA_via5_6_3100_1600_1_2_1600_1600
+Extracting VIA_M2M3_PR into VIA_M2M3_PR.ext:
+Processing VIA_M2M3_PR
+Extracting VIA_M3M4_PR into VIA_M3M4_PR.ext:
+Processing VIA_M3M4_PR
+Extracting VIA_M1M2_PR_MR into VIA_M1M2_PR_MR.ext:
+Processing VIA_M1M2_PR_MR
+Extracting VIA_M4M5_PR into VIA_M4M5_PR.ext:
+Processing VIA_M4M5_PR
+Extracting tcim_chip_digital into tcim_chip_digital.ext:
+Processing tcim_chip_digital
+Extracting user_analog_project_wrapper into user_analog_project_wrapper.ext:
+Processing user_analog_project_wrapper
+Total of 1 warning.
+Reading extract file.
+Building flattened netlist.
+Running antenna checks.
+   100 gates analyzed.
+   200 gates analyzed.
+   300 gates analyzed.
+   400 gates analyzed.
+   500 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_9
+Antenna violation detected at plane metal3
+Effective antenna ratio 7011.97 > limit 400
+Gate rect (182988 295375) to (183018 295459)
+Antenna rect (182802 280140) to (182922 280160)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_9
+Antenna violation detected at plane metal4
+Effective antenna ratio 8030.49 > limit 400
+Gate rect (182988 295375) to (183018 295459)
+Antenna rect (6340 78004) to (6460 78032)
+   600 gates analyzed.
+   700 gates analyzed.
+   800 gates analyzed.
+   900 gates analyzed.
+   1000 gates analyzed.
+   1100 gates analyzed.
+   1200 gates analyzed.
+   1300 gates analyzed.
+   1400 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_60
+Antenna violation detected at plane metal3
+Effective antenna ratio 1031.28 > limit 400
+Gate rect (113160 353583) to (113190 353783)
+Antenna rect (137668 374039) to (137788 374059)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_60
+Antenna violation detected at plane metal4
+Effective antenna ratio 8028.47 > limit 2786.92
+Gate rect (113160 353583) to (113190 353783)
+Antenna rect (137668 374039) to (137788 374067)
+   1500 gates analyzed.
+   1600 gates analyzed.
+   1700 gates analyzed.
+   1800 gates analyzed.
+   1900 gates analyzed.
+   2000 gates analyzed.
+   2100 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_50
+Antenna violation detected at plane metal2
+Effective antenna ratio 638.169 > limit 400
+Gate rect (104788 351951) to (104818 352035)
+Antenna rect (104084 352110) to (104136 352116)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_50
+Antenna violation detected at plane metal3
+Effective antenna ratio 3547.71 > limit 400
+Gate rect (104788 351951) to (104818 352035)
+Antenna rect (193188 389639) to (193308 389659)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_61
+Antenna violation detected at plane metal2
+Effective antenna ratio 476.195 > limit 400
+Gate rect (116012 353583) to (116042 353783)
+Antenna rect (115952 353810) to (116004 353816)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_61
+Antenna violation detected at plane metal3
+Effective antenna ratio 1663.16 > limit 400
+Gate rect (116012 353583) to (116042 353783)
+Antenna rect (146788 381639) to (146908 381659)
+   2200 gates analyzed.
+   2300 gates analyzed.
+   2400 gates analyzed.
+   2500 gates analyzed.
+   2600 gates analyzed.
+   2700 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_40
+Antenna violation detected at plane metal2
+Effective antenna ratio 643.037 > limit 400
+Gate rect (98072 350863) to (98102 350947)
+Antenna rect (98012 351022) to (98064 351028)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_40
+Antenna violation detected at plane metal3
+Effective antenna ratio 3750.51 > limit 400
+Gate rect (98072 350863) to (98102 350947)
+Antenna rect (192228 388839) to (192348 388859)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_40
+Antenna violation detected at plane metal4
+Effective antenna ratio 2844.14 > limit 2786.92
+Gate rect (98072 350863) to (98102 350947)
+Antenna rect (192228 388839) to (192348 388867)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_51
+Antenna violation detected at plane metal2
+Effective antenna ratio 444.006 > limit 400
+Gate rect (105432 353039) to (105462 353123)
+Antenna rect (104820 353198) to (104872 353204)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_51
+Antenna violation detected at plane metal3
+Effective antenna ratio 1563.51 > limit 400
+Gate rect (105432 353039) to (105462 353123)
+Antenna rect (143908 379239) to (144028 379259)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_51
+Antenna violation detected at plane metal4
+Effective antenna ratio 3224.98 > limit 2786.92
+Gate rect (105432 353039) to (105462 353123)
+Antenna rect (143908 379239) to (144028 379267)
+   2800 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_62
+Antenna violation detected at plane metal2
+Effective antenna ratio 420.961 > limit 400
+Gate rect (121900 353583) to (121930 353783)
+Antenna rect (121840 353810) to (121892 353816)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_62
+Antenna violation detected at plane metal3
+Effective antenna ratio 1386.73 > limit 400
+Gate rect (121900 353583) to (121930 353783)
+Antenna rect (142948 378439) to (143068 378459)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_62
+Antenna violation detected at plane metal4
+Effective antenna ratio 3963.98 > limit 2786.92
+Gate rect (121900 353583) to (121930 353783)
+Antenna rect (142948 378439) to (143068 378467)
+   2900 gates analyzed.
+   3000 gates analyzed.
+   3100 gates analyzed.
+   3200 gates analyzed.
+   3300 gates analyzed.
+   3400 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_30
+Antenna violation detected at plane metal2
+Effective antenna ratio 600.581 > limit 400
+Gate rect (94300 349775) to (94330 349859)
+Antenna rect (94516 349934) to (94568 349940)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_30
+Antenna violation detected at plane metal3
+Effective antenna ratio 3717.82 > limit 400
+Gate rect (94300 349775) to (94330 349859)
+Antenna rect (187908 385239) to (188028 385259)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_30
+Antenna violation detected at plane metal4
+Effective antenna ratio 6169.63 > limit 2786.92
+Gate rect (94300 349775) to (94330 349859)
+Antenna rect (187908 385239) to (188028 385267)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_41
+Antenna violation detected at plane metal2
+Effective antenna ratio 518.372 > limit 400
+Gate rect (100372 353039) to (100402 353123)
+Antenna rect (100220 353198) to (100272 353204)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_41
+Antenna violation detected at plane metal3
+Effective antenna ratio 3415.37 > limit 400
+Gate rect (100372 353039) to (100402 353123)
+Antenna rect (185988 383639) to (186108 383659)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_41
+Antenna violation detected at plane metal4
+Effective antenna ratio 7647.63 > limit 2786.92
+Gate rect (100372 353039) to (100402 353123)
+Antenna rect (185988 383639) to (186108 383667)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_52
+Antenna violation detected at plane metal2
+Effective antenna ratio 598.485 > limit 400
+Gate rect (104512 352495) to (104542 352695)
+Antenna rect (103900 352858) to (103952 352864)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_52
+Antenna violation detected at plane metal3
+Effective antenna ratio 3478.84 > limit 400
+Gate rect (104512 352495) to (104542 352695)
+Antenna rect (191268 388039) to (191388 388059)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_52
+Antenna violation detected at plane metal4
+Effective antenna ratio 3583.14 > limit 2786.92
+Gate rect (104512 352495) to (104542 352695)
+Antenna rect (191268 388039) to (191388 388067)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_63
+Antenna violation detected at plane metal3
+Effective antenna ratio 932.256 > limit 400
+Gate rect (120152 353583) to (120182 353783)
+Antenna rect (139588 375639) to (139708 375659)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_63
+Antenna violation detected at plane metal4
+Effective antenna ratio 6550.48 > limit 2786.92
+Gate rect (120152 353583) to (120182 353783)
+Antenna rect (139588 375639) to (139708 375667)
+   3500 gates analyzed.
+   3600 gates analyzed.
+   3700 gates analyzed.
+   3800 gates analyzed.
+   3900 gates analyzed.
+   4000 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_20
+Antenna violation detected at plane metal3
+Effective antenna ratio 19265.8 > limit 400
+Gate rect (88688 292111) to (88718 292195)
+Antenna rect (573940 287940) to (574060 287960)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_20
+Antenna violation detected at plane metal4
+Effective antenna ratio 7754.94 > limit 400
+Gate rect (88688 292111) to (88718 292195)
+Antenna rect (573940 92750) to (574060 92778)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_31
+Antenna violation detected at plane metal2
+Effective antenna ratio 527.499 > limit 400
+Gate rect (98808 349231) to (98838 349431)
+Antenna rect (98564 349458) to (98616 349464)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_31
+Antenna violation detected at plane metal3
+Effective antenna ratio 1868.82 > limit 400
+Gate rect (98808 349231) to (98838 349431)
+Antenna rect (145348 380439) to (145468 380459)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_42
+Antenna violation detected at plane metal2
+Effective antenna ratio 437.246 > limit 400
+Gate rect (101844 353039) to (101874 353123)
+Antenna rect (100956 353198) to (101008 353204)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_42
+Antenna violation detected at plane metal3
+Effective antenna ratio 1697.75 > limit 400
+Gate rect (101844 353039) to (101874 353123)
+Antenna rect (143428 378839) to (143548 378859)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_42
+Antenna violation detected at plane metal4
+Effective antenna ratio 3594.48 > limit 2786.92
+Gate rect (101844 353039) to (101874 353123)
+Antenna rect (143428 378839) to (143548 378867)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_53
+Antenna violation detected at plane metal2
+Effective antenna ratio 576.716 > limit 400
+Gate rect (101752 350319) to (101782 350519)
+Antenna rect (101140 350546) to (101192 350552)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_53
+Antenna violation detected at plane metal3
+Effective antenna ratio 3416.95 > limit 400
+Gate rect (101752 350319) to (101782 350519)
+Antenna rect (186948 384439) to (187068 384459)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_53
+Antenna violation detected at plane metal4
+Effective antenna ratio 6908.63 > limit 2786.92
+Gate rect (101752 350319) to (101782 350519)
+Antenna rect (186948 384439) to (187068 384467)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_64
+Antenna violation detected at plane metal2
+Effective antenna ratio 466.392 > limit 400
+Gate rect (116932 352495) to (116962 352695)
+Antenna rect (116872 352722) to (116924 352728)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_64
+Antenna violation detected at plane metal3
+Effective antenna ratio 1543.19 > limit 400
+Gate rect (116932 352495) to (116962 352695)
+Antenna rect (144868 380039) to (144988 380059)
+   4100 gates analyzed.
+   4200 gates analyzed.
+   4300 gates analyzed.
+   4400 gates analyzed.
+   4500 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_10
+Antenna violation detected at plane metal3
+Effective antenna ratio 7008.16 > limit 400
+Gate rect (182804 295919) to (182834 296119)
+Antenna rect (183906 278940) to (184026 278960)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_10
+Antenna violation detected at plane metal4
+Effective antenna ratio 9697.56 > limit 400
+Gate rect (182804 295919) to (182834 296119)
+Antenna rect (7540 34782) to (7660 34810)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_21
+Antenna violation detected at plane metal3
+Effective antenna ratio 1721.87 > limit 400
+Gate rect (95404 353583) to (95434 353783)
+Antenna rect (138148 374439) to (138268 374459)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_21
+Antenna violation detected at plane metal4
+Effective antenna ratio 7658.97 > limit 2786.92
+Gate rect (95404 353583) to (95434 353783)
+Antenna rect (138148 374439) to (138268 374467)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_32
+Antenna violation detected at plane metal2
+Effective antenna ratio 487.747 > limit 400
+Gate rect (101936 353583) to (101966 353783)
+Antenna rect (101876 353810) to (101928 353816)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_32
+Antenna violation detected at plane metal3
+Effective antenna ratio 3292.54 > limit 400
+Gate rect (101936 353583) to (101966 353783)
+Antenna rect (184548 382439) to (184668 382459)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_32
+Antenna violation detected at plane metal4
+Effective antenna ratio 8756.12 > limit 2786.92
+Gate rect (101936 353583) to (101966 353783)
+Antenna rect (184548 382439) to (184668 382467)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_43
+Antenna violation detected at plane metal2
+Effective antenna ratio 635.33 > limit 400
+Gate rect (110032 353583) to (110062 353783)
+Antenna rect (107580 353878) to (107632 353884)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_43
+Antenna violation detected at plane metal3
+Effective antenna ratio 3485.19 > limit 400
+Gate rect (110032 353583) to (110062 353783)
+Antenna rect (195108 391239) to (195228 391259)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_54
+Antenna violation detected at plane metal2
+Effective antenna ratio 411.082 > limit 400
+Gate rect (104512 353583) to (104542 353783)
+Antenna rect (101324 353946) to (101376 353952)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_54
+Antenna violation detected at plane metal3
+Effective antenna ratio 1645.07 > limit 400
+Gate rect (104512 353583) to (104542 353783)
+Antenna rect (142468 378039) to (142588 378059)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_54
+Antenna violation detected at plane metal4
+Effective antenna ratio 4333.48 > limit 2786.92
+Gate rect (104512 353583) to (104542 353783)
+Antenna rect (142468 378039) to (142588 378067)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_65
+Antenna violation detected at plane metal3
+Effective antenna ratio 704.384 > limit 400
+Gate rect (124200 353583) to (124230 353783)
+Antenna rect (138628 374839) to (138748 374859)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_65
+Antenna violation detected at plane metal4
+Effective antenna ratio 7289.47 > limit 2786.92
+Gate rect (124200 353583) to (124230 353783)
+Antenna rect (138628 374839) to (138748 374867)
+   4600 gates analyzed.
+   4700 gates analyzed.
+   4800 gates analyzed.
+   4900 gates analyzed.
+   5000 gates analyzed.
+Cell: sky130_fd_sc_hd__nand2_1_53
+Antenna violation detected at plane metal3
+Effective antenna ratio 403.603 > limit 400
+Gate rect (157507 311695) to (157537 311825)
+Antenna rect (159001 311683) to (159067 311686)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_22
+Antenna violation detected at plane metal3
+Effective antenna ratio 1654.59 > limit 400
+Gate rect (96600 353583) to (96630 353783)
+Antenna rect (137188 373639) to (137308 373659)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_22
+Antenna violation detected at plane metal4
+Effective antenna ratio 8397.97 > limit 2786.92
+Gate rect (96600 353583) to (96630 353783)
+Antenna rect (137188 373639) to (137308 373667)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_33
+Antenna violation detected at plane metal3
+Effective antenna ratio 1542.56 > limit 400
+Gate rect (102764 353583) to (102794 353783)
+Antenna rect (140068 376039) to (140188 376059)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_33
+Antenna violation detected at plane metal4
+Effective antenna ratio 6180.98 > limit 2786.92
+Gate rect (102764 353583) to (102794 353783)
+Antenna rect (140068 376039) to (140188 376067)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_44
+Antenna violation detected at plane metal3
+Effective antenna ratio 1416.88 > limit 400
+Gate rect (105984 353583) to (106014 353783)
+Antenna rect (139108 375239) to (139228 375259)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_44
+Antenna violation detected at plane metal4
+Effective antenna ratio 6919.97 > limit 2786.92
+Gate rect (105984 353583) to (106014 353783)
+Antenna rect (139108 375239) to (139228 375267)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_55
+Antenna violation detected at plane metal2
+Effective antenna ratio 546.496 > limit 400
+Gate rect (100372 349775) to (100402 349859)
+Antenna rect (100404 349934) to (100456 349940)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_55
+Antenna violation detected at plane metal3
+Effective antenna ratio 3331.9 > limit 400
+Gate rect (100372 349775) to (100402 349859)
+Antenna rect (184068 382039) to (184188 382059)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_55
+Antenna violation detected at plane metal4
+Effective antenna ratio 9125.62 > limit 2786.92
+Gate rect (100372 349775) to (100402 349859)
+Antenna rect (184068 382039) to (184188 382067)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_66
+Antenna violation detected at plane metal3
+Effective antenna ratio 554.267 > limit 400
+Gate rect (127328 353583) to (127358 353783)
+Antenna rect (140548 376439) to (140668 376459)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_66
+Antenna violation detected at plane metal4
+Effective antenna ratio 5811.48 > limit 2786.92
+Gate rect (127328 353583) to (127358 353783)
+Antenna rect (140548 376439) to (140668 376467)
+   5100 gates analyzed.
+   5200 gates analyzed.
+   5300 gates analyzed.
+   5400 gates analyzed.
+   5500 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_23
+Antenna violation detected at plane metal2
+Effective antenna ratio 594.023 > limit 400
+Gate rect (93840 352495) to (93870 352695)
+Antenna rect (93964 352722) to (94016 352728)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_23
+Antenna violation detected at plane metal3
+Effective antenna ratio 3853.97 > limit 400
+Gate rect (93840 352495) to (93870 352695)
+Antenna rect (190788 387639) to (190908 387659)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_23
+Antenna violation detected at plane metal4
+Effective antenna ratio 3952.64 > limit 2786.92
+Gate rect (93840 352495) to (93870 352695)
+Antenna rect (190788 387639) to (190908 387667)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_34
+Antenna violation detected at plane metal2
+Effective antenna ratio 551.567 > limit 400
+Gate rect (102212 351407) to (102242 351607)
+Antenna rect (102060 351634) to (102112 351640)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_34
+Antenna violation detected at plane metal3
+Effective antenna ratio 3361.41 > limit 400
+Gate rect (102212 351407) to (102242 351607)
+Antenna rect (186468 384039) to (186588 384059)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_34
+Antenna violation detected at plane metal4
+Effective antenna ratio 7278.13 > limit 2786.92
+Gate rect (102212 351407) to (102242 351607)
+Antenna rect (186468 384039) to (186588 384067)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_45
+Antenna violation detected at plane metal2
+Effective antenna ratio 422.71 > limit 400
+Gate rect (108100 352495) to (108130 352695)
+Antenna rect (105556 352858) to (105608 352864)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_45
+Antenna violation detected at plane metal3
+Effective antenna ratio 1458.14 > limit 400
+Gate rect (108100 352495) to (108130 352695)
+Antenna rect (141988 377639) to (142108 377659)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_45
+Antenna violation detected at plane metal4
+Effective antenna ratio 4702.98 > limit 2786.92
+Gate rect (108100 352495) to (108130 352695)
+Antenna rect (141988 377639) to (142108 377667)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_56
+Antenna violation detected at plane metal2
+Effective antenna ratio 622.958 > limit 400
+Gate rect (97336 353583) to (97366 353783)
+Antenna rect (98196 353810) to (98248 353816)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_56
+Antenna violation detected at plane metal3
+Effective antenna ratio 3819.38 > limit 400
+Gate rect (97336 353583) to (97366 353783)
+Antenna rect (194148 390439) to (194268 390459)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_67
+Antenna violation detected at plane metal4
+Effective antenna ratio 8767.47 > limit 2786.92
+Gate rect (134964 353583) to (134994 353783)
+Antenna rect (136708 373239) to (136828 373267)
+   5600 gates analyzed.
+   5700 gates analyzed.
+   5800 gates analyzed.
+   5900 gates analyzed.
+   6000 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_13
+Antenna violation detected at plane metal3
+Effective antenna ratio 7010.7 > limit 400
+Gate rect (183540 295919) to (183570 296119)
+Antenna rect (183170 279740) to (183290 279760)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_13
+Antenna violation detected at plane metal4
+Effective antenna ratio 1237.01 > limit 400
+Gate rect (183540 295919) to (183570 296119)
+Antenna rect (6740 248848) to (6860 248876)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_24
+Antenna violation detected at plane metal2
+Effective antenna ratio 585.37 > limit 400
+Gate rect (95404 351407) to (95434 351607)
+Antenna rect (95252 351634) to (95304 351640)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_24
+Antenna violation detected at plane metal3
+Effective antenna ratio 3726.71 > limit 400
+Gate rect (95404 351407) to (95434 351607)
+Antenna rect (188868 386039) to (188988 386059)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_24
+Antenna violation detected at plane metal4
+Effective antenna ratio 5430.63 > limit 2786.92
+Gate rect (95404 351407) to (95434 351607)
+Antenna rect (188868 386039) to (188988 386067)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_35
+Antenna violation detected at plane metal2
+Effective antenna ratio 528.31 > limit 400
+Gate rect (100924 353583) to (100954 353783)
+Antenna rect (100588 353810) to (100640 353816)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_35
+Antenna violation detected at plane metal3
+Effective antenna ratio 3457.89 > limit 400
+Gate rect (100924 353583) to (100954 353783)
+Antenna rect (187428 384839) to (187548 384859)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_35
+Antenna violation detected at plane metal4
+Effective antenna ratio 6539.13 > limit 2786.92
+Gate rect (100924 353583) to (100954 353783)
+Antenna rect (187428 384839) to (187548 384867)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_46
+Antenna violation detected at plane metal2
+Effective antenna ratio 541.831 > limit 400
+Gate rect (109204 353583) to (109234 353783)
+Antenna rect (108132 353810) to (108184 353816)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_46
+Antenna violation detected at plane metal3
+Effective antenna ratio 3196.7 > limit 400
+Gate rect (109204 353583) to (109234 353783)
+Antenna rect (188388 385639) to (188508 385659)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_46
+Antenna violation detected at plane metal4
+Effective antenna ratio 5800.13 > limit 2786.92
+Gate rect (109204 353583) to (109234 353783)
+Antenna rect (188388 385639) to (188508 385667)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_57
+Antenna violation detected at plane metal2
+Effective antenna ratio 573.741 > limit 400
+Gate rect (97704 352495) to (97734 352695)
+Antenna rect (97460 352722) to (97512 352728)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_57
+Antenna violation detected at plane metal3
+Effective antenna ratio 3658.15 > limit 400
+Gate rect (97704 352495) to (97734 352695)
+Antenna rect (189348 386439) to (189468 386459)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_57
+Antenna violation detected at plane metal4
+Effective antenna ratio 5061.13 > limit 2786.92
+Gate rect (97704 352495) to (97734 352695)
+Antenna rect (189348 386439) to (189468 386467)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_68
+Antenna violation detected at plane metal4
+Effective antenna ratio 9506.47 > limit 2786.92
+Gate rect (134688 353039) to (134718 353123)
+Antenna rect (135748 372439) to (135868 372467)
+   6100 gates analyzed.
+   6200 gates analyzed.
+   6300 gates analyzed.
+   6400 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_14
+Antenna violation detected at plane metal3
+Effective antenna ratio 7008.8 > limit 400
+Gate rect (183724 295375) to (183754 295459)
+Antenna rect (183722 279140) to (183842 279160)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_14
+Antenna violation detected at plane metal4
+Effective antenna ratio 516.5 > limit 400
+Gate rect (183724 295375) to (183754 295459)
+Antenna rect (7340 279140) to (7460 279168)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_25
+Antenna violation detected at plane metal2
+Effective antenna ratio 607.544 > limit 400
+Gate rect (94576 352495) to (94606 352695)
+Antenna rect (94332 352722) to (94384 352728)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_25
+Antenna violation detected at plane metal3
+Effective antenna ratio 3877.46 > limit 400
+Gate rect (94576 352495) to (94606 352695)
+Antenna rect (191748 388439) to (191868 388459)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_25
+Antenna violation detected at plane metal4
+Effective antenna ratio 3213.64 > limit 2786.92
+Gate rect (94576 352495) to (94606 352695)
+Antenna rect (191748 388439) to (191868 388467)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_36
+Antenna violation detected at plane metal2
+Effective antenna ratio 496.806 > limit 400
+Gate rect (103684 353583) to (103714 353783)
+Antenna rect (101692 353674) to (101744 353680)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_36
+Antenna violation detected at plane metal3
+Effective antenna ratio 3318.89 > limit 400
+Gate rect (103684 353583) to (103714 353783)
+Antenna rect (185028 382839) to (185148 382859)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_36
+Antenna violation detected at plane metal4
+Effective antenna ratio 8386.62 > limit 2786.92
+Gate rect (103684 353583) to (103714 353783)
+Antenna rect (185028 382839) to (185148 382867)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_47
+Antenna violation detected at plane metal2
+Effective antenna ratio 567.724 > limit 400
+Gate rect (107272 353583) to (107302 353783)
+Antenna rect (104268 353878) to (104320 353884)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_47
+Antenna violation detected at plane metal3
+Effective antenna ratio 3426.16 > limit 400
+Gate rect (107272 353583) to (107302 353783)
+Antenna rect (190308 387239) to (190428 387259)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_47
+Antenna violation detected at plane metal4
+Effective antenna ratio 4322.13 > limit 2786.92
+Gate rect (107272 353583) to (107302 353783)
+Antenna rect (190308 387239) to (190428 387267)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_58
+Antenna violation detected at plane metal3
+Effective antenna ratio 1354.36 > limit 400
+Gate rect (114724 353583) to (114754 353783)
+Antenna rect (141028 376839) to (141148 376859)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_58
+Antenna violation detected at plane metal4
+Effective antenna ratio 5441.98 > limit 2786.92
+Gate rect (114724 353583) to (114754 353783)
+Antenna rect (141028 376839) to (141148 376867)
+   6500 gates analyzed.
+   6600 gates analyzed.
+   6700 gates analyzed.
+   6800 gates analyzed.
+   6900 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_15
+Antenna violation detected at plane metal3
+Effective antenna ratio 16068.9 > limit 400
+Gate rect (171028 292111) to (171058 292195)
+Antenna rect (576340 282540) to (576460 282560)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_15
+Antenna violation detected at plane metal4
+Effective antenna ratio 1386.26 > limit 400
+Gate rect (171028 292111) to (171058 292195)
+Antenna rect (576340 282540) to (576460 282568)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_26
+Antenna violation detected at plane metal3
+Effective antenna ratio 1623.81 > limit 400
+Gate rect (95772 353039) to (95802 353123)
+Antenna rect (136228 372839) to (136348 372859)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_26
+Antenna violation detected at plane metal4
+Effective antenna ratio 9136.97 > limit 2786.92
+Gate rect (95772 353039) to (95802 353123)
+Antenna rect (136228 372839) to (136348 372867)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_37
+Antenna violation detected at plane metal2
+Effective antenna ratio 485.854 > limit 400
+Gate rect (98440 352495) to (98470 352695)
+Antenna rect (97828 352722) to (97880 352728)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_37
+Antenna violation detected at plane metal3
+Effective antenna ratio 1936.1 > limit 400
+Gate rect (98440 352495) to (98470 352695)
+Antenna rect (146308 381239) to (146428 381259)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_48
+Antenna violation detected at plane metal2
+Effective antenna ratio 501.268 > limit 400
+Gate rect (108008 353583) to (108038 353783)
+Antenna rect (107396 353810) to (107448 353816)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_48
+Antenna violation detected at plane metal3
+Effective antenna ratio 3111.64 > limit 400
+Gate rect (108008 353583) to (108038 353783)
+Antenna rect (185508 383239) to (185628 383259)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_48
+Antenna violation detected at plane metal4
+Effective antenna ratio 8017.13 > limit 2786.92
+Gate rect (108008 353583) to (108038 353783)
+Antenna rect (185508 383239) to (185628 383267)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_59
+Antenna violation detected at plane metal2
+Effective antenna ratio 632.017 > limit 400
+Gate rect (111964 353583) to (111994 353783)
+Antenna rect (107948 353674) to (108000 353680)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_59
+Antenna violation detected at plane metal3
+Effective antenna ratio 3451.55 > limit 400
+Gate rect (111964 353583) to (111994 353783)
+Antenna rect (194628 390839) to (194748 390859)
+   7000 gates analyzed.
+   7100 gates analyzed.
+Cell: sky130_fd_sc_hd__o22ai_1_52
+Antenna violation detected at plane metal4 contact
+Effective antenna ratio 419.844 > limit 400
+Gate rect (185758 326383) to (185788 326511)
+Antenna rect (182185 327187) to (182251 327190)
+   7200 gates analyzed.
+   7300 gates analyzed.
+   7400 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_27
+Antenna violation detected at plane metal2
+Effective antenna ratio 617.279 > limit 400
+Gate rect (95404 350319) to (95434 350519)
+Antenna rect (94884 350546) to (94936 350552)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_27
+Antenna violation detected at plane metal3
+Effective antenna ratio 3779.39 > limit 400
+Gate rect (95404 350319) to (95434 350519)
+Antenna rect (189828 386839) to (189948 386859)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_27
+Antenna violation detected at plane metal4
+Effective antenna ratio 4691.63 > limit 2786.92
+Gate rect (95404 350319) to (95434 350519)
+Antenna rect (189828 386839) to (189948 386867)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_38
+Antenna violation detected at plane metal2
+Effective antenna ratio 435.893 > limit 400
+Gate rect (100280 351407) to (100310 351607)
+Antenna rect (99392 351770) to (99444 351776)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_38
+Antenna violation detected at plane metal3
+Effective antenna ratio 1687.28 > limit 400
+Gate rect (100280 351407) to (100310 351607)
+Antenna rect (141508 377239) to (141628 377259)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_38
+Antenna violation detected at plane metal4
+Effective antenna ratio 5072.48 > limit 2786.92
+Gate rect (100280 351407) to (100310 351607)
+Antenna rect (141508 377239) to (141628 377267)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_49
+Antenna violation detected at plane metal2
+Effective antenna ratio 460.705 > limit 400
+Gate rect (105248 353583) to (105278 353783)
+Antenna rect (105004 353810) to (105056 353816)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_49
+Antenna violation detected at plane metal3
+Effective antenna ratio 1632.38 > limit 400
+Gate rect (105248 353583) to (105278 353783)
+Antenna rect (145828 380839) to (145948 380859)
+   7500 gates analyzed.
+   7600 gates analyzed.
+   7700 gates analyzed.
+   7800 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_28
+Antenna violation detected at plane metal2
+Effective antenna ratio 657.843 > limit 400
+Gate rect (94668 350319) to (94698 350519)
+Antenna rect (94148 350546) to (94200 350552)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_28
+Antenna violation detected at plane metal3
+Effective antenna ratio 3922.84 > limit 400
+Gate rect (94668 350319) to (94698 350519)
+Antenna rect (192708 389239) to (192828 389259)
+   7900 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_39
+Antenna violation detected at plane metal2
+Effective antenna ratio 440.423 > limit 400
+Gate rect (98992 353583) to (99022 353783)
+Antenna rect (98380 353810) to (98432 353816)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_39
+Antenna violation detected at plane metal3
+Effective antenna ratio 1838.03 > limit 400
+Gate rect (98992 353583) to (99022 353783)
+Antenna rect (144388 379639) to (144508 379659)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_39
+Antenna violation detected at plane metal4
+Effective antenna ratio 2855.48 > limit 2786.92
+Gate rect (98992 353583) to (99022 353783)
+Antenna rect (144388 379639) to (144508 379667)
+   8000 gates analyzed.
+   8100 gates analyzed.
+   8200 gates analyzed.
+Cell: sky130_fd_sc_hd__o21ai_0_148
+Antenna violation detected at plane metal4 contact
+Effective antenna ratio 1073.38 > limit 400
+Gate rect (186020 320943) to (186050 321071)
+Antenna rect (185681 321067) to (185747 321070)
+   8300 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_18
+Antenna violation detected at plane metal3
+Effective antenna ratio 16155.9 > limit 400
+Gate rect (168544 300815) to (168574 300899)
+Antenna rect (576140 282740) to (576260 282760)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_18
+Antenna violation detected at plane metal4
+Effective antenna ratio 406.928 > limit 400
+Gate rect (168544 300815) to (168574 300899)
+Antenna rect (576140 272772) to (576260 272800)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_29
+Antenna violation detected at plane metal2
+Effective antenna ratio 670.215 > limit 400
+Gate rect (96232 350319) to (96262 350519)
+Antenna rect (94700 350614) to (94752 350620)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_29
+Antenna violation detected at plane metal3
+Effective antenna ratio 3939.03 > limit 400
+Gate rect (96232 350319) to (96262 350519)
+Antenna rect (193668 390039) to (193788 390059)
+   8400 gates analyzed.
+   8500 gates analyzed.
+   8600 gates analyzed.
+   8700 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_19
+Antenna violation detected at plane metal3
+Effective antenna ratio 19011.6 > limit 400
+Gate rect (99360 293199) to (99390 293283)
+Antenna rect (574340 287540) to (574460 287560)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_19
+Antenna violation detected at plane metal4
+Effective antenna ratio 2981.92 > limit 400
+Gate rect (99360 293199) to (99390 293283)
+Antenna rect (574340 287540) to (574460 287568)
+   8800 gates analyzed.
+   8900 gates analyzed.
+   9000 gates analyzed.
+   9100 gates analyzed.
+   9200 gates analyzed.
+   9300 gates analyzed.
+   9400 gates analyzed.
+   9500 gates analyzed.
+   9600 gates analyzed.
+   9700 gates analyzed.
+   9800 gates analyzed.
+   9900 gates analyzed.
+   10000 gates analyzed.
+   10100 gates analyzed.
+   10200 gates analyzed.
+   10300 gates analyzed.
+   10400 gates analyzed.
+   10500 gates analyzed.
+   10600 gates analyzed.
+   10700 gates analyzed.
+   10800 gates analyzed.
+   10900 gates analyzed.
+   11000 gates analyzed.
+   11100 gates analyzed.
+   11200 gates analyzed.
+   11300 gates analyzed.
+   11400 gates analyzed.
+   11500 gates analyzed.
+   11600 gates analyzed.
+   11700 gates analyzed.
+   11800 gates analyzed.
+   11900 gates analyzed.
+   12000 gates analyzed.
+   12100 gates analyzed.
+   12200 gates analyzed.
+   12300 gates analyzed.
+   12400 gates analyzed.
+   12500 gates analyzed.
+   12600 gates analyzed.
+   12700 gates analyzed.
+   12800 gates analyzed.
+   12900 gates analyzed.
+   13000 gates analyzed.
+   13100 gates analyzed.
+   13200 gates analyzed.
+   13300 gates analyzed.
+   13400 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_0
+Antenna violation detected at plane metal3
+Effective antenna ratio 7011.34 > limit 400
+Gate rect (182896 292111) to (182926 292195)
+Antenna rect (182986 279940) to (183106 279960)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_0
+Antenna violation detected at plane metal4
+Effective antenna ratio 10962.2 > limit 400
+Gate rect (182896 292111) to (182926 292195)
+Antenna rect (6540 3904) to (6660 3932)
+   13500 gates analyzed.
+   13600 gates analyzed.
+   13700 gates analyzed.
+   13800 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_1
+Antenna violation detected at plane metal3
+Effective antenna ratio 7010.07 > limit 400
+Gate rect (183356 293199) to (183386 293283)
+Antenna rect (183354 279540) to (183474 279560)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_1
+Antenna violation detected at plane metal4
+Effective antenna ratio 10758.8 > limit 400
+Gate rect (183356 293199) to (183386 293283)
+Antenna rect (6940 8632) to (7060 8660)
+   13900 gates analyzed.
+   14000 gates analyzed.
+   14100 gates analyzed.
+   14200 gates analyzed.
+Cell: sky130_fd_sc_hd__dlclkp_1_3
+Antenna violation detected at plane metal4 contact
+Effective antenna ratio 1073.38 > limit 400
+Gate rect (175178 300887) to (175208 300971)
+Antenna rect (174089 301075) to (174155 301078)
+   14300 gates analyzed.
+   14400 gates analyzed.
+   14500 gates analyzed.
+   14600 gates analyzed.
+   14700 gates analyzed.
+   14800 gates analyzed.
+   14900 gates analyzed.
+   15000 gates analyzed.
+   15100 gates analyzed.
+   15200 gates analyzed.
+   15300 gates analyzed.
+   15400 gates analyzed.
+   15500 gates analyzed.
+   15600 gates analyzed.
+   15700 gates analyzed.
+   15800 gates analyzed.
+   15900 gates analyzed.
+   16000 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_6
+Antenna violation detected at plane metal3
+Effective antenna ratio 7012.61 > limit 400
+Gate rect (182712 296463) to (182742 296547)
+Antenna rect (182618 280340) to (182738 280360)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_6
+Antenna violation detected at plane metal4
+Effective antenna ratio 10602.9 > limit 400
+Gate rect (182712 296463) to (182742 296547)
+Antenna rect (6140 13360) to (6260 13388)
+   16100 gates analyzed.
+   16200 gates analyzed.
+   16300 gates analyzed.
+   16400 gates analyzed.
+   16500 gates analyzed.
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_7
+Antenna violation detected at plane metal3
+Effective antenna ratio 7009.43 > limit 400
+Gate rect (183540 296463) to (183570 296547)
+Antenna rect (183538 279340) to (183658 279360)
+Cell: sky130_fd_sc_hd__clkdlybuf4s15_1_7
+Antenna violation detected at plane metal4
+Effective antenna ratio 6284.08 > limit 400
+Gate rect (183540 296463) to (183570 296547)
+Antenna rect (7140 121226) to (7260 121254)
+   16600 gates analyzed.
+   16700 gates analyzed.
+   16800 gates analyzed.
+   16900 gates analyzed.
+   17000 gates analyzed.
+   17100 gates analyzed.
+   17200 gates analyzed.
+   17300 gates analyzed.
+   17400 gates analyzed.
+   17500 gates analyzed.
+   17600 gates analyzed.
+Cell: d_nfet_01v8_w1_l0p15_0
+Antenna violation detected at plane metal3
+Effective antenna ratio 4512.95 > limit 400
+Gate rect (274752 637757) to (274782 637957)
+Antenna rect (217004 632700) to (296986 632728)
+Cell: d_nfet_01v8_w1_l0p15_0
+Antenna violation detected at plane metal4
+Effective antenna ratio 13562.3 > limit 2752.2
+Gate rect (274752 637757) to (274782 637957)
+Antenna rect (217004 392239) to (217124 392267)
+Cell: d_nfet_01v8_w1_l0p15_1
+Antenna violation detected at plane metal3
+Effective antenna ratio 4485.91 > limit 400
+Gate rect (279230 637757) to (279260 637957)
+Antenna rect (217484 632500) to (296986 632528)
+Cell: d_nfet_01v8_w1_l0p15_1
+Antenna violation detected at plane metal4
+Effective antenna ratio 13539.7 > limit 2752.2
+Gate rect (279230 637757) to (279260 637957)
+Antenna rect (217484 392439) to (217604 392467)
+Cell: d_nfet_01v8_w1_l0p15_2
+Antenna violation detected at plane metal3
+Effective antenna ratio 4458.87 > limit 400
+Gate rect (287644 637757) to (287674 637957)
+Antenna rect (217964 632300) to (296986 632328)
+Cell: d_nfet_01v8_w1_l0p15_2
+Antenna violation detected at plane metal4
+Effective antenna ratio 13517.2 > limit 2752.2
+Gate rect (287644 637757) to (287674 637957)
+Antenna rect (217964 392639) to (218084 392667)
+   17700 gates analyzed.
+   17800 gates analyzed.
+   17900 gates analyzed.
+   18000 gates analyzed.
+   18100 gates analyzed.
+antennacheck finished.
+ANTENNA_ERRORS 2078

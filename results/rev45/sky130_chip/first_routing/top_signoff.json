@@ -1,0 +1,61 @@
+{
+ "gds": "/mnt/user-data/uploads/Downloads/reram-ternary-sync/reram-ternary/chip/sky130/caravan/gds/user_analog_project_wrapper.gds",
+ "gds_md5": "1055aef39749b24f74212e597e5c8283",
+ "drc_rules": "Magic drc(full), sky130B, commands of cf-precheck magic_drc_check.tcl",
+ "drc_markers": 0,
+ "drc_by_rule": {},
+ "drc_boxes": [],
+ "antenna_rules": "Magic antennacheck, sky130B tech (partial model)",
+ "antenna_violations": [
+  {
+   "cell": "sky130_fd_sc_hd__nand2_1_53",
+   "plane": "metal3",
+   "ratio": 403.603,
+   "limit": 400.0,
+   "gate_rect_um": [
+    787.535,
+    1558.475,
+    787.685,
+    1559.125
+   ]
+  },
+  {
+   "cell": "sky130_fd_sc_hd__o22ai_1_52",
+   "plane": "metal4 contact",
+   "ratio": 419.844,
+   "limit": 400.0,
+   "gate_rect_um": [
+    928.79,
+    1631.915,
+    928.94,
+    1632.555
+   ]
+  },
+  {
+   "cell": "sky130_fd_sc_hd__o21ai_0_148",
+   "plane": "metal4 contact",
+   "ratio": 1073.38,
+   "limit": 400.0,
+   "gate_rect_um": [
+    930.1,
+    1604.715,
+    930.25,
+    1605.355
+   ]
+  },
+  {
+   "cell": "sky130_fd_sc_hd__dlclkp_1_3",
+   "plane": "metal4 contact",
+   "ratio": 1073.38,
+   "limit": 400.0,
+   "gate_rect_um": [
+    875.89,
+    1504.435,
+    876.04,
+    1504.855
+   ]
+  }
+ ],
+ "antenna_violation_count": 4,
+ "antenna_feedback_count": 114
+}

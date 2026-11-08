@@ -1,0 +1,15 @@
+{
+ "rev45": {
+  "cell_area_um2": 60385.4144,
+  "cells": 6963
+ },
+ "rev46": {
+  "cell_area_um2": 82368.9984,
+  "cells": 9655
+ },
+ "note": "yosys synth + abc on sky130_fd_sc_hd__tt_025C_1v80 (before buffering and clock tree); core area of the block 160,609 um^2",
+ "rev47": {
+  "cell_area_um2": 95134.992,
+  "cells": 11222
+ }
+}

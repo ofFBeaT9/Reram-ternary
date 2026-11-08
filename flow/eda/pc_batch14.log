@@ -1,0 +1,7 @@
+read_slang needs the plugin: loading it in copies of the .sby files
+SBY_RC=0
+SBY  9:32:15 [tcim_spi] DONE (PASS, rc=0)
+SBY  9:36:20 [tcim_core_safety] DONE (PASS, rc=0)
+SBY 12:35:36 [tcim_core_safety_pnx] DONE (PASS, rc=0)
+SBY 12:40:46 [tcim_core_progress] DONE (PASS, rc=0)
+BATCH14_DONE

@@ -1,0 +1,75 @@
+{
+ "train_acc": 0.988169798190675,
+ "test_acc_software": 0.9472222222222222,
+ "nonzero_w1": 0.8331404320987654,
+ "nonzero_w2": 0.9666666666666667,
+ "nonzero_inputs": 0.7425154320987655,
+ "nonzero_hidden": 0.5930555555555556,
+ "n_test": 360,
+ "hardware": {
+  "digital, LRS3, published spread, poor wiring": {
+   "acc_mean": 0.9472222222222223,
+   "acc_min": 0.9472222222222222,
+   "acc_max": 0.9472222222222222,
+   "layer1_result_mismatch": 0.0,
+   "array_power_x_reads_W": 0.0346970828778732,
+   "reads_per_inference": 203.08333333333334
+  },
+  "digital, LRS3, spread x2, poor wiring": {
+   "acc_mean": 0.9472222222222223,
+   "acc_min": 0.9472222222222222,
+   "acc_max": 0.9472222222222222,
+   "layer1_result_mismatch": 0.0,
+   "array_power_x_reads_W": 0.03520681250980964,
+   "reads_per_inference": 203.08333333333334
+  },
+  "analog, LRS3, published spread, best wiring, calibrated": {
+   "acc_mean": 0.9490740740740741,
+   "acc_min": 0.9472222222222222,
+   "acc_max": 0.9527777777777777,
+   "layer1_result_mismatch": 0.2512474279835391,
+   "array_power_x_reads_W": 0.03508755349733106,
+   "reads_per_inference": 8.0
+  },
+  "analog, LRS3, spread x2, best wiring, calibrated": {
+   "acc_mean": 0.9462962962962962,
+   "acc_min": 0.9444444444444444,
+   "acc_max": 0.95,
+   "layer1_result_mismatch": 0.5344521604938272,
+   "array_power_x_reads_W": 0.03560300993693118,
+   "reads_per_inference": 8.0
+  },
+  "analog, LRS3, spread x3, best wiring, calibrated": {
+   "acc_mean": 0.9472222222222223,
+   "acc_min": 0.9388888888888889,
+   "acc_max": 0.9583333333333334,
+   "layer1_result_mismatch": 0.6706018518518518,
+   "array_power_x_reads_W": 0.03635715370036117,
+   "reads_per_inference": 8.0
+  },
+  "analog, LRS1, published spread, best wiring, calibrated": {
+   "acc_mean": 0.9472222222222223,
+   "acc_min": 0.9388888888888889,
+   "acc_max": 0.9583333333333334,
+   "layer1_result_mismatch": 0.7005144032921811,
+   "array_power_x_reads_W": 0.016657316616539616,
+   "reads_per_inference": 8.0
+  },
+  "analog, LRS3, published spread, poor wiring, calibrated": {
+   "acc_mean": 0.9527777777777778,
+   "acc_min": 0.95,
+   "acc_max": 0.9583333333333334,
+   "layer1_result_mismatch": 0.470434670781893,
+   "array_power_x_reads_W": 0.02947440569709317,
+   "reads_per_inference": 8.0
+  },
+  "analog, LRS3, published spread, poor wiring, not calibrated": {
+   "acc_mean": 0.9499999999999998,
+   "acc_min": 0.9472222222222222,
+   "acc_max": 0.9527777777777777,
+   "layer1_result_mismatch": 0.8324717078189301,
+   "array_power_x_reads_W": 0.028711801522055175,
+   "reads_per_inference": 8.0
+  }
+ }
+}

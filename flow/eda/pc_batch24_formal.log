@@ -1,0 +1,17 @@
+read_slang needs the plugin: loading it in the .sby files
+an all-zero product ends without DONE safety FAIL
+SBY  8:49:11 [tcim_miter_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:26 (26)
+SBY  8:49:11 [tcim_miter_prove] DONE (PASS, rc=0)
+SBY  8:49:51 [tcim_miter_prove_pnx] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:40 (40)
+SBY  8:49:51 [tcim_miter_prove_pnx] DONE (PASS, rc=0)
+SBY  9:07:15 [tcim_core_c_progress] summary: Elapsed clock time [H:MM:SS (secs)]: 0:18:31 (1111)
+SBY  9:07:15 [tcim_core_c_progress] DONE (PASS, rc=0)
+SBY  8:55:44 [tcim_core_b_safety] summary: Elapsed clock time [H:MM:SS (secs)]: 0:07:00 (420)
+SBY  8:55:44 [tcim_core_b_safety] DONE (PASS, rc=0)
+SBY  9:16:33 [tcim_core_safety_pnx] summary: Elapsed clock time [H:MM:SS (secs)]: 0:27:49 (1669)
+SBY  9:16:33 [tcim_core_safety_pnx] DONE (PASS, rc=0)
+SBY  8:48:45 [tcim_spi] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  8:48:45 [tcim_spi] DONE (PASS, rc=0)
+miter: start row from the weights of row 0 prove OTHER
+21 of 22 faults make a proof fail
+FORMAL24_DONE

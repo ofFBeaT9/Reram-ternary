@@ -1,0 +1,4 @@
+Warning: Latch inferred for signal `\icg_model.\q' from process `\icg_model.$proc$/home/claude/reram-ternary/flow/orfs/post/icg_models.v:8$1': $auto$proc_dlatch.cc:558:proc_dlatch$21
+82512 checks, 0 failures
+TEST PASSED
+EXIT=0

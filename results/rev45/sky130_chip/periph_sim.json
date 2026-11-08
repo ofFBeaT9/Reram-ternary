@@ -1,0 +1,2270 @@
+{
+ "cells": "chip/sky130/sim/periph.spice",
+ "iunit_uA": 0.7999999999999999,
+ "ratios": {
+  "reset": 2,
+  "read": 3,
+  "set": 6
+ },
+ "vref_V": 0.2,
+ "A": {
+  "tt -40C 1.62/3.0V": {
+   "rise_ns": 0.243,
+   "fall_ns": 0.883,
+   "static_nA": 4.371
+  },
+  "tt -40C 1.8/3.3V": {
+   "rise_ns": 0.212,
+   "fall_ns": 0.758,
+   "static_nA": 13.68
+  },
+  "tt -40C 1.98/3.6V": {
+   "rise_ns": 0.19,
+   "fall_ns": 0.673,
+   "static_nA": 9.136
+  },
+  "tt 27C 1.62/3.0V": {
+   "rise_ns": 0.261,
+   "fall_ns": 0.999,
+   "static_nA": 1.814
+  },
+  "tt 27C 1.8/3.3V": {
+   "rise_ns": 0.229,
+   "fall_ns": 0.871,
+   "static_nA": 0.878
+  },
+  "tt 27C 1.98/3.6V": {
+   "rise_ns": 0.206,
+   "fall_ns": 0.779,
+   "static_nA": 1.209
+  },
+  "tt 125C 1.62/3.0V": {
+   "rise_ns": 0.282,
+   "fall_ns": 1.136,
+   "static_nA": 3.721
+  },
+  "tt 125C 1.8/3.3V": {
+   "rise_ns": 0.251,
+   "fall_ns": 1.005,
+   "static_nA": 1.281
+  },
+  "tt 125C 1.98/3.6V": {
+   "rise_ns": 0.227,
+   "fall_ns": 0.907,
+   "static_nA": 1.402
+  },
+  "ss -40C 1.62/3.0V": {
+   "rise_ns": 0.286,
+   "fall_ns": 1.232,
+   "static_nA": 0.778
+  },
+  "ss -40C 1.8/3.3V": {
+   "rise_ns": 0.246,
+   "fall_ns": 1.031,
+   "static_nA": 0.816
+  },
+  "ss -40C 1.98/3.6V": {
+   "rise_ns": 0.218,
+   "fall_ns": 0.897,
+   "static_nA": 12.847
+  },
+  "ss 27C 1.62/3.0V": {
+   "rise_ns": 0.309,
+   "fall_ns": 1.416,
+   "static_nA": 0.112
+  },
+  "ss 27C 1.8/3.3V": {
+   "rise_ns": 0.268,
+   "fall_ns": 1.207,
+   "static_nA": 2.338
+  },
+  "ss 27C 1.98/3.6V": {
+   "rise_ns": 0.239,
+   "fall_ns": 1.06,
+   "static_nA": 2.934
+  },
+  "ss 125C 1.62/3.0V": {
+   "rise_ns": 0.335,
+   "fall_ns": 1.626,
+   "static_nA": 0.63
+  },
+  "ss 125C 1.8/3.3V": {
+   "rise_ns": 0.295,
+   "fall_ns": 1.414,
+   "static_nA": 2.237
+  },
+  "ss 125C 1.98/3.6V": {
+   "rise_ns": 0.264,
+   "fall_ns": 1.256,
+   "static_nA": 2.682
+  },
+  "ff -40C 1.62/3.0V": {
+   "rise_ns": 0.209,
+   "fall_ns": 0.677,
+   "static_nA": 0.706
+  },
+  "ff -40C 1.8/3.3V": {
+   "rise_ns": 0.185,
+   "fall_ns": 0.594,
+   "static_nA": 5.728
+  },
+  "ff -40C 1.98/3.6V": {
+   "rise_ns": 0.166,
+   "fall_ns": 0.536,
+   "static_nA": 6.831
+  },
+  "ff 27C 1.62/3.0V": {
+   "rise_ns": 0.223,
+   "fall_ns": 0.762,
+   "static_nA": 1.298
+  },
+  "ff 27C 1.8/3.3V": {
+   "rise_ns": 0.198,
+   "fall_ns": 0.677,
+   "static_nA": 5.458
+  },
+  "ff 27C 1.98/3.6V": {
+   "rise_ns": 0.179,
+   "fall_ns": 0.614,
+   "static_nA": 6.832
+  },
+  "ff 125C 1.62/3.0V": {
+   "rise_ns": 0.24,
+   "fall_ns": 0.868,
+   "static_nA": 7.017
+  },
+  "ff 125C 1.8/3.3V": {
+   "rise_ns": 0.215,
+   "fall_ns": 0.78,
+   "static_nA": 5.359
+  },
+  "ff 125C 1.98/3.6V": {
+   "rise_ns": 0.195,
+   "fall_ns": 0.712,
+   "static_nA": 12.335
+  },
+  "sf -40C 1.62/3.0V": {
+   "rise_ns": 0.247,
+   "fall_ns": 1.042,
+   "static_nA": 6.074
+  },
+  "sf -40C 1.8/3.3V": {
+   "rise_ns": 0.214,
+   "fall_ns": 0.885,
+   "static_nA": 16.084
+  },
+  "sf -40C 1.98/3.6V": {
+   "rise_ns": 0.19,
+   "fall_ns": 0.779,
+   "static_nA": 21.698
+  },
+  "sf 27C 1.62/3.0V": {
+   "rise_ns": 0.268,
+   "fall_ns": 1.171,
+   "static_nA": 2.109
+  },
+  "sf 27C 1.8/3.3V": {
+   "rise_ns": 0.234,
+   "fall_ns": 1.012,
+   "static_nA": 0.542
+  },
+  "sf 27C 1.98/3.6V": {
+   "rise_ns": 0.208,
+   "fall_ns": 0.9,
+   "static_nA": 3.426
+  },
+  "sf 125C 1.62/3.0V": {
+   "rise_ns": 0.291,
+   "fall_ns": 1.328,
+   "static_nA": 9.002
+  },
+  "sf 125C 1.8/3.3V": {
+   "rise_ns": 0.257,
+   "fall_ns": 1.169,
+   "static_nA": 9.87
+  },
+  "sf 125C 1.98/3.6V": {
+   "rise_ns": 0.231,
+   "fall_ns": 1.05,
+   "static_nA": 16.066
+  },
+  "fs -40C 1.62/3.0V": {
+   "rise_ns": 0.253,
+   "fall_ns": 0.809,
+   "static_nA": 1.863
+  },
+  "fs -40C 1.8/3.3V": {
+   "rise_ns": 0.219,
+   "fall_ns": 0.695,
+   "static_nA": 0.939
+  },
+  "fs -40C 1.98/3.6V": {
+   "rise_ns": 0.195,
+   "fall_ns": 0.618,
+   "static_nA": 4.626
+  },
+  "fs 27C 1.62/3.0V": {
+   "rise_ns": 0.27,
+   "fall_ns": 0.932,
+   "static_nA": 4.902
+  },
+  "fs 27C 1.8/3.3V": {
+   "rise_ns": 0.235,
+   "fall_ns": 0.81,
+   "static_nA": 2.485
+  },
+  "fs 27C 1.98/3.6V": {
+   "rise_ns": 0.21,
+   "fall_ns": 0.725,
+   "static_nA": 4.163
+  },
+  "fs 125C 1.62/3.0V": {
+   "rise_ns": 0.29,
+   "fall_ns": 1.075,
+   "static_nA": 1.141
+  },
+  "fs 125C 1.8/3.3V": {
+   "rise_ns": 0.256,
+   "fall_ns": 0.95,
+   "static_nA": 1.917
+  },
+  "fs 125C 1.98/3.6V": {
+   "rise_ns": 0.23,
+   "fall_ns": 0.857,
+   "static_nA": 1.675
+  }
+ },
+ "B": {
+  "tt -40C vwl 1.4V": {
+   "far_rise_90_ns": 1.015,
+   "far_fall_10_ns": 0.88,
+   "far_final_V": 1.4
+  },
+  "tt -40C vwl 1.7V": {
+   "far_rise_90_ns": 1.116,
+   "far_fall_10_ns": 0.926,
+   "far_final_V": 1.7
+  },
+  "tt -40C vwl 2.5V": {
+   "far_rise_90_ns": 1.212,
+   "far_fall_10_ns": 1.039,
+   "far_final_V": 2.5
+  },
+  "tt -40C vwl 3.0V": {
+   "far_rise_90_ns": 1.103,
+   "far_fall_10_ns": 1.108,
+   "far_final_V": 3.0
+  },
+  "tt -40C vwl 3.3V": {
+   "far_rise_90_ns": 1.058,
+   "far_fall_10_ns": 1.153,
+   "far_final_V": 3.3
+  },
+  "tt 27C vwl 1.4V": {
+   "far_rise_90_ns": 1.095,
+   "far_fall_10_ns": 0.984,
+   "far_final_V": 1.4
+  },
+  "tt 27C vwl 1.7V": {
+   "far_rise_90_ns": 1.176,
+   "far_fall_10_ns": 1.035,
+   "far_final_V": 1.7
+  },
+  "tt 27C vwl 2.5V": {
+   "far_rise_90_ns": 1.288,
+   "far_fall_10_ns": 1.158,
+   "far_final_V": 2.5
+  },
+  "tt 27C vwl 3.0V": {
+   "far_rise_90_ns": 1.175,
+   "far_fall_10_ns": 1.233,
+   "far_final_V": 3.0
+  },
+  "tt 27C vwl 3.3V": {
+   "far_rise_90_ns": 1.122,
+   "far_fall_10_ns": 1.281,
+   "far_final_V": 3.3
+  },
+  "tt 125C vwl 1.4V": {
+   "far_rise_90_ns": 1.199,
+   "far_fall_10_ns": 1.17,
+   "far_final_V": 1.4
+  },
+  "tt 125C vwl 1.7V": {
+   "far_rise_90_ns": 1.259,
+   "far_fall_10_ns": 1.227,
+   "far_final_V": 1.7
+  },
+  "tt 125C vwl 2.5V": {
+   "far_rise_90_ns": 1.375,
+   "far_fall_10_ns": 1.363,
+   "far_final_V": 2.5
+  },
+  "tt 125C vwl 3.0V": {
+   "far_rise_90_ns": 1.266,
+   "far_fall_10_ns": 1.448,
+   "far_final_V": 3.0
+  },
+  "tt 125C vwl 3.3V": {
+   "far_rise_90_ns": 1.205,
+   "far_fall_10_ns": 1.502,
+   "far_final_V": 3.3
+  },
+  "ss -40C vwl 1.4V": {
+   "far_rise_90_ns": 1.094,
+   "far_fall_10_ns": 0.941,
+   "far_final_V": 1.4
+  },
+  "ss -40C vwl 1.7V": {
+   "far_rise_90_ns": 1.29,
+   "far_fall_10_ns": 0.99,
+   "far_final_V": 1.7
+  },
+  "ss -40C vwl 2.5V": {
+   "far_rise_90_ns": 1.328,
+   "far_fall_10_ns": 1.116,
+   "far_final_V": 2.5
+  },
+  "ss -40C vwl 3.0V": {
+   "far_rise_90_ns": 1.171,
+   "far_fall_10_ns": 1.195,
+   "far_final_V": 3.0
+  },
+  "ss -40C vwl 3.3V": {
+   "far_rise_90_ns": 1.111,
+   "far_fall_10_ns": 1.246,
+   "far_final_V": 3.3
+  },
+  "ss 27C vwl 1.4V": {
+   "far_rise_90_ns": 1.203,
+   "far_fall_10_ns": 1.063,
+   "far_final_V": 1.4
+  },
+  "ss 27C vwl 1.7V": {
+   "far_rise_90_ns": 1.353,
+   "far_fall_10_ns": 1.12,
+   "far_final_V": 1.7
+  },
+  "ss 27C vwl 2.5V": {
+   "far_rise_90_ns": 1.421,
+   "far_fall_10_ns": 1.263,
+   "far_final_V": 2.5
+  },
+  "ss 27C vwl 3.0V": {
+   "far_rise_90_ns": 1.257,
+   "far_fall_10_ns": 1.352,
+   "far_final_V": 3.0
+  },
+  "ss 27C vwl 3.3V": {
+   "far_rise_90_ns": 1.187,
+   "far_fall_10_ns": 1.409,
+   "far_final_V": 3.3
+  },
+  "ss 125C vwl 1.4V": {
+   "far_rise_90_ns": 1.347,
+   "far_fall_10_ns": 1.288,
+   "far_final_V": 1.4
+  },
+  "ss 125C vwl 1.7V": {
+   "far_rise_90_ns": 1.442,
+   "far_fall_10_ns": 1.355,
+   "far_final_V": 1.7
+  },
+  "ss 125C vwl 2.5V": {
+   "far_rise_90_ns": 1.526,
+   "far_fall_10_ns": 1.523,
+   "far_final_V": 2.5
+  },
+  "ss 125C vwl 3.0V": {
+   "far_rise_90_ns": 1.364,
+   "far_fall_10_ns": 1.629,
+   "far_final_V": 3.0
+  },
+  "ss 125C vwl 3.3V": {
+   "far_rise_90_ns": 1.285,
+   "far_fall_10_ns": 1.695,
+   "far_final_V": 3.3
+  },
+  "ff -40C vwl 1.4V": {
+   "far_rise_90_ns": 0.952,
+   "far_fall_10_ns": 0.837,
+   "far_final_V": 1.4
+  },
+  "ff -40C vwl 1.7V": {
+   "far_rise_90_ns": 1.008,
+   "far_fall_10_ns": 0.882,
+   "far_final_V": 1.7
+  },
+  "ff -40C vwl 2.5V": {
+   "far_rise_90_ns": 1.121,
+   "far_fall_10_ns": 0.984,
+   "far_final_V": 2.5
+  },
+  "ff -40C vwl 3.0V": {
+   "far_rise_90_ns": 1.046,
+   "far_fall_10_ns": 1.045,
+   "far_final_V": 3.0
+  },
+  "ff -40C vwl 3.3V": {
+   "far_rise_90_ns": 1.01,
+   "far_fall_10_ns": 1.084,
+   "far_final_V": 3.3
+  },
+  "ff 27C vwl 1.4V": {
+   "far_rise_90_ns": 1.009,
+   "far_fall_10_ns": 0.929,
+   "far_final_V": 1.4
+  },
+  "ff 27C vwl 1.7V": {
+   "far_rise_90_ns": 1.06,
+   "far_fall_10_ns": 0.975,
+   "far_final_V": 1.7
+  },
+  "ff 27C vwl 2.5V": {
+   "far_rise_90_ns": 1.183,
+   "far_fall_10_ns": 1.081,
+   "far_final_V": 2.5
+  },
+  "ff 27C vwl 3.0V": {
+   "far_rise_90_ns": 1.107,
+   "far_fall_10_ns": 1.145,
+   "far_final_V": 3.0
+  },
+  "ff 27C vwl 3.3V": {
+   "far_rise_90_ns": 1.065,
+   "far_fall_10_ns": 1.185,
+   "far_final_V": 3.3
+  },
+  "ff 125C vwl 1.4V": {
+   "far_rise_90_ns": 1.089,
+   "far_fall_10_ns": 1.084,
+   "far_final_V": 1.4
+  },
+  "ff 125C vwl 1.7V": {
+   "far_rise_90_ns": 1.132,
+   "far_fall_10_ns": 1.132,
+   "far_final_V": 1.7
+  },
+  "ff 125C vwl 2.5V": {
+   "far_rise_90_ns": 1.252,
+   "far_fall_10_ns": 1.244,
+   "far_final_V": 2.5
+  },
+  "ff 125C vwl 3.0V": {
+   "far_rise_90_ns": 1.182,
+   "far_fall_10_ns": 1.313,
+   "far_final_V": 3.0
+  },
+  "ff 125C vwl 3.3V": {
+   "far_rise_90_ns": 1.135,
+   "far_fall_10_ns": 1.358,
+   "far_final_V": 3.3
+  },
+  "sf -40C vwl 1.4V": {
+   "far_rise_90_ns": 0.945,
+   "far_fall_10_ns": 0.839,
+   "far_final_V": 1.4
+  },
+  "sf -40C vwl 1.7V": {
+   "far_rise_90_ns": 1.036,
+   "far_fall_10_ns": 0.882,
+   "far_final_V": 1.7
+  },
+  "sf -40C vwl 2.5V": {
+   "far_rise_90_ns": 1.254,
+   "far_fall_10_ns": 0.984,
+   "far_final_V": 2.5
+  },
+  "sf -40C vwl 3.0V": {
+   "far_rise_90_ns": 1.142,
+   "far_fall_10_ns": 1.042,
+   "far_final_V": 3.0
+  },
+  "sf -40C vwl 3.3V": {
+   "far_rise_90_ns": 1.086,
+   "far_fall_10_ns": 1.078,
+   "far_final_V": 3.3
+  },
+  "sf 27C vwl 1.4V": {
+   "far_rise_90_ns": 1.013,
+   "far_fall_10_ns": 0.93,
+   "far_final_V": 1.4
+  },
+  "sf 27C vwl 1.7V": {
+   "far_rise_90_ns": 1.095,
+   "far_fall_10_ns": 0.975,
+   "far_final_V": 1.7
+  },
+  "sf 27C vwl 2.5V": {
+   "far_rise_90_ns": 1.324,
+   "far_fall_10_ns": 1.078,
+   "far_final_V": 2.5
+  },
+  "sf 27C vwl 3.0V": {
+   "far_rise_90_ns": 1.222,
+   "far_fall_10_ns": 1.138,
+   "far_final_V": 3.0
+  },
+  "sf 27C vwl 3.3V": {
+   "far_rise_90_ns": 1.159,
+   "far_fall_10_ns": 1.176,
+   "far_final_V": 3.3
+  },
+  "sf 125C vwl 1.4V": {
+   "far_rise_90_ns": 1.114,
+   "far_fall_10_ns": 1.082,
+   "far_final_V": 1.4
+  },
+  "sf 125C vwl 1.7V": {
+   "far_rise_90_ns": 1.18,
+   "far_fall_10_ns": 1.127,
+   "far_final_V": 1.7
+  },
+  "sf 125C vwl 2.5V": {
+   "far_rise_90_ns": 1.393,
+   "far_fall_10_ns": 1.235,
+   "far_final_V": 2.5
+  },
+  "sf 125C vwl 3.0V": {
+   "far_rise_90_ns": 1.319,
+   "far_fall_10_ns": 1.301,
+   "far_final_V": 3.0
+  },
+  "sf 125C vwl 3.3V": {
+   "far_rise_90_ns": 1.252,
+   "far_fall_10_ns": 1.343,
+   "far_final_V": 3.3
+  },
+  "fs -40C vwl 1.4V": {
+   "far_rise_90_ns": 1.095,
+   "far_fall_10_ns": 0.945,
+   "far_final_V": 1.4
+  },
+  "fs -40C vwl 1.7V": {
+   "far_rise_90_ns": 1.187,
+   "far_fall_10_ns": 0.996,
+   "far_final_V": 1.7
+  },
+  "fs -40C vwl 2.5V": {
+   "far_rise_90_ns": 1.154,
+   "far_fall_10_ns": 1.121,
+   "far_final_V": 2.5
+  },
+  "fs -40C vwl 3.0V": {
+   "far_rise_90_ns": 1.064,
+   "far_fall_10_ns": 1.201,
+   "far_final_V": 3.0
+  },
+  "fs -40C vwl 3.3V": {
+   "far_rise_90_ns": 1.026,
+   "far_fall_10_ns": 1.254,
+   "far_final_V": 3.3
+  },
+  "fs 27C vwl 1.4V": {
+   "far_rise_90_ns": 1.17,
+   "far_fall_10_ns": 1.067,
+   "far_final_V": 1.4
+  },
+  "fs 27C vwl 1.7V": {
+   "far_rise_90_ns": 1.24,
+   "far_fall_10_ns": 1.125,
+   "far_final_V": 1.7
+  },
+  "fs 27C vwl 2.5V": {
+   "far_rise_90_ns": 1.227,
+   "far_fall_10_ns": 1.268,
+   "far_final_V": 2.5
+  },
+  "fs 27C vwl 3.0V": {
+   "far_rise_90_ns": 1.127,
+   "far_fall_10_ns": 1.361,
+   "far_final_V": 3.0
+  },
+  "fs 27C vwl 3.3V": {
+   "far_rise_90_ns": 1.083,
+   "far_fall_10_ns": 1.42,
+   "far_final_V": 3.3
+  },
+  "fs 125C vwl 1.4V": {
+   "far_rise_90_ns": 1.265,
+   "far_fall_10_ns": 1.293,
+   "far_final_V": 1.4
+  },
+  "fs 125C vwl 1.7V": {
+   "far_rise_90_ns": 1.313,
+   "far_fall_10_ns": 1.362,
+   "far_final_V": 1.7
+  },
+  "fs 125C vwl 2.5V": {
+   "far_rise_90_ns": 1.315,
+   "far_fall_10_ns": 1.534,
+   "far_final_V": 2.5
+  },
+  "fs 125C vwl 3.0V": {
+   "far_rise_90_ns": 1.208,
+   "far_fall_10_ns": 1.644,
+   "far_final_V": 3.0
+  },
+  "fs 125C vwl 3.3V": {
+   "far_rise_90_ns": 1.156,
+   "far_fall_10_ns": 1.713,
+   "far_final_V": 3.3
+  }
+ },
+ "C": {
+  "set wl 1.7 prg 2.4 G 4.5uS tt -40C": {
+   "cell_V": 2.3457,
+   "cell_uA": 10.56,
+   "bl_V": 2.3883,
+   "sl_V": 0.0042,
+   "rail_mA": 0.0106
+  },
+  "set wl 1.7 prg 2.4 G 120uS tt -40C": {
+   "cell_V": 0.7415,
+   "cell_uA": 88.98,
+   "bl_V": 2.2947,
+   "sl_V": 0.0358,
+   "rail_mA": 0.089
+  },
+  "reset wl 2.5 prg 2.6 G 4.5uS tt -40C": {
+   "cell_V": -1.2503,
+   "cell_uA": 5.63,
+   "bl_V": 0.0045,
+   "sl_V": 2.5974,
+   "rail_mA": 0.0056
+  },
+  "reset wl 2.5 prg 2.6 G 120uS tt -40C": {
+   "cell_V": -0.6866,
+   "cell_uA": 82.39,
+   "bl_V": 0.0684,
+   "sl_V": 2.5611,
+   "rail_mA": 0.0824
+  },
+  "reset wl 3.0 prg 3.0 G 4.5uS tt -40C": {
+   "cell_V": -1.666,
+   "cell_uA": 7.5,
+   "bl_V": 0.006,
+   "sl_V": 2.9973,
+   "rail_mA": 0.0075
+  },
+  "reset wl 3.0 prg 3.0 G 120uS tt -40C": {
+   "cell_V": -0.9368,
+   "cell_uA": 112.41,
+   "bl_V": 0.0947,
+   "sl_V": 2.9585,
+   "rail_mA": 0.1124
+  },
+  "form wl 2.5 prg 3.3 G 4.5uS tt -40C": {
+   "cell_V": 3.2529,
+   "cell_uA": 14.64,
+   "bl_V": 3.2906,
+   "sl_V": 0.0058,
+   "rail_mA": 0.0146
+  },
+  "form wl 2.5 prg 3.3 G 120uS tt -40C": {
+   "cell_V": 1.7303,
+   "cell_uA": 207.64,
+   "bl_V": 3.1597,
+   "sl_V": 0.0858,
+   "rail_mA": 0.2076
+  },
+  "inhibit wl 3.0 prg 3.0 G 4.5uS tt -40C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "inhibit wl 3.0 prg 3.0 G 120uS tt -40C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "set wl 1.7 prg 2.4 G 4.5uS tt 27C": {
+   "cell_V": 2.3319,
+   "cell_uA": 10.49,
+   "bl_V": 2.3858,
+   "sl_V": 0.0053,
+   "rail_mA": 0.0105
+  },
+  "set wl 1.7 prg 2.4 G 120uS tt 27C": {
+   "cell_V": 0.6715,
+   "cell_uA": 80.57,
+   "bl_V": 2.2846,
+   "sl_V": 0.0413,
+   "rail_mA": 0.0806
+  },
+  "reset wl 2.5 prg 2.6 G 4.5uS tt 27C": {
+   "cell_V": -1.2855,
+   "cell_uA": 5.78,
+   "bl_V": 0.0059,
+   "sl_V": 2.5967,
+   "rail_mA": 0.0058
+  },
+  "reset wl 2.5 prg 2.6 G 120uS tt 27C": {
+   "cell_V": -0.6524,
+   "cell_uA": 78.28,
+   "bl_V": 0.0832,
+   "sl_V": 2.5545,
+   "rail_mA": 0.0783
+  },
+  "reset wl 3.0 prg 3.0 G 4.5uS tt 27C": {
+   "cell_V": -1.695,
+   "cell_uA": 7.63,
+   "bl_V": 0.0078,
+   "sl_V": 2.9966,
+   "rail_mA": 0.0076
+  },
+  "reset wl 3.0 prg 3.0 G 120uS tt 27C": {
+   "cell_V": -0.8858,
+   "cell_uA": 106.3,
+   "bl_V": 0.1148,
+   "sl_V": 2.9512,
+   "rail_mA": 0.1063
+  },
+  "form wl 2.5 prg 3.3 G 4.5uS tt 27C": {
+   "cell_V": 3.2401,
+   "cell_uA": 14.58,
+   "bl_V": 3.2883,
+   "sl_V": 0.0074,
+   "rail_mA": 0.0146
+  },
+  "form wl 2.5 prg 3.3 G 120uS tt 27C": {
+   "cell_V": 1.5393,
+   "cell_uA": 184.72,
+   "bl_V": 3.1443,
+   "sl_V": 0.0973,
+   "rail_mA": 0.1847
+  },
+  "inhibit wl 3.0 prg 3.0 G 4.5uS tt 27C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "inhibit wl 3.0 prg 3.0 G 120uS tt 27C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "set wl 1.7 prg 2.4 G 4.5uS tt 125C": {
+   "cell_V": 2.3116,
+   "cell_uA": 10.4,
+   "bl_V": 2.3828,
+   "sl_V": 0.0072,
+   "rail_mA": 0.0104
+  },
+  "set wl 1.7 prg 2.4 G 120uS tt 125C": {
+   "cell_V": 0.5881,
+   "cell_uA": 70.57,
+   "bl_V": 2.278,
+   "sl_V": 0.0498,
+   "rail_mA": 0.0706
+  },
+  "reset wl 2.5 prg 2.6 G 4.5uS tt 125C": {
+   "cell_V": -1.3347,
+   "cell_uA": 6.01,
+   "bl_V": 0.0085,
+   "sl_V": 2.5958,
+   "rail_mA": 0.006
+  },
+  "reset wl 2.5 prg 2.6 G 120uS tt 125C": {
+   "cell_V": -0.6027,
+   "cell_uA": 72.32,
+   "bl_V": 0.1065,
+   "sl_V": 2.5479,
+   "rail_mA": 0.0723
+  },
+  "reset wl 3.0 prg 3.0 G 4.5uS tt 125C": {
+   "cell_V": -1.7351,
+   "cell_uA": 7.81,
+   "bl_V": 0.011,
+   "sl_V": 2.9956,
+   "rail_mA": 0.0078
+  },
+  "reset wl 3.0 prg 3.0 G 120uS tt 125C": {
+   "cell_V": -0.8106,
+   "cell_uA": 97.27,
+   "bl_V": 0.1457,
+   "sl_V": 2.9436,
+   "rail_mA": 0.0973
+  },
+  "form wl 2.5 prg 3.3 G 4.5uS tt 125C": {
+   "cell_V": 3.2194,
+   "cell_uA": 14.49,
+   "bl_V": 3.2852,
+   "sl_V": 0.01,
+   "rail_mA": 0.0145
+  },
+  "form wl 2.5 prg 3.3 G 120uS tt 125C": {
+   "cell_V": 1.2953,
+   "cell_uA": 155.43,
+   "bl_V": 3.134,
+   "sl_V": 0.1127,
+   "rail_mA": 0.1554
+  },
+  "inhibit wl 3.0 prg 3.0 G 4.5uS tt 125C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "inhibit wl 3.0 prg 3.0 G 120uS tt 125C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "set wl 1.7 prg 2.4 G 4.5uS ss -40C": {
+   "cell_V": 2.3304,
+   "cell_uA": 10.49,
+   "bl_V": 2.3859,
+   "sl_V": 0.0046,
+   "rail_mA": 0.0105
+  },
+  "set wl 1.7 prg 2.4 G 120uS ss -40C": {
+   "cell_V": 0.5601,
+   "cell_uA": 67.21,
+   "bl_V": 2.3046,
+   "sl_V": 0.0301,
+   "rail_mA": 0.0672
+  },
+  "reset wl 2.5 prg 2.6 G 4.5uS ss -40C": {
+   "cell_V": -1.146,
+   "cell_uA": 5.16,
+   "bl_V": 0.0047,
+   "sl_V": 2.5971,
+   "rail_mA": 0.0052
+  },
+  "reset wl 2.5 prg 2.6 G 120uS ss -40C": {
+   "cell_V": -0.5998,
+   "cell_uA": 71.97,
+   "bl_V": 0.0681,
+   "sl_V": 2.5591,
+   "rail_mA": 0.072
+  },
+  "reset wl 3.0 prg 3.0 G 4.5uS ss -40C": {
+   "cell_V": -1.5529,
+   "cell_uA": 6.99,
+   "bl_V": 0.0064,
+   "sl_V": 2.997,
+   "rail_mA": 0.007
+  },
+  "reset wl 3.0 prg 3.0 G 120uS ss -40C": {
+   "cell_V": -0.8374,
+   "cell_uA": 100.48,
+   "bl_V": 0.0964,
+   "sl_V": 2.9566,
+   "rail_mA": 0.1005
+  },
+  "form wl 2.5 prg 3.3 G 4.5uS ss -40C": {
+   "cell_V": 3.244,
+   "cell_uA": 14.6,
+   "bl_V": 3.2893,
+   "sl_V": 0.0065,
+   "rail_mA": 0.0146
+  },
+  "form wl 2.5 prg 3.3 G 120uS ss -40C": {
+   "cell_V": 1.4765,
+   "cell_uA": 177.17,
+   "bl_V": 3.1638,
+   "sl_V": 0.0815,
+   "rail_mA": 0.1772
+  },
+  "inhibit wl 3.0 prg 3.0 G 4.5uS ss -40C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "inhibit wl 3.0 prg 3.0 G 120uS ss -40C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "set wl 1.7 prg 2.4 G 4.5uS ss 27C": {
+   "cell_V": 2.3127,
+   "cell_uA": 10.41,
+   "bl_V": 2.3831,
+   "sl_V": 0.0059,
+   "rail_mA": 0.0104
+  },
+  "set wl 1.7 prg 2.4 G 120uS ss 27C": {
+   "cell_V": 0.5039,
+   "cell_uA": 60.47,
+   "bl_V": 2.2967,
+   "sl_V": 0.0349,
+   "rail_mA": 0.0605
+  },
+  "reset wl 2.5 prg 2.6 G 4.5uS ss 27C": {
+   "cell_V": -1.1784,
+   "cell_uA": 5.3,
+   "bl_V": 0.0063,
+   "sl_V": 2.5964,
+   "rail_mA": 0.0053
+  },
+  "reset wl 2.5 prg 2.6 G 120uS ss 27C": {
+   "cell_V": -0.564,
+   "cell_uA": 67.68,
+   "bl_V": 0.083,
+   "sl_V": 2.5528,
+   "rail_mA": 0.0677
+  },
+  "reset wl 3.0 prg 3.0 G 4.5uS ss 27C": {
+   "cell_V": -1.5788,
+   "cell_uA": 7.1,
+   "bl_V": 0.0084,
+   "sl_V": 2.9962,
+   "rail_mA": 0.0071
+  },
+  "reset wl 3.0 prg 3.0 G 120uS ss 27C": {
+   "cell_V": -0.7831,
+   "cell_uA": 93.98,
+   "bl_V": 0.1171,
+   "sl_V": 2.9494,
+   "rail_mA": 0.094
+  },
+  "form wl 2.5 prg 3.3 G 4.5uS ss 27C": {
+   "cell_V": 3.2281,
+   "cell_uA": 14.53,
+   "bl_V": 3.2867,
+   "sl_V": 0.0083,
+   "rail_mA": 0.0145
+  },
+  "form wl 2.5 prg 3.3 G 120uS ss 27C": {
+   "cell_V": 1.2923,
+   "cell_uA": 155.08,
+   "bl_V": 3.1508,
+   "sl_V": 0.0919,
+   "rail_mA": 0.1551
+  },
+  "inhibit wl 3.0 prg 3.0 G 4.5uS ss 27C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "inhibit wl 3.0 prg 3.0 G 120uS ss 27C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "set wl 1.7 prg 2.4 G 4.5uS ss 125C": {
+   "cell_V": 2.2869,
+   "cell_uA": 10.29,
+   "bl_V": 2.3797,
+   "sl_V": 0.0081,
+   "rail_mA": 0.0103
+  },
+  "set wl 1.7 prg 2.4 G 120uS ss 125C": {
+   "cell_V": 0.4411,
+   "cell_uA": 52.93,
+   "bl_V": 2.291,
+   "sl_V": 0.0424,
+   "rail_mA": 0.0529
+  },
+  "reset wl 2.5 prg 2.6 G 4.5uS ss 125C": {
+   "cell_V": -1.2235,
+   "cell_uA": 5.51,
+   "bl_V": 0.0091,
+   "sl_V": 2.5954,
+   "rail_mA": 0.0055
+  },
+  "reset wl 2.5 prg 2.6 G 120uS ss 125C": {
+   "cell_V": -0.5147,
+   "cell_uA": 61.77,
+   "bl_V": 0.106,
+   "sl_V": 2.5468,
+   "rail_mA": 0.0618
+  },
+  "reset wl 3.0 prg 3.0 G 4.5uS ss 125C": {
+   "cell_V": -1.6144,
+   "cell_uA": 7.26,
+   "bl_V": 0.012,
+   "sl_V": 2.9951,
+   "rail_mA": 0.0073
+  },
+  "reset wl 3.0 prg 3.0 G 120uS ss 125C": {
+   "cell_V": -0.707,
+   "cell_uA": 84.84,
+   "bl_V": 0.1481,
+   "sl_V": 2.9423,
+   "rail_mA": 0.0848
+  },
+  "form wl 2.5 prg 3.3 G 4.5uS ss 125C": {
+   "cell_V": 3.2023,
+   "cell_uA": 14.41,
+   "bl_V": 3.2831,
+   "sl_V": 0.0114,
+   "rail_mA": 0.0144
+  },
+  "form wl 2.5 prg 3.3 G 120uS ss 125C": {
+   "cell_V": 1.0697,
+   "cell_uA": 128.37,
+   "bl_V": 3.1433,
+   "sl_V": 0.1055,
+   "rail_mA": 0.1284
+  },
+  "inhibit wl 3.0 prg 3.0 G 4.5uS ss 125C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "inhibit wl 3.0 prg 3.0 G 120uS ss 125C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "set wl 1.7 prg 2.4 G 4.5uS ff -40C": {
+   "cell_V": 2.3557,
+   "cell_uA": 10.6,
+   "bl_V": 2.39,
+   "sl_V": 0.0038,
+   "rail_mA": 0.0106
+  },
+  "set wl 1.7 prg 2.4 G 120uS ff -40C": {
+   "cell_V": 0.9349,
+   "cell_uA": 112.19,
+   "bl_V": 2.287,
+   "sl_V": 0.041,
+   "rail_mA": 0.1122
+  },
+  "reset wl 2.5 prg 2.6 G 4.5uS ff -40C": {
+   "cell_V": -1.3565,
+   "cell_uA": 6.1,
+   "bl_V": 0.0044,
+   "sl_V": 2.5976,
+   "rail_mA": 0.0061
+  },
+  "reset wl 2.5 prg 2.6 G 120uS ff -40C": {
+   "cell_V": -0.7739,
+   "cell_uA": 92.87,
+   "bl_V": 0.0687,
+   "sl_V": 2.5627,
+   "rail_mA": 0.0929
+  },
+  "reset wl 3.0 prg 3.0 G 4.5uS ff -40C": {
+   "cell_V": -1.7802,
+   "cell_uA": 8.01,
+   "bl_V": 0.0057,
+   "sl_V": 2.9975,
+   "rail_mA": 0.008
+  },
+  "reset wl 3.0 prg 3.0 G 120uS ff -40C": {
+   "cell_V": -1.0354,
+   "cell_uA": 124.24,
+   "bl_V": 0.0932,
+   "sl_V": 2.9601,
+   "rail_mA": 0.1242
+  },
+  "form wl 2.5 prg 3.3 G 4.5uS ff -40C": {
+   "cell_V": 3.2593,
+   "cell_uA": 14.67,
+   "bl_V": 3.2916,
+   "sl_V": 0.0053,
+   "rail_mA": 0.0147
+  },
+  "form wl 2.5 prg 3.3 G 120uS ff -40C": {
+   "cell_V": 1.9767,
+   "cell_uA": 237.2,
+   "bl_V": 3.1571,
+   "sl_V": 0.0889,
+   "rail_mA": 0.2372
+  },
+  "inhibit wl 3.0 prg 3.0 G 4.5uS ff -40C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "inhibit wl 3.0 prg 3.0 G 120uS ff -40C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "set wl 1.7 prg 2.4 G 4.5uS ff 27C": {
+   "cell_V": 2.3447,
+   "cell_uA": 10.55,
+   "bl_V": 2.3879,
+   "sl_V": 0.0048,
+   "rail_mA": 0.0106
+  },
+  "set wl 1.7 prg 2.4 G 120uS ff 27C": {
+   "cell_V": 0.852,
+   "cell_uA": 102.24,
+   "bl_V": 2.2754,
+   "sl_V": 0.0471,
+   "rail_mA": 0.1022
+  },
+  "reset wl 2.5 prg 2.6 G 4.5uS ff 27C": {
+   "cell_V": -1.394,
+   "cell_uA": 6.27,
+   "bl_V": 0.0057,
+   "sl_V": 2.597,
+   "rail_mA": 0.0063
+  },
+  "reset wl 2.5 prg 2.6 G 120uS ff 27C": {
+   "cell_V": -0.7411,
+   "cell_uA": 88.93,
+   "bl_V": 0.0833,
+   "sl_V": 2.5561,
+   "rail_mA": 0.0889
+  },
+  "reset wl 3.0 prg 3.0 G 4.5uS ff 27C": {
+   "cell_V": -1.8117,
+   "cell_uA": 8.15,
+   "bl_V": 0.0074,
+   "sl_V": 2.9968,
+   "rail_mA": 0.0082
+  },
+  "reset wl 3.0 prg 3.0 G 120uS ff 27C": {
+   "cell_V": -0.9873,
+   "cell_uA": 118.47,
+   "bl_V": 0.1125,
+   "sl_V": 2.9528,
+   "rail_mA": 0.1185
+  },
+  "form wl 2.5 prg 3.3 G 4.5uS ff 27C": {
+   "cell_V": 3.2488,
+   "cell_uA": 14.62,
+   "bl_V": 3.2896,
+   "sl_V": 0.0066,
+   "rail_mA": 0.0146
+  },
+  "form wl 2.5 prg 3.3 G 120uS ff 27C": {
+   "cell_V": 1.781,
+   "cell_uA": 213.72,
+   "bl_V": 3.1398,
+   "sl_V": 0.1011,
+   "rail_mA": 0.2137
+  },
+  "inhibit wl 3.0 prg 3.0 G 4.5uS ff 27C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "inhibit wl 3.0 prg 3.0 G 120uS ff 27C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "set wl 1.7 prg 2.4 G 4.5uS ff 125C": {
+   "cell_V": 2.3284,
+   "cell_uA": 10.48,
+   "bl_V": 2.3853,
+   "sl_V": 0.0064,
+   "rail_mA": 0.0105
+  },
+  "set wl 1.7 prg 2.4 G 120uS ff 125C": {
+   "cell_V": 0.748,
+   "cell_uA": 89.77,
+   "bl_V": 2.2709,
+   "sl_V": 0.0564,
+   "rail_mA": 0.0898
+  },
+  "reset wl 2.5 prg 2.6 G 4.5uS ff 125C": {
+   "cell_V": -1.4463,
+   "cell_uA": 6.51,
+   "bl_V": 0.008,
+   "sl_V": 2.5961,
+   "rail_mA": 0.0065
+  },
+  "reset wl 2.5 prg 2.6 G 120uS ff 125C": {
+   "cell_V": -0.6911,
+   "cell_uA": 82.93,
+   "bl_V": 0.1064,
+   "sl_V": 2.5491,
+   "rail_mA": 0.0829
+  },
+  "reset wl 3.0 prg 3.0 G 4.5uS ff 125C": {
+   "cell_V": -1.8554,
+   "cell_uA": 8.35,
+   "bl_V": 0.0103,
+   "sl_V": 2.9959,
+   "rail_mA": 0.0084
+  },
+  "reset wl 3.0 prg 3.0 G 120uS ff 125C": {
+   "cell_V": -0.9127,
+   "cell_uA": 109.53,
+   "bl_V": 0.1429,
+   "sl_V": 2.945,
+   "rail_mA": 0.1095
+  },
+  "form wl 2.5 prg 3.3 G 4.5uS ff 125C": {
+   "cell_V": 3.2317,
+   "cell_uA": 14.54,
+   "bl_V": 3.2868,
+   "sl_V": 0.0089,
+   "rail_mA": 0.0145
+  },
+  "form wl 2.5 prg 3.3 G 120uS ff 125C": {
+   "cell_V": 1.5194,
+   "cell_uA": 182.33,
+   "bl_V": 3.1271,
+   "sl_V": 0.1178,
+   "rail_mA": 0.1823
+  },
+  "inhibit wl 3.0 prg 3.0 G 4.5uS ff 125C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "inhibit wl 3.0 prg 3.0 G 120uS ff 125C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "set wl 1.7 prg 2.4 G 4.5uS sf -40C": {
+   "cell_V": 2.3525,
+   "cell_uA": 10.59,
+   "bl_V": 2.3852,
+   "sl_V": 0.0037,
+   "rail_mA": 0.0106
+  },
+  "set wl 1.7 prg 2.4 G 120uS sf -40C": {
+   "cell_V": 0.9836,
+   "cell_uA": 118.03,
+   "bl_V": 2.2158,
+   "sl_V": 0.0426,
+   "rail_mA": 0.118
+  },
+  "reset wl 2.5 prg 2.6 G 4.5uS sf -40C": {
+   "cell_V": -1.3995,
+   "cell_uA": 6.3,
+   "bl_V": 0.0044,
+   "sl_V": 2.5964,
+   "rail_mA": 0.0063
+  },
+  "reset wl 2.5 prg 2.6 G 120uS sf -40C": {
+   "cell_V": -0.7999,
+   "cell_uA": 95.99,
+   "bl_V": 0.07,
+   "sl_V": 2.5429,
+   "rail_mA": 0.096
+  },
+  "reset wl 3.0 prg 3.0 G 4.5uS sf -40C": {
+   "cell_V": -1.8258,
+   "cell_uA": 8.22,
+   "bl_V": 0.0058,
+   "sl_V": 2.9964,
+   "rail_mA": 0.0082
+  },
+  "reset wl 3.0 prg 3.0 G 120uS sf -40C": {
+   "cell_V": -1.0632,
+   "cell_uA": 127.58,
+   "bl_V": 0.0943,
+   "sl_V": 2.9432,
+   "rail_mA": 0.1276
+  },
+  "form wl 2.5 prg 3.3 G 4.5uS sf -40C": {
+   "cell_V": 3.2576,
+   "cell_uA": 14.66,
+   "bl_V": 3.2891,
+   "sl_V": 0.0052,
+   "rail_mA": 0.0147
+  },
+  "form wl 2.5 prg 3.3 G 120uS sf -40C": {
+   "cell_V": 2.0164,
+   "cell_uA": 241.97,
+   "bl_V": 3.1066,
+   "sl_V": 0.0896,
+   "rail_mA": 0.242
+  },
+  "inhibit wl 3.0 prg 3.0 G 4.5uS sf -40C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "inhibit wl 3.0 prg 3.0 G 120uS sf -40C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "set wl 1.7 prg 2.4 G 4.5uS sf 27C": {
+   "cell_V": 2.3411,
+   "cell_uA": 10.53,
+   "bl_V": 2.3823,
+   "sl_V": 0.0047,
+   "rail_mA": 0.0105
+  },
+  "set wl 1.7 prg 2.4 G 120uS sf 27C": {
+   "cell_V": 0.8953,
+   "cell_uA": 107.44,
+   "bl_V": 2.2102,
+   "sl_V": 0.0488,
+   "rail_mA": 0.1074
+  },
+  "reset wl 2.5 prg 2.6 G 4.5uS sf 27C": {
+   "cell_V": -1.4369,
+   "cell_uA": 6.47,
+   "bl_V": 0.0057,
+   "sl_V": 2.5954,
+   "rail_mA": 0.0065
+  },
+  "reset wl 2.5 prg 2.6 G 120uS sf 27C": {
+   "cell_V": -0.7658,
+   "cell_uA": 91.9,
+   "bl_V": 0.0847,
+   "sl_V": 2.5331,
+   "rail_mA": 0.0919
+  },
+  "reset wl 3.0 prg 3.0 G 4.5uS sf 27C": {
+   "cell_V": -1.8573,
+   "cell_uA": 8.36,
+   "bl_V": 0.0074,
+   "sl_V": 2.9955,
+   "rail_mA": 0.0084
+  },
+  "reset wl 3.0 prg 3.0 G 120uS sf 27C": {
+   "cell_V": -1.0137,
+   "cell_uA": 121.64,
+   "bl_V": 0.1137,
+   "sl_V": 2.9324,
+   "rail_mA": 0.1216
+  },
+  "form wl 2.5 prg 3.3 G 4.5uS sf 27C": {
+   "cell_V": 3.2466,
+   "cell_uA": 14.61,
+   "bl_V": 3.2864,
+   "sl_V": 0.0065,
+   "rail_mA": 0.0146
+  },
+  "form wl 2.5 prg 3.3 G 120uS sf 27C": {
+   "cell_V": 1.8171,
+   "cell_uA": 218.05,
+   "bl_V": 3.0816,
+   "sl_V": 0.1018,
+   "rail_mA": 0.218
+  },
+  "inhibit wl 3.0 prg 3.0 G 4.5uS sf 27C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "inhibit wl 3.0 prg 3.0 G 120uS sf 27C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "set wl 1.7 prg 2.4 G 4.5uS sf 125C": {
+   "cell_V": 2.3249,
+   "cell_uA": 10.46,
+   "bl_V": 2.3795,
+   "sl_V": 0.0063,
+   "rail_mA": 0.0105
+  },
+  "set wl 1.7 prg 2.4 G 120uS sf 125C": {
+   "cell_V": 0.7848,
+   "cell_uA": 94.17,
+   "bl_V": 2.2198,
+   "sl_V": 0.0584,
+   "rail_mA": 0.0942
+  },
+  "reset wl 2.5 prg 2.6 G 4.5uS sf 125C": {
+   "cell_V": -1.4892,
+   "cell_uA": 6.7,
+   "bl_V": 0.0081,
+   "sl_V": 2.5942,
+   "rail_mA": 0.0067
+  },
+  "reset wl 2.5 prg 2.6 G 120uS sf 125C": {
+   "cell_V": -0.7135,
+   "cell_uA": 85.63,
+   "bl_V": 0.1081,
+   "sl_V": 2.5233,
+   "rail_mA": 0.0856
+  },
+  "reset wl 3.0 prg 3.0 G 4.5uS sf 125C": {
+   "cell_V": -1.9008,
+   "cell_uA": 8.55,
+   "bl_V": 0.0103,
+   "sl_V": 2.9942,
+   "rail_mA": 0.0086
+  },
+  "reset wl 3.0 prg 3.0 G 120uS sf 125C": {
+   "cell_V": -0.9367,
+   "cell_uA": 112.4,
+   "bl_V": 0.1442,
+   "sl_V": 2.9211,
+   "rail_mA": 0.1124
+  },
+  "form wl 2.5 prg 3.3 G 4.5uS sf 125C": {
+   "cell_V": 3.229,
+   "cell_uA": 14.53,
+   "bl_V": 3.2827,
+   "sl_V": 0.0088,
+   "rail_mA": 0.0145
+  },
+  "form wl 2.5 prg 3.3 G 120uS sf 125C": {
+   "cell_V": 1.5505,
+   "cell_uA": 186.06,
+   "bl_V": 3.0636,
+   "sl_V": 0.1185,
+   "rail_mA": 0.1861
+  },
+  "inhibit wl 3.0 prg 3.0 G 4.5uS sf 125C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "inhibit wl 3.0 prg 3.0 G 120uS sf 125C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "set wl 1.7 prg 2.4 G 4.5uS fs -40C": {
+   "cell_V": 2.331,
+   "cell_uA": 10.49,
+   "bl_V": 2.3904,
+   "sl_V": 0.0047,
+   "rail_mA": 0.0105
+  },
+  "set wl 1.7 prg 2.4 G 120uS fs -40C": {
+   "cell_V": 0.514,
+   "cell_uA": 61.68,
+   "bl_V": 2.3417,
+   "sl_V": 0.028,
+   "rail_mA": 0.0617
+  },
+  "reset wl 2.5 prg 2.6 G 4.5uS fs -40C": {
+   "cell_V": -1.1062,
+   "cell_uA": 4.98,
+   "bl_V": 0.0046,
+   "sl_V": 2.5981,
+   "rail_mA": 0.005
+  },
+  "reset wl 2.5 prg 2.6 G 120uS fs -40C": {
+   "cell_V": -0.5761,
+   "cell_uA": 69.14,
+   "bl_V": 0.0666,
+   "sl_V": 2.5731,
+   "rail_mA": 0.0691
+  },
+  "reset wl 3.0 prg 3.0 G 4.5uS fs -40C": {
+   "cell_V": -1.5102,
+   "cell_uA": 6.8,
+   "bl_V": 0.0063,
+   "sl_V": 2.9979,
+   "rail_mA": 0.0068
+  },
+  "reset wl 3.0 prg 3.0 G 120uS fs -40C": {
+   "cell_V": -0.8117,
+   "cell_uA": 97.41,
+   "bl_V": 0.0952,
+   "sl_V": 2.9694,
+   "rail_mA": 0.0974
+  },
+  "form wl 2.5 prg 3.3 G 4.5uS fs -40C": {
+   "cell_V": 3.245,
+   "cell_uA": 14.6,
+   "bl_V": 3.2918,
+   "sl_V": 0.0066,
+   "rail_mA": 0.0146
+  },
+  "form wl 2.5 prg 3.3 G 120uS fs -40C": {
+   "cell_V": 1.4252,
+   "cell_uA": 171.03,
+   "bl_V": 3.1999,
+   "sl_V": 0.0798,
+   "rail_mA": 0.171
+  },
+  "inhibit wl 3.0 prg 3.0 G 4.5uS fs -40C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "inhibit wl 3.0 prg 3.0 G 120uS fs -40C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "set wl 1.7 prg 2.4 G 4.5uS fs 27C": {
+   "cell_V": 2.3131,
+   "cell_uA": 10.41,
+   "bl_V": 2.3883,
+   "sl_V": 0.006,
+   "rail_mA": 0.0104
+  },
+  "set wl 1.7 prg 2.4 G 120uS fs 27C": {
+   "cell_V": 0.4639,
+   "cell_uA": 55.67,
+   "bl_V": 2.3358,
+   "sl_V": 0.0326,
+   "rail_mA": 0.0557
+  },
+  "reset wl 2.5 prg 2.6 G 4.5uS fs 27C": {
+   "cell_V": -1.1386,
+   "cell_uA": 5.12,
+   "bl_V": 0.0062,
+   "sl_V": 2.5976,
+   "rail_mA": 0.0051
+  },
+  "reset wl 2.5 prg 2.6 G 120uS fs 27C": {
+   "cell_V": -0.5416,
+   "cell_uA": 64.99,
+   "bl_V": 0.0812,
+   "sl_V": 2.5689,
+   "rail_mA": 0.065
+  },
+  "reset wl 3.0 prg 3.0 G 4.5uS fs 27C": {
+   "cell_V": -1.536,
+   "cell_uA": 6.91,
+   "bl_V": 0.0084,
+   "sl_V": 2.9973,
+   "rail_mA": 0.0069
+  },
+  "reset wl 3.0 prg 3.0 G 120uS fs 27C": {
+   "cell_V": -0.7586,
+   "cell_uA": 91.03,
+   "bl_V": 0.1156,
+   "sl_V": 2.9646,
+   "rail_mA": 0.091
+  },
+  "form wl 2.5 prg 3.3 G 4.5uS fs 27C": {
+   "cell_V": 3.2292,
+   "cell_uA": 14.53,
+   "bl_V": 3.2898,
+   "sl_V": 0.0084,
+   "rail_mA": 0.0145
+  },
+  "form wl 2.5 prg 3.3 G 120uS fs 27C": {
+   "cell_V": 1.2459,
+   "cell_uA": 149.51,
+   "bl_V": 3.1912,
+   "sl_V": 0.09,
+   "rail_mA": 0.1495
+  },
+  "inhibit wl 3.0 prg 3.0 G 4.5uS fs 27C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "inhibit wl 3.0 prg 3.0 G 120uS fs 27C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "set wl 1.7 prg 2.4 G 4.5uS fs 125C": {
+   "cell_V": 2.2871,
+   "cell_uA": 10.29,
+   "bl_V": 2.3858,
+   "sl_V": 0.0083,
+   "rail_mA": 0.0103
+  },
+  "set wl 1.7 prg 2.4 G 120uS fs 125C": {
+   "cell_V": 0.4084,
+   "cell_uA": 49.0,
+   "bl_V": 2.3305,
+   "sl_V": 0.0398,
+   "rail_mA": 0.049
+  },
+  "reset wl 2.5 prg 2.6 G 4.5uS fs 125C": {
+   "cell_V": -1.1836,
+   "cell_uA": 5.33,
+   "bl_V": 0.009,
+   "sl_V": 2.5969,
+   "rail_mA": 0.0053
+  },
+  "reset wl 2.5 prg 2.6 G 120uS fs 125C": {
+   "cell_V": -0.4942,
+   "cell_uA": 59.31,
+   "bl_V": 0.1038,
+   "sl_V": 2.5647,
+   "rail_mA": 0.0593
+  },
+  "reset wl 3.0 prg 3.0 G 4.5uS fs 125C": {
+   "cell_V": -1.5715,
+   "cell_uA": 7.07,
+   "bl_V": 0.0119,
+   "sl_V": 2.9966,
+   "rail_mA": 0.0071
+  },
+  "reset wl 3.0 prg 3.0 G 120uS fs 125C": {
+   "cell_V": -0.6844,
+   "cell_uA": 82.13,
+   "bl_V": 0.1463,
+   "sl_V": 2.9597,
+   "rail_mA": 0.0821
+  },
+  "form wl 2.5 prg 3.3 G 4.5uS fs 125C": {
+   "cell_V": 3.2035,
+   "cell_uA": 14.42,
+   "bl_V": 3.2871,
+   "sl_V": 0.0116,
+   "rail_mA": 0.0144
+  },
+  "form wl 2.5 prg 3.3 G 120uS fs 125C": {
+   "cell_V": 1.0303,
+   "cell_uA": 123.63,
+   "bl_V": 3.1862,
+   "sl_V": 0.1033,
+   "rail_mA": 0.1236
+  },
+  "inhibit wl 3.0 prg 3.0 G 4.5uS fs 125C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  },
+  "inhibit wl 3.0 prg 3.0 G 120uS fs 125C": {
+   "cell_V": 0.0,
+   "cell_uA": 0.0,
+   "bl_V": 3.0,
+   "sl_V": 3.0,
+   "rail_mA": 0.0
+  }
+ },
+ "D": {
+  "trip reset tt -40C 1.62V": 7.939,
+  "trip read tt -40C 1.62V": 11.981,
+  "trip set tt -40C 1.62V": 24.268,
+  "trip reset tt -40C 1.8V": 8.045,
+  "trip read tt -40C 1.8V": 12.158,
+  "trip set tt -40C 1.8V": 24.874,
+  "trip reset tt -40C 1.98V": 8.131,
+  "trip read tt -40C 1.98V": 12.294,
+  "trip set tt -40C 1.98V": 25.193,
+  "trip reset tt 27C 1.62V": 8.074,
+  "trip read tt 27C 1.62V": 12.221,
+  "trip set tt 27C 1.62V": 25.115,
+  "trip reset tt 27C 1.8V": 8.158,
+  "trip read tt 27C 1.8V": 12.359,
+  "trip set tt 27C 1.8V": 25.541,
+  "trip reset tt 27C 1.98V": 8.226,
+  "trip read tt 27C 1.98V": 12.469,
+  "trip set tt 27C 1.98V": 25.8,
+  "trip reset tt 125C 1.62V": 8.221,
+  "trip read tt 125C 1.62V": 12.518,
+  "trip set tt 125C 1.62V": 26.25,
+  "trip reset tt 125C 1.8V": 8.278,
+  "trip read tt 125C 1.8V": 12.621,
+  "trip set tt 125C 1.8V": 26.55,
+  "trip reset tt 125C 1.98V": 8.33,
+  "trip read tt 125C 1.98V": 12.708,
+  "trip set tt 125C 1.98V": 26.757,
+  "trip reset ss -40C 1.62V": 7.928,
+  "trip read ss -40C 1.62V": 11.976,
+  "trip set ss -40C 1.62V": 23.994,
+  "trip reset ss -40C 1.8V": 8.036,
+  "trip read ss -40C 1.8V": 12.17,
+  "trip set ss -40C 1.8V": 25.015,
+  "trip reset ss -40C 1.98V": 8.126,
+  "trip read ss -40C 1.98V": 12.31,
+  "trip set ss -40C 1.98V": 25.347,
+  "trip reset ss 27C 1.62V": 8.076,
+  "trip read ss 27C 1.62V": 12.26,
+  "trip set ss 27C 1.62V": 25.206,
+  "trip reset ss 27C 1.8V": 8.171,
+  "trip read ss 27C 1.8V": 12.402,
+  "trip set ss 27C 1.8V": 25.821,
+  "trip reset ss 27C 1.98V": 8.228,
+  "trip read ss 27C 1.98V": 12.517,
+  "trip set ss 27C 1.98V": 26.097,
+  "trip reset ss 125C 1.62V": 8.252,
+  "trip read ss 125C 1.62V": 12.614,
+  "trip set ss 125C 1.62V": 26.701,
+  "trip reset ss 125C 1.8V": 8.321,
+  "trip read ss 125C 1.8V": 12.722,
+  "trip set ss 125C 1.8V": 27.084,
+  "trip reset ss 125C 1.98V": 8.374,
+  "trip read ss 125C 1.98V": 12.813,
+  "trip set ss 125C 1.98V": 27.31,
+  "trip reset ff -40C 1.62V": 7.962,
+  "trip read ff -40C 1.62V": 11.994,
+  "trip set ff -40C 1.62V": 24.331,
+  "trip reset ff -40C 1.8V": 8.064,
+  "trip read ff -40C 1.8V": 12.161,
+  "trip set ff -40C 1.8V": 24.796,
+  "trip reset ff -40C 1.98V": 8.149,
+  "trip read ff -40C 1.98V": 12.299,
+  "trip set ff -40C 1.98V": 25.103,
+  "trip reset ff 27C 1.62V": 8.075,
+  "trip read ff 27C 1.62V": 12.21,
+  "trip set ff 27C 1.62V": 25.021,
+  "trip reset ff 27C 1.8V": 8.158,
+  "trip read ff 27C 1.8V": 12.337,
+  "trip set ff 27C 1.8V": 25.367,
+  "trip reset ff 27C 1.98V": 8.227,
+  "trip read ff 27C 1.98V": 12.447,
+  "trip set ff 27C 1.98V": 25.612,
+  "trip reset ff 125C 1.62V": 8.202,
+  "trip read ff 125C 1.62V": 12.466,
+  "trip set ff 125C 1.62V": 25.957,
+  "trip reset ff 125C 1.8V": 8.266,
+  "trip read ff 125C 1.8V": 12.563,
+  "trip set ff 125C 1.8V": 26.21,
+  "trip reset ff 125C 1.98V": 8.319,
+  "trip read ff 125C 1.98V": 12.645,
+  "trip set ff 125C 1.98V": 26.4,
+  "trip reset sf -40C 1.62V": 7.939,
+  "trip read sf -40C 1.62V": 11.953,
+  "trip set sf -40C 1.62V": 23.713,
+  "trip reset sf -40C 1.8V": 8.063,
+  "trip read sf -40C 1.8V": 12.152,
+  "trip set sf -40C 1.8V": 24.739,
+  "trip reset sf -40C 1.98V": 8.153,
+  "trip read sf -40C 1.98V": 12.296,
+  "trip set sf -40C 1.98V": 25.079,
+  "trip reset sf 27C 1.62V": 8.074,
+  "trip read sf 27C 1.62V": 12.186,
+  "trip set sf 27C 1.62V": 24.702,
+  "trip reset sf 27C 1.8V": 8.164,
+  "trip read sf 27C 1.8V": 12.336,
+  "trip set sf 27C 1.8V": 25.334,
+  "trip reset sf 27C 1.98V": 8.229,
+  "trip read sf 27C 1.98V": 12.455,
+  "trip set sf 27C 1.98V": 25.608,
+  "trip reset sf 125C 1.62V": 8.204,
+  "trip read sf 125C 1.62V": 12.46,
+  "trip set sf 125C 1.62V": 25.823,
+  "trip reset sf 125C 1.8V": 8.271,
+  "trip read sf 125C 1.8V": 12.568,
+  "trip set sf 125C 1.8V": 26.195,
+  "trip reset sf 125C 1.98V": 8.326,
+  "trip read sf 125C 1.98V": 12.657,
+  "trip set sf 125C 1.98V": 26.405,
+  "trip reset fs -40C 1.62V": 7.942,
+  "trip read fs -40C 1.62V": 12.016,
+  "trip set fs -40C 1.62V": 24.617,
+  "trip reset fs -40C 1.8V": 8.039,
+  "trip read fs -40C 1.8V": 12.177,
+  "trip set fs -40C 1.8V": 25.082,
+  "trip reset fs -40C 1.98V": 8.127,
+  "trip read fs -40C 1.98V": 12.314,
+  "trip set fs -40C 1.98V": 25.391,
+  "trip reset fs 27C 1.62V": 8.078,
+  "trip read fs 27C 1.62V": 12.275,
+  "trip set fs 27C 1.62V": 25.514,
+  "trip reset fs 27C 1.8V": 8.166,
+  "trip read fs 27C 1.8V": 12.406,
+  "trip set fs 27C 1.8V": 25.877,
+  "trip reset fs 27C 1.98V": 8.227,
+  "trip read fs 27C 1.98V": 12.516,
+  "trip set fs 27C 1.98V": 26.135,
+  "trip reset fs 125C 1.62V": 8.245,
+  "trip read fs 125C 1.62V": 12.617,
+  "trip set fs 125C 1.62V": 26.833,
+  "trip reset fs 125C 1.8V": 8.315,
+  "trip read fs 125C 1.8V": 12.722,
+  "trip set fs 125C 1.8V": 27.137,
+  "trip reset fs 125C 1.98V": 8.37,
+  "trip read fs 125C 1.98V": 12.813,
+  "trip set fs 125C 1.98V": 27.359,
+  "tran read G 30uS tt 27C": {
+   "G_uS": 30.0,
+   "reads": 1,
+   "settle_ns": 4.62
+  },
+  "tran read G 4.5uS tt 27C": {
+   "G_uS": 4.5,
+   "reads": 0,
+   "settle_ns": 0.0
+  },
+  "tran set G 30uS tt 27C": {
+   "G_uS": 30.0,
+   "reads": 1,
+   "settle_ns": 18.72
+  },
+  "tran set G 20uS tt 27C": {
+   "G_uS": 20.0,
+   "reads": 0,
+   "settle_ns": 0.0
+  },
+  "tran reset G 4.5uS tt 27C": {
+   "G_uS": 4.5,
+   "reads": 0,
+   "settle_ns": 0.0
+  },
+  "tran reset G 10uS tt 27C": {
+   "G_uS": 10.0,
+   "reads": 1,
+   "settle_ns": 31.62
+  },
+  "tran read G 30uS ss 125C": {
+   "G_uS": 30.0,
+   "reads": 1,
+   "settle_ns": 5.57
+  },
+  "tran read G 4.5uS ss 125C": {
+   "G_uS": 4.5,
+   "reads": 0,
+   "settle_ns": 0.0
+  },
+  "tran set G 30uS ss 125C": {
+   "G_uS": 30.0,
+   "reads": 1,
+   "settle_ns": 28.18
+  },
+  "tran set G 20uS ss 125C": {
+   "G_uS": 20.0,
+   "reads": 0,
+   "settle_ns": 0.0
+  },
+  "tran reset G 4.5uS ss 125C": {
+   "G_uS": 4.5,
+   "reads": 0,
+   "settle_ns": 0.0
+  },
+  "tran reset G 10uS ss 125C": {
+   "G_uS": 10.0,
+   "reads": 1,
+   "settle_ns": 36.42
+  },
+  "tran read G 30uS ff -40C": {
+   "G_uS": 30.0,
+   "reads": 1,
+   "settle_ns": 4.02
+  },
+  "tran read G 4.5uS ff -40C": {
+   "G_uS": 4.5,
+   "reads": 0,
+   "settle_ns": 0.0
+  },
+  "tran set G 30uS ff -40C": {
+   "G_uS": 30.0,
+   "reads": 1,
+   "settle_ns": 15.32
+  },
+  "tran set G 20uS ff -40C": {
+   "G_uS": 20.0,
+   "reads": 0,
+   "settle_ns": 0.0
+  },
+  "tran reset G 4.5uS ff -40C": {
+   "G_uS": 4.5,
+   "reads": 0,
+   "settle_ns": 0.0
+  },
+  "tran reset G 10uS ff -40C": {
+   "G_uS": 10.0,
+   "reads": 1,
+   "settle_ns": 29.02
+  },
+  "tran read G 30uS ss -40C": {
+   "G_uS": 30.0,
+   "reads": 1,
+   "settle_ns": 4.12
+  },
+  "tran read G 4.5uS ss -40C": {
+   "G_uS": 4.5,
+   "reads": 0,
+   "settle_ns": 0.0
+  },
+  "tran set G 30uS ss -40C": {
+   "G_uS": 30.0,
+   "reads": 1,
+   "settle_ns": 15.88
+  },
+  "tran set G 20uS ss -40C": {
+   "G_uS": 20.0,
+   "reads": 0,
+   "settle_ns": 0.0
+  },
+  "tran reset G 4.5uS ss -40C": {
+   "G_uS": 4.5,
+   "reads": 0,
+   "settle_ns": 0.0
+  },
+  "tran reset G 10uS ss -40C": {
+   "G_uS": 10.0,
+   "reads": 1,
+   "settle_ns": 26.88
+  },
+  "tran read G 30uS ff 125C": {
+   "G_uS": 30.0,
+   "reads": 1,
+   "settle_ns": 5.28
+  },
+  "tran read G 4.5uS ff 125C": {
+   "G_uS": 4.5,
+   "reads": 0,
+   "settle_ns": 0.0
+  },
+  "tran set G 30uS ff 125C": {
+   "G_uS": 30.0,
+   "reads": 1,
+   "settle_ns": 22.62
+  },
+  "tran set G 20uS ff 125C": {
+   "G_uS": 20.0,
+   "reads": 0,
+   "settle_ns": 0.0
+  },
+  "tran reset G 4.5uS ff 125C": {
+   "G_uS": 4.5,
+   "reads": 0,
+   "settle_ns": 0.0
+  },
+  "tran reset G 10uS ff 125C": {
+   "G_uS": 10.0,
+   "reads": 1,
+   "settle_ns": 36.02
+  },
+  "mc reset": {
+   "runs": 200,
+   "valid": 200,
+   "mean_uS": 8.203,
+   "sigma_uS": 0.458,
+   "min_uS": 7.026,
+   "max_uS": 9.525
+  },
+  "mc read": {
+   "runs": 200,
+   "valid": 200,
+   "mean_uS": 12.314,
+   "sigma_uS": 0.713,
+   "min_uS": 10.402,
+   "max_uS": 14.458
+  },
+  "mc set": {
+   "runs": 200,
+   "valid": 200,
+   "mean_uS": 25.616,
+   "sigma_uS": 1.221,
+   "min_uS": 22.202,
+   "max_uS": 29.844
+  }
+ },
+ "libcheck": {
+  "jobs": [
+   "A ('ss', 125, 1.62, 3.0)",
+   "B ('ff', -40, 3.3)",
+   "C ('sf', 27, 'reset', 3.0, 3.0, 0.00012)",
+   "Dt ('fs', 125, 1.98, 'set')",
+   "Dx ('ss', 125, 'read', 4.5e-06)",
+   "Dt ('tt', 27, 1.8, 'read', True, 7)"
+  ],
+  "full": [
+   {
+    "rise_ns": 0.335,
+    "fall_ns": 1.626,
+    "static_nA": 0.63
+   },
+   {
+    "far_rise_90_ns": 1.01,
+    "far_fall_10_ns": 1.084,
+    "far_final_V": 3.3
+   },
+   {
+    "cell_V": -1.0137,
+    "cell_uA": 121.64,
+    "bl_V": 0.1137,
+    "sl_V": 2.9324,
+    "rail_mA": 0.1216
+   },
+   27.359,
+   {
+    "G_uS": 4.5,
+    "reads": 0,
+    "settle_ns": 0.0
+   },
+   12.478
+  ],
+  "reduced": [
+   {
+    "rise_ns": 0.335,
+    "fall_ns": 1.626,
+    "static_nA": 0.63
+   },
+   {
+    "far_rise_90_ns": 1.01,
+    "far_fall_10_ns": 1.084,
+    "far_final_V": 3.3
+   },
+   {
+    "cell_V": -1.0137,
+    "cell_uA": 121.64,
+    "bl_V": 0.1137,
+    "sl_V": 2.9324,
+    "rail_mA": 0.1216
+   },
+   27.359,
+   {
+    "G_uS": 4.5,
+    "reads": 0,
+    "settle_ns": 0.0
+   },
+   12.75
+  ],
+  "identical": false
+ },
+ "E": {
+  "set tt 27C": {
+   "op": "set",
+   "flt": true,
+   "bl_on_V": 2.3096,
+   "sl_on_V": 0.0327,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 0,
+   "steady_uA": 64.05,
+   "peak_switch_uA": 751.24,
+   "switch_charge_fC": 1961.7
+  },
+  "reset tt 27C": {
+   "op": "reset",
+   "flt": true,
+   "bl_on_V": 0.0483,
+   "sl_on_V": 2.369,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 0,
+   "steady_uA": 46.14,
+   "peak_switch_uA": 702.34,
+   "switch_charge_fC": 1582.7
+  },
+  "read tt 27C": {
+   "op": "read",
+   "flt": true,
+   "bl_on_V": 0.0856,
+   "sl_on_V": 0.0012,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 1,
+   "steady_uA": 0.0,
+   "peak_switch_uA": 7.15,
+   "switch_charge_fC": -0.8
+  },
+  "set ss -40C": {
+   "op": "set",
+   "flt": true,
+   "bl_on_V": 2.3088,
+   "sl_on_V": 0.0288,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 0,
+   "steady_uA": 64.42,
+   "peak_switch_uA": 730.06,
+   "switch_charge_fC": 1940.8
+  },
+  "reset ss -40C": {
+   "op": "reset",
+   "flt": true,
+   "bl_on_V": 0.0406,
+   "sl_on_V": 2.3704,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 0,
+   "steady_uA": 43.53,
+   "peak_switch_uA": 739.65,
+   "switch_charge_fC": 1496.9
+  },
+  "read ss -40C": {
+   "op": "read",
+   "flt": true,
+   "bl_on_V": 0.084,
+   "sl_on_V": 0.001,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 1,
+   "steady_uA": 0.0,
+   "peak_switch_uA": 15.48,
+   "switch_charge_fC": -1.6
+  },
+  "set ff 125C": {
+   "op": "set",
+   "flt": true,
+   "bl_on_V": 2.3096,
+   "sl_on_V": 0.0394,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 0,
+   "steady_uA": 63.2,
+   "peak_switch_uA": 723.1,
+   "switch_charge_fC": 1977.8
+  },
+  "reset ff 125C": {
+   "op": "reset",
+   "flt": true,
+   "bl_on_V": 0.0607,
+   "sl_on_V": 2.3671,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 0,
+   "steady_uA": 48.27,
+   "peak_switch_uA": 724.87,
+   "switch_charge_fC": 1651.3
+  },
+  "read ff 125C": {
+   "op": "read",
+   "flt": true,
+   "bl_on_V": 0.0878,
+   "sl_on_V": 0.0015,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 1,
+   "steady_uA": 0.0,
+   "peak_switch_uA": 6.16,
+   "switch_charge_fC": 1.1
+  },
+  "set sf -40C": {
+   "op": "set",
+   "flt": true,
+   "bl_on_V": 2.303,
+   "sl_on_V": 0.0234,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 0,
+   "steady_uA": 65.6,
+   "peak_switch_uA": 922.36,
+   "switch_charge_fC": 2010.5
+  },
+  "reset sf -40C": {
+   "op": "reset",
+   "flt": true,
+   "bl_on_V": 0.0371,
+   "sl_on_V": 2.363,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 0,
+   "steady_uA": 51.74,
+   "peak_switch_uA": 851.59,
+   "switch_charge_fC": 1715.4
+  },
+  "read sf -40C": {
+   "op": "read",
+   "flt": true,
+   "bl_on_V": 0.0826,
+   "sl_on_V": 0.0008,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 1,
+   "steady_uA": 0.0,
+   "peak_switch_uA": 6.88,
+   "switch_charge_fC": -0.5
+  },
+  "set fs 125C": {
+   "op": "set",
+   "flt": true,
+   "bl_on_V": 2.3134,
+   "sl_on_V": 0.0495,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 1,
+   "steady_uA": 60.61,
+   "peak_switch_uA": 566.76,
+   "switch_charge_fC": 1874.5
+  },
+  "reset fs 125C": {
+   "op": "reset",
+   "flt": true,
+   "bl_on_V": 0.0684,
+   "sl_on_V": 2.3735,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 1,
+   "steady_uA": 39.68,
+   "peak_switch_uA": 591.08,
+   "switch_charge_fC": 1424.4
+  },
+  "read fs 125C": {
+   "op": "read",
+   "flt": true,
+   "bl_on_V": 0.0909,
+   "sl_on_V": 0.0019,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 1,
+   "steady_uA": 0.0,
+   "peak_switch_uA": 7.76,
+   "switch_charge_fC": -0.7
+  },
+  "set tt 27C no cell": {
+   "op": "set",
+   "flt": true,
+   "bl_on_V": 2.4,
+   "sl_on_V": 0.0,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 0,
+   "steady_uA": 0.0,
+   "peak_switch_uA": 744.11,
+   "switch_charge_fC": 262.4
+  },
+  "set tt 27C no cell, without flt": {
+   "op": "set",
+   "flt": false,
+   "bl_on_V": 2.4,
+   "sl_on_V": 0.0,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 0,
+   "steady_uA": 0.0,
+   "peak_switch_uA": 798.94,
+   "switch_charge_fC": 280.4
+  },
+  "reset tt 27C no cell": {
+   "op": "reset",
+   "flt": true,
+   "bl_on_V": 0.0,
+   "sl_on_V": 2.4,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 0,
+   "steady_uA": 0.0,
+   "peak_switch_uA": 685.28,
+   "switch_charge_fC": 279.9
+  },
+  "reset tt 27C no cell, without flt": {
+   "op": "reset",
+   "flt": false,
+   "bl_on_V": 0.0,
+   "sl_on_V": 2.4,
+   "bl_end_V": 0.0,
+   "sl_end_V": 0.0,
+   "out_on": 0,
+   "steady_uA": 0.0,
+   "peak_switch_uA": 1004.16,
+   "switch_charge_fC": 356.4
+  }
+ }
+}

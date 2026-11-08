@@ -1,0 +1,3 @@
+"nextpnr-himbaechel" -- Next Generation Place and Route (Version nextpnr-0.11.1-54-g861c57be)
+/opt/venv/bin/gowin_pack
+/opt/oss-cad-suite/bin/openFPGALoader

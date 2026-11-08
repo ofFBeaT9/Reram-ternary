@@ -1,0 +1,76 @@
+{
+ "date": "2026-10-12",
+ "what": "tools/fpga_host.py --transcript on the Verilator model of rtl/fpga (DIV=8), then tools/fpga_verify.py on each transcript; then one returned result byte changed in the bank-0 transcript (planted error)",
+ "runs": {
+  "bank0": {
+   "transcript": "results/fpga/transcripts/sim_bank0_seed1.jsonl.gz",
+   "verify": "consistent",
+   "recomputed": {
+    "frames": 9934,
+    "bus_errors": 0,
+    "rows_programmed": 72,
+    "rows_read_back": 72,
+    "rows_with_werr": 0,
+    "piter_max": 28,
+    "piter_mean": 15.51,
+    "readback_wrong_weights": 0,
+    "weights": 1728,
+    "digital": {
+     "products": 100,
+     "inexact_products": 0,
+     "wrong_columns": 0,
+     "columns": 2400,
+     "max_abs_error": 0
+    },
+    "analog": {
+     "products": 100,
+     "inexact_products": 82,
+     "wrong_columns": 183,
+     "columns": 2400,
+     "max_abs_error": 2
+    }
+   },
+   "identical_to_stored_sim": true
+  },
+  "bank1": {
+   "transcript": "results/fpga/transcripts/sim_bank1_seed1.jsonl.gz",
+   "verify": "consistent",
+   "recomputed": {
+    "frames": 10181,
+    "bus_errors": 0,
+    "rows_programmed": 72,
+    "rows_read_back": 72,
+    "rows_with_werr": 14,
+    "piter_max": 39,
+    "piter_mean": 25.92,
+    "readback_wrong_weights": 214,
+    "weights": 1728,
+    "digital": {
+     "products": 100,
+     "inexact_products": 100,
+     "wrong_columns": 2005,
+     "columns": 2400,
+     "max_abs_error": 8
+    },
+    "analog": {
+     "products": 100,
+     "inexact_products": 100,
+     "wrong_columns": 2018,
+     "columns": 2400,
+     "max_abs_error": 8
+    }
+   },
+   "identical_to_stored_sim": true
+  }
+ },
+ "planted_error": {
+  "verdict": "DIFFERS",
+  "differences": [
+   [
+    "analog.wrong_columns",
+    183,
+    184
+   ]
+  ]
+ }
+}

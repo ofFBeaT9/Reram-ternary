@@ -1,0 +1,41 @@
+{
+ "method": "flow/orfs/post/min_period.py: post-route OpenSTA, SDC clock period P with input/output delays 0.3 P, bisection to 0.05 ns",
+ "runs": [
+  {
+   "platform": "ihp-sg13g2",
+   "liberty": "sg13g2_stdcell_slow_1p08V_125C.lib",
+   "spef_scale": 1.0,
+   "min_period_ns": 8.61,
+   "f_max_MHz": 116.2,
+   "setup_wns_ns": 0.005,
+   "hold_wns_ns": 0.268
+  },
+  {
+   "platform": "ihp-sg13g2",
+   "liberty": "sg13g2_stdcell_slow_1p08V_125C.lib",
+   "spef_scale": 1.2,
+   "min_period_ns": 9.27,
+   "f_max_MHz": 107.9,
+   "setup_wns_ns": 0.013,
+   "hold_wns_ns": 0.267
+  },
+  {
+   "platform": "sky130hd",
+   "liberty": "sky130_fd_sc_hd__ss_100C_1v60.lib",
+   "spef_scale": 1.0,
+   "min_period_ns": 15.43,
+   "f_max_MHz": 64.8,
+   "setup_wns_ns": 0.034,
+   "hold_wns_ns": 0.566
+  },
+  {
+   "platform": "sky130hd",
+   "liberty": "sky130_fd_sc_hd__ss_100C_1v60.lib",
+   "spef_scale": 1.2,
+   "min_period_ns": 16.17,
+   "f_max_MHz": 61.8,
+   "setup_wns_ns": 0.024,
+   "hold_wns_ns": 0.573
+  }
+ ]
+}

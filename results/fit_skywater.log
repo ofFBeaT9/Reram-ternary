@@ -1,0 +1,90 @@
+numpy 2.2.6
+32
+1.0 6/20 {"k": 0.0, "log10F": 7.188, "reset_yield": 0.91, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 1.89}
+1.0 6/20 {"k": 0.5, "log10F": 7.21, "reset_yield": 0.9075, "set_yield": 0.9807, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 1.96}
+1.0 6/20 {"k": 1.0, "log10F": 7.375, "reset_yield": 0.9125, "set_yield": 0.8685, "ladder_yield": 1.0, "ladder_pulses_max": 4, "crit_logF_spread_decades_10_90": 2.23}
+1.0 6/20 {"k": 1.5, "log10F": 7.591, "reset_yield": 0.9075, "set_yield": 0.8044, "ladder_yield": 1.0, "ladder_pulses_max": 4, "crit_logF_spread_decades_10_90": 2.69}
+1.0 6/20 {"k": 2.0, "log10F": 7.825, "reset_yield": 0.9075, "set_yield": 0.7686, "ladder_yield": 1.0, "ladder_pulses_max": 5, "crit_logF_spread_decades_10_90": 3.16}
+1.0 6/20 {"k": 2.5, "log10F": 8.125, "reset_yield": 0.91, "set_yield": 0.7088, "ladder_yield": 1.0, "ladder_pulses_max": 5, "crit_logF_spread_decades_10_90": 3.72}
+1.0 6/20 {"k": 3.0, "log10F": 8.391, "reset_yield": 0.91, "set_yield": 0.6731, "ladder_yield": 1.0, "ladder_pulses_max": 6, "crit_logF_spread_decades_10_90": 4.32}
+1.0 6/20 {"k": 4.0, "log10F": 8.899, "reset_yield": 0.9075, "set_yield": 0.6281, "ladder_yield": 1.0, "ladder_pulses_max": 22, "crit_logF_spread_decades_10_90": 5.38}
+1.0 10/30 {"k": 0.0, "log10F": 7.188, "reset_yield": 0.91, "set_yield": 0.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 1.91}
+1.0 10/30 {"k": 0.5, "log10F": 7.21, "reset_yield": 0.9075, "set_yield": 0.0, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 1.97}
+1.0 10/30 {"k": 1.0, "log10F": 7.375, "reset_yield": 0.9125, "set_yield": 0.011, "ladder_yield": 1.0, "ladder_pulses_max": 4, "crit_logF_spread_decades_10_90": 2.25}
+1.0 10/30 {"k": 1.5, "log10F": 7.591, "reset_yield": 0.9075, "set_yield": 0.0882, "ladder_yield": 1.0, "ladder_pulses_max": 4, "crit_logF_spread_decades_10_90": 2.69}
+1.0 10/30 {"k": 2.0, "log10F": 7.825, "reset_yield": 0.9075, "set_yield": 0.1653, "ladder_yield": 1.0, "ladder_pulses_max": 5, "crit_logF_spread_decades_10_90": 3.18}
+1.0 10/30 {"k": 2.5, "log10F": 8.116, "reset_yield": 0.91, "set_yield": 0.217, "ladder_yield": 1.0, "ladder_pulses_max": 5, "crit_logF_spread_decades_10_90": 3.72}
+1.0 10/30 {"k": 3.0, "log10F": 8.391, "reset_yield": 0.91, "set_yield": 0.2637, "ladder_yield": 1.0, "ladder_pulses_max": 6, "crit_logF_spread_decades_10_90": 4.3}
+1.0 10/30 {"k": 4.0, "log10F": 8.899, "reset_yield": 0.9075, "set_yield": 0.3168, "ladder_yield": 1.0, "ladder_pulses_max": 22, "crit_logF_spread_decades_10_90": 5.4}
+1.0 15/40 {"k": 0.0, "log10F": 7.188, "reset_yield": 0.91, "set_yield": 0.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 1.92}
+1.0 15/40 {"k": 0.5, "log10F": 7.21, "reset_yield": 0.9075, "set_yield": 0.0, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 1.99}
+1.0 15/40 {"k": 1.0, "log10F": 7.375, "reset_yield": 0.9125, "set_yield": 0.0, "ladder_yield": 1.0, "ladder_pulses_max": 4, "crit_logF_spread_decades_10_90": 2.27}
+1.0 15/40 {"k": 1.5, "log10F": 7.591, "reset_yield": 0.9075, "set_yield": 0.0, "ladder_yield": 1.0, "ladder_pulses_max": 4, "crit_logF_spread_decades_10_90": 2.71}
+1.0 15/40 {"k": 2.0, "log10F": 7.825, "reset_yield": 0.9075, "set_yield": 0.0083, "ladder_yield": 1.0, "ladder_pulses_max": 5, "crit_logF_spread_decades_10_90": 3.18}
+1.0 15/40 {"k": 2.5, "log10F": 8.116, "reset_yield": 0.91, "set_yield": 0.0357, "ladder_yield": 1.0, "ladder_pulses_max": 5, "crit_logF_spread_decades_10_90": 3.73}
+1.0 15/40 {"k": 3.0, "log10F": 8.391, "reset_yield": 0.91, "set_yield": 0.0769, "ladder_yield": 1.0, "ladder_pulses_max": 6, "crit_logF_spread_decades_10_90": 4.3}
+1.0 15/40 {"k": 4.0, "log10F": 8.899, "reset_yield": 0.9075, "set_yield": 0.1598, "ladder_yield": 1.0, "ladder_pulses_max": 22, "crit_logF_spread_decades_10_90": 5.43}
+2.0 6/20 {"k": 0.0, "log10F": 4.547, "reset_yield": 0.915, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 1.09}
+2.0 6/20 {"k": 0.5, "log10F": 4.616, "reset_yield": 0.91, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 1.22}
+2.0 6/20 {"k": 1.0, "log10F": 4.788, "reset_yield": 0.9075, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 1.61}
+2.0 6/20 {"k": 1.5, "log10F": 5.022, "reset_yield": 0.915, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 2.1}
+2.0 6/20 {"k": 2.0, "log10F": 5.241, "reset_yield": 0.9075, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 2.62}
+2.0 6/20 {"k": 2.5, "log10F": 5.522, "reset_yield": 0.9075, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 4, "crit_logF_spread_decades_10_90": 3.13}
+2.0 6/20 {"k": 3.0, "log10F": 5.819, "reset_yield": 0.9075, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 4, "crit_logF_spread_decades_10_90": 3.71}
+2.0 6/20 {"k": 4.0, "log10F": 6.46, "reset_yield": 0.9075, "set_yield": 0.9972, "ladder_yield": 1.0, "ladder_pulses_max": 4, "crit_logF_spread_decades_10_90": 4.88}
+2.0 10/30 {"k": 0.0, "log10F": 4.538, "reset_yield": 0.91, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 1.14}
+2.0 10/30 {"k": 0.5, "log10F": 4.609, "reset_yield": 0.91, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 1.27}
+2.0 10/30 {"k": 1.0, "log10F": 4.788, "reset_yield": 0.91, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 1.66}
+2.0 10/30 {"k": 1.5, "log10F": 5.006, "reset_yield": 0.9075, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 2.11}
+2.0 10/30 {"k": 2.0, "log10F": 5.234, "reset_yield": 0.91, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 2.62}
+2.0 10/30 {"k": 2.5, "log10F": 5.506, "reset_yield": 0.9075, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 4, "crit_logF_spread_decades_10_90": 3.16}
+2.0 10/30 {"k": 3.0, "log10F": 5.803, "reset_yield": 0.91, "set_yield": 0.9945, "ladder_yield": 1.0, "ladder_pulses_max": 4, "crit_logF_spread_decades_10_90": 3.75}
+2.0 10/30 {"k": 4.0, "log10F": 6.401, "reset_yield": 0.9075, "set_yield": 0.9532, "ladder_yield": 1.0, "ladder_pulses_max": 4, "crit_logF_spread_decades_10_90": 4.88}
+2.0 15/40 {"k": 0.0, "log10F": 4.531, "reset_yield": 0.91, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 1.2}
+2.0 15/40 {"k": 0.5, "log10F": 4.609, "reset_yield": 0.91, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 1.31}
+2.0 15/40 {"k": 1.0, "log10F": 4.772, "reset_yield": 0.9075, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 1.67}
+2.0 15/40 {"k": 1.5, "log10F": 5.006, "reset_yield": 0.91, "set_yield": 0.9918, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 2.13}
+2.0 15/40 {"k": 2.0, "log10F": 5.225, "reset_yield": 0.9125, "set_yield": 0.9753, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 2.64}
+2.0 15/40 {"k": 2.5, "log10F": 5.497, "reset_yield": 0.9075, "set_yield": 0.9421, "ladder_yield": 1.0, "ladder_pulses_max": 4, "crit_logF_spread_decades_10_90": 3.16}
+2.0 15/40 {"k": 3.0, "log10F": 5.781, "reset_yield": 0.91, "set_yield": 0.9093, "ladder_yield": 1.0, "ladder_pulses_max": 4, "crit_logF_spread_decades_10_90": 3.74}
+2.0 15/40 {"k": 4.0, "log10F": 6.369, "reset_yield": 0.9075, "set_yield": 0.854, "ladder_yield": 1.0, "ladder_pulses_max": 4, "crit_logF_spread_decades_10_90": 4.86}
+4.0 6/20 {"k": 0.0, "log10F": 2.438, "reset_yield": 0.9175, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 0.42}
+4.0 6/20 {"k": 0.5, "log10F": 2.569, "reset_yield": 0.9125, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 0.7}
+4.0 6/20 {"k": 1.0, "log10F": 2.866, "reset_yield": 0.91, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 1.24}
+4.0 6/20 {"k": 1.5, "log10F": 3.141, "reset_yield": 0.91, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 1.78}
+4.0 6/20 {"k": 2.0, "log10F": 3.428, "reset_yield": 0.9075, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 2.38}
+4.0 6/20 {"k": 2.5, "log10F": 3.725, "reset_yield": 0.9075, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 2.94}
+4.0 6/20 {"k": 3.0, "log10F": 3.988, "reset_yield": 0.9075, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 3.49}
+4.0 6/20 {"k": 4.0, "log10F": 4.56, "reset_yield": 0.9075, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 4, "crit_logF_spread_decades_10_90": 4.5}
+4.0 10/30 {"k": 0.0, "log10F": 2.391, "reset_yield": 0.9175, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 0.5}
+4.0 10/30 {"k": 0.5, "log10F": 2.516, "reset_yield": 0.9175, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 0.75}
+4.0 10/30 {"k": 1.0, "log10F": 2.766, "reset_yield": 0.91, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 1.25}
+4.0 10/30 {"k": 1.5, "log10F": 3.069, "reset_yield": 0.9125, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 1.81}
+4.0 10/30 {"k": 2.0, "log10F": 3.328, "reset_yield": 0.91, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 2.33}
+4.0 10/30 {"k": 2.5, "log10F": 3.609, "reset_yield": 0.91, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 2.94}
+4.0 10/30 {"k": 3.0, "log10F": 3.91, "reset_yield": 0.9075, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 3.47}
+4.0 10/30 {"k": 4.0, "log10F": 4.463, "reset_yield": 0.9075, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 4, "crit_logF_spread_decades_10_90": 4.39}
+4.0 15/40 {"k": 0.0, "log10F": 2.344, "reset_yield": 0.915, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 0.61}
+4.0 15/40 {"k": 0.5, "log10F": 2.46, "reset_yield": 0.91, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 0.78}
+4.0 15/40 {"k": 1.0, "log10F": 2.694, "reset_yield": 0.9075, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 1.28}
+4.0 15/40 {"k": 1.5, "log10F": 3.0, "reset_yield": 0.91, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 2, "crit_logF_spread_decades_10_90": 1.82}
+4.0 15/40 {"k": 2.0, "log10F": 3.272, "reset_yield": 0.91, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 2.35}
+4.0 15/40 {"k": 2.5, "log10F": 3.531, "reset_yield": 0.91, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 2.88}
+4.0 15/40 {"k": 3.0, "log10F": 3.803, "reset_yield": 0.9075, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 3, "crit_logF_spread_decades_10_90": 3.44}
+4.0 15/40 {"k": 4.0, "log10F": 4.388, "reset_yield": 0.9075, "set_yield": 1.0, "ladder_yield": 1.0, "ladder_pulses_max": 4, "crit_logF_spread_decades_10_90": 4.33}
+
+real	151m50.315s
+user	4368m22.167s
+sys	3m38.772s
+Traceback (most recent call last):
+  File "/w/model/fit_skywater.py", line 168, in <module>
+    import program_mc as PM
+  File "/w/model/program_mc.py", line 34, in <module>
+    N_DEV = int(sys.argv[1]) if len(sys.argv) > 1 else 100
+ValueError: invalid literal for int() with base 10: 'transfer'
+
+real	0m1.140s
+user	0m3.534s
+sys	0m0.216s
+FIT_DONE
+done 

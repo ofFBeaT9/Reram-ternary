@@ -1,0 +1,17 @@
+* Stanford-PKU ReRAM model as an ngspice behavioural subcircuit (same equations and defaults as
+* reram_stanford_ihp.va). V(gap) is the gap in nanometres. Set the initial gap with the gap_ini parameter.
+.subckt reram_stanford_ihp te be gap
++ I0=854e-6 g0=0.28 V0=0.35 v0=2.79e9 Ea=1.0 a0=0.25 tox=6.0 gamma0=20 beta=0.4 alpha=3
++ Rth=1500 T0=300 gap_min=0.10 gap_max=1.80 wsoft=0.01 cstate=1e-9 gap_ini=1.8
+.param kb=8.617333262e-5
+Cg gap 0 {cstate} ic={gap_ini}
+Rg gap 0 1e15
+* cell current
+Bcell te be I = I0*exp(-V(gap)/g0)*sinh(V(te,be)/V0)
+* helper nodes: temperature-scaled kT (eV), exponent argument, rate (nm/s)
+Bkt  kt  0 V = kb*(T0 + abs(V(te,be)*I0*exp(-V(gap)/g0)*sinh(V(te,be)/V0))*Rth)
+Bx   x   0 V = min(max((gamma0 - beta*pwr(max(V(gap),0),alpha))*a0*V(te,be)/(tox*V(kt)), -200), 200)
+Brt  rt  0 V = -v0*exp(-Ea/V(kt))*sinh(V(x))
+Bw   w   0 V = V(rt) < 0 ? min(1, max(0, (V(gap)-gap_min)/wsoft)) : min(1, max(0, (gap_max-V(gap))/wsoft))
+Bg   0 gap I = cstate*V(rt)*V(w)
+.ends reram_stanford_ihp

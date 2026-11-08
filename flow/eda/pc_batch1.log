@@ -1,0 +1,54 @@
+=== fpga
+0 warnings, 1 error
+
+Info: Program finished normally.
+=== versions
+bed8d4ff84333767aa923d469d339cd05c56a00a
+3cb047bd6b55ae09c8eefeb479b4fe746cfdb948
+1e3554706ddbb2529193bdabbc7128296f3cb44a
+3.3M	/opt/pdk/sky130B/libs.tech/combined
+220K	/opt/pdk/sky130B/libs.tech/irsim
+11M	/opt/pdk/sky130B/libs.tech/klayout
+6.4M	/opt/pdk/sky130B/libs.tech/librelane
+712K	/opt/pdk/sky130B/libs.tech/magic
+44K	/opt/pdk/sky130B/libs.tech/netgen
+4.2M	/opt/pdk/sky130B/libs.tech/ngspice
+160K	/opt/pdk/sky130B/libs.tech/qflow
+212K	/opt/pdk/sky130B/libs.tech/xcircuit
+8.3M	/opt/pdk/sky130B/libs.tech/xschem
+363M	/opt/pdk/sky130B/libs.ref/sky130_fd_io
+75M	/opt/pdk/sky130B/libs.ref/sky130_fd_pr
+332K	/opt/pdk/sky130B/libs.ref/sky130_fd_pr_reram
+350M	/opt/pdk/sky130B/libs.ref/sky130_fd_sc_hd
+116M	/opt/pdk/sky130B/libs.ref/sky130_fd_sc_hvl
+412K	/opt/pdk/sky130B/libs.ref/sky130_ml_xx_hd
+151M	/opt/pdk/sky130B/libs.ref/sky130_sram_macros
+/opt/pdk/sky130B/libs.ref/sky130_fd_pr_reram:
+gds
+mag
+spice
+verilog
+
+/opt/pdk/sky130B/libs.ref/sky130_fd_sc_hd:
+cdl
+gds
+lef
+lib
+mag
+maglef
+spice
+techlef
+verilog
+tar: Removing leading `/' from member names
+tar: Removing leading `/' from hard link targets
+total 73244
+-rw-r--r-- 1 root root  7346911 Oct 10 10:35 eda_tools.tgz
+-rw-r--r-- 1 root root   115647 Oct 10 10:35 pdk_sky130A_tech.tgz
+-rw-r--r-- 1 root root 67534237 Oct 10 10:35 pdk_sky130B.tgz
+total 139196
+-rw-r--r-- 1 root root  7346911 Oct 10 10:35 eda_tools.tgz
+-rw-r--r-- 1 root root   115647 Oct 10 10:35 pdk_sky130A_tech.tgz
+-rw-r--r-- 1 root root 67534237 Oct 10 10:35 pdk_sky130B.part_00
+-rw-r--r-- 1 root root 67534237 Oct 10 10:35 pdk_sky130B.tgz
+BATCH1_DONE
+done 

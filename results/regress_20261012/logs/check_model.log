@@ -1,0 +1,19 @@
+python3 model/calibrate.py
+fitted v0 = 2.79 m/s at Ea = 1.0 eV
+  SET  Vg 1.0: Vset 0.70 V, gap 1.117 nm, 1T1R read 8.4 uA (23.8 kOhm), cell alone 21.0 kOhm
+  SET  Vg 1.2: Vset 0.70 V, gap 0.854 nm, 1T1R read 18.2 uA (11.0 kOhm), cell alone 8.2 kOhm
+  SET  Vg 1.6: Vset 0.70 V, gap 0.725 nm, 1T1R read 25.1 uA (8.0 kOhm), cell alone 5.2 kOhm
+  RESET from LRS1: Vreset 0.65 V, final gap 1.800 nm, read 0.82 uA (243 kOhm)
+  RESET from LRS2: Vreset 0.70 V, final gap 1.800 nm, read 0.82 uA (243 kOhm)
+  RESET from LRS3: Vreset 0.75 V, final gap 1.800 nm, read 0.82 uA (243 kOhm)
+  read disturb: HRS gap after 1 s at 0.2 V: 1.8000 nm
+  read disturb: HRS gap after 1000 s at 0.2 V: 1.7938 nm
+  read disturb: HRS gap after 1e+06 s at 0.2 V: 0.3511 nm
+  no clamp Vg 1.0: Vset 0.70, gap 1.117 nm, read 8.4 uA; transistor saturation current 24 uA
+  no clamp Vg 1.2: Vset 0.70, gap 0.854 nm, read 18.2 uA; transistor saturation current 61 uA
+  no clamp Vg 1.5: Vset 0.70, gap 0.631 nm, read 30.8 uA; transistor saturation current 138 uA
+python3 model/check_three_solvers.py
+python {'A_v_cross_V': 0.66949, 'B_gap_nm': 1.7385, 'C_t_set_ns': 204.46, 'D_t_reset_ns': 481.19}
+ngspice {'A_v_cross_V': 0.66943, 'B_gap_nm': 1.738, 'C_t_set_ns': 204.64, 'D_t_reset_ns': 486.11}
+gnucap {'A_v_cross_V': 0.66923, 'B_gap_nm': 1.738, 'C_t_set_ns': 204.42, 'D_t_reset_ns': 481.2}
+{'solvers': 3, 'A_mV': 0.26, 'B_pm': 0.5, 'C_percent': 0.11, 'D_percent': 1.02}

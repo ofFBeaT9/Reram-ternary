@@ -1,0 +1,47 @@
+{
+ "drawn": {
+  "gds": "layout/tcim_2t2r_block.gds",
+  "cell": "tcim_2t2r_block",
+  "rows": 4,
+  "column_pairs": 2,
+  "transistors": 16,
+  "shapes": 605,
+  "width_um": 20.4,
+  "height_um": 8.09
+ },
+ "transistor": {
+  "W_um": 4.5,
+  "L_um": 0.45,
+  "contacts_per_terminal": 13
+ },
+ "row_pitch_um": 1.085,
+ "device_pitch_um": 4.75,
+ "column_pair_pitch_um": 9.5,
+ "area_per_device_um2": 5.1537,
+ "area_per_ternary_cell_um2": 10.3075,
+ "tile_estimate": {
+  "width_um": 229.4,
+  "height_um": 89.79,
+  "area_mm2": 0.0206,
+  "tie_rows": 3,
+  "note": "72 x 24 cells at the drawn pitch plus word-line contacts and three tie rows; no ReRAM element (MEMRES layers not in the open PDK), no drivers"
+ },
+ "source_line": {
+  "metal": "Metal2",
+  "vias_per_source_strip": 4,
+  "via_rating_mA": 0.4,
+  "worst_current_mA": 1.2
+ },
+ "bit_line": {
+  "metal": "Metal3 (placeholder level)",
+  "vias_per_drain": 3
+ },
+ "not_included": "ReRAM element and its rules; the metal levels it actually sits between; word-line strapping; periphery; fill. The Via2 stack on each drain marks where the element goes.",
+ "drc": {
+  "deck": "IHP-Open-PDK 5e6d592e run_drc.py (main + sg13g2_maximal), density excluded",
+  "klayout": "0.30.12",
+  "result": "pass, no violations",
+  "first_run": "12 x Gat.b1 at 0.21 um device spacing; fixed by 0.25 um",
+  "log": "results/cell_layout_drc.txt"
+ }
+}

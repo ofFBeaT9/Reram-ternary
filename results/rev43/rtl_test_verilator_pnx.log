@@ -1,0 +1,14 @@
+trit code of the device under test: BSD-PNX (+1 = 10, 0 = 11, -1 = 01, 00 illegal)
+1. register access
+2. programming all 72 rows with verify
+   pulses per row: mean 15.1, max 18
+3. digital products against the exact dot product
+4. analog-mode raw counts
+5. error paths
+5b. directed tests: read reference, saturation, interrupt enable, busy and enable guards
+5c. illegal code, exhaustive conversions, flag and interrupt behaviour, serial frame lengths
+6. ternary digits network through the RTL
+   360 samples: RTL correct 341, software correct 341, same class as software 360, layer-1 mismatches 0
+array operations: 90884 reads, 8992 pulses, 1558 sums; 43694575 clock cycles
+82512 checks, 0 failures
+TEST PASSED

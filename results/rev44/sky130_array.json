@@ -1,0 +1,26 @@
+{
+ "pdk": "open_pdks 1e3554706ddbb2529193bdabbc7128296f3cb44a",
+ "magic": "8.3 revision 685",
+ "cell": {
+  "name": "rr2t2r",
+  "width_um": 3.6,
+  "height_um": 3.0,
+  "area_um2": 10.8,
+  "select_transistor": "sky130_fd_pr__nfet_g5v0d10v5 W 1.0 L 0.5 um",
+  "reram": "sky130_fd_pr_reram__reram_cell 0.26 x 0.26 um (area_ox 0.0676 um2), between metal1 and metal2",
+  "lines": "WL poly along the row; BL+/BL- metal2 and SL metal1 along the column; substrate tie strip along every row"
+ },
+ "array": {
+  "rows": 72,
+  "cols": 24,
+  "width_um": 86.4,
+  "height_um": 216.0,
+  "devices": 6912,
+  "nets": 3601
+ },
+ "drc_hierarchical_clean": true,
+ "drc_flat_errors": 0,
+ "drc_fault_detected": true,
+ "lvs_match": true,
+ "lvs_fault_detected": true
+}

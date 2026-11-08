@@ -1,0 +1,38 @@
+written 2715 lines
+- V e r i l a t i o n   R e p o r t: Verilator 5.040 2025-08-30 rev v5.040
+- Verilator: Built from 0.460 MB sources in 7 modules, into 0.639 MB in 6 C++ files needing 0.000 MB
+- Verilator: Walltime 0.425 s (elab=0.281, cvt=0.108, bld=0.000); cpu 0.415 s on 1 threads; alloced 253.578 MB
+tb_fpga: 17764123 cycles
+tb_fpga: 18206253 cycles
+tb_fpga: 18206253 cycles
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:215: Warning: Range [7:0] select out of bounds on signal `\PORT_A_WR_DATA': Setting 4 MSB bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:215: Warning: Range select [16:9] out of bounds on signal `\PORT_A_WR_DATA': Setting all 8 result bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:215: Warning: Range select [25:18] out of bounds on signal `\PORT_A_WR_DATA': Setting all 8 result bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:215: Warning: Range select [34:27] out of bounds on signal `\PORT_A_WR_DATA': Setting all 8 result bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:216: Warning: Range [7:0] select out of bounds on signal `\PORT_B_WR_DATA': Setting 4 MSB bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:216: Warning: Range select [16:9] out of bounds on signal `\PORT_B_WR_DATA': Setting all 8 result bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:216: Warning: Range select [25:18] out of bounds on signal `\PORT_B_WR_DATA': Setting all 8 result bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:216: Warning: Range select [34:27] out of bounds on signal `\PORT_B_WR_DATA': Setting all 8 result bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:220: Warning: Range select [23:16] out of bounds on signal `\genblk1.DOA': Setting all 8 result bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:220: Warning: Range select [31:24] out of bounds on signal `\genblk1.DOA': Setting all 8 result bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:221: Warning: Range select [23:16] out of bounds on signal `\genblk1.DOB': Setting all 8 result bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:221: Warning: Range select [31:24] out of bounds on signal `\genblk1.DOB': Setting all 8 result bits to undef.
+Warning: Feature 'write_xaiger2' is experimental.
+cells without a single behavioural model: []
+tb_fpga: 17764123 cycles
+tb_fpga: 17764123 cycles
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:215: Warning: Range [7:0] select out of bounds on signal `\PORT_A_WR_DATA': Setting 4 MSB bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:215: Warning: Range select [16:9] out of bounds on signal `\PORT_A_WR_DATA': Setting all 8 result bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:215: Warning: Range select [25:18] out of bounds on signal `\PORT_A_WR_DATA': Setting all 8 result bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:215: Warning: Range select [34:27] out of bounds on signal `\PORT_A_WR_DATA': Setting all 8 result bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:216: Warning: Range [7:0] select out of bounds on signal `\PORT_B_WR_DATA': Setting 4 MSB bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:216: Warning: Range select [16:9] out of bounds on signal `\PORT_B_WR_DATA': Setting all 8 result bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:216: Warning: Range select [25:18] out of bounds on signal `\PORT_B_WR_DATA': Setting all 8 result bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:216: Warning: Range select [34:27] out of bounds on signal `\PORT_B_WR_DATA': Setting all 8 result bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:220: Warning: Range select [23:16] out of bounds on signal `\genblk1.DOA': Setting all 8 result bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:220: Warning: Range select [31:24] out of bounds on signal `\genblk1.DOA': Setting all 8 result bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:221: Warning: Range select [23:16] out of bounds on signal `\genblk1.DOB': Setting all 8 result bits to undef.
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/tools/prefix/bin/../share/yosys/gowin/brams_map.v:221: Warning: Range select [31:24] out of bounds on signal `\genblk1.DOB': Setting all 8 result bits to undef.
+Warning: Feature 'write_xaiger2' is experimental.
+gate-level run identical to RTL run (same seed, same cycle-exact behaviour): True
+signed multipliers in the board netlist: []

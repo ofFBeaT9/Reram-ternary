@@ -1,0 +1,17 @@
+IHP SG13G2 KLayout DRC of layout/tcim_2t2r_block.gds (8 October 2026)
+deck: IHP-Open-PDK 5e6d592e, libs.tech/klayout/tech/drc/run_drc.py --no_density --mp=4 (main deck + sg13g2_maximal); KLayout 0.30.12 in openroad/orfs:26Q4-71-g9b26ff8ff
+first run (device spacing 0.21 um): 12 x Gat.b1 (min. space between unrelated 3.3 V GatPoly over Activ = 0.25 um) -> spacing raised to 0.25 um
+final run:
+activ_drw has 10 polygons
+cont_drw has 428 polygons
+gatpoly_drw has 4 polygons
+metal1_drw has 26 polygons
+metal2_drw has 18 polygons
+metal3_drw has 4 polygons
+psd_drw has 2 polygons
+thickgateox_drw has 1 polygons
+via1_drw has 64 polygons
+via2_drw has 48 polygons
+rules executed (main deck): 561
+✅ --- KLayout DRC Check Passed: No DRC violations detected in the layout. --- ✅
+Total DRC Run time: 20.41 seconds (including execution, analysis, and reporting)

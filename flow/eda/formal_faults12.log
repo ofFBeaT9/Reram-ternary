@@ -1,0 +1,10 @@
+pulse amplitude may reach 21 safety FAIL
+set pulse reaches devices that must stay in HRS safety FAIL
+a reset pulse after the set phase has begun safety FAIL
+PDATA writable while a program command runs safety FAIL
+product reads the same row again and again progress FAIL
+product reads rows with input 0 safety FAIL
+product skips rows with input -1 safety FAIL
+an all-zero product ends without DONE safety FAIL
+product ends before the last row safety FAIL
+9 of 9 faults make a proof fail

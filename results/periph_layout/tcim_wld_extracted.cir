@@ -1,0 +1,8 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 09/10/2026 14:24
+
+.SUBCKT tcim_wld in out vr vss
+M$1 vss in out vss sg13_hv_nmos L=0.45u W=6u AS=2.04p AD=2.04p PS=12.68u
++ PD=12.68u rfmode=0
+M$2 vr in out vr sg13_hv_pmos L=0.45u W=12u AS=3.18p AD=3.18p PS=19.06u
++ PD=19.06u rfmode=0
+.ENDS tcim_wld

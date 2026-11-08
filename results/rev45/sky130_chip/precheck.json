@@ -1,0 +1,108 @@
+{
+ "tool": "cf-precheck 1.3.7 (ChipFoundry, commit 6c401ed), --magic-drc, all checks",
+ "run": "flow/eda/pc_batch22.sh, 12 October 2026",
+ "gds_md5": "37a6fb425f7dbea11b9ea7c1be3c6352",
+ "checks": {
+  "Top Cell": "PASS",
+  "GPIO Defines": "PASS",
+  "XOR": "PASS",
+  "Magic DRC": "PASS",
+  "Klayout FEOL": "PASS",
+  "Klayout BEOL": "PASS",
+  "Klayout Offgrid": "PASS",
+  "Klayout Metal Density": "PASS",
+  "Klayout Pin Label": "PASS",
+  "Klayout ZeroArea": "PASS",
+  "Spike Check": "PASS",
+  "Illegal Cellname": "PASS",
+  "LVS": "PASS",
+  "OEB": "PASS"
+ },
+ "passed": 14,
+ "total": 14,
+ "lvs_final": true,
+ "cvc_unexpected_voltage": [
+  "minimum io_out[0] = 0.0: unknown",
+  "maximum io_out[0] = 1.8: unknown",
+  "minimum io_out[1] = 0.0: unknown",
+  "maximum io_out[1] = 1.8: unknown",
+  "minimum io_oeb[0] = 0.0: unknown",
+  "maximum io_oeb[0] = 1.8: unknown"
+ ],
+ "note": "CVC 'unexpected voltage' (soft, the LVS check passes): io_out[0], io_out[1], io_oeb[0] are not driven by this design; pads 0-4 stay in their management modes",
+ "chipfoundry_env": {
+  "tools": "Magic 8.3.471, netgen 1.5.272, CVC v1.1.7, KLayout 0.29.12 (the versions cf-precheck 6c401ed pins)",
+  "pdk": "open_pdks 3e0e31dcce8519a7dbb82590346db16d91b7244f, sky130B, from ChipFoundry's ciel release site",
+  "gds_md5": "37a6fb425f7dbea11b9ea7c1be3c6352",
+  "checks": {
+   "Top Cell": "PASS",
+   "GPIO Defines": "PASS",
+   "XOR": "PASS",
+   "Magic DRC": "PASS",
+   "Klayout FEOL": "PASS",
+   "Klayout BEOL": "PASS",
+   "Klayout Offgrid": "PASS",
+   "Klayout Metal Density": "PASS",
+   "Klayout Pin Label": "PASS",
+   "Klayout ZeroArea": "PASS",
+   "Spike Check": "PASS",
+   "Illegal Cellname": "PASS",
+   "LVS": "PASS",
+   "OEB": "PASS"
+  },
+  "passed": 14,
+  "total": 14,
+  "evidence": "results/sky130_chip/precheck (logs, reports), flow/eda/pc_batch22.log",
+  "note": "CVC reports 6 'unexpected voltage' entries (soft; the LVS check passes): the minimum and maximum of io_out[0], io_out[1] and io_oeb[0], user-side controls of unused pads that this design does not drive. Batch 16 reported the same 6."
+ },
+ "history": [
+  {
+   "run": "flow/eda/pc_batch16.sh",
+   "env": "Magic 8.3.685, image netgen, CVC main, open_pdks 1e35547",
+   "gds_md5": "6c3fa3a72fcb658f4965043e952cd57c",
+   "standard_cells": "open_pdks 1e35547",
+   "result": "14 of 14 pass",
+   "evidence": "results/sky130_chip/precheck_ourenv_6c3fa3a"
+  },
+  {
+   "run": "flow/eda/pc_batch19.sh",
+   "env": "ChipFoundry's versions (as above)",
+   "gds_md5": "6c3fa3a72fcb658f4965043e952cd57c",
+   "standard_cells": "open_pdks 1e35547",
+   "result": "sky130B: 13 of 14, LVS fails (property error, conb_1: poly resistor 0.5 um in the layout, 0.045 um in the 3e0e31d netlist); sky130A: 13 of 14, LVS fails (no ReRAM layer: the 3,456 ReRAM devices are not extracted)",
+   "evidence": "flow/eda/pc_batch19.log"
+  },
+  {
+   "run": "flow/eda/pc_batch21.sh",
+   "env": "ChipFoundry's versions",
+   "gds_md5": "e487487f02e1f302b18a603ec29d8876",
+   "standard_cells": "all from open_pdks 3e0e31d",
+   "result": "13 of 14: KLayout FEOL fails, 1 npc.2 (NPC spacing 0.16 < 0.27 um) at and2_0 _09919_ next to a21boi_0; LVS passes. In the image's versions (1e35547) the same GDS fails FEOL (same marker) and LVS (conb_1 property, the other way round)",
+   "checks": {
+    "Top Cell": "PASS",
+    "GPIO Defines": "PASS",
+    "XOR": "PASS",
+    "Magic DRC": "PASS",
+    "Klayout FEOL": "FAIL",
+    "Klayout BEOL": "PASS",
+    "Klayout Offgrid": "PASS",
+    "Klayout Metal Density": "PASS",
+    "Klayout Pin Label": "PASS",
+    "Klayout ZeroArea": "PASS",
+    "Spike Check": "PASS",
+    "Illegal Cellname": "PASS",
+    "LVS": "PASS",
+    "OEB": "PASS"
+   },
+   "evidence": "results/sky130_chip/precheck_cfenv_allcf, flow/eda/pc_batch21.log"
+  },
+  {
+   "run": "flow/eda/pc_batch22.sh",
+   "env": "ChipFoundry's versions",
+   "gds_md5": "37a6fb425f7dbea11b9ea7c1be3c6352",
+   "standard_cells": "open_pdks 1e35547 except conb_1 from 3e0e31d (layout/sky130/periph/stdcells_cf)",
+   "result": "14 of 14 pass",
+   "evidence": "results/sky130_chip/precheck"
+  }
+ ]
+}

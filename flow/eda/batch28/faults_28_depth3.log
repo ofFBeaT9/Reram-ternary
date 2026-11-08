@@ -1,0 +1,29 @@
+miter: products skip rows with input 0 (revision 4.5 behaviour) prove FAIL
+start row: LFSR mod 72 without the 65536 term lfsr OTHER
+miter: product ends at the last non-zero input prove FAIL
+NOSHUF ignored safety FAIL
+a product drops its request between rows safety FAIL
+LOCK does not clear the options safety FAIL
+LOCK cleared by a write safety FAIL
+PDATA writable while a program command runs safety FAIL
+dummy accumulators updated only when the result is safety FAIL
+product reads rows with input 0 safety FAIL
+margin check pulses the array safety FAIL
+product ends before the last row safety FAIL
+empty pulses in stop-at-verify programming safety FAIL
+product skips rows with input -1 safety FAIL
+an all-zero product ends without DONE safety FAIL
+product reads the same row again and again progress FAIL
+LOCK does not hide PITER safety FAIL
+set pulse reaches devices that must stay in HRS safety FAIL
+a reset pulse after the set phase has begun safety FAIL
+read-back runs under LOCK safety FAIL
+result accumulators keep the offset safety FAIL
+fixed latency: the same row read twice safety FAIL
+margin check writes PDATA under LOCK safety FAIL
+miter: start row from the input of row 0 prove FAIL
+pulse amplitude may reach 21 safety FAIL
+miter: a failed reset phase ends the command prove FAIL
+miter: programming stops at verify (revision 4.5 behaviour) prove FAIL
+fixed latency: product ends one row early safety FAIL
+27 of 28 faults make a proof fail

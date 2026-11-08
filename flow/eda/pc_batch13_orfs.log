@@ -1,0 +1,41 @@
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+INST _09982_ sky130_fd_sc_hd__nand2_1 A u_core.u_top.u_core.r_x\[8\]
+INST _09982_ sky130_fd_sc_hd__nand2_1 B net575
+INST _09982_ sky130_fd_sc_hd__nand2_1 Y _04344_
+INST _09982_ sky130_fd_sc_hd__nand2_1 VGND VSS
+INST _09982_ sky130_fd_sc_hd__nand2_1 VNB VSS
+INST _09982_ sky130_fd_sc_hd__nand2_1 VPB VDD
+INST _09982_ sky130_fd_sc_hd__nand2_1 VPWR VDD
+INST _10531_ sky130_fd_sc_hd__o21ai_0 A1 _04822_
+INST _10531_ sky130_fd_sc_hd__o21ai_0 A2 _04854_
+INST _10531_ sky130_fd_sc_hd__o21ai_0 B1 _04855_
+INST _10531_ sky130_fd_sc_hd__o21ai_0 Y _0177_\[121\]
+INST _10531_ sky130_fd_sc_hd__o21ai_0 VGND VSS
+INST _10531_ sky130_fd_sc_hd__o21ai_0 VNB VSS
+INST _10531_ sky130_fd_sc_hd__o21ai_0 VPB VDD
+INST _10531_ sky130_fd_sc_hd__o21ai_0 VPWR VDD
+INST _12789_ sky130_fd_sc_hd__dlclkp_1 GATE _01927_
+INST _12789_ sky130_fd_sc_hd__dlclkp_1 GCLK _06775_
+INST _12789_ sky130_fd_sc_hd__dlclkp_1 CLK clknet_leaf_9_clk
+INST _12789_ sky130_fd_sc_hd__dlclkp_1 VGND VSS
+INST _12789_ sky130_fd_sc_hd__dlclkp_1 VNB VSS
+INST _12789_ sky130_fd_sc_hd__dlclkp_1 VPB VDD
+INST _12789_ sky130_fd_sc_hd__dlclkp_1 VPWR VDD
+INST _10755_ sky130_fd_sc_hd__nand2_1 A net627
+INST _10755_ sky130_fd_sc_hd__nand2_1 B net476
+INST _10755_ sky130_fd_sc_hd__nand2_1 Y _05035_
+INST _10755_ sky130_fd_sc_hd__nand2_1 VGND VSS
+INST _10755_ sky130_fd_sc_hd__nand2_1 VNB VSS
+INST _10755_ sky130_fd_sc_hd__nand2_1 VPB VDD
+INST _10755_ sky130_fd_sc_hd__nand2_1 VPWR VDD
+INST _10756_ sky130_fd_sc_hd__o21ai_0 A1 _04752_
+INST _10756_ sky130_fd_sc_hd__o21ai_0 A2 _05028_
+INST _10756_ sky130_fd_sc_hd__o21ai_0 B1 _05035_
+INST _10756_ sky130_fd_sc_hd__o21ai_0 Y _0177_\[76\]
+INST _10756_ sky130_fd_sc_hd__o21ai_0 VGND VSS
+INST _10756_ sky130_fd_sc_hd__o21ai_0 VNB VSS
+INST _10756_ sky130_fd_sc_hd__o21ai_0 VPB VDD
+INST _10756_ sky130_fd_sc_hd__o21ai_0 VPWR VDD
+ORFS13_DONE

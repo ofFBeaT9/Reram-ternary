@@ -1,0 +1,56 @@
+[
+ {
+  "fault": "pulse amplitude may reach 21",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "set pulse reaches devices that must stay in HRS",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "a reset pulse after the set phase has begun",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "PDATA writable while a program command runs",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "product reads the same row again and again",
+  "proof": "progress",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "product reads rows with input 0",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "product skips rows with input -1",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "an all-zero product ends without DONE",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "product ends before the last row",
+  "proof": "safety",
+  "result": "FAIL",
+  "caught": true
+ }
+]

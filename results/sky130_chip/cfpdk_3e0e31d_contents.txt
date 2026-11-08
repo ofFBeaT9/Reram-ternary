@@ -1,0 +1,61 @@
+ChipFoundry ciel release sky130-3e0e31dcce8519a7dbb82590346db16d91b7244f, enabled by ciel 2.x with its default library set (6 November 2026, tools/cf_pdk_mirror.sh)
+open_pdks 3e0e31dcce8519a7dbb82590346db16d91b7244f
+sky130B/.config:
+/home/claude/cfpdk_test/sky130B/.config/nodeinfo.json:31:        "sky130_fd_pr_reram": "d6d2a3c6960aac0a0b12fc21221c31777bbf284d"
+/home/claude/cfpdk_test/sky130B/.config/nodeinfo.json:68:        "sky130_fd_pr_reram": "d6d2a3c6960aac0a0b12fc21221c31777bbf284d",
+files under libs.ref/sky130_fd_pr_reram:
+sky130_fd_pr_reram/gds/1T1R_larger.gds
+sky130_fd_pr_reram/gds/4T1R_MUX.gds
+sky130_fd_pr_reram/gds/4T1R_larger.gds
+sky130_fd_pr_reram/gds/sky130_fd_pr_reram__reram_cell.gds
+sky130_fd_pr_reram/gds/sky130_fd_pr_reram__reram_inst.gds
+sky130_fd_pr_reram/gds/sky130_fd_pr_reram__reram_test_drc.gds
+sky130_fd_pr_reram/gds/sky130_fd_pr_reram__reram_test_lvs_property.gds
+sky130_fd_pr_reram/gds/sky130_fd_pr_reram__reram_test_lvs_terminals.gds
+sky130_fd_pr_reram/mag/DFL1sd_CDNS_6303695801712.mag
+sky130_fd_pr_reram/mag/DFL1sd_CDNS_6303695801715.mag
+sky130_fd_pr_reram/mag/DFL1sd_CDNS_630369580176.mag
+sky130_fd_pr_reram/mag/DFL1sd_CDNS_630369580179.mag
+sky130_fd_pr_reram/mag/L1M1_C_CDNS_6303695801729.mag
+sky130_fd_pr_reram/mag/L1M1_C_CDNS_6303695801734.mag
+sky130_fd_pr_reram/mag/L1M1_C_CDNS_6303695801740.mag
+sky130_fd_pr_reram/mag/M1M2_C_CDNS_6303695801725.mag
+sky130_fd_pr_reram/mag/M1M2_C_CDNS_6303695801739.mag
+sky130_fd_pr_reram/mag/M1M2_C_CDNS_6303695801741.mag
+sky130_fd_pr_reram/mag/M2M3_C_CDNS_6303695801738.mag
+sky130_fd_pr_reram/mag/PYL1_C_CDNS_6303695801737.mag
+sky130_fd_pr_reram/mag/RRAM_1T1R_larger.mag
+sky130_fd_pr_reram/mag/RRAM_4T1R_MUX.mag
+sky130_fd_pr_reram/mag/RRAM_4T1R_larger_ratio_2.mag
+sky130_fd_pr_reram/mag/nfet_CDNS_630369580174.mag
+sky130_fd_pr_reram/mag/nfet_CDNS_630369580177.mag
+sky130_fd_pr_reram/mag/nfet_symbolic_CDNS_630369580175.mag
+sky130_fd_pr_reram/mag/nfet_symbolic_CDNS_630369580178.mag
+sky130_fd_pr_reram/mag/pfet_CDNS_6303695801710.mag
+sky130_fd_pr_reram/mag/pfet_CDNS_6303695801713.mag
+sky130_fd_pr_reram/mag/pfet_symbolic_CDNS_6303695801711.mag
+sky130_fd_pr_reram/mag/pfet_symbolic_CDNS_6303695801714.mag
+sky130_fd_pr_reram/mag/rram2_0.mag
+sky130_fd_pr_reram/mag/sky130_fd_pr_reram__reram_cell.mag
+sky130_fd_pr_reram/mag/sky130_fd_pr_reram__reram_inst.mag
+sky130_fd_pr_reram/mag/sky130_fd_pr_reram__reram_test_drc.mag
+sky130_fd_pr_reram/mag/sky130_fd_pr_reram__reram_test_lvs_property.mag
+sky130_fd_pr_reram/mag/sky130_fd_pr_reram__reram_test_lvs_terminals.mag
+sky130_fd_pr_reram/spice/1T1R_larger.spice
+sky130_fd_pr_reram/spice/4T1R_MUX.spice
+sky130_fd_pr_reram/spice/4T1R_larger.spice
+sky130_fd_pr_reram/spice/sky130_fd_pr_reram__reram_cell.spice
+sky130_fd_pr_reram/spice/sky130_fd_pr_reram__reram_inst.spice
+sky130_fd_pr_reram/spice/sky130_fd_pr_reram__reram_test_drc.spice
+sky130_fd_pr_reram/spice/sky130_fd_pr_reram__reram_test_lvs_property.spice
+sky130_fd_pr_reram/spice/sky130_fd_pr_reram__reram_test_lvs_terminals.spice
+sky130_fd_pr_reram/verilog/sky130_fd_pr_reram__reram_cell.va
+asset sha256:
+7e5e53c761210298746b4c6897a0ad3bbcbb2e649b6e77b2637b14ab2da32c02  common.tar.zst
+6154db329869463ffe10a550dbf3b5dbf47eeee66d0fcc75d0a259808553294a  sky130_fd_io.tar.zst
+ddb0ba36d7edce2f380e7b79609834f056b468f05d54e0b7aa19e204bc5e9d27  sky130_fd_pr.tar.zst
+e68064b660519b4b8a07ecb8eb2d300285031e70e600c9585e25efd1b5a71aad  sky130_fd_pr_reram.tar.zst
+abb09d76228803f92b27cb87caefecf3496f879d7172289f7ce2cc87f8005cd5  sky130_fd_sc_hd.tar.zst
+e70f1ec69997544782eb4a729336fbb4f47b965bd972f72f37d3566711c00255  sky130_fd_sc_hvl.tar.zst
+529cffb1e68aaab3d4b45a2fca60857f06d883682c0d71942fa5df22d3246f1e  sky130_ml_xx_hd.tar.zst
+b90a25e0950bfc3fe15b08fafe3a55d71da27cd264628d2683f497b0271bf2e8  sky130_sram_macros.tar.zst

@@ -1,0 +1,14 @@
+test rc=0 1s
+lint rc=0 2s
+equiv rc=0 151s
+equiv_chip rc=0 60s
+rtl rc=0 466s
+rtl_pnx rc=0 434s
+rtl_verilator rc=0 128s
+rtl_chip rc=0 1319s
+rtl_chip_verilator rc=0 58s
+mutation_chip_0_22 stopped-by-time-limit (23 of 23 caught)
+mutation_chip_23_25 rc=0 103s
+fpga rc=0 232s
+check_model rc=0 7s
+DONE

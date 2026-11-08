@@ -1,0 +1,8 @@
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/ext/verilator/bin/verilator --lint-only -Wall --top-module tcim_top rtl/tcim_pkg.sv rtl/tcim_core.sv rtl/tcim_spi.sv rtl/tcim_top.sv
+- V e r i l a t i o n   R e p o r t: Verilator 5.040 2025-08-30 rev v5.040
+- Verilator: Built from 0.131 MB sources in 5 modules, into 0.366 MB in 6 C++ files needing 0.000 MB
+- Verilator: Walltime 0.544 s (elab=0.451, cvt=0.062, bld=0.000); cpu 0.411 s on 1 threads; alloced 248.250 MB
+/tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/ext/verilator/bin/verilator --lint-only -Wall +define+TCIM_ENC_PNX --top-module tcim_top rtl/tcim_pkg.sv rtl/tcim_core.sv rtl/tcim_spi.sv rtl/tcim_top.sv
+- V e r i l a t i o n   R e p o r t: Verilator 5.040 2025-08-30 rev v5.040
+- Verilator: Built from 0.131 MB sources in 5 modules, into 0.366 MB in 6 C++ files needing 0.000 MB
+- Verilator: Walltime 0.473 s (elab=0.385, cvt=0.068, bld=0.000); cpu 0.343 s on 1 threads; alloced 248.254 MB

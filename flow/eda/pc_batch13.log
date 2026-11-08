@@ -1,0 +1,52 @@
+1055aef39749b24f74212e597e5c8283  /w/chip/sky130/caravan/gds/user_analog_project_wrapper.gds
+/usr/local/bin/cvc_rv
+CVC_OK
+cf-precheck 1.3.7
+KLayout 0.29.12
+32
+=== precheck (all checks)
+
+╭────────────────────────────────── Precheck ──────────────────────────────────╮
+│ CF Precheck v1.3.7                                                           │
+│ Project: caravan (analog, sky130B)                                           │
+│ Checks:  14                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+  [ 1/14] Top Cell .......................................... PASS  (0.4s)
+  [ 2/14] GPIO Defines ...................................... PASS  (0.6s)
+  [ 3/14] XOR ............................................... PASS  (4.9s)
+  [ 4/14] Magic DRC ......................................... PASS  (8.5s)
+  [ 5/14] Klayout FEOL ...................................... PASS  (13.6s)
+  [ 6/14] Klayout BEOL ...................................... PASS  (36.8s)
+  [ 7/14] Klayout Offgrid ................................... PASS  (9.3s)
+  [ 8/14] Klayout Metal Density ............................. PASS  (5.1s)
+  [ 9/14] Klayout Pin Label ................................. PASS  (3.4s)
+  [10/14] Klayout ZeroArea .................................. PASS  (2.6s)
+  [11/14] Spike Check ....................................... PASS  (2.4s)
+  [12/14] Illegal Cellname .................................. PASS  (0.5s)
+  [13/14] LVS ............................................... PASS  (73.6s)
+  [14/14] OEB ............................................... PASS  (2.8s)
+
+                Precheck Summary                 
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Check                 ┃  Status  ┃   Duration ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━┩
+│ Top Cell              │   PASS   │       0.4s │
+│ GPIO Defines          │   PASS   │       0.6s │
+│ XOR                   │   PASS   │       4.9s │
+│ Magic DRC             │   PASS   │       8.5s │
+│ Klayout FEOL          │   PASS   │      13.6s │
+│ Klayout BEOL          │   PASS   │      36.8s │
+│ Klayout Offgrid       │   PASS   │       9.3s │
+│ Klayout Metal Density │   PASS   │       5.1s │
+│ Klayout Pin Label     │   PASS   │       3.4s │
+│ Klayout ZeroArea      │   PASS   │       2.6s │
+│ Spike Check           │   PASS   │       2.4s │
+│ Illegal Cellname      │   PASS   │       0.5s │
+│ LVS                   │   PASS   │      73.6s │
+│ OEB                   │   PASS   │       2.8s │
+└───────────────────────┴──────────┴────────────┘
+Results saved to /w/chip/sky130/caravan/.cf/project.json
+Full log at /w/chip/sky130/caravan/precheck_results
+PRECHECK_RC=0
+BATCH13_DONE

@@ -1,0 +1,1 @@
+{"chain": {"cells_with_22_flip_flops": 504, "path_ns": 12.34},"table": {"cells_with_22_flip_flops": 414, "path_ns": 1.66}, "note": "IHP SG13G2 typical corner, mapped for a 3 ns target, no wires; path includes clock-to-output and setup of the two registers"}

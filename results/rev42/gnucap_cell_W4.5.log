@@ -1,0 +1,15 @@
+tt LRS1 {'vg': 1.1, 'model': {'vg': 1.1, 'amp': 2.1, 'pulses': 17, 'iread_uA': 18.24, 'gap_nm': 0.919}, 'ok': True, 'amp': 2.1, 'pulses': 17, 'gap_nm': 0.9198, 'iread_uA': 18.21}
+tt LRS2 {'vg': 1.3, 'model': {'vg': 1.3, 'amp': 1.8, 'pulses': 14, 'iread_uA': 31.13, 'gap_nm': 0.7571}, 'ok': True, 'amp': 1.8, 'pulses': 14, 'gap_nm': 0.7579, 'iread_uA': 31.1}
+tt LRS3 {'vg': 1.45, 'model': {'vg': 1.45, 'amp': 2.0, 'pulses': 16, 'iread_uA': 44.03, 'gap_nm': 0.6476}, 'ok': True, 'amp': 2.0, 'pulses': 16, 'gap_nm': 0.6484, 'iread_uA': 44.0}
+tt LRS3 at Vg 1.7 {'ok': True, 'amp': 1.3, 'pulses': 9, 'gap_nm': 0.6467, 'iread_uA': 44.24}
+tt reset {'ok': True, 'amp': 1.4, 'pulses': 10, 'gap_nm': 1.8, 'iread_uA': 0.82} 691 s
+ss LRS1 {'vg': 1.1, 'model': {'vg': 1.2, 'amp': 1.9, 'pulses': 15, 'iread_uA': 18.45, 'gap_nm': 0.9138}, 'ok': False, 'amp': 2.5, 'pulses': 21, 'gap_nm': 1.0001, 'iread_uA': 13.8}
+ss LRS2 {'vg': 1.3, 'model': {'vg': 1.35, 'amp': 2.5, 'pulses': 21, 'iread_uA': 31.19, 'gap_nm': 0.7535}, 'ok': False, 'amp': 2.5, 'pulses': 21, 'gap_nm': 0.7935, 'iread_uA': 27.48}
+ss LRS3 {'vg': 1.45, 'model': {'vg': 1.55, 'amp': 2.1, 'pulses': 17, 'iread_uA': 43.82, 'gap_nm': 0.6447}, 'ok': False, 'amp': 2.5, 'pulses': 21, 'gap_nm': 0.686, 'iread_uA': 38.66}
+ss LRS3 at Vg 1.7 {'ok': True, 'amp': 1.5, 'pulses': 11, 'gap_nm': 0.632, 'iread_uA': 45.64}
+ss reset {'ok': True, 'amp': 1.6, 'pulses': 12, 'gap_nm': 1.8, 'iread_uA': 0.55} 1201 s
+ff LRS1 {'vg': 1.1, 'model': {'vg': 1.0, 'amp': 2.5, 'pulses': 21, 'iread_uA': 18.26, 'gap_nm': 0.9201}, 'ok': True, 'amp': 1.3, 'pulses': 9, 'gap_nm': 0.921, 'iread_uA': 18.22}
+ff LRS2 {'vg': 1.3, 'model': {'vg': 1.2, 'amp': 1.9, 'pulses': 15, 'iread_uA': 31.47, 'gap_nm': 0.7564}, 'ok': True, 'amp': 1.4, 'pulses': 10, 'gap_nm': 0.7467, 'iread_uA': 32.54}
+ff LRS3 {'vg': 1.45, 'model': {'vg': 1.35, 'amp': 1.9, 'pulses': 15, 'iread_uA': 43.64, 'gap_nm': 0.6543}, 'ok': True, 'amp': 1.5, 'pulses': 11, 'gap_nm': 0.6455, 'iread_uA': 44.94}
+ff LRS3 at Vg 1.7 {'ok': True, 'amp': 1.3, 'pulses': 9, 'gap_nm': 0.6093, 'iread_uA': 50.28}
+ff reset {'ok': True, 'amp': 1.4, 'pulses': 10, 'gap_nm': 1.8, 'iread_uA': 0.71} 784 s

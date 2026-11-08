@@ -1,0 +1,203 @@
+{
+ "moslv": {
+  "tb_moslv_inv_ff.gc": {
+   "passed": true,
+   "lines": 67
+  },
+  "tb_moslv_inv_fs.gc": {
+   "passed": true,
+   "lines": 67
+  },
+  "tb_moslv_inv_sf.gc": {
+   "passed": true,
+   "lines": 67
+  },
+  "tb_moslv_inv_ss.gc": {
+   "passed": true,
+   "lines": 67
+  },
+  "tb_moslv_inv_tt.gc": {
+   "passed": true,
+   "lines": 67
+  },
+  "tb_moslv_nmos_id_vd_ng1.gc": {
+   "passed": true,
+   "lines": 372
+  },
+  "tb_moslv_nmos_id_vd_ng2.gc": {
+   "passed": true,
+   "lines": 372
+  },
+  "tb_moslv_nmos_id_vd_ng3.gc": {
+   "passed": true,
+   "lines": 372
+  },
+  "tb_moslv_nmos_id_vd_ng4.gc": {
+   "passed": true,
+   "lines": 372
+  },
+  "tb_moslv_pmos_id_vd_ng1.gc": {
+   "passed": true,
+   "lines": 372
+  },
+  "tb_moslv_pmos_id_vd_ng2.gc": {
+   "passed": true,
+   "lines": 372
+  },
+  "tb_moslv_pmos_id_vd_ng3.gc": {
+   "passed": true,
+   "lines": 372
+  },
+  "tb_moslv_pmos_id_vd_ng4.gc": {
+   "passed": true,
+   "lines": 372
+  }
+ },
+ "moshv": {
+  "tb_moshv_inv_ff.gc": {
+   "passed": true,
+   "lines": 67
+  },
+  "tb_moshv_inv_fs.gc": {
+   "passed": true,
+   "lines": 68
+  },
+  "tb_moshv_inv_sf.gc": {
+   "passed": true,
+   "lines": 67
+  },
+  "tb_moshv_inv_ss.gc": {
+   "passed": true,
+   "lines": 68
+  },
+  "tb_moshv_inv_tt.gc": {
+   "passed": true,
+   "lines": 68
+  },
+  "tb_moshv_nmos_id_vd_ng1.gc": {
+   "passed": true,
+   "lines": 372
+  },
+  "tb_moshv_nmos_id_vd_ng2.gc": {
+   "passed": true,
+   "lines": 372
+  },
+  "tb_moshv_nmos_id_vd_ng3.gc": {
+   "passed": true,
+   "lines": 372
+  },
+  "tb_moshv_nmos_id_vd_ng4.gc": {
+   "passed": true,
+   "lines": 372
+  },
+  "tb_moshv_pmos_id_vd_ng1.gc": {
+   "passed": true,
+   "lines": 372
+  },
+  "tb_moshv_pmos_id_vd_ng2.gc": {
+   "passed": true,
+   "lines": 372
+  },
+  "tb_moshv_pmos_id_vd_ng3.gc": {
+   "passed": true,
+   "lines": 372
+  },
+  "tb_moshv_pmos_id_vd_ng4.gc": {
+   "passed": true,
+   "lines": 372
+  }
+ },
+ "against_ngspice": {
+  "moslv": {
+   "tb_moslv_nmos_id_vd_ng1.gc": {
+    "points": 300,
+    "max_rel_diff": 0.00010525389555809272,
+    "median_rel_diff": 2.0384168050890498e-05
+   },
+   "tb_moslv_nmos_id_vd_ng2.gc": {
+    "points": 300,
+    "max_rel_diff": 9.664952155840918e-05,
+    "median_rel_diff": 1.848544792163499e-05
+   },
+   "tb_moslv_nmos_id_vd_ng3.gc": {
+    "points": 300,
+    "max_rel_diff": 9.562009151672776e-05,
+    "median_rel_diff": 1.3712628414417017e-05
+   },
+   "tb_moslv_nmos_id_vd_ng4.gc": {
+    "points": 300,
+    "max_rel_diff": 0.00010062716487541848,
+    "median_rel_diff": 1.7958583343931485e-05
+   },
+   "tb_moslv_pmos_id_vd_ng1.gc": {
+    "points": 298,
+    "max_rel_diff": 0.00021877234285862568,
+    "median_rel_diff": 3.199374678707659e-06
+   },
+   "tb_moslv_pmos_id_vd_ng2.gc": {
+    "points": 300,
+    "max_rel_diff": 9.444542036074348e-05,
+    "median_rel_diff": 7.836629229530016e-06
+   },
+   "tb_moslv_pmos_id_vd_ng3.gc": {
+    "points": 300,
+    "max_rel_diff": 0.00016985336847307497,
+    "median_rel_diff": 4.3273101931104845e-06
+   },
+   "tb_moslv_pmos_id_vd_ng4.gc": {
+    "points": 300,
+    "max_rel_diff": 0.00011055924642822404,
+    "median_rel_diff": 4.74408767080014e-06
+   }
+  },
+  "moshv": {
+   "tb_moshv_nmos_id_vd_ng1.gc": {
+    "points": 210,
+    "max_rel_diff": 0.0009791278382216052,
+    "median_rel_diff": 2.274620222471535e-05
+   },
+   "tb_moshv_nmos_id_vd_ng2.gc": {
+    "points": 238,
+    "max_rel_diff": 0.0003229124077546612,
+    "median_rel_diff": 2.497410076901652e-05
+   },
+   "tb_moshv_nmos_id_vd_ng3.gc": {
+    "points": 239,
+    "max_rel_diff": 0.0004866134612169495,
+    "median_rel_diff": 1.50816715557073e-05
+   },
+   "tb_moshv_nmos_id_vd_ng4.gc": {
+    "points": 240,
+    "max_rel_diff": 0.00014180625423838202,
+    "median_rel_diff": 1.2400971040471989e-05
+   },
+   "tb_moshv_pmos_id_vd_ng1.gc": {
+    "points": 220,
+    "max_rel_diff": 0.000879827529957834,
+    "median_rel_diff": 3.949547300835834e-05
+   },
+   "tb_moshv_pmos_id_vd_ng2.gc": {
+    "points": 239,
+    "max_rel_diff": 0.0008853016831293071,
+    "median_rel_diff": 4.3323970720411644e-05
+   },
+   "tb_moshv_pmos_id_vd_ng3.gc": {
+    "points": 240,
+    "max_rel_diff": 0.00047806777624547723,
+    "median_rel_diff": 3.607680330135534e-05
+   },
+   "tb_moshv_pmos_id_vd_ng4.gc": {
+    "points": 240,
+    "max_rel_diff": 0.0003014044607534888,
+    "median_rel_diff": 1.2548607283481829e-05
+   }
+  }
+ },
+ "summary": {
+  "tests": 26,
+  "identical": 26,
+  "ngspice_sweeps": 16,
+  "ngspice_points": 4264,
+  "ngspice_max_rel_diff": 0.0009791278382216052
+ }
+}

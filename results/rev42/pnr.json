@@ -1,0 +1,80 @@
+{
+ "tool": "OpenROAD-flow-scripts, image openroad/orfs:26Q4-71-g9b26ff8ff, on the owner's PC (Docker Desktop)",
+ "clock_period_ns": 10.0,
+ "platforms": {
+  "ihp-sg13g2": {
+   "stdcells": 12033,
+   "stdcell_area_um2": 154767,
+   "die_area_um2": 434439,
+   "core_area_um2": 386533,
+   "utilization": 0.400397,
+   "flip_flops": 837,
+   "clock_buffers": 130,
+   "timing_repair_buffers": 1452,
+   "antenna_cells": 7,
+   "flow_setup_tns": 0,
+   "flow_hold_tns": 0,
+   "clock_skew_ns": 0.120352,
+   "ir_drop_worst_VDD_V": 0.00406698,
+   "flow_errors": 0,
+   "power_W_default_activity": 0.0147692,
+   "post_route_sta": {
+    "typ_1p20V_25C": {
+     "setup_wns_ns": 3.914,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.147,
+     "limit_violations_listed": 1
+    },
+    "slow_1p08V_125C": {
+     "setup_wns_ns": 1.903,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.263,
+     "limit_violations_listed": 1
+    },
+    "fast_1p32V_m40C": {
+     "setup_wns_ns": 5.012,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.079,
+     "limit_violations_listed": 1
+    }
+   },
+   "drc_violations": 5,
+   "lvs": "not supported by the ORFS platform",
+   "drc_categories": {
+    "M2.j/k": 1,
+    "M2Fil.h/k": 1,
+    "M3.j/k": 1,
+    "M3Fil.h/k": 1,
+    "M4.j/k": 1
+   },
+   "notes": "DRC: the 5 markers are chip-level density rules (global Metal2-4 density, filler coverage), met at chip assembly with metal fill; the ORFS IHP deck is a reduced set. Limits: the root clock buffer (buf_16) drives 16 loads against the library's default fan-out limit of 8, the only listed violation."
+  },
+  "sky130hd": {
+   "stdcells": 12385,
+   "stdcell_area_um2": 86188.9,
+   "die_area_um2": 190118,
+   "core_area_um2": 186224,
+   "utilization": 0.462825,
+   "flip_flops": 837,
+   "clock_buffers": 154,
+   "timing_repair_buffers": 637,
+   "antenna_cells": 12,
+   "flow_setup_tns": 0,
+   "flow_hold_tns": 0,
+   "clock_skew_ns": 0.076976,
+   "ir_drop_worst_VDD_V": 0.000244798,
+   "flow_errors": 0,
+   "power_W_default_activity": 0.0216744,
+   "post_route_sta": {
+    "tt_1p80V_25C": {
+     "setup_wns_ns": 1.85,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.35,
+     "limit_violations_listed": 0
+    }
+   },
+   "drc_violations": 0,
+   "lvs": "netlists match (KLayout)"
+  }
+ }
+}

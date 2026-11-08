@@ -1,0 +1,14 @@
+# Unbounded proofs of the serial-port properties under `ifdef FORMAL in rtl/tcim_spi.sv.
+[options]
+mode prove
+
+[engines]
+abc pdr
+
+[script]
+read_slang -D FORMAL --top tcim_spi tcim_pkg.sv tcim_spi.sv
+prep -top tcim_spi
+
+[files]
+../rtl/tcim_pkg.sv
+../rtl/tcim_spi.sv

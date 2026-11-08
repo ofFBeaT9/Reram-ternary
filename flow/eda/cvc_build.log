@@ -1,0 +1,331 @@
+Cloning into '/tmp/cvc'...
+autoreconf: export WARNINGS=
+autoreconf: Entering directory '.'
+autoreconf: running: autopoint --force
+Copying file ABOUT-NLS
+Copying file config.rpath
+Creating directory m4
+Copying file m4/codeset.m4
+Copying file m4/extern-inline.m4
+Copying file m4/fcntl-o.m4
+Copying file m4/gettext.m4
+Copying file m4/glibc2.m4
+Copying file m4/glibc21.m4
+Copying file m4/iconv.m4
+Copying file m4/intdiv0.m4
+Copying file m4/intl.m4
+Copying file m4/intldir.m4
+Copying file m4/intlmacosx.m4
+Copying file m4/intmax.m4
+Copying file m4/inttypes-pri.m4
+Copying file m4/inttypes_h.m4
+Copying file m4/lcmessage.m4
+Copying file m4/lib-ld.m4
+Copying file m4/lib-link.m4
+Copying file m4/lib-prefix.m4
+Copying file m4/lock.m4
+Copying file m4/longlong.m4
+Copying file m4/nls.m4
+Copying file m4/po.m4
+Copying file m4/printf-posix.m4
+Copying file m4/progtest.m4
+Copying file m4/size_max.m4
+Copying file m4/stdint_h.m4
+Copying file m4/threadlib.m4
+Copying file m4/uintmax_t.m4
+Copying file m4/visibility.m4
+Copying file m4/wchar_t.m4
+Copying file m4/wint_t.m4
+Copying file m4/xsize.m4
+Creating directory po
+Copying file po/Makefile.in.in
+Copying file po/Makevars.template
+Copying file po/Rules-quot
+Copying file po/boldquot.sed
+Copying file po/en@boldquot.header
+Copying file po/en@quot.header
+Copying file po/insert-header.sin
+Copying file po/quot.sed
+Copying file po/remove-potcdate.sin
+autoreconf: running: aclocal --force -I m4
+autoreconf: configure.ac: tracing
+autoreconf: configure.ac: not using Libtool
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: /usr/bin/autoconf --force
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:8: installing './compile'
+configure.ac:37: installing './config.guess'
+configure.ac:37: installing './config.sub'
+configure.ac:10: installing './install-sh'
+configure.ac:10: installing './missing'
+Makefile.am:3: warning: AM_GNU_GETTEXT used but 'po' not in SUBDIRS
+src/Makefile.am: installing './depcomp'
+configure.ac: installing './ylwrap'
+autoreconf: Leaving directory '.'
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking whether make supports nested variables... yes
+checking dependency style of gcc... gcc3
+checking for g++... g++
+checking whether the compiler supports GNU C++... yes
+checking whether g++ accepts -g... yes
+checking for g++ option to enable C++11 features... none needed
+checking dependency style of g++... gcc3
+checking for gcc... (cached) gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to enable C11 features... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking for flex... flex
+checking for lex output file root... lex.yy
+checking for lex library... none needed
+checking for library containing yywrap... -ll
+checking whether yytext is a pointer... yes
+checking for bison... bison -y
+checking for library containing libintl_gettext... no
+checking for inttypes.h... (cached) yes
+checking for libintl.h... yes
+checking for locale.h... yes
+checking for malloc.h... yes
+checking for stddef.h... yes
+checking for stdint.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for _Bool... yes
+checking for stdbool.h that conforms to C99... yes
+checking for inline... inline
+checking for int16_t... yes
+checking for int32_t... yes
+checking for int8_t... yes
+checking for obstacks... yes
+checking for size_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint8_t... yes
+checking for a sed that does not truncate output... /usr/bin/sed
+checking whether NLS is requested... no
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/msgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking whether to use NLS... no
+checking for error_at_line... yes
+checking for GNU libc compatible malloc... yes
+checking for GNU libc compatible realloc... yes
+checking for memset... yes
+checking for mkdir... yes
+checking for pow... no
+checking for rint... no
+checking for rmdir... yes
+checking for setenv... yes
+checking for strcasecmp... yes
+checking for strchr... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating scripts/Makefile
+config.status: creating doc/Makefile
+config.status: creating src_py/Makefile
+config.status: creating src/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing po-directories commands
+make  all-recursive
+make[1]: Entering directory '/tmp/cvc'
+Making all in src
+make[2]: Entering directory '/tmp/cvc/src'
+/bin/bash ../ylwrap cdlParser.yy y.tab.c cdlParser.cc y.tab.h `echo cdlParser.cc | sed -e s/cc$/hh/ -e s/cpp$/hpp/ -e s/cxx$/hxx/ -e s/c++$/h++/ -e s/c$/h/` y.output cdlParser.output -- bison -y -d -Wno-yacc 
+/bin/bash ../ylwrap cdlParser.yy y.tab.c cdlParser.cc y.tab.h `echo cdlParser.cc | sed -e s/cc$/hh/ -e s/cpp$/hpp/ -e s/cxx$/hxx/ -e s/c++$/h++/ -e s/c$/h/` y.output .output -- bison -y -d -Wno-yacc 
+/bin/bash ../ylwrap cdlParser.yy y.tab.c cdlParser.cc y.tab.h `echo cdlParser.cc | sed -e s/cc$/hh/ -e s/cpp$/hpp/ -e s/cxx$/hxx/ -e s/c++$/h++/ -e s/c$/h/` y.output .output -- bison -y -d -Wno-yacc 
+/bin/bash ../ylwrap cdlParser.yy y.tab.c cdlParser.cc y.tab.h `echo cdlParser.cc | sed -e s/cc$/hh/ -e s/cpp$/hpp/ -e s/cxx$/hxx/ -e s/c++$/h++/ -e s/c$/h/` y.output .output -- bison -y -d -Wno-yacc 
+updating location.hh
+location.hh is unchanged
+updating position.hh
+location.hh is unchanged
+position.hh is unchanged
+location.hh is unchanged
+updating stack.hh
+position.hh is unchanged
+stack.hh is unchanged
+position.hh is unchanged
+stack.hh is unchanged
+updating cdlParser.hh
+stack.hh is unchanged
+cdlParser.hh is unchanged
+cdlParser.hh is unchanged
+cdlParser.hh is unchanged
+make  all-am
+make[3]: Entering directory '/tmp/cvc/src'
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT cvc.o -MD -MP -MF .deps/cvc.Tpo -c -o cvc.o cvc.cc
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT cdlParser.o -MD -MP -MF .deps/cdlParser.Tpo -c -o cdlParser.o cdlParser.cc
+/bin/bash ../ylwrap cdlScanner.ll lex.yy.c cdlScanner.cc -- flex  
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CCdlParserDriver.o -MD -MP -MF .deps/CCdlParserDriver.Tpo -c -o CCdlParserDriver.o CCdlParserDriver.cc
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CCircuit.o -MD -MP -MF .deps/CCircuit.Tpo -c -o CCircuit.o CCircuit.cc
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CCondition.o -MD -MP -MF .deps/CCondition.Tpo -c -o CCondition.o CCondition.cc
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CConnection.o -MD -MP -MF .deps/CConnection.Tpo -c -o CConnection.o CConnection.cc
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CConnectionCount.o -MD -MP -MF .deps/CConnectionCount.Tpo -c -o CConnectionCount.o CConnectionCount.cc
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CCvcDb.o -MD -MP -MF .deps/CCvcDb.Tpo -c -o CCvcDb.o CCvcDb.cc
+mv -f .deps/CCdlParserDriver.Tpo .deps/CCdlParserDriver.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CCvcDb_error.o -MD -MP -MF .deps/CCvcDb_error.Tpo -c -o CCvcDb_error.o CCvcDb_error.cc
+mv -f .deps/CCondition.Tpo .deps/CCondition.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CCvcDb_init.o -MD -MP -MF .deps/CCvcDb_init.Tpo -c -o CCvcDb_init.o CCvcDb_init.cc
+mv -f .deps/cdlParser.Tpo .deps/cdlParser.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CCvcDb_interactive.o -MD -MP -MF .deps/CCvcDb_interactive.Tpo -c -o CCvcDb_interactive.o CCvcDb_interactive.cc
+mv -f .deps/CConnectionCount.Tpo .deps/CConnectionCount.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CCvcDb_main.o -MD -MP -MF .deps/CCvcDb_main.Tpo -c -o CCvcDb_main.o CCvcDb_main.cc
+mv -f .deps/cvc.Tpo .deps/cvc.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CCvcDb_print.o -MD -MP -MF .deps/CCvcDb_print.Tpo -c -o CCvcDb_print.o CCvcDb_print.cc
+mv -f .deps/CConnection.Tpo .deps/CConnection.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CCvcDb_utility.o -MD -MP -MF .deps/CCvcDb_utility.Tpo -c -o CCvcDb_utility.o CCvcDb_utility.cc
+mv -f .deps/CCircuit.Tpo .deps/CCircuit.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CCvcParameters.o -MD -MP -MF .deps/CCvcParameters.Tpo -c -o CCvcParameters.o CCvcParameters.cc
+CCvcParameters.cc: In member function 'void CCvcParameters::LoadEnvironment(std::string, std::string)':
+CCvcParameters.cc:226:22: warning: ignoring return value of 'char* fgets(char*, int, FILE*)' declared with attribute 'warn_unused_result' [-Wunused-result]
+  226 |                 fgets(myBuffer, 1024, myEcho);
+      |                 ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+mv -f .deps/CCvcDb_main.Tpo .deps/CCvcDb_main.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CDevice.o -MD -MP -MF .deps/CDevice.Tpo -c -o CDevice.o CDevice.cc
+mv -f .deps/CCvcDb.Tpo .deps/CCvcDb.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CEventQueue.o -MD -MP -MF .deps/CEventQueue.Tpo -c -o CEventQueue.o CEventQueue.cc
+mv -f .deps/CCvcDb_print.Tpo .deps/CCvcDb_print.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CFixedText.o -MD -MP -MF .deps/CFixedText.Tpo -c -o CFixedText.o CFixedText.cc
+mv -f .deps/CCvcDb_utility.Tpo .deps/CCvcDb_utility.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CInstance.o -MD -MP -MF .deps/CInstance.Tpo -c -o CInstance.o CInstance.cc
+mv -f .deps/CCvcDb_error.Tpo .deps/CCvcDb_error.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CModel.o -MD -MP -MF .deps/CModel.Tpo -c -o CModel.o CModel.cc
+mv -f .deps/CCvcParameters.Tpo .deps/CCvcParameters.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CNormalValue.o -MD -MP -MF .deps/CNormalValue.Tpo -c -o CNormalValue.o CNormalValue.cc
+mv -f .deps/CDevice.Tpo .deps/CDevice.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CParameterMap.o -MD -MP -MF .deps/CParameterMap.Tpo -c -o CParameterMap.o CParameterMap.cc
+mv -f .deps/CFixedText.Tpo .deps/CFixedText.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CPower.o -MD -MP -MF .deps/CPower.Tpo -c -o CPower.o CPower.cc
+mv -f .deps/CNormalValue.Tpo .deps/CNormalValue.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CSet.o -MD -MP -MF .deps/CSet.Tpo -c -o CSet.o CSet.cc
+mv -f .deps/CInstance.Tpo .deps/CInstance.Po
+mv -f .deps/CEventQueue.Tpo .deps/CEventQueue.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CvcMaps.o -MD -MP -MF .deps/CvcMaps.Tpo -c -o CvcMaps.o CvcMaps.cc
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT CVirtualNet.o -MD -MP -MF .deps/CVirtualNet.Tpo -c -o CVirtualNet.o CVirtualNet.cc
+mv -f .deps/CParameterMap.Tpo .deps/CParameterMap.Po
+gcc -DHAVE_CONFIG_H -I. -I..     -O3  -MT exitfail.o -MD -MP -MF .deps/exitfail.Tpo -c -o exitfail.o exitfail.c
+mv -f .deps/exitfail.Tpo .deps/exitfail.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT gzstream.o -MD -MP -MF .deps/gzstream.Tpo -c -o gzstream.o gzstream.C
+mv -f .deps/CSet.Tpo .deps/CSet.Po
+gcc -DHAVE_CONFIG_H -I. -I..     -O3  -MT obstack.o -MD -MP -MF .deps/obstack.Tpo -c -o obstack.o obstack.c
+mv -f .deps/obstack.Tpo .deps/obstack.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT resource.o -MD -MP -MF .deps/resource.Tpo -c -o resource.o resource.cc
+mv -f .deps/gzstream.Tpo .deps/gzstream.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT utility.o -MD -MP -MF .deps/utility.Tpo -c -o utility.o utility.cc
+mv -f .deps/CVirtualNet.Tpo .deps/CVirtualNet.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT mmap_file_pool.o -MD -MP -MF .deps/mmap_file_pool.Tpo -c -o mmap_file_pool.o mmap_file_pool.cpp
+mv -f .deps/CvcMaps.Tpo .deps/CvcMaps.Po
+g++ -DHAVE_CONFIG_H -I. -I..     -O3 -std=gnu++11 -MT cdlScanner.o -MD -MP -MF .deps/cdlScanner.Tpo -c -o cdlScanner.o cdlScanner.cc
+mv -f .deps/resource.Tpo .deps/resource.Po
+mmap_file_pool.cpp: In member function 'void* mmap_allocator_namespace::mmapped_file::open_and_mmap_file(std::string, mmap_allocator_namespace::access_mode, off_t, size_t, bool, bool)':
+mmap_file_pool.cpp:166:42: warning: ignoring return value of 'int ftruncate(int, __off_t)' declared with attribute 'warn_unused_result' [-Wunused-result]
+  166 |                                 ftruncate(fd, length);  // can not mmap empty file, so create it
+      |                                 ~~~~~~~~~^~~~~~~~~~~~
+mv -f .deps/mmap_file_pool.Tpo .deps/mmap_file_pool.Po
+mv -f .deps/cdlScanner.Tpo .deps/cdlScanner.Po
+mv -f .deps/CPower.Tpo .deps/CPower.Po
+mv -f .deps/CModel.Tpo .deps/CModel.Po
+mv -f .deps/utility.Tpo .deps/utility.Po
+mv -f .deps/CCvcDb_init.Tpo .deps/CCvcDb_init.Po
+mv -f .deps/CCvcDb_interactive.Tpo .deps/CCvcDb_interactive.Po
+g++  -O3 -std=gnu++11  -static-libstdc++ -static-libgcc -o cvc_rv cvc.o cdlParser.o cdlScanner.o CCdlParserDriver.o CCircuit.o CCondition.o CConnection.o CConnectionCount.o CCvcDb.o CCvcDb_error.o CCvcDb_init.o CCvcDb_interactive.o CCvcDb_main.o CCvcDb_print.o CCvcDb_utility.o CCvcParameters.o CDevice.o CEventQueue.o CFixedText.o CInstance.o CModel.o CNormalValue.o CParameterMap.o CPower.o CSet.o CvcMaps.o CVirtualNet.o exitfail.o gzstream.o obstack.o resource.o utility.o mmap_file_pool.o  -lz -lreadline -lcurses -lhistory 
+/usr/bin/ld: CCvcDb_error.o: in function `CCvcDb::FindAllOverVoltageErrors()':
+CCvcDb_error.cc:(.text+0x344d): warning: the use of `tmpnam' is dangerous, better use `mkstemp'
+make[3]: Leaving directory '/tmp/cvc/src'
+make[2]: Leaving directory '/tmp/cvc/src'
+Making all in scripts
+make[2]: Entering directory '/tmp/cvc/scripts'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/cvc/scripts'
+Making all in src_py
+make[2]: Entering directory '/tmp/cvc/src_py'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/cvc/src_py'
+Making all in doc
+make[2]: Entering directory '/tmp/cvc/doc'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/cvc/doc'
+make[2]: Entering directory '/tmp/cvc'
+make[2]: Leaving directory '/tmp/cvc'
+make[1]: Leaving directory '/tmp/cvc'
+Making install in src
+make[1]: Entering directory '/tmp/cvc/src'
+make  install-am
+make[2]: Entering directory '/tmp/cvc/src'
+make[3]: Entering directory '/tmp/cvc/src'
+ /usr/bin/mkdir -p '/usr/local/bin'
+  /usr/bin/install -c cvc_rv '/usr/local/bin'
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/cvc/src'
+make[2]: Leaving directory '/tmp/cvc/src'
+make[1]: Leaving directory '/tmp/cvc/src'
+Making install in scripts
+make[1]: Entering directory '/tmp/cvc/scripts'
+make[2]: Entering directory '/tmp/cvc/scripts'
+ /usr/bin/mkdir -p '/usr/local/bin'
+ /usr/bin/install -c add_kisei annotate_kisei calibre_cvc clean_cvc_log cvc_probe.il cvc_select.tcl cvcMakefile expand_cells.py '/usr/local/bin'
+ /usr/bin/mkdir -p '/usr/local/share/scripts/cvc_rv'
+ /usr/bin/install -c -m 644 SaveCvcParameters.txt box.awk '/usr/local/share/scripts/cvc_rv'
+make[2]: Leaving directory '/tmp/cvc/scripts'
+make[1]: Leaving directory '/tmp/cvc/scripts'
+Making install in src_py
+make[1]: Entering directory '/tmp/cvc/src_py'
+make[1]: Nothing to be done for 'install'.
+make[1]: Leaving directory '/tmp/cvc/src_py'
+Making install in doc
+make[1]: Entering directory '/tmp/cvc/doc'
+make[2]: Entering directory '/tmp/cvc/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/local/share/doc/cvc_rv'
+ /usr/bin/install -c -m 644 Doxyfile error_codes kisei_instructions.txt '/usr/local/share/doc/cvc_rv'
+make[2]: Leaving directory '/tmp/cvc/doc'
+make[1]: Leaving directory '/tmp/cvc/doc'
+make[1]: Entering directory '/tmp/cvc'
+make[2]: Entering directory '/tmp/cvc'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/cvc'
+make[1]: Leaving directory '/tmp/cvc'

@@ -1,0 +1,93 @@
+=== cvc
+CVC_BUILD_FAILED
+Cloning into '/tmp/cvc'...
+autoreconf: export WARNINGS=
+autoreconf: Entering directory '.'
+autoreconf: running: autopoint --force
+Can't exec "autopoint": No such file or directory at /usr/share/autoconf/Autom4te/FileUtils.pm line 293.
+autoreconf: error: autopoint failed with exit status: 2
+KLayout 0.29.12
+GNU Awk 5.2.1, API 3.2, PMA Avon 8-g1, (GNU MPFR 4.2.1, GNU MP 6.3.0)
+cf-precheck 1.3.7
+=== precheck
+
+╭────────────────────────────────── Precheck ──────────────────────────────────╮
+│ CF Precheck v1.3.7                                                           │
+│ Project: caravan (analog, sky130B)                                           │
+│ Checks:  14                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+  [ 1/14] Top Cell .......................................... PASS  (0.4s)
+  [ 2/14] GPIO Defines ...................................... PASS  (0.6s)
+  [ 3/14] XOR ............................................... PASS  (4.1s)
+  [ 4/14] Magic DRC ......................................... FAIL  (7.1s)
+         Violation: 'poly overlap of poly contact < 0.08um in one direction 
+(licon.8a)' found 136 times
+  [ 5/14] Klayout FEOL ...................................... PASS  (11.7s)
+  [ 6/14] Klayout BEOL ...................................... FAIL  (30.7s)
+         175 DRC violations. See 
+/w/flow/eda/precheck_out/outputs/reports/klayout_beol_check.xml
+  [ 7/14] Klayout Offgrid ................................... PASS  (8.4s)
+  [ 8/14] Klayout Metal Density ............................. PASS  (4.4s)
+  [ 9/14] Klayout Pin Label ................................. FAIL  (3.0s)
+         klayout_pin_label_purposes_overlapping_drawing failed (stat=2), see 
+/w/flow/eda/precheck_out/logs/klayout_pin_label_p...
+  [10/14] Klayout ZeroArea .................................. PASS  (2.6s)
+  [11/14] Spike Check ....................................... PASS  (2.1s)
+  [12/14] Illegal Cellname .................................. PASS  (0.6s)
+  [13/14] LVS ............................................... FAIL  (69.5s)
+         LVS FAILED (stat=1), see /w/flow/eda/precheck_out/logs/LVS_check.log
+  [14/14] OEB ............................................... FAIL  (0.4s)
+         OEB FAILED (stat=127), see /w/flow/eda/precheck_out/logs/OEB_check.log
+
+                Precheck Summary                 
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Check                 ┃  Status  ┃   Duration ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━┩
+│ Top Cell              │   PASS   │       0.4s │
+│ GPIO Defines          │   PASS   │       0.6s │
+│ XOR                   │   PASS   │       4.1s │
+│ Magic DRC             │   FAIL   │       7.1s │
+│ Klayout FEOL          │   PASS   │      11.7s │
+│ Klayout BEOL          │   FAIL   │      30.7s │
+│ Klayout Offgrid       │   PASS   │       8.4s │
+│ Klayout Metal Density │   PASS   │       4.4s │
+│ Klayout Pin Label     │   FAIL   │       3.0s │
+│ Klayout ZeroArea      │   PASS   │       2.6s │
+│ Spike Check           │   PASS   │       2.1s │
+│ Illegal Cellname      │   PASS   │       0.6s │
+│ LVS                   │   FAIL   │      69.5s │
+│ OEB                   │   FAIL   │       0.4s │
+└───────────────────────┴──────────┴────────────┘
+Results saved to /w/chip/sky130/caravan/.cf/project.json
+Full log at /w/chip/sky130/caravan/precheck_results
+PRECHECK_RC=2
+=== antenna
+ANTENNA_ERRORS 2078
+=== worst-case ladders
+RBL=595.0 RSL=442.3 SET_TARGET_US=29.844
+{'op': 'set', 'VWLP': 1.7, 'corner': 'tt', 'temp': 27, 'pulses': 20, 'reached': False, 'final_uS': 25.63, 'max_disturb_uS': 0.0}
+{'op': 'set', 'VWLP': 1.7, 'corner': 'ss', 'temp': -40, 'pulses': 20, 'reached': False, 'final_uS': 19.95, 'max_disturb_uS': 0.0}
+{'op': 'set', 'VWLP': 1.7, 'corner': 'ff', 'temp': 125, 'pulses': 20, 'reached': True, 'final_uS': 30.03, 'max_disturb_uS': 0.0}
+{'op': 'set', 'VWLP': 2.0, 'corner': 'tt', 'temp': 27, 'pulses': 9, 'reached': True, 'final_uS': 30.68, 'max_disturb_uS': 0.0}
+{'op': 'set', 'VWLP': 2.0, 'corner': 'ss', 'temp': -40, 'pulses': 11, 'reached': True, 'final_uS': 29.87, 'max_disturb_uS': 0.0}
+{'op': 'set', 'VWLP': 2.0, 'corner': 'ff', 'temp': 125, 'pulses': 9, 'reached': True, 'final_uS': 31.53, 'max_disturb_uS': 0.0}
+{'op': 'set', 'VWLP': 2.5, 'corner': 'tt', 'temp': 27, 'pulses': 6, 'reached': True, 'final_uS': 32.54, 'max_disturb_uS': 0.0}
+{'op': 'set', 'VWLP': 2.5, 'corner': 'ss', 'temp': -40, 'pulses': 6, 'reached': True, 'final_uS': 30.2, 'max_disturb_uS': 0.0}
+{'op': 'set', 'VWLP': 2.5, 'corner': 'ff', 'temp': 125, 'pulses': 6, 'reached': True, 'final_uS': 29.85, 'max_disturb_uS': 0.0}
+{'op': 'reset', 'slower_decades': 0, 'log10F': 7.375, 'corner': 'tt', 'temp': 27, 'pulses': 1, 'reached': True, 'final_uS': 0.31, 'max_disturb_uS': 0.0}
+{'op': 'reset', 'slower_decades': 0, 'log10F': 7.375, 'corner': 'ss', 'temp': -40, 'pulses': 3, 'reached': True, 'final_uS': 0.31, 'max_disturb_uS': 0.0}
+{'op': 'reset', 'slower_decades': 0, 'log10F': 7.375, 'corner': 'ff', 'temp': 125, 'pulses': 1, 'reached': True, 'final_uS': 0.31, 'max_disturb_uS': 0.0}
+{'op': 'reset', 'slower_decades': 1, 'log10F': 6.375, 'corner': 'tt', 'temp': 27, 'pulses': 3, 'reached': True, 'final_uS': 0.31, 'max_disturb_uS': 0.0}
+{'op': 'reset', 'slower_decades': 1, 'log10F': 6.375, 'corner': 'ss', 'temp': -40, 'pulses': 4, 'reached': True, 'final_uS': 0.31, 'max_disturb_uS': 0.0}
+{'op': 'reset', 'slower_decades': 1, 'log10F': 6.375, 'corner': 'ff', 'temp': 125, 'pulses': 2, 'reached': True, 'final_uS': 0.31, 'max_disturb_uS': 0.0}
+{'op': 'reset', 'slower_decades': 2, 'log10F': 5.375, 'corner': 'tt', 'temp': 27, 'pulses': 4, 'reached': True, 'final_uS': 0.31, 'max_disturb_uS': 0.0}
+{'op': 'reset', 'slower_decades': 2, 'log10F': 5.375, 'corner': 'ss', 'temp': -40, 'pulses': 6, 'reached': True, 'final_uS': 0.31, 'max_disturb_uS': 0.0}
+{'op': 'reset', 'slower_decades': 2, 'log10F': 5.375, 'corner': 'ff', 'temp': 125, 'pulses': 3, 'reached': True, 'final_uS': 0.31, 'max_disturb_uS': 0.0}
+{'op': 'reset', 'slower_decades': 3, 'log10F': 4.375, 'corner': 'tt', 'temp': 27, 'pulses': 6, 'reached': True, 'final_uS': 0.31, 'max_disturb_uS': 0.0}
+{'op': 'reset', 'slower_decades': 3, 'log10F': 4.375, 'corner': 'ss', 'temp': -40, 'pulses': 8, 'reached': True, 'final_uS': 0.52, 'max_disturb_uS': 0.0}
+{'op': 'reset', 'slower_decades': 3, 'log10F': 4.375, 'corner': 'ff', 'temp': 125, 'pulses': 5, 'reached': True, 'final_uS': 0.31, 'max_disturb_uS': 0.0}
+{'op': 'reset', 'slower_decades': 4, 'log10F': 3.375, 'corner': 'tt', 'temp': 27, 'pulses': 12, 'reached': True, 'final_uS': 0.31, 'max_disturb_uS': 0.0}
+{'op': 'reset', 'slower_decades': 4, 'log10F': 3.375, 'corner': 'ss', 'temp': -40, 'pulses': 12, 'reached': False, 'final_uS': 56.99, 'max_disturb_uS': 0.0}
+{'op': 'reset', 'slower_decades': 4, 'log10F': 3.375, 'corner': 'ff', 'temp': 125, 'pulses': 9, 'reached': True, 'final_uS': 0.31, 'max_disturb_uS': 0.0}
+BATCH10_DONE

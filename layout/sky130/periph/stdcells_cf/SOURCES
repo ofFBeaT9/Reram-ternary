@@ -1,0 +1,2 @@
+sky130_fd_sc_hd.spice: open_pdks 3e0e31dcce8519a7dbb82590346db16d91b7244f (sky130B)
+sky130_fd_sc_hd.gds: open_pdks 1e35547 (sky130B), structure sky130_fd_sc_hd__conb_1 from open_pdks 3e0e31dcce8519a7dbb82590346db16d91b7244f

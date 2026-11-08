@@ -1,0 +1,15 @@
+* ReRAM cell alone: time for the gap to pass a level after a voltage step (10 ns edge)
+*   set  : +1.1 V from 1.8 nm, time to pass 1.0 nm        reset: -1.0 V from 0.6 nm, time to pass 1.2 nm
+.include ../../model/reram_stanford_ihp.lib
+Va a 0 PWL(0 0 10n 1.1)
+X1 a 0 ga reram_stanford_ihp gap_min=0.05 gap_ini=1.8
+Vb b 0 PWL(0 0 10n -1.0)
+X2 b 0 gb reram_stanford_ihp gap_min=0.05 gap_ini=0.6
+.options reltol=1e-4 abstol=1e-13 vntol=1e-7 method=gear
+.tran 0.2n 700n 0 0.2n uic
+.control
+run
+meas tran t_set when v(ga)=1.0 fall=1
+meas tran t_reset when v(gb)=1.2 rise=1
+.endc
+.end

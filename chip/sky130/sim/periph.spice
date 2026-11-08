@@ -1,0 +1,134 @@
+* Periphery cells of TCIM0 on SKY130 (sky130B), schematic level (11 October 2026).
+* Thin-oxide 1.8 V devices (sky130_fd_pr__nfet_01v8 / pfet_01v8) on vccd; 5 V devices (nfet_g5v0d10v5 /
+* pfet_g5v0d10v5, L >= 0.5 um) for everything that sees the 3.3 V domain or the array lines. W and L in um.
+* These subcircuits are the reference for simulation (chip/sky130/sim/periph_sim.py) and later for LVS.
+* Revision 1 (11 Oct): PMOS of the reference and the sense amplifiers W 1 -> 4 um (L 4 um): with W 1 um the set-target
+* reference fell to 11.4 uS at sf / -40 C / 1.62 V (no headroom for the 6-unit current); with W 4 um 23.7-27.4 uS.
+
+* ---------------------------------------------------------------- level shifter 1.8 V -> 3.3 V
+* in (vccd domain) -> out (vdda domain, same polarity), outb (inverted). Cross-coupled HV PMOS loads, HV NMOS pull-downs
+* driven by in / inb (1.8 V swing on 5 V devices: weak gate drive, so the NMOS are wide and the PMOS long).
+.subckt ls_lv2hv in out outb vccd vdda vss
+Xi1 inb in vccd vccd sky130_fd_pr__pfet_01v8 w=1 l=0.15
+Xi2 inb in vss vss sky130_fd_pr__nfet_01v8 w=0.5 l=0.15
+Xn1 xb in vss vss sky130_fd_pr__nfet_g5v0d10v5 w=4 l=0.5
+Xn2 x inb vss vss sky130_fd_pr__nfet_g5v0d10v5 w=4 l=0.5
+Xp1 xb x vdda vdda sky130_fd_pr__pfet_g5v0d10v5 w=0.42 l=1
+Xp2 x xb vdda vdda sky130_fd_pr__pfet_g5v0d10v5 w=0.42 l=1
+* output buffers in the 3.3 V domain
+Xo1 out xb vdda vdda sky130_fd_pr__pfet_g5v0d10v5 w=2 l=0.5
+Xo2 out xb vss vss sky130_fd_pr__nfet_g5v0d10v5 w=1 l=0.5
+Xo3 outb x vdda vdda sky130_fd_pr__pfet_g5v0d10v5 w=2 l=0.5
+Xo4 outb x vss vss sky130_fd_pr__nfet_g5v0d10v5 w=1 l=0.5
+.ends ls_lv2hv
+
+* ---------------------------------------------------------------- transmission gate, 5 V devices
+.subckt tg a b en enb vdda vss wn=2 wp=4
+Xn a en b vss sky130_fd_pr__nfet_g5v0d10v5 w={wn} l=0.5
+Xp a enb b vdda sky130_fd_pr__pfet_g5v0d10v5 w={wp} l=0.5
+.ends tg
+
+* ---------------------------------------------------------------- word-line driver
+* sel / selb from a level shifter (0 / 3.3 V): sel = 1 connects the word line to the selected rail vwl (0 .. 3.3 V)
+* through a transmission gate; sel = 0 grounds it.
+.subckt wld vwl wl sel selb vdda vss
+Xtg vwl wl sel selb vdda vss tg wn=2 wp=4
+Xpd wl selb vss vss sky130_fd_pr__nfet_g5v0d10v5 w=1 l=0.5
+.ends wld
+
+* ---------------------------------------------------------------- bit-line driver: program rail, ground, sense
+* prg = 1: bit line to vprg; dn = 1: bit line to ground; sen = 1: bit line to the sense amplifier input sa.
+* (A port may not be called gnd: ngspice treats that name as node 0 everywhere.)
+* All controls are 3.3 V signals with their complements where a PMOS needs one.
+.subckt bld vprg bl sa prg prgb dn sen vdda vss
+Xtg vprg bl prg prgb vdda vss tg wn=4 wp=8
+Xpd bl dn vss vss sky130_fd_pr__nfet_g5v0d10v5 w=2 l=0.5
+Xcs bl sen sa vss sky130_fd_pr__nfet_g5v0d10v5 w=2 l=0.5
+.ends bld
+
+* ---------------------------------------------------------------- source-line driver: program rail or ground
+* carries both devices of a ternary column in a reset pulse.
+.subckt sld vprg sl prg prgb dn vdda vss
+Xtg vprg sl prg prgb vdda vss tg wn=8 wp=16
+Xpd sl dn vss vss sky130_fd_pr__nfet_g5v0d10v5 w=4 l=0.5
+.ends sld
+
+* ---------------------------------------------------------------- reference bias
+* The test board sources a current ibias into pad ib (unit, about 0.8 uA). An NMOS diode (Xm0) mirrors it into
+* switched legs of 2, 3 and 6 units, selected by the op (r0: reset target, r1: read, r2: set target, one at a time,
+* 1.8 V controls). Their sum is drawn from the PMOS diode Xpd, whose gate vbp sets the reference current of every sense
+* amplifier (1:1 mirrors). A second PMOS mirror feeds the replica that sets the clamp gate vcl: the bit line then sits at
+* vref at the trip point.
+.subckt refbias ib r0 r1 r2 vref vbp vcl vccd vss
+Xm0 ib ib vss vss sky130_fd_pr__nfet_01v8 w=2 l=4
+Xa1 a ib vss vss sky130_fd_pr__nfet_01v8 w=2 l=4 m=2
+Xa2 a r0 vbp vss sky130_fd_pr__nfet_01v8 w=1 l=0.15
+Xb1 b ib vss vss sky130_fd_pr__nfet_01v8 w=2 l=4 m=3
+Xb2 b r1 vbp vss sky130_fd_pr__nfet_01v8 w=1 l=0.15
+Xc1 c ib vss vss sky130_fd_pr__nfet_01v8 w=2 l=4 m=6
+Xc2 c r2 vbp vss sky130_fd_pr__nfet_01v8 w=1 l=0.15
+Xpd vbp vbp vccd vccd sky130_fd_pr__pfet_01v8 w=4 l=4
+* replica: a mirror of the reference current into a diode-connected clamp copy standing on vref
+Xpr vcl vbp vccd vccd sky130_fd_pr__pfet_01v8 w=4 l=4
+Xnr vcl vcl vref vss sky130_fd_pr__nfet_01v8 w=2 l=1
+.ends refbias
+
+* ---------------------------------------------------------------- sense amplifier, one per bit line
+* The PMOS mirror (gate vbp) supplies the reference current into node sn; the clamp (gate vcl) holds the column
+* switch side sa near vref; a cell current above the reference pulls sn low. Output out = 1 for a cell above the
+* reference (inverter). With the column switch open no current flows: sa settles near vref and sn at vccd (out = 0).
+.subckt sa sa out vbp vcl vccd vss
+Xpm sn vbp vccd vccd sky130_fd_pr__pfet_01v8 w=4 l=4
+Xcl sn vcl sa vss sky130_fd_pr__nfet_01v8 w=2 l=1
+Xi1 out sn vccd vccd sky130_fd_pr__pfet_01v8 w=1 l=0.15
+Xi2 out sn vss vss sky130_fd_pr__nfet_01v8 w=0.5 l=0.15
+.ends sa
+
+* ================================================================ revision 2 (11 Oct): shared controls, NOR ground switches
+* The controller (rtl/chip/tcim_actl.sv revision 2) sends one 1.8 V control per bit line (prg) and per row (sel), and
+* four shared ones (bl_sen, flt, sl_prg, wl_prog). The ground switch of each bit line is driven by NOR(prg, sen, flt) in
+* the 3.3 V domain, that of all source lines by NOR(sl_prg, flt).
+
+* ---------------------------------------------------------------- NOR gates, 5 V devices
+.subckt nor3hv a b c y vdda vss
+Xp1 m1 a vdda vdda sky130_fd_pr__pfet_g5v0d10v5 w=2 l=0.5
+Xp2 m2 b m1 vdda sky130_fd_pr__pfet_g5v0d10v5 w=2 l=0.5
+Xp3 y c m2 vdda sky130_fd_pr__pfet_g5v0d10v5 w=2 l=0.5
+Xn1 y a vss vss sky130_fd_pr__nfet_g5v0d10v5 w=1 l=0.5
+Xn2 y b vss vss sky130_fd_pr__nfet_g5v0d10v5 w=1 l=0.5
+Xn3 y c vss vss sky130_fd_pr__nfet_g5v0d10v5 w=1 l=0.5
+.ends nor3hv
+
+.subckt nor2hv a b y vdda vss
+Xp1 m1 a vdda vdda sky130_fd_pr__pfet_g5v0d10v5 w=8 l=0.5
+Xp2 y b m1 vdda sky130_fd_pr__pfet_g5v0d10v5 w=8 l=0.5
+Xn1 y a vss vss sky130_fd_pr__nfet_g5v0d10v5 w=2 l=0.5
+Xn2 y b vss vss sky130_fd_pr__nfet_g5v0d10v5 w=2 l=0.5
+.ends nor2hv
+
+* ---------------------------------------------------------------- slices (one per row, one per bit line)
+* row: 1.8 V select -> level shifter -> word-line driver on the shared rail vwl
+.subckt rowslice sel_lv wl vwl vccd vdda vss
+Xls sel_lv sel selb vccd vdda vss ls_lv2hv
+Xd vwl wl sel selb vdda vss wld
+.ends rowslice
+
+* bit line: 1.8 V prg -> level shifter; ground switch from NOR(prg, sen, flt); driver; sense amplifier (output 1.8 V)
+.subckt blslice prg_lv bl out vprg sen flt vbp vcl vccd vdda vss
+Xls prg_lv prg prgb vccd vdda vss ls_lv2hv
+Xnor prg sen flt dn vdda vss nor3hv
+Xd vprg bl sa prg prgb dn sen vdda vss bld
+Xsa sa out vbp vcl vccd vss sa
+.ends blslice
+
+* shared controls: four level shifters, the source-line ground NOR, the word-line rail switch, the reference
+.subckt ctrlglob sen_lv flt_lv slprg_lv wlprog_lv r0 r1 r2 ib vref vwlr vwlp sen flt slprg slprgb sldn vwl vbp vcl vccd vdda vss
+Xl1 sen_lv sen senb vccd vdda vss ls_lv2hv
+Xl2 flt_lv flt fltb vccd vdda vss ls_lv2hv
+Xl3 slprg_lv slprg slprgb vccd vdda vss ls_lv2hv
+Xl4 wlprog_lv wp wpb vccd vdda vss ls_lv2hv
+Xn slprg flt sldn vdda vss nor2hv
+Xt1 vwlr vwl wpb wp vdda vss tg wn=8 wp=16
+Xt2 vwlp vwl wp wpb vdda vss tg wn=8 wp=16
+Xr ib r0 r1 r2 vref vbp vcl vccd vss refbias
+.ends ctrlglob

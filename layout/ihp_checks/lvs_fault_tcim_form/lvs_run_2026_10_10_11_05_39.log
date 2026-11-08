@@ -1,0 +1,18 @@
+10-Oct-2026 11:05:39 | INFO    | Your Klayout version is: KLayout 0.30.12 (required >= 0.30.5)
+10-Oct-2026 11:05:39 | INFO    | Running SG13G2 LVS checks on design /w/tcim_form.gds on cell tcim_form
+10-Oct-2026 11:05:41 | INFO    | ==============================================================================
+10-Oct-2026 11:05:41 | INFO    | Important Summary
+10-Oct-2026 11:05:41 | INFO    | +------------------+--------------------------------------------------------------+
+10-Oct-2026 11:05:41 | INFO    | | Status           | FAIL                                                         |
+10-Oct-2026 11:05:41 | INFO    | | Mode             | COMPARE                                                      |
+10-Oct-2026 11:05:41 | INFO    | | Outcome          | Comparison mode: FAIL (netlists do not match).               |
+10-Oct-2026 11:05:41 | INFO    | | Layout           | tcim_form.gds                                                |
+10-Oct-2026 11:05:41 | INFO    | | Top Cell         | tcim_form                                                    |
+10-Oct-2026 11:05:41 | INFO    | | Results Dir      | /w/ihp_checks/lvs_fault_tcim_form                            |
+10-Oct-2026 11:05:41 | INFO    | | Warnings         | 0                                                            |
+10-Oct-2026 11:05:41 | INFO    | | Errors           | 1                                                            |
+10-Oct-2026 11:05:41 | INFO    | | Run Time (s)     | 2.282                                                        |
+10-Oct-2026 11:05:41 | INFO    | +------------------+--------------------------------------------------------------+
+10-Oct-2026 11:05:41 | ERROR   | Key errors:
+10-Oct-2026 11:05:41 | ERROR   |   - 2026-10-10 11:05:41 +0000: Memory Usage (487260K) : ERROR : Netlists don't match
+10-Oct-2026 11:05:41 | INFO    | ==============================================================================

@@ -1,0 +1,5 @@
+trit code of the device under test: two's complement (+1 = 01, 0 = 00, -1 = 11, 10 illegal)
+1. register access
+  FAIL: status byte framing bit missing (0x00)
+TEST FAILED
+EXIT=1

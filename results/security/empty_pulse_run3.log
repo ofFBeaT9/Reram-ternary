@@ -1,0 +1,73 @@
+{'pulse': 'set', 'async_reset_mid_pulse': False, 'corner': 'tt', 'devices': 'LRS_28uS_set_verify_edge', 'max_V_selected_row': 0.203223106, 'max_V_unselected_row': 0.0178924094} {'row0_p': {'nominal_27C': '-1.54e-14', 'hot_85C': '-7.84e-11', 'fast_reset_cell': '-5.16e-13'}, 'row0_n': {'nominal_27C': '-1.54e-14', 'hot_85C': '-7.84e-11', 'fast_reset_cell': '-5.16e-13'}, 'row1_p': {'nominal_27C': '-1.73e-16', 'hot_85C': '-1.78e-12', 'fast_reset_cell': '-5.78e-15'}, 'row1_n': {'nominal_27C': '-1.73e-16', 'hot_85C': '-1.78e-12', 'fast_reset_cell': '-5.78e-15'}}
+{'pulse': 'set', 'async_reset_mid_pulse': False, 'corner': 'tt', 'devices': 'LRS_100uS', 'max_V_selected_row': 0.0759282885, 'max_V_unselected_row': 0.00515683887} {'row0_p': {'nominal_27C': '-7.55e-16', 'hot_85C': '-7.23e-12', 'fast_reset_cell': '-2.52e-14'}, 'row0_n': {'nominal_27C': '-7.55e-16', 'hot_85C': '-7.23e-12', 'fast_reset_cell': '-2.52e-14'}, 'row1_p': {'nominal_27C': '-5.17e-17', 'hot_85C': '-5.34e-13', 'fast_reset_cell': '-1.73e-15'}, 'row1_n': {'nominal_27C': '-5.17e-17', 'hot_85C': '-5.34e-13', 'fast_reset_cell': '-1.73e-15'}}
+{'pulse': 'set', 'async_reset_mid_pulse': False, 'corner': 'ff', 'devices': 'LRS_28uS_set_verify_edge', 'max_V_selected_row': 0.185515836, 'max_V_unselected_row': 0.0163929786} {'row0_p': {'nominal_27C': '-6.72e-15', 'hot_85C': '-4.20e-11', 'fast_reset_cell': '-2.25e-13'}, 'row0_n': {'nominal_27C': '-6.72e-15', 'hot_85C': '-4.20e-11', 'fast_reset_cell': '-2.25e-13'}, 'row1_p': {'nominal_27C': '-1.57e-16', 'hot_85C': '-1.62e-12', 'fast_reset_cell': '-5.26e-15'}, 'row1_n': {'nominal_27C': '-1.57e-16', 'hot_85C': '-1.62e-12', 'fast_reset_cell': '-5.26e-15'}}
+{'pulse': 'set', 'async_reset_mid_pulse': False, 'corner': 'ss', 'devices': 'LRS_28uS_set_verify_edge', 'max_V_selected_row': 0.191300579, 'max_V_unselected_row': 0.0140986768} {'row0_p': {'nominal_27C': '-1.18e-14', 'hot_85C': '-6.59e-11', 'fast_reset_cell': '-3.94e-13'}, 'row0_n': {'nominal_27C': '-1.18e-14', 'hot_85C': '-6.59e-11', 'fast_reset_cell': '-3.94e-13'}, 'row1_p': {'nominal_27C': '-1.75e-16', 'hot_85C': '-1.81e-12', 'fast_reset_cell': '-5.85e-15'}, 'row1_n': {'nominal_27C': '-1.75e-16', 'hot_85C': '-1.81e-12', 'fast_reset_cell': '-5.85e-15'}}
+{'pulse': 'set', 'async_reset_mid_pulse': False, 'corner': 'tt', 'devices': 'HRS_4.5uS', 'max_V_selected_row': 0.640336198, 'max_V_unselected_row': 0.0859814998} {'row0_p': {'nominal_27C': '-1.51e-09', 'hot_85C': '-1.01e-06', 'fast_reset_cell': '-5.04e-08'}, 'row0_n': {'nominal_27C': '-1.51e-09', 'hot_85C': '-1.01e-06', 'fast_reset_cell': '-5.04e-08'}, 'row1_p': {'nominal_27C': '-1.11e-15', 'hot_85C': '-1.03e-11', 'fast_reset_cell': '-3.73e-14'}, 'row1_n': {'nominal_27C': '-1.11e-15', 'hot_85C': '-1.03e-11', 'fast_reset_cell': '-3.73e-14'}}
+{'pulse': 'set', 'async_reset_mid_pulse': False, 'corner': 'ss', 'devices': 'HRS_4.5uS', 'max_V_selected_row': 0.591922157, 'max_V_unselected_row': 0.0730710902} {'row0_p': {'nominal_27C': '-5.52e-10', 'hot_85C': '-4.81e-07', 'fast_reset_cell': '-1.84e-08'}, 'row0_n': {'nominal_27C': '-5.52e-10', 'hot_85C': '-4.81e-07', 'fast_reset_cell': '-1.84e-08'}, 'row1_p': {'nominal_27C': '-1.00e-15', 'hot_85C': '-9.69e-12', 'fast_reset_cell': '-3.35e-14'}, 'row1_n': {'nominal_27C': '-1.00e-15', 'hot_85C': '-9.69e-12', 'fast_reset_cell': '-3.35e-14'}}
+{'pulse': 'set', 'async_reset_mid_pulse': False, 'corner': 'tt', 'devices': 'HRS_7.93uS_reset_verify_edge', 'max_V_selected_row': 0.480745984, 'max_V_unselected_row': 0.0559218071} {'row0_p': {'nominal_27C': '-3.38e-11', 'hot_85C': '-4.24e-08', 'fast_reset_cell': '-1.13e-09'}, 'row0_n': {'nominal_27C': '-3.38e-11', 'hot_85C': '-4.24e-08', 'fast_reset_cell': '-1.13e-09'}, 'row1_p': {'nominal_27C': '-5.88e-16', 'hot_85C': '-5.81e-12', 'fast_reset_cell': '-1.97e-14'}, 'row1_n': {'nominal_27C': '-5.88e-16', 'hot_85C': '-5.81e-12', 'fast_reset_cell': '-1.97e-14'}}
+{'pulse': 'set', 'async_reset_mid_pulse': True, 'corner': 'tt', 'devices': 'LRS_100uS', 'max_V_selected_row': 0.0752712458, 'max_V_unselected_row': 0.00515683887} {'row0_p': {'nominal_27C': '-7.50e-16', 'hot_85C': '-7.17e-12', 'fast_reset_cell': '-2.51e-14'}, 'row0_n': {'nominal_27C': '-7.50e-16', 'hot_85C': '-7.17e-12', 'fast_reset_cell': '-2.51e-14'}, 'row1_p': {'nominal_27C': '-2.80e-17', 'hot_85C': '-2.89e-13', 'fast_reset_cell': '-9.35e-16'}, 'row1_n': {'nominal_27C': '-2.80e-17', 'hot_85C': '-2.89e-13', 'fast_reset_cell': '-9.35e-16'}}
+{'pulse': 'set', 'async_reset_mid_pulse': True, 'corner': 'tt', 'devices': 'LRS_28uS_set_verify_edge', 'max_V_selected_row': 0.203223106, 'max_V_unselected_row': 0.0178924094} {'row0_p': {'nominal_27C': '-1.54e-14', 'hot_85C': '-7.78e-11', 'fast_reset_cell': '-5.14e-13'}, 'row0_n': {'nominal_27C': '-1.54e-14', 'hot_85C': '-7.78e-11', 'fast_reset_cell': '-5.14e-13'}, 'row1_p': {'nominal_27C': '-9.08e-17', 'hot_85C': '-9.35e-13', 'fast_reset_cell': '-3.04e-15'}, 'row1_n': {'nominal_27C': '-9.08e-17', 'hot_85C': '-9.35e-13', 'fast_reset_cell': '-3.04e-15'}}
+{'pulse': 'set', 'async_reset_mid_pulse': True, 'corner': 'ss', 'devices': 'LRS_28uS_set_verify_edge', 'max_V_selected_row': 0.191300579, 'max_V_unselected_row': 0.0139081178} {'row0_p': {'nominal_27C': '-1.17e-14', 'hot_85C': '-6.54e-11', 'fast_reset_cell': '-3.92e-13'}, 'row0_n': {'nominal_27C': '-1.17e-14', 'hot_85C': '-6.54e-11', 'fast_reset_cell': '-3.92e-13'}, 'row1_p': {'nominal_27C': '-9.13e-17', 'hot_85C': '-9.41e-13', 'fast_reset_cell': '-3.05e-15'}, 'row1_n': {'nominal_27C': '-9.13e-17', 'hot_85C': '-9.41e-13', 'fast_reset_cell': '-3.05e-15'}}
+{'pulse': 'set', 'async_reset_mid_pulse': True, 'corner': 'ff', 'devices': 'LRS_28uS_set_verify_edge', 'max_V_selected_row': 0.185515836, 'max_V_unselected_row': 0.0163929786} {'row0_p': {'nominal_27C': '-6.64e-15', 'hot_85C': '-4.12e-11', 'fast_reset_cell': '-2.22e-13'}, 'row0_n': {'nominal_27C': '-6.64e-15', 'hot_85C': '-4.12e-11', 'fast_reset_cell': '-2.22e-13'}, 'row1_p': {'nominal_27C': '-8.15e-17', 'hot_85C': '-8.40e-13', 'fast_reset_cell': '-2.72e-15'}, 'row1_n': {'nominal_27C': '-8.15e-17', 'hot_85C': '-8.40e-13', 'fast_reset_cell': '-2.72e-15'}}
+{'pulse': 'set', 'async_reset_mid_pulse': True, 'corner': 'tt', 'devices': 'HRS_4.5uS', 'max_V_selected_row': 0.640336198, 'max_V_unselected_row': 0.0854983461} {'row0_p': {'nominal_27C': '-1.51e-09', 'hot_85C': '-1.01e-06', 'fast_reset_cell': '-5.04e-08'}, 'row0_n': {'nominal_27C': '-1.51e-09', 'hot_85C': '-1.01e-06', 'fast_reset_cell': '-5.04e-08'}, 'row1_p': {'nominal_27C': '-5.52e-16', 'hot_85C': '-5.19e-12', 'fast_reset_cell': '-1.84e-14'}, 'row1_n': {'nominal_27C': '-5.52e-16', 'hot_85C': '-5.19e-12', 'fast_reset_cell': '-1.84e-14'}}
+{'pulse': 'set', 'async_reset_mid_pulse': True, 'corner': 'ss', 'devices': 'HRS_4.5uS', 'max_V_selected_row': 0.591922157, 'max_V_unselected_row': 0.0722676416} {'row0_p': {'nominal_27C': '-5.52e-10', 'hot_85C': '-4.81e-07', 'fast_reset_cell': '-1.84e-08'}, 'row0_n': {'nominal_27C': '-5.52e-10', 'hot_85C': '-4.81e-07', 'fast_reset_cell': '-1.84e-08'}, 'row1_p': {'nominal_27C': '-5.10e-16', 'hot_85C': '-4.93e-12', 'fast_reset_cell': '-1.70e-14'}, 'row1_n': {'nominal_27C': '-5.10e-16', 'hot_85C': '-4.93e-12', 'fast_reset_cell': '-1.70e-14'}}
+{'pulse': 'set', 'async_reset_mid_pulse': True, 'corner': 'ff', 'devices': 'HRS_4.5uS', 'max_V_selected_row': 0.448754666, 'max_V_unselected_row': 0.0624550887} {'row0_p': {'nominal_27C': '-7.16e-12', 'hot_85C': '-1.25e-08', 'fast_reset_cell': '-2.39e-10'}, 'row0_n': {'nominal_27C': '-7.16e-12', 'hot_85C': '-1.25e-08', 'fast_reset_cell': '-2.39e-10'}, 'row1_p': {'nominal_27C': '-4.01e-16', 'hot_85C': '-3.89e-12', 'fast_reset_cell': '-1.34e-14'}, 'row1_n': {'nominal_27C': '-4.01e-16', 'hot_85C': '-3.89e-12', 'fast_reset_cell': '-1.34e-14'}}
+{'pulse': 'set', 'async_reset_mid_pulse': True, 'corner': 'tt', 'devices': 'HRS_7.93uS_reset_verify_edge', 'max_V_selected_row': 0.480745984, 'max_V_unselected_row': 0.0558765616} {'row0_p': {'nominal_27C': '-3.38e-11', 'hot_85C': '-4.24e-08', 'fast_reset_cell': '-1.13e-09'}, 'row0_n': {'nominal_27C': '-3.38e-11', 'hot_85C': '-4.24e-08', 'fast_reset_cell': '-1.13e-09'}, 'row1_p': {'nominal_27C': '-3.01e-16', 'hot_85C': '-2.99e-12', 'fast_reset_cell': '-1.01e-14'}, 'row1_n': {'nominal_27C': '-3.01e-16', 'hot_85C': '-2.99e-12', 'fast_reset_cell': '-1.01e-14'}}
+{'pulse': 'reset', 'async_reset_mid_pulse': False, 'corner': 'tt', 'devices': 'LRS_100uS', 'max_V_selected_row': 0.114390145, 'max_V_unselected_row': 0.051616202} {'row0_p': {'nominal_27C': '-1.33e-15', 'hot_85C': '-1.30e-11', 'fast_reset_cell': '-4.45e-14'}, 'row0_n': {'nominal_27C': '-1.33e-15', 'hot_85C': '-1.30e-11', 'fast_reset_cell': '-4.45e-14'}, 'row1_p': {'nominal_27C': '-7.46e-16', 'hot_85C': '-7.17e-12', 'fast_reset_cell': '-2.49e-14'}, 'row1_n': {'nominal_27C': '-7.46e-16', 'hot_85C': '-7.17e-12', 'fast_reset_cell': '-2.49e-14'}}
+{'pulse': 'reset', 'async_reset_mid_pulse': False, 'corner': 'tt', 'devices': 'LRS_28uS_set_verify_edge', 'max_V_selected_row': 0.384938167, 'max_V_unselected_row': 0.180690211} {'row0_p': {'nominal_27C': '-2.89e-14', 'hot_85C': '-1.69e-10', 'fast_reset_cell': '-9.65e-13'}, 'row0_n': {'nominal_27C': '-2.89e-14', 'hot_85C': '-1.69e-10', 'fast_reset_cell': '-9.65e-13'}, 'row1_p': {'nominal_27C': '-2.24e-14', 'hot_85C': '-1.22e-10', 'fast_reset_cell': '-7.47e-13'}, 'row1_n': {'nominal_27C': '-2.24e-14', 'hot_85C': '-1.22e-10', 'fast_reset_cell': '-7.47e-13'}}
+{'pulse': 'reset', 'async_reset_mid_pulse': False, 'corner': 'ss', 'devices': 'LRS_28uS_set_verify_edge', 'max_V_selected_row': 0.373372627, 'max_V_unselected_row': 0.156350309} {'row0_p': {'nominal_27C': '-2.17e-14', 'hot_85C': '-1.40e-10', 'fast_reset_cell': '-7.26e-13'}, 'row0_n': {'nominal_27C': '-2.17e-14', 'hot_85C': '-1.40e-10', 'fast_reset_cell': '-7.26e-13'}, 'row1_p': {'nominal_27C': '-1.53e-14', 'hot_85C': '-9.33e-11', 'fast_reset_cell': '-5.12e-13'}, 'row1_n': {'nominal_27C': '-1.53e-14', 'hot_85C': '-9.33e-11', 'fast_reset_cell': '-5.12e-13'}}
+{'pulse': 'reset', 'async_reset_mid_pulse': False, 'corner': 'ff', 'devices': 'LRS_28uS_set_verify_edge', 'max_V_selected_row': 0.431313421, 'max_V_unselected_row': 0.198765959} {'row0_p': {'nominal_27C': '-3.60e-14', 'hot_85C': '-1.94e-10', 'fast_reset_cell': '-1.20e-12'}, 'row0_n': {'nominal_27C': '-3.60e-14', 'hot_85C': '-1.94e-10', 'fast_reset_cell': '-1.20e-12'}, 'row1_p': {'nominal_27C': '-2.96e-14', 'hot_85C': '-1.49e-10', 'fast_reset_cell': '-9.88e-13'}, 'row1_n': {'nominal_27C': '-2.96e-14', 'hot_85C': '-1.49e-10', 'fast_reset_cell': '-9.88e-13'}}
+{'pulse': 'reset', 'async_reset_mid_pulse': False, 'corner': 'tt', 'devices': 'HRS_4.5uS', 'max_V_selected_row': 1.13972718, 'max_V_unselected_row': 0.921766356} {'row0_p': {'nominal_27C': '-4.15e-05', 'hot_85C': '-5.56e-03', 'fast_reset_cell': '-1.39e-03'}, 'row0_n': {'nominal_27C': '-4.15e-05', 'hot_85C': '-5.56e-03', 'fast_reset_cell': '-1.39e-03'}, 'row1_p': {'nominal_27C': '-4.15e-05', 'hot_85C': '-5.56e-03', 'fast_reset_cell': '-1.39e-03'}, 'row1_n': {'nominal_27C': '-4.15e-05', 'hot_85C': '-5.56e-03', 'fast_reset_cell': '-1.39e-03'}}
+{'pulse': 'reset', 'async_reset_mid_pulse': False, 'corner': 'ss', 'devices': 'HRS_4.5uS', 'max_V_selected_row': 1.16879196, 'max_V_unselected_row': 0.860986615} {'row0_p': {'nominal_27C': '-3.09e-06', 'hot_85C': '-7.00e-04', 'fast_reset_cell': '-1.03e-04'}, 'row0_n': {'nominal_27C': '-3.09e-06', 'hot_85C': '-7.00e-04', 'fast_reset_cell': '-1.03e-04'}, 'row1_p': {'nominal_27C': '-3.09e-06', 'hot_85C': '-6.99e-04', 'fast_reset_cell': '-1.03e-04'}, 'row1_n': {'nominal_27C': '-3.09e-06', 'hot_85C': '-6.99e-04', 'fast_reset_cell': '-1.03e-04'}}
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/concurrent/futures/process.py", line 255, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "/usr/local/lib/python3.13/concurrent/futures/process.py", line 204, in _process_chunk
+    return [fn(*args) for args in chunk]
+            ~~^^^^^^^
+  File "/home/claude/reram-ternary/chip/sky130/sim/empty_pulse.py", line 99, in one
+    a, _ = S.run(deck(kind, g, corner, areset))
+           ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/claude/reram-ternary/chip/sky130/sim/spice.py", line 63, in run
+    r = subprocess.run(["ngspice", "-b", "t.cir"], cwd=d, capture_output=True, text=True, timeout=timeout)
+  File "/usr/local/lib/python3.13/subprocess.py", line 557, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/subprocess.py", line 1223, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/subprocess.py", line 2156, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/subprocess.py", line 1270, in _check_timeout
+    raise TimeoutExpired(
+    ...<2 lines>...
+            stderr=b''.join(stderr_seq) if stderr_seq else None)
+subprocess.TimeoutExpired: Command '['ngspice', '-b', 't.cir']' timed out after 1800 seconds
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/claude/reram-ternary/chip/sky130/sim/empty_pulse.py", line 151, in <module>
+    main()
+    ~~~~^^
+  File "/home/claude/reram-ternary/chip/sky130/sim/empty_pulse.py", line 127, in main
+    out = list(ex.map(one, cases))
+  File "/usr/local/lib/python3.13/concurrent/futures/process.py", line 621, in _chain_from_iterable_of_lists
+    for element in iterable:
+                   ^^^^^^^^
+  File "/usr/local/lib/python3.13/concurrent/futures/_base.py", line 625, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/usr/local/lib/python3.13/concurrent/futures/_base.py", line 318, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/concurrent/futures/_base.py", line 460, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/concurrent/futures/_base.py", line 402, in __get_result
+    raise self._exception
+subprocess.TimeoutExpired: Command '['ngspice', '-b', 't.cir']' timed out after 1800 seconds

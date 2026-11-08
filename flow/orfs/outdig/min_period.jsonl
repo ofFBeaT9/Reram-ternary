@@ -1,0 +1,2 @@
+{"platform": "sky130hd", "liberty": "sky130_fd_sc_hd__ss_100C_1v60.lib", "spef_scale": 1.0, "min_period_ns": 16.62, "f_max_MHz": 60.2, "setup_wns_ns": 0.021, "hold_wns_ns": 0.427}
+{"platform": "sky130hd", "liberty": "sky130_fd_sc_hd__ss_100C_1v60.lib", "spef_scale": 1.2, "min_period_ns": 17.44, "f_max_MHz": 57.3, "setup_wns_ns": 0.023, "hold_wns_ns": 0.39}

@@ -1,0 +1,53 @@
+{
+ "tmac24": {
+  "cycles": 1195,
+  "area_um2": 11232.7,
+  "cells": 680,
+  "flops": 116,
+  "e_net_pJ": 1.5021318519143094,
+  "e_internal_pJ": 1.6034265844711175,
+  "e_clock_pJ": 3.5404771104000097,
+  "e_leak_pJ": 0.0025965016840000196,
+  "e_clock_ideal_gating_pJ": 1.6099695184970713,
+  "e_total_pJ_per_cycle": 6.648632048469437,
+  "leakage_uW": 0.12982508420000097
+ },
+ "dtile72x24": {
+  "cycles": 876,
+  "area_um2": 321674.9,
+  "cells": 12452,
+  "flops": 3848,
+  "e_net_pJ": 12.949470679454791,
+  "e_internal_pJ": 7.855171803398512,
+  "e_clock_pJ": 117.44617173119349,
+  "e_leak_pJ": 0.07378998787799836,
+  "e_clock_ideal_gating_pJ": 1.938942205890408,
+  "e_total_pJ_per_cycle": 138.32460420192479,
+  "leakage_uW": 3.6894993938999177,
+  "cycles_per_product": 73,
+  "e_product_pJ": 10097.69610674051
+ },
+ "tcim_top": {
+  "area_um2": 111695.2,
+  "cells": 7892,
+  "flops": 837,
+  "leakage_uW": 1.314254711400015
+ },
+ "tcim_core_digital_product": {
+  "cycles": 316,
+  "area_um2": 99502.1,
+  "cells": 7369,
+  "flops": 661,
+  "e_net_pJ": 5.507963774521499,
+  "e_internal_pJ": 3.529006918837682,
+  "e_clock_pJ": 20.174615258399985,
+  "e_leak_pJ": 0.023577612144000018,
+  "e_clock_ideal_gating_pJ": 1.3160885286531576,
+  "e_total_pJ_per_cycle": 29.235163563903164,
+  "leakage_uW": 1.1788806072000009,
+  "products": 6,
+  "rows_read_mean": 47.666666666666664,
+  "cycles_per_product": 49.666666666666664,
+  "e_product_pJ": 1539.7186143655665
+ }
+}

@@ -1,0 +1,69 @@
+0 caught | sign of a +1 weight in the accumulator | FAIL: product 0 column 0: got -45 expected 7 | 7
+1 caught | sign of a -1 weight in the accumulator | FAIL: product 0 column 0: got 45 expected 7 | 7
+2 caught | a cell with both devices in LRS counted as +1 | FAIL: cell with both devices in LRS not counted as 0 (got 1) | 33
+3 caught | last row never read | FAIL: product 0 column 11: got -6 expected -5 | 4
+4 caught | rows with a -1 input skipped | FAIL: product 1 column 0: got 0 expected -7 | 4
+5 caught | rows with a 0 input read as well | FAIL: product 2 column 0: got -7 expected 0 | 4
+6 caught | invalid cell not flagged during a product | FAIL: invalid cell not reported | 29
+7 caught | invalid cell not flagged during read-back | FAIL: invalid cell not reported by read-back | 30
+8 caught | wrong row sent to the array in a product | FAIL: product 0 column 0: got 72 expected 7 | 4
+9 caught | product read uses the set-verify reference | FAIL: 30 uA device not read as LRS (got 0) | 30
+10 caught | reset phase skipped when programming | FAIL: device that never resets not reported | 29
+11 caught | set phase programs the wrong side | FAIL: pulse on a device that must not change (row 0, 167 times) | 0
+12 caught | reset verify polarity | FAIL: device that never resets not reported | 57
+13 caught | set verify polarity | FAIL: device state after programming r0 c1 | 4
+14 caught | no pulse limit in the reset phase | FAIL: PITER 61 differs from the 52143 pulses the array received (row 6) | 62
+15 caught | no pulse limit in the set phase | FAIL: PITER 61 differs from the 52143 pulses the array received (row 5) | 39
+16 caught | verify failure not reported (set phase) | FAIL: stuck device not reported | 30
+17 caught | pulse amplitude not driven | FAIL: pulse amplitude did not start at 0 and rise by one per pulse (row 0, 20 pulses out of sequence) | 0
+18 caught | set pulses not counted in PITER | FAIL: PITER 0 differs from the 15 pulses the array received (row 0) | 0
+19 caught | reset pulses not counted in PITER | FAIL: PITER 21 differs from the 34 pulses the array received (row 5) | 30
+20 caught | analog difference has the wrong sign | FAIL: analog count 0 column 0: got -7 expected -25 | 24
+21 caught | analog phases use the same rows | FAIL: analog count 0 column 0: got 0 expected -25 | 23
+22 caught | positive clip limit off by one | FAIL: 365 not clipped, column 0: -364 | 31
+23 caught | negative clip limit off by one | FAIL: -365 not clipped, column 0: 364 | 30
+24 caught | SAT flag never set | FAIL: SAT not set on positive overflow | 40
+25 caught | DONE not cleared by reading STAT | FAIL: interrupt not cleared by reading STAT | 26
+26 caught | interrupt ignores the enable trit | FAIL: interrupt raised with IE = 0 | 31
+27 caught | row index 72 accepted | FAIL: row index 72 accepted | 29
+28 caught | negative row index accepted | FAIL: row index -1 accepted | 31
+29 caught | read-back swaps +1 and -1 | FAIL: read-back row 0 | 2
+30 caught | register writes accepted while busy | FAIL: result changed by writes during BUSY, column 0 | 32
+31 caught | program command works without EN | FAIL: array accessed with EN = 0 | 31
+32 caught | GO works without EN | FAIL: array accessed with EN = 0 | 32
+33 caught | MODE read from the wrong trit | FAIL: analog count 0 column 0: got -6 expected -25 | 24
+34 caught | WERR not cleared by GO | FAIL: WERR not cleared by the next GO | 58
+35 caught | X1 and X2 exchanged | FAIL: product 3 column 0: got -1 expected 1 | 4
+36 caught | Y index off by one | FAIL: product 0 column 0: got 2 expected 7 | 4
+37 caught | tryte access to a word register accepted | FAIL: tryte access to a word register not flagged | 0
+38 caught | balanced-ternary conversion: digit -1 written as +1 | FAIL: PITER 39 differs from the 15 pulses the array received (row 0) | 0
+39 caught | balanced-ternary conversion: wrong carry | FAIL: PITER 6 differs from the 15 pulses the array received (row 0) | 0
+40 caught | tryte decoding uses base 2 | FAIL: pulse on another row than 2 | 0
+41 caught | code 10 treated as -1 | FAIL: X with code 10: column 0 got -1 expected -4 | 29
+42 caught | serial port: error flag not reported | FAIL: unmapped address 3: data not zero or error flag missing | 0
+43 caught | serial port: interrupt flag not reported | FAIL: interrupt not reported in the serial status byte | 24
+44 caught | serial port: write strobe one bit early | FAIL: CTRL EN readback | 0
+45 caught | serial port: address bit lost | FAIL: unmapped address 3: data not zero or error flag missing | 0
+46 caught | serial port: read data shifted by one bit | FAIL: CTRL EN readback | 0
+47 caught | serial port: word flag ignored | FAIL: X0 readback | 0
+48 caught | interrupt held by WERR (revision 3 behaviour) | FAIL: interrupt after a failed command not cleared by reading STAT | 80
+49 caught | serial port: bit counter wraps on a long frame (revision 3 behaviour) | FAIL: clocks after the 8-byte frame were decoded as another frame | 95
+50 caught | set pulses repeated on devices that already passed verify | FAIL: pulse on a device that had already passed verify (row 0, 63 times) | 1
+51 caught | reset pulses repeated on devices that already passed verify | FAIL: pulse on a device that had already passed verify (row 5, 210 times) | 30
+52 caught | set amplitude not restarted after the reset phase | FAIL: pulse amplitude did not start at 0 and rise by one per pulse (row 5, 8 pulses out of sequence) | 29
+53 caught | amplitude not restarted by a new program command | FAIL: pulse amplitude did not start at 0 and rise by one per pulse (row 5, 1 pulses out of sequence) | 29
+54 caught | PITER not restarted by a new program command | FAIL: PITER 30 differs from the 15 pulses the array received (row 1) | 0
+55 caught | accumulators not cleared by GO | FAIL: product 1 column 0: got 0 expected -7 | 4
+56 caught | SAT not cleared by GO | FAIL: SAT not cleared by a digital product | 54
+57 caught | SAT not cleared by a read-back command | FAIL: SAT not cleared by a read-back command | 55
+58 caught | DONE not cleared by GO | FAIL: DONE not cleared by GO | 71
+59 caught | DONE never set | FAIL: interrupt not raised after a product | 24
+60 caught | MODE changed while busy | FAIL: MODE changed while BUSY | 32
+61 caught | read-back works without EN | FAIL: array accessed with EN = 0 | 31
+62 caught | serial port: a write frame also launches a read | FAIL: DONE cleared by a write to STAT | 56
+63 caught | first row never read | FAIL: product 0 column 0: got 6 expected 7 | 4
+64 caught | pulse limit one step short | FAIL: stuck device: 20 set pulses instead of the full ladder of 21 | 30
+65 caught | read-back of an invalid cell returns +1 | FAIL: read-back of a row with an invalid cell | 29
+66 caught | result conversion: remainder 2 gives +1 instead of -1 | FAIL: PITER 39 differs from the 15 pulses the array received (row 0) | 0
+67 caught | result conversion: table read with a signed index (negative results read as 0) | FAIL: product 0 column 3: got 0 expected -1 | 4
+68 caught | result conversion: table read one entry too high | FAIL: tryte register 49 not zero after reset | 0

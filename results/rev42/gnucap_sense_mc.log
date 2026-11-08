@@ -1,0 +1,8 @@
+seeds 1..25: mean 24.652 uA, sigma 0.240 uA, min 24.11, max 25.12, outside sweep 0
+seeds 1..50: mean 24.644 uA, sigma 0.270 uA, min 24.03, max 25.14, outside sweep 0
+seeds 1..75: mean 24.635 uA, sigma 0.244 uA, min 24.03, max 25.14, outside sweep 0
+seeds 1..100: mean 24.639 uA, sigma 0.237 uA, min 24.03, max 25.14, outside sweep 0
+seeds 1..125: mean 24.641 uA, sigma 0.245 uA, min 24.03, max 25.14, outside sweep 0
+seeds 1..150: mean 24.641 uA, sigma 0.238 uA, min 24.03, max 25.14, outside sweep 0
+seeds 1..175: mean 24.644 uA, sigma 0.236 uA, min 24.03, max 25.14, outside sweep 0
+seeds 1..200: mean 24.645 uA, sigma 0.240 uA, min 24.03, max 25.37, outside sweep 0

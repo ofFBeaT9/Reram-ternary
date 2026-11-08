@@ -1,0 +1,162 @@
+{
+ "ss set nominal": {
+  "ok": true,
+  "amp": 1.4,
+  "pulses": 10,
+  "gap_nm": 0.6541,
+  "iread_uA": 42.68
+ },
+ "ss nominal vg 2.7": {
+  "ok": true,
+  "amp": 1.5,
+  "pulses": 11,
+  "gap_nm": 1.8,
+  "iread_uA": 0.39,
+  "peak_current_bound_uA": 481.8,
+  "device": null,
+  "mc_model_reset_ok_at_2p7": null
+ },
+ "ss nominal vg 3.0": {
+  "ok": true,
+  "amp": 1.3,
+  "pulses": 9,
+  "gap_nm": 1.8,
+  "iread_uA": 0.82,
+  "peak_current_bound_uA": 536.9,
+  "device": null,
+  "mc_model_reset_ok_at_2p7": null
+ },
+ "ss nominal vg 3.3": {
+  "ok": true,
+  "amp": 1.2,
+  "pulses": 8,
+  "gap_nm": 1.8,
+  "iread_uA": 0.83,
+  "peak_current_bound_uA": 543.2,
+  "device": null,
+  "mc_model_reset_ok_at_2p7": null
+ },
+ "ss slow 1 vg 2.7": {
+  "ok": false,
+  "amp": 2.5,
+  "pulses": 21,
+  "gap_nm": 0.6577,
+  "iread_uA": 38.03,
+  "device": {
+   "v0": 560062741.861102,
+   "Ea": 1.1087338069763424,
+   "I0": 0.0007570274171003639
+  },
+  "mc_model_reset_ok_at_2p7": false
+ },
+ "ss slow 1 vg 3.0": {
+  "ok": true,
+  "amp": 2.3,
+  "pulses": 19,
+  "gap_nm": 1.8,
+  "iread_uA": 0.37,
+  "peak_current_bound_uA": 654.2,
+  "device": {
+   "v0": 560062741.861102,
+   "Ea": 1.1087338069763424,
+   "I0": 0.0007570274171003639
+  },
+  "mc_model_reset_ok_at_2p7": false
+ },
+ "ss slow 1 vg 3.3": {
+  "ok": true,
+  "amp": 1.7,
+  "pulses": 13,
+  "gap_nm": 1.8,
+  "iread_uA": 0.71,
+  "peak_current_bound_uA": 745.0,
+  "device": {
+   "v0": 560062741.861102,
+   "Ea": 1.1087338069763424,
+   "I0": 0.0007570274171003639
+  },
+  "mc_model_reset_ok_at_2p7": false
+ },
+ "ss slow 2 vg 2.7": {
+  "ok": false,
+  "amp": 2.5,
+  "pulses": 21,
+  "gap_nm": 0.6649,
+  "iread_uA": 34.67,
+  "device": {
+   "v0": 5170246420.828179,
+   "Ea": 1.1528738689289875,
+   "I0": 0.0006990667449508989
+  },
+  "mc_model_reset_ok_at_2p7": false
+ },
+ "ss slow 2 vg 3.0": {
+  "ok": true,
+  "amp": 1.9,
+  "pulses": 15,
+  "gap_nm": 1.8,
+  "iread_uA": 0.64,
+  "peak_current_bound_uA": 613.9,
+  "device": {
+   "v0": 5170246420.828179,
+   "Ea": 1.1528738689289875,
+   "I0": 0.0006990667449508989
+  },
+  "mc_model_reset_ok_at_2p7": false
+ },
+ "ss slow 2 vg 3.3": {
+  "ok": true,
+  "amp": 1.5,
+  "pulses": 11,
+  "gap_nm": 1.8,
+  "iread_uA": 0.66,
+  "peak_current_bound_uA": 653.4,
+  "device": {
+   "v0": 5170246420.828179,
+   "Ea": 1.1528738689289875,
+   "I0": 0.0006990667449508989
+  },
+  "mc_model_reset_ok_at_2p7": false
+ },
+ "ss slow 3 vg 2.7": {
+  "ok": false,
+  "amp": 2.5,
+  "pulses": 21,
+  "gap_nm": 0.661,
+  "iread_uA": 43.0,
+  "device": {
+   "v0": 553537430.6752436,
+   "Ea": 1.0665782799549113,
+   "I0": 0.0008832006112552512
+  },
+  "mc_model_reset_ok_at_2p7": false
+ },
+ "ss slow 3 vg 3.0": {
+  "ok": true,
+  "amp": 2.0,
+  "pulses": 16,
+  "gap_nm": 1.8,
+  "iread_uA": 0.61,
+  "peak_current_bound_uA": 676.3,
+  "device": {
+   "v0": 553537430.6752436,
+   "Ea": 1.0665782799549113,
+   "I0": 0.0008832006112552512
+  },
+  "mc_model_reset_ok_at_2p7": false
+ },
+ "ss slow 3 vg 3.3": {
+  "ok": true,
+  "amp": 1.6,
+  "pulses": 12,
+  "gap_nm": 1.8,
+  "iread_uA": 0.52,
+  "peak_current_bound_uA": 756.9,
+  "device": {
+   "v0": 553537430.6752436,
+   "Ea": 1.0665782799549113,
+   "I0": 0.0008832006112552512
+  },
+  "mc_model_reset_ok_at_2p7": false
+ }
+}

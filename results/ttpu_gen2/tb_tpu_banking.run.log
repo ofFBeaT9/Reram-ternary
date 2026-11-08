@@ -1,0 +1,52 @@
+============================================================
+TPU Banking Memory Integration Testbench (v2)
+============================================================
+Configuration:
+  USE_BANKED_MEMORY = 1 (ENABLED)
+  ARRAY_SIZE = 8
+  NUM_BANKS = 8 (16 total with shadow)
+
+--- Test 1: Verify Array Info (Version 2) ---
+Array Info: 0x02400820
+  Version: 0x0240 (expected: 0x0240, v2.4)
+  Array Size: 8
+  ACC Bits: 32
+
+--- Test 2: Performance Counter Reset ---
+PERF_CNT_2 (bank conflicts) after clear: 0 (expected 0)
+
+--- Test 3: DMA Weight Load (mode=00) ---
+DMA Status: 0x00400002
+  Busy: 0, Done: 1, Error: 0
+  Bytes transferred: 64
+
+--- Test 4: DMA Activation Load (mode=01) ---
+DMA Status: 0x00800002
+  Bytes transferred: 128
+
+--- Test 5: Verify Status Before Compute ---
+TPU Status: 0x00000000
+  Busy: 0, Done: 0, Error: 0
+
+--- Test 6: Run 8x8 Matrix Multiply ---
+TPU Status after compute: 0x00000100
+  Busy: 0, Done: 1, Error: 0
+  Zero-skips: 0
+
+--- Test 7: Performance Counters ---
+PERF_CNT_0 (cycles while busy): 33
+PERF_CNT_1 (zero-skip count): 0
+PERF_CNT_2 (bank conflicts): 0
+PERF_CNT_3 (DMA bytes transferred): 192
+
+--- Test 8: Verify Error Detection Logic ---
+PASS: status_error is 0 (no error occurred)
+
+============================================================
+Test Summary: 0 errors
+============================================================
+ALL TESTS PASSED!
+- tb/tpu/tb_tpu_banking.sv:451: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.053 devel
+- Verilator: $finish at 2us; walltime 0.000 s; speed 9.165 ms/s
+- Verilator: cpu 0.000 s on 1 threads; allocated 4 MB

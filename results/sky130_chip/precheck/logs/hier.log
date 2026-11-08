@@ -1,0 +1,6 @@
+BEGIN: Mon Oct 12 16:04:23 2026
+[INFO] Changing from /w/chip/sky130/caravan/gds/user_analog_project_wrapper.gds
+	to /w/flow/eda/precheck_cfenv3_sky130B/tmp/layout.txt
+Hierarchy check for user_analog_project_wrapper passed.
+END: Mon Oct 12 16:04:25 2026
+Runtime: 0:00:02 (hh:mm:ss)

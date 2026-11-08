@@ -1,0 +1,69 @@
+{
+ "openroad": {
+  "net_violations": 0,
+  "pin_violations": 0,
+  "rules": "sky130_fd_sc_hd technology LEF: metal side-area ratio 400 (PWL with diode area), via cut-area ratio 6"
+ },
+ "magic": {
+  "violations": 1,
+  "rules": "Magic antennacheck, sky130B tech (partial model)"
+ },
+ "hits": [
+  {
+   "magic": {
+    "cell": "sky130_fd_sc_hd__nor2_1_674",
+    "plane": "metal3",
+    "ratio": 420.638,
+    "limit": 400.0,
+    "gate_rect_um": [
+     882.275,
+     1664.555,
+     882.425,
+     1665.555
+    ]
+   },
+   "instance": "_12476_",
+   "distance_um": 1.2,
+   "openroad_pins": {
+    "B": {
+     "net": "_06865_",
+     "openroad_worst": [
+      [
+       1.0,
+       "met3",
+       "Side area",
+       400.0,
+       400.0
+      ],
+      [
+       0.04,
+       "mcon",
+       "Gate area",
+       0.12,
+       3.0
+      ]
+     ]
+    },
+    "A": {
+     "net": "net749",
+     "openroad_worst": [
+      [
+       0.04,
+       "mcon",
+       "Gate area",
+       0.12,
+       3.0
+      ],
+      [
+       0.0216,
+       "met2",
+       "Side area",
+       8.64,
+       400.0
+      ]
+     ]
+    }
+   }
+  }
+ ]
+}

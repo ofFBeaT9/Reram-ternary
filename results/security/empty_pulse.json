@@ -1,0 +1,2424 @@
+{
+ "note": "Empty programming pulses (H6): largest |V| across a device (row 0 selected, row 1 not), largest current from VPRG, and the read-conductance drift toward the read reference (HRS up, LRS down) from the device model over each waveform (empty_pulse_gap.py). A row is re-verified when it is programmed, so the selected row's drift counts per command (42 steps); a row written once drifts while the 71 other rows are programmed (42 x 71 steps per full-array write). The device is a linear resistor in the deck and the cell transistors have no junction areas, so coupling may be underestimated; uniform columns only.",
+ "ngspice_lib": "/home/claude/pdk3e/sky130B/libs.tech/ngspice/sky130.lib.spice",
+ "planned_array_writes": 10000,
+ "criterion": "per condition: selected-row drift per command < 1 % and other-row full-array writes to 10 % >= 10 x planned",
+ "cases": [
+  {
+   "pulse": "set",
+   "async_reset_mid_pulse": false,
+   "corner": "tt",
+   "devices": "LRS_100uS",
+   "max_V_selected_row": 0.0759282885,
+   "max_V_unselected_row": 0.00515683887,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -7.55e-16,
+      "toward_reference": 7.55e-16
+     },
+     "hot_85C": {
+      "rel_change_G": -7.23e-12,
+      "toward_reference": 7.23e-12
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -2.52e-14,
+      "toward_reference": 2.52e-14
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -7.55e-16,
+      "toward_reference": 7.55e-16
+     },
+     "hot_85C": {
+      "rel_change_G": -7.23e-12,
+      "toward_reference": 7.23e-12
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -2.52e-14,
+      "toward_reference": 2.52e-14
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -5.17e-17,
+      "toward_reference": 5.17e-17
+     },
+     "hot_85C": {
+      "rel_change_G": -5.34e-13,
+      "toward_reference": 5.34e-13
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.73e-15,
+      "toward_reference": 1.73e-15
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -5.17e-17,
+      "toward_reference": 5.17e-17
+     },
+     "hot_85C": {
+      "rel_change_G": -5.34e-13,
+      "toward_reference": 5.34e-13
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.73e-15,
+      "toward_reference": 1.73e-15
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "set",
+   "async_reset_mid_pulse": false,
+   "corner": "tt",
+   "devices": "LRS_28uS_set_verify_edge",
+   "max_V_selected_row": 0.203223106,
+   "max_V_unselected_row": 0.0178924094,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -1.54e-14,
+      "toward_reference": 1.54e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -7.84e-11,
+      "toward_reference": 7.84e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -5.16e-13,
+      "toward_reference": 5.16e-13
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -1.54e-14,
+      "toward_reference": 1.54e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -7.84e-11,
+      "toward_reference": 7.84e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -5.16e-13,
+      "toward_reference": 5.16e-13
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -1.73e-16,
+      "toward_reference": 1.73e-16
+     },
+     "hot_85C": {
+      "rel_change_G": -1.78e-12,
+      "toward_reference": 1.78e-12
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -5.78e-15,
+      "toward_reference": 5.78e-15
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -1.73e-16,
+      "toward_reference": 1.73e-16
+     },
+     "hot_85C": {
+      "rel_change_G": -1.78e-12,
+      "toward_reference": 1.78e-12
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -5.78e-15,
+      "toward_reference": 5.78e-15
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "set",
+   "async_reset_mid_pulse": false,
+   "corner": "ss",
+   "devices": "LRS_28uS_set_verify_edge",
+   "max_V_selected_row": 0.191300579,
+   "max_V_unselected_row": 0.0140986768,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -1.18e-14,
+      "toward_reference": 1.18e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -6.59e-11,
+      "toward_reference": 6.59e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -3.94e-13,
+      "toward_reference": 3.94e-13
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -1.18e-14,
+      "toward_reference": 1.18e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -6.59e-11,
+      "toward_reference": 6.59e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -3.94e-13,
+      "toward_reference": 3.94e-13
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -1.75e-16,
+      "toward_reference": 1.75e-16
+     },
+     "hot_85C": {
+      "rel_change_G": -1.81e-12,
+      "toward_reference": 1.81e-12
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -5.85e-15,
+      "toward_reference": 5.85e-15
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -1.75e-16,
+      "toward_reference": 1.75e-16
+     },
+     "hot_85C": {
+      "rel_change_G": -1.81e-12,
+      "toward_reference": 1.81e-12
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -5.85e-15,
+      "toward_reference": 5.85e-15
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "set",
+   "async_reset_mid_pulse": false,
+   "corner": "ff",
+   "devices": "LRS_28uS_set_verify_edge",
+   "max_V_selected_row": 0.185515836,
+   "max_V_unselected_row": 0.0163929786,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -6.72e-15,
+      "toward_reference": 6.72e-15
+     },
+     "hot_85C": {
+      "rel_change_G": -4.2e-11,
+      "toward_reference": 4.2e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -2.25e-13,
+      "toward_reference": 2.25e-13
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -6.72e-15,
+      "toward_reference": 6.72e-15
+     },
+     "hot_85C": {
+      "rel_change_G": -4.2e-11,
+      "toward_reference": 4.2e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -2.25e-13,
+      "toward_reference": 2.25e-13
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -1.57e-16,
+      "toward_reference": 1.57e-16
+     },
+     "hot_85C": {
+      "rel_change_G": -1.62e-12,
+      "toward_reference": 1.62e-12
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -5.26e-15,
+      "toward_reference": 5.26e-15
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -1.57e-16,
+      "toward_reference": 1.57e-16
+     },
+     "hot_85C": {
+      "rel_change_G": -1.62e-12,
+      "toward_reference": 1.62e-12
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -5.26e-15,
+      "toward_reference": 5.26e-15
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "set",
+   "async_reset_mid_pulse": false,
+   "corner": "tt",
+   "devices": "HRS_4.5uS",
+   "max_V_selected_row": 0.640336198,
+   "max_V_unselected_row": 0.0859814998,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -1.51e-09,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -1.01e-06,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -5.04e-08,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -1.51e-09,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -1.01e-06,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -5.04e-08,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -1.11e-15,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -1.03e-11,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -3.73e-14,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -1.11e-15,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -1.03e-11,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -3.73e-14,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "set",
+   "async_reset_mid_pulse": false,
+   "corner": "ss",
+   "devices": "HRS_4.5uS",
+   "max_V_selected_row": 0.591922157,
+   "max_V_unselected_row": 0.0730710902,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -5.52e-10,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -4.81e-07,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.84e-08,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -5.52e-10,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -4.81e-07,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.84e-08,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -1e-15,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -9.69e-12,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -3.35e-14,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -1e-15,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -9.69e-12,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -3.35e-14,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "set",
+   "async_reset_mid_pulse": false,
+   "corner": "ff",
+   "devices": "HRS_4.5uS",
+   "max_V_selected_row": 0.458287059,
+   "max_V_unselected_row": 0.0854870853,
+   "max_I_vprg_A": 2.85234095e-06,
+   "wl0_peak_V": 2.09633672,
+   "sim_end_ns": 1625.0,
+   "solver": "gear, reltol 2e-3 (trapezoidal did not finish)",
+   "device_model": {
+    "row0_p": {
+     "max_abs_V": 0.458287059,
+     "nominal_27C": {
+      "rel_change_G": -1.8245270365291674e-11,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -2.653220331746605e-08,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -6.097479002416653e-10,
+      "toward_reference": 0.0
+     }
+    },
+    "row0_n": {
+     "max_abs_V": 0.458287059,
+     "nominal_27C": {
+      "rel_change_G": -1.8245270365291674e-11,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -2.653220331746605e-08,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -6.097479002416653e-10,
+      "toward_reference": 0.0
+     }
+    },
+    "row1_p": {
+     "max_abs_V": 0.0854870853,
+     "nominal_27C": {
+      "rel_change_G": -1.0626537043769828e-15,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -9.888705181478411e-12,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -3.5513361129864945e-14,
+      "toward_reference": 0.0
+     }
+    },
+    "row1_n": {
+     "max_abs_V": 0.0854870853,
+     "nominal_27C": {
+      "rel_change_G": -1.0626537043769704e-15,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -9.888705181478282e-12,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -3.5513361129864496e-14,
+      "toward_reference": 0.0
+     }
+    }
+   }
+  },
+  {
+   "pulse": "set",
+   "async_reset_mid_pulse": false,
+   "corner": "tt",
+   "devices": "HRS_7.93uS_reset_verify_edge",
+   "max_V_selected_row": 0.480745984,
+   "max_V_unselected_row": 0.0559218071,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -3.38e-11,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -4.24e-08,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.13e-09,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -3.38e-11,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -4.24e-08,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.13e-09,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -5.88e-16,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -5.81e-12,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.97e-14,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -5.88e-16,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -5.81e-12,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.97e-14,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "set",
+   "async_reset_mid_pulse": true,
+   "corner": "tt",
+   "devices": "LRS_100uS",
+   "max_V_selected_row": 0.0752712458,
+   "max_V_unselected_row": 0.00515683887,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -7.5e-16,
+      "toward_reference": 7.5e-16
+     },
+     "hot_85C": {
+      "rel_change_G": -7.17e-12,
+      "toward_reference": 7.17e-12
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -2.51e-14,
+      "toward_reference": 2.51e-14
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -7.5e-16,
+      "toward_reference": 7.5e-16
+     },
+     "hot_85C": {
+      "rel_change_G": -7.17e-12,
+      "toward_reference": 7.17e-12
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -2.51e-14,
+      "toward_reference": 2.51e-14
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -2.8e-17,
+      "toward_reference": 2.8e-17
+     },
+     "hot_85C": {
+      "rel_change_G": -2.89e-13,
+      "toward_reference": 2.89e-13
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -9.35e-16,
+      "toward_reference": 9.35e-16
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -2.8e-17,
+      "toward_reference": 2.8e-17
+     },
+     "hot_85C": {
+      "rel_change_G": -2.89e-13,
+      "toward_reference": 2.89e-13
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -9.35e-16,
+      "toward_reference": 9.35e-16
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "set",
+   "async_reset_mid_pulse": true,
+   "corner": "tt",
+   "devices": "LRS_28uS_set_verify_edge",
+   "max_V_selected_row": 0.203223106,
+   "max_V_unselected_row": 0.0178924094,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -1.54e-14,
+      "toward_reference": 1.54e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -7.78e-11,
+      "toward_reference": 7.78e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -5.14e-13,
+      "toward_reference": 5.14e-13
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -1.54e-14,
+      "toward_reference": 1.54e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -7.78e-11,
+      "toward_reference": 7.78e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -5.14e-13,
+      "toward_reference": 5.14e-13
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -9.08e-17,
+      "toward_reference": 9.08e-17
+     },
+     "hot_85C": {
+      "rel_change_G": -9.35e-13,
+      "toward_reference": 9.35e-13
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -3.04e-15,
+      "toward_reference": 3.04e-15
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -9.08e-17,
+      "toward_reference": 9.08e-17
+     },
+     "hot_85C": {
+      "rel_change_G": -9.35e-13,
+      "toward_reference": 9.35e-13
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -3.04e-15,
+      "toward_reference": 3.04e-15
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "set",
+   "async_reset_mid_pulse": true,
+   "corner": "ss",
+   "devices": "LRS_28uS_set_verify_edge",
+   "max_V_selected_row": 0.191300579,
+   "max_V_unselected_row": 0.0139081178,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -1.17e-14,
+      "toward_reference": 1.17e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -6.54e-11,
+      "toward_reference": 6.54e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -3.92e-13,
+      "toward_reference": 3.92e-13
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -1.17e-14,
+      "toward_reference": 1.17e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -6.54e-11,
+      "toward_reference": 6.54e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -3.92e-13,
+      "toward_reference": 3.92e-13
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -9.13e-17,
+      "toward_reference": 9.13e-17
+     },
+     "hot_85C": {
+      "rel_change_G": -9.41e-13,
+      "toward_reference": 9.41e-13
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -3.05e-15,
+      "toward_reference": 3.05e-15
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -9.13e-17,
+      "toward_reference": 9.13e-17
+     },
+     "hot_85C": {
+      "rel_change_G": -9.41e-13,
+      "toward_reference": 9.41e-13
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -3.05e-15,
+      "toward_reference": 3.05e-15
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "set",
+   "async_reset_mid_pulse": true,
+   "corner": "ff",
+   "devices": "LRS_28uS_set_verify_edge",
+   "max_V_selected_row": 0.185515836,
+   "max_V_unselected_row": 0.0163929786,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -6.64e-15,
+      "toward_reference": 6.64e-15
+     },
+     "hot_85C": {
+      "rel_change_G": -4.12e-11,
+      "toward_reference": 4.12e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -2.22e-13,
+      "toward_reference": 2.22e-13
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -6.64e-15,
+      "toward_reference": 6.64e-15
+     },
+     "hot_85C": {
+      "rel_change_G": -4.12e-11,
+      "toward_reference": 4.12e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -2.22e-13,
+      "toward_reference": 2.22e-13
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -8.15e-17,
+      "toward_reference": 8.15e-17
+     },
+     "hot_85C": {
+      "rel_change_G": -8.4e-13,
+      "toward_reference": 8.4e-13
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -2.72e-15,
+      "toward_reference": 2.72e-15
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -8.15e-17,
+      "toward_reference": 8.15e-17
+     },
+     "hot_85C": {
+      "rel_change_G": -8.4e-13,
+      "toward_reference": 8.4e-13
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -2.72e-15,
+      "toward_reference": 2.72e-15
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "set",
+   "async_reset_mid_pulse": true,
+   "corner": "tt",
+   "devices": "HRS_4.5uS",
+   "max_V_selected_row": 0.640336198,
+   "max_V_unselected_row": 0.0854983461,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -1.51e-09,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -1.01e-06,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -5.04e-08,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -1.51e-09,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -1.01e-06,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -5.04e-08,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -5.52e-16,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -5.19e-12,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.84e-14,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -5.52e-16,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -5.19e-12,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.84e-14,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "set",
+   "async_reset_mid_pulse": true,
+   "corner": "ss",
+   "devices": "HRS_4.5uS",
+   "max_V_selected_row": 0.591922157,
+   "max_V_unselected_row": 0.0722676416,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -5.52e-10,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -4.81e-07,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.84e-08,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -5.52e-10,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -4.81e-07,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.84e-08,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -5.1e-16,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -4.93e-12,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.7e-14,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -5.1e-16,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -4.93e-12,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.7e-14,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "set",
+   "async_reset_mid_pulse": true,
+   "corner": "ff",
+   "devices": "HRS_4.5uS",
+   "max_V_selected_row": 0.448754666,
+   "max_V_unselected_row": 0.0624550887,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -7.16e-12,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -1.25e-08,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -2.39e-10,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -7.16e-12,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -1.25e-08,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -2.39e-10,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -4.01e-16,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -3.89e-12,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.34e-14,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -4.01e-16,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -3.89e-12,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.34e-14,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "set",
+   "async_reset_mid_pulse": true,
+   "corner": "tt",
+   "devices": "HRS_7.93uS_reset_verify_edge",
+   "max_V_selected_row": 0.480745984,
+   "max_V_unselected_row": 0.0558765616,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -3.38e-11,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -4.24e-08,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.13e-09,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -3.38e-11,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -4.24e-08,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.13e-09,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -3.01e-16,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -2.99e-12,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.01e-14,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -3.01e-16,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -2.99e-12,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.01e-14,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "reset",
+   "async_reset_mid_pulse": false,
+   "corner": "tt",
+   "devices": "LRS_100uS",
+   "max_V_selected_row": 0.114390145,
+   "max_V_unselected_row": 0.051616202,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -1.33e-15,
+      "toward_reference": 1.33e-15
+     },
+     "hot_85C": {
+      "rel_change_G": -1.3e-11,
+      "toward_reference": 1.3e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -4.45e-14,
+      "toward_reference": 4.45e-14
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -1.33e-15,
+      "toward_reference": 1.33e-15
+     },
+     "hot_85C": {
+      "rel_change_G": -1.3e-11,
+      "toward_reference": 1.3e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -4.45e-14,
+      "toward_reference": 4.45e-14
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -7.46e-16,
+      "toward_reference": 7.46e-16
+     },
+     "hot_85C": {
+      "rel_change_G": -7.17e-12,
+      "toward_reference": 7.17e-12
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -2.49e-14,
+      "toward_reference": 2.49e-14
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -7.46e-16,
+      "toward_reference": 7.46e-16
+     },
+     "hot_85C": {
+      "rel_change_G": -7.17e-12,
+      "toward_reference": 7.17e-12
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -2.49e-14,
+      "toward_reference": 2.49e-14
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "reset",
+   "async_reset_mid_pulse": false,
+   "corner": "tt",
+   "devices": "LRS_28uS_set_verify_edge",
+   "max_V_selected_row": 0.384938167,
+   "max_V_unselected_row": 0.180690211,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -2.89e-14,
+      "toward_reference": 2.89e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.69e-10,
+      "toward_reference": 1.69e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -9.65e-13,
+      "toward_reference": 9.65e-13
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -2.89e-14,
+      "toward_reference": 2.89e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.69e-10,
+      "toward_reference": 1.69e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -9.65e-13,
+      "toward_reference": 9.65e-13
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -2.24e-14,
+      "toward_reference": 2.24e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.22e-10,
+      "toward_reference": 1.22e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -7.47e-13,
+      "toward_reference": 7.47e-13
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -2.24e-14,
+      "toward_reference": 2.24e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.22e-10,
+      "toward_reference": 1.22e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -7.47e-13,
+      "toward_reference": 7.47e-13
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "reset",
+   "async_reset_mid_pulse": false,
+   "corner": "ss",
+   "devices": "LRS_28uS_set_verify_edge",
+   "max_V_selected_row": 0.373372627,
+   "max_V_unselected_row": 0.156350309,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -2.17e-14,
+      "toward_reference": 2.17e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.4e-10,
+      "toward_reference": 1.4e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -7.26e-13,
+      "toward_reference": 7.26e-13
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -2.17e-14,
+      "toward_reference": 2.17e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.4e-10,
+      "toward_reference": 1.4e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -7.26e-13,
+      "toward_reference": 7.26e-13
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -1.53e-14,
+      "toward_reference": 1.53e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -9.33e-11,
+      "toward_reference": 9.33e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -5.12e-13,
+      "toward_reference": 5.12e-13
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -1.53e-14,
+      "toward_reference": 1.53e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -9.33e-11,
+      "toward_reference": 9.33e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -5.12e-13,
+      "toward_reference": 5.12e-13
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "reset",
+   "async_reset_mid_pulse": false,
+   "corner": "ff",
+   "devices": "LRS_28uS_set_verify_edge",
+   "max_V_selected_row": 0.431313421,
+   "max_V_unselected_row": 0.198765959,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -3.6e-14,
+      "toward_reference": 3.6e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.94e-10,
+      "toward_reference": 1.94e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.2e-12,
+      "toward_reference": 1.2e-12
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -3.6e-14,
+      "toward_reference": 3.6e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.94e-10,
+      "toward_reference": 1.94e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.2e-12,
+      "toward_reference": 1.2e-12
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -2.96e-14,
+      "toward_reference": 2.96e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.49e-10,
+      "toward_reference": 1.49e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -9.88e-13,
+      "toward_reference": 9.88e-13
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -2.96e-14,
+      "toward_reference": 2.96e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.49e-10,
+      "toward_reference": 1.49e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -9.88e-13,
+      "toward_reference": 9.88e-13
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "reset",
+   "async_reset_mid_pulse": false,
+   "corner": "tt",
+   "devices": "HRS_4.5uS",
+   "max_V_selected_row": 1.13972718,
+   "max_V_unselected_row": 0.921766356,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -4.15e-05,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.00556,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.00139,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -4.15e-05,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.00556,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.00139,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -4.15e-05,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.00556,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.00139,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -4.15e-05,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.00556,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.00139,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "reset",
+   "async_reset_mid_pulse": false,
+   "corner": "ss",
+   "devices": "HRS_4.5uS",
+   "max_V_selected_row": 1.16879196,
+   "max_V_unselected_row": 0.860986615,
+   "max_I_vprg_A": null,
+   "wl0_peak_V": null,
+   "sim_end_ns": null,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "nominal_27C": {
+      "rel_change_G": -3.09e-06,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.0007,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.000103,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row0_n": {
+     "nominal_27C": {
+      "rel_change_G": -3.09e-06,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.0007,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.000103,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row1_p": {
+     "nominal_27C": {
+      "rel_change_G": -3.09e-06,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.000699,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.000103,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    },
+    "row1_n": {
+     "nominal_27C": {
+      "rel_change_G": -3.09e-06,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.000699,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.000103,
+      "toward_reference": 0.0
+     },
+     "max_abs_V": null
+    }
+   },
+   "source": "run 3 log (8 Nov): drift printed to 3 digits; per-device |V| and VPRG current not printed"
+  },
+  {
+   "pulse": "reset",
+   "async_reset_mid_pulse": false,
+   "corner": "ff",
+   "devices": "HRS_4.5uS",
+   "max_V_selected_row": 1.03614359,
+   "max_V_unselected_row": 1.03614359,
+   "max_I_vprg_A": 0.00342878831,
+   "wl0_peak_V": 3.14598284,
+   "sim_end_ns": 1625.0,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "max_abs_V": 1.03614359,
+     "nominal_27C": {
+      "rel_change_G": -0.00011310408642125541,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.013461358072608298,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.0037675091125049147,
+      "toward_reference": 0.0
+     }
+    },
+    "row0_n": {
+     "max_abs_V": 1.03614359,
+     "nominal_27C": {
+      "rel_change_G": -0.00011310408642125541,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.013461358072608298,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.0037675091125049147,
+      "toward_reference": 0.0
+     }
+    },
+    "row1_p": {
+     "max_abs_V": 1.03614359,
+     "nominal_27C": {
+      "rel_change_G": -0.00011309865868337963,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.013458252459672573,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.0037673291498608757,
+      "toward_reference": 0.0
+     }
+    },
+    "row1_n": {
+     "max_abs_V": 1.03614359,
+     "nominal_27C": {
+      "rel_change_G": -0.00011309865868337963,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.013458252459672573,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.0037673291498608757,
+      "toward_reference": 0.0
+     }
+    }
+   }
+  },
+  {
+   "pulse": "reset",
+   "async_reset_mid_pulse": false,
+   "corner": "tt",
+   "devices": "HRS_7.93uS_reset_verify_edge",
+   "max_V_selected_row": 0.91256117,
+   "max_V_unselected_row": 0.584185361,
+   "max_I_vprg_A": 0.00363312063,
+   "wl0_peak_V": 3.20960265,
+   "sim_end_ns": 1625.0,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "max_abs_V": 0.91256117,
+     "nominal_27C": {
+      "rel_change_G": -2.190231568672446e-09,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -1.5921184266529096e-06,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -7.319660045281633e-08,
+      "toward_reference": 0.0
+     }
+    },
+    "row0_n": {
+     "max_abs_V": 0.91256117,
+     "nominal_27C": {
+      "rel_change_G": -2.190231568672446e-09,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -1.5921184266529096e-06,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -7.319660045281633e-08,
+      "toward_reference": 0.0
+     }
+    },
+    "row1_p": {
+     "max_abs_V": 0.584185361,
+     "nominal_27C": {
+      "rel_change_G": -2.182387464538342e-09,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -1.576440583192748e-06,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -7.29343034687987e-08,
+      "toward_reference": 0.0
+     }
+    },
+    "row1_n": {
+     "max_abs_V": 0.584185361,
+     "nominal_27C": {
+      "rel_change_G": -2.182387464538342e-09,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -1.576440583192748e-06,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -7.29343034687987e-08,
+      "toward_reference": 0.0
+     }
+    }
+   }
+  },
+  {
+   "pulse": "reset",
+   "async_reset_mid_pulse": true,
+   "corner": "tt",
+   "devices": "LRS_100uS",
+   "max_V_selected_row": 0.148578071,
+   "max_V_unselected_row": 0.0499925492,
+   "max_I_vprg_A": 0.00101186954,
+   "wl0_peak_V": 3.27387691,
+   "sim_end_ns": 1625.0,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "max_abs_V": 0.148578071,
+     "nominal_27C": {
+      "rel_change_G": -1.2894004163172545e-15,
+      "toward_reference": 1.2894004163172545e-15
+     },
+     "hot_85C": {
+      "rel_change_G": -1.256831667580397e-11,
+      "toward_reference": 1.256831667580397e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -4.309112509493412e-14,
+      "toward_reference": 4.309112509493412e-14
+     }
+    },
+    "row0_n": {
+     "max_abs_V": 0.148578071,
+     "nominal_27C": {
+      "rel_change_G": -1.289400416317357e-15,
+      "toward_reference": 1.289400416317357e-15
+     },
+     "hot_85C": {
+      "rel_change_G": -1.2568316675805034e-11,
+      "toward_reference": 1.2568316675805034e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -4.309112509493768e-14,
+      "toward_reference": 4.309112509493768e-14
+     }
+    },
+    "row1_p": {
+     "max_abs_V": 0.0499925492,
+     "nominal_27C": {
+      "rel_change_G": -7.320050493653672e-16,
+      "toward_reference": 7.320050493653672e-16
+     },
+     "hot_85C": {
+      "rel_change_G": -7.023098844583075e-12,
+      "toward_reference": 7.023098844583075e-12
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -2.44632465755976e-14,
+      "toward_reference": 2.44632465755976e-14
+     }
+    },
+    "row1_n": {
+     "max_abs_V": 0.0499925492,
+     "nominal_27C": {
+      "rel_change_G": -7.320050493654802e-16,
+      "toward_reference": 7.320050493654802e-16
+     },
+     "hot_85C": {
+      "rel_change_G": -7.02309884458419e-12,
+      "toward_reference": 7.02309884458419e-12
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -2.4463246575601548e-14,
+      "toward_reference": 2.4463246575601548e-14
+     }
+    }
+   }
+  },
+  {
+   "pulse": "reset",
+   "async_reset_mid_pulse": true,
+   "corner": "tt",
+   "devices": "LRS_28uS_set_verify_edge",
+   "max_V_selected_row": 0.422713796,
+   "max_V_unselected_row": 0.174419381,
+   "max_I_vprg_A": 0.00100396325,
+   "wl0_peak_V": 3.27384892,
+   "sim_end_ns": 1625.0,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "max_abs_V": 0.422713796,
+     "nominal_27C": {
+      "rel_change_G": -2.8937939509975774e-14,
+      "toward_reference": 2.8937939509975774e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.6835709696972397e-10,
+      "toward_reference": 1.6835709696972397e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -9.670954588174939e-13,
+      "toward_reference": 9.670954588174939e-13
+     }
+    },
+    "row0_n": {
+     "max_abs_V": 0.422713796,
+     "nominal_27C": {
+      "rel_change_G": -2.893793950997595e-14,
+      "toward_reference": 2.893793950997595e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.6835709696972405e-10,
+      "toward_reference": 1.6835709696972405e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -9.670954588174983e-13,
+      "toward_reference": 9.670954588174983e-13
+     }
+    },
+    "row1_p": {
+     "max_abs_V": 0.174419381,
+     "nominal_27C": {
+      "rel_change_G": -2.243479559182897e-14,
+      "toward_reference": 2.243479559182897e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.222629077429035e-10,
+      "toward_reference": 1.222629077429035e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -7.497597542775373e-13,
+      "toward_reference": 7.497597542775373e-13
+     }
+    },
+    "row1_n": {
+     "max_abs_V": 0.174419381,
+     "nominal_27C": {
+      "rel_change_G": -2.2434795591829178e-14,
+      "toward_reference": 2.2434795591829178e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.2226290774290477e-10,
+      "toward_reference": 1.2226290774290477e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -7.497597542775452e-13,
+      "toward_reference": 7.497597542775452e-13
+     }
+    }
+   }
+  },
+  {
+   "pulse": "reset",
+   "async_reset_mid_pulse": true,
+   "corner": "ss",
+   "devices": "LRS_28uS_set_verify_edge",
+   "max_V_selected_row": 0.439866451,
+   "max_V_unselected_row": 0.157077085,
+   "max_I_vprg_A": 0.000823714543,
+   "wl0_peak_V": 3.24851134,
+   "sim_end_ns": 1625.0,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "max_abs_V": 0.439866451,
+     "nominal_27C": {
+      "rel_change_G": -2.2061260726561852e-14,
+      "toward_reference": 2.2061260726561852e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.4033917307426348e-10,
+      "toward_reference": 1.4033917307426348e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -7.372772234689811e-13,
+      "toward_reference": 7.372772234689811e-13
+     }
+    },
+    "row0_n": {
+     "max_abs_V": 0.439866451,
+     "nominal_27C": {
+      "rel_change_G": -2.20612607265618e-14,
+      "toward_reference": 2.20612607265618e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.4033917307426307e-10,
+      "toward_reference": 1.4033917307426307e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -7.372772234689845e-13,
+      "toward_reference": 7.372772234689845e-13
+     }
+    },
+    "row1_p": {
+     "max_abs_V": 0.157077085,
+     "nominal_27C": {
+      "rel_change_G": -1.5740968305107865e-14,
+      "toward_reference": 1.5740968305107865e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -9.503107680037851e-11,
+      "toward_reference": 9.503107680037851e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -5.260553632681188e-13,
+      "toward_reference": 5.260553632681188e-13
+     }
+    },
+    "row1_n": {
+     "max_abs_V": 0.157077085,
+     "nominal_27C": {
+      "rel_change_G": -1.574096830510801e-14,
+      "toward_reference": 1.574096830510801e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -9.503107680038058e-11,
+      "toward_reference": 9.503107680038058e-11
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -5.260553632681226e-13,
+      "toward_reference": 5.260553632681226e-13
+     }
+    }
+   }
+  },
+  {
+   "pulse": "reset",
+   "async_reset_mid_pulse": true,
+   "corner": "ff",
+   "devices": "LRS_28uS_set_verify_edge",
+   "max_V_selected_row": 0.476678715,
+   "max_V_unselected_row": 0.19903962,
+   "max_I_vprg_A": 0.0011294564,
+   "wl0_peak_V": 3.17508585,
+   "sim_end_ns": 1625.0,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "max_abs_V": 0.476678715,
+     "nominal_27C": {
+      "rel_change_G": -3.633988406290368e-14,
+      "toward_reference": 3.633988406290368e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.9445553689276208e-10,
+      "toward_reference": 1.9445553689276208e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.2144994654758885e-12,
+      "toward_reference": 1.2144994654758885e-12
+     }
+    },
+    "row0_n": {
+     "max_abs_V": 0.476678715,
+     "nominal_27C": {
+      "rel_change_G": -3.633988406290383e-14,
+      "toward_reference": 3.633988406290383e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.9445553689276539e-10,
+      "toward_reference": 1.9445553689276539e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.2144994654758879e-12,
+      "toward_reference": 1.2144994654758879e-12
+     }
+    },
+    "row1_p": {
+     "max_abs_V": 0.19903962,
+     "nominal_27C": {
+      "rel_change_G": -3.0097440113033405e-14,
+      "toward_reference": 3.0097440113033405e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.5066293157187162e-10,
+      "toward_reference": 1.5066293157187162e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.0058415377405474e-12,
+      "toward_reference": 1.0058415377405474e-12
+     }
+    },
+    "row1_n": {
+     "max_abs_V": 0.19903962,
+     "nominal_27C": {
+      "rel_change_G": -3.009744011303331e-14,
+      "toward_reference": 3.009744011303331e-14
+     },
+     "hot_85C": {
+      "rel_change_G": -1.5066293157187113e-10,
+      "toward_reference": 1.5066293157187113e-10
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -1.0058415377405425e-12,
+      "toward_reference": 1.0058415377405425e-12
+     }
+    }
+   }
+  },
+  {
+   "pulse": "reset",
+   "async_reset_mid_pulse": true,
+   "corner": "tt",
+   "devices": "HRS_4.5uS",
+   "max_V_selected_row": 1.32214029,
+   "max_V_unselected_row": 0.957899576,
+   "max_I_vprg_A": 0.000937875282,
+   "wl0_peak_V": 3.27697022,
+   "sim_end_ns": 1625.0,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "max_abs_V": 1.32214029,
+     "nominal_27C": {
+      "rel_change_G": -2.9517614462711356e-05,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.00433612916778739,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.0009858154827694524,
+      "toward_reference": 0.0
+     }
+    },
+    "row0_n": {
+     "max_abs_V": 1.32214029,
+     "nominal_27C": {
+      "rel_change_G": -2.9517614462711356e-05,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.00433612916778739,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.0009858154827694524,
+      "toward_reference": 0.0
+     }
+    },
+    "row1_p": {
+     "max_abs_V": 0.957899576,
+     "nominal_27C": {
+      "rel_change_G": -3.133593110843879e-05,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.0045664869992263785,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.0010464458994596843,
+      "toward_reference": 0.0
+     }
+    },
+    "row1_n": {
+     "max_abs_V": 0.957899576,
+     "nominal_27C": {
+      "rel_change_G": -3.133593110843879e-05,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.0045664869992263785,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.0010464458994596843,
+      "toward_reference": 0.0
+     }
+    }
+   }
+  },
+  {
+   "pulse": "reset",
+   "async_reset_mid_pulse": true,
+   "corner": "ss",
+   "devices": "HRS_4.5uS",
+   "max_V_selected_row": 1.18469406,
+   "max_V_unselected_row": 0.868444305,
+   "max_I_vprg_A": 0.000795072742,
+   "wl0_peak_V": 3.24689817,
+   "sim_end_ns": 1625.0,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "max_abs_V": 1.18469406,
+     "nominal_27C": {
+      "rel_change_G": -3.6857675214376964e-06,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.0008088893909318935,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.00012322740139908346,
+      "toward_reference": 0.0
+     }
+    },
+    "row0_n": {
+     "max_abs_V": 1.18469406,
+     "nominal_27C": {
+      "rel_change_G": -3.6857675214376964e-06,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.0008088893909318935,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.00012322740139908346,
+      "toward_reference": 0.0
+     }
+    },
+    "row1_p": {
+     "max_abs_V": 0.868444305,
+     "nominal_27C": {
+      "rel_change_G": -3.749864448927906e-06,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.0008198439167181381,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.00012530398837152986,
+      "toward_reference": 0.0
+     }
+    },
+    "row1_n": {
+     "max_abs_V": 0.868444305,
+     "nominal_27C": {
+      "rel_change_G": -3.749864448927906e-06,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.0008198439167181381,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.00012530398837152986,
+      "toward_reference": 0.0
+     }
+    }
+   }
+  },
+  {
+   "pulse": "reset",
+   "async_reset_mid_pulse": true,
+   "corner": "ff",
+   "devices": "HRS_4.5uS",
+   "max_V_selected_row": 1.30782977,
+   "max_V_unselected_row": 1.04960398,
+   "max_I_vprg_A": 0.00106794242,
+   "wl0_peak_V": 3.17500984,
+   "sim_end_ns": 1625.0,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "max_abs_V": 1.30782977,
+     "nominal_27C": {
+      "rel_change_G": -9.50057634210575e-05,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.011848300777799978,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.003167631848105452,
+      "toward_reference": 0.0
+     }
+    },
+    "row0_n": {
+     "max_abs_V": 1.30782977,
+     "nominal_27C": {
+      "rel_change_G": -9.50057634210575e-05,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.011848300777799978,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.003167631848105452,
+      "toward_reference": 0.0
+     }
+    },
+    "row1_p": {
+     "max_abs_V": 1.04960398,
+     "nominal_27C": {
+      "rel_change_G": -0.00011484756547870067,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.013792296214847167,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.0038241272385806818,
+      "toward_reference": 0.0
+     }
+    },
+    "row1_n": {
+     "max_abs_V": 1.04960398,
+     "nominal_27C": {
+      "rel_change_G": -0.00011484756547870067,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -0.013792296214847167,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -0.0038241272385806818,
+      "toward_reference": 0.0
+     }
+    }
+   }
+  },
+  {
+   "pulse": "reset",
+   "async_reset_mid_pulse": true,
+   "corner": "tt",
+   "devices": "HRS_7.93uS_reset_verify_edge",
+   "max_V_selected_row": 0.961644357,
+   "max_V_unselected_row": 0.58296712,
+   "max_I_vprg_A": 0.000969579808,
+   "wl0_peak_V": 3.27590298,
+   "sim_end_ns": 1625.0,
+   "solver": "trapezoidal",
+   "device_model": {
+    "row0_p": {
+     "max_abs_V": 0.961644357,
+     "nominal_27C": {
+      "rel_change_G": -2.024670607340248e-09,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -1.5086085243807706e-06,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -6.771387267422793e-08,
+      "toward_reference": 0.0
+     }
+    },
+    "row0_n": {
+     "max_abs_V": 0.961644357,
+     "nominal_27C": {
+      "rel_change_G": -2.024670607340248e-09,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -1.5086085243807704e-06,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -6.771387267422793e-08,
+      "toward_reference": 0.0
+     }
+    },
+    "row1_p": {
+     "max_abs_V": 0.58296712,
+     "nominal_27C": {
+      "rel_change_G": -2.011748682626721e-09,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -1.4898608968961712e-06,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -6.723164029846983e-08,
+      "toward_reference": 0.0
+     }
+    },
+    "row1_n": {
+     "max_abs_V": 0.58296712,
+     "nominal_27C": {
+      "rel_change_G": -2.011748682626721e-09,
+      "toward_reference": 0.0
+     },
+     "hot_85C": {
+      "rel_change_G": -1.4898608968961712e-06,
+      "toward_reference": 0.0
+     },
+     "fast_reset_cell": {
+      "rel_change_G": -6.723164029846983e-08,
+      "toward_reference": 0.0
+     }
+    }
+   }
+  }
+ ],
+ "worst_V_selected_row": 1.32214029,
+ "worst_V_unselected_row": 1.04960398,
+ "worst_by_condition": {
+  "nominal_27C": {
+   "selected_row_per_pulse": 3.633988406290383e-14,
+   "selected_row_per_command": 1.5262751306419607e-12,
+   "other_row_per_pulse": 3.0097440113033405e-14,
+   "other_row_full_array_writes_to_10pct": 1114199096.3634245,
+   "ok": true
+  },
+  "hot_85C": {
+   "selected_row_per_pulse": 1.9445553689276539e-10,
+   "selected_row_per_command": 8.167132549496146e-09,
+   "other_row_per_pulse": 1.5066293157187162e-10,
+   "other_row_full_array_writes_to_10pct": 222579.90221567487,
+   "ok": true
+  },
+  "fast_reset_cell": {
+   "selected_row_per_pulse": 1.2144994654758885e-12,
+   "selected_row_per_command": 5.1008977549987314e-11,
+   "other_row_per_pulse": 1.0058415377405474e-12,
+   "other_row_full_array_writes_to_10pct": 33339784.964661296,
+   "ok": true
+  }
+ },
+ "failed_cases": [],
+ "closed": true
+}

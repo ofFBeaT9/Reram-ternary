@@ -1,0 +1,60 @@
+W = 1.5 um, L 0.45 um, corner tt
+   read at published gaps: {'0.95nm': 14.85, '0.85nm': 20.02, '0.73nm': 27.96, '1.88nm': 0.62}
+   quasi-static vg1.0: Vset 0.7 V, LRS 15.69 kOhm (12.74 uA, gap 0.999 nm), Vreset 0.6 V
+   quasi-static vg1.2: Vset 0.7 V, LRS 8.41 kOhm (23.77 uA, gap 0.79 nm), Vreset 0.65 V
+   quasi-static vg1.6: Vset 0.7 V, LRS 4.71 kOhm (42.46 uA, gap 0.554 nm), Vreset 0.85 V
+   SET  LRS1: Vg 1.6 V, amplitude 2.1 V, 17 pulses, read 18.15 uA, gap 0.8834 nm
+   SET  LRS2: Vg 2.15 V, amplitude 2.4 V, 20 pulses, read 31.29 uA, gap 0.6859 nm
+   SET  LRS3: Vg 2.95 V, amplitude 2.4 V, 20 pulses, read 43.64 uA, gap 0.5409 nm
+   RESET LRS3 (gap 0.5414 nm) at Vg 2.7: ok=False, amplitude 2.5 V, 21 pulses, read 43.59 uA
+   RESET LRS3 (gap 0.5414 nm) at Vg 3.3: ok=False, amplitude 2.5 V, 21 pulses, read 43.4 uA
+W = 3.0 um, L 0.45 um, corner tt
+   read at published gaps: {'0.95nm': 16.02, '0.85nm': 22.19, '0.73nm': 32.31, '1.88nm': 0.62}
+   quasi-static vg1.0: Vset 0.7 V, LRS 7.5 kOhm (26.66 uA, gap 0.792 nm), Vreset 0.55 V
+   quasi-static vg1.2: Vset 0.7 V, LRS 4.05 kOhm (49.42 uA, gap 0.585 nm), Vreset 0.65 V
+   quasi-static vg1.6: Vset 0.7 V, LRS 2.28 kOhm (87.86 uA, gap 0.351 nm), Vreset 0.85 V
+   SET  LRS1: Vg 1.2 V, amplitude 2.2 V, 18 pulses, read 18.09 uA, gap 0.913 nm
+   SET  LRS2: Vg 1.45 V, amplitude 2.3 V, 19 pulses, read 31.44 uA, gap 0.739 nm
+   SET  LRS3: Vg 1.7 V, amplitude 2.3 V, 19 pulses, read 44.18 uA, gap 0.6242 nm
+   RESET LRS3 (gap 0.6289 nm) at Vg 2.7: ok=True, amplitude 2.1 V, 17 pulses, read 0.83 uA
+   RESET LRS3 (gap 0.6289 nm) at Vg 3.3: ok=True, amplitude 1.4 V, 10 pulses, read 0.83 uA
+W = 4.5 um, L 0.45 um, corner tt
+   read at published gaps: {'0.95nm': 16.42, '0.85nm': 22.97, '0.73nm': 33.97, '1.88nm': 0.62}
+   quasi-static vg1.0: Vset 0.7 V, LRS 5.49 kOhm (36.43 uA, gap 0.708 nm), Vreset 0.55 V
+   quasi-static vg1.2: Vset 0.7 V, LRS 2.83 kOhm (70.64 uA, gap 0.488 nm), Vreset 0.65 V
+   quasi-static vg1.6: Vset 0.7 V, LRS 1.54 kOhm (130.06 uA, gap 0.242 nm), Vreset 0.85 V
+   SET  LRS1: Vg 1.1 V, amplitude 2.1 V, 17 pulses, read 18.24 uA, gap 0.919 nm
+   SET  LRS2: Vg 1.3 V, amplitude 1.8 V, 14 pulses, read 31.13 uA, gap 0.7571 nm
+   SET  LRS3: Vg 1.45 V, amplitude 2.0 V, 16 pulses, read 44.03 uA, gap 0.6476 nm
+   RESET LRS3 (gap 0.6508 nm) at Vg 2.7: ok=True, amplitude 1.4 V, 10 pulses, read 0.83 uA
+   RESET LRS3 (gap 0.6508 nm) at Vg 3.3: ok=True, amplitude 1.2 V, 8 pulses, read 0.83 uA
+W = 6.0 um, L 0.45 um, corner tt
+   read at published gaps: {'0.95nm': 16.63, '0.85nm': 23.38, '0.73nm': 34.88, '1.88nm': 0.62}
+   quasi-static vg1.0: Vset 0.7 V, LRS 4.28 kOhm (46.7 uA, gap 0.64 nm), Vreset 0.55 V
+   quasi-static vg1.2: Vset 0.7 V, LRS 2.17 kOhm (92.26 uA, gap 0.415 nm), Vreset 0.65 V
+   quasi-static vg1.6: Vset 0.7 V, LRS 1.16 kOhm (172.58 uA, gap 0.164 nm), Vreset 0.85 V
+   SET  LRS1: Vg 1.05 V, amplitude 1.8 V, 14 pulses, read 18.11 uA, gap 0.9252 nm
+   SET  LRS2: Vg 1.2 V, amplitude 1.8 V, 14 pulses, read 31.34 uA, gap 0.7624 nm
+   SET  LRS3: Vg 1.3 V, amplitude 2.2 V, 18 pulses, read 44.19 uA, gap 0.6571 nm
+   RESET LRS3 (gap 0.6614 nm) at Vg 2.7: ok=True, amplitude 1.2 V, 8 pulses, read 0.83 uA
+   RESET LRS3 (gap 0.6614 nm) at Vg 3.3: ok=True, amplitude 1.1 V, 7 pulses, read 0.83 uA
+W = 4.5 um, L 0.45 um, corner ss
+   read at published gaps: {'0.95nm': 16.34, '0.85nm': 22.8, '0.73nm': 33.61, '1.88nm': 0.62}
+   quasi-static vg1.0: Vset 0.7 V, LRS 8.18 kOhm (24.44 uA, gap 0.829 nm), Vreset 0.55 V
+   quasi-static vg1.2: Vset 0.7 V, LRS 3.64 kOhm (55.02 uA, gap 0.568 nm), Vreset 0.6 V
+   quasi-static vg1.6: Vset 0.7 V, LRS 1.79 kOhm (111.94 uA, gap 0.293 nm), Vreset 0.8 V
+   SET  LRS1: Vg 1.2 V, amplitude 1.9 V, 15 pulses, read 18.45 uA, gap 0.9138 nm
+   SET  LRS2: Vg 1.35 V, amplitude 2.5 V, 21 pulses, read 31.19 uA, gap 0.7535 nm
+   SET  LRS3: Vg 1.55 V, amplitude 2.1 V, 17 pulses, read 43.82 uA, gap 0.6447 nm
+   RESET LRS3 (gap 0.6464 nm) at Vg 2.7: ok=True, amplitude 1.5 V, 11 pulses, read 0.83 uA
+   RESET LRS3 (gap 0.6464 nm) at Vg 3.3: ok=True, amplitude 1.2 V, 8 pulses, read 0.83 uA
+W = 4.5 um, L 0.45 um, corner ff
+   read at published gaps: {'0.95nm': 16.5, '0.85nm': 23.11, '0.73nm': 34.29, '1.88nm': 0.62}
+   quasi-static vg1.0: Vset 0.7 V, LRS 3.93 kOhm (50.93 uA, gap 0.604 nm), Vreset 0.6 V
+   quasi-static vg1.2: Vset 0.7 V, LRS 2.27 kOhm (88.12 uA, gap 0.416 nm), Vreset 0.65 V
+   quasi-static vg1.6: Vset 0.7 V, LRS 1.34 kOhm (149.47 uA, gap 0.195 nm), Vreset 0.9 V
+   SET  LRS1: Vg 1.0 V, amplitude 2.5 V, 21 pulses, read 18.26 uA, gap 0.9201 nm
+   SET  LRS2: Vg 1.2 V, amplitude 1.9 V, 15 pulses, read 31.47 uA, gap 0.7564 nm
+   SET  LRS3: Vg 1.35 V, amplitude 1.9 V, 15 pulses, read 43.64 uA, gap 0.6543 nm
+   RESET LRS3 (gap 0.6547 nm) at Vg 2.7: ok=True, amplitude 1.3 V, 9 pulses, read 0.83 uA
+   RESET LRS3 (gap 0.6547 nm) at Vg 3.3: ok=True, amplitude 1.2 V, 8 pulses, read 0.83 uA

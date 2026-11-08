@@ -1,0 +1,689 @@
+{
+ "test_bench": "revision 3 (tb/build/tb_rev3_failfast.cc)",
+ "faults": 66,
+ "run": 66,
+ "detected": 36,
+ "not_detected": [
+  {
+   "id": 2,
+   "name": "a cell with both devices in LRS counted as +1",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 7,
+   "name": "invalid cell not flagged during read-back",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 9,
+   "name": "product read uses the set-verify reference",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 14,
+   "name": "no pulse limit in the reset phase",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 15,
+   "name": "no pulse limit in the set phase",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 19,
+   "name": "reset pulses not counted in PITER",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 22,
+   "name": "positive clip limit off by one",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 23,
+   "name": "negative clip limit off by one",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 24,
+   "name": "SAT flag never set",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 26,
+   "name": "interrupt ignores the enable trit",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 28,
+   "name": "negative row index accepted",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 30,
+   "name": "register writes accepted while busy",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 31,
+   "name": "program command works without EN",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 32,
+   "name": "GO works without EN",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 34,
+   "name": "WERR not cleared by GO",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 41,
+   "name": "code 10 treated as -1",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 43,
+   "name": "serial port: interrupt flag not reported",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 48,
+   "name": "interrupt held by WERR (revision 3 behaviour)",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 49,
+   "name": "serial port: bit counter wraps on a long frame (revision 3 behaviour)",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 51,
+   "name": "reset pulses repeated on devices that already passed verify",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 52,
+   "name": "set amplitude not restarted after the reset phase",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 54,
+   "name": "PITER not restarted by a new program command",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 56,
+   "name": "SAT not cleared by GO",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 57,
+   "name": "SAT not cleared by a read-back command",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 58,
+   "name": "DONE not cleared by GO",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 60,
+   "name": "MODE changed while busy",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 61,
+   "name": "read-back works without EN",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 62,
+   "name": "serial port: a write frame also launches a read",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 64,
+   "name": "pulse limit one step short",
+   "status": "SURVIVED"
+  },
+  {
+   "id": 65,
+   "name": "read-back of an invalid cell returns +1",
+   "status": "SURVIVED"
+  }
+ ],
+ "missing": [],
+ "results": [
+  {
+   "name": "sign of a +1 weight in the accumulator",
+   "status": "caught",
+   "first_failure": "FAIL: product 0 column 0: got -45 expected 7",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 4,
+   "id": 0
+  },
+  {
+   "name": "sign of a -1 weight in the accumulator",
+   "status": "caught",
+   "first_failure": "FAIL: product 0 column 0: got 45 expected 7",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 4,
+   "id": 1
+  },
+  {
+   "name": "a cell with both devices in LRS counted as +1",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 220,
+   "id": 2
+  },
+  {
+   "name": "last row never read",
+   "status": "caught",
+   "first_failure": "FAIL: product 0 column 11: got -6 expected -5",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 4,
+   "id": 3
+  },
+  {
+   "name": "rows with a -1 input skipped",
+   "status": "caught",
+   "first_failure": "FAIL: product 1 column 0: got 0 expected -7",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 4,
+   "id": 4
+  },
+  {
+   "name": "rows with a 0 input read as well",
+   "status": "caught",
+   "first_failure": "FAIL: product 2 column 0: got -7 expected 0",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 4,
+   "id": 5
+  },
+  {
+   "name": "invalid cell not flagged during a product",
+   "status": "caught",
+   "first_failure": "FAIL: invalid cell not reported",
+   "in_test": "5. error paths",
+   "seconds": 30,
+   "id": 6
+  },
+  {
+   "name": "invalid cell not flagged during read-back",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 271,
+   "id": 7
+  },
+  {
+   "name": "wrong row sent to the array in a product",
+   "status": "caught",
+   "first_failure": "FAIL: product 0 column 0: got 72 expected 7",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 6,
+   "id": 8
+  },
+  {
+   "name": "product read uses the set-verify reference",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 339,
+   "id": 9
+  },
+  {
+   "name": "reset phase skipped when programming",
+   "status": "caught",
+   "first_failure": "FAIL: layer-1 results differ from the exact values (24252)",
+   "in_test": "6. ternary digits network through the RT",
+   "seconds": 225,
+   "id": 10
+  },
+  {
+   "name": "set phase programs the wrong side",
+   "status": "caught",
+   "first_failure": "FAIL: device state after programming r0 c0",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 2,
+   "id": 11
+  },
+  {
+   "name": "reset verify polarity",
+   "status": "caught",
+   "first_failure": "FAIL: layer-1 results differ from the exact values (24871)",
+   "in_test": "6. ternary digits network through the RT",
+   "seconds": 223,
+   "id": 12
+  },
+  {
+   "name": "set verify polarity",
+   "status": "caught",
+   "first_failure": "FAIL: device state after programming r0 c1",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 2,
+   "id": 13
+  },
+  {
+   "name": "no pulse limit in the reset phase",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 225,
+   "id": 14
+  },
+  {
+   "name": "no pulse limit in the set phase",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60799 checks, 0 failures",
+   "seconds": 231,
+   "id": 15
+  },
+  {
+   "name": "verify failure not reported (set phase)",
+   "status": "caught",
+   "first_failure": "FAIL: stuck device not reported",
+   "in_test": "5. error paths",
+   "seconds": 29,
+   "id": 16
+  },
+  {
+   "name": "pulse amplitude not driven",
+   "status": "caught",
+   "first_failure": "FAIL: row 0 failed to program",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 0,
+   "id": 17
+  },
+  {
+   "name": "set pulses not counted in PITER",
+   "status": "caught",
+   "first_failure": "FAIL: stuck device: too few pulses (13)",
+   "in_test": "5. error paths",
+   "seconds": 28,
+   "id": 18
+  },
+  {
+   "name": "reset pulses not counted in PITER",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 224,
+   "id": 19
+  },
+  {
+   "name": "analog difference has the wrong sign",
+   "status": "caught",
+   "first_failure": "FAIL: analog count 0 column 0: got -7 expected -25",
+   "in_test": "4. analog-mode raw counts",
+   "seconds": 22,
+   "id": 20
+  },
+  {
+   "name": "analog phases use the same rows",
+   "status": "caught",
+   "first_failure": "FAIL: analog count 0 column 0: got 0 expected -25",
+   "in_test": "4. analog-mode raw counts",
+   "seconds": 22,
+   "id": 21
+  },
+  {
+   "name": "positive clip limit off by one",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 215,
+   "id": 22
+  },
+  {
+   "name": "negative clip limit off by one",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 210,
+   "id": 23
+  },
+  {
+   "name": "SAT flag never set",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 216,
+   "id": 24
+  },
+  {
+   "name": "DONE not cleared by reading STAT",
+   "status": "caught",
+   "first_failure": "FAIL: interrupt not cleared by reading STAT",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 20,
+   "id": 25
+  },
+  {
+   "name": "interrupt ignores the enable trit",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 295,
+   "id": 26
+  },
+  {
+   "name": "row index 72 accepted",
+   "status": "caught",
+   "first_failure": "FAIL: row index 72 accepted",
+   "in_test": "5. error paths",
+   "seconds": 37,
+   "id": 27
+  },
+  {
+   "name": "negative row index accepted",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 290,
+   "id": 28
+  },
+  {
+   "name": "read-back swaps +1 and -1",
+   "status": "caught",
+   "first_failure": "FAIL: read-back row 0",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 3,
+   "id": 29
+  },
+  {
+   "name": "register writes accepted while busy",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 291,
+   "id": 30
+  },
+  {
+   "name": "program command works without EN",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 291,
+   "id": 31
+  },
+  {
+   "name": "GO works without EN",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 289,
+   "id": 32
+  },
+  {
+   "name": "MODE read from the wrong trit",
+   "status": "caught",
+   "first_failure": "FAIL: analog count 0 column 0: got -6 expected -25",
+   "in_test": "4. analog-mode raw counts",
+   "seconds": 46,
+   "id": 33
+  },
+  {
+   "name": "WERR not cleared by GO",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 276,
+   "id": 34
+  },
+  {
+   "name": "X1 and X2 exchanged",
+   "status": "caught",
+   "first_failure": "FAIL: product 3 column 0: got -1 expected 1",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 7,
+   "id": 35
+  },
+  {
+   "name": "Y index off by one",
+   "status": "caught",
+   "first_failure": "FAIL: product 0 column 0: got 2 expected 7",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 6,
+   "id": 36
+  },
+  {
+   "name": "tryte access to a word register accepted",
+   "status": "caught",
+   "first_failure": "FAIL: tryte access to a word register not flagged",
+   "in_test": "1. register access",
+   "seconds": 0,
+   "id": 37
+  },
+  {
+   "name": "balanced-ternary conversion: digit -1 written as +1",
+   "status": "caught",
+   "first_failure": "FAIL: product 0 column 0: got 13 expected 7",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 6,
+   "id": 38
+  },
+  {
+   "name": "balanced-ternary conversion: wrong carry",
+   "status": "caught",
+   "first_failure": "FAIL: product 0 column 0: got -2 expected 7",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 6,
+   "id": 39
+  },
+  {
+   "name": "tryte decoding uses base 2",
+   "status": "caught",
+   "first_failure": "FAIL: device state after programming r1 c0",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 3,
+   "id": 40
+  },
+  {
+   "name": "code 10 treated as -1",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 252,
+   "id": 41
+  },
+  {
+   "name": "serial port: error flag not reported",
+   "status": "caught",
+   "first_failure": "FAIL: misaligned word read not flagged",
+   "in_test": "1. register access",
+   "seconds": 0,
+   "id": 42
+  },
+  {
+   "name": "serial port: interrupt flag not reported",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 221,
+   "id": 43
+  },
+  {
+   "name": "serial port: write strobe one bit early",
+   "status": "caught",
+   "first_failure": "FAIL: CTRL EN readback",
+   "in_test": "1. register access",
+   "seconds": 0,
+   "id": 44
+  },
+  {
+   "name": "serial port: address bit lost",
+   "status": "caught",
+   "first_failure": "FAIL: misaligned word read not flagged",
+   "in_test": "1. register access",
+   "seconds": 0,
+   "id": 45
+  },
+  {
+   "name": "serial port: read data shifted by one bit",
+   "status": "caught",
+   "first_failure": "FAIL: CTRL EN readback",
+   "in_test": "1. register access",
+   "seconds": 0,
+   "id": 46
+  },
+  {
+   "name": "serial port: word flag ignored",
+   "status": "caught",
+   "first_failure": "FAIL: X0 readback",
+   "in_test": "1. register access",
+   "seconds": 0,
+   "id": 47
+  },
+  {
+   "name": "interrupt held by WERR (revision 3 behaviour)",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 221,
+   "id": 48
+  },
+  {
+   "name": "serial port: bit counter wraps on a long frame (revision 3 behaviour)",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 225,
+   "id": 49
+  },
+  {
+   "name": "set pulses repeated on devices that already passed verify",
+   "status": "caught",
+   "first_failure": "FAIL: device state after programming r0 c18",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 2,
+   "id": 50
+  },
+  {
+   "name": "reset pulses repeated on devices that already passed verify",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60402 checks, 0 failures",
+   "seconds": 234,
+   "id": 51
+  },
+  {
+   "name": "set amplitude not restarted after the reset phase",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60400 checks, 0 failures",
+   "seconds": 221,
+   "id": 52
+  },
+  {
+   "name": "amplitude not restarted by a new program command",
+   "status": "caught",
+   "first_failure": "FAIL: row 5 could not be re-programmed",
+   "in_test": "5. error paths",
+   "seconds": 29,
+   "id": 53
+  },
+  {
+   "name": "PITER not restarted by a new program command",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 216,
+   "id": 54
+  },
+  {
+   "name": "accumulators not cleared by GO",
+   "status": "caught",
+   "first_failure": "FAIL: product 1 column 0: got 0 expected -7",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 4,
+   "id": 55
+  },
+  {
+   "name": "SAT not cleared by GO",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 213,
+   "id": 56
+  },
+  {
+   "name": "SAT not cleared by a read-back command",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 210,
+   "id": 57
+  },
+  {
+   "name": "DONE not cleared by GO",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 292,
+   "id": 58
+  },
+  {
+   "name": "DONE never set",
+   "status": "caught",
+   "first_failure": "FAIL: interrupt not raised after a product",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 31,
+   "id": 59
+  },
+  {
+   "name": "MODE changed while busy",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 292,
+   "id": 60
+  },
+  {
+   "name": "read-back works without EN",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 289,
+   "id": 61
+  },
+  {
+   "name": "serial port: a write frame also launches a read",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 290,
+   "id": 62
+  },
+  {
+   "name": "first row never read",
+   "status": "caught",
+   "first_failure": "FAIL: product 0 column 0: got 6 expected 7",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 5,
+   "id": 63
+  },
+  {
+   "name": "pulse limit one step short",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 291,
+   "id": 64
+  },
+  {
+   "name": "read-back of an invalid cell returns +1",
+   "status": "SURVIVED",
+   "first_failure": "",
+   "in_test": "60401 checks, 0 failures",
+   "seconds": 290,
+   "id": 65
+  }
+ ]
+}

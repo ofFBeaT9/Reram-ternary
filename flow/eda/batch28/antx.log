@@ -1,0 +1,1 @@
+OpenROAD: {'net_violations': 0, 'pin_violations': 0, 'rules': 'sky130_fd_sc_hd technology LEF: metal side-area ratio 400 (PWL with diode area), via cut-area ratio 6'}

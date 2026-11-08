@@ -1,0 +1,14 @@
+* ReRAM cell alone: quasi-static ramp 0 -> 0.9 V -> 0 at 0.6 V/s (SET), gap floor 0.725 nm
+.include ../../model/reram_stanford_ihp.lib
+Vte te 0 PWL(0 0 1.5 0.9 3.0 0)
+X1 te 0 gap reram_stanford_ihp gap_min=0.725 gap_ini=1.8
+.options reltol=1e-4 abstol=1e-13 vntol=1e-7 method=gear
+.tran 2m 3.0 0 2m uic
+.control
+run
+wrdata ramp_set.txt v(te) v(gap) i(Vte)
+meas tran gap_end find v(gap) at=3.0
+meas tran t_half when v(gap)=1.25 fall=1
+meas tran v_half find v(te) when v(gap)=1.25 fall=1
+.endc
+.end

@@ -1,0 +1,18 @@
+spi rc=0
+lfsr rc=0
+miter_pnx rc=0
+miter rc=0
+safety rc=0
+safety_pnx rc=0
+progress rc=0
+SBY 13:18:34 [tcim_spi] DONE (PASS, rc=0)
+SBY 13:43:20 [tcim_core_safety] DONE (PASS, rc=0)
+SBY 13:45:58 [tcim_core_safety_pnx] DONE (PASS, rc=0)
+SBY 13:58:17 [tcim_core_progress] DONE (PASS, rc=0)
+SBY 13:18:40 [tcim_core_lfsr] DONE (PASS, rc=0)
+SBY 13:19:48 [tcim_miter_prove] DONE (PASS, rc=0)
+SBY 13:19:23 [tcim_miter_prove_pnx] DONE (PASS, rc=0)
+miter: programming stops at verify (revision 4.5 behaviour) prove FAIL
+fixed latency: product ends one row early safety FAIL
+27 of 28 faults make a proof fail
+FORMAL28_DONE

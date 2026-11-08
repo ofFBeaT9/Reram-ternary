@@ -1,0 +1,165 @@
+6c3fa3a72fcb658f4965043e952cd57c  /w/chip/sky130/caravan/gds/user_analog_project_wrapper.gds
+=== build Magic 8.3.471, netgen 1.5.272, CVC v1.1.7
+Note: switching to '60049f3702ec4b87ea1a2befaed937719fdb4958'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+Note: switching to '178af5f493e628427db53a1233c0719b1e322a7a'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+Note: switching to '23c3867bb9c227ec395e2812b318379ffb9a0df9'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+/opt/cf/bin/magic
+/opt/cf/bin/netgen
+/opt/cf/bin/cvc_rv
+/usr/bin/klayout
+8.3.471
+=== PDK open_pdks 3e0e31d through ciel
+ciel
+sky130A
+sky130B
+open_pdks 3e0e31dcce8519a7dbb82590346db16d91b7244f
+cf-precheck 1.3.7
+=== precheck, ChipFoundry tool versions, sky130B
+
+╭────────────────────────────────── Precheck ──────────────────────────────────╮
+│ CF Precheck v1.3.7                                                           │
+│ Project: caravan (analog, sky130B)                                           │
+│ Checks:  14                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+  [ 1/14] Top Cell .......................................... PASS  (0.5s)
+  [ 2/14] GPIO Defines ...................................... PASS  (0.8s)
+  [ 3/14] XOR ............................................... PASS  (5.8s)
+  [ 4/14] Magic DRC ......................................... PASS  (23.4s)
+  [ 5/14] Klayout FEOL ...................................... PASS  (13.7s)
+  [ 6/14] Klayout BEOL ...................................... PASS  (36.0s)
+  [ 7/14] Klayout Offgrid ................................... PASS  (9.6s)
+  [ 8/14] Klayout Metal Density ............................. PASS  (5.2s)
+  [ 9/14] Klayout Pin Label ................................. PASS  (3.5s)
+  [10/14] Klayout ZeroArea .................................. PASS  (2.8s)
+  [11/14] Spike Check ....................................... PASS  (2.4s)
+  [12/14] Illegal Cellname .................................. PASS  (0.5s)
+  [13/14] LVS ............................................... FAIL  (87.1s)
+         LVS FAILED (stat=1), see 
+/w/flow/eda/precheck_cfenv_sky130B/logs/LVS_check.log
+  [14/14] OEB ............................................... PASS  (3.4s)
+
+                Precheck Summary                 
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Check                 ┃  Status  ┃   Duration ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━┩
+│ Top Cell              │   PASS   │       0.5s │
+│ GPIO Defines          │   PASS   │       0.8s │
+│ XOR                   │   PASS   │       5.8s │
+│ Magic DRC             │   PASS   │      23.4s │
+│ Klayout FEOL          │   PASS   │      13.7s │
+│ Klayout BEOL          │   PASS   │      36.0s │
+│ Klayout Offgrid       │   PASS   │       9.6s │
+│ Klayout Metal Density │   PASS   │       5.2s │
+│ Klayout Pin Label     │   PASS   │       3.5s │
+│ Klayout ZeroArea      │   PASS   │       2.8s │
+│ Spike Check           │   PASS   │       2.4s │
+│ Illegal Cellname      │   PASS   │       0.5s │
+│ LVS                   │   FAIL   │      87.1s │
+│ OEB                   │   PASS   │       3.4s │
+└───────────────────────┴──────────┴────────────┘
+Results saved to /w/chip/sky130/caravan/.cf/project.json
+Full log at /w/chip/sky130/caravan/precheck_results
+PRECHECK_sky130B_RC=2
+KLayout: 0.29.12
+Magic: 8.3.471Open PDKs 3e0e31dcce8519a7dbb82590346db16d91b7244f
+SKY130B PDK unknown
+=== precheck, ChipFoundry tool versions, sky130A
+
+╭────────────────────────────────── Precheck ──────────────────────────────────╮
+│ CF Precheck v1.3.7                                                           │
+│ Project: caravan (analog, sky130A)                                           │
+│ Checks:  14                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+  [ 1/14] Top Cell .......................................... PASS  (0.5s)
+  [ 2/14] GPIO Defines ...................................... PASS  (0.6s)
+  [ 3/14] XOR ............................................... PASS  (4.9s)
+  [ 4/14] Magic DRC ......................................... PASS  (23.4s)
+  [ 5/14] Klayout FEOL ...................................... PASS  (14.1s)
+  [ 6/14] Klayout BEOL ...................................... PASS  (36.3s)
+  [ 7/14] Klayout Offgrid ................................... PASS  (9.4s)
+  [ 8/14] Klayout Metal Density ............................. PASS  (5.0s)
+  [ 9/14] Klayout Pin Label ................................. PASS  (3.4s)
+  [10/14] Klayout ZeroArea .................................. PASS  (2.7s)
+  [11/14] Spike Check ....................................... PASS  (2.4s)
+  [12/14] Illegal Cellname .................................. PASS  (0.6s)
+  [13/14] LVS ............................................... FAIL  (99.0s)
+         LVS FAILED (stat=1), see 
+/w/flow/eda/precheck_cfenv_sky130A/logs/LVS_check.log
+  [14/14] OEB ............................................... PASS  (2.4s)
+
+                Precheck Summary                 
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Check                 ┃  Status  ┃   Duration ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━┩
+│ Top Cell              │   PASS   │       0.5s │
+│ GPIO Defines          │   PASS   │       0.6s │
+│ XOR                   │   PASS   │       4.9s │
+│ Magic DRC             │   PASS   │      23.4s │
+│ Klayout FEOL          │   PASS   │      14.1s │
+│ Klayout BEOL          │   PASS   │      36.3s │
+│ Klayout Offgrid       │   PASS   │       9.4s │
+│ Klayout Metal Density │   PASS   │       5.0s │
+│ Klayout Pin Label     │   PASS   │       3.4s │
+│ Klayout ZeroArea      │   PASS   │       2.7s │
+│ Spike Check           │   PASS   │       2.4s │
+│ Illegal Cellname      │   PASS   │       0.6s │
+│ LVS                   │   FAIL   │      99.0s │
+│ OEB                   │   PASS   │       2.4s │
+└───────────────────────┴──────────┴────────────┘
+Results saved to /w/chip/sky130/caravan/.cf/project.json
+Full log at /w/chip/sky130/caravan/precheck_results
+PRECHECK_sky130A_RC=2
+KLayout: 0.29.12
+Magic: 8.3.471Open PDKs 3e0e31dcce8519a7dbb82590346db16d91b7244f
+SKY130A PDK unknown
+BATCH19_DONE

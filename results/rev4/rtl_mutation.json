@@ -1,0 +1,538 @@
+{
+ "test_bench": "tb/tb_tcim.cc",
+ "faults": 66,
+ "run": 66,
+ "detected": 66,
+ "not_detected": [],
+ "missing": [],
+ "results": [
+  {
+   "name": "sign of a +1 weight in the accumulator",
+   "status": "caught",
+   "first_failure": "FAIL: product 0 column 0: got -45 expected 7",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 3,
+   "id": 0
+  },
+  {
+   "name": "sign of a -1 weight in the accumulator",
+   "status": "caught",
+   "first_failure": "FAIL: product 0 column 0: got 45 expected 7",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 4,
+   "id": 1
+  },
+  {
+   "name": "a cell with both devices in LRS counted as +1",
+   "status": "caught",
+   "first_failure": "FAIL: cell with both devices in LRS not counted as 0 (got 1)",
+   "in_test": "5. error paths",
+   "seconds": 28,
+   "id": 2
+  },
+  {
+   "name": "last row never read",
+   "status": "caught",
+   "first_failure": "FAIL: product 0 column 11: got -6 expected -5",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 4,
+   "id": 3
+  },
+  {
+   "name": "rows with a -1 input skipped",
+   "status": "caught",
+   "first_failure": "FAIL: product 1 column 0: got 0 expected -7",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 3,
+   "id": 4
+  },
+  {
+   "name": "rows with a 0 input read as well",
+   "status": "caught",
+   "first_failure": "FAIL: product 2 column 0: got -7 expected 0",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 5,
+   "id": 5
+  },
+  {
+   "name": "invalid cell not flagged during a product",
+   "status": "caught",
+   "first_failure": "FAIL: invalid cell not reported",
+   "in_test": "5. error paths",
+   "seconds": 44,
+   "id": 6
+  },
+  {
+   "name": "invalid cell not flagged during read-back",
+   "status": "caught",
+   "first_failure": "FAIL: invalid cell not reported by read-back",
+   "in_test": "5. error paths",
+   "seconds": 43,
+   "id": 7
+  },
+  {
+   "name": "wrong row sent to the array in a product",
+   "status": "caught",
+   "first_failure": "FAIL: product 0 column 0: got 72 expected 7",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 6,
+   "id": 8
+  },
+  {
+   "name": "product read uses the set-verify reference",
+   "status": "caught",
+   "first_failure": "FAIL: 30 uA device not read as LRS (got 0)",
+   "in_test": "5b. directed tests: read reference, satu",
+   "seconds": 46,
+   "id": 9
+  },
+  {
+   "name": "reset phase skipped when programming",
+   "status": "caught",
+   "first_failure": "FAIL: device that never resets not reported",
+   "in_test": "5. error paths",
+   "seconds": 42,
+   "id": 10
+  },
+  {
+   "name": "set phase programs the wrong side",
+   "status": "caught",
+   "first_failure": "FAIL: pulse on a device that must not change (row 0, 167 times)",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 0,
+   "id": 11
+  },
+  {
+   "name": "reset verify polarity",
+   "status": "caught",
+   "first_failure": "FAIL: device that never resets not reported",
+   "in_test": "5. error paths",
+   "seconds": 46,
+   "id": 12
+  },
+  {
+   "name": "set verify polarity",
+   "status": "caught",
+   "first_failure": "FAIL: device state after programming r0 c1",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 3,
+   "id": 13
+  },
+  {
+   "name": "no pulse limit in the reset phase",
+   "status": "caught",
+   "first_failure": "FAIL: PITER 61 differs from the 52143 pulses the array received (row 6)",
+   "in_test": "5. error paths",
+   "seconds": 49,
+   "id": 14
+  },
+  {
+   "name": "no pulse limit in the set phase",
+   "status": "caught",
+   "first_failure": "FAIL: PITER 61 differs from the 52143 pulses the array received (row 5)",
+   "in_test": "5. error paths",
+   "seconds": 49,
+   "id": 15
+  },
+  {
+   "name": "verify failure not reported (set phase)",
+   "status": "caught",
+   "first_failure": "FAIL: stuck device not reported",
+   "in_test": "5. error paths",
+   "seconds": 44,
+   "id": 16
+  },
+  {
+   "name": "pulse amplitude not driven",
+   "status": "caught",
+   "first_failure": "FAIL: pulse amplitude did not start at 0 and rise by one per pulse (row 0, 20 pulses out of sequence)",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 0,
+   "id": 17
+  },
+  {
+   "name": "set pulses not counted in PITER",
+   "status": "caught",
+   "first_failure": "FAIL: PITER 0 differs from the 15 pulses the array received (row 0)",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 0,
+   "id": 18
+  },
+  {
+   "name": "reset pulses not counted in PITER",
+   "status": "caught",
+   "first_failure": "FAIL: PITER 21 differs from the 34 pulses the array received (row 5)",
+   "in_test": "5. error paths",
+   "seconds": 43,
+   "id": 19
+  },
+  {
+   "name": "analog difference has the wrong sign",
+   "status": "caught",
+   "first_failure": "FAIL: analog count 0 column 0: got -7 expected -25",
+   "in_test": "4. analog-mode raw counts",
+   "seconds": 36,
+   "id": 20
+  },
+  {
+   "name": "analog phases use the same rows",
+   "status": "caught",
+   "first_failure": "FAIL: analog count 0 column 0: got 0 expected -25",
+   "in_test": "4. analog-mode raw counts",
+   "seconds": 38,
+   "id": 21
+  },
+  {
+   "name": "positive clip limit off by one",
+   "status": "caught",
+   "first_failure": "FAIL: 365 not clipped, column 0: -364",
+   "in_test": "5b. directed tests: read reference, satu",
+   "seconds": 46,
+   "id": 22
+  },
+  {
+   "name": "negative clip limit off by one",
+   "status": "caught",
+   "first_failure": "FAIL: -365 not clipped, column 0: 364",
+   "in_test": "5b. directed tests: read reference, satu",
+   "seconds": 46,
+   "id": 23
+  },
+  {
+   "name": "SAT flag never set",
+   "status": "caught",
+   "first_failure": "FAIL: SAT not set on positive overflow",
+   "in_test": "5b. directed tests: read reference, satu",
+   "seconds": 48,
+   "id": 24
+  },
+  {
+   "name": "DONE not cleared by reading STAT",
+   "status": "caught",
+   "first_failure": "FAIL: interrupt not cleared by reading STAT",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 36,
+   "id": 25
+  },
+  {
+   "name": "interrupt ignores the enable trit",
+   "status": "caught",
+   "first_failure": "FAIL: interrupt raised with IE = 0",
+   "in_test": "5b. directed tests: read reference, satu",
+   "seconds": 46,
+   "id": 26
+  },
+  {
+   "name": "row index 72 accepted",
+   "status": "caught",
+   "first_failure": "FAIL: row index 72 accepted",
+   "in_test": "5. error paths",
+   "seconds": 45,
+   "id": 27
+  },
+  {
+   "name": "negative row index accepted",
+   "status": "caught",
+   "first_failure": "FAIL: row index -1 accepted",
+   "in_test": "5. error paths",
+   "seconds": 47,
+   "id": 28
+  },
+  {
+   "name": "read-back swaps +1 and -1",
+   "status": "caught",
+   "first_failure": "FAIL: read-back row 0",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 3,
+   "id": 29
+  },
+  {
+   "name": "register writes accepted while busy",
+   "status": "caught",
+   "first_failure": "FAIL: result changed by writes during BUSY, column 0",
+   "in_test": "5b. directed tests: read reference, satu",
+   "seconds": 49,
+   "id": 30
+  },
+  {
+   "name": "program command works without EN",
+   "status": "caught",
+   "first_failure": "FAIL: array accessed with EN = 0",
+   "in_test": "5b. directed tests: read reference, satu",
+   "seconds": 49,
+   "id": 31
+  },
+  {
+   "name": "GO works without EN",
+   "status": "caught",
+   "first_failure": "FAIL: array accessed with EN = 0",
+   "in_test": "5b. directed tests: read reference, satu",
+   "seconds": 48,
+   "id": 32
+  },
+  {
+   "name": "MODE read from the wrong trit",
+   "status": "caught",
+   "first_failure": "FAIL: analog count 0 column 0: got -6 expected -25",
+   "in_test": "4. analog-mode raw counts",
+   "seconds": 25,
+   "id": 33
+  },
+  {
+   "name": "WERR not cleared by GO",
+   "status": "caught",
+   "first_failure": "FAIL: WERR not cleared by the next GO",
+   "in_test": "5. error paths",
+   "seconds": 46,
+   "id": 34
+  },
+  {
+   "name": "X1 and X2 exchanged",
+   "status": "caught",
+   "first_failure": "FAIL: product 3 column 0: got -1 expected 1",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 7,
+   "id": 35
+  },
+  {
+   "name": "Y index off by one",
+   "status": "caught",
+   "first_failure": "FAIL: product 0 column 0: got 2 expected 7",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 5,
+   "id": 36
+  },
+  {
+   "name": "tryte access to a word register accepted",
+   "status": "caught",
+   "first_failure": "FAIL: tryte access to a word register not flagged",
+   "in_test": "1. register access",
+   "seconds": 0,
+   "id": 37
+  },
+  {
+   "name": "balanced-ternary conversion: digit -1 written as +1",
+   "status": "caught",
+   "first_failure": "FAIL: PITER 39 differs from the 15 pulses the array received (row 0)",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 0,
+   "id": 38
+  },
+  {
+   "name": "balanced-ternary conversion: wrong carry",
+   "status": "caught",
+   "first_failure": "FAIL: PITER 6 differs from the 15 pulses the array received (row 0)",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 0,
+   "id": 39
+  },
+  {
+   "name": "tryte decoding uses base 2",
+   "status": "caught",
+   "first_failure": "FAIL: pulse on another row than 2",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 0,
+   "id": 40
+  },
+  {
+   "name": "code 10 treated as -1",
+   "status": "caught",
+   "first_failure": "FAIL: X with code 10: column 0 got -1 expected -4",
+   "in_test": "5c. illegal code, exhaustive conversions",
+   "seconds": 45,
+   "id": 41
+  },
+  {
+   "name": "serial port: error flag not reported",
+   "status": "caught",
+   "first_failure": "FAIL: misaligned word read not flagged",
+   "in_test": "1. register access",
+   "seconds": 0,
+   "id": 42
+  },
+  {
+   "name": "serial port: interrupt flag not reported",
+   "status": "caught",
+   "first_failure": "FAIL: interrupt not reported in the serial status byte",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 35,
+   "id": 43
+  },
+  {
+   "name": "serial port: write strobe one bit early",
+   "status": "caught",
+   "first_failure": "FAIL: CTRL EN readback",
+   "in_test": "1. register access",
+   "seconds": 0,
+   "id": 44
+  },
+  {
+   "name": "serial port: address bit lost",
+   "status": "caught",
+   "first_failure": "FAIL: misaligned word read not flagged",
+   "in_test": "1. register access",
+   "seconds": 0,
+   "id": 45
+  },
+  {
+   "name": "serial port: read data shifted by one bit",
+   "status": "caught",
+   "first_failure": "FAIL: CTRL EN readback",
+   "in_test": "1. register access",
+   "seconds": 0,
+   "id": 46
+  },
+  {
+   "name": "serial port: word flag ignored",
+   "status": "caught",
+   "first_failure": "FAIL: X0 readback",
+   "in_test": "1. register access",
+   "seconds": 0,
+   "id": 47
+  },
+  {
+   "name": "interrupt held by WERR (revision 3 behaviour)",
+   "status": "caught",
+   "first_failure": "FAIL: interrupt after a failed command not cleared by reading STAT",
+   "in_test": "5c. illegal code, exhaustive conversions",
+   "seconds": 82,
+   "id": 48
+  },
+  {
+   "name": "serial port: bit counter wraps on a long frame (revision 3 behaviour)",
+   "status": "caught",
+   "first_failure": "FAIL: clocks after the 8-byte frame were decoded as another frame",
+   "in_test": "5c. illegal code, exhaustive conversions",
+   "seconds": 85,
+   "id": 49
+  },
+  {
+   "name": "set pulses repeated on devices that already passed verify",
+   "status": "caught",
+   "first_failure": "FAIL: pulse on a device that had already passed verify (row 0, 63 times)",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 0,
+   "id": 50
+  },
+  {
+   "name": "reset pulses repeated on devices that already passed verify",
+   "status": "caught",
+   "first_failure": "FAIL: pulse on a device that had already passed verify (row 5, 210 times)",
+   "in_test": "5. error paths",
+   "seconds": 44,
+   "id": 51
+  },
+  {
+   "name": "set amplitude not restarted after the reset phase",
+   "status": "caught",
+   "first_failure": "FAIL: pulse amplitude did not start at 0 and rise by one per pulse (row 5, 8 pulses out of sequence)",
+   "in_test": "5. error paths",
+   "seconds": 45,
+   "id": 52
+  },
+  {
+   "name": "amplitude not restarted by a new program command",
+   "status": "caught",
+   "first_failure": "FAIL: pulse amplitude did not start at 0 and rise by one per pulse (row 5, 1 pulses out of sequence)",
+   "in_test": "5. error paths",
+   "seconds": 45,
+   "id": 53
+  },
+  {
+   "name": "PITER not restarted by a new program command",
+   "status": "caught",
+   "first_failure": "FAIL: PITER 30 differs from the 15 pulses the array received (row 1)",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 0,
+   "id": 54
+  },
+  {
+   "name": "accumulators not cleared by GO",
+   "status": "caught",
+   "first_failure": "FAIL: product 1 column 0: got 0 expected -7",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 6,
+   "id": 55
+  },
+  {
+   "name": "SAT not cleared by GO",
+   "status": "caught",
+   "first_failure": "FAIL: SAT not cleared by a digital product",
+   "in_test": "5c. illegal code, exhaustive conversions",
+   "seconds": 84,
+   "id": 56
+  },
+  {
+   "name": "SAT not cleared by a read-back command",
+   "status": "caught",
+   "first_failure": "FAIL: SAT not cleared by a read-back command",
+   "in_test": "5c. illegal code, exhaustive conversions",
+   "seconds": 85,
+   "id": 57
+  },
+  {
+   "name": "DONE not cleared by GO",
+   "status": "caught",
+   "first_failure": "FAIL: DONE not cleared by GO",
+   "in_test": "5c. illegal code, exhaustive conversions",
+   "seconds": 72,
+   "id": 58
+  },
+  {
+   "name": "DONE never set",
+   "status": "caught",
+   "first_failure": "FAIL: interrupt not raised after a product",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 23,
+   "id": 59
+  },
+  {
+   "name": "MODE changed while busy",
+   "status": "caught",
+   "first_failure": "FAIL: MODE changed while BUSY",
+   "in_test": "5b. directed tests: read reference, satu",
+   "seconds": 30,
+   "id": 60
+  },
+  {
+   "name": "read-back works without EN",
+   "status": "caught",
+   "first_failure": "FAIL: array accessed with EN = 0",
+   "in_test": "5b. directed tests: read reference, satu",
+   "seconds": 30,
+   "id": 61
+  },
+  {
+   "name": "serial port: a write frame also launches a read",
+   "status": "caught",
+   "first_failure": "FAIL: DONE cleared by a write to STAT",
+   "in_test": "5c. illegal code, exhaustive conversions",
+   "seconds": 71,
+   "id": 62
+  },
+  {
+   "name": "first row never read",
+   "status": "caught",
+   "first_failure": "FAIL: product 0 column 0: got 6 expected 7",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 5,
+   "id": 63
+  },
+  {
+   "name": "pulse limit one step short",
+   "status": "caught",
+   "first_failure": "FAIL: stuck device: 20 set pulses instead of the full ladder of 21",
+   "in_test": "5. error paths",
+   "seconds": 57,
+   "id": 64
+  },
+  {
+   "name": "read-back of an invalid cell returns +1",
+   "status": "caught",
+   "first_failure": "FAIL: read-back of a row with an invalid cell",
+   "in_test": "5. error paths",
+   "seconds": 42,
+   "id": 65
+  }
+ ]
+}

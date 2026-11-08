@@ -1,0 +1,23 @@
+0 caught | reset pulse: bit-line polarity of P devices inverted | FAIL: pulse on a device that had already passed verify (row 5, 235 times) | 46
+1 caught | reset pulse: source lines not at the program rail | FAIL: pulse on a device that had already passed verify (row 5, 434 times) | 46
+2 caught | set pulse: N bit lines follow the P mask | FAIL: pulse on a device that had already passed verify (row 0, 25 times) | 1
+3 caught | word line off and lines released in the same cycle (no WLOFF) | FAIL: pulse on a device that had already passed verify (row 0, 154 times) | 1
+4 caught | no settling time before the word line | FAIL: result changed by writes during BUSY, column 0 | 48
+5 caught | pulse one power of two too short | FAIL: 9017 electrical or timing violations at the macro interface | 429
+6 caught | sense time one power of two too short | FAIL: pulse on a device that had already passed verify (row 0, 30 times) | 1
+7 caught | set verify uses the mid reference | FAIL: device state after programming r1 c15 | 4
+8 caught | reset verify uses the mid reference | FAIL: 15 uA device passed the reset verify (15.0 uA after programming) | 46
+9 caught | read uses the set-target reference | FAIL: 30 uA device not read as LRS (got 0) | 46
+10 caught | second sampling flip-flop bypassed (samples after the word line) | FAIL: pulse on a device that had already passed verify (row 0, 53 times) | 1
+11 caught | sense outputs of P and N exchanged | FAIL: pulse on a device that had already passed verify (row 0, 154 times) | 1
+12 caught | word line of the neighbouring row | FAIL: pulse on another row than 0 | 1
+13 caught | pulses on the read rail | FAIL: PITER 21 differs from the 0 pulses the array received (row 0) | 1
+14 caught | pulse strobe never raised | FAIL: 72136 electrical or timing violations at the macro interface | 429
+15 caught | pulse kind output always set | FAIL: 3696 electrical or timing violations at the macro interface | 444
+16 caught | amplitude output one step high | FAIL: pulse amplitude did not start at 0 and rise by one per pulse (row 0, 14 pulses out of sequence) | 1
+17 caught | bit lines on the sense amplifiers during pulses | FAIL: 342646 electrical or timing violations at the macro interface | 439
+18 caught | lines left floating after an operation | FAIL: 7183224 electrical or timing violations at the macro interface | 430
+19 caught | no break before make when lines leave ground | FAIL: 4736947 electrical or timing violations at the macro interface | 423
+20 caught | no break before make when lines return to ground | FAIL: 4736947 electrical or timing violations at the macro interface | 425
+21 caught | flt dropped in the cycle the rails switch on | FAIL: 99767 electrical or timing violations at the macro interface | 431
+22 caught | lines float after reset | FAIL: 72 electrical or timing violations at the macro interface | 426

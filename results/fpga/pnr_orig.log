@@ -1,0 +1,761 @@
+ÿþdocker : Info: Using uarch 'gowin' for device 'GW1NR-LV9QN88PC6/I5'
+At line:1 char:77
++ ... ring(0,16); docker run --rm -e SEED=1 -v "${PWD}:/w" reram-eda bash / ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Info: Using uar...-LV9QN88PC6/I5':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Info: constraining clock net 'clk27' to 27.00 MHz
+Info: constraining clock net 'clk' to 13.50 MHz
+
+Info: Cell O_psram_ck[0] not found
+Info: Cell O_psram_ck[1] not found
+Info: Cell O_psram_ck_n[0] not found
+Info: Cell O_psram_ck_n[1] not found
+Info: Cell O_psram_cs_n[0] not found
+Info: Cell O_psram_cs_n[1] not found
+Info: Cell O_psram_reset_n[0] not found
+Info: Cell O_psram_reset_n[1] not found
+Info: Cell IO_psram_dq[0] not found
+Info: Cell IO_psram_dq[1] not found
+Info: Cell IO_psram_dq[2] not found
+Info: Cell IO_psram_dq[3] not found
+Info: Cell IO_psram_dq[4] not found
+Info: Cell IO_psram_dq[5] not found
+Info: Cell IO_psram_dq[6] not found
+Info: Cell IO_psram_dq[7] not found
+Info: Cell IO_psram_dq[8] not found
+Info: Cell IO_psram_dq[9] not found
+Info: Cell IO_psram_dq[10] not found
+Info: Cell IO_psram_dq[11] not found
+Info: Cell IO_psram_dq[12] not found
+Info: Cell IO_psram_dq[13] not found
+Info: Cell IO_psram_dq[14] not found
+Info: Cell IO_psram_dq[15] not found
+Info: Cell IO_psram_rwds[0] not found
+Info: Cell IO_psram_rwds[1] not found
+Info: Reading constraints...
+Info: Create constant nets...
+Info: Modify LUTs...
+Info: Pack IOBs...
+Info: Pack I3C IOs...
+Info: Pack MIPI IOs...
+Info: Pack diff IOBs...
+Info: Pack FFs into IO cells...
+Info: Pack IODELAY...
+Info: Pack Input Edge Monitors...
+Info: Pack IO logic...
+Info: Pack DESER16 logic...
+Info: Pack GSR...
+Info: Pack HCLK cells...
+Info: Pack DLLDLYs...
+Info: Pack wide LUTs...
+Info: Packed MUX2_LUT8:6, MUX2_LU7:17, MUX2_LUT6:80, MUX2_LUT5:420
+Info: Pack ALUs...
+Info: Pack SSRAMs...
+Info: Constrained 762 LUTFF pairs.
+Info: Pack PLL...
+Info: Pack ADC...
+Info: Pack GW JTAG...
+Info: Pack BSRAMs...
+Info: Pack DSP...
+Info: Pack INV...
+Info: Pack buffered nets...
+Info: Pack EMCU and UserFlash cells...
+Info: Pack UserFlash cells...
+Info: Pack DQCE cells...
+Info: Pack DCS cells...
+Info: Checksum: 0x744d2288
+
+Info: Device utilisation:
+Info: 	                 VCC:       1/      1   100%
+Info: 	                 IOB:      10/    276     3%
+Info: 	                LUT4:    7311/   8640    84%
+Info: 	              OSER16:       0/     80     0%
+Info: 	              IDES16:       0/     80     0%
+Info: 	            IOLOGICI:       0/    276     0%
+Info: 	            IOLOGICO:       0/    276     0%
+Info: 	           MUX2_LUT5:     696/   4320    16%
+Info: 	           MUX2_LUT6:     138/   2160     6%
+Info: 	           MUX2_LUT7:      29/   1080     2%
+Info: 	           MUX2_LUT8:       6/   1080     0%
+Info: 	                 ALU:    2458/   6480    37%
+Info: 	                 GND:       1/      1   100%
+Info: 	                 DFF:    1979/   6480    30%
+Info: 	           RAM16SDP4:       0/    270     0%
+Info: 	               BSRAM:       5/     26    19%
+Info: 	              ALU54D:       0/     10     0%
+Info: 	     MULTADDALU18X18:       0/     10     0%
+Info: 	        MULTALU18X18:       0/     10     0%
+Info: 	        MULTALU36X18:       0/     10     0%
+Info: 	           MULT36X36:       0/      5     0%
+Info: 	           MULT18X18:       2/     20    10%
+Info: 	             MULT9X9:       0/     40     0%
+Info: 	              PADD18:       0/     20     0%
+Info: 	               PADD9:       0/     40     0%
+Info: 	                 GSR:       1/      1   100%
+Info: 	                 OSC:       0/      1     0%
+Info: 	                rPLL:       1/      2    50%
+Info: 	           FLASH608K:       0/      1     0%
+Info: 	                BUFG:       0/     22     0%
+Info: 	                DQCE:       0/     24     0%
+Info: 	                 DCS:       0/      8     0%
+Info: 	               DHCEN:       0/     24     0%
+Info: 	              CLKDIV:       0/      8     0%
+Info: 	             CLKDIV2:       0/     16     0%
+Info: 	           MIPI_IBUF:       0/     22     0%
+Info: 	           MIPI_OBUF:       0/     20     0%
+
+Info: Running custom HCLK placer...
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 5441 cells, random placement wirelen = 207796.
+Info:     at initial placer iter 0, wirelen = 1859
+Info:     at initial placer iter 1, wirelen = 2008
+Info:     at initial placer iter 2, wirelen = 1658
+Info:     at initial placer iter 3, wirelen = 1667
+Info: Running main analytical placer, max placement attempts per cell = 19990164.
+Info:     at iteration #1, type ALL: wirelen solved = 1640, spread = 68560, legal = 180836; time = 5.63s
+Info:     at iteration #2, type ALL: wirelen solved = 2996, spread = 49990, legal = 151926; time = 2.93s
+Info:     at iteration #3, type ALL: wirelen solved = 7810, spread = 47043, legal = 118479; time = 2.85s
+Info:     at iteration #4, type ALL: wirelen solved = 10994, spread = 40862, legal = 123265; time = 1.99s
+Info:     at iteration #5, type ALL: wirelen solved = 12399, spread = 42126, legal = 116306; time = 1.96s
+Info:     at iteration #6, type ALL: wirelen solved = 14341, spread = 41740, legal = 112561; time = 2.04s
+Info:     at iteration #7, type ALL: wirelen solved = 16278, spread = 42304, legal = 112794; time = 1.89s
+Info:     at iteration #8, type ALL: wirelen solved = 17876, spread = 43500, legal = 109638; time = 1.57s
+Info:     at iteration #9, type ALL: wirelen solved = 18942, spread = 43873, legal = 100492; time = 1.54s
+Info:     at iteration #10, type ALL: wirelen solved = 21359, spread = 35616, legal = 93486; time = 1.52s
+Info:     at iteration #11, type ALL: wirelen solved = 21590, spread = 40510, legal = 94114; time = 1.59s
+Info:     at iteration #12, type ALL: wirelen solved = 23223, spread = 42526, legal = 95824; time = 1.13s
+Info:     at iteration #13, type ALL: wirelen solved = 25125, spread = 39408, legal = 84862; time = 1.59s
+Info:     at iteration #14, type ALL: wirelen solved = 25716, spread = 42114, legal = 80887; time = 1.06s
+Info:     at iteration #15, type ALL: wirelen solved = 26503, spread = 41479, legal = 84722; time = 1.31s
+Info:     at iteration #16, type ALL: wirelen solved = 27250, spread = 41572, legal = 79609; time = 1.16s
+Info:     at iteration #17, type ALL: wirelen solved = 28881, spread = 42248, legal = 82467; time = 1.02s
+Info:     at iteration #18, type ALL: wirelen solved = 30438, spread = 45825, legal = 76774; time = 1.14s
+Info:     at iteration #19, type ALL: wirelen solved = 31528, spread = 45144, legal = 71882; time = 0.94s
+Info:     at iteration #20, type ALL: wirelen solved = 31234, spread = 42647, legal = 68028; time = 1.12s
+Info:     at iteration #21, type ALL: wirelen solved = 31524, spread = 47105, legal = 79651; time = 0.85s
+Info:     at iteration #22, type ALL: wirelen solved = 35978, spread = 49634, legal = 78280; time = 0.92s
+Info:     at iteration #23, type ALL: wirelen solved = 37053, spread = 50942, legal = 72829; time = 0.87s
+Info:     at iteration #24, type ALL: wirelen solved = 37892, spread = 49008, legal = 68656; time = 1.07s
+Info:     at iteration #25, type ALL: wirelen solved = 37935, spread = 46842, legal = 68506; time = 1.14s
+Info: HeAP Placer Time: 41.68s
+Info:   of which solving equations: 2.06s
+Info:   of which spreading cells: 0.30s
+Info:   of which strict legalisation: 38.74s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 264, wirelen = 68028
+Info:   at iteration #5: temp = 0.000000, timing cost = 104, wirelen = 48054
+Info:   at iteration #10: temp = 0.000000, timing cost = 109, wirelen = 43774
+Info:   at iteration #15: temp = 0.000000, timing cost = 94, wirelen = 42018
+Info:   at iteration #20: temp = 0.000000, timing cost = 88, wirelen = 40960
+Info:   at iteration #25: temp = 0.000000, timing cost = 90, wirelen = 40326
+Info:   at iteration #30: temp = 0.000000, timing cost = 90, wirelen = 40082
+Info:   at iteration #35: temp = 0.000000, timing cost = 90, wirelen = 40013
+Info:   at iteration #37: temp = 0.000000, timing cost = 90, wirelen = 40003 
+Info: SA placement time 17.39s
+
+Info: Max frequency for clock 'clk': 36.02 MHz (PASS at 13.50 MHz)
+
+Info: Slack histogram:
+Info:  legend: * represents 8 endpoint(s)
+Info:          + represents [1,8) endpoint(s)
+Info: [ 46314,  47667) |*+
+Info: [ 47667,  49020) |+
+Info: [ 49020,  50373) |+
+Info: [ 50373,  51726) |+
+Info: [ 51726,  53079) |*********+
+Info: [ 53079,  54432) |********************************+
+Info: [ 54432,  55785) |************************************+
+Info: [ 55785,  57138) |***************+
+Info: [ 57138,  58491) |************************************+
+Info: [ 58491,  59844) |*********************************+
+Info: [ 59844,  61197) |************************************+
+Info: [ 61197,  62550) |***********************************+
+Info: [ 62550,  63903) |************************+
+Info: [ 63903,  65256) |************************************************************ 
+Info: [ 65256,  66609) |*******************************************+
+Info: [ 66609,  67962) |*********************************************************+
+Info: [ 67962,  69315) |****+
+Info: [ 69315,  70668) |******************************+
+Info: [ 70668,  72021) |***+
+Info: [ 72021,  73374) |*******+
+Info: Checksum: 0x5cb95307
+Info: Routing globals...
+Info:     'clk' net was routed using global resources only.
+Info:     'clk27_IBUF_I_O' net was routed using global resources only.
+Info:     'led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_LUT4_I1_I2_DFFCE_Q_CE_LUT3_F_I1[0]' is 
+routed using segments.
+Info:     'u_emu.mem.0.0_DOB_LUT3_I2_F_ALU_I1_I0_ALU_SUM_I1_DFFPE_Q_D_DFFCE_D_Q_DFFCE_Q_D_LUT4_F_I3_DFFCE_Q_D
+_ALU_SUM_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM' is routed using 
+segments.
+Info:     'u_emu.mem.0.0_DOB_LUT3_I2_F_ALU_I1_I0_ALU_SUM_I1_DFFPE_Q_D_DFFCE_D_Q_DFFCE_Q_D_LUT4_F_I3_DFFCE_Q_D
+_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM' is routed using segments.
+Info:     
+'led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_LUT2_F_I1_LUT3_F_I2_LUT4_F_I3[1]' is 
+routed using segments.
+Info:     'led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q_DFFCE_Q_1_D_LUT3_F_I2_LU
+T3_F_I0_LUT4_F_1_I3_LUT4_F_1_I1[2]' is routed using segments.
+Info:     'led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q_DFFCE_Q_1_D_LUT3_F_I2_LU
+T3_F_I0_LUT4_F_3_I3_LUT4_F_2_I0[2]' is routed using segments.
+Info:     'led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q_LUT2_F_1_I0_DFFCE_D_Q_LU
+T4_I0_F_LUT4_F_I0[2]' is routed using segments.
+Info:     'led_n_OBUF_O_4_I_LUT2_F_I1_DFFCE_Q_D_LUT2_F_I0_LUT3_I1_F_LUT3_I0_F_DFFCE_D_CE' is routed using 
+segments.
+Info:     'u_emu.mem.0.0_DOB_LUT3_I2_F_ALU_I1_SUM_ALU_SUM_1_COUT_ALU_CIN_SUM_ALU_SUM_1_COUT_ALU_CIN_SUM_ALU_I
+0_1_COUT_ALU_CIN_SUM_LUT2_F_I1_LUT4_I0_I3_LUT3_I2_I0_LUT2_I0_F_DFFCE_CE_D_LUT4_I3_F[1]' is routed using 
+segments.
+Info:     'led_n_OBUF_O_4_I_LUT2_F_I1_LUT2_I1_F_DFFCE_D_Q_DFFCE_Q_D_LUT3_F_I2_DFFCE_Q_D_LUT2_F_I1_ALU_SUM_COU
+T_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU
+_CIN_COUT_ALU_CIN_SUM_LUT2_I1_F_DFFCE_D_Q_LUT4_F_I2_LUT3_F_I1_LUT4_I0_F_DFFCE_Q_1_D_LUT3_F_I1_LUT3_I2_F_DFFCE
+_D_Q_DFFCE_Q_D_LUT3_F_I2_LUT3_I2_F_DFFCE_D_Q_DFFCE_Q_D_LUT3_F_I2_LUT3_I2_F_DFFCE_D_Q_LUT3_I0_1_F_LUT4_I2_F_LU
+T3_I2_F_DFFCE_D_Q_DFFCE_Q_D_LUT3_F_I0_LUT4_I1_F_DFFCE_Q_D_LUT2_I0_F_DFFCE_D_Q_DFFCE_D_Q[2]' is routed using 
+segments.
+Info:     'led_n_OBUF_O_3_I_DFFCE_D_CE_LUT3_I0_F_DFFC_D_Q_LUT2_F_I1_DFFCE_Q_CE_LUT3_F_I2_LUT3_I2_F_DFFCE_CE_Q
+_DFFCE_D_Q[2]' is routed using segments.
+Info:     'u_emu.mem.0.0_DOB_LUT3_I2_F_ALU_I1_I0_ALU_SUM_I1_DFFPE_Q_D_DFFCE_D_Q_DFFCE_Q_D_LUT4_F_I3_DFFCE_Q_D
+_ALU_SUM_COUT_ALU_CIN_SUM' is routed using segments.
+Info:     'u_emu.mem.0.0_DOB_LUT3_I2_F_ALU_I1_I0_ALU_SUM_I1_DFFPE_Q_D_DFFCE_D_Q_DFFCE_Q_D_LUT4_F_I3_DFFCE_Q_D
+_ALU_SUM_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM' is routed using segments.
+Info:     
+'led_n_OBUF_O_4_I_LUT2_F_I1_DFFCE_Q_CE_LUT2_I1_F_LUT4_I3_I1_LUT3_I1_F_LUT4_I0_F_MUX2_LUT5_I0_O_DFFCE_D_CE' 
+is routed using segments.
+Info:     'led_n_OBUF_O_4_I_LUT2_F_I1_DFFCE_Q_D_LUT2_F_I1_LUT3_I0_F_LUT3_I2_F_DFFCE_D_CE' is routed using 
+segments.
+Info:     'led_n_OBUF_O_4_I_LUT2_F_I1_LUT2_I1_F_DFFCE_D_Q_DFFCE_Q_D_LUT3_F_I2_DFFCE_Q_D_LUT2_F_I1_ALU_SUM_COU
+T_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU
+_CIN_COUT_ALU_CIN_SUM_LUT2_I1_F_DFFCE_D_Q_LUT4_F_I2_LUT3_F_I1_LUT4_I0_F_DFFCE_Q_1_D_LUT3_F_I1_LUT3_I2_F_DFFCE
+_D_Q_DFFCE_Q_D_LUT3_F_I2_LUT3_I2_F_DFFCE_D_Q_DFFCE_Q_D_LUT3_F_I2_LUT3_I2_F_DFFCE_D_Q_LUT3_I0_F_DFFCE_D_Q_DFFC
+E_D_Q_LUT4_I1_F_LUT4_F_2_I1_DFFCE_Q_D_DFFCE_Q_D_LUT3_F_I0_LUT3_I0_F_LUT4_I2_F_LUT3_I2_I0_LUT4_I1_I0_LUT3_I0_F
+_DFFCE_D_Q_LUT4_I1_F_MUX2_LUT5_O_I0_LUT3_F_I1_DFFCE_Q_D_LUT4_I1_F_LUT3_I2_F[1]' is routed using segments.
+Info:     'u_emu.mem.0.0_DOB_LUT3_I2_F_ALU_I1_I0_ALU_SUM_I1_DFFPE_Q_D_DFFCE_D_Q_DFFCE_Q_D_LUT4_F_I3_DFFCE_Q_D
+_ALU_SUM_CIN_ALU_COUT_CIN_ALU_COUT_SUM' is routed using segments.
+Info:     'u_emu.mem.0.0_DOB_LUT3_I2_F_ALU_I1_I0_ALU_SUM_I1_DFFPE_Q_D_DFFCE_D_Q_DFFCE_Q_D_LUT4_F_I3_DFFCE_Q_D
+_ALU_SUM_CIN_ALU_COUT_SUM' is routed using segments.
+Info:     'u_emu.mem.0.0_DOB_LUT3_I2_F_ALU_I1_I0_ALU_SUM_I1_DFFPE_Q_D_DFFCE_D_Q_DFFCE_Q_D_LUT4_F_I3_DFFCE_Q_D
+_ALU_SUM_COUT_ALU_CIN_COUT_ALU_CIN_SUM' is routed using segments.
+Info:     
+'u_emu.mem.0.0_DOB_LUT3_I2_F_ALU_I1_I0_ALU_SUM_I1_DFFPE_Q_D_DFFCE_D_Q_DFFCE_Q_D_LUT4_F_I3_DFFCE_Q_D' is 
+routed using segments.
+Info:     'u_emu.mem.0.0_DOB_LUT3_I2_F_ALU_I1_SUM_ALU_SUM_1_COUT_ALU_CIN_SUM_ALU_SUM_1_COUT_ALU_CIN_SUM_ALU_I
+0_1_COUT_ALU_CIN_SUM_LUT2_F_I1_LUT4_I0_I3_LUT3_I2_I0_LUT3_I1_F[2]' is routed using segments.
+Info:     'u_emu.mem.0.0_DOB_LUT3_I2_F_ALU_I1_I0_ALU_SUM_I1_DFFPE_Q_D_DFFCE_D_Q_LUT4_F_I3_ALU_I1_COUT_ALU_CIN
+_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM_LUT3_F_I2[2]' is routed using segments.
+Info:     'led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q_DFFCE_Q_D_LUT4_F_I1_LUT3
+_F_I2_LUT2_I1_F_LUT2_F_I1_LUT2_F_I1[0]' is routed using segments.
+Info:     'led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q_DFFCE_Q_D_LUT4_F_I1_LUT3
+_F_I2_LUT2_I1_F_LUT2_F_I1_LUT2_F_I1_LUT2_I1_F_LUT3_F_I2_LUT4_I2_F_LUT4_I2_F_DFFCE_CE_2_Q_LUT1_I0_F' is 
+routed using segments.
+Info:     'u_emu.mem.0.0_DOB_LUT3_I2_F_ALU_I1_I0_ALU_SUM_I1_DFFPE_Q_D_DFFCE_D_Q_DFFCE_Q_D_LUT4_F_I3_DFFCE_Q_D
+_ALU_SUM_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM' is routed using segments.
+Info:     'led_n_OBUF_O_4_I_LUT2_F_I1_LUT2_I1_F_DFFCE_D_Q_DFFCE_Q_D_LUT3_F_I2_DFFCE_Q_D_LUT2_F_I1_ALU_SUM_COU
+T_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU
+_CIN_COUT_ALU_CIN_SUM_LUT2_I1_F_DFFCE_D_Q_LUT4_F_I2_LUT3_F_I1_LUT4_I0_F_DFFCE_Q_1_D_LUT3_F_I1_LUT3_I2_F_DFFCE
+_D_Q_DFFCE_Q_D_LUT3_F_I2_LUT3_I2_F_DFFCE_D_Q_DFFCE_Q_D_LUT3_F_I2_LUT3_I2_F_DFFCE_D_Q_LUT3_I0_1_F_LUT4_I2_F_LU
+T3_I2_F_DFFCE_D_Q_DFFCE_Q_D_LUT3_F_I0_LUT4_I1_1_F_DFFCE_Q_D[1]' is routed using segments.
+Info:     'led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q_DFFCE_Q_D_LUT4_F_I1_LUT3
+_F_I2_LUT2_I1_F_LUT2_F_I1_LUT2_I0_F_DFFCE_D_CE_LUT4_F_I3_LUT3_F_I1_LUT3_I0_F_LUT2_I0_F' is routed using 
+segments.
+Info:     'u_emu.mem.0.0_DOB_LUT3_I2_F_ALU_I1_I0_ALU_SUM_I1_DFFPE_Q_D_DFFCE_D_Q_DFFCE_Q_D_LUT4_F_I3_DFFCE_Q_D
+_ALU_SUM_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM' is routed using segments.
+Info:     'led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q_DFFCE_Q_1_D_LUT3_F_I2_LU
+T3_F_I0_LUT4_F_1_I3_LUT4_F_2_I1[2]' is routed using segments.
+Info:     'led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_LUT4_I1_F_LUT4_F_2_I1_LUT4_I1_I2[3]' is 
+routed using segments.
+Info:     'u_rx.rx_DFFP_D_Q_DFFP_D_Q[0]' is routed using segments.
+Info:     'led_n_OBUF_O_3_I_DFFCE_D_CE_LUT3_I0_F_DFFC_D_Q_LUT2_F_I1_DFFCE_Q_CE_LUT3_F_I2_LUT2_F_I1_DFFCE_D_Q_
+DFFCE_Q_1_D_LUT3_I2_F_LUT3_I2_1_F_LUT3_F_I2_DFFCE_Q_D_LUT2_I1_F[0]' is routed using segments.
+Info:     'led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q_DFFCE_Q_D_LUT4_F_I1_LUT3
+_F_I2_LUT2_I1_F_LUT2_F_I1_LUT2_I0_F_DFFCE_D_CE_LUT4_F_I3_LUT3_F_I1_LUT3_I0_F_LUT4_I3_F' is routed using 
+segments.
+Info:     
+'led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_LUT2_F_I1_LUT3_F_I2_LUT4_F_I3[2]' is 
+routed using segments.
+Info:     
+'led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_LUT2_F_I1_LUT3_F_I2_LUT4_F_I3[0]' is 
+routed using segments.
+Info:     'led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_LUT4_I1_I2_DFFCE_Q_CE_LUT3_F_I1[1]' is 
+routed using segments.
+Info:     'u_emu.q_q_DFF_Q_1_D_LUT4_F_I2_LUT3_F_I0[0]' is routed using segments.
+Info:     'led_n_OBUF_O_4_I_LUT2_F_I1_LUT2_I1_F_DFFCE_D_Q_DFFCE_Q_D_LUT3_F_I2_DFFCE_Q_D_LUT2_F_I1_ALU_SUM_CIN
+_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT2_I1_F_DFFCE_D_Q_LUT4_F_1_I3_LUT4_F_1_I3
+_LUT4_F_I2_LUT4_I3_F_LUT4_F_I3_LUT4_F_1_I3_LUT4_F_1_I3_LUT4_F_2_I3_LUT4_F_2_I3[1]' is routed using segments.
+Info:     'led_n_OBUF_O_4_I_LUT2_F_I1_DFFCE_Q_CE_LUT2_F_I1_LUT3_I1_F_DFFCE_D_Q[3]' is routed using segments.
+Info:     'led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q_DFFCE_Q_D_LUT4_F_I1_LUT3
+_F_I2_LUT2_I1_F_LUT2_F_I1_LUT2_F_I1_LUT2_I1_F_LUT3_F_I2_LUT4_I2_F_LUT4_I2_F_DFFCE_CE_1_Q[1]' is routed using 
+segments.
+Info:     'led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q_DFFCE_Q_D_LUT4_F_I1_LUT3
+_F_I2_LUT2_I1_F_LUT2_F_I1_LUT2_I0_F_DFFCE_D_Q_LUT3_I2_F[1]' is routed using segments.
+Info:     'u_emu.mem.0.0_DOB_LUT3_I2_F_ALU_I1_SUM_ALU_SUM_1_COUT_ALU_CIN_SUM_ALU_SUM_1_COUT_ALU_CIN_SUM_ALU_I
+0_3_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_SUM_LUT4_I3_F' is routed using segments.
+Info:     'u_emu.mem.0.0_DOB_LUT3_I2_F_ALU_I1_SUM_ALU_SUM_1_COUT_ALU_CIN_SUM_ALU_SUM_1_COUT_ALU_CIN_SUM_ALU_I
+0_3_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_CIN_ALU_COUT_S
+UM_LUT2_I1_F' is routed using segments.
+Info:     'led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q_DFFCE_Q_D_LUT4_F_I1_LUT3
+_F_I2_LUT2_I1_F_LUT2_F_I1_LUT2_F_I1_LUT2_I1_F_LUT3_F_I2[1]' is routed using segments.
+Info:     'led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q[1]' is routed using 
+segments.
+Info:     'led_n_OBUF_O_4_I_LUT2_F_I1_DFFCE_Q_D_LUT2_F_I1_LUT3_I0_F_LUT3_I2_F_DFFCE_D_Q[1]' is routed using 
+segments.
+Info:     'led_n_OBUF_O_4_I_LUT2_F_I1_DFFCE_Q_D_LUT2_F_I1_LUT3_I0_F_LUT3_I2_F_DFFCE_D_Q[2]' is routed using 
+segments.
+Info:     'led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q_DFFCE_Q_D_LUT4_F_I1_LUT3
+_F_I2_LUT2_I1_F_LUT2_F_I1_LUT2_F_I1_LUT2_I1_F_LUT3_F_I2_LUT4_I2_F_LUT4_I2_F_DFFCE_CE_2_Q' is routed using 
+segments.
+Info:     'u_emu.mem.0.0_DOB_LUT3_I2_F_ALU_I1_I0_ALU_SUM_I1_DFFPE_Q_D_DFFCE_D_Q_DFFCE_Q_D_LUT4_F_I3_DFFCE_Q_C
+E_LUT4_F_I2[2]' is routed using segments.
+Info:     'led_n_OBUF_O_3_I_DFFCE_D_CE_LUT3_I0_F_DFFC_D_Q_LUT2_F_I1_DFFCE_Q_CE_LUT3_F_I2_LUT2_F_I1_DFFCE_D_Q_
+DFFCE_Q_1_D_LUT3_I2_F_LUT3_I2_1_F_LUT2_F_I0[1]' is routed using segments.
+Info:     
+'led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q_DFFCE_Q_D_LUT4_F_I1_LUT3_F_I2[0]' 
+is routed using segments.
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 29399 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:       1000 |       16        983 |   16   983 |     28432|       0.46       0.46|
+Info:       2000 |       21       1978 |    5   995 |     27442|       0.32       0.78|
+Info:       3000 |       58       2941 |   37   963 |     26494|       0.37       1.15|
+Info:       4000 |       97       3849 |   39   908 |     25556|       0.29       1.44|
+Info:       5000 |      160       4761 |   63   912 |     24654|       0.27       1.71|
+Info:       6000 |      191       5417 |   31   656 |     23690|       0.13       1.84|
+Info:       7000 |      218       5970 |   27   553 |     22724|       0.11       1.95|
+Info:       8000 |      222       6833 |    4   863 |     21729|       0.28       2.23|
+Info:       9000 |      224       7696 |    2   863 |     20731|       0.24       2.47|
+Info:      10000 |      233       8560 |    9   864 |     19743|       0.25       2.71|
+Info:      11000 |      238       9433 |    5   873 |     18750|       0.25       2.96|
+Info:      12000 |      249      10278 |   11   845 |     17763|       0.30       3.26|
+Info:      13000 |      266      11141 |   17   863 |     16783|       0.32       3.58|
+Info:      14000 |      275      11993 |    9   852 |     15792|       0.31       3.89|
+Info:      15000 |      288      12856 |   13   863 |     14808|       0.32       4.21|
+Info:      16000 |      298      13712 |   10   856 |     13820|       0.32       4.53|
+Info:      17000 |      334      14557 |   36   845 |     12868|       0.39       4.93|
+Info:      18000 |      365      15399 |   31   842 |     11912|       0.36       5.28|
+Info:      19000 |      422      16218 |   57   819 |     10999|       0.40       5.69|
+Info:      20000 |      471      17031 |   49   813 |     10063|       0.42       6.10|
+Info:      21000 |      534      17839 |   63   808 |      9157|       0.50       6.60|
+Info:      22000 |      593      18650 |   59   811 |      8256|       0.49       7.09|
+Info:      23000 |      663      19441 |   70   791 |      7360|       0.56       7.65|
+Info:      24000 |      750      20236 |   87   795 |      6470|       0.51       8.17|
+Info:      25000 |      839      21032 |   89   796 |      5627|       0.49       8.66|
+Info:      26000 |      969      21799 |  130   767 |      4864|       0.60       9.26|
+Info:      27000 |     1107      22549 |  138   750 |      4069|       0.57       9.83|
+Info:      28000 |     1256      23309 |  149   760 |      3295|       0.62      10.45|
+Info:      29000 |     1399      24075 |  143   766 |      2550|       0.63      11.09|
+Info:      30000 |     1549      24814 |  150   739 |      1775|       0.69      11.77|
+Info:      31000 |     1754      25524 |  205   710 |      1138|       0.83      12.61|
+Info:      32000 |     1942      26241 |  188   717 |       404|       0.77      13.38|
+Info:      32587 |     2050      26674 |  108   433 |         0|       0.52      13.90|
+Info: Routing complete.
+Info: Router1 time 13.90s
+Info: Checksum: 0xcef19006
+
+Info: Critical path report for clock 'clk' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  0.46  0.46 Source por_DFFRE_Q_6.Q
+Info:    routing  0.41  0.87 Net por[1] (15,7) -> (15,8)
+Info:                          Sink por_LUT4_I3.I1
+Info:      logic  1.10  1.97 Source por_LUT4_I3.F
+Info:    routing  0.00  1.97 Net por_LUT4_I3_F (15,8) -> (15,8)
+Info:                          Sink por_LUT4_I3_F_MUX2_LUT5_I1.I1
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:171.43-171.68
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:165.42-165.67
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:159.41-159.66
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:151.13-151.15
+Info:      logic  0.50  2.47 Source por_LUT4_I3_F_MUX2_LUT5_I1.O
+Info:    routing  0.00  2.47 Net por_LUT4_I3_F_MUX2_LUT5_I1_O (15,8) -> (15,8)
+Info:                          Sink por_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I1.I1
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:171.43-171.68
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:165.42-165.67
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:157.13-157.15
+Info:      logic  0.50  2.97 Source por_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I1.O
+Info:    routing  0.00  2.97 Net por_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I1_O (15,8) -> (15,8)
+Info:                          Sink por_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I1_O_MUX2_LUT7_I1.I1
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:171.43-171.68
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:163.13-163.15
+Info:      logic  0.50  3.47 Source por_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I1_O_MUX2_LUT7_I1.O
+Info:    routing  0.00  3.47 Net por_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I1_O_MUX2_LUT7_I1_O (15,8) -> (15,8)
+Info:                          Sink 
+por_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I1_O_MUX2_LUT7_I1_O_MUX2_LUT8_I1.I1
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:169.13-169.15
+Info:      logic  0.50  3.97 Source por_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I1_O_MUX2_LUT7_I1_O_MUX2_LUT8_I1.O
+Info:    routing  3.69  7.66 Net por_LUT4_I3_F_MUX2_LUT5_I1_O_MUX2_LUT6_I1_O_MUX2_LUT7_I1_O_MUX2_LUT8_I1_O 
+(15,8) -> (3,26)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_DFFCE_Q_D_LUT2_F_I0_DFFCE_D.CLEAR
+Info:      logic  1.86  9.52 Source led_n_OBUF_O_4_I_LUT2_F_I1_DFFCE_Q_D_LUT2_F_I0_DFFCE_D.Q
+Info:    routing  2.24  11.77 Net led_n_OBUF_O_4_I_LUT2_F_I1_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q[0] (3,26) -> 
+(9,20)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2.I0
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  1.03  12.80 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2.F
+Info:    routing  1.12  13.92 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_F[3] (9,20) -> (9,13)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3.I3
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.62  14.55 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3.F
+Info:    routing  0.41  14.96 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_1_F[1] (9,13) -> (9,13)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3_F_MUX2_LUT5_O_I0_LUT4_F.I1
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  1.10  16.06 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3_F_MUX2_LUT5_O_I0_LUT4_F.F
+Info:    routing  0.00  16.06 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_F_LUT4_I3_F_MUX2_LUT5_O_I0 (9,13) -> (9,13)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3_F_MUX2_LUT5_O.I0
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:151.9-151.11
+Info:      logic  0.47  16.53 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3_F_MUX2_LUT5_O.O
+Info:    routing  2.17  18.70 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_2_F_LUT3_I2_F_LUT4_I3_F[0] (9,13) -> (9,13)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_2_F_LUT3_I2_F_LUT4_I3_F_MUX2_LUT5_O.S0
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.18  18.88 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_2_F_LUT3_I2_F_LUT4_I3_F_MUX2_LUT5_O.O
+Info:    routing  0.81  19.68 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_2_F_LUT3_I2_F_LUT4_I3_F[1] (9,13) -> (9,12)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM_MUX2_LUT5_O_I1_LUT4
+_F.I1
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  1.10  20.78 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM_MUX2_LUT5_O_I1_LUT
+4_F.F
+Info:    routing  0.00  20.78 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM_MUX2_LUT5_O_I1 
+(9,12) -> (9,12)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM_MUX2_LUT5_O.I1
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:151.13-151.15
+Info:      logic  0.50  21.28 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM_MUX2_LUT5_O.O
+Info:    routing  0.48  21.76 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_2_F_LUT3_I2_1_F[0] (9,12) -> (9,12)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM_MUX2_L
+UT5_O_I1_LUT4_F.I1
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  1.10  22.86 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM_MUX2_
+LUT5_O_I1_LUT4_F.F
+Info:    routing  0.00  22.86 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM_MUX2_LUT
+5_O_I1 (9,12) -> (9,12)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM_MUX2_L
+UT5_O.I1
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:151.13-151.15
+Info:      logic  0.50  23.36 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM_MUX2_
+LUT5_O.O
+Info:    routing  0.89  24.25 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM[2] 
+(9,12) -> (9,11)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SU
+M.I1
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.73  24.98 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_S
+UM.SUM
+Info:    routing  0.00  24.98 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN
+_SUM[0] (9,11) -> (9,11)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM_COUT_ALU_CIN_C
+OUT_ALU_CIN_SUM_MUX2_LUT5_O_I1_LUT4_F.I0
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  1.03  26.01 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM_COUT_ALU_CIN_
+COUT_ALU_CIN_SUM_MUX2_LUT5_O_I1_LUT4_F.F
+Info:    routing  0.00  26.01 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM_COUT_ALU_CIN_COU
+T_ALU_CIN_SUM_MUX2_LUT5_O_I1 (9,11) -> (9,11)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM_COUT_ALU_CIN_C
+OUT_ALU_CIN_SUM_MUX2_LUT5_O.I1
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:151.13-151.15
+Info:      logic  0.50  26.51 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM_COUT_ALU_CIN_
+COUT_ALU_CIN_SUM_MUX2_LUT5_O.O
+Info:    routing  0.89  27.40 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM_COUT_ALU_CIN_COU
+T_ALU_CIN_SUM[3] (9,11) -> (10,10)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM_COUT_ALU_CIN_C
+OUT_ALU_CIN_COUT_ALU_CIN_SUM_LUT4_F.I0
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  1.03  28.43 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM_COUT_ALU_CIN_
+COUT_ALU_CIN_COUT_ALU_CIN_SUM_LUT4_F.F
+Info:    routing  0.48  28.91 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM_COUT_ALU_CIN_COU
+T_ALU_CIN_COUT_ALU_CIN_SUM[2] (10,10) -> (10,8)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM_COUT_ALU_CIN_C
+OUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM.I0
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.96  29.87 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM_COUT_ALU_CIN_
+COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM.COUT
+Info:    routing  0.00  29.87 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM_COUT_ALU_CIN_COU
+T_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM_COUT (10,8) -> (10,8)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM_COUT_ALU_CIN_C
+OUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM.CIN
+Info:                          Defined in:
+Info:                               rtl/tcim_pkg.sv:54.49-54.56
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.56  30.43 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM_COUT_ALU_CIN_
+COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM.SUM
+Info:    routing  0.41  30.85 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT2_I1_F_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_SUM_ALU_SUM_COUT_ALU_CIN_COU
+T_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_SUM[3] (10,8) -> (9,8)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT4_I0_F_LUT4_I2_F_MUX2_LUT5_I0_O_LUT4_I3_F_LUT4_F_I2_LUT2_I1_F_LUT2
+_I1_F_LUT2_I1_F_LUT4_F_I3_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_I0_MUX2_LUT5_O_I1_LUT4_F.I3
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.62  31.47 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT4_I0_F_LUT4_I2_F_MUX2_LUT5_I0_O_LUT4_I3_F_LUT4_F_I2_LUT2_I1_F_LUT
+2_I1_F_LUT2_I1_F_LUT4_F_I3_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_I0_MUX2_LUT5_O_I1_LUT4_F.F
+Info:    routing  0.00  31.47 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT4_I0_F_LUT4_I2_F_MUX2_LUT5_I0_O_LUT4_I3_F_LUT4_F_I2_LUT2_I1_F_LUT2_I
+1_F_LUT2_I1_F_LUT4_F_I3_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_I0_MUX2_LUT5_O_I1 (9,8) -> (9,8)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT4_I0_F_LUT4_I2_F_MUX2_LUT5_I0_O_LUT4_I3_F_LUT4_F_I2_LUT2_I1_F_LUT2
+_I1_F_LUT2_I1_F_LUT4_F_I3_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_I0_MUX2_LUT5_O.I1
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:151.13-151.15
+Info:      logic  0.50  31.97 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT4_I0_F_LUT4_I2_F_MUX2_LUT5_I0_O_LUT4_I3_F_LUT4_F_I2_LUT2_I1_F_LUT
+2_I1_F_LUT2_I1_F_LUT4_F_I3_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_I0_MUX2_LUT5_O.O
+Info:    routing  0.41  32.38 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT4_I0_F_LUT4_I2_F_MUX2_LUT5_I0_O_LUT4_I3_F_LUT4_F_I2_LUT2_I1_F_LUT2_I
+1_F_LUT2_I1_F_LUT4_F_I3_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_I0 (9,8) -> (9,7)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT4_I0_F_LUT4_I2_F_MUX2_LUT5_I0_O_LUT4_I3_F_LUT4_F_I2_LUT2_I1_F_LUT2
+_I1_F_LUT2_I1_F_LUT4_F_I3_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN.I0
+Info:      logic  0.96  33.34 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT4_I0_F_LUT4_I2_F_MUX2_LUT5_I0_O_LUT4_I3_F_LUT4_F_I2_LUT2_I1_F_LUT
+2_I1_F_LUT2_I1_F_LUT4_F_I3_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  33.34 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT4_I0_F_LUT4_I2_F_MUX2_LUT5_I0_O_LUT4_I3_F_LUT4_F_I2_LUT2_I1_F_LUT2_I
+1_F_LUT2_I1_F_LUT4_F_I3_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT (9,7) -> (10,7)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT4_I0_F_LUT4_I2_F_MUX2_LUT5_I0_O_LUT4_I3_F_LUT4_F_I2_LUT2_I1_F_LUT2
+_I1_F_LUT2_I1_F_LUT4_F_I3_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/tcim_core.sv:139.47-139.64
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.06  33.40 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT4_I0_F_LUT4_I2_F_MUX2_LUT5_I0_O_LUT4_I3_F_LUT4_F_I2_LUT2_I1_F_LUT
+2_I1_F_LUT2_I1_F_LUT4_F_I3_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  33.40 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT4_I0_F_LUT4_I2_F_MUX2_LUT5_I0_O_LUT4_I3_F_LUT4_F_I2_LUT2_I1_F_LUT2_I
+1_F_LUT2_I1_F_LUT4_F_I3_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT (10,7) -> (10,7)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT4_I0_F_LUT4_I2_F_MUX2_LUT5_I0_O_LUT4_I3_F_LUT4_F_I2_LUT2_I1_F_LUT2
+_I1_F_LUT2_I1_F_LUT4_F_I3_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.CIN
+Info:                          Defined in:
+Info:                               rtl/tcim_core.sv:139.47-139.64
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.06  33.46 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT4_I0_F_LUT4_I2_F_MUX2_LUT5_I0_O_LUT4_I3_F_LUT4_F_I2_LUT2_I1_F_LUT
+2_I1_F_LUT2_I1_F_LUT4_F_I3_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN.COUT
+Info:    routing  0.00  33.46 Net led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_I0
+_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_LUT
+4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT4_I0_F_LUT4_I2_F_MUX2_LUT5_I0_O_LUT4_I3_F_LUT4_F_I2_LUT2_I1_F_LUT2_I
+1_F_LUT2_I1_F_LUT4_F_I3_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_TAIL_ALULC (10,7) -> 
+(10,7)
+Info:                          Sink led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2_
+I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_L
+UT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT4_I0_F_LUT4_I2_F_MUX2_LUT5_I0_O_LUT4_I3_F_LUT4_F_I2_LUT2_I1_F_LUT2
+_I1_F_LUT2_I1_F_LUT4_F_I3_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_TAIL_ALULC.CIN
+Info:      logic  0.56  34.02 Source led_n_OBUF_O_4_I_LUT2_F_I1_LUT4_I1_F_LUT4_I3_I0_LUT4_I0_F_DFFCE_Q_D_LUT2
+_I0_F_DFFCE_D_Q_DFFCE_D_Q_LUT4_I2_F_LUT4_F_I3_DFFCE_Q_1_D_DFFCE_Q_D_LUT2_F_I0_DFFCE_D_Q_LUT4_F_I1_LUT4_I1_I0_
+LUT4_I2_F_LUT4_I3_I0_LUT2_I1_F_LUT2_I1_F_LUT4_I0_F_LUT4_I2_F_MUX2_LUT5_I0_O_LUT4_I3_F_LUT4_F_I2_LUT2_I1_F_LUT
+2_I1_F_LUT2_I1_F_LUT4_F_I3_ALU_I0_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_COUT_ALU_CIN_TAIL_ALULC.SUM
+Info:    routing  1.53  35.55 Net led_n_OBUF_O_3_I_DFFCE_D_Q_DFFCE_Q_D_LUT4_F_I1[2] (10,7) -> (11,14)
+Info:                          Sink led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q
+_DFFCE_Q_D_LUT4_F_I1_LUT3_F_I2_LUT2_I1_F_LUT2_F_I1_LUT2_F_I1_LUT2_I1_F_LUT3_F_I2_LUT4_I2.I3
+Info:                          Defined in:
+Info:                               rtl/tcim_core.sv:139.47-139.64
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/arith_map.v:57.7-63.5
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_sim.v:1033.25-1033.29
+Info:      logic  0.62  36.18 Source led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_
+Q_DFFCE_Q_D_LUT4_F_I1_LUT3_F_I2_LUT2_I1_F_LUT2_F_I1_LUT2_F_I1_LUT2_I1_F_LUT3_F_I2_LUT4_I2.F
+Info:    routing  1.45  37.63 Net led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q_D
+FFCE_Q_D_LUT4_F_I1_LUT3_F_I2_LUT2_I1_F_LUT2_F_I1_LUT2_F_I1_LUT2_I1_F_LUT3_F_I2_LUT4_I2_F[2] (11,14) -> 
+(11,21)
+Info:                          Sink led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q
+_DFFCE_Q_D_LUT4_F_I1_LUT3_F_I2_LUT2_I1_F_LUT2_F_I1_LUT2_F_I1_LUT2_I1_F_LUT3_F_I2_LUT4_I2_F_LUT4_I2.I2
+Info:                          Defined in:
+Info:                               /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpa
+d/tools/prefix/bin/../share/yosys/gowin/cells_map.v:130.20-130.21
+Info:      logic  0.82  38.45 Source led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_
+Q_DFFCE_Q_D_LUT4_F_I1_LUT3_F_I2_LUT2_I1_F_LUT2_F_I1_LUT2_F_I1_LUT2_I1_F_LUT3_F_I2_LUT4_I2_F_LUT4_I2.F
+Info:    routing  0.89  39.34 Net led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q_D
+FFCE_Q_D_LUT4_F_I1_LUT3_F_I2_LUT2_I1_F_LUT2_F_I1_LUT2_F_I1_LUT2_I1_F_LUT3_F_I2_LUT4_I2_F_LUT4_I2_F (11,21) 
+-> (11,22)
+Info:                          Sink led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_Q
+_DFFCE_Q_D_LUT4_F_I1_LUT3_F_I2_LUT2_I1_F_LUT2_F_I1_LUT2_F_I1_LUT2_I1_F_LUT3_F_I2_LUT4_I2_F_LUT4_I2_F_DFFCE_CE
+_2.CE
+Info:      setup  0.04  39.38 Source led_n_OBUF_O_3_I_DFFCE_D_Q_DFFC_Q_D_LUT3_F_I2_LUT4_F_I0_DFFC_Q_D_DFFC_D_
+Q_DFFCE_Q_D_LUT4_F_I1_LUT3_F_I2_LUT2_I1_F_LUT2_F_I1_LUT2_F_I1_LUT2_I1_F_LUT3_F_I2_LUT4_I2_F_LUT4_I2_F_DFFCE_C
+E_2.CE
+Info: 21.08 ns logic, 18.30 ns routing
+
+Info: Max frequency for clock 'clk': 25.39 MHz (PASS at 13.50 MHz)
+
+Info: Slack histogram:
+Info:  legend: * represents 11 endpoint(s)
+Info:          + represents [1,11) endpoint(s)
+Info: [ 34692,  36592) |+
+Info: [ 36592,  38492) |+
+Info: [ 38492,  40392) |+
+Info: [ 40392,  42292) |+
+Info: [ 42292,  44192) | 
+Info: [ 44192,  46092) |+
+Info: [ 46092,  47992) |**+
+Info: [ 47992,  49892) |****+
+Info: [ 49892,  51792) |*********+
+Info: [ 51792,  53692) |*********+
+Info: [ 53692,  55592) |*****************************+
+Info: [ 55592,  57492) |*************************************+
+Info: [ 57492,  59392) |**************************************+
+Info: [ 59392,  61292) |*************** 
+Info: [ 61292,  63192) |*******+
+Info: [ 63192,  65092) |***********+
+Info: [ 65092,  66992) |************************************************************ 
+Info: [ 66992,  68892) |****************************+
+Info: [ 68892,  70792) |****+
+Info: [ 70792,  72692) |*****+
+
+Info: Program finished normally.
+PNR_DONE

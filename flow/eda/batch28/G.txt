@@ -1,0 +1,3 @@
+gls rc=0
+gls xnor rc=1
+gls icg rc=1

@@ -1,0 +1,170 @@
+{
+ "tool": "OpenROAD-flow-scripts, image openroad/orfs:26Q4-71-g9b26ff8ff, on the owner's PC (Docker Desktop)",
+ "clock_period_ns": 10.0,
+ "platforms": {
+  "ihp-sg13g2": {
+   "stdcells": 10630,
+   "stdcell_area_um2": 147195,
+   "die_area_um2": 392772,
+   "core_area_um2": 348713,
+   "utilization": 0.422109,
+   "flip_flops": 837,
+   "clock_buffers": 287,
+   "timing_repair_buffers": 1207,
+   "antenna_cells": 13,
+   "flow_setup_tns": 0,
+   "flow_hold_tns": 0,
+   "clock_skew_ns": 0.550906,
+   "ir_drop_worst_VDD_V": 0.00200056,
+   "flow_errors": 0,
+   "clock_gate_cells": 49,
+   "power_W_default_activity": 0.0045173,
+   "post_route_sta": {
+    "typ_1p20V_25C": {
+     "setup_wns_ns": 4.261,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.166,
+     "limit_violations_listed": 2
+    },
+    "slow_1p08V_125C": {
+     "setup_wns_ns": 1.395,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.268,
+     "limit_violations_listed": 2
+    },
+    "fast_1p32V_m40C": {
+     "setup_wns_ns": 5.248,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.109,
+     "limit_violations_listed": 2
+    }
+   },
+   "parasitic_sensitivity": {
+    "k0.8 typ_1p20V_25C": {
+     "setup_wns_ns": 4.368,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.168,
+     "limit_violations_listed": 2
+    },
+    "k0.8 slow_1p08V_125C": {
+     "setup_wns_ns": 2.008,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.269,
+     "limit_violations_listed": 2
+    },
+    "k0.8 fast_1p32V_m40C": {
+     "setup_wns_ns": 5.311,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.11,
+     "limit_violations_listed": 2
+    },
+    "k1.2 typ_1p20V_25C": {
+     "setup_wns_ns": 4.105,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.165,
+     "limit_violations_listed": 2
+    },
+    "k1.2 slow_1p08V_125C": {
+     "setup_wns_ns": 0.747,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.267,
+     "limit_violations_listed": 2
+    },
+    "k1.2 fast_1p32V_m40C": {
+     "setup_wns_ns": 5.186,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.109,
+     "limit_violations_listed": 2
+    }
+   },
+   "drc_violations": 5,
+   "lvs": "not supported by the ORFS platform",
+   "drc_categories": {
+    "M2.j/k": 1,
+    "M2Fil.h/k": 1,
+    "M3.j/k": 1,
+    "M3Fil.h/k": 1,
+    "M4.j/k": 1
+   },
+   "notes": "DRC: all markers are chip-level density rules (global Metal2-4 density, filler coverage), met at chip assembly with metal fill; the ORFS IHP deck is a reduced set. Limits: see post_route_sta[...].limit_violations_listed (the reports list them)."
+  },
+  "sky130hd": {
+   "stdcells": 11157,
+   "stdcell_area_um2": 81828.5,
+   "die_area_um2": 174436,
+   "core_area_um2": 171545,
+   "utilization": 0.47701,
+   "flip_flops": 837,
+   "clock_buffers": 243,
+   "timing_repair_buffers": 593,
+   "antenna_cells": 24,
+   "flow_setup_tns": 0,
+   "flow_hold_tns": 0,
+   "clock_skew_ns": 0.792123,
+   "ir_drop_worst_VDD_V": 0.000129728,
+   "flow_errors": 0,
+   "clock_gate_cells": 49,
+   "power_W_default_activity": 0.00416223,
+   "post_route_sta": {
+    "tt_025C_1v80": {
+     "setup_wns_ns": 2.278,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.27,
+     "limit_violations_listed": 0
+    },
+    "ss_100C_1v60": {
+     "setup_wns_ns": -5.396,
+     "setup_tns_ns": -546.638,
+     "hold_wns_ns": 0.566,
+     "limit_violations_listed": 354
+    },
+    "ff_n40C_1v95": {
+     "setup_wns_ns": 4.789,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.164,
+     "limit_violations_listed": 0
+    }
+   },
+   "parasitic_sensitivity": {
+    "k0.8 tt_025C_1v80": {
+     "setup_wns_ns": 2.665,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.267,
+     "limit_violations_listed": 0
+    },
+    "k0.8 ss_100C_1v60": {
+     "setup_wns_ns": -4.631,
+     "setup_tns_ns": -334.176,
+     "hold_wns_ns": 0.559,
+     "limit_violations_listed": 239
+    },
+    "k0.8 ff_n40C_1v95": {
+     "setup_wns_ns": 4.929,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.161,
+     "limit_violations_listed": 0
+    },
+    "k1.2 tt_025C_1v80": {
+     "setup_wns_ns": 1.878,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.274,
+     "limit_violations_listed": 9
+    },
+    "k1.2 ss_100C_1v60": {
+     "setup_wns_ns": -6.148,
+     "setup_tns_ns": -800.351,
+     "hold_wns_ns": 0.573,
+     "limit_violations_listed": 521
+    },
+    "k1.2 ff_n40C_1v95": {
+     "setup_wns_ns": 4.653,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.166,
+     "limit_violations_listed": 0
+    }
+   },
+   "drc_violations": 0,
+   "lvs": "netlists match (KLayout)"
+  }
+ }
+}

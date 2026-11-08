@@ -1,0 +1,58 @@
+{
+ "tool": "OpenROAD-flow-scripts, image openroad/orfs:26Q4-71-g9b26ff8ff, on the owner's PC (Docker Desktop)",
+ "platform": "sky130hd standard cells with the sky130B technology LEF (ReRAM variant: via1 / metal2 heights); slow-corner library ss_100C_1v60 for every step; RC table of the platform unchanged (sky130A)",
+ "clock_period_ns": 16.0,
+ "stdcells": 11302,
+ "stdcell_area_um2": 82301.4,
+ "die_area_um2": 174803,
+ "core_area_um2": 171735,
+ "flip_flops": 837,
+ "clock_gate_cells": 49,
+ "clock_buffers": 216,
+ "timing_repair_buffers": 731,
+ "antenna_cells": 36,
+ "flow_setup_ws_ns": 0.762,
+ "flow_hold_ws_ns": 0.724,
+ "flow_setup_tns": 0,
+ "flow_hold_tns": 0,
+ "clock_skew_ns": 1.321,
+ "power_W_default_activity": 0.002042,
+ "drc_violations": 0,
+ "post_route_sta": {
+  "ff_n40C_1v95": {
+   "setup_wns_ns": 9.457,
+   "setup_tns_ns": 0.0,
+   "hold_wns_ns": 0.224
+  },
+  "ss_100C_1v60": {
+   "setup_wns_ns": 0.762,
+   "setup_tns_ns": 0.0,
+   "hold_wns_ns": 0.724
+  },
+  "tt_025C_1v80": {
+   "setup_wns_ns": 8.236,
+   "setup_tns_ns": 0.0,
+   "hold_wns_ns": 0.356
+  }
+ },
+ "min_period": [
+  {
+   "platform": "sky130hd",
+   "liberty": "sky130_fd_sc_hd__ss_100C_1v60.lib",
+   "spef_scale": 1.0,
+   "min_period_ns": 15.24,
+   "f_max_MHz": 65.6,
+   "setup_wns_ns": 0.006,
+   "hold_wns_ns": 0.724
+  },
+  {
+   "platform": "sky130hd",
+   "liberty": "sky130_fd_sc_hd__ss_100C_1v60.lib",
+   "spef_scale": 1.2,
+   "min_period_ns": 15.75,
+   "f_max_MHz": 63.5,
+   "setup_wns_ns": 0.003,
+   "hold_wns_ns": 0.728
+  }
+ ]
+}

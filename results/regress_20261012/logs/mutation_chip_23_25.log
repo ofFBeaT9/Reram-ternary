@@ -1,0 +1,3 @@
+23 caught | acknowledge one cycle early (before the lines are grounded) | FAIL: pulse on a device that had already passed verify (row 0, 154 times) | 1
+24 caught | an analog-sum request drives the array | FAIL: chip analog product 0 touched the array | 42
+25 caught | request parameters not latched (mask read live) | FAIL: pulse with no device selected (row 0) | 1

@@ -1,0 +1,187 @@
+OpenSTA 3.1.0 b7d866ff69 Copyright (c) 2026, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 41924, net ANTENNA_5 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 54979, net ANTENNA_10 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 59316, net ANTENNA_8 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 64408, net ANTENNA_2 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 65020, net ANTENNA_2 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 77442, net ANTENNA_1 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 97200, net ANTENNA_5 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 116303, net ANTENNA_8 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 143911, instance ANTENNA_8:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 143916, net ANTENNA_8 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 143923, net ANTENNA_8 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 143924, net ANTENNA_8 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 143950, net ANTENNA_8 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 143961, net ANTENNA_8 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 143969, net ANTENNA_8 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 143982, net ANTENNA_8 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 146074, instance ANTENNA_9:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 146079, net ANTENNA_9 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 146143, net ANTENNA_9 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 146144, net ANTENNA_9 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 154957, net ANTENNA_5 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 173877, net ANTENNA_10 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 271237, instance ANTENNA_5:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 271242, net ANTENNA_5 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 271259, net ANTENNA_5 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 271261, net ANTENNA_5 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 271271, net ANTENNA_5 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 271272, net ANTENNA_5 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 271276, net ANTENNA_5 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 271282, net ANTENNA_5 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 271283, net ANTENNA_5 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 271510, instance ANTENNA_4:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 271515, net ANTENNA_4 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 271532, net ANTENNA_4 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 271539, instance ANTENNA_3:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 271544, net ANTENNA_3 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 271592, net ANTENNA_3 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 272364, instance ANTENNA_10:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 272369, net ANTENNA_10 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 272372, net ANTENNA_10 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 272373, net ANTENNA_10 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 272383, net ANTENNA_10 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 272390, net ANTENNA_10 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 272397, net ANTENNA_10 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 275565, instance ANTENNA_2:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 275570, net ANTENNA_2 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 275576, net ANTENNA_2 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 275578, net ANTENNA_2 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 275589, net ANTENNA_2 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 275939, instance ANTENNA_1:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 275944, net ANTENNA_1 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 275988, net ANTENNA_1 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 276010, net ANTENNA_1 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 282587, net ANTENNA_8 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 283583, instance ANTENNA_6:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 283588, net ANTENNA_6 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 283593, net ANTENNA_6 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 283621, net ANTENNA_6 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 283622, net ANTENNA_6 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 301323, net ANTENNA_10 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 301484, net ANTENNA_10 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 333506, net ANTENNA_8 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 345788, net ANTENNA_5 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 345792, net ANTENNA_5 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 369760, instance ANTENNA_7:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 369772, net ANTENNA_7 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 370009, net ANTENNA_7 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 375497, net ANTENNA_6 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 381129, net ANTENNA_8 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 425470, instance ANTENNA_11:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 425478, net ANTENNA_11 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 425603, net ANTENNA_11 not found.
+Warning 1648: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 433500, instance ANTENNA_12:DIODE not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 433511, net ANTENNA_12 not found.
+Warning 1650: /tmp/claude-0/-home-claude/56ca8d3c-a497-5f0b-b50b-013425ed5316/scratchpad/pnr42/sky/results/sky130hd/tcim_top/base/6_final.spef line 433711, net ANTENNA_12 not found.
+@@ setup_wns 1.8503429899396906e-9
+@@ setup_tns 0.0
+@@ hold_wns 3.498216161190726e-10
+@@ BEGIN max path
+Startpoint: u_core.r_prow[0]$_DFFE_PN0P_
+            (rising edge-triggered flip-flop clocked by clk)
+Endpoint: arr_mask_n[12]$_DFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+   Delay     Time   Description
+-----------------------------------------------------------
+   0.000    0.000   clock clk (rise edge)
+   0.761    0.761   clock network delay (propagated)
+   0.000    0.761 ^ u_core.r_prow[0]$_DFFE_PN0P_/CLK (sky130_fd_sc_hd__dfrtp_1)
+   0.620    1.381 ^ u_core.r_prow[0]$_DFFE_PN0P_/Q (sky130_fd_sc_hd__dfrtp_1)
+   0.238    1.618 v _10764_/Y (sky130_fd_sc_hd__nand2_1)
+   0.419    2.037 v _19347_/SUM (sky130_fd_sc_hd__ha_1)
+   0.337    2.374 ^ _10626_/Y (sky130_fd_sc_hd__xnor2_1)
+   0.215    2.589 ^ _10629_/X (sky130_fd_sc_hd__a21o_1)
+   0.052    2.641 v _10724_/Y (sky130_fd_sc_hd__inv_1)
+   0.277    2.919 v _19261_/SUM (sky130_fd_sc_hd__ha_1)
+   0.232    3.151 ^ _10631_/Y (sky130_fd_sc_hd__xnor2_1)
+   0.098    3.249 v _10632_/Y (sky130_fd_sc_hd__nand2_1)
+   0.193    3.442 ^ _10633_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.307    3.749 v _19071_/SUM (sky130_fd_sc_hd__ha_1)
+   0.260    4.009 v _10660_/X (sky130_fd_sc_hd__mux2_2)
+   0.085    4.094 ^ _10661_/Y (sky130_fd_sc_hd__nand2_1)
+   0.178    4.272 v _10662_/Y (sky130_fd_sc_hd__o31ai_1)
+   0.136    4.408 ^ _10685_/Y (sky130_fd_sc_hd__inv_1)
+   0.188    4.596 ^ _19083_/COUT (sky130_fd_sc_hd__ha_1)
+   0.076    4.672 v _14058_/Y (sky130_fd_sc_hd__nand2_1)
+   0.090    4.763 ^ _14059_/Y (sky130_fd_sc_hd__nand2_1)
+   0.092    4.855 v _14060_/Y (sky130_fd_sc_hd__nand2_1)
+   0.306    5.161 ^ _14098_/Y (sky130_fd_sc_hd__xnor2_1)
+   0.233    5.394 v _14106_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.332    5.726 ^ _14123_/Y (sky130_fd_sc_hd__mux2i_1)
+   0.160    5.886 ^ _14124_/Y (sky130_fd_sc_hd__xnor2_1)
+   0.160    6.045 ^ _14125_/X (sky130_fd_sc_hd__and3_1)
+   0.087    6.132 v _14128_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.208    6.341 v _14137_/X (sky130_fd_sc_hd__a21o_1)
+   0.409    6.749 v _14744_/X (sky130_fd_sc_hd__a211o_1)
+   0.448    7.198 v _16584_/X (sky130_fd_sc_hd__or3_1)
+   0.870    8.068 ^ _16588_/Y (sky130_fd_sc_hd__o21ai_4)
+   0.390    8.458 ^ place680/X (sky130_fd_sc_hd__buf_4)
+   0.347    8.805 v _16612_/X (sky130_fd_sc_hd__mux2_1)
+   0.000    8.805 v arr_mask_n[12]$_DFFE_PN0P_/D (sky130_fd_sc_hd__dfrtp_1)
+            8.805   data arrival time
+
+  10.000   10.000   clock clk (rise edge)
+   0.774   10.774   clock network delay (propagated)
+   0.000   10.774   clock reconvergence pessimism
+           10.774 ^ arr_mask_n[12]$_DFFE_PN0P_/CLK (sky130_fd_sc_hd__dfrtp_1)
+  -0.119   10.656   library setup time
+           10.656   data required time
+-----------------------------------------------------------
+           10.656   data required time
+           -8.805   data arrival time
+-----------------------------------------------------------
+            1.850   slack (MET)
+
+
+@@ END
+@@ BEGIN min path
+Startpoint: u_spi.mosi_s[0]$_DFF_PN0_
+            (rising edge-triggered flip-flop clocked by clk)
+Endpoint: u_spi.mosi_s[1]$_DFF_PN0_
+          (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+   Delay     Time   Description
+-----------------------------------------------------------
+   0.000    0.000   clock clk (rise edge)
+   0.779    0.779   clock network delay (propagated)
+   0.000    0.779 ^ u_spi.mosi_s[0]$_DFF_PN0_/CLK (sky130_fd_sc_hd__dfrtp_1)
+   0.317    1.096 ^ u_spi.mosi_s[0]$_DFF_PN0_/Q (sky130_fd_sc_hd__dfrtp_1)
+   0.000    1.096 ^ u_spi.mosi_s[1]$_DFF_PN0_/D (sky130_fd_sc_hd__dfrtp_1)
+            1.096   data arrival time
+
+   0.000    0.000   clock clk (rise edge)
+   0.779    0.779   clock network delay (propagated)
+   0.000    0.779   clock reconvergence pessimism
+            0.779 ^ u_spi.mosi_s[1]$_DFF_PN0_/CLK (sky130_fd_sc_hd__dfrtp_1)
+  -0.033    0.746   library hold time
+            0.746   data required time
+-----------------------------------------------------------
+            0.746   data required time
+           -1.096   data arrival time
+-----------------------------------------------------------
+            0.350   slack (MET)
+
+
+@@ END
+@@ BEGIN limits
+@@ END
+@@ BEGIN skew
+Clock clk
+   0.80 source latency u_core.r_x[59]$_DFFE_PN0P_/CLK ^
+  -0.72 target latency u_core.acc[32]$_DFFE_PN0P_/CLK ^
+   0.00 CRPR
+--------------
+   0.08 setup skew
+
+@@ END

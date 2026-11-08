@@ -1,0 +1,27 @@
+{
+ "python": {
+  "A_v_cross_V": 0.66949,
+  "B_gap_nm": 1.7385,
+  "C_t_set_ns": 204.46,
+  "D_t_reset_ns": 481.19
+ },
+ "ngspice": {
+  "A_v_cross_V": 0.66943,
+  "B_gap_nm": 1.738,
+  "C_t_set_ns": 204.64,
+  "D_t_reset_ns": 486.11
+ },
+ "gnucap": {
+  "A_v_cross_V": 0.66923,
+  "B_gap_nm": 1.738,
+  "C_t_set_ns": 204.42,
+  "D_t_reset_ns": 481.2
+ },
+ "spread": {
+  "solvers": 3,
+  "A_mV": 0.26,
+  "B_pm": 0.5,
+  "C_percent": 0.11,
+  "D_percent": 1.02
+ }
+}

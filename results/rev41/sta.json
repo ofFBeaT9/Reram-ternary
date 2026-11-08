@@ -1,0 +1,332 @@
+{
+ "clock_period_ns": 10.0,
+ "tool": "3.1.0",
+ "scope": "before layout: no wire parasitics, ideal clock, serial pins and reset excluded as asynchronous; 30 % of the period reserved on each side of the array interface",
+ "runs": {
+  "ihp": {
+   "library": "IHP SG13G2 sg13g2_stdcell",
+   "trit_code": "two's complement",
+   "netlist": {
+    "cells": 7951,
+    "area_um2": 113642.4,
+    "flip_flops": 844
+   },
+   "corners": {
+    "typ_1p20V_25C": {
+     "worst_slack_by_register_ns": {
+      "u_core.s_sat": 4.669,
+      "u_core.acc": 4.877,
+      "arr_mask_n": 4.948,
+      "arr_mask_p": 4.948,
+      "arr_op": 5.46,
+      "u_core.pend_n": 5.5,
+      "u_core.pend_p": 5.5,
+      "arr_amp": 5.594
+     },
+     "setup_wns_ns": 4.669,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.184,
+     "worst_path": {
+      "start": "arr_adc[1]",
+      "end": "u_core.s_sat",
+      "arrival_ns": 5.205,
+      "slack_ns": 4.669,
+      "cell_stages": 18
+     },
+     "worst_register_to_register": {
+      "start": "bus_addr[0]",
+      "end": "u_core.acc[132]",
+      "arrival_ns": 3.329,
+      "slack_ns": 6.544,
+      "cell_stages": 22
+     },
+     "limit_violations": {
+      "reset_net": 847,
+      "data_slew": 0,
+      "data_capacitance": 0,
+      "data_fanout": 431
+     }
+    },
+    "slow_1p08V_125C": {
+     "worst_slack_by_register_ns": {
+      "u_core.s_sat": 3.345,
+      "u_core.acc": 3.67,
+      "arr_mask_n": 3.801,
+      "arr_mask_p": 3.801,
+      "arr_op": 4.594,
+      "u_core.pend_n": 4.643,
+      "u_core.pend_p": 4.643,
+      "arr_row": 4.782
+     },
+     "setup_wns_ns": 3.345,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.289,
+     "worst_path": {
+      "start": "arr_adc[1]",
+      "end": "u_core.s_sat",
+      "arrival_ns": 6.447,
+      "slack_ns": 3.345,
+      "cell_stages": 18
+     },
+     "worst_register_to_register": {
+      "start": "bus_addr[0]",
+      "end": "u_core.acc[132]",
+      "arrival_ns": 5.186,
+      "slack_ns": 4.605,
+      "cell_stages": 22
+     },
+     "limit_violations": {
+      "reset_net": 847,
+      "data_slew": 0,
+      "data_capacitance": 0,
+      "data_fanout": 431
+     }
+    },
+    "fast_1p32V_m40C": {
+     "worst_slack_by_register_ns": {
+      "u_core.s_sat": 5.47,
+      "u_core.acc": 5.602,
+      "arr_mask_n": 5.648,
+      "arr_mask_p": 5.648,
+      "arr_op": 5.985,
+      "u_core.pend_p": 6.009,
+      "u_core.pend_n": 6.009,
+      "arr_amp": 6.062
+     },
+     "setup_wns_ns": 5.47,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.123,
+     "worst_path": {
+      "start": "arr_adc[1]",
+      "end": "u_core.s_sat",
+      "arrival_ns": 4.454,
+      "slack_ns": 5.47,
+      "cell_stages": 18
+     },
+     "worst_register_to_register": {
+      "start": "bus_addr[0]",
+      "end": "u_core.acc[132]",
+      "arrival_ns": 2.233,
+      "slack_ns": 7.691,
+      "cell_stages": 22
+     },
+     "limit_violations": {
+      "reset_net": 847,
+      "data_slew": 0,
+      "data_capacitance": 0,
+      "data_fanout": 431
+     }
+    }
+   }
+  },
+  "ihp_pnx": {
+   "library": "IHP SG13G2 sg13g2_stdcell",
+   "trit_code": "BSD-PNX",
+   "netlist": {
+    "cells": 8238,
+    "area_um2": 115317.7,
+    "flip_flops": 844
+   },
+   "corners": {
+    "typ_1p20V_25C": {
+     "worst_slack_by_register_ns": {
+      "u_core.s_sat": 4.824,
+      "u_core.acc": 4.912,
+      "arr_mask_n": 5.153,
+      "arr_mask_p": 5.153,
+      "u_core.amp": 5.607,
+      "arr_op": 5.612,
+      "u_core.pend_n": 5.613,
+      "u_core.pend_p": 5.613
+     },
+     "setup_wns_ns": 4.824,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.184,
+     "worst_path": {
+      "start": "arr_adc[140]",
+      "end": "u_core.s_sat",
+      "arrival_ns": 5.052,
+      "slack_ns": 4.824,
+      "cell_stages": 18
+     },
+     "worst_register_to_register": {
+      "start": "bus_addr[3]",
+      "end": "u_core.pend_n[1]",
+      "arrival_ns": 3.454,
+      "slack_ns": 6.427,
+      "cell_stages": 19
+     },
+     "limit_violations": {
+      "reset_net": 847,
+      "data_slew": 0,
+      "data_capacitance": 0,
+      "data_fanout": 443
+     }
+    },
+    "slow_1p08V_125C": {
+     "worst_slack_by_register_ns": {
+      "u_core.s_sat": 3.586,
+      "u_core.acc": 3.716,
+      "arr_mask_n": 4.105,
+      "arr_mask_p": 4.105,
+      "u_core.pend_n": 4.401,
+      "u_core.pend_p": 4.401,
+      "u_core.r_piter": 4.531,
+      "u_spi.shift_out": 4.539
+     },
+     "setup_wns_ns": 3.586,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.289,
+     "worst_path": {
+      "start": "arr_adc[140]",
+      "end": "u_core.s_sat",
+      "arrival_ns": 6.21,
+      "slack_ns": 3.586,
+      "cell_stages": 18
+     },
+     "worst_register_to_register": {
+      "start": "bus_addr[3]",
+      "end": "u_core.pend_n[0]",
+      "arrival_ns": 5.395,
+      "slack_ns": 4.401,
+      "cell_stages": 19
+     },
+     "limit_violations": {
+      "reset_net": 847,
+      "data_slew": 0,
+      "data_capacitance": 0,
+      "data_fanout": 443
+     }
+    },
+    "fast_1p32V_m40C": {
+     "worst_slack_by_register_ns": {
+      "u_core.s_sat": 5.579,
+      "u_core.acc": 5.617,
+      "arr_mask_n": 5.783,
+      "arr_mask_p": 5.783,
+      "u_core.amp": 6.083,
+      "u_core.pend_n": 6.084,
+      "u_core.pend_p": 6.084,
+      "arr_op": 6.089
+     },
+     "setup_wns_ns": 5.579,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.123,
+     "worst_path": {
+      "start": "arr_adc[140]",
+      "end": "u_core.s_sat",
+      "arrival_ns": 4.347,
+      "slack_ns": 5.579,
+      "cell_stages": 18
+     },
+     "worst_register_to_register": {
+      "start": "bus_addr[3]",
+      "end": "u_core.pend_n[0]",
+      "arrival_ns": 2.303,
+      "slack_ns": 7.619,
+      "cell_stages": 19
+     },
+     "limit_violations": {
+      "reset_net": 847,
+      "data_slew": 0,
+      "data_capacitance": 0,
+      "data_fanout": 443
+     }
+    }
+   }
+  },
+  "ihp_rev4": {
+   "library": "IHP SG13G2 sg13g2_stdcell",
+   "trit_code": "two's complement",
+   "rtl": "tests/equiv/rtl_rev4",
+   "netlist": {
+    "cells": 8114,
+    "area_um2": 114413.4,
+    "flip_flops": 844
+   },
+   "corners": {
+    "typ_1p20V_25C": {
+     "worst_slack_by_register_ns": {
+      "u_spi.shift_out": -4.019,
+      "u_core.s_sat": 4.531,
+      "u_core.acc": 4.813,
+      "arr_mask_n": 5.112,
+      "arr_mask_p": 5.112,
+      "u_core.amp": 5.47,
+      "arr_op": 5.474,
+      "u_core.pend_n": 5.568
+     },
+     "setup_wns_ns": -4.019,
+     "setup_tns_ns": -25.034,
+     "hold_wns_ns": 0.184,
+     "worst_path": {
+      "start": "u_core.r_piter[4]",
+      "end": "u_spi.shift_out[11]",
+      "arrival_ns": 13.894,
+      "slack_ns": -4.019,
+      "cell_stages": 96
+     },
+     "worst_register_to_register": {
+      "start": "u_core.r_piter[4]",
+      "end": "u_spi.shift_out[11]",
+      "arrival_ns": 13.894,
+      "slack_ns": -4.019,
+      "cell_stages": 96
+     },
+     "limit_violations": {
+      "reset_net": 847,
+      "data_slew": 0,
+      "data_capacitance": 0,
+      "data_fanout": 405
+     }
+    }
+   }
+  },
+  "sky130": {
+   "library": "SkyWater SKY130 sky130_fd_sc_hd",
+   "trit_code": "two's complement",
+   "netlist": {
+    "cells": 8014,
+    "area_um2": 63427.1,
+    "flip_flops": 844
+   },
+   "corners": {
+    "tt_1p80V_25C": {
+     "worst_slack_by_register_ns": {
+      "u_core.s_sat": 2.616,
+      "u_core.acc": 2.932,
+      "arr_mask_n": 4.495,
+      "arr_mask_p": 4.496,
+      "u_core.pend_n": 4.767,
+      "u_core.pend_p": 4.786,
+      "arr_amp": 4.914,
+      "arr_op": 4.918
+     },
+     "setup_wns_ns": 2.616,
+     "setup_tns_ns": 0.0,
+     "hold_wns_ns": 0.331,
+     "worst_path": {
+      "start": "arr_adc[190]",
+      "end": "u_core.s_sat",
+      "arrival_ns": 7.249,
+      "slack_ns": 2.616,
+      "cell_stages": 16
+     },
+     "worst_register_to_register": {
+      "start": "u_core.r_prow[0]",
+      "end": "u_core.pend_n[9]",
+      "arrival_ns": 5.091,
+      "slack_ns": 4.767,
+      "cell_stages": 21
+     },
+     "limit_violations": {
+      "reset_net": 846,
+      "data_slew": 0,
+      "data_capacitance": 0,
+      "data_fanout": 0
+     }
+    }
+   }
+  }
+ }
+}

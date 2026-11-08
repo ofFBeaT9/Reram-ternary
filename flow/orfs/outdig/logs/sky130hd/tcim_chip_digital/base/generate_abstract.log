@@ -1,0 +1,17 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 32 thread(s).
+load_design 6_final.odb 6_final.sdc
+read_liberty /w/flow/orfs/platforms_b/sky130hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib
+read_db /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/6_final.odb
+Took 5 seconds: read_db /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/6_final.odb
+read_sdc /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/6_final.sdc
+source /w/flow/orfs/platforms_b/sky130hd/setRC.tcl
+Took 5 seconds: load_design 6_final.odb 6_final.sdc
+read_spef /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/6_final.spef
+Generating abstract views
+write_timing_model /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/tcim_chip_digital_typ.lib
+write_abstract_lef -bloat_occupied_layers /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/tcim_chip_digital.lef
+Elapsed time: 0:08.94[h:]min:sec. CPU time: user 4.09 sys 4.18 (92%). Peak memory: 260864KB.

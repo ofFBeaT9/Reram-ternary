@@ -1,0 +1,26 @@
+ÿþ{
+ "bank": 2,
+ "noise_lsb": 1,
+ "seed": 1,
+ "rows_with_werr": 42,
+ "piter_max": 40,
+ "piter_mean": 26.4,
+ "device_pulses": 12239,
+ "readback_wrong_weights": 624,
+ "weights": 1728,
+ "digital": {
+  "products": 100,
+  "inexact_products": 100,
+  "wrong_columns": 2154,
+  "columns": 2400,
+  "max_abs_error": 17
+ },
+ "analog": {
+  "products": 100,
+  "inexact_products": 100,
+  "wrong_columns": 2177,
+  "columns": 2400,
+  "max_abs_error": 14
+ },
+ "host_seconds": 13.2
+}

@@ -1,0 +1,16 @@
+10-Oct-2026 11:23:31 | INFO    | Your Klayout version is: KLayout 0.30.12 (required >= 0.30.5)
+10-Oct-2026 11:23:31 | INFO    | Running SG13G2 LVS checks on design /w/tcim_wld72.gds on cell tcim_wld72
+10-Oct-2026 11:23:35 | INFO    | ==============================================================================
+10-Oct-2026 11:23:35 | INFO    | Important Summary
+10-Oct-2026 11:23:35 | INFO    | +------------------+--------------------------------------------------------------+
+10-Oct-2026 11:23:35 | INFO    | | Status           | PASS                                                         |
+10-Oct-2026 11:23:35 | INFO    | | Mode             | COMPARE                                                      |
+10-Oct-2026 11:23:35 | INFO    | | Outcome          | Comparison mode: PASS (netlists match).                      |
+10-Oct-2026 11:23:35 | INFO    | | Layout           | tcim_wld72.gds                                               |
+10-Oct-2026 11:23:35 | INFO    | | Top Cell         | tcim_wld72                                                   |
+10-Oct-2026 11:23:35 | INFO    | | Results Dir      | /w/ihp_checks/lvs_tcim_wld72                                 |
+10-Oct-2026 11:23:35 | INFO    | | Warnings         | 0                                                            |
+10-Oct-2026 11:23:35 | INFO    | | Errors           | 0                                                            |
+10-Oct-2026 11:23:35 | INFO    | | Run Time (s)     | 4.059                                                        |
+10-Oct-2026 11:23:35 | INFO    | +------------------+--------------------------------------------------------------+
+10-Oct-2026 11:23:35 | INFO    | ==============================================================================
