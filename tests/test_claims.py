@@ -622,6 +622,20 @@ claim('H6 full-array writes to 10 %, 85 C', 2.2e5, wb["hot_85C"]["other_row_full
 claim('H6 full-array writes to 10 %, fastest-reset cell', 3.3e7, wb["fast_reset_cell"]["other_row_full_array_writes_to_10pct"], 0.06e7)
 claim('H6 selected-row drift per command, 85 C (x1e-9)', 8.2, wb["hot_85C"]["selected_row_per_command"] * 1e9, 0.06)
 
+# ---- next chip (8 November 2026): 3T3R one-of-three design files (docs/STATUS.md, section 15.7)
+a3 = J7("next_chip/array3.json")
+claim('3T3R cell width (um)', 5.6, a3["cell"]["width_um"], 0); claim('3T3R cell area vs 2T2R', 1.556, a3["cell"]["area_vs_2t2r"], 0.0006)
+claim('3T3R array width (um)', 134.4, a3["array"]["width_um"], 0.006); claim('3T3R array devices (LVS)', 10368, a3["array"]["devices"], 0)
+claim('3T3R DRC clean, LVS match, both planted faults caught (4 = all)', 4,
+      int(a3["cell_drc_clean"]) + int(a3["array_drc_flat_errors"] == 0 and a3["array_drc_hierarchical_clean"]) + int(a3["lvs_match"]) + int(a3["lvs_fault_detected"] and a3["cell_drc_fault_detected"]), 0)
+for x in ("", "_pnx"):
+    c, f = chk7(f"next_chip/rtl_test_1of3{x}.log"); claim(f'3T3R test bench{x}: checks', 97631, c, 0); claim(f'3T3R test bench{x}: failures', 0, f, 0)
+import glob as _g
+mz7 = sum((json.loads(open(f).read()) for f in sorted(_g.glob(str(R / "rtl_mutation_1of3_*.json")))), [])
+claim('3T3R Z-logic faults caught (of 7)', 7, sum(1 for r in mz7 if r["status"] == "caught") if len(mz7) == 7 else -1, 0)
+mq = _re.search(r"Of those cells (\d+) are proven and (\d+) are unproven", (R / "next_chip/equiv_default_build_unchanged.log").read_text())
+claim('default build = revision 4.7 core: points proven', 2718, int(mq.group(1)), 0); claim('default build = revision 4.7 core: unproven', 0, int(mq.group(2)), 0)
+
 (R / "audit_claims.json").write_text(json.dumps(dict(numbers=N_CLAIMS, stale=bad), indent=1))
 print(f"\n{N_CLAIMS} numbers checked, {len(bad)} stale" + (": " + "; ".join(bad) if bad else ""))
 sys.exit(1 if bad else 0)

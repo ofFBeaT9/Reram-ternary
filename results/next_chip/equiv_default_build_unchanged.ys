@@ -1,0 +1,12 @@
+read_slang --top tcim_core rtl/tcim_pkg.sv results/next_chip/tcim_core_before_1of3.sv
+proc; flatten; opt_clean; rename tcim_core gold; design -stash gold
+read_slang --top tcim_core rtl/tcim_pkg.sv rtl/tcim_core.sv
+proc; flatten; opt_clean; rename tcim_core gate; design -stash gate
+design -copy-from gold -as gold gold
+design -copy-from gate -as gate gate
+equiv_make gold gate eq
+hierarchy -top eq
+async2sync
+equiv_simple -seq 2
+equiv_induct -seq 2
+equiv_status -assert

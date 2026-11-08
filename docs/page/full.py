@@ -59,7 +59,7 @@ every number <code>docs/STATUS.md</code> quotes); design facts come from the des
 <nav class="toc" aria-label="Contents"><a href="#status">Status: done, remaining, next</a><a href="#revisions">Revisions</a><a href="#verified">Is everything verified?</a><a href="#tell">What can be claimed</a><a href="#files">Files</a>
 <a href="#idea">1 The idea</a><a href="#weight">2 One weight</a><a href="#structure">3 Layers and materials</a><a href="#handson">Hands-on models</a><a href="#read">4 Reading</a><a href="#program">5 Programming</a><a href="#chip">6 The chip</a>
 <a href="#controller">7 Controller</a><a href="#logic">8 Logic design</a><a href="#fpga">9 FPGA proof</a><a href="#layout">10 Layout and sign-off</a><a href="#cf">11 ChipFoundry's tools</a>
-<a href="#limits">12 Limits</a><a href="#security">13 Security</a><a href="#open">13b Open issues</a><a href="#cells">13c Cells: 2T2R, one-of-three, 4T4R</a><a href="#ttpu">14 TPU Gen2</a><a href="#next">15 Next: system, USN</a><a href="#nov8">Corrections</a><a href="#glossary">Glossary</a></nav>""" + s[b:]
+<a href="#limits">12 Limits</a><a href="#security">13 Security</a><a href="#open">13b Open issues</a><a href="#cells">13c Next-chip cell (3T3R)</a><a href="#ttpu">14 TPU Gen2</a><a href="#next">15 Next: system, USN</a><a href="#nov8">Corrections</a><a href="#glossary">Glossary</a></nav>""" + s[b:]
 
 # ---------------------------------------------------------------- new opening (replaces ready / verified / tell / files)
 a, b = cut("ready", "idea")
@@ -236,7 +236,50 @@ s = s[:m.start()] + timing_chart() + s[m.end():]
 a = s.index('<section id="security"'); h = s.index("<h3>What this does not fix</h3>", a); e = s.index("</section>", h)
 cells_sec = B.summary_page()
 cells_html = cells_sec[cells_sec.index('<section id="cells">'):cells_sec.index("</section>", cells_sec.index('<section id="cells">'))]
-cells_html = cells_html.replace("<h2>Cell options: 2T2R, one-of-three, 4T4R</h2>", "<h2>13c · Cell options: 2T2R, one-of-three, 4T4R</h2>")
+cells_html = cells_html.replace("<h2>Cell options: 2T2R, one-of-three, 4T4R</h2>", "<h2>13c · The next-chip cell: 3T3R one-of-three</h2>")
+# 3T3R design files (8 November 2026): layout, RTL build option, test bench, focused mutation test
+import glob
+from fig_cells import figure as cells_figure
+a3 = J("next_chip/array3.json")
+t3 = [B.checks(T(f"next_chip/rtl_test_1of3{x}.log")) for x in ("", "_pnx")]
+mz = []
+for f in sorted(glob.glob("results/rtl_mutation_1of3_*.json")):
+    mz += json.loads(Path(f).read_text())
+mz_ok = sum(1 for r in mz if r["status"] == "caught")
+eqd = re.search(r"Of those cells (\d+) are proven and (\d+) are unproven", T("next_chip/equiv_default_build_unchanged.log"))
+done3 = []
+if a3:
+    done3.append(f"<li><b>Cell and array drawn</b> (<code>layout/sky130/next_3t3r/</code>, Magic {a3['magic'].split()[-1]}, {a3['pdk']}): cell "
+                 f"{a3['cell']['width_um']} × {a3['cell']['height_um']} µm ({a3['cell']['area_vs_2t2r']}× the 2T2R cell), 72 × 24 array "
+                 f"{a3['array']['width_um']} × {a3['array']['height_um']} µm; DRC {'clean' if a3['cell_drc_clean'] else 'FAILS'} (cell), "
+                 f"{a3['array_drc_flat_errors']} errors (flat array); LVS {'match' if a3['lvs_match'] else 'MISMATCH'}, {a3['array']['devices']:,} devices; "
+                 f"planted DRC and LVS faults {'caught' if a3['cell_drc_fault_detected'] and a3['lvs_fault_detected'] else 'NOT caught'}.</li>")
+if None not in t3:
+    done3.append(f"<li><b>Logic</b>: build option <code>TCIM_CELL_1OF3</code> in <code>rtl/tcim_core.sv</code> (a third device Z per weight: one "
+                 f"LRS device per weight, any other read flagged WERR). The full test bench passes on it in both trit codes "
+                 f"({t3[0][0]:,} and {t3[1][0]:,} checks, {t3[0][1] + t3[1][1]} failures; <code>make rtl-1of3</code>)"
+                 + (f"; {mz_ok} of {len(mz)} faults planted in the Z logic are caught" if mz else "") + ".</li>")
+if eqd:
+    done3.append(f"<li><b>This chip unchanged</b>: without the option the logic is proven equivalent to the verified revision 4.7 "
+                 f"({int(eqd.group(1)):,} points, {eqd.group(2)} unproven).</li>")
+done3.append("<li><b>Leak model</b>: weights and inputs pass (table above).</li>")
+cells_html += f"""
+<figure>{cells_figure()}<figcaption>The two cells to scale, every rectangle from their GDS. The 3T3R cell adds a third select transistor and
+ReRAM element (Z) with its own bit line; the source line and word line are shared. Exactly one of P, Z, N is low-resistance.</figcaption></figure>
+<div class="board">
+<div class="col"><h3><span class="tag t-ok">3T3R: done</span></h3><ul>{"".join(done3)}</ul></div>
+<div class="col"><h3><span class="tag t-warn">3T3R: still to do</span></h3><ul>
+<li>Periphery: 24 more bit-line slices and sense amplifiers; analog macro, chip layout and sign-off.</li>
+<li>Array controller and chip test bench with the Z bit line; formal proofs and the full mutation test on the option.</li>
+<li>Transistor-level read and programming simulation of the 3T3R cell; its supply current in the leak model at 1 µA noise.</li>
+</ul></div>
+<div class="col"><h3><span class="tag t-you">prior art to cite</span></h3><ul>
+<li>One-hot ternary codes, and dual-rail / one-of-n encodings as side-channel countermeasures in logic.</li>
+<li>Fixed-weight codewords for ternary memory cells (Micron, US 11,811,424; for read reliability, not security).</li>
+<li>Power-analysis attacks and countermeasures for CIM (TU Delft, 2025–26; other methods).</li>
+<li>A literature search is needed before claiming novelty.</li></ul></div>
+</div>
+"""
 s = s[:h] + f"""</section>
 
 <section id="open">

@@ -13,6 +13,6 @@ trit code of the device under test: two's complement (+1 = 01, 0 = 00, -1 = 11, 
 5d. security options: SEC register, margin check, LOCK
 6. ternary digits network through the RTL
    360 samples: RTL correct 341, software correct 341, same class as software 360, layer-1 mismatches 0
-array operations: 138999 reads, 11268 pulses, 1558 sums; 49905956 clock cycles
+array operations: 138912 reads, 11247 pulses, 1558 sums; 49905956 clock cycles
 97463 checks, 0 failures
 TEST PASSED

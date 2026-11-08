@@ -5,7 +5,7 @@ PDKT    := $(IHP_GNUCAP)/tests/gnucap
 CXXRTL  := $(shell yosys-config --datdir 2>/dev/null)/include/backends/cxxrtl/runtime
 RTL     := rtl/tcim_pkg.sv rtl/tcim_core.sv rtl/tcim_spi.sv rtl/tcim_top.sv
 
-.PHONY: rtl-chip rtl-chip-verilator equiv-chip signoff all check-model pdk-check cell array rtl rtl-pnx mutation mutation-pnx equiv test synth sta orfs-src sense clean \
+.PHONY: rtl-1of3 rtl-chip rtl-chip-verilator equiv-chip signoff all check-model pdk-check cell array rtl rtl-pnx mutation mutation-pnx equiv test synth sta orfs-src sense clean \
         lint rtl-verilator formal gls post-corners layout sense-env periphery program-mc sky130-port
 
 all: check-model rtl
@@ -63,6 +63,26 @@ tb/build_pnx/tb_tcim: tb/tb_tcim.cc tb/build_pnx/tcim_top.h
 
 rtl-pnx: tb/build_pnx/tb_tcim tb/vectors/net_x.txt
 	tb/build_pnx/tb_tcim tb/vectors | tee results/rtl_test_pnx.log
+
+# next-chip cell (3T3R, one-of-three; 8 November 2026): the same test bench on the build with a Z device per weight
+tb/build_1of3/tcim_top.h: $(RTL)
+	mkdir -p tb/build_1of3
+	yosys -q -p "read_slang -D TCIM_CELL_1OF3 --top tcim_top $(RTL); hierarchy -top tcim_top; proc; flatten; opt; write_cxxrtl -header -namespace cxxrtl_design tb/build_1of3/tcim_top.cc"
+
+tb/build_1of3/tb_tcim: tb/tb_tcim.cc tb/build_1of3/tcim_top.h
+	$(CXX) -std=c++14 -O1 -DTCIM_CELL_1OF3 -I tb/build_1of3 -I $(CXXRTL) tb/tb_tcim.cc tb/build_1of3/tcim_top.cc -o $@
+
+tb/build_1of3_pnx/tcim_top.h: $(RTL)
+	mkdir -p tb/build_1of3_pnx
+	yosys -q -p "read_slang -D TCIM_CELL_1OF3 -D TCIM_ENC_PNX --top tcim_top $(RTL); hierarchy -top tcim_top; proc; flatten; opt; write_cxxrtl -header -namespace cxxrtl_design tb/build_1of3_pnx/tcim_top.cc"
+
+tb/build_1of3_pnx/tb_tcim: tb/tb_tcim.cc tb/build_1of3_pnx/tcim_top.h
+	$(CXX) -std=c++14 -O1 -DTCIM_CELL_1OF3 -DTCIM_ENC_PNX -I tb/build_1of3_pnx -I $(CXXRTL) tb/tb_tcim.cc tb/build_1of3_pnx/tcim_top.cc -o $@
+
+rtl-1of3: tb/build_1of3/tb_tcim tb/build_1of3_pnx/tb_tcim tb/vectors/net_x.txt
+	tb/build_1of3/tb_tcim tb/vectors | tee results/next_chip/rtl_test_1of3.log
+	tb/build_1of3_pnx/tb_tcim tb/vectors | tee results/next_chip/rtl_test_1of3_pnx.log
+
 
 # how fast the serial clock may run for a host that samples MISO on the rising edge
 tb/build/spi_fuzz: tb/extra/spi_fuzz.cc tb/build/tcim_top.h

@@ -30,6 +30,12 @@
 
 using namespace std;
 static const int ROWS = 72, COLS = 24, ACCW = 10;
+// -DTCIM_CELL_1OF3: the next-chip cell (3T3R, one-of-three): a third device Z per weight; +1 = P, -1 = N, 0 = Z low-resistance
+#ifdef TCIM_CELL_1OF3
+static const bool CELL3 = true;
+#else
+static const bool CELL3 = false;
+#endif
 #ifdef TCIM_CHIP
 static cxxrtl_design::p_tcim__chip__core top;
 #else
@@ -45,6 +51,8 @@ static bool fail_fast = false;      // set by the environment variable TB_FAIL_F
 // ---------------------------------------------------------------- behavioural array
 struct Array {
     double ip[ROWS][COLS], in[ROWS][COLS];        // device read currents, uA at 0.2 V
+    double iz[ROWS][COLS];                        // the Z device of the one-of-three cell (unused in the 2T2R build)
+    int thr_set_z[ROWS][COLS], thr_rst_z[ROWS][COLS];
     int thr_set_p[ROWS][COLS], thr_set_n[ROWS][COLS], thr_rst_p[ROWS][COLS], thr_rst_n[ROWS][COLS];
     bool stuck_p[ROWS][COLS];                     // device that never sets (for the error-path test)
     bool stuck_rst_p[ROWS][COLS];                 // device that never resets
@@ -66,12 +74,22 @@ struct Array {
     void init() {
         uniform_int_distribution<int> ts(4, 14), tr(2, 12);
         for (int r = 0; r < ROWS; r++) for (int c = 0; c < COLS; c++) {
-            ip[r][c] = sample_hrs(); in[r][c] = sample_hrs();
+            ip[r][c] = sample_hrs(); in[r][c] = sample_hrs(); iz[r][c] = sample_hrs();
+            thr_set_z[r][c] = ts(rng); thr_rst_z[r][c] = tr(rng);
             thr_set_p[r][c] = ts(rng); thr_set_n[r][c] = ts(rng); thr_rst_p[r][c] = tr(rng); thr_rst_n[r][c] = tr(rng);
             stuck_p[r][c] = false; stuck_rst_p[r][c] = false;
         }
     }
-    void force(int r, int c, int w) { ip[r][c] = (w == 1) ? 43.6 : 2.9; in[r][c] = (w == -1) ? 43.6 : 2.9; }
+    void force(int r, int c, int w) { ip[r][c] = (w == 1) ? 43.6 : 2.9; in[r][c] = (w == -1) ? 43.6 : 2.9; iz[r][c] = (w == 0) ? 43.6 : 2.9; }
+    // after a directed test sets ip / in by hand: in the one-of-three build the Z device takes the state that keeps the
+    // cell as the test means it (LRS when neither P nor N reads above the mid reference)
+    void fixz(int r, int c) { if (CELL3) iz[r][c] = (ip[r][c] > i_mid || in[r][c] > i_mid) ? 2.9 : 43.6; }
+    bool state_ok(int r, int c, int w) const {   // every device of the cell in the state weight w needs, well inside the targets
+        bool lp = ip[r][c] >= 42.0, ln = in[r][c] >= 42.0, hp = ip[r][c] <= 6.0, hn = in[r][c] <= 6.0;
+        bool ok = (w == 1 ? lp : hp) && (w == -1 ? ln : hn);
+        if (CELL3) ok = ok && (w == 0 ? iz[r][c] >= 42.0 : iz[r][c] <= 6.0);
+        return ok;
+    }
 };
 static Array arr;
 
@@ -84,16 +102,17 @@ static void note_read(int row) {
     if (arr.last_read_row >= 0 && row != (arr.last_read_row + 1) % ROWS) arr.order_breaks++;
     arr.last_read_row = row;
 }
-static void sense_row(unsigned op, unsigned row, bool *bp, bool *bn) {
+static void sense_row(unsigned op, unsigned row, bool *bp, bool *bn, bool *bz = nullptr) {
     double ref = (op == 0) ? arr.i_mid : (op == 1) ? arr.i_set : arr.i_rst;
     for (int c = 0; c < COLS; c++) {
         bp[c] = (op == 1) ? (arr.ip[row][c] >= ref) : (arr.ip[row][c] > ref);
         bn[c] = (op == 1) ? (arr.in[row][c] >= ref) : (arr.in[row][c] > ref);
+        if (bz) bz[c] = (op == 1) ? (arr.iz[row][c] >= ref) : (arr.iz[row][c] > ref);
     }
 }
 
 // one set (op 3) or reset (op 4) pulse of amplitude code amp on the devices in mp / mn of a row
-static void apply_pulse(unsigned op, unsigned row, unsigned amp, const bool *mp, const bool *mn) {
+static void apply_pulse(unsigned op, unsigned row, unsigned amp, const bool *mp, const bool *mn, const bool *mz = nullptr) {
     // monitors: amplitude must start at 0 in each phase and rise by one per pulse; reset pulses come before set pulses;
     // a pulse must go only to devices that have to change and that failed the verify read just before it
     if (op == 3) { if ((int)amp != arr.seq_set++) arr.amp_err++; }
@@ -101,7 +120,10 @@ static void apply_pulse(unsigned op, unsigned row, unsigned amp, const bool *mp,
     if (arr.exp_row >= 0 && (int)row != arr.exp_row) arr.wrong_row++;
     bool any = false;
     for (int c = 0; c < COLS; c++) {
-        bool sp_ = mp[c], sn_ = mn[c]; any |= sp_ | sn_;
+        bool sp_ = mp[c], sn_ = mn[c], sz_ = mz ? mz[c] : false; any |= sp_ | sn_ | sz_;
+        if (op == 3) { if (sz_ && arr.iz[row][c] >= arr.i_set) arr.overpulse++; }
+        else         { if (sz_ && arr.iz[row][c] <= arr.i_rst) arr.overpulse++; }
+        if (arr.tgt && sz_) { if (op == 3 ? arr.tgt[c] != 0 : arr.tgt[c] == 0) arr.wrong_dev++; }
         if (op == 3) { if (sp_ && arr.ip[row][c] >= arr.i_set) arr.overpulse++; if (sn_ && arr.in[row][c] >= arr.i_set) arr.overpulse++; }
         else         { if (sp_ && arr.ip[row][c] <= arr.i_rst) arr.overpulse++; if (sn_ && arr.in[row][c] <= arr.i_rst) arr.overpulse++; }
         if (arr.tgt) {
@@ -118,6 +140,10 @@ static void apply_pulse(unsigned op, unsigned row, unsigned amp, const bool *mp,
         if (mn[c]) {
             if (op == 3) { if ((int)amp >= arr.thr_set_n[row][c]) arr.in[row][c] = arr.sample_lrs(); }
             else         { if ((int)amp >= arr.thr_rst_n[row][c]) arr.in[row][c] = arr.sample_hrs(); }
+        }
+        if (mz && mz[c]) {
+            if (op == 3) { if ((int)amp >= arr.thr_set_z[row][c]) arr.iz[row][c] = arr.sample_lrs(); }
+            else         { if ((int)amp >= arr.thr_rst_z[row][c]) arr.iz[row][c] = arr.sample_hrs(); }
         }
     }
     arr.n_pulse++;
@@ -142,17 +168,21 @@ static void array_eval() {       // called once per clock cycle, before the risi
     unsigned amp = top.p_arr__amp.get<unsigned>();
     if (op != 5 && row >= (unsigned)ROWS) { arr.bad_row++; row = 0; }       // the macro must never be given a row that does not exist
     auto mp = top.p_arr__mask__p, mn = top.p_arr__mask__n;
-    cxxrtl::value<COLS> sp, sn; cxxrtl::value<COLS * ACCW> adc;
+    cxxrtl::value<COLS> sp, sn, sz; cxxrtl::value<COLS * ACCW> adc;
     if (op == 0 || op == 1 || op == 2) {
-        bool bp[COLS], bn[COLS];
-        sense_row(op, row, bp, bn);
-        for (int c = 0; c < COLS; c++) { setbit(sp, c, bp[c]); setbit(sn, c, bn[c]); }
+        bool bp[COLS], bn[COLS], bz[COLS];
+        sense_row(op, row, bp, bn, bz);
+        for (int c = 0; c < COLS; c++) { setbit(sp, c, bp[c]); setbit(sn, c, bn[c]); setbit(sz, c, bz[c]); }
         arr.n_read++;
         if (op == 0) note_read(row);
     } else if (op == 3 || op == 4) {
-        bool bp[COLS], bn[COLS];
+        bool bp[COLS], bn[COLS], bz[COLS] = {false};
         for (int c = 0; c < COLS; c++) { bp[c] = getbit(mp, c); bn[c] = getbit(mn, c); }
-        apply_pulse(op, row, amp, bp, bn);
+#ifdef TCIM_CELL_1OF3
+        auto mz = top.p_arr__mask__z;
+        for (int c = 0; c < COLS; c++) bz[c] = getbit(mz, c);
+#endif
+        apply_pulse(op, row, amp, bp, bn, bz);
     } else if (op == 5) {
         auto rm = top.p_arr__row__mask;
         for (int c = 0; c < COLS; c++) {
@@ -166,6 +196,10 @@ static void array_eval() {       // called once per clock cycle, before the risi
         arr.n_sum++; arr.sum_phase++;
     }
     top.p_arr__sa__p = sp; top.p_arr__sa__n = sn; top.p_arr__adc = adc;
+#ifdef TCIM_CELL_1OF3
+    top.p_arr__sa__z = sz;
+#endif
+    (void)sz;
     top.p_arr__ack.set<bool>(true);
 }
 #else
@@ -511,8 +545,7 @@ int main(int argc, char **argv) {
           (int)prog_cycles_bad, prog_timed, (unsigned long long)prog_cycles);
     printf("   constant time: every program command %llu cycles (21 + 21 pulse steps; pulses selecting a device as above)\n", (unsigned long long)prog_cycles);
     for (int r = 0; r < ROWS; r++) for (int c = 0; c < COLS; c++) {
-        bool lp = arr.ip[r][c] >= 42.0, ln = arr.in[r][c] >= 42.0, hp = arr.ip[r][c] <= 6.0, hn = arr.in[r][c] <= 6.0;
-        CHECK((W[r][c] == 1 ? lp : hp) && (W[r][c] == -1 ? ln : hn), "device state after programming r%d c%d", r, c);
+        CHECK(arr.state_ok(r, c, W[r][c]), "device state after programming r%d c%d", r, c);
     }
     for (int r = 0; r < ROWS; r++) {
         wr_tryte(40, int_to_tryte(r)); wr_word(44, 0); wr_tryte(48, enc(-1)); CHECK(wait_done(), "read-back stuck");
@@ -645,22 +678,37 @@ int main(int argc, char **argv) {
       CHECK((stat() >> 4) & 1, "row index 72 accepted"); CHECK(arr.n_pulse == p0 && arr.n_read == r0, "array accessed for row index 72");
       wr_tryte(48, enc(-1)); wait_done();
       CHECK((stat() >> 4) & 1, "read-back of row index 72 accepted"); CHECK(arr.n_read == r0, "array read for row index 72"); }
-    { arr.ip[13][5] = 43.0; arr.in[13][5] = 43.0;        // read-back of a row with an invalid cell: flagged, and the trit reads 0
+    { arr.ip[13][5] = 43.0; arr.in[13][5] = 43.0; arr.fixz(13, 5);        // read-back of a row with an invalid cell: flagged, and the trit reads 0
       wr_tryte(40, int_to_tryte(13)); wr_word(44, 0); wr_tryte(48, enc(-1)); CHECK(wait_done(), "read-back stuck");
       CHECK((stat() >> 4) & 1, "invalid cell not reported by read-back");
       int exp[COLS]; for (int c = 0; c < COLS; c++) exp[c] = W[13][c]; exp[5] = 0;
       CHECK(rd_word(44) == pack(exp, COLS), "read-back of a row with an invalid cell"); arr.force(13, 5, W[13][5]);
       wr_tryte(48, enc(-1)); CHECK(wait_done(), "read-back stuck"); CHECK(!((stat() >> 4) & 1), "WERR not cleared by the next read-back");
       CHECK(rd_word(44) == pack(W[13], COLS), "read-back row 13 after repair"); }
-    { int w[COLS]; for (auto &v : w) v = 1; arr.stuck_p[5][7] = true; int it; bool ok = program_row(5, w, &it);
+    { int w[COLS]; for (auto &v : w) v = 1; arr.stuck_p[5][7] = true;
+      arr.force(5, 7, 0);       // the stuck device starts high-resistance, so the set is needed (8 Nov: the test had relied on
+                                // a random draw leaving it below the set target; in the 3T3R build the draw differed)
+      int it; bool ok = program_row(5, w, &it);
       CHECK(!ok, "stuck device not reported"); CHECK(it >= 21, "stuck device: too few pulses (%d)", it);
       CHECK(arr.seq_set == 21, "stuck device: %d set pulses instead of the full ladder of 21", arr.seq_set);
       arr.stuck_p[5][7] = false; ok = program_row(5, W[5], &it); CHECK(ok, "row 5 could not be re-programmed"); }
-    { arr.ip[9][3] = 43.0; arr.in[9][3] = 43.0;         // invalid cell: both devices in LRS
+    { arr.ip[9][3] = 43.0; arr.in[9][3] = 43.0; arr.fixz(9, 3);         // invalid cell: both devices in LRS
       for (int r = 0; r < ROWS; r++) x[r] = (r == 9); product(x, y);
       CHECK((stat() >> 4) & 1, "invalid cell not reported"); CHECK(y[3] == 0, "cell with both devices in LRS not counted as 0 (got %d)", y[3]);
       arr.force(9, 3, W[9][3]); 
       product(x, y); CHECK(!((stat() >> 4) & 1), "WERR not cleared by the next GO"); CHECK(y[3] == W[9][3], "cell (9,3) after repair"); }
+    if (CELL3) {   // one-of-three: a cell with no LRS device, or with two, is invalid (WERR) and counts 0 (added 8 Nov 2026 for
+                   // the faults "a cell with no LRS device not flagged" and "Z ignored when decoding +1")
+        for (int r = 0; r < ROWS; r++) x[r] = (r == 9);
+        const double cases[3][3] = {{2.9, 2.9, 2.9}, {43.0, 2.9, 43.0}, {2.9, 43.0, 43.0}};   // P, N, Z
+        const char *what[3] = {"no LRS device", "P and Z both LRS", "N and Z both LRS"};
+        for (int k = 0; k < 3; k++) {
+            arr.ip[9][3] = cases[k][0]; arr.in[9][3] = cases[k][1]; arr.iz[9][3] = cases[k][2]; product(x, y);
+            CHECK((stat() >> 4) & 1, "1of3: %s not reported", what[k]); CHECK(y[3] == 0, "1of3: %s not counted as 0 (got %d)", what[k], y[3]);
+        }
+        arr.force(9, 3, W[9][3]); product(x, y);
+        CHECK(!((stat() >> 4) & 1) && y[3] == W[9][3], "1of3: cell (9,3) after repair");
+    }
     { int w[COLS] = {0}; uint64_t p0 = arr.n_pulse; wr_tryte(40, int_to_tryte(-1)); wr_word(44, pack(w, COLS)); wr_tryte(48, enc(+1)); wait_done();
       CHECK((stat() >> 4) & 1, "row index -1 accepted"); CHECK(arr.n_pulse == p0, "pulses issued for row index -1"); }
     for (int mode = 0; mode < 2; mode++) {   // variable: the command ends after the reset phase; constant: the set phase
@@ -679,9 +727,9 @@ int main(int argc, char **argv) {
     {   // a device between the read reference (25 uA) and the set target (42 uA) must read as LRS; one below it as HRS
         int save = W[11][4];
         for (int r = 0; r < ROWS; r++) x[r] = (r == 11);
-        arr.ip[11][4] = 30.0; arr.in[11][4] = 2.9; product(x, y); CHECK(y[4] == 1, "30 uA device not read as LRS (got %d)", y[4]);
-        arr.ip[11][4] = 20.0; arr.in[11][4] = 2.9; product(x, y); CHECK(y[4] == 0, "20 uA device not read as HRS (got %d)", y[4]);
-        arr.ip[11][4] = 2.9; arr.in[11][4] = 30.0; product(x, y); CHECK(y[4] == -1, "30 uA device on BL- not read as -1 (got %d)", y[4]);
+        arr.ip[11][4] = 30.0; arr.in[11][4] = 2.9; arr.fixz(11, 4); product(x, y); CHECK(y[4] == 1, "30 uA device not read as LRS (got %d)", y[4]);
+        arr.ip[11][4] = 20.0; arr.in[11][4] = 2.9; arr.fixz(11, 4); product(x, y); CHECK(y[4] == 0, "20 uA device not read as HRS (got %d)", y[4]);
+        arr.ip[11][4] = 2.9; arr.in[11][4] = 30.0; arr.fixz(11, 4); product(x, y); CHECK(y[4] == -1, "30 uA device on BL- not read as -1 (got %d)", y[4]);
         CHECK(!((stat() >> 4) & 1), "WERR set by a valid cell");
         arr.force(11, 4, save);
     }
@@ -780,8 +828,7 @@ int main(int argc, char **argv) {
         CHECK(!((stat() >> 4) & 1), "PDATA with code 10: WERR");
         CHECK(arr.n_pulse_real == p0, "PDATA with code 10: %d pulses on a row that already held these weights", (int)(arr.n_pulse_real - p0));
         for (int c = 0; c < COLS; c++) {
-            bool lp = arr.ip[20][c] >= 42.0, ln = arr.in[20][c] >= 42.0, hp = arr.ip[20][c] <= 6.0, hn = arr.in[20][c] <= 6.0;
-            CHECK((W[20][c] == 1 ? lp : hp) && (W[20][c] == -1 ? ln : hn), "PDATA with code 10: device state r20 c%d", c);
+            CHECK(arr.state_ok(20, c, W[20][c]), "PDATA with code 10: device state r20 c%d", c);
         }
         wr_tryte(40, enc(+1) | (2u << 2) | (2u << 10)); wr_word(44, 0); wr_tryte(48, enc(-1)); CHECK(wait_done(), "read-back stuck");
         CHECK(!((stat() >> 4) & 1), "PROW with code 10 not read as row 1");
@@ -936,6 +983,15 @@ int main(int argc, char **argv) {
         we = mchk(&mg, &pd, &nr, &np); CHECK(we && mg == pack(exp, COLS), "margin check near the read reference");
         arr.in[r][1] = 26.0; arr.ip[r][1] = 2.9;     // column 1 (-1): BL- device at 26 uA
         we = mchk(&mg, &pd, &nr, &np); exp[1] = 1; CHECK(we && mg == pack(exp, COLS), "margin check of a BL- device");
+        if (CELL3) {   // one-of-three: a Z device (weight 0) at 30 uA, above the read reference but below the set target
+            int cz = -1; for (int c = 2; c < COLS; c++) if (w[c] == 0 && c != 4) { cz = c; break; }
+            CHECK(cz >= 0, "1of3 margin check: no weight 0 in row %d", r);
+            if (cz >= 0) {
+                double kz = arr.iz[r][cz]; arr.iz[r][cz] = 30.0; exp[cz] = 1;
+                we = mchk(&mg, &pd, &nr, &np); CHECK(we && mg == pack(exp, COLS), "1of3: margin check of a Z device");
+                arr.iz[r][cz] = kz; exp[cz] = 0;
+            }
+        }
         // every margin check clears MARG when it starts, also one that is refused (row 72) and so never reads
         // (found by the mutation test on 4 November 2026: the clear was otherwise hidden by the first margin read)
         wr_tryte(40, int_to_tryte(72)); wr_tryte(48, (uint64_t)enc(+1) << 2); wait_done();

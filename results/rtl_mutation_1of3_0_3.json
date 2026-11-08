@@ -1,0 +1,34 @@
+[
+ {
+  "name": "1of3: Z not reset when the weight is +1 or -1",
+  "status": "caught",
+  "first_failure": "FAIL: WERR not cleared by the next GO",
+  "in_test": "5. error paths",
+  "seconds": 101,
+  "id": 0
+ },
+ {
+  "name": "1of3: Z not set for a weight 0",
+  "status": "caught",
+  "first_failure": "FAIL: device state after programming r0 c1",
+  "in_test": "2. programming all 72 rows with verify",
+  "seconds": 5,
+  "id": 1
+ },
+ {
+  "name": "1of3: a cell with no LRS device not flagged",
+  "status": "caught",
+  "first_failure": "FAIL: 1of3: no LRS device not reported",
+  "in_test": "5. error paths",
+  "seconds": 104,
+  "id": 2
+ },
+ {
+  "name": "1of3: Z ignored when decoding +1",
+  "status": "caught",
+  "first_failure": "FAIL: 1of3: P and Z both LRS not counted as 0 (got 1)",
+  "in_test": "5. error paths",
+  "seconds": 106,
+  "id": 3
+ }
+]

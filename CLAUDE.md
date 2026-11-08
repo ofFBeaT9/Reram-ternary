@@ -130,6 +130,11 @@ Nothing is "done" until a script in this repository reproduces the number and th
 - The cloud sandbox: `env_oss.sh` puts YosysHQ's OSS CAD Suite (2026-10-09, with the slang front end) on the path.
 - Serial-port fuzzing (revision 4.8): `make fuzz` (`tb/extra/spi_fuzz.cc`, faults in `tb/extra/spi_fuzz_faults.py`).
   Rerun it after any change to `rtl/tcim_spi.sv` or the register map.
+- Next-chip cell (8 November 2026): 3T3R one-of-three, build option `TCIM_CELL_1OF3` (ports `arr_mask_z`, `arr_sa_z`; the
+  `Z(...)` macro in `tcim_core.sv` expands only in that build). Without it the core is proven equal to revision 4.7
+  (`results/next_chip/equiv_default_build_unchanged.*`): keep it so. `make rtl-1of3`; Z-logic faults: `TB_CELL=1of3 tb/mutation_test.py`.
+  Layout: `layout/sky130/next_3t3r/run3.sh` (Magic 8.3.471 and netgen 1.5.272 built in the sandbox under ~/opt; PDK_ROOT ~/pdk3e).
+  Formal proofs, the array controller and the periphery do not support the option yet.
 - US spelling in documents. Units with every number.
 
 ## Layout

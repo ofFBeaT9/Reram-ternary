@@ -1,0 +1,28 @@
+
+Magic 8.3 revision 471 - Compiled on Sun Nov  8 08:07:16 PST 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130B ...
+2 Magic internal units = 1 Lambda
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130B Device Generator Menu ...
+Loading "drc_ext3.tcl" from command line.
+Cell rr3t3r couldn't be read
+No such file or directory
+Creating new cell
+Loading DRC CIF style.
+Total DRC errors found: 0
+CELL DRC total: 
+No errors found.
+   Generating output for cell rr3t3r
+Cell fault3 couldn't be read
+No such file or directory
+Creating new cell
+Total DRC errors found: 2
+DRC total fault: 
+  ReRAM width < 0.26um (rr1.1) : {40 0 50 40} {0 40 40 50}

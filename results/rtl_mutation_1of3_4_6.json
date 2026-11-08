@@ -1,0 +1,26 @@
+[
+ {
+  "name": "1of3: no reset pulse reaches Z",
+  "status": "caught",
+  "first_failure": "FAIL: stuck device: too few pulses (13)",
+  "in_test": "5. error paths",
+  "seconds": 102,
+  "id": 4
+ },
+ {
+  "name": "1of3: margin check ignores Z below the set target",
+  "status": "caught",
+  "first_failure": "FAIL: 1of3: margin check of a Z device",
+  "in_test": "5d. security options: SEC register, marg",
+  "seconds": 150,
+  "id": 5
+ },
+ {
+  "name": "1of3: Z pulses not counted in PITER (set)",
+  "status": "caught",
+  "first_failure": "FAIL: PITER 15 differs from the 16 device-selecting pulses the array received (row 0)",
+  "in_test": "2. programming all 72 rows with verify",
+  "seconds": 1,
+  "id": 6
+ }
+]

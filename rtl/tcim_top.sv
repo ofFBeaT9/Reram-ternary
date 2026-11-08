@@ -15,6 +15,10 @@ module tcim_top
     output logic [ROWS-1:0]         arr_row_mask,
     output logic [COLS-1:0]         arr_mask_p,
     output logic [COLS-1:0]         arr_mask_n,
+`ifdef TCIM_CELL_1OF3
+    output logic [COLS-1:0]         arr_mask_z,   // next-chip cell (3T3R): third device per weight
+    input  logic [COLS-1:0]         arr_sa_z,
+`endif
     output logic [4:0]              arr_amp,
     input  logic                    arr_ack,
     input  logic [COLS-1:0]         arr_sa_p,

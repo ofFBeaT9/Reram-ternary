@@ -1,0 +1,436 @@
+
+Circuit 1 cell sky130_fd_pr_reram__reram_cell and Circuit 2 cell sky130_fd_pr_reram__reram_cell are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr_reram__reram_cell is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr_reram__reram_cell is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr_reram__reram_cell  |Circuit 2: sky130_fd_pr_reram__reram_cell  
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr_reram__reram_cell and sky130_fd_pr_reram__reram_cell are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_g5v0d10v5 and Circuit 2 cell sky130_fd_pr__nfet_g5v0d10v5 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_g5v0d10v5 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_g5v0d10v5 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_g5v0d10v5    |Circuit 2: sky130_fd_pr__nfet_g5v0d10v5    
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_g5v0d10v5 and sky130_fd_pr__nfet_g5v0d10v5 are equivalent.
+
+Subcircuit summary:
+Circuit 1: tcim_sky130_array3              |Circuit 2: tcim_sky130_array3              
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr_reram__reram_cell (5184)      |sky130_fd_pr_reram__reram_cell (5184)      
+sky130_fd_pr__nfet_g5v0d10v5 (5184)        |sky130_fd_pr__nfet_g5v0d10v5 (5184)        
+Number of devices: 10368                   |Number of devices: 10368                   
+Number of nets: 5353                       |Number of nets: 5353                       
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: tcim_sky130_array3              |Circuit 2: tcim_sky130_array3              
+
+---------------------------------------------------------------------------------------
+Net: BLP0                                  |Net: BLP0                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ0                                  |Net: BLZ0                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN0                                  |Net: BLN0                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP1                                  |Net: BLP1                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ1                                  |Net: BLZ1                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN1                                  |Net: BLN1                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP2                                  |Net: BLP2                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ2                                  |Net: BLZ2                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN2                                  |Net: BLN2                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP3                                  |Net: BLP3                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ3                                  |Net: BLZ3                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN3                                  |Net: BLN3                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP4                                  |Net: BLP4                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ4                                  |Net: BLZ4                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN4                                  |Net: BLN4                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP5                                  |Net: BLP5                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP6                                  |Net: BLP6                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ6                                  |Net: BLZ6                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN6                                  |Net: BLN6                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP7                                  |Net: BLP7                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ7                                  |Net: BLZ7                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN7                                  |Net: BLN7                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP8                                  |Net: BLP8                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ8                                  |Net: BLZ8                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN8                                  |Net: BLN8                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP9                                  |Net: BLP9                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ9                                  |Net: BLZ9                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN9                                  |Net: BLN9                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP10                                 |Net: BLP10                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ10                                 |Net: BLZ10                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN10                                 |Net: BLN10                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP11                                 |Net: BLP11                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ11                                 |Net: BLZ11                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN11                                 |Net: BLN11                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP12                                 |Net: BLP12                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ12                                 |Net: BLZ12                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN12                                 |Net: BLN12                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP13                                 |Net: BLP13                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ13                                 |Net: BLZ13                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN13                                 |Net: BLN13                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP14                                 |Net: BLP14                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ14                                 |Net: BLZ14                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN14                                 |Net: BLN14                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP15                                 |Net: BLP15                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ15                                 |Net: BLZ15                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN15                                 |Net: BLN15                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP16                                 |Net: BLP16                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ16                                 |Net: BLZ16                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN16                                 |Net: BLN16                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP17                                 |Net: BLP17                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ17                                 |Net: BLZ17                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN17                                 |Net: BLN17                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP18                                 |Net: BLP18                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ18                                 |Net: BLZ18                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN18                                 |Net: BLN18                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP19                                 |Net: BLP19                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ19                                 |Net: BLZ19                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN19                                 |Net: BLN19                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP20                                 |Net: BLP20                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ20                                 |Net: BLZ20                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN20                                 |Net: BLN20                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP21                                 |Net: BLP21                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ21                                 |Net: BLZ21                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN21                                 |Net: BLN21                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP22                                 |Net: BLP22                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ22                                 |Net: BLZ22                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN22                                 |Net: BLN22                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLP23                                 |Net: BLP23                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ23                                 |Net: BLZ23                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLN23                                 |Net: BLN23                                 
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 72    
+                                           |                                           
+Net: BLZ5                                  |Net: BLZ5                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 71    
+                                           |                                           
+Net: BLN5                                  |Net: BLN5                                  
+  sky130_fd_pr_reram__reram_cell/1 = 72    |  sky130_fd_pr_reram__reram_cell/1 = 73    
+---------------------------------------------------------------------------------------
+Netlists do not match.
+
+Subcircuit pins:
+Circuit 1: tcim_sky130_array3              |Circuit 2: tcim_sky130_array3              
+-------------------------------------------|-------------------------------------------
+BLP0                                       |BLP0                                       
+BLZ0                                       |BLZ0                                       
+BLN0                                       |BLN0                                       
+BLP1                                       |BLP1                                       
+BLZ1                                       |BLZ1                                       
+BLN1                                       |BLN1                                       
+BLP2                                       |BLP2                                       
+BLZ2                                       |BLZ2                                       
+BLN2                                       |BLN2                                       
+BLP3                                       |BLP3                                       
+BLZ3                                       |BLZ3                                       
+BLN3                                       |BLN3                                       
+BLP4                                       |BLP4                                       
+BLZ4                                       |BLZ4                                       
+BLN4                                       |BLN4                                       
+BLP5                                       |BLP5                                       
+BLZ5                                       |BLP6 **Mismatch**                          
+BLN5                                       |BLZ6 **Mismatch**                          
+BLP6                                       |BLN6 **Mismatch**                          
+BLZ6                                       |BLP7 **Mismatch**                          
+BLN6                                       |BLZ7 **Mismatch**                          
+BLP7                                       |BLN7 **Mismatch**                          
+BLZ7                                       |BLP8 **Mismatch**                          
+BLN7                                       |BLZ8 **Mismatch**                          
+BLP8                                       |BLN8 **Mismatch**                          
+BLZ8                                       |BLP9 **Mismatch**                          
+BLN8                                       |BLZ9 **Mismatch**                          
+BLP9                                       |BLN9 **Mismatch**                          
+BLZ9                                       |BLP10 **Mismatch**                         
+BLN9                                       |BLZ10 **Mismatch**                         
+BLP10                                      |BLN10 **Mismatch**                         
+BLZ10                                      |BLP11 **Mismatch**                         
+BLN10                                      |BLZ11 **Mismatch**                         
+BLP11                                      |BLN11 **Mismatch**                         
+BLZ11                                      |BLP12 **Mismatch**                         
+BLN11                                      |BLZ12 **Mismatch**                         
+BLP12                                      |BLN12 **Mismatch**                         
+BLZ12                                      |BLP13 **Mismatch**                         
+BLN12                                      |BLZ13 **Mismatch**                         
+BLP13                                      |BLN13 **Mismatch**                         
+BLZ13                                      |BLP14 **Mismatch**                         
+BLN13                                      |BLZ14 **Mismatch**                         
+BLP14                                      |BLN14 **Mismatch**                         
+BLZ14                                      |BLP15 **Mismatch**                         
+BLN14                                      |BLZ15 **Mismatch**                         
+BLP15                                      |BLN15 **Mismatch**                         
+BLZ15                                      |BLP16 **Mismatch**                         
+BLN15                                      |BLZ16 **Mismatch**                         
+BLP16                                      |BLN16 **Mismatch**                         
+BLZ16                                      |BLP17 **Mismatch**                         
+BLN16                                      |BLZ17 **Mismatch**                         
+BLP17                                      |BLN17 **Mismatch**                         
+BLZ17                                      |BLP18 **Mismatch**                         
+BLN17                                      |BLZ18 **Mismatch**                         
+BLP18                                      |BLN18 **Mismatch**                         
+BLZ18                                      |BLP19 **Mismatch**                         
+BLN18                                      |BLZ19 **Mismatch**                         
+BLP19                                      |BLN19 **Mismatch**                         
+BLZ19                                      |BLP20 **Mismatch**                         
+BLN19                                      |BLZ20 **Mismatch**                         
+BLP20                                      |BLN20 **Mismatch**                         
+BLZ20                                      |BLP21 **Mismatch**                         
+BLN20                                      |BLZ21 **Mismatch**                         
+BLP21                                      |BLN21 **Mismatch**                         
+BLZ21                                      |BLP22 **Mismatch**                         
+BLN21                                      |BLZ22 **Mismatch**                         
+BLP22                                      |BLN22 **Mismatch**                         
+BLZ22                                      |BLP23 **Mismatch**                         
+BLN22                                      |BLZ23 **Mismatch**                         
+BLP23                                      |BLN23 **Mismatch**                         
+BLZ23                                      |BLZ5 **Mismatch**                          
+BLN23                                      |BLN5 **Mismatch**                          
+WL71                                       |WL71                                       
+WL70                                       |WL70                                       
+WL69                                       |WL69                                       
+WL68                                       |WL68                                       
+WL67                                       |WL67                                       
+WL66                                       |WL66                                       
+WL65                                       |WL65                                       
+WL64                                       |WL64                                       
+WL63                                       |WL63                                       
+WL62                                       |WL62                                       
+WL61                                       |WL61                                       
+WL60                                       |WL60                                       
+WL59                                       |WL59                                       
+WL58                                       |WL58                                       
+WL57                                       |WL57                                       
+WL56                                       |WL56                                       
+WL55                                       |WL55                                       
+WL54                                       |WL54                                       
+WL53                                       |WL53                                       
+WL52                                       |WL52                                       
+WL51                                       |WL51                                       
+WL50                                       |WL50                                       
+WL49                                       |WL49                                       
+WL48                                       |WL48                                       
+WL47                                       |WL47                                       
+WL46                                       |WL46                                       
+WL45                                       |WL45                                       
+WL44                                       |WL44                                       
+WL43                                       |WL43                                       
+WL42                                       |WL42                                       
+WL41                                       |WL41                                       
+WL40                                       |WL40                                       
+WL39                                       |WL39                                       
+WL38                                       |WL38                                       
+WL37                                       |WL37                                       
+WL36                                       |WL36                                       
+WL35                                       |WL35                                       
+WL34                                       |WL34                                       
+WL33                                       |WL33                                       
+WL32                                       |WL32                                       
+WL31                                       |WL31                                       
+WL30                                       |WL30                                       
+WL29                                       |WL29                                       
+WL28                                       |WL28                                       
+WL27                                       |WL27                                       
+WL26                                       |WL26                                       
+WL25                                       |WL25                                       
+WL24                                       |WL24                                       
+WL23                                       |WL23                                       
+WL22                                       |WL22                                       
+WL21                                       |WL21                                       
+WL20                                       |WL20                                       
+WL19                                       |WL19                                       
+WL18                                       |WL18                                       
+WL17                                       |WL17                                       
+WL16                                       |WL16                                       
+WL15                                       |WL15                                       
+WL14                                       |WL14                                       
+WL13                                       |WL13                                       
+WL12                                       |WL12                                       
+WL11                                       |WL11                                       
+WL10                                       |WL10                                       
+WL9                                        |WL9                                        
+WL8                                        |WL8                                        
+WL7                                        |WL7                                        
+WL6                                        |WL6                                        
+WL5                                        |WL5                                        
+WL4                                        |WL4                                        
+WL3                                        |WL3                                        
+WL2                                        |WL2                                        
+WL1                                        |WL1                                        
+WL0                                        |WL0                                        
+VSS                                        |VSS                                        
+SL0                                        |SL0                                        
+SL1                                        |SL1                                        
+SL2                                        |SL2                                        
+SL3                                        |SL3                                        
+SL4                                        |SL4                                        
+SL5                                        |SL5                                        
+SL6                                        |SL6                                        
+SL7                                        |SL7                                        
+SL8                                        |SL8                                        
+SL9                                        |SL9                                        
+SL10                                       |SL10                                       
+SL11                                       |SL11                                       
+SL12                                       |SL12                                       
+SL13                                       |SL13                                       
+SL14                                       |SL14                                       
+SL15                                       |SL15                                       
+SL16                                       |SL16                                       
+SL17                                       |SL17                                       
+SL18                                       |SL18                                       
+SL19                                       |SL19                                       
+SL20                                       |SL20                                       
+SL21                                       |SL21                                       
+SL22                                       |SL22                                       
+SL23                                       |SL23                                       
+---------------------------------------------------------------------------------------
+Cell pin lists for tcim_sky130_array3 and tcim_sky130_array3 altered to match.
+Device classes tcim_sky130_array3 and tcim_sky130_array3 are equivalent.
+
+Final result: Top level cell failed pin matching.

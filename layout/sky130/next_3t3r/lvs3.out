@@ -1,0 +1,219 @@
+
+Circuit 1 cell sky130_fd_pr_reram__reram_cell and Circuit 2 cell sky130_fd_pr_reram__reram_cell are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr_reram__reram_cell is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr_reram__reram_cell is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr_reram__reram_cell  |Circuit 2: sky130_fd_pr_reram__reram_cell  
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr_reram__reram_cell and sky130_fd_pr_reram__reram_cell are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_g5v0d10v5 and Circuit 2 cell sky130_fd_pr__nfet_g5v0d10v5 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_g5v0d10v5 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_g5v0d10v5 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_g5v0d10v5    |Circuit 2: sky130_fd_pr__nfet_g5v0d10v5    
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_g5v0d10v5 and sky130_fd_pr__nfet_g5v0d10v5 are equivalent.
+
+Subcircuit summary:
+Circuit 1: tcim_sky130_array3              |Circuit 2: tcim_sky130_array3              
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr_reram__reram_cell (5184)      |sky130_fd_pr_reram__reram_cell (5184)      
+sky130_fd_pr__nfet_g5v0d10v5 (5184)        |sky130_fd_pr__nfet_g5v0d10v5 (5184)        
+Number of devices: 10368                   |Number of devices: 10368                   
+Number of nets: 5353                       |Number of nets: 5353                       
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: tcim_sky130_array3              |Circuit 2: tcim_sky130_array3              
+-------------------------------------------|-------------------------------------------
+VSS                                        |VSS                                        
+SL23                                       |SL23                                       
+SL22                                       |SL22                                       
+SL21                                       |SL21                                       
+SL20                                       |SL20                                       
+SL19                                       |SL19                                       
+SL18                                       |SL18                                       
+SL17                                       |SL17                                       
+SL16                                       |SL16                                       
+SL15                                       |SL15                                       
+SL14                                       |SL14                                       
+SL13                                       |SL13                                       
+SL12                                       |SL12                                       
+SL11                                       |SL11                                       
+SL10                                       |SL10                                       
+SL9                                        |SL9                                        
+SL8                                        |SL8                                        
+SL7                                        |SL7                                        
+SL6                                        |SL6                                        
+SL5                                        |SL5                                        
+SL4                                        |SL4                                        
+SL3                                        |SL3                                        
+SL2                                        |SL2                                        
+SL1                                        |SL1                                        
+SL0                                        |SL0                                        
+BLN23                                      |BLN23                                      
+BLZ23                                      |BLZ23                                      
+BLP23                                      |BLP23                                      
+BLN22                                      |BLN22                                      
+BLZ22                                      |BLZ22                                      
+BLP22                                      |BLP22                                      
+BLN21                                      |BLN21                                      
+BLZ21                                      |BLZ21                                      
+BLP21                                      |BLP21                                      
+BLN20                                      |BLN20                                      
+BLZ20                                      |BLZ20                                      
+BLP20                                      |BLP20                                      
+BLN19                                      |BLN19                                      
+BLZ19                                      |BLZ19                                      
+BLP19                                      |BLP19                                      
+BLN18                                      |BLN18                                      
+BLZ18                                      |BLZ18                                      
+BLP18                                      |BLP18                                      
+BLN17                                      |BLN17                                      
+BLZ17                                      |BLZ17                                      
+BLP17                                      |BLP17                                      
+BLN16                                      |BLN16                                      
+BLZ16                                      |BLZ16                                      
+BLP16                                      |BLP16                                      
+BLN15                                      |BLN15                                      
+BLZ15                                      |BLZ15                                      
+BLP15                                      |BLP15                                      
+BLN14                                      |BLN14                                      
+BLZ14                                      |BLZ14                                      
+BLP14                                      |BLP14                                      
+BLN13                                      |BLN13                                      
+BLZ13                                      |BLZ13                                      
+BLP13                                      |BLP13                                      
+BLN12                                      |BLN12                                      
+BLZ12                                      |BLZ12                                      
+BLP12                                      |BLP12                                      
+BLN11                                      |BLN11                                      
+BLZ11                                      |BLZ11                                      
+BLP11                                      |BLP11                                      
+BLN10                                      |BLN10                                      
+BLZ10                                      |BLZ10                                      
+BLP10                                      |BLP10                                      
+BLN9                                       |BLN9                                       
+BLZ9                                       |BLZ9                                       
+BLP9                                       |BLP9                                       
+BLN8                                       |BLN8                                       
+BLZ8                                       |BLZ8                                       
+BLP8                                       |BLP8                                       
+BLN7                                       |BLN7                                       
+BLZ7                                       |BLZ7                                       
+BLP7                                       |BLP7                                       
+BLN6                                       |BLN6                                       
+BLZ6                                       |BLZ6                                       
+BLP6                                       |BLP6                                       
+BLN5                                       |BLN5                                       
+BLZ5                                       |BLZ5                                       
+BLP5                                       |BLP5                                       
+BLN4                                       |BLN4                                       
+BLZ4                                       |BLZ4                                       
+BLP4                                       |BLP4                                       
+BLN3                                       |BLN3                                       
+BLZ3                                       |BLZ3                                       
+BLP3                                       |BLP3                                       
+BLN2                                       |BLN2                                       
+BLZ2                                       |BLZ2                                       
+BLP2                                       |BLP2                                       
+BLN1                                       |BLN1                                       
+BLZ1                                       |BLZ1                                       
+BLP1                                       |BLP1                                       
+BLN0                                       |BLN0                                       
+BLZ0                                       |BLZ0                                       
+BLP0                                       |BLP0                                       
+WL71                                       |WL71                                       
+WL70                                       |WL70                                       
+WL69                                       |WL69                                       
+WL68                                       |WL68                                       
+WL67                                       |WL67                                       
+WL66                                       |WL66                                       
+WL65                                       |WL65                                       
+WL64                                       |WL64                                       
+WL63                                       |WL63                                       
+WL62                                       |WL62                                       
+WL61                                       |WL61                                       
+WL60                                       |WL60                                       
+WL59                                       |WL59                                       
+WL58                                       |WL58                                       
+WL57                                       |WL57                                       
+WL56                                       |WL56                                       
+WL55                                       |WL55                                       
+WL54                                       |WL54                                       
+WL53                                       |WL53                                       
+WL52                                       |WL52                                       
+WL51                                       |WL51                                       
+WL50                                       |WL50                                       
+WL49                                       |WL49                                       
+WL48                                       |WL48                                       
+WL47                                       |WL47                                       
+WL46                                       |WL46                                       
+WL45                                       |WL45                                       
+WL44                                       |WL44                                       
+WL43                                       |WL43                                       
+WL42                                       |WL42                                       
+WL41                                       |WL41                                       
+WL40                                       |WL40                                       
+WL39                                       |WL39                                       
+WL38                                       |WL38                                       
+WL37                                       |WL37                                       
+WL36                                       |WL36                                       
+WL35                                       |WL35                                       
+WL34                                       |WL34                                       
+WL33                                       |WL33                                       
+WL32                                       |WL32                                       
+WL31                                       |WL31                                       
+WL30                                       |WL30                                       
+WL29                                       |WL29                                       
+WL28                                       |WL28                                       
+WL27                                       |WL27                                       
+WL26                                       |WL26                                       
+WL25                                       |WL25                                       
+WL24                                       |WL24                                       
+WL23                                       |WL23                                       
+WL22                                       |WL22                                       
+WL21                                       |WL21                                       
+WL20                                       |WL20                                       
+WL19                                       |WL19                                       
+WL18                                       |WL18                                       
+WL17                                       |WL17                                       
+WL16                                       |WL16                                       
+WL15                                       |WL15                                       
+WL14                                       |WL14                                       
+WL13                                       |WL13                                       
+WL12                                       |WL12                                       
+WL11                                       |WL11                                       
+WL10                                       |WL10                                       
+WL9                                        |WL9                                        
+WL8                                        |WL8                                        
+WL7                                        |WL7                                        
+WL6                                        |WL6                                        
+WL5                                        |WL5                                        
+WL4                                        |WL4                                        
+WL3                                        |WL3                                        
+WL2                                        |WL2                                        
+WL1                                        |WL1                                        
+WL0                                        |WL0                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes tcim_sky130_array3 and tcim_sky130_array3 are equivalent.
+
+Final result: Circuits match uniquely.
+.

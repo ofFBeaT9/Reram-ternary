@@ -16,33 +16,38 @@ TB_SRC = Path(os.environ.get("TB_SRC", ROOT / "tb" / "tb_tcim.cc"))       # test
 PNX = os.environ.get("TB_ENC", "") == "pnx"                                # second trit code
 TAG = os.environ.get("TB_TAG", "_pnx" if PNX else "")                      # suffix of the result file and work folders
 DEFS = ["-DTCIM_ENC_PNX"] if PNX else []
+# TB_CELL=1of3: the next-chip cell build (3T3R; 8 November 2026): only the faults of list MZ, in the logic of the third device
+CELL3 = os.environ.get("TB_CELL", "") == "1of3"
+if CELL3:
+    DEFS = DEFS + ["-DTCIM_CELL_1OF3"]
+    TAG = TAG + "_1of3"
 
 # (name, file, text to replace (must occur exactly once), replacement)
 M = [
     ("sign of a +1 weight in the accumulator", "tcim_core.sv",
-     "if (arr_sa_p[c] & ~arr_sa_n[c])      acc_next[c*ACCW +: ACCW] = cur_pos ? a + 10'sd1 : a - 10'sd1;",
-     "if (arr_sa_p[c] & ~arr_sa_n[c])      acc_next[c*ACCW +: ACCW] = cur_pos ? a - 10'sd1 : a + 10'sd1;"),
+     "if (sa_p_d[c] & ~sa_n_d[c])      acc_next[c*ACCW +: ACCW] = cur_pos ? a + 10'sd1 : a - 10'sd1;",
+     "if (sa_p_d[c] & ~sa_n_d[c])      acc_next[c*ACCW +: ACCW] = cur_pos ? a - 10'sd1 : a + 10'sd1;"),
     ("sign of a -1 weight in the accumulator", "tcim_core.sv",
-     "else if (arr_sa_n[c] & ~arr_sa_p[c]) acc_next[c*ACCW +: ACCW] = cur_pos ? a - 10'sd1 : a + 10'sd1;",
-     "else if (arr_sa_n[c] & ~arr_sa_p[c]) acc_next[c*ACCW +: ACCW] = cur_pos ? a + 10'sd1 : a - 10'sd1;"),
+     "else if (sa_n_d[c] & ~sa_p_d[c]) acc_next[c*ACCW +: ACCW] = cur_pos ? a - 10'sd1 : a + 10'sd1;",
+     "else if (sa_n_d[c] & ~sa_p_d[c]) acc_next[c*ACCW +: ACCW] = cur_pos ? a + 10'sd1 : a - 10'sd1;"),
     ("a cell with both devices in LRS counted as +1", "tcim_core.sv",
-     "if (arr_sa_p[c] & ~arr_sa_n[c])      acc_next", "if (arr_sa_p[c])      acc_next"),
+     "if (sa_p_d[c] & ~sa_n_d[c])      acc_next", "if (sa_p_d[c])      acc_next"),
     ("last row never read", "tcim_core.sv", "for (int r = ROWS - 1; r >= 0; r--) if (nz[r]", "for (int r = ROWS - 2; r >= 0; r--) if (nz[r]"),
     ("rows with a -1 input skipped", "tcim_core.sv", "assign x_nz = x_pos | x_neg;", "assign x_nz = x_pos;"),
     ("rows with a 0 input read as well", "tcim_core.sv", "assign x_nz = x_pos | x_neg;", "assign x_nz = '1;"),
     ("invalid cell not flagged during a product", "tcim_core.sv",
-     "if (|(arr_sa_p & arr_sa_n)) s_werr <= 1'b1;\n                    if (next_row == 7'(ROWS)) begin",
+     "if (|sa_inv) s_werr <= 1'b1;\n                    if (next_row == 7'(ROWS)) begin",
      "if (next_row == 7'(ROWS)) begin"),
     ("invalid cell not flagged during read-back", "tcim_core.sv",
-     "if (|(arr_sa_p & arr_sa_n)) s_werr <= 1'b1;\n                    state <= S_FINISH;", "state <= S_FINISH;"),
+     "if (|sa_inv) s_werr <= 1'b1;\n                    state <= S_FINISH;", "state <= S_FINISH;"),
     ("wrong row sent to the array in a product", "tcim_core.sv",
      "arr_op <= OP_READ; arr_row <= first_row; arr_mask_p <= '1;", "arr_op <= OP_READ; arr_row <= '0; arr_mask_p <= '1;"),
     ("product read uses the set-verify reference", "tcim_core.sv",
      "arr_op <= OP_READ; arr_row <= first_row; arr_mask_p <= '1;", "arr_op <= OP_VFY_SET; arr_row <= first_row; arr_mask_p <= '1;"),
     ("reset phase skipped when programming", "tcim_core.sv",
-     "pend_p <= ~w_pos; pend_n <= ~w_neg;            // devices that must be HRS", "pend_p <= '0; pend_n <= '0;"),
+     "pend_p <= ~w_pos; pend_n <= ~w_neg; `Z(pend_z <= ~w_zer;)   // devices that must be HRS", "pend_p <= '0; pend_n <= '0;"),
     ("set phase programs the wrong side", "tcim_core.sv",
-     "amp <= '0; pend_p <= w_pos; pend_n <= w_neg;        // devices that must be LRS", "amp <= '0; pend_p <= w_neg; pend_n <= w_pos;"),
+     "amp <= '0; pend_p <= w_pos; pend_n <= w_neg; `Z(pend_z <= w_zer;)   // devices that must be LRS", "amp <= '0; pend_p <= w_neg; pend_n <= w_pos;"),
     ("reset verify polarity", "tcim_core.sv", "pend_p <= pend_p & arr_sa_p; pend_n <= pend_n & arr_sa_n;", "pend_p <= pend_p & ~arr_sa_p; pend_n <= pend_n & arr_sa_n;"),
     ("set verify polarity", "tcim_core.sv", "pend_p <= pend_p & ~arr_sa_p; pend_n <= pend_n & ~arr_sa_n;", "pend_p <= pend_p & ~arr_sa_p; pend_n <= pend_n & arr_sa_n;"),
     ("no pulse limit in the reset phase", "tcim_core.sv",
@@ -56,9 +61,9 @@ M = [
      "req <= 1'b0; state <= S_FINISH;\n                    end else begin\n                        arr_op <= OP_PULSE_SET;"),
     ("pulse amplitude not driven", "tcim_core.sv", "arr_op <= OP_PULSE_SET; arr_amp <= amp;", "arr_op <= OP_PULSE_SET; arr_amp <= '0;"),
     ("set pulses not counted in PITER", "tcim_core.sv",
-     "amp <= amp + 5'd1; r_piter <= r_piter + 6'(|{arr_mask_p, arr_mask_n});\n                    arr_op <= OP_VFY_SET;", "amp <= amp + 5'd1;\n                    arr_op <= OP_VFY_SET;"),
+     "amp <= amp + 5'd1; r_piter <= r_piter + 6'(|{arr_mask_p, arr_mask_n} `Z(| (|arr_mask_z)));\n                    arr_op <= OP_VFY_SET;", "amp <= amp + 5'd1;\n                    arr_op <= OP_VFY_SET;"),
     ("reset pulses not counted in PITER", "tcim_core.sv",
-     "amp <= amp + 5'd1; r_piter <= r_piter + 6'(|{arr_mask_p, arr_mask_n});\n                    arr_op <= OP_VFY_RESET;", "amp <= amp + 5'd1;\n                    arr_op <= OP_VFY_RESET;"),
+     "amp <= amp + 5'd1; r_piter <= r_piter + 6'(|{arr_mask_p, arr_mask_n} `Z(| (|arr_mask_z)));\n                    arr_op <= OP_VFY_RESET;", "amp <= amp + 5'd1;\n                    arr_op <= OP_VFY_RESET;"),
     ("analog difference has the wrong sign", "tcim_core.sv", "d = {a[ACCW-1], a} - {arr_adc", "d = {a[ACCW-1], a} + {arr_adc"),
     ("analog phases use the same rows", "tcim_core.sv", "arr_row_mask <= x_neg; req <= 1'b1; state <= S_SUM_N;", "arr_row_mask <= x_pos; req <= 1'b1; state <= S_SUM_N;"),
     ("positive clip limit off by one", "tcim_core.sv", "if (d > 11'sd364)       begin", "if (d > 11'sd365)       begin"),
@@ -69,7 +74,7 @@ M = [
     ("row index 72 accepted", "tcim_core.sv", "(prow_int < ROWS_S)", "(prow_int <= ROWS_S)"),
     ("negative row index accepted", "tcim_core.sv", "(prow_int >= 10'sd0) && (prow_int < ROWS_S)", "(prow_int < ROWS_S)"),
     ("read-back swaps +1 and -1", "tcim_core.sv",
-     "sign_to_trit(arr_sa_p[c] & ~arr_sa_n[c], arr_sa_n[c] & ~arr_sa_p[c])", "sign_to_trit(arr_sa_n[c] & ~arr_sa_p[c], arr_sa_p[c] & ~arr_sa_n[c])"),
+     "sign_to_trit(sa_p_d[c] & ~sa_n_d[c], sa_n_d[c] & ~sa_p_d[c])", "sign_to_trit(arr_sa_n[c] & ~arr_sa_p[c], arr_sa_p[c] & ~arr_sa_n[c])"),
     ("register writes accepted while busy", "tcim_core.sv", "if (wr && !s_busy) begin", "if (wr) begin"),
     ("program command works without EN", "tcim_core.sv", "is_pos(bus_wdata[1:0]) & ~s_busy & r_en;\n    assign rdbk_cmd", "is_pos(bus_wdata[1:0]) & ~s_busy;\n    assign rdbk_cmd"),
     ("GO works without EN", "tcim_core.sv", "is_pos(bus_wdata[7:6]) & is_pos(bus_wdata[1:0]) & ~s_busy;", "is_pos(bus_wdata[7:6]) & ~s_busy;"),
@@ -99,7 +104,7 @@ M = [
      "arr_op <= OP_PULSE_RST; arr_amp <= amp; arr_mask_p <= pend_p & arr_sa_p; arr_mask_n <= pend_n & arr_sa_n;",
      "arr_op <= OP_PULSE_RST; arr_amp <= amp; arr_mask_p <= ~w_pos; arr_mask_n <= ~w_neg;"),
     ("set amplitude not restarted after the reset phase", "tcim_core.sv",
-     "amp <= '0; pend_p <= w_pos; pend_n <= w_neg;        // devices that must be LRS", "pend_p <= w_pos; pend_n <= w_neg;"),
+     "amp <= '0; pend_p <= w_pos; pend_n <= w_neg; `Z(pend_z <= w_zer;)   // devices that must be LRS", "pend_p <= w_pos; pend_n <= w_neg;"),
     ("amplitude not restarted by a new program command", "tcim_core.sv", "s_werr <= ~prow_ok; r_piter <= '0; amp <= '0;", "s_werr <= ~prow_ok; r_piter <= '0;"),
     ("PITER not restarted by a new program command", "tcim_core.sv", "s_werr <= ~prow_ok; r_piter <= '0; amp <= '0;", "s_werr <= ~prow_ok; amp <= '0;"),
     ("accumulators not cleared by GO", "tcim_core.sv", "                        acc <= '0;\n                        if (go_analog) begin", "                        if (go_analog) begin"),
@@ -116,7 +121,7 @@ M = [
     ("first row never read", "tcim_core.sv", "next_nz(x_nz, 8'd0) : start_row", "next_nz(x_nz, 8'd1) : start_row"),
     ("pulse limit one step short", "tcim_pkg.sv", "localparam int AMP_STEPS = 21;", "localparam int AMP_STEPS = 20;"),
     ("read-back of an invalid cell returns +1", "tcim_core.sv",
-     "sign_to_trit(arr_sa_p[c] & ~arr_sa_n[c], arr_sa_n[c] & ~arr_sa_p[c])", "sign_to_trit(arr_sa_p[c], arr_sa_n[c] & ~arr_sa_p[c])"),
+     "sign_to_trit(sa_p_d[c] & ~sa_n_d[c], sa_n_d[c] & ~sa_p_d[c])", "sign_to_trit(arr_sa_p[c], arr_sa_n[c] & ~arr_sa_p[c])"),
     ("result conversion: remainder 2 gives +1 instead of -1", "tcim_pkg.sv",
      "t[2*i +: 2] = T_NEG; q = (q + 1) / 3;", "t[2*i +: 2] = T_POS; q = (q + 1) / 3;"),
     ("result conversion: table read with a signed index (negative results read as 0)", "tcim_pkg.sv",
@@ -157,7 +162,7 @@ M = [
     ("constant time: failed reset phase not reported", "tcim_core.sv",
      "s_werr <= 1'b1; amp <= '0; pend_p <= '0; pend_n <= '0;", "amp <= '0; pend_p <= '0; pend_n <= '0;"),
     ("PITER counts empty pulses", "tcim_core.sv",
-     "r_piter <= r_piter + 6'(|{arr_mask_p, arr_mask_n});\n                    arr_op <= OP_VFY_RESET;", "r_piter <= r_piter + 6'd1;\n                    arr_op <= OP_VFY_RESET;"),
+     "r_piter <= r_piter + 6'(|{arr_mask_p, arr_mask_n} `Z(| (|arr_mask_z)));\n                    arr_op <= OP_VFY_RESET;", "r_piter <= r_piter + 6'd1;\n                    arr_op <= OP_VFY_RESET;"),
     ("SEC: VARPROG read from the wrong trit", "tcim_core.sv", "r_varprog <= is_pos(bus_wdata[3:2]);", "r_varprog <= is_pos(bus_wdata[5:4]);"),
     ("SEC: address not mapped", "tcim_core.sv", "a_sec   = (bus_addr == 6'd3)  && !bus_word;", "a_sec   = 1'b0;"),
     ("LOCK cleared by a write", "tcim_core.sv",
@@ -168,18 +173,18 @@ M = [
     ("LOCK does not hide PITER", "tcim_core.sv", "r_lock ? ZERO_TRYTE : int_to_tryte({4'b0, r_piter})", "int_to_tryte({4'b0, r_piter})"),
     ("LOCK not cleared by reset", "tcim_core.sv", "r_noshuf <= 1'b0; r_lock <= 1'b0;", "r_noshuf <= 1'b0; r_lock <= r_lock;"),
     ("margin check: low-resistance device below the set target not flagged", "tcim_core.sv",
-     "m_fail <= (pend_p & ~arr_sa_p) | (pend_n & ~arr_sa_n);", "m_fail <= '0;"),
+     "m_fail <= (pend_p & ~arr_sa_p) | (pend_n & ~arr_sa_n) `Z(| (pend_z & ~arr_sa_z));", "m_fail <= '0;"),
     ("margin check: BL- devices not checked against the set target", "tcim_core.sv",
-     "m_fail <= (pend_p & ~arr_sa_p) | (pend_n & ~arr_sa_n);", "m_fail <= (pend_p & ~arr_sa_p);"),
+     "m_fail <= (pend_p & ~arr_sa_p) | (pend_n & ~arr_sa_n) `Z(| (pend_z & ~arr_sa_z));", "m_fail <= (pend_p & ~arr_sa_p);"),
     ("margin check: high-resistance device above the reset target not flagged", "tcim_core.sv",
-     "m_fail <= m_fail | (~pend_p & arr_sa_p) | (~pend_n & arr_sa_n);", "m_fail <= m_fail;"),
+     "m_fail <= m_fail | (~pend_p & arr_sa_p) | (~pend_n & arr_sa_n) `Z(| (~pend_z & arr_sa_z));", "m_fail <= m_fail;"),
     ("margin check: WERR not set", "tcim_core.sv",
-     "if ((m_fail | (~pend_p & arr_sa_p) | (~pend_n & arr_sa_n)) != '0) s_werr <= 1'b1;", ""),
+     "if ((m_fail | (~pend_p & arr_sa_p) | (~pend_n & arr_sa_n) `Z(| (~pend_z & arr_sa_z))) != '0) s_werr <= 1'b1;", ""),
     ("margin check: second read at the read reference", "tcim_core.sv",
      "arr_op <= OP_VFY_SET; state <= S_MC_SET;", "arr_op <= OP_READ; state <= S_MC_SET;"),
     ("margin check: works without EN", "tcim_core.sv", "is_pos(bus_wdata[3:2]) & ~s_busy & r_en;", "is_pos(bus_wdata[3:2]) & ~s_busy;"),
     ("margin check: PDATA not written", "tcim_core.sv",
-     "r_pdata[2*c +: 2] <= sign_to_trit(arr_sa_p[c] && !arr_sa_n[c], arr_sa_n[c] && !arr_sa_p[c]);", ";"),
+     "r_pdata[2*c +: 2] <= sign_to_trit(sa_p_d[c] && !sa_n_d[c], sa_n_d[c] && !sa_p_d[c]);", ";"),
     ("margin check: MARG not cleared by the next margin check", "tcim_core.sv",
      "s_done <= 1'b0; s_sat <= 1'b0; s_werr <= ~prow_ok; m_fail <= '0;", "s_done <= 1'b0; s_sat <= 1'b0; s_werr <= ~prow_ok;"),
     ("MARG read with the wrong sign", "tcim_core.sv", "sign_to_trit(m_fail[c], 1'b0)", "sign_to_trit(1'b0, m_fail[c])"),
@@ -210,6 +215,21 @@ MP = [
 ]
 if PNX:
     M = M + MP
+MZ = [
+    ("1of3: Z not reset when the weight is +1 or -1", "tcim_core.sv", "`Z(pend_z <= ~w_zer;)   // devices that must be HRS", "`Z(pend_z <= '0;)   // devices that must be HRS"),
+    ("1of3: Z not set for a weight 0", "tcim_core.sv", "`Z(pend_z <= w_zer;)   // devices that must be LRS", "`Z(pend_z <= '0;)   // devices that must be LRS"),
+    ("1of3: a cell with no LRS device not flagged", "tcim_core.sv",
+     "| (arr_sa_n & arr_sa_z) | ~(arr_sa_p | arr_sa_n | arr_sa_z);", "| (arr_sa_n & arr_sa_z);"),
+    ("1of3: Z ignored when decoding +1", "tcim_core.sv", "assign sa_p_d = arr_sa_p & ~arr_sa_z;", "assign sa_p_d = arr_sa_p;"),
+    ("1of3: no reset pulse reaches Z", "tcim_core.sv", "`Z(arr_mask_z <= pend_z & arr_sa_z;)", "`Z(arr_mask_z <= '0;)"),
+    ("1of3: margin check ignores Z below the set target", "tcim_core.sv",
+     "(pend_n & ~arr_sa_n) `Z(| (pend_z & ~arr_sa_z));   // low-resistance", "(pend_n & ~arr_sa_n);   // low-resistance"),
+    ("1of3: Z pulses not counted in PITER (set)", "tcim_core.sv",
+     "amp <= amp + 5'd1; r_piter <= r_piter + 6'(|{arr_mask_p, arr_mask_n} `Z(| (|arr_mask_z)));\n                    arr_op <= OP_VFY_SET;",
+     "amp <= amp + 5'd1; r_piter <= r_piter + 6'(|{arr_mask_p, arr_mask_n});\n                    arr_op <= OP_VFY_SET;"),
+]
+if CELL3:
+    M = MZ
 
 
 def run(k, name, fname, old, new):

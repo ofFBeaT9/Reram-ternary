@@ -51,6 +51,11 @@
 // Array side: one request at a time; the macro answers with arr_ack and the sense bits / converter counts.
 // A request is outstanding while arr_req is high. If arr_req is still high in the cycle after an answer, that is a
 // new request with the operation, row and masks present then (programming and digital products both use this).
+`ifdef TCIM_CELL_1OF3      // next-chip cell (3T3R, one-of-three): a third device Z per weight, exactly one LRS per weight
+`define Z(x) x
+`else
+`define Z(x)
+`endif
 module tcim_core
     import tcim_pkg::*;
 (
@@ -72,6 +77,10 @@ module tcim_core
     output logic [ROWS-1:0]         arr_row_mask,
     output logic [COLS-1:0]         arr_mask_p,
     output logic [COLS-1:0]         arr_mask_n,
+`ifdef TCIM_CELL_1OF3
+    output logic [COLS-1:0]         arr_mask_z,
+    input  logic [COLS-1:0]         arr_sa_z,
+`endif
     output logic [4:0]              arr_amp,
     input  logic                    arr_ack,
     input  logic [COLS-1:0]         arr_sa_p,
@@ -194,6 +203,20 @@ module tcim_core
         w_pos[c] = is_pos(r_pdata[2*c +: 2]);
         w_neg[c] = is_neg(r_pdata[2*c +: 2]);
     end
+    // sense bits as weights: sa_p_d / sa_n_d mark +1 / -1, sa_inv an invalid code (2T2R: both devices LRS; one-of-three:
+    // not exactly one of P, N, Z LRS). An invalid weight counts as 0 and sets WERR.
+    logic [COLS-1:0] sa_p_d, sa_n_d, sa_inv;
+`ifdef TCIM_CELL_1OF3
+    logic [COLS-1:0] w_zer;
+    assign w_zer  = ~w_pos & ~w_neg;
+    assign sa_p_d = arr_sa_p & ~arr_sa_z;
+    assign sa_n_d = arr_sa_n & ~arr_sa_z;
+    assign sa_inv = (arr_sa_p & arr_sa_n) | (arr_sa_p & arr_sa_z) | (arr_sa_n & arr_sa_z) | ~(arr_sa_p | arr_sa_n | arr_sa_z);
+`else
+    assign sa_p_d = arr_sa_p;
+    assign sa_n_d = arr_sa_n;
+    assign sa_inv = arr_sa_p & arr_sa_n;
+`endif
     logic signed [ACCW-1:0] prow_int;
     assign prow_int = tryte_to_int(r_prow);
     logic prow_ok;
@@ -212,8 +235,8 @@ module tcim_core
             logic signed [ACCW-1:0] a;
             logic signed [ACCW:0]   d;
             a = $signed(acc[c*ACCW +: ACCW]);
-            if (arr_sa_p[c] & ~arr_sa_n[c])      acc_next[c*ACCW +: ACCW] = cur_pos ? a + 10'sd1 : a - 10'sd1;
-            else if (arr_sa_n[c] & ~arr_sa_p[c]) acc_next[c*ACCW +: ACCW] = cur_pos ? a - 10'sd1 : a + 10'sd1;
+            if (sa_p_d[c] & ~sa_n_d[c])      acc_next[c*ACCW +: ACCW] = cur_pos ? a + 10'sd1 : a - 10'sd1;
+            else if (sa_n_d[c] & ~sa_p_d[c]) acc_next[c*ACCW +: ACCW] = cur_pos ? a - 10'sd1 : a + 10'sd1;
             d = {a[ACCW-1], a} - {arr_adc[c*ACCW + ACCW-1], arr_adc[c*ACCW +: ACCW]};
             if (d > 11'sd364)       begin diff_sat[c*ACCW +: ACCW] = 10'sd364;  diff_clip = 1'b1; end
             else if (d < -11'sd364) begin diff_sat[c*ACCW +: ACCW] = -10'sd364; diff_clip = 1'b1; end
@@ -226,13 +249,16 @@ module tcim_core
         d_acc_next = d_acc;
 `ifndef TCIM_NO_DUMMY   // defined only for the FPGA demonstration (rtl/fpga), which has no room for them (GW1NR-9)
         for (int c = 0; c < COLS; c++)
-            if (!(cur_nz && (arr_sa_p[c] ^ arr_sa_n[c])))
+            if (!(cur_nz && (sa_p_d[c] ^ sa_n_d[c])))
                 d_acc_next[c*ACCW +: ACCW] = lfsr[c % 16] ? d_acc[c*ACCW +: ACCW] + 10'd1 : d_acc[c*ACCW +: ACCW] - 10'd1;
 `endif
     end
 
     // ------------------------------------------------------------------ sequencer
     logic [COLS-1:0] pend_p, pend_n;
+`ifdef TCIM_CELL_1OF3
+    logic [COLS-1:0] pend_z;
+`endif
     logic [4:0]      amp;
     logic            req;
 
@@ -248,7 +274,7 @@ module tcim_core
             r_x <= {3{ZERO_WORD}};
             r_prow <= ZERO_TRYTE; r_pdata <= ZERO_WORD; r_piter <= '0;
             s_done <= 1'b0; s_werr <= 1'b0; s_sat <= 1'b0;
-            state <= S_IDLE; pend_p <= '0; pend_n <= '0; amp <= '0; req <= 1'b0;
+            state <= S_IDLE; pend_p <= '0; pend_n <= '0; `Z(pend_z <= '0; arr_mask_z <= '0;) amp <= '0; req <= 1'b0;
             arr_op <= OP_READ; arr_row <= '0; arr_row_mask <= '0; arr_mask_p <= '0; arr_mask_n <= '0; arr_amp <= '0;
             acc <= '0;
             r_zskip <= 1'b0; r_varprog <= 1'b0; r_noshuf <= 1'b0; r_lock <= 1'b0;
@@ -286,7 +312,7 @@ module tcim_core
                         if (go_analog) begin
                             arr_op <= OP_SUM; arr_row_mask <= x_pos; req <= 1'b1; state <= S_SUM_P;
                         end else if (first_row != 7'(ROWS)) begin
-                            arr_op <= OP_READ; arr_row <= first_row; arr_mask_p <= '1; arr_mask_n <= '1; req <= 1'b1;
+                            arr_op <= OP_READ; arr_row <= first_row; arr_mask_p <= '1; arr_mask_n <= '1; `Z(arr_mask_z <= '1;) req <= 1'b1;
                             // revision 4.7: the result accumulators start at a random offset (-128 ... 127 from the
                             // LFSR) that is taken off again with the last row, so that which bits an update flips does
                             // not follow the partial sum around zero
@@ -297,8 +323,8 @@ module tcim_core
                         s_done <= 1'b0; s_sat <= 1'b0; s_werr <= ~prow_ok; r_piter <= '0; amp <= '0;
                         if (prow_ok) begin
                             arr_row <= prow_int[6:0];
-                            pend_p <= ~w_pos; pend_n <= ~w_neg;            // devices that must be HRS
-                            arr_op <= OP_VFY_RESET; arr_mask_p <= ~w_pos; arr_mask_n <= ~w_neg; req <= 1'b1;
+                            pend_p <= ~w_pos; pend_n <= ~w_neg; `Z(pend_z <= ~w_zer;)   // devices that must be HRS
+                            arr_op <= OP_VFY_RESET; arr_mask_p <= ~w_pos; arr_mask_n <= ~w_neg; `Z(arr_mask_z <= ~w_zer;) req <= 1'b1;
                             state <= S_RST_VFY;
                         end else state <= S_FINISH;
                     end else if (rdbk_cmd) begin
@@ -306,13 +332,13 @@ module tcim_core
                         // the weights readable over the bus
                         s_done <= 1'b0; s_sat <= 1'b0; s_werr <= ~prow_ok | r_lock;
                         if (prow_ok && !r_lock) begin
-                            arr_row <= prow_int[6:0]; arr_op <= OP_READ; arr_mask_p <= '1; arr_mask_n <= '1; req <= 1'b1;
+                            arr_row <= prow_int[6:0]; arr_op <= OP_READ; arr_mask_p <= '1; arr_mask_n <= '1; `Z(arr_mask_z <= '1;) req <= 1'b1;
                             state <= S_RDBK;
                         end else state <= S_FINISH;
                     end else if (mchk_cmd) begin
                         s_done <= 1'b0; s_sat <= 1'b0; s_werr <= ~prow_ok; m_fail <= '0;
                         if (prow_ok) begin
-                            arr_row <= prow_int[6:0]; arr_op <= OP_READ; arr_mask_p <= '1; arr_mask_n <= '1; req <= 1'b1;
+                            arr_row <= prow_int[6:0]; arr_op <= OP_READ; arr_mask_p <= '1; arr_mask_n <= '1; `Z(arr_mask_z <= '1;) req <= 1'b1;
                             state <= S_MC_RD;
                         end else state <= S_FINISH;
                     end
@@ -322,7 +348,7 @@ module tcim_core
                 S_READ: if (arr_ack) begin
                     acc <= acc_upd;                              // weight = sa_p - sa_n ; both set counts as 0
                     d_acc <= d_acc_next; r_cnt <= r_cnt + 7'd1;
-                    if (|(arr_sa_p & arr_sa_n)) s_werr <= 1'b1;
+                    if (|sa_inv) s_werr <= 1'b1;
                     if (next_row == 7'(ROWS)) begin
                         req <= 1'b0; state <= S_FINISH; acc <= acc_fin;   // the last row: offset taken off (revision 4.7)
                     end else arr_row <= next_row;               // req stays high: the next row is the next request
@@ -340,37 +366,37 @@ module tcim_core
 
                 // ---------------- program row: reset phase, then set phase, each pulse followed by verify
                 S_RST_VFY: if (arr_ack) begin
-                    pend_p <= pend_p & arr_sa_p; pend_n <= pend_n & arr_sa_n;
-                    if (((pend_p & arr_sa_p) | (pend_n & arr_sa_n)) == '0 && (varprog_e || amp == 5'(AMP_STEPS))) begin
-                        amp <= '0; pend_p <= w_pos; pend_n <= w_neg;        // devices that must be LRS
-                        arr_op <= OP_VFY_SET; arr_mask_p <= w_pos; arr_mask_n <= w_neg; state <= S_SET_VFY;
+                    pend_p <= pend_p & arr_sa_p; pend_n <= pend_n & arr_sa_n; `Z(pend_z <= pend_z & arr_sa_z;)
+                    if (((pend_p & arr_sa_p) | (pend_n & arr_sa_n) `Z(| (pend_z & arr_sa_z))) == '0 && (varprog_e || amp == 5'(AMP_STEPS))) begin
+                        amp <= '0; pend_p <= w_pos; pend_n <= w_neg; `Z(pend_z <= w_zer;)   // devices that must be LRS
+                        arr_op <= OP_VFY_SET; arr_mask_p <= w_pos; arr_mask_n <= w_neg; `Z(arr_mask_z <= w_zer;) state <= S_SET_VFY;
                     end else if (amp == 5'(AMP_STEPS) && !varprog_e) begin  // constant time: the set phase runs, with empty pulses only
-                        s_werr <= 1'b1; amp <= '0; pend_p <= '0; pend_n <= '0;
-                        arr_op <= OP_VFY_SET; arr_mask_p <= w_pos; arr_mask_n <= w_neg; state <= S_SET_VFY;
+                        s_werr <= 1'b1; amp <= '0; pend_p <= '0; pend_n <= '0; `Z(pend_z <= '0;)
+                        arr_op <= OP_VFY_SET; arr_mask_p <= w_pos; arr_mask_n <= w_neg; `Z(arr_mask_z <= w_zer;) state <= S_SET_VFY;
                     end else if (amp == 5'(AMP_STEPS)) begin
                         s_werr <= 1'b1; req <= 1'b0; state <= S_FINISH;
                     end else begin
-                        arr_op <= OP_PULSE_RST; arr_amp <= amp; arr_mask_p <= pend_p & arr_sa_p; arr_mask_n <= pend_n & arr_sa_n;
+                        arr_op <= OP_PULSE_RST; arr_amp <= amp; arr_mask_p <= pend_p & arr_sa_p; arr_mask_n <= pend_n & arr_sa_n; `Z(arr_mask_z <= pend_z & arr_sa_z;)
                         state <= S_RST_PULSE;
                     end
                 end
                 S_RST_PULSE: if (arr_ack) begin
-                    amp <= amp + 5'd1; r_piter <= r_piter + 6'(|{arr_mask_p, arr_mask_n});
+                    amp <= amp + 5'd1; r_piter <= r_piter + 6'(|{arr_mask_p, arr_mask_n} `Z(| (|arr_mask_z)));
                     arr_op <= OP_VFY_RESET; state <= S_RST_VFY;
                 end
                 S_SET_VFY: if (arr_ack) begin
-                    pend_p <= pend_p & ~arr_sa_p; pend_n <= pend_n & ~arr_sa_n;
-                    if (((pend_p & ~arr_sa_p) | (pend_n & ~arr_sa_n)) == '0 && (varprog_e || amp == 5'(AMP_STEPS))) begin
+                    pend_p <= pend_p & ~arr_sa_p; pend_n <= pend_n & ~arr_sa_n; `Z(pend_z <= pend_z & ~arr_sa_z;)
+                    if (((pend_p & ~arr_sa_p) | (pend_n & ~arr_sa_n) `Z(| (pend_z & ~arr_sa_z))) == '0 && (varprog_e || amp == 5'(AMP_STEPS))) begin
                         req <= 1'b0; state <= S_FINISH;
                     end else if (amp == 5'(AMP_STEPS)) begin
                         s_werr <= 1'b1; req <= 1'b0; state <= S_FINISH;
                     end else begin
-                        arr_op <= OP_PULSE_SET; arr_amp <= amp; arr_mask_p <= pend_p & ~arr_sa_p; arr_mask_n <= pend_n & ~arr_sa_n;
+                        arr_op <= OP_PULSE_SET; arr_amp <= amp; arr_mask_p <= pend_p & ~arr_sa_p; arr_mask_n <= pend_n & ~arr_sa_n; `Z(arr_mask_z <= pend_z & ~arr_sa_z;)
                         state <= S_SET_PULSE;
                     end
                 end
                 S_SET_PULSE: if (arr_ack) begin
-                    amp <= amp + 5'd1; r_piter <= r_piter + 6'(|{arr_mask_p, arr_mask_n});
+                    amp <= amp + 5'd1; r_piter <= r_piter + 6'(|{arr_mask_p, arr_mask_n} `Z(| (|arr_mask_z)));
                     arr_op <= OP_VFY_SET; state <= S_SET_VFY;
                 end
 
@@ -378,9 +404,9 @@ module tcim_core
                 S_RDBK: if (arr_ack) begin
                     req <= 1'b0;
                     for (int c = 0; c < COLS; c++)
-                        r_pdata[2*c +: 2] <= sign_to_trit(arr_sa_p[c] & ~arr_sa_n[c], arr_sa_n[c] & ~arr_sa_p[c]);
+                        r_pdata[2*c +: 2] <= sign_to_trit(sa_p_d[c] & ~sa_n_d[c], sa_n_d[c] & ~sa_p_d[c]);
                     for (int c = COLS; c < WORD; c++) r_pdata[2*c +: 2] <= T_ZERO;
-                    if (|(arr_sa_p & arr_sa_n)) s_werr <= 1'b1;
+                    if (|sa_inv) s_werr <= 1'b1;
                     state <= S_FINISH;
                 end
 
@@ -388,20 +414,20 @@ module tcim_core
                 S_MC_RD: if (arr_ack) begin
                     if (!r_lock) begin                           // (revision 4.7: not under LOCK)
                         for (int c = 0; c < COLS; c++)           // the weights as read-back would return them
-                            r_pdata[2*c +: 2] <= sign_to_trit(arr_sa_p[c] && !arr_sa_n[c], arr_sa_n[c] && !arr_sa_p[c]);
+                            r_pdata[2*c +: 2] <= sign_to_trit(sa_p_d[c] && !sa_n_d[c], sa_n_d[c] && !sa_p_d[c]);
                         for (int c = COLS; c < WORD; c++) r_pdata[2*c +: 2] <= T_ZERO;
                     end
-                    if (|(arr_sa_p & arr_sa_n)) s_werr <= 1'b1;
-                    pend_p <= arr_sa_p; pend_n <= arr_sa_n;     // devices above the read reference
+                    if (|sa_inv) s_werr <= 1'b1;
+                    pend_p <= arr_sa_p; pend_n <= arr_sa_n; `Z(pend_z <= arr_sa_z;)   // devices above the read reference
                     arr_op <= OP_VFY_SET; state <= S_MC_SET;     // req stays high
                 end
                 S_MC_SET: if (arr_ack) begin
-                    m_fail <= (pend_p & ~arr_sa_p) | (pend_n & ~arr_sa_n);   // low-resistance but below the set target
+                    m_fail <= (pend_p & ~arr_sa_p) | (pend_n & ~arr_sa_n) `Z(| (pend_z & ~arr_sa_z));   // low-resistance but below the set target
                     arr_op <= OP_VFY_RESET; state <= S_MC_RST;
                 end
                 S_MC_RST: if (arr_ack) begin                    // high-resistance but above the reset target
-                    m_fail <= m_fail | (~pend_p & arr_sa_p) | (~pend_n & arr_sa_n);
-                    if ((m_fail | (~pend_p & arr_sa_p) | (~pend_n & arr_sa_n)) != '0) s_werr <= 1'b1;
+                    m_fail <= m_fail | (~pend_p & arr_sa_p) | (~pend_n & arr_sa_n) `Z(| (~pend_z & arr_sa_z));
+                    if ((m_fail | (~pend_p & arr_sa_p) | (~pend_n & arr_sa_n) `Z(| (~pend_z & arr_sa_z))) != '0) s_werr <= 1'b1;
                     req <= 1'b0; state <= S_FINISH;
                 end
 
@@ -549,3 +575,4 @@ module tcim_core
     end
 `endif
 endmodule
+`undef Z

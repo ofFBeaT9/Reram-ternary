@@ -1,0 +1,39 @@
+
+Magic 8.3 revision 471 - Compiled on Sun Nov  8 08:07:16 PST 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130B ...
+2 Magic internal units = 1 Lambda
+Input style sky130(): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130B Device Generator Menu ...
+Loading "array3.tcl" from command line.
+Cell rr3t3r couldn't be read
+No such file or directory
+Creating new cell
+Cell tcim_sky130_array3 couldn't be read
+No such file or directory
+Creating new cell
+    count 		[[xlo] xhi [ylo] yhi]	array subcells
+    width 		[value]			set or return array x-spacing
+    height 	[value]			set or return array y-spacing
+    pitch 		[x y]			set or return array spacing
+    position 	[x y]			set or return array origin
+    help					print help information
+Loading DRC CIF style.
+No errors found.
+ARRAY DRC: 0 rule groups
+No errors found.
+   Generating output for cell rr3t3r
+   Generating output for cell tcim_sky130_array3
+25 problems occurred.  See feedback entries.
+Total DRC errors found: 0
+FLAT DRC errors: 
+No errors found.
+Extracting rr3t3r into rr3t3r.ext:
+Extracting tcim_sky130_array3 into tcim_sky130_array3.ext:
+exttospice finished.

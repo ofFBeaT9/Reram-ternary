@@ -247,7 +247,7 @@ def summary_page():
     
     <section id="cells">
     <h2>Cell options: 2T2R, one-of-three, 4T4R</h2>
-    <div class="verdict"><b>We did not move to 4T4R.</b> This chip is 2T2R. The next-chip plan is the one-of-three cell (3T3R). Gemini's 4T4R
+    <div class="verdict"><b>Decision (8 November): the next chip uses the 3T3R one-of-three cell.</b> This chip is 2T2R; 4T4R was not adopted. Gemini's 4T4R
     (a summary written by Google's Gemini AI) also stores each trit as exactly one low-resistance device, but among four, so the fourth device is high-resistance for every value and
     carries no information.</div>
     {cells}

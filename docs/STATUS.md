@@ -1205,6 +1205,28 @@ high-resistance for every value, so the leak model treats 4T4R as one-of-three p
 current only; a small first-order difference remains, `NEXT_CHIP_SPEC.md`); 4T4R needs a third more devices than one-of-three for no measured gain, so the
 plan stays one-of-three. Neither cell changes the programming-profile leak, the deterministic LFSR or LOCK after reset.
 
+### 15.7 The next-chip cell: 3T3R one-of-three, design files (8 November 2026)
+
+Decision (owner, 8 November): the next chip uses the one-of-three cell (3T3R). Design files so far:
+
+| Item | Result | Files |
+|---|---|---|
+| Cell and 72 × 24 array, drawn | cell 5.6 × 3.0 µm (16.8 µm², 1.556× the 2T2R cell); array 134.4 × 216 µm; DRC 0 (cell, hierarchical and flat array); LVS match, 10,368 devices; a planted DRC fault and a planted LVS fault are caught (Magic 8.3.471, netgen 1.5.272, sky130B of open_pdks 3e0e31d) | `layout/sky130/next_3t3r/`, `results/next_chip/array3.json` |
+| Logic: build option `TCIM_CELL_1OF3` | a third device Z per weight (ports `arr_mask_z`, `arr_sa_z`); exactly one LRS device per weight, any other read sets WERR and counts 0; programming resets the two devices that must be HRS and sets the third | `rtl/tcim_core.sv`, `rtl/tcim_top.sv` |
+| Test bench on the option | 97,631 checks, 0 failures, both trit codes (`make rtl-1of3`; 168 more than 2T2R: directed tests of the one-of-three invalid codes and of a drifted Z device) | `results/next_chip/rtl_test_1of3*.log` |
+| Faults planted in the Z logic | 7 of 7 caught (three survived the first run; the directed tests above were added for them) | `results/rtl_mutation_1of3_*.json` (`TB_CELL=1of3 tb/mutation_test.py`) |
+| This chip's logic unchanged | without the option, proven equivalent to the verified revision 4.7 core: 2,718 points, 0 unproven | `results/next_chip/equiv_default_build_unchanged.*` |
+
+The test bench's stuck-device test now starts the device high-resistance (it had relied on a random draw leaving it below
+the set target); the 2T2R builds were run again with it: 97,463 checks, 0 failures, both codes (CXXRTL; the Verilator logs
+predate this change). The mutation and formal fault lists were updated to the renamed decode signals; their runs predate
+the edit, which is proven not to change the default logic.
+
+Still to do for the 3T3R chip: periphery (24 more bit-line slices and sense amplifiers), macro, array controller with the
+Z line, chip layout and sign-off; formal proofs and the full mutation test on the option; transistor-level simulation of
+the cell. Prior art to cite: one-hot ternary codes and one-of-n / dual-rail side-channel encodings; fixed-weight codewords
+for ternary memory cells (Micron, US 11,811,424, read reliability); CIM power-analysis countermeasures (TU Delft, 2025–26).
+
 ---
 
 ## Appendix A. Tools and versions

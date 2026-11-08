@@ -1,0 +1,27 @@
+{
+ "magic": "8.3 revision 471",
+ "netgen": "1.5.272",
+ "pdk": "sky130B of open_pdks 3e0e31d (ChipFoundry's pinned PDK)",
+ "cell": {
+  "name": "rr3t3r",
+  "width_um": 5.6,
+  "height_um": 3.0,
+  "area_um2": 16.8,
+  "area_vs_2t2r": 1.556,
+  "devices": "3 x (sky130_fd_pr__nfet_g5v0d10v5 W 1.0 L 0.5 um + sky130_fd_pr_reram__reram_cell 0.26 x 0.26 um)",
+  "lines": "WL poly along the row; BLP / BLZ / BLN metal2 and SL metal1 along the column"
+ },
+ "cell_drc_clean": true,
+ "cell_drc_fault_detected": true,
+ "array": {
+  "rows": 72,
+  "cols": 24,
+  "width_um": 134.4,
+  "height_um": 216.0,
+  "devices": 10368
+ },
+ "array_drc_hierarchical_clean": true,
+ "array_drc_flat_errors": 0,
+ "lvs_match": true,
+ "lvs_fault_detected": true
+}
