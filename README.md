@@ -1,60 +1,62 @@
-# reram-ternary
+# TCIM0: a balanced-ternary ReRAM compute-in-memory tile and its SKY130 test chip
 
-Design repository for a balanced-ternary ReRAM compute-in-memory tile (72 × 24, 2T2R, two states per device)
-that a REBEL-6 processor sees as memory-mapped device TCIM0. Target process: IHP SG13G2 with the MEMRES module.
+TCIM0 stores a 72 × 24 matrix of ternary weights (−1, 0, +1) in ReRAM and multiplies it by a 72-trit vector, returning
+24 integers from −72 to +72. Each weight is two ReRAM devices read as one bit each (2T2R). A REBEL-6 processor sees the
+tile as a memory-mapped device; on the test chip a host reaches the same registers through a four-wire serial port.
 
-- **What is verified and what is open:** `docs/STATUS.md`
-- **What the audit of revision 3 found and fixed:** `docs/AUDIT.md`
-- **Why the design looks the way it does:** the roadmap, revision 4.3 (`docs/`); section 21 has what changed after the audit, section 22 what revision 4.2 added, section 23 what revision 4.3 added
-- **Project memory for Claude Code:** `CLAUDE.md`
+**Status (revision 4.8, 8 November 2026).** The test chip for SkyWater SKY130 (sky130B, ReRAM option) in ChipFoundry's
+Caravan analog harness is complete: 3,456 ReRAM devices, drivers, 48 sense amplifiers, array controller, logic, pads and
+a test cell. It passes DRC, LVS, the antenna rule and ChipFoundry's precheck in their pinned versions (14 of 14). It cannot
+be ordered until ChipFoundry confirms ReRAM on a shuttle. Everything is simulation: no silicon, no measured device data.
 
-Everything here is simulation. No silicon, no measured device data, no foundry ReRAM kit.
+| Read | For |
+|---|---|
+| `docs/TCIM0_explainer.html` | The illustrated explainer (open in a browser): how every part works, status, open issues |
+| `docs/STATUS.md` | The status report: every result with the file it comes from |
+| `docs/QUESTIONS.md` | Open questions to ChipFoundry and to the REBEL-6 group at USN |
+| `studies/` | Hardware-security study (revisions 4.6, 4.7) and the triage of open issues |
+| `chip/sky130/ARCHITECTURE.md` | Chip architecture, pad list, programming map |
 
-## Quick start
+## Revisions
 
-```
-tools/build_tools.sh          # builds Gnucap, the Verilog-A compiler, ngspice and the PDK model plugins
-WITH_YOSYS=1 tools/build_tools.sh   # also Yosys (about two hours), or use the Yosys of your container
-# export the four variables the script prints, then:
-make pdk-check check-model    # minutes
-make rtl rtl-pnx test         # about ten minutes: the test bench in both trit codes, then the claims check
-make mutation mutation-pnx    # about an hour on two cores: does the test bench notice injected faults?
-make equiv                    # minutes: conversion table = definition; logic = audited logic; place-and-route source = RTL
-make sta                      # a minute: static timing before layout (needs OpenSTA; see tools/build_sta.sh)
-make cell sense synth array   # about two hours in total on two cores
-```
-
-The Python parts (`model/`, `array/`) need only Python 3 with NumPy and SciPy, and run without any simulator:
-the table of the real transistor's current is in `results/sg13_hv_nmos_table.npz`.
+| Rev. | Date | Change |
+|---|---|---|
+| 4.5 | 12 Oct 2026 | Complete SKY130 test chip; every suite re-run, 12 of 12 pass |
+| 4.6 | 4 Nov 2026 | Fixed-latency products, dummy accumulators, constant-time programming, SEC/LOCK register, margin check |
+| 4.7 | 6 Nov 2026 | Uniform start row (LFSR mod 72), random accumulator offset, LOCK refuses read-back; block routed again |
+| 4.8 | 7 Nov 2026 | Serial-port fuzzing; no design change |
 
 ## Map
 
 | Path | Content |
 |---|---|
-| `model/` | Stanford-PKU ReRAM model: Python reference, Verilog-A, ngspice subcircuit; calibration, programming, sizing |
-| `array/` | Tile model: wiring, clamp, analog and digital read, network accuracy, energy |
-| `circuits/gnucap/` | Circuit simulation with the IHP PSP103 transistors (cell, sense amplifier, Monte Carlo) |
-| `circuits/ngspice/` | Device-model decks for ngspice |
-| `rtl/`, `tb/` | TCIM0 in SystemVerilog, its self-checking test bench, and the mutation test |
-| `tests/` | The audit: independent re-derivations, and quoted numbers checked against `results/`; `tests/equiv/`: equivalence proofs and the revision 4 logic they refer to |
-| `synth/` | Synthesis on IHP standard cells, gate-level check, switching-energy estimate; timing-driven synthesis and OpenSTA script (`run_sta.py`, `sta.tcl`) |
-| `flow/orfs/` | Place and route with OpenROAD-flow-scripts, IHP SG13G2 and SKY130 (run on the PC, revisions 4.2 and 4.3, clock-gated since 4.3); post-route timing at every corner and gate-level runs |
-| `formal/` | Formal proofs (SymbiYosys) of serial-port and sequencer properties |
-| `layout/` | The array transistors, the level shifter and the word-line driver drawn by script, checked with the PDK's KLayout DRC and LVS decks |
-| `results/` | Outputs of all of the above; `results/rev4/`, `rev41/`, `rev42/` keep the files that earlier sections of the roadmap quote |
-| `calc/` | The hand calculations of the roadmap as a script |
+| `rtl/`, `rtl/chip/` | TCIM0 core, serial port and top (SystemVerilog); array controller and chip digital block |
+| `tb/` | Self-checking test benches (CXXRTL, Verilator), mutation tests, serial-port fuzzer |
+| `formal/` | SymbiYosys proofs: serial port, safety, progress, start row, two-copy timing miter; planted-fault check |
+| `chip/sky130/` | Caravan project (`caravan/`: GDS, LVS netlist), circuit netlists and simulations (`sim/`) |
+| `layout/` | Array, periphery and chip layout scripts; sign-off and antenna cross-check |
+| `flow/orfs/`, `flow/eda/` | Place and route (OpenROAD-flow-scripts), PC batch scripts, precheck reports |
+| `model/`, `array/` | ReRAM device model and its fit to SkyWater's data; tile model (wiring, read, accuracy, energy) |
+| `circuits/`, `synth/` | IHP SG13G2 circuits and synthesis (earlier target) |
+| `tools/` | Tool builds, leak model (`tvla_tcim0.py`), FPGA host and checker |
+| `results/` | Every stored result; `tests/test_claims.py` checks each number the status report quotes against these files |
+
+## Run
+
+```
+make rtl rtl-pnx            # test bench, both trit codes
+make rtl-verilator          # second simulator
+make formal                 # proofs (SymbiYosys)
+make mutation mutation-pnx  # do the tests notice injected faults?
+make equiv equiv-chip       # netlist = RTL
+make fuzz                   # serial-port fuzzing
+make test                   # every quoted number against results/
+```
+
+Place and route, sign-off and the precheck run in Docker on a PC (`flow/eda/pc_batch*.sh`). Not in the repository:
+SkyWater PDK copies, build folders and large regenerable files (see `.gitignore`).
 
 ## Trit code
 
-Two bits per trit. Default: two's complement (+1 = 01, 0 = 00, −1 = 11). With `TCIM_ENC_PNX` defined: BSD-PNX
-(+1 = 10, 0 = 11, −1 = 01, 00 illegal), the code of the REBEL group's tools. Both builds pass the same test bench
-and fault campaign. Which one REBEL-6 hardware uses is a question for the maintainers.
-
-## Place and route on the PC
-
-```
-make orfs-src                              # writes flow/orfs/src/tcim_top.v (plain Verilog of the whole design)
-flow\orfs\run_orfs_docker.bat ihp-sg13g2   # or sky130hd; needs Docker Desktop and the image openroad/orfs
-```
-
-Results go to `flow/orfs/out/`. This has not been run yet; expect to adjust `config.mk`.
+Two bits per trit. Default two's complement (+1 = 01, 0 = 00, −1 = 11); with `TCIM_ENC_PNX`, BSD-PNX (+1 = 10, 0 = 11,
+−1 = 01). Both builds pass the same tests.

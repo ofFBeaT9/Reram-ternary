@@ -74,27 +74,26 @@ It cannot be ordered yet:</b> ChipFoundry has not confirmed that any shuttle acc
 foundry's precheck, waiting for the foundry's confirmation of ReRAM", not "ready to fabricate".</div>
 <div class="board">
 <div class="col"><h3><span class="tag t-ok">done</span></h3><ul>
-<li>Test chip for SkyWater SKY130 (sky130B, ReRAM) in ChipFoundry's Caravan analog harness: 3,456 ReRAM devices, drivers, 48 sense amplifiers, array controller, logic, pads, test cell.</li>
-<li>Logic revision 4.7 (hardware security, section 13): {c_rtl[0]:,} self-checking tests per run, 0 failures, 2 simulators × 2 trit codes; {mt["detected"]}/{mt["faults"]} and {mp["detected"]}/{mp["faults"]} injected faults caught; all formal proofs pass, {sum(x["caught"] for x in ff)}/{len(ff)} planted proof faults caught.</li>
-<li>Routed logic block {blk["stdcells"]:,} cells, DRC 0, timing met at every corner; whole chip LVS match, DRC {so["drc_markers"]}, antenna 0 in two checkers.</li>
-<li>Serial port fuzzed (revision 4.8): {B.fz_line}.</li>
-<li>Leakage measured on the chip's model; empty programming pulses simulated (32 runs, closed in the model).</li>
-<li>TRITONE TPU fixed (TTPU-Gen2, section 14) and pushed as a pull request.</li>
+<li>SKY130 test chip (sky130B, Caravan): 3,456 ReRAM devices, 48 sense amplifiers, controller, logic, pads, test cell.</li>
+<li>Logic 4.7: {c_rtl[0]:,} tests per run, 0 failures; all planted faults caught; all proofs pass.</li>
+<li>Layout: DRC {so["drc_markers"]}, LVS match, antenna 0, timing met at every corner.</li>
+<li>Serial port fuzzed (4.8); side-channel leaks and empty pulses measured on the model.</li>
+<li>TRITONE TPU fixed (TTPU-Gen2, section 14).</li>
 </ul></div>
 <div class="col"><h3><span class="tag t-warn">remaining before a chip can be ordered</span></h3><ul>
-<li>ChipFoundry: is ReRAM accepted on a shuttle, which, when, at what price; sky130B processing; their ReRAM sign-off library; ESD clamps on analog pads (<code>docs/QUESTIONS.md</code>, not yet sent).</li>
-<li>Test board: programming rails (VPRG, VWLP, VWLR), VREF, IBIAS, a controller on the serial port, a source-measure unit on the test cell, protection diodes on the analog pads.</li>
-<li>Decide whether deployed firmware sets LOCK, and keep reset and the serial port trusted.</li>
-<li>Submission to the shuttle once ChipFoundry answers.</li>
+<li>ChipFoundry: ReRAM shuttle, dates, price; sky130B; sign-off library; ESD clamps (<code>docs/QUESTIONS.md</code>, not yet sent).</li>
+<li>Test board: programming rails, VREF, IBIAS, serial-port controller, source-measure unit, pad protection.</li>
+<li>Firmware policy for LOCK; trusted reset and serial port.</li>
+<li>Shuttle submission.</li>
 </ul></div>
 <div class="col"><h3><span class="tag t-you">we can do now, without waiting</span></h3><ul>
-<li><b>Full-system simulation</b> REBEL-6 + TCIM0 + TPU: with USN's RTL, or with an instruction-set model of REBEL-6 written from the published specification.</li>
-<li><b>Test-board design</b>: schematic and parts list from the chip's pad list.</li>
-<li><b>FPGA evidence for 4.7</b>: a reduced-width build that fits the Tang Nano 9K, then a recorded board run.</li>
-<li><b>TPU</b>: a test bench that checks matrix results against a reference.</li>
-<li><b>Simulations still open</b>: sense-amplifier read transients, empty pulses with device capacitance and mixed columns, 4T4R at 1 µA noise.</li>
-<li><b>Next chip</b>: start the one-of-three cell and its periphery, a true random source, LOCK that survives reset, a row-count check.</li>
-<li><b>Send the questions</b> to ChipFoundry and USN; write the report for your professor.</li>
+<li><b>System simulation</b> REBEL-6 + TCIM0 + TPU (USN's RTL, or an instruction-set model from the specification).</li>
+<li><b>Test-board</b> schematic and parts list.</li>
+<li><b>FPGA</b>: reduced-width 4.7 build for the Tang Nano 9K; recorded run.</li>
+<li><b>TPU</b>: matrix results against a reference.</li>
+<li><b>Simulations</b>: sense-amplifier transients; empty pulses with capacitance and mixed columns.</li>
+<li><b>Next chip</b>: one-of-three cell, true random source, persistent LOCK, row-count check.</li>
+<li><b>Send the questions</b>; write the report.</li>
 </ul></div>
 </div>
 </section>
@@ -114,23 +113,20 @@ a "Now" box in each section says what changed since.</p>
 <section id="verified">
 <h2>Is everything verified?</h2>
 <div class="tbl"><table><thead><tr><th>Check (revision 4.7 logic, 4.8 checks)</th><th>Result</th></tr></thead><tbody>{B.compact_ver()}</tbody></table></div>
-<p class="note">Every check, with its command, is in section 13. The full re-run of every suite was last done for revision 4.5 on 12 October
-(<code>results/regress_20261012/</code>, 12 of 12 pass); the test benches of 4.7 ran on a copy of <code>tcim_core.sv</code> whose logic is identical to
-the current file (only the proof block differs, <code>results/rev47/same_logic.json</code>).</p>
+<p class="note">Commands for each check: section 13. Last full re-run of every suite: revision 4.5, 12 October (12 of 12). The 4.7 benches ran on a
+<code>tcim_core.sv</code> with identical logic (<code>results/rev47/same_logic.json</code>).</p>
 <h3>What "verified" means here, and what it cannot mean</h3>
 <div class="board">
 <div class="col"><h3><span class="tag t-ok">proven or checked exactly</span></h3><ul>
-<li>Stated properties of the logic are proven (serial port, safety, progress, start row, timing independent of data); the logic as a whole is tested against exact arithmetic, on two simulators, in both trit codes, through the chip controller.</li>
-<li>The tests can fail: every planted bug was caught ({mt["detected"]}/{mt["faults"]}, {mp["detected"]}/{mp["faults"]}, controller {mc["detected"]}/{mc["faults"]}, proofs {sum(x["caught"] for x in ff)}/{len(ff)}).</li>
-<li>What is drawn is what is simulated (LVS); the netlist given to place and route equals the RTL (formal equivalence).</li>
-<li>The layout obeys the foundry's rules: DRC 0, antenna 0 in two checkers, ChipFoundry's precheck {B.pre}.</li></ul></div>
+<li>Stated properties of the logic (proofs); its function against exact arithmetic (tests).</li>
+<li>The tests can fail: every planted bug is caught.</li>
+<li>Drawn = simulated (LVS); netlist = RTL (equivalence); foundry rules (DRC, antenna, precheck).</li></ul></div>
 <div class="col"><h3><span class="tag t-warn">verified against models</span></h3><ul>
-<li>The circuits work in simulation with SkyWater's transistor models over corners, −40 to 125 °C, supply ±10 %, mismatch and the drawn wiring.</li>
-<li>Reading and programming work for devices that behave like the device model (fitted to SkyWater's published ReRAM data), also at twice the published spread.</li>
-<li>Leakage and empty-pulse results are about the model.</li></ul></div>
+<li>Circuits over corners, −40 to 125 °C, ±10 % supply, mismatch, drawn wiring.</li>
+<li>Read and programming for devices like the model, up to twice the published spread.</li>
+<li>Leakage and empty-pulse results.</li></ul></div>
 <div class="col"><h3><span class="tag t-you">cannot be known before silicon</span></h3><ul>
-<li>How the shuttle's ReRAM devices behave: spread, forming, endurance, retention.</li>
-<li>So what fraction of the 1,728 weights program correctly, and how accurate the analog read is. That is what the test chip is for (section 12).</li></ul></div>
+<li>The shuttle's real device spread, forming, endurance and retention, and so the yield of the 1,728 weights: what the test chip will measure.</li></ul></div>
 </div>
 </section>
 
@@ -138,17 +134,14 @@ the current file (only the proof block differs, <code>results/rev47/same_logic.j
 <h2>What can be claimed</h2>
 <div class="board">
 <div class="col"><h3><span class="tag t-ok">accurate</span></h3><ul>
-<li>TCIM0 stores a 72 × 24 matrix of ternary weights (−1, 0, +1) in ReRAM and multiplies it by a 72-trit vector, returning 24 integers from −72 to +72; one product replaces 72 TMAC.T instructions of REBEL-6.</li>
-<li>Each weight is two ReRAM devices read as one bit each (2T2R), so the digital result is exact when every device reads correctly.</li>
-<li>A complete SKY130 test chip has been designed and drawn; it passes DRC, LVS, the antenna rule and ChipFoundry's own precheck ({B.pre}).</li>
-<li>The logic is checked by simulation, fault injection and formal proofs of stated properties, also after layout; revision 4.7 adds protections against timing and power side channels, measured on the chip's model.</li>
-<li>The device spread is uncertain by a factor of about seven; measuring it is the chip's purpose.</li></ul></div>
+<li>A 72 × 24 ternary ReRAM matrix-vector unit; one product replaces 72 TMAC.T instructions.</li>
+<li>2T2R cells read as bits: the digital result is exact when every device reads correctly.</li>
+<li>A complete SKY130 test chip passing DRC, LVS, antenna and ChipFoundry's precheck ({B.pre}).</li>
+<li>Logic checked by simulation, fault injection and proofs; side-channel protections measured on the model.</li>
+<li>Device spread uncertain by about 7 ×; the chip will measure it.</li></ul></div>
 <div class="col"><h3><span class="tag t-warn">do not claim</span></h3><ul>
-<li>"Ready to fabricate" or "taped out": ReRAM availability is unconfirmed and nothing has been submitted.</li>
-<li>"It works on silicon": the devices are modelled, not measured.</li>
-<li>That the pads are ESD-protected, or that the chip does analog multi-row products (digital mode only on SKY130).</li>
-<li>That the chip is secure: it leaks the weights' sparsity (2T2R), and anyone on the bus can recover the weights through products.</li>
-<li>Energy or speed advantages: estimates only.</li></ul></div>
+<li>"Ready to fabricate" or "taped out".</li><li>"Works on silicon".</li><li>ESD-protected pads; analog products on SKY130.</li>
+<li>"Secure": 2T2R leaks sparsity, and a bus user can recover the weights.</li><li>Energy or speed advantages.</li></ul></div>
 </div>
 </section>
 
@@ -324,6 +317,28 @@ repository has REBEL-6's specification, assembler and a debugger that talks to a
 
 """
 s = s[:a] + ttpu + s[b:]
+
+# ---------------------------------------------------------------- tighter prose (trim.py), corrections sections dropped
+import hashlib
+from trim import TRIM
+for sid in ("nov8", "nov", "today"):
+    if f'<section id="{sid}"' in s:
+        a = s.index(f'<section id="{sid}"'); b = s.index("</section>", a) + len("</section>")
+        s = s[:a] + s[b:]
+s = s.replace('<a href="#nov8">Corrections</a>', "")
+mask = re.sub(r"<svg.*?</svg>|<script.*?</script>|<style.*?</style>", lambda m: "\0" * len(m.group(0)), s, flags=re.S)
+seen, out_parts, last = set(), [], 0
+for m in re.finditer(r'<(p|li|figcaption|div class="note"|div class="verdict")[^>]*>(.*?)</(p|li|figcaption|div)>', mask, re.S):
+    if "\0" in mask[m.start():m.end()]:
+        continue
+    h = s[m.start():m.end()]
+    k = hashlib.md5(h.encode()).hexdigest()[:10]
+    if k in TRIM:
+        seen.add(k); out_parts.append(s[last:m.start()]); out_parts.append(TRIM[k]); last = m.end()
+out_parts.append(s[last:]); s = "".join(out_parts)
+missing = set(TRIM) - seen
+if missing:
+    sys.exit("trim.py keys with no block (the text changed upstream): " + ", ".join(sorted(missing)))
 s = s.replace('class=\\"num\\"', 'class="num"')
 out = Path(sys.argv[1]); out.write_text(s)
 print(f"{len(s):,} bytes")
