@@ -209,12 +209,12 @@ static void array_eval() {       // called once per clock cycle, before the risi
 struct Chip {
     unsigned ts = 1, tp = 1, tr = 0;               // configuration pins of normal runs (TB_CFG="ts,tp,tr" overrides)
     bool have_prev = false, prev_wl = false; int prev_row = -1;
-    uint32_t prev_key[9] = {0};
+    uint32_t prev_key[11] = {0};
     int stable = 0, wl_cycles = 0;
     uint64_t e_short = 0, e_multiwl = 0, e_float = 0, e_switch = 0, e_readcfg = 0, e_progcfg = 0, e_pstb = 0,
              e_tsense = 0, e_tpulse = 0, e_tsettle = 0, e_mixed = 0, e_pk = 0, e_ref = 0, e_bbm = 0, e_skew = 0;
     bool prev_flt = false;
-    int line_mode[3 * COLS] = {0}, float_run[3 * COLS] = {0};   // 0 floating, 1 rail, 2 ground, 3 sense amplifier
+    int line_mode[4 * COLS] = {0}, float_run[4 * COLS] = {0};   // 0 floating, 1 rail, 2 ground, 3 sense amplifier (P, N, SL, Z)
     mt19937 noise{777};
     uint64_t total() const { return e_short + e_multiwl + e_float + e_switch + e_readcfg + e_progcfg + e_pstb + e_tsense + e_tpulse + e_tsettle + e_mixed + e_pk + e_ref + e_bbm + e_skew; }
 } chip;
@@ -230,52 +230,58 @@ static void macro_eval() {       // called once per clock cycle, before the risi
     bool flt = top.p_flt.get<bool>();
     uint32_t bpp = top.p_blp__prg.get<uint32_t>(), bnp = top.p_bln__prg.get<uint32_t>();
     uint32_t bpd = (sen || flt) ? 0 : (~bpp & ALL), bnd = (sen || flt) ? 0 : (~bnp & ALL);
+#ifdef TCIM_CELL_1OF3
+    uint32_t bzp = top.p_blz__prg.get<uint32_t>();
+#else
+    uint32_t bzp = 0;
+#endif
+    uint32_t bzd = CELL3 ? ((sen || flt) ? 0 : (~bzp & ALL)) : 0;
     uint32_t slp = top.p_sl__prg.get<bool>() ? ALL : 0, sld = (slp || flt) ? 0 : ALL;
     unsigned ref = top.p_ref__sel.get<unsigned>();
     int nwl = 0, row = -1;
     for (int r = 0; r < ROWS; r++) if (getbit(top.p_wl__on, r)) { nwl++; row = r; }
     // electrical checks
-    if ((bpp & bpd) | (bnp & bnd) | (slp & sld)) chip.e_short++;                     // a rail shorted to ground
-    if (sen && (bpp | bpd | bnp | bnd)) chip.e_short++;                              // a sense input driven by a driver
+    if ((bpp & bpd) | (bnp & bnd) | (bzp & bzd) | (slp & sld)) chip.e_short++;       // a rail shorted to ground
+    if (sen && (bpp | bpd | bnp | bnd | bzp | bzd)) chip.e_short++;                  // a sense input driven by a driver
     if (nwl > 1) chip.e_multiwl++;
     // the ground NOR gates: prg / bl_sen / sl_prg may change only with flt high in this cycle and the one before, so that
     // a skew between them and flt cannot turn a ground switch on while a rail switch is still on
-    if (chip.have_prev && (bpp != chip.prev_key[0] || bnp != chip.prev_key[2] || slp != chip.prev_key[4] || (uint32_t)sen != chip.prev_key[6])
+    if (chip.have_prev && (bpp != chip.prev_key[0] || bnp != chip.prev_key[2] || slp != chip.prev_key[4] || (uint32_t)sen != chip.prev_key[6] || bzp != chip.prev_key[9])
         && !(flt && chip.prev_flt)) chip.e_skew++;
     chip.prev_flt = flt;
     // break-before-make: a line goes from one driven mode to another only through a floating cycle, and floats for
     // no more than two cycles (lines are driven at all other times, also between operations)
-    for (int l = 0; l < 3 * COLS; l++) {
+    for (int l = 0; l < (CELL3 ? 4 : 3) * COLS; l++) {
         int g = l / COLS, c = l % COLS;
-        uint32_t p = g == 0 ? bpp : g == 1 ? bnp : slp, d = g == 0 ? bpd : g == 1 ? bnd : sld;
-        int mode = ((p >> c) & 1) ? 1 : ((d >> c) & 1) ? 2 : (g < 2 && sen) ? 3 : 0;
+        uint32_t p = g == 0 ? bpp : g == 1 ? bnp : g == 2 ? slp : bzp, d = g == 0 ? bpd : g == 1 ? bnd : g == 2 ? sld : bzd;
+        int mode = ((p >> c) & 1) ? 1 : ((d >> c) & 1) ? 2 : (g != 2 && sen) ? 3 : 0;
         if (chip.have_prev && mode && chip.line_mode[l] && mode != chip.line_mode[l]) chip.e_bbm++;
         chip.float_run[l] = mode ? 0 : chip.float_run[l] + 1;
         if (chip.float_run[l] == 3) chip.e_float++;
         chip.line_mode[l] = mode;
     }
-    uint32_t key[9] = {bpp, bpd, bnp, bnd, slp, sld, sen, prog, ref};
+    uint32_t key[11] = {bpp, bpd, bnp, bnd, slp, sld, sen, prog, ref, bzp, bzd};
     bool changed = chip.have_prev && memcmp(key, chip.prev_key, sizeof key) != 0;
     chip.stable = changed ? 1 : chip.stable + 1;
     if ((nwl > 0 || chip.prev_wl) && changed) chip.e_switch++;                       // lines change with a word line on
     if (nwl > 0 && chip.prev_wl && row != chip.prev_row) chip.e_multiwl++;
     if (pstb != (nwl > 0 && prog)) chip.e_pstb++;
     if (sen && ref != 1 && ref != 2 && ref != 4) chip.e_ref++;                     // sense amplifiers need one reference
-    cxxrtl::value<COLS> sp, sn;
+    cxxrtl::value<COLS> sp, sn, sz;
     if (nwl > 0) {
-        uint32_t blp_drv = sen ? ALL : (bpp | bpd), bln_drv = sen ? ALL : (bnp | bnd);
-        if ((blp_drv & bln_drv & (slp | sld)) != ALL) chip.e_float++;                // a floating line under a word line
+        uint32_t blp_drv = sen ? ALL : (bpp | bpd), bln_drv = sen ? ALL : (bnp | bnd), blz_drv = CELL3 ? (sen ? ALL : (bzp | bzd)) : ALL;
+        if ((blp_drv & bln_drv & blz_drv & (slp | sld)) != ALL) chip.e_float++;      // a floating line under a word line
         if (!prog) { if (!sen || sld != ALL || slp) chip.e_readcfg++; }
         else if (sen) chip.e_progcfg++;
         if (!chip.prev_wl && chip.stable < (1 << (ts + 1))) chip.e_tsettle++;       // lines settled for T_SETTLE
         chip.wl_cycles++;
         if (!prog && sen && nwl == 1) {
             if (chip.wl_cycles <= 2) {                                              // still settling: anything
-                for (int c = 0; c < COLS; c++) { setbit(sp, c, chip.noise() & 1); setbit(sn, c, chip.noise() & 1); }
+                for (int c = 0; c < COLS; c++) { setbit(sp, c, chip.noise() & 1); setbit(sn, c, chip.noise() & 1); setbit(sz, c, chip.noise() & 1); }
             } else {
                 unsigned op = ref == 2 ? 0 : ref == 4 ? 1 : 2;
-                bool bp[COLS], bn[COLS]; sense_row(op, row, bp, bn);
-                for (int c = 0; c < COLS; c++) { setbit(sp, c, bp[c]); setbit(sn, c, bn[c]); }
+                bool bp[COLS], bn[COLS], bz[COLS]; sense_row(op, row, bp, bn, bz);
+                for (int c = 0; c < COLS; c++) { setbit(sp, c, bp[c]); setbit(sn, c, bn[c]); setbit(sz, c, bz[c]); }
             }
         }
     } else if (chip.prev_wl) {                                                       // a word line has just turned off
@@ -286,22 +292,27 @@ static void macro_eval() {       // called once per clock cycle, before the risi
             if (k[8] == 2) note_read(r);                                            // mid reference
         } else {
             if (chip.wl_cycles != (1 << (tp + 2))) chip.e_tpulse++;
-            bool mp_set[COLS], mn_set[COLS], mp_rst[COLS], mn_rst[COLS]; bool any_set = false, any_rst = false;
+            bool mp_set[COLS], mn_set[COLS], mp_rst[COLS], mn_rst[COLS], mz_set[COLS], mz_rst[COLS]; bool any_set = false, any_rst = false;
             for (int c = 0; c < COLS; c++) {
                 int vp = (int)((k[0] >> c) & 1) - (int)((k[4] >> c) & 1);           // V(BL) - V(SL) in units of VPRG
                 int vn = (int)((k[2] >> c) & 1) - (int)((k[4] >> c) & 1);
-                mp_set[c] = vp > 0; mn_set[c] = vn > 0; mp_rst[c] = vp < 0; mn_rst[c] = vn < 0;
-                any_set |= mp_set[c] || mn_set[c]; any_rst |= mp_rst[c] || mn_rst[c];
+                int vz = CELL3 ? (int)((k[9] >> c) & 1) - (int)((k[4] >> c) & 1) : 0;
+                mp_set[c] = vp > 0; mn_set[c] = vn > 0; mp_rst[c] = vp < 0; mn_rst[c] = vn < 0; mz_set[c] = vz > 0; mz_rst[c] = vz < 0;
+                any_set |= mp_set[c] || mn_set[c] || mz_set[c]; any_rst |= mp_rst[c] || mn_rst[c] || mz_rst[c];
             }
             if (any_set && any_rst) chip.e_mixed++;
             // an empty pulse (revision 4.6) has no voltage across any device: its kind is told by the source lines
             unsigned op = any_rst ? 4 : any_set ? 3 : (k[4] ? 4 : 3);
             if (top.p_pk.get<bool>() != (op == 4)) chip.e_pk++;
-            apply_pulse(op, r, top.p_pamp.get<unsigned>(), op == 3 ? mp_set : mp_rst, op == 3 ? mn_set : mn_rst);
+            apply_pulse(op, r, top.p_pamp.get<unsigned>(), op == 3 ? mp_set : mp_rst, op == 3 ? mn_set : mn_rst, CELL3 ? (op == 3 ? mz_set : mz_rst) : nullptr);
         }
         chip.wl_cycles = 0;
     }
     top.p_sa__p = sp; top.p_sa__n = sn;
+#ifdef TCIM_CELL_1OF3
+    top.p_sa__z = sz;
+#endif
+    (void)sz;
     memcpy(chip.prev_key, key, sizeof key); chip.have_prev = true; chip.prev_wl = nwl > 0; chip.prev_row = row;
 }
 static void array_eval() { macro_eval(); }

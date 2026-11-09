@@ -17,10 +17,12 @@ PNX = os.environ.get("TB_ENC", "") == "pnx"                                # sec
 TAG = os.environ.get("TB_TAG", "_pnx" if PNX else "")                      # suffix of the result file and work folders
 DEFS = ["-DTCIM_ENC_PNX"] if PNX else []
 # TB_CELL=1of3: the next-chip cell build (3T3R; 8 November 2026): only the faults of list MZ, in the logic of the third device
-CELL3 = os.environ.get("TB_CELL", "") == "1of3"
+# TB_CELL=1of3full: every fault of M (and MP with TB_ENC=pnx) followed by MZ, on the 3T3R build
+CELL3 = os.environ.get("TB_CELL", "") in ("1of3", "1of3full")
+CELL3_FULL = os.environ.get("TB_CELL", "") == "1of3full"
 if CELL3:
     DEFS = DEFS + ["-DTCIM_CELL_1OF3"]
-    TAG = TAG + "_1of3"
+    TAG = TAG + ("_1of3full" if CELL3_FULL else "_1of3")
 
 # (name, file, text to replace (must occur exactly once), replacement)
 M = [
@@ -229,7 +231,7 @@ MZ = [
      "amp <= amp + 5'd1; r_piter <= r_piter + 6'(|{arr_mask_p, arr_mask_n});\n                    arr_op <= OP_VFY_SET;"),
 ]
 if CELL3:
-    M = MZ
+    M = M + MZ if CELL3_FULL else MZ
 
 
 def run(k, name, fname, old, new):

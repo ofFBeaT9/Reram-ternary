@@ -17,6 +17,10 @@ module tcim_chip_core
     output logic [ROWS-1:0]         wl_on,
     output logic                    wl_prog,
     output logic [COLS-1:0]         blp_prg, bln_prg,
+`ifdef TCIM_CELL_1OF3
+    output logic [COLS-1:0]         blz_prg,      // next-chip cell (3T3R): third bit line per column
+    input  logic [COLS-1:0]         sa_z,
+`endif
     output logic                    bl_sen,
     output logic                    sl_prg,
     output logic                    flt,
@@ -34,6 +38,9 @@ module tcim_chip_core
     logic [ROWS-1:0]         arr_row_mask;     // rows of an analog-mode sum: no analog mode on this chip, unused
     /* verilator lint_on UNUSEDSIGNAL */
     logic [COLS-1:0]         arr_mask_p, arr_mask_n, arr_sa_p, arr_sa_n;
+`ifdef TCIM_CELL_1OF3
+    logic [COLS-1:0]         arr_mask_z, arr_sa_z;
+`endif
     logic [4:0]              arr_amp;
     logic [COLS*ACCW-1:0]    arr_adc;
 

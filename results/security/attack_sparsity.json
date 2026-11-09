@@ -1,0 +1,144 @@
+{
+ "note": "A sparsity-recovery attack on the array read current (8 November 2026; paper study).",
+ "sigma_uA_per_window": 5.0,
+ "windows_per_read": 5,
+ "chips_per_point": 20,
+ "note_chance": "a guess of the most likely count (8 zeros of 24) is right for about 17 % of rows (Binomial(24, 1/3))",
+ "results": {
+  "2T2R": [
+   {
+    "reads_per_row": 1,
+    "corr_mean": 0.711,
+    "rows_exact_mean": 0.178,
+    "profile_slope_uA_per_zero": -6.233
+   },
+   {
+    "reads_per_row": 4,
+    "corr_mean": 0.86,
+    "rows_exact_mean": 0.251,
+    "profile_slope_uA_per_zero": -5.583
+   },
+   {
+    "reads_per_row": 16,
+    "corr_mean": 0.878,
+    "rows_exact_mean": 0.324,
+    "profile_slope_uA_per_zero": -6.489
+   },
+   {
+    "reads_per_row": 64,
+    "corr_mean": 0.886,
+    "rows_exact_mean": 0.324,
+    "profile_slope_uA_per_zero": -6.081
+   },
+   {
+    "reads_per_row": 256,
+    "corr_mean": 0.894,
+    "rows_exact_mean": 0.347,
+    "profile_slope_uA_per_zero": -6.551
+   },
+   {
+    "reads_per_row": 1024,
+    "corr_mean": 0.902,
+    "rows_exact_mean": 0.335,
+    "profile_slope_uA_per_zero": -6.112
+   },
+   {
+    "reads_per_row": 4096,
+    "corr_mean": 0.901,
+    "rows_exact_mean": 0.353,
+    "profile_slope_uA_per_zero": -6.29
+   }
+  ],
+  "1of3": [
+   {
+    "reads_per_row": 1,
+    "corr_mean": -0.046,
+    "rows_exact_mean": 0.013,
+    "profile_slope_uA_per_zero": 0.733
+   },
+   {
+    "reads_per_row": 4,
+    "corr_mean": -0.044,
+    "rows_exact_mean": 0.016,
+    "profile_slope_uA_per_zero": 0.508
+   },
+   {
+    "reads_per_row": 16,
+    "corr_mean": -0.015,
+    "rows_exact_mean": 0.019,
+    "profile_slope_uA_per_zero": 0.158
+   },
+   {
+    "reads_per_row": 64,
+    "corr_mean": 0.038,
+    "rows_exact_mean": 0.008,
+    "profile_slope_uA_per_zero": -0.669
+   },
+   {
+    "reads_per_row": 256,
+    "corr_mean": -0.012,
+    "rows_exact_mean": 0.022,
+    "profile_slope_uA_per_zero": -0.112
+   },
+   {
+    "reads_per_row": 1024,
+    "corr_mean": 0.023,
+    "rows_exact_mean": 0.026,
+    "profile_slope_uA_per_zero": -0.298
+   },
+   {
+    "reads_per_row": 4096,
+    "corr_mean": -0.014,
+    "rows_exact_mean": 0.015,
+    "profile_slope_uA_per_zero": 0.147
+   }
+  ]
+ },
+ "note_all_windows": "second attacker: least squares on all five 50 ns windows, profiled on 8 devices",
+ "results_all_windows": {
+  "2T2R": [
+   {
+    "reads_per_row": 1,
+    "corr_mean": 0.191,
+    "rows_exact_mean": 0.034
+   },
+   {
+    "reads_per_row": 16,
+    "corr_mean": 0.571,
+    "rows_exact_mean": 0.14
+   },
+   {
+    "reads_per_row": 256,
+    "corr_mean": 0.925,
+    "rows_exact_mean": 0.442
+   },
+   {
+    "reads_per_row": 4096,
+    "corr_mean": 0.971,
+    "rows_exact_mean": 0.703
+   }
+  ],
+  "1of3": [
+   {
+    "reads_per_row": 1,
+    "corr_mean": 0.001,
+    "rows_exact_mean": 0.042
+   },
+   {
+    "reads_per_row": 16,
+    "corr_mean": 0.022,
+    "rows_exact_mean": 0.109
+   },
+   {
+    "reads_per_row": 256,
+    "corr_mean": 0.013,
+    "rows_exact_mean": 0.165
+   },
+   {
+    "reads_per_row": 4096,
+    "corr_mean": -0.018,
+    "rows_exact_mean": 0.167
+   }
+  ]
+ }
+}

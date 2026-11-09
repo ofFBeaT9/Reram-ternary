@@ -38,6 +38,11 @@
 //     counts are tied to zero by the chip top.
 // Test-board outputs: pk (0 set / 1 reset) and pamp (amplitude code) of the last pulse request, valid from the
 // start of BRK of that request; pstb = 1 while a program word line is on.
+`ifdef TCIM_CELL_1OF3      // next-chip cell (3T3R): a third bit line Z per column, driven and sensed like P and N
+`define ZA(x) x
+`else
+`define ZA(x)
+`endif
 module tcim_actl
     import tcim_pkg::*;
 (
@@ -49,6 +54,12 @@ module tcim_actl
     input  logic [6:0]              arr_row,
     input  logic [COLS-1:0]         arr_mask_p,
     input  logic [COLS-1:0]         arr_mask_n,
+`ifdef TCIM_CELL_1OF3
+    input  logic [COLS-1:0]         arr_mask_z,
+    output logic [COLS-1:0]         arr_sa_z,
+    output logic [COLS-1:0]         blz_prg,
+    input  logic [COLS-1:0]         sa_z,
+`endif
     input  logic [4:0]              arr_amp,
     output logic                    arr_ack,
     output logic [COLS-1:0]         arr_sa_p,
@@ -78,6 +89,9 @@ module tcim_actl
     logic [2:0]       op;
     logic [6:0]       row;
     logic [COLS-1:0]  mp, mn;
+`ifdef TCIM_CELL_1OF3
+    logic [COLS-1:0]  mz, q1_z;
+`endif
     logic [8:0]       cnt;                 // longest wait 2^9 cycles
     logic [COLS-1:0]  q1_p, q1_n;          // sense outputs, first flip-flop
     logic             is_rd, is_set, is_rst;
@@ -92,7 +106,7 @@ module tcim_actl
 
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
-            st <= A_IDLE; op <= OP_READ; row <= '0; mp <= '0; mn <= '0; cnt <= '0;
+            st <= A_IDLE; op <= OP_READ; row <= '0; mp <= '0; mn <= '0; cnt <= '0; `ZA(mz <= '0; q1_z <= '0; arr_sa_z <= '0; blz_prg <= '0;)
             q1_p <= '0; q1_n <= '0; arr_sa_p <= '0; arr_sa_n <= '0; arr_ack <= 1'b0;
             wl_on <= '0; wl_prog <= 1'b0; bl_sen <= 1'b0; ref_sel <= '0;
             blp_prg <= '0; bln_prg <= '0; sl_prg <= 1'b0; flt <= 1'b0;
@@ -101,7 +115,7 @@ module tcim_actl
             arr_ack <= 1'b0;
             case (st)
                 A_IDLE: if (arr_req) begin
-                    op <= arr_op; row <= arr_row; mp <= arr_mask_p; mn <= arr_mask_n;
+                    op <= arr_op; row <= arr_row; mp <= arr_mask_p; mn <= arr_mask_n; `ZA(mz <= arr_mask_z;)
                     if (arr_op == OP_SUM || arr_op > OP_SUM || arr_row >= 7'(ROWS)) begin
                         st <= A_SUM;                              // nothing is driven: answered with zeros
                     end else begin
@@ -115,6 +129,7 @@ module tcim_actl
                 A_BRK: begin                                      // every line floating; set the operating mode
                     blp_prg <= is_set ? mp : (is_rst ? ~mp : '0);
                     bln_prg <= is_set ? mn : (is_rst ? ~mn : '0);
+                    `ZA(blz_prg <= is_set ? mz : (is_rst ? ~mz : '0);)
                     sl_prg  <= is_rst;
                     bl_sen  <= is_rd;
                     wl_prog <= ~is_rd;                            // word-line rail chosen before the word line rises
@@ -135,18 +150,18 @@ module tcim_actl
                 end
                 A_WLON: begin
                     if (cnt == '0) begin
-                        if (is_rd) begin q1_p <= sa_p; q1_n <= sa_n; end
+                        if (is_rd) begin q1_p <= sa_p; q1_n <= sa_n; `ZA(q1_z <= sa_z;) end
                         wl_on <= '0; pstb <= 1'b0;
                         st <= A_WLOFF;
                     end else cnt <= cnt - 9'd1;
                 end
                 A_WLOFF: begin                                    // word line falling; second sampling flip-flop
-                    arr_sa_p <= is_rd ? q1_p : '0; arr_sa_n <= is_rd ? q1_n : '0;
+                    arr_sa_p <= is_rd ? q1_p : '0; arr_sa_n <= is_rd ? q1_n : '0; `ZA(arr_sa_z <= is_rd ? q1_z : '0;)
                     flt <= 1'b1;
                     st <= A_REL;
                 end
                 A_REL: begin                                      // every line floating: release the modes
-                    blp_prg <= '0; bln_prg <= '0; sl_prg <= 1'b0; bl_sen <= 1'b0; ref_sel <= '0; wl_prog <= 1'b0;
+                    blp_prg <= '0; bln_prg <= '0; `ZA(blz_prg <= '0;) sl_prg <= 1'b0; bl_sen <= 1'b0; ref_sel <= '0; wl_prog <= 1'b0;
                     st <= A_BRK2;
                 end
                 A_BRK2: begin
@@ -156,7 +171,7 @@ module tcim_actl
                 end
                 A_GND: st <= A_IDLE;                              // all lines grounded; arr_ack is high in this cycle
                 A_SUM: begin
-                    arr_sa_p <= '0; arr_sa_n <= '0; arr_ack <= 1'b1;
+                    arr_sa_p <= '0; arr_sa_n <= '0; `ZA(arr_sa_z <= '0;) arr_ack <= 1'b1;
                     st <= A_ACK;
                 end
                 A_ACK: st <= A_IDLE;
@@ -165,3 +180,4 @@ module tcim_actl
         end
     end
 endmodule
+`undef ZA

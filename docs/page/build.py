@@ -251,8 +251,9 @@ def summary_page():
     (a summary written by Google's Gemini AI) also stores each trit as exactly one low-resistance device, but among four, so the fourth device is high-resistance for every value and
     carries no information.</div>
     {cells}
-    <p>Both one-of-three and 4T4R pass the weight test (150,000 traces, 5 µA noise, total supply current only); the model is not precise enough
-    to rank them. 4T4R needs a third more devices than one-of-three for no measured gain, so the plan stays one-of-three. Neither cell fixes the programming leak, the deterministic
+    <p>Both one-of-three and 4T4R pass the shuffled weight test (150,000 traces, 5 µA noise, total supply current only); the model is not precise enough
+    to rank them. The shuffled test only sees the matrix-wide zero count; row-aligned, one-of-three still shows a sense-amplifier mismatch residual
+    (13d). 4T4R needs a third more devices than one-of-three for no measured gain, so the plan stays one-of-three. Neither cell fixes the programming leak, the deterministic
     LFSR or LOCK-after-reset. At 1 µA noise one-of-three is closer to the limit ({max(r["max_abs_t_samples"] for r in lo["products"] if r["secret"] == "weights") if lo else "?"} on weights).</p>
     </section>
     

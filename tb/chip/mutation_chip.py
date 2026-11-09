@@ -9,6 +9,9 @@ ROOT = Path(__file__).resolve().parents[2]
 RTL = ["rtl/tcim_pkg.sv", "rtl/tcim_core.sv", "rtl/tcim_spi.sv", "rtl/tcim_top.sv", "rtl/chip/tcim_actl.sv", "rtl/chip/tcim_chip_core.sv"]
 CXXRTL = subprocess.run(["yosys-config", "--datdir"], capture_output=True, text=True).stdout.strip() + "/include/backends/cxxrtl/runtime"
 F = "rtl/chip/tcim_actl.sv"
+# CHIP_CELL=1of3: the next-chip 3T3R build (8 November 2026), faults of list MZC in the Z bit-line logic only
+CELL3 = os.environ.get("CHIP_CELL", "") == "1of3"
+DEFS = ["-DTCIM_CELL_1OF3"] if CELL3 else []
 
 # (name, text to replace in tcim_actl.sv (exactly once), replacement)
 M = [
@@ -41,6 +44,17 @@ M = [
     ("request parameters not latched (mask read live)", "op <= arr_op; row <= arr_row; mp <= arr_mask_p; mn <= arr_mask_n;", "op <= arr_op; row <= arr_row; mn <= arr_mask_n;"),
 ]
 
+MZC = [
+    ("1of3: set pulse, Z bit lines follow the P mask", "`ZA(blz_prg <= is_set ? mz :", "`ZA(blz_prg <= is_set ? mp :"),
+    ("1of3: reset pulse, Z bit-line polarity inverted", "(is_rst ? ~mz : '0);)", "(is_rst ? mz : '0);)"),
+    ("1of3: Z sense output never sampled", "`ZA(q1_z <= sa_z;)", "`ZA(q1_z <= '0;)"),
+    ("1of3: Z sampled after the word line (second flip-flop bypassed)", "`ZA(arr_sa_z <= is_rd ? q1_z : '0;)", "`ZA(arr_sa_z <= is_rd ? sa_z : '0;)"),
+    ("1of3: Z bit line not released", "`ZA(blz_prg <= '0;) sl_prg <= 1'b0;", "sl_prg <= 1'b0;"),
+    ("1of3: Z mask of the request not taken", "`ZA(mz <= arr_mask_z;)", "`ZA(mz <= '0;)"),
+]
+if CELL3:
+    M = MZC
+
 
 def run(k, name, old, new):
     d = ROOT / "tb" / "build" / f"mutchip{k:02d}"
@@ -53,11 +67,11 @@ def run(k, name, old, new):
                 return dict(name=name, status="NOT APPLIED", detail=f"{s.count(old)} matches")
             s = s.replace(old, new)
         (d / Path(f).name).write_text(s); srcs.append(str(d / Path(f).name))
-    y = subprocess.run(["yosys", "-q", "-p", f"read_slang --top tcim_chip_core {' '.join(srcs)}; hierarchy -top tcim_chip_core; proc; flatten; opt; "
+    y = subprocess.run(["yosys", "-q", "-p", f"read_slang {' '.join('-D ' + x[2:] for x in DEFS)} --top tcim_chip_core {' '.join(srcs)}; hierarchy -top tcim_chip_core; proc; flatten; opt; "
                         f"write_cxxrtl -header -namespace cxxrtl_design {d}/tcim_chip_core.cc"], capture_output=True, text=True)
     if y.returncode:
         return dict(name=name, status="DOES NOT ELABORATE", detail=(y.stdout + y.stderr)[-300:])
-    c = subprocess.run(["c++", "-std=c++14", "-O1", "-DTCIM_CHIP", "-I", str(d), "-I", CXXRTL, str(ROOT / "tb" / "tb_tcim.cc"),
+    c = subprocess.run(["c++", "-std=c++14", "-O1", "-DTCIM_CHIP", *DEFS, "-I", str(d), "-I", CXXRTL, str(ROOT / "tb" / "tb_tcim.cc"),
                         str(d / "tcim_chip_core.cc"), "-o", str(d / "tb")], capture_output=True, text=True)
     if c.returncode:
         return dict(name=name, status="DOES NOT COMPILE", detail=c.stderr[-300:])
@@ -83,7 +97,7 @@ if __name__ == "__main__":
     a = int(sys.argv[1]) if len(sys.argv) > 1 else 0
     b = int(sys.argv[2]) if len(sys.argv) > 2 else len(M) - 1
     whole = (a, b) == (0, len(M) - 1)
-    out = ROOT / "results" / "sky130_chip" / ("mutation_chip.json" if whole else f"mutation_chip_{a}_{b}.json")
+    out = (ROOT / "results" / "next_chip" / "mutation_chip_1of3.json") if CELL3 else (ROOT / "results" / "sky130_chip" / ("mutation_chip.json" if whole else f"mutation_chip_{a}_{b}.json"))
     out.parent.mkdir(parents=True, exist_ok=True)
     res = []
     for k in range(a, b + 1):

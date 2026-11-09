@@ -35,3 +35,5 @@ parser.out
 parsetab.py
 *.gch
 flow/eda/cf-precheck/
+layout/sky130/periph/work/
+formal/faults/

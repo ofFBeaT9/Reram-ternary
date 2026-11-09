@@ -134,7 +134,12 @@ Nothing is "done" until a script in this repository reproduces the number and th
   `Z(...)` macro in `tcim_core.sv` expands only in that build). Without it the core is proven equal to revision 4.7
   (`results/next_chip/equiv_default_build_unchanged.*`): keep it so. `make rtl-1of3`; Z-logic faults: `TB_CELL=1of3 tb/mutation_test.py`.
   Layout: `layout/sky130/next_3t3r/run3.sh` (Magic 8.3.471 and netgen 1.5.272 built in the sandbox under ~/opt; PDK_ROOT ~/pdk3e).
-  Formal proofs, the array controller and the periphery do not support the option yet.
+  Array controller: `ZA(...)` in `tcim_actl.sv`, `make rtl-chip-1of3`, `CHIP_CELL=1of3 tb/chip/mutation_chip.py`. Formal: task
+  `safety_1of3` (`FAULTS=1of3 formal/check_faults.py`); the progress and miter proofs do not cover the option yet. Macro:
+  `layout/sky130/next_3t3r/macro3.py` needs Magic 8.3.685 (8.3.471 fails on getcell); the 3T3R chip is not assembled.
+- Leakage at transistor level (8 November 2026, paper study): `tools/tvla_circuit.py` (use `--redraw` for a weight test; without
+  it the test also sees one frozen device instance), `--aligned` (margin-check reads, row-aligned even under LOCK),
+  `tools/attack_sparsity.py`. The paper draft is generated: `studies/paper-2026-11/make_draft.py` -> `DRAFT.md`.
 - US spelling in documents. Units with every number.
 
 ## Layout

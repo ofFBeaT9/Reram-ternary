@@ -238,6 +238,19 @@ rtl-chip: tb/build_chip/tb_chip tb/vectors/net_x.txt
 	TB_CFG=3,2,1 tb/build_chip/tb_chip tb/vectors | tee results/sky130_chip/rtl_chip_321.log
 	grep -q "TEST PASSED" results/sky130_chip/rtl_chip_000.log && grep -q "TEST PASSED" results/sky130_chip/rtl_chip_110.log && grep -q "TEST PASSED" results/sky130_chip/rtl_chip_321.log
 
+
+# next-chip cell (3T3R): the chip's logic with the Z bit line, through the line-level macro model (8 November 2026)
+tb/build_chip_1of3/tcim_chip_core.h: $(CHIP_RTL)
+	mkdir -p tb/build_chip_1of3
+	yosys -q -p "read_slang -D TCIM_CELL_1OF3 --top tcim_chip_core $(CHIP_RTL); hierarchy -top tcim_chip_core; proc; flatten; opt; write_cxxrtl -header -namespace cxxrtl_design tb/build_chip_1of3/tcim_chip_core.cc"
+
+tb/build_chip_1of3/tb_chip: tb/tb_tcim.cc tb/build_chip_1of3/tcim_chip_core.h
+	$(CXX) -std=c++14 -O1 -DTCIM_CHIP -DTCIM_CELL_1OF3 -I tb/build_chip_1of3 -I $(CXXRTL) tb/tb_tcim.cc tb/build_chip_1of3/tcim_chip_core.cc -o $@
+
+rtl-chip-1of3: tb/build_chip_1of3/tb_chip tb/vectors/net_x.txt
+	mkdir -p results/next_chip
+	TB_CFG=1,1,0 tb/build_chip_1of3/tb_chip tb/vectors | tee results/next_chip/rtl_chip_1of3_110.log
+
 # the chip's logic: lint (all warnings) and proof that the plain-Verilog copy given to place and route equals the RTL
 equiv-chip:
 	VERILATOR=$(VL) bash tests/equiv/run_equiv_chip.sh

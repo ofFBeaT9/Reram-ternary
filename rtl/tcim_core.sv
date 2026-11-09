@@ -464,6 +464,13 @@ module tcim_core
     localparam logic [8:0] F_BUSY_MAX = 9'd200;
     wire f_pulse = req && (arr_op == OP_PULSE_SET || arr_op == OP_PULSE_RST);
     wire f_vfy   = req && (arr_op == OP_VFY_SET || arr_op == OP_VFY_RESET);
+`ifdef TCIM_CELL_1OF3
+    // column 0 holds a non-zero weight: exactly P or exactly N of its three devices answered (independent decode)
+    wire f_w1 = (arr_sa_p[0] & ~arr_sa_n[0] & ~arr_sa_z[0]) | (arr_sa_n[0] & ~arr_sa_p[0] & ~arr_sa_z[0]);
+    // weight 0 of each column, decoded here from PDATA
+    logic [COLS-1:0] f_wz;
+    always_comb for (int c = 0; c < COLS; c++) f_wz[c] = (r_pdata[2*c +: 2] != T_POS) && (r_pdata[2*c +: 2] != T_NEG);
+`endif
     always_ff @(posedge clk) begin
         f_init <= 1'b0;
         if (f_init) assume (!rst_n);
@@ -487,7 +494,13 @@ module tcim_core
                 if (f_cmd == 3'd1 && state == S_READ && arr_ack) begin
                     f_read[arr_row] <= 1'b1; f_last <= {1'b0, arr_row}; f_cnt <= f_cnt + 8'd1;
                     // +1 when input and weight have the same sign, -1 when opposite; nothing for input 0 or weight 0
+`ifdef TCIM_CELL_1OF3
+                    // one-of-three: +1 only for P alone, -1 only for N alone (decoded here from the three sense bits)
+                    if (f_nz[arr_row] && f_w1)
+                        f_sum0 <= (f_xpos == (arr_sa_p[0] & ~arr_sa_n[0] & ~arr_sa_z[0])) ? f_sum0 + 8'sd1 : f_sum0 - 8'sd1;
+`else
                     if (f_nz[arr_row] && (arr_sa_p[0] ^ arr_sa_n[0])) f_sum0 <= (f_xpos == arr_sa_p[0]) ? f_sum0 + 8'sd1 : f_sum0 - 8'sd1;
+`endif
                 end
             end
         end
@@ -502,7 +515,14 @@ module tcim_core
             // pulse amplitude stays inside the published scheme (and, with VARPROG, every pulse selects at least one device)
             if (f_pulse) assert (arr_amp < 5'(AMP_STEPS));
             // (revision 4.6: empty padding pulses only in constant-time programming)
+`ifdef TCIM_CELL_1OF3
+            if (f_pulse && r_varprog) assert ((arr_mask_p | arr_mask_n | arr_mask_z) != '0);
+            // the Z device is set only for a weight 0 and reset only for a weight +1 or -1
+            if (f_pulse && arr_op == OP_PULSE_SET) assert ((arr_mask_z & ~f_wz) == '0);
+            if (f_pulse && arr_op == OP_PULSE_RST) assert ((arr_mask_z & f_wz) == '0);
+`else
             if (f_pulse && r_varprog) assert ((arr_mask_p | arr_mask_n) != '0);
+`endif
             // a pulse only reaches devices that must change: set only where the weight needs LRS, reset only where HRS
             if (f_pulse && arr_op == OP_PULSE_SET) assert ((arr_mask_p & ~w_pos) == '0 && (arr_mask_n & ~w_neg) == '0);
             if (f_pulse && arr_op == OP_PULSE_RST) assert ((arr_mask_p & w_pos) == '0 && (arr_mask_n & w_neg) == '0);

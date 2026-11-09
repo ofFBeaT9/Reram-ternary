@@ -1,0 +1,250 @@
+[
+ {
+  "name": "MODE changed while busy",
+  "status": "caught",
+  "first_failure": "FAIL: MODE changed while BUSY",
+  "in_test": "5b. directed tests: read reference, satu",
+  "seconds": 110,
+  "id": 60
+ },
+ {
+  "name": "CTRL mode bit never stored",
+  "status": "caught",
+  "first_failure": "FAIL: CTRL MODE readback",
+  "in_test": "1. register access",
+  "seconds": 0,
+  "id": 61
+ },
+ {
+  "name": "read-back works without EN",
+  "status": "caught",
+  "first_failure": "FAIL: array accessed with EN = 0",
+  "in_test": "5b. directed tests: read reference, satu",
+  "seconds": 108,
+  "id": 62
+ },
+ {
+  "name": "serial port: a write frame also launches a read",
+  "status": "caught",
+  "first_failure": "FAIL: DONE cleared by a write to STAT",
+  "in_test": "5c. illegal code, exhaustive conversions",
+  "seconds": 148,
+  "id": 63
+ },
+ {
+  "name": "first row never read",
+  "status": "caught",
+  "first_failure": "FAIL: product 0 column 0: got -5 expected -4",
+  "in_test": "3. digital products against the exact do",
+  "seconds": 53,
+  "id": 64
+ },
+ {
+  "name": "pulse limit one step short",
+  "status": "caught",
+  "first_failure": "FAIL: constant-time programming: 40 pulses instead of 21 + 21 (row 0)",
+  "in_test": "2. programming all 72 rows with verify",
+  "seconds": 1,
+  "id": 65
+ },
+ {
+  "name": "read-back of an invalid cell returns +1",
+  "status": "caught",
+  "first_failure": "FAIL: read-back of a row with an invalid cell",
+  "in_test": "5. error paths",
+  "seconds": 101,
+  "id": 66
+ },
+ {
+  "name": "result conversion: remainder 2 gives +1 instead of -1",
+  "status": "caught",
+  "first_failure": "FAIL: PITER 40 differs from the 16 device-selecting pulses the array received (row 0)",
+  "in_test": "2. programming all 72 rows with verify",
+  "seconds": 1,
+  "id": 67
+ },
+ {
+  "name": "result conversion: table read with a signed index (negative results read as 0)",
+  "status": "caught",
+  "first_failure": "FAIL: product 0 column 0: got 0 expected -4",
+  "in_test": "3. digital products against the exact do",
+  "seconds": 7,
+  "id": 68
+ },
+ {
+  "name": "result conversion: table read one entry too high",
+  "status": "caught",
+  "first_failure": "FAIL: tryte register 49 not zero after reset",
+  "in_test": "1. register access",
+  "seconds": 0,
+  "id": 69
+ },
+ {
+  "name": "product: the row after a read is the next row, not the next non-zero row",
+  "status": "caught",
+  "first_failure": "FAIL: product 0 column 0: got 7 expected -4",
+  "in_test": "3. digital products against the exact do",
+  "seconds": 7,
+  "id": 70
+ },
+ {
+  "name": "product: the next row search starts at the row just read (same row again)",
+  "status": "caught",
+  "first_failure": "FAIL: product did not finish",
+  "in_test": "3. digital products against the exact do",
+  "seconds": 53,
+  "id": 71
+ },
+ {
+  "name": "product: request dropped between rows",
+  "status": "caught",
+  "first_failure": "FAIL: product 0 did not finish",
+  "in_test": "3. digital products against the exact do",
+  "seconds": 11,
+  "id": 72
+ },
+ {
+  "name": "product: an all-zero input vector never finishes",
+  "status": "caught",
+  "first_failure": "FAIL: DONE not set at the end of a product",
+  "in_test": "3. digital products against the exact do",
+  "seconds": 55,
+  "id": 73
+ },
+ {
+  "name": "product: accumulation uses the input of the next row",
+  "status": "caught",
+  "first_failure": "FAIL: product 3 column 0: got -5 expected -3",
+  "in_test": "3. digital products against the exact do",
+  "seconds": 9,
+  "id": 74
+ },
+ {
+  "name": "fixed latency: rows with input 0 change the result",
+  "status": "caught",
+  "first_failure": "FAIL: product 2 column 0: got 4 expected 0",
+  "in_test": "3. digital products against the exact do",
+  "seconds": 8,
+  "id": 75
+ },
+ {
+  "name": "fixed latency: product ends one row early",
+  "status": "caught",
+  "first_failure": "FAIL: product 0 column 0: got -3 expected -4",
+  "in_test": "3. digital products against the exact do",
+  "seconds": 7,
+  "id": 76
+ },
+ {
+  "name": "fixed latency: no wrap from row 71 to row 0",
+  "status": "caught",
+  "first_failure": "FAIL: product 0 column 0: got -3 expected -4",
+  "in_test": "3. digital products against the exact do",
+  "seconds": 8,
+  "id": 77
+ },
+ {
+  "name": "fixed latency: read counter not advanced",
+  "status": "caught",
+  "first_failure": "FAIL: product 0 did not finish",
+  "in_test": "3. digital products against the exact do",
+  "seconds": 11,
+  "id": 78
+ },
+ {
+  "name": "fixed latency: read counter not cleared by GO",
+  "status": "caught",
+  "first_failure": "FAIL: product 1 column 0: got 8 expected 4",
+  "in_test": "3. digital products against the exact do",
+  "seconds": 8,
+  "id": 79
+ },
+ {
+  "name": "shuffle: start row always 0",
+  "status": "caught",
+  "first_failure": "FAIL: only 1 different start rows in 40 products",
+  "in_test": "3. digital products against the exact do",
+  "seconds": 49,
+  "id": 80
+ },
+ {
+  "name": "shuffle: start row may exceed 71",
+  "status": "caught",
+  "first_failure": "FAIL: product 0 column 0: got 12 expected -4",
+  "in_test": "3. digital products against the exact do",
+  "seconds": 7,
+  "id": 81
+ },
+ {
+  "name": "shuffle: LFSR stuck",
+  "status": "caught",
+  "first_failure": "FAIL: only 1 different start rows in 40 products",
+  "in_test": "3. digital products against the exact do",
+  "seconds": 43,
+  "id": 82
+ },
+ {
+  "name": "shuffle: NOSHUF ignored",
+  "status": "caught",
+  "first_failure": "FAIL: NOSHUF: product 0 not read from row 0 in order",
+  "in_test": "3. digital products against the exact do",
+  "seconds": 50,
+  "id": 83
+ },
+ {
+  "name": "ZSKIP ignored",
+  "status": "caught",
+  "first_failure": "FAIL: product 0 column 1: got 7 expected 5",
+  "in_test": "3. digital products against the exact do",
+  "seconds": 51,
+  "id": 84
+ },
+ {
+  "name": "constant time: reset phase stops at verify",
+  "status": "caught",
+  "first_failure": "FAIL: constant-time programming: 21 pulses instead of 21 + 21 (row 0)",
+  "in_test": "2. programming all 72 rows with verify",
+  "seconds": 1,
+  "id": 85
+ },
+ {
+  "name": "constant time: set phase stops at verify",
+  "status": "caught",
+  "first_failure": "FAIL: constant-time programming: 37 pulses instead of 21 + 21 (row 0)",
+  "in_test": "2. programming all 72 rows with verify",
+  "seconds": 1,
+  "id": 86
+ },
+ {
+  "name": "constant time: a failed reset phase ends the command",
+  "status": "caught",
+  "first_failure": "FAIL: constant-time programming: 21 pulses instead of 21 + 21 (row 6)",
+  "in_test": "5. error paths",
+  "seconds": 101,
+  "id": 87
+ },
+ {
+  "name": "constant time: set pulses after a failed reset phase",
+  "status": "caught",
+  "first_failure": "FAIL: stuck reset: 33 pulses instead of 21",
+  "in_test": "5. error paths",
+  "seconds": 104,
+  "id": 88
+ },
+ {
+  "name": "constant time: failed reset phase not reported",
+  "status": "caught",
+  "first_failure": "FAIL: device that never resets not reported",
+  "in_test": "5. error paths",
+  "seconds": 99,
+  "id": 89
+ },
+ {
+  "name": "PITER counts empty pulses",
+  "status": "caught",
+  "first_failure": "FAIL: PITER 37 differs from the 16 device-selecting pulses the array received (row 0)",
+  "in_test": "2. programming all 72 rows with verify",
+  "seconds": 1,
+  "id": 90
+ }
+]

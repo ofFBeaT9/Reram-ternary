@@ -1,0 +1,1118 @@
+SBY 10:17:57 [tcim_core_safety_1of3] Removing directory '/home/claude/reram-ternary/formal/tcim_core_safety_1of3'.
+SBY 10:17:57 [tcim_core_safety_1of3] Copy '/home/claude/reram-ternary/formal/../rtl/tcim_pkg.sv' to '/home/claude/reram-ternary/formal/tcim_core_safety_1of3/src/tcim_pkg.sv'.
+SBY 10:17:57 [tcim_core_safety_1of3] Copy '/home/claude/reram-ternary/formal/../rtl/tcim_core.sv' to '/home/claude/reram-ternary/formal/tcim_core_safety_1of3/src/tcim_core.sv'.
+SBY 10:17:58 [tcim_core_safety_1of3] engine_0: abc pdr
+SBY 10:17:58 [tcim_core_safety_1of3] base: starting process "cd tcim_core_safety_1of3/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 10:18:06 [tcim_core_safety_1of3] base: finished (returncode=0)
+SBY 10:18:06 [tcim_core_safety_1of3] prep: starting process "cd tcim_core_safety_1of3/model; yosys -ql design_prep.log design_prep.ys"
+SBY 10:18:09 [tcim_core_safety_1of3] prep: finished (returncode=0)
+SBY 10:18:09 [tcim_core_safety_1of3] aig: starting process "cd tcim_core_safety_1of3/model; yosys -ql design_aiger.log design_aiger.ys"
+SBY 10:18:21 [tcim_core_safety_1of3] aig: Warning: Treating undriven bit tcim_core.\bus_addr [0] like $anyseq.
+SBY 10:18:21 [tcim_core_safety_1of3] aig: Warning: Treating undriven bit tcim_core.\bus_addr [1] like $anyseq.
+SBY 10:18:21 [tcim_core_safety_1of3] aig: Warning: Treating undriven bit tcim_core.\bus_addr [2] like $anyseq.
+SBY 10:18:21 [tcim_core_safety_1of3] aig: Warning: Treating undriven bit tcim_core.\bus_addr [3] like $anyseq.
+SBY 10:18:21 [tcim_core_safety_1of3] aig: Warning: Treating undriven bit tcim_core.\bus_addr [5] like $anyseq.
+SBY 10:18:21 [tcim_core_safety_1of3] aig: Warning: Treating a total of 5 undriven bits in tcim_core like $anyseq.
+SBY 10:18:22 [tcim_core_safety_1of3] aig: finished (returncode=0)
+SBY 10:18:22 [tcim_core_safety_1of3] engine_0: starting process "cd tcim_core_safety_1of3; yosys-abc -c 'read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw'"
+SBY 10:18:23 [tcim_core_safety_1of3] engine_0: ======== ABC command line "read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw"
+SBY 10:18:23 [tcim_core_safety_1of3] engine_0: Warning: The last 2 outputs are interpreted as constraints.
+SBY 10:18:23 [tcim_core_safety_1of3] engine_0: VarMax = 300. FrameMax = 10000. QueMax = 0. TimeMax = 1339. MonoCNF = no. SkipGen = no. SolveAll = no.
+SBY 10:18:23 [tcim_core_safety_1of3] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 10:18:23 [tcim_core_safety_1of3] engine_0: 1 : 0 30                                                                1    30      0.21 sec  T/O =  0  PRV =  0
+SBY 10:18:23 [tcim_core_safety_1of3] engine_0: 2 : 0 58 64                                                             4    89      0.44 sec  T/O =  0  PRV =  0
+SBY 10:18:23 [tcim_core_safety_1of3] engine_0: Proved output 53 in frame 2.
+SBY 10:18:23 [tcim_core_safety_1of3] engine_0: Proved output 55 in frame 2.
+SBY 10:18:23 [tcim_core_safety_1of3] engine_0: Proved output 56 in frame 2.
+SBY 10:18:23 [tcim_core_safety_1of3] engine_0: Proved output 60 in frame 2.
+SBY 10:18:23 [tcim_core_safety_1of3] engine_0: Proved output 61 in frame 2.
+SBY 10:18:24 [tcim_core_safety_1of3] engine_0: 3 : 0 57 79 66 ~13                                                       5   131      0.84 sec  T/O =  0  PRV =  5
+SBY 10:18:24 [tcim_core_safety_1of3] engine_0: Timing out on output  3 in frame 3 (retrying in next anytime pass).
+SBY 10:18:24 [tcim_core_safety_1of3] engine_0: 3 : 0 57 99 137 ~13                                                      3   178      1.14 sec  T/O =  1  PRV =  5
+SBY 10:18:24 [tcim_core_safety_1of3] engine_0: Timing out on output 44 in frame 3 (retrying in next anytime pass).
+SBY 10:18:24 [tcim_core_safety_1of3] engine_0: 3 : 0 57 124 166 ~13                                                     3   203      1.36 sec  T/O =  2  PRV =  5
+SBY 10:18:24 [tcim_core_safety_1of3] engine_0: Timing out on output 49 in frame 3 (retrying in next anytime pass).
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: 3 : 0 57 140 185 ~13                                                     2   212      1.57 sec  T/O =  3  PRV =  5
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Timing out on output 58 in frame 3 (retrying in next anytime pass).
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: 3 : 0 57 140 185 ~13                                                     0   212      1.57 sec  T/O =  4  PRV =  5
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 20 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 21 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 22 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 23 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 24 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 25 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 26 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 27 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 28 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 29 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 30 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 31 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 32 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 33 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 34 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 35 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 36 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 37 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 38 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 39 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 40 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 41 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 42 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 43 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Proved output 54 in frame 3.
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: 4 : 0 57 124 150 70 ~44                                                  5   214      2.31 sec  T/O =  4  PRV = 30
+SBY 10:18:25 [tcim_core_safety_1of3] engine_0: Timing out on output  1 in frame 4 (retrying in next anytime pass).
+SBY 10:18:26 [tcim_core_safety_1of3] engine_0: 4 : 0 57 125 173 100 ~44                                                 3   300      2.67 sec  T/O =  5  PRV = 30
+SBY 10:18:26 [tcim_core_safety_1of3] engine_0: Timing out on output  7 in frame 4 (retrying in next anytime pass).
+SBY 10:18:26 [tcim_core_safety_1of3] engine_0: 4 : 0 57 125 193 120 ~44                                                 3   318      2.87 sec  T/O =  6  PRV = 30
+SBY 10:18:26 [tcim_core_safety_1of3] engine_0: Timing out on output  9 in frame 4 (retrying in next anytime pass).
+SBY 10:18:26 [tcim_core_safety_1of3] engine_0: 4 : 0 57 125 200 128 ~44                                                 3   383      3.06 sec  T/O =  7  PRV = 30
+SBY 10:18:26 [tcim_core_safety_1of3] engine_0: Timing out on output 16 in frame 4 (retrying in next anytime pass).
+SBY 10:18:26 [tcim_core_safety_1of3] engine_0: 4 : 0 57 125 208 146 ~44                                                 2   397      3.26 sec  T/O =  8  PRV = 30
+SBY 10:18:26 [tcim_core_safety_1of3] engine_0: Timing out on output 17 in frame 4 (retrying in next anytime pass).
+SBY 10:18:26 [tcim_core_safety_1of3] engine_0: 4 : 0 57 125 220 158 ~44                                                 3   406      3.47 sec  T/O =  9  PRV = 30
+SBY 10:18:26 [tcim_core_safety_1of3] engine_0: Timing out on output 18 in frame 4 (retrying in next anytime pass).
+SBY 10:18:27 [tcim_core_safety_1of3] engine_0: 4 : 0 57 125 241 177 ~44                                                 4   411      3.66 sec  T/O = 10  PRV = 30
+SBY 10:18:27 [tcim_core_safety_1of3] engine_0: Timing out on output 19 in frame 4 (retrying in next anytime pass).
+SBY 10:18:27 [tcim_core_safety_1of3] engine_0: 4 : 0 57 126 252 195 ~44                                                 4   415      3.90 sec  T/O = 11  PRV = 30
+SBY 10:18:27 [tcim_core_safety_1of3] engine_0: Timing out on output 50 in frame 4 (retrying in next anytime pass).
+SBY 10:18:27 [tcim_core_safety_1of3] engine_0: 4 : 0 57 126 262 211 ~44                                                 4   418      4.09 sec  T/O = 12  PRV = 30
+SBY 10:18:28 [tcim_core_safety_1of3] engine_0: 5 : 0 57 121 240 123 39 ~106                                             3   418      5.04 sec  T/O = 12  PRV = 30
+SBY 10:18:28 [tcim_core_safety_1of3] engine_0: Timing out on output  2 in frame 5 (retrying in next anytime pass).
+SBY 10:18:28 [tcim_core_safety_1of3] engine_0: 5 : 0 57 121 240 131 70 ~106                                             4   420      5.23 sec  T/O = 13  PRV = 30
+SBY 10:18:28 [tcim_core_safety_1of3] engine_0: Timing out on output 51 in frame 5 (retrying in next anytime pass).
+SBY 10:18:28 [tcim_core_safety_1of3] engine_0: 5 : 0 57 121 240 136 78 ~106                                             3   420      5.28 sec  T/O = 14  PRV = 30
+SBY 10:18:28 [tcim_core_safety_1of3] engine_0: Proved output 0 in frame 5.
+SBY 10:18:28 [tcim_core_safety_1of3] engine_0: Proved output 15 in frame 5.
+SBY 10:18:28 [tcim_core_safety_1of3] engine_0: Proved output 57 in frame 5.
+SBY 10:18:29 [tcim_core_safety_1of3] engine_0: 6 : 0 57 121 220 117 36 27 ~135                                          4   423      6.00 sec  T/O = 14  PRV = 33
+SBY 10:18:29 [tcim_core_safety_1of3] engine_0: Timing out on output  5 in frame 6 (retrying in next anytime pass).
+SBY 10:18:29 [tcim_core_safety_1of3] engine_0: 6 : 0 57 121 220 120 43 39 ~135                                          5   428      6.20 sec  T/O = 15  PRV = 33
+SBY 10:18:29 [tcim_core_safety_1of3] engine_0: Timing out on output  6 in frame 6 (retrying in next anytime pass).
+SBY 10:18:29 [tcim_core_safety_1of3] engine_0: 6 : 0 57 121 220 120 51 54 ~135                                          3   435      6.40 sec  T/O = 16  PRV = 33
+SBY 10:18:29 [tcim_core_safety_1of3] engine_0: Timing out on output  8 in frame 6 (retrying in next anytime pass).
+SBY 10:18:30 [tcim_core_safety_1of3] engine_0: 6 : 0 57 122 220 121 57 83 ~135                                          6   436      6.63 sec  T/O = 17  PRV = 33
+SBY 10:18:30 [tcim_core_safety_1of3] engine_0: Proved output 59 in frame 6.
+SBY 10:18:30 [tcim_core_safety_1of3] engine_0: 7 : 0 57 121 220 85 36 34 74 ~158                                        3   436      7.32 sec  T/O = 17  PRV = 34
+SBY 10:18:31 [tcim_core_safety_1of3] engine_0: 8 : 0 57 121 220 83 24 36 32 24 ~193                                     9   437      8.12 sec  T/O = 17  PRV = 34
+SBY 10:18:31 [tcim_core_safety_1of3] engine_0: Timing out on output 45 in frame 8 (retrying in next anytime pass).
+SBY 10:18:31 [tcim_core_safety_1of3] engine_0: 8 : 0 57 121 220 83 24 36 37 31 ~193                                     4   437      8.18 sec  T/O = 18  PRV = 34
+SBY 10:18:31 [tcim_core_safety_1of3] engine_0: Proved output 14 in frame 8.
+SBY 10:18:31 [tcim_core_safety_1of3] engine_0: Proved output 47 in frame 8.
+SBY 10:18:32 [tcim_core_safety_1of3] engine_0: 9 : 0 57 121 220 82 23 34 16 21 30 ~197                                  4   437      8.84 sec  T/O = 18  PRV = 36
+SBY 10:18:32 [tcim_core_safety_1of3] engine_0: Timing out on output 52 in frame 9 (retrying in next anytime pass).
+SBY 10:18:32 [tcim_core_safety_1of3] engine_0: 9 : 0 57 121 220 82 23 34 16 21 30 ~197                                  0   437      8.84 sec  T/O = 19  PRV = 36
+SBY 10:18:32 [tcim_core_safety_1of3] engine_0: Proved output 10 in frame 9.
+SBY 10:18:32 [tcim_core_safety_1of3] engine_0: 10 : 0 57 121 220 82 23 34 15 12 19 23 ~202                               4   437      9.52 sec  T/O = 19  PRV = 37
+SBY 10:18:33 [tcim_core_safety_1of3] engine_0: 11 : 0 57 121 220 82 23 34 15 12 16 18 10 ~202                            4   437      9.87 sec  T/O = 19  PRV = 37
+SBY 10:18:33 [tcim_core_safety_1of3] engine_0: Timing out on output 12 in frame 11 (retrying in next anytime pass).
+SBY 10:18:33 [tcim_core_safety_1of3] engine_0: 11 : 0 57 121 220 82 23 34 15 12 16 18 19 ~202                            2   437      9.90 sec  T/O = 20  PRV = 37
+SBY 10:18:33 [tcim_core_safety_1of3] engine_0: Proved output 46 in frame 11.
+SBY 10:18:34 [tcim_core_safety_1of3] engine_0: 12 : 0 57 121 220 82 23 34 15 12 16 12 4 14 ~210                          2   437     10.58 sec  T/O = 20  PRV = 38
+SBY 10:18:34 [tcim_core_safety_1of3] engine_0: Proved output 4 in frame 12.
+SBY 10:18:34 [tcim_core_safety_1of3] engine_0: 13 : 0 57 121 220 82 23 34 15 12 16 12 3 2 1 ~221                         0   437     11.03 sec  T/O = 20  PRV = 39
+SBY 10:18:35 [tcim_core_safety_1of3] engine_0: 14 : 0 57 121 220 82 23 34 15 12 16 12 3 2 5 3 ~221                       4   437     11.89 sec  T/O = 20  PRV = 39
+SBY 10:18:35 [tcim_core_safety_1of3] engine_0: 15 : 0 57 121 220 82 23 34 15 12 16 12 3 2 2 5 5 ~221                     3   437     12.39 sec  T/O = 20  PRV = 39
+SBY 10:18:36 [tcim_core_safety_1of3] engine_0: 16 : 0 57 121 220 82 23 34 15 12 16 12 3 2 2 2 2 4 ~221                   0   437     12.84 sec  T/O = 20  PRV = 39
+SBY 10:18:36 [tcim_core_safety_1of3] engine_0: 17 : 0 57 121 220 82 23 34 15 12 16 12 6 7 8 9 11 10 3 ~221              25   437     13.53 sec  T/O = 20  PRV = 39
+SBY 10:18:36 [tcim_core_safety_1of3] engine_0: Timing out on output 13 in frame 17 (retrying in next anytime pass).
+SBY 10:18:36 [tcim_core_safety_1of3] engine_0: 17 : 0 57 121 220 82 23 34 15 12 16 12 6 7 8 9 11 10 3 ~221               0   437     13.53 sec  T/O = 21  PRV = 39
+SBY 10:18:37 [tcim_core_safety_1of3] engine_0: 18 : 0 57 121 220 82 23 34 15 12 16 12 5 5 4 5 5 5 8 4 ~221              14   437     14.10 sec  T/O = 21  PRV = 39
+SBY 10:18:38 [tcim_core_safety_1of3] engine_0: 19 : 0 57 121 220 82 23 34 15 12 16 12 5 4 3 2 2 2 2 3 0 ~221             0   437     14.62 sec  T/O = 21  PRV = 39
+SBY 10:18:38 [tcim_core_safety_1of3] engine_0: 20 : 0 57 121 220 82 23 34 15 12 16 12 5 4 3 2 2 2 2 3 4 2 ~221           3   437     15.05 sec  T/O = 21  PRV = 39
+SBY 10:18:38 [tcim_core_safety_1of3] engine_0: 21 : ... 57 121 220 82 23 34 15 12 16 12 5 4 3 2 2 2 2 3 2 3 1 ~221       3   437     15.48 sec  T/O = 21  PRV = 39
+SBY 10:18:39 [tcim_core_safety_1of3] engine_0: 22 : ... 121 220 82 23 34 15 12 16 12 5 4 3 2 2 2 2 3 2 2 5 3 ~221        4   437     16.06 sec  T/O = 21  PRV = 39
+SBY 10:18:39 [tcim_core_safety_1of3] engine_0: 23 : ... 121 220 82 23 34 15 12 16 12 5 4 3 2 2 2 2 3 2 2 2 3 3 ~221      3   437     16.50 sec  T/O = 21  PRV = 39
+SBY 10:18:40 [tcim_core_safety_1of3] engine_0: 24 : ... 220 82 23 34 15 12 16 12 5 4 3 2 2 2 2 3 2 2 2 2 5 3 ~221        4   437     16.91 sec  T/O = 21  PRV = 39
+SBY 10:18:40 [tcim_core_safety_1of3] engine_0: 25 : ... 220 82 23 34 15 12 16 12 5 4 3 2 2 2 2 3 2 2 2 2 2 2 2 ~221      0   437     17.52 sec  T/O = 21  PRV = 39
+SBY 10:18:41 [tcim_core_safety_1of3] engine_0: 26 : ... 82 23 34 15 12 16 12 5 4 3 2 2 2 2 4 5 5 6 6 6 8 7 2 ~221       22   438     18.03 sec  T/O = 21  PRV = 39
+SBY 10:18:41 [tcim_core_safety_1of3] engine_0: 26 : ... 82 23 34 15 12 16 12 5 4 3 2 2 2 2 4 5 5 6 6 6 8 10 7 ~221       8   438     18.04 sec  T/O = 21  PRV = 39
+SBY 10:18:42 [tcim_core_safety_1of3] engine_0: 27 : ... 82 23 34 15 12 16 12 5 4 3 2 2 2 2 2 2 2 3 3 3 3 3 4 2 ~224      7   438     18.61 sec  T/O = 21  PRV = 39
+SBY 10:18:42 [tcim_core_safety_1of3] engine_0: Timing out on output 48 in frame 27 (retrying in next anytime pass).
+SBY 10:18:42 [tcim_core_safety_1of3] engine_0: 27 : ... 82 23 34 15 12 16 12 5 4 3 2 2 2 2 2 2 2 3 3 3 3 3 4 2 ~224      0   438     18.61 sec  T/O = 22  PRV = 39
+SBY 10:18:42 [tcim_core_safety_1of3] engine_0: 28 : ... 23 34 15 12 16 12 5 4 3 2 2 2 2 2 2 2 3 3 2 2 2 2 2 2 ~224       0   438     19.16 sec  T/O = 22  PRV = 39
+SBY 10:18:43 [tcim_core_safety_1of3] engine_0: 29 : ... 23 34 15 12 16 12 5 4 3 2 2 2 2 2 2 2 3 3 2 2 2 2 2 3 -1 ~224      0   438     19.66 sec  T/O = 22  PRV = 39
+SBY 10:18:43 [tcim_core_safety_1of3] engine_0: 30 : ... 34 15 12 16 12 5 4 3 2 2 2 2 2 2 2 3 3 2 2 2 2 2 3 5 1 ~224      3   438     20.05 sec  T/O = 22  PRV = 39
+SBY 10:18:43 [tcim_core_safety_1of3] engine_0: 31 : ... 15 12 16 12 5 4 3 2 2 2 2 2 2 2 3 3 2 2 2 2 2 3 2 2 0 ~224       0   438     20.52 sec  T/O = 22  PRV = 39
+SBY 10:18:44 [tcim_core_safety_1of3] engine_0: 32 : ... 5 4 3 2 2 2 2 2 2 2 3 3 2 2 2 2 2 3 2 2 2 -2 ~224        0   438     21.15 sec  T/O = 22  PRV = 39
+SBY 10:18:45 [tcim_core_safety_1of3] engine_0: 33 : ... 5 4 3 2 2 2 2 2 2 2 3 3 2 2 2 2 2 3 2 2 2 1 -3 ~224      0   438     21.56 sec  T/O = 22  PRV = 39
+SBY 10:18:45 [tcim_core_safety_1of3] engine_0: 34 : ... 4 3 2 2 2 2 2 2 2 3 3 2 2 2 2 2 3 2 2 2 1 4 -2 ~224      3   438     22.11 sec  T/O = 22  PRV = 39
+SBY 10:18:46 [tcim_core_safety_1of3] engine_0: 35 : ... 16 12 5 4 3 2 2 2 2 2 2 2 3 3 2 2 2 2 2 3 2 2 2 1 1 2 -1 ~224      2   438     22.59 sec  T/O = 22  PRV = 39
+SBY 10:18:46 [tcim_core_safety_1of3] engine_0: 36 : ... 2 2 2 2 2 2 2 3 3 2 2 2 2 2 3 2 2 2 1 1 1 1 -2 ~224      0   438     23.17 sec  T/O = 22  PRV = 39
+SBY 10:18:47 [tcim_core_safety_1of3] engine_0: 37 : ... 2 2 2 2 2 2 3 3 2 2 2 2 2 3 2 2 2 1 1 1 1 2 -4 ~224      1   438     23.61 sec  T/O = 22  PRV = 39
+SBY 10:18:47 [tcim_core_safety_1of3] engine_0: Timing out on output 11 in frame 37 (retrying in next anytime pass).
+SBY 10:18:47 [tcim_core_safety_1of3] engine_0: 37 : ... 2 2 2 2 2 2 3 3 2 2 2 2 2 3 2 2 2 1 1 1 1 2 -4 ~224      0   438     23.61 sec  T/O = 23  PRV = 39
+SBY 10:18:47 [tcim_core_safety_1of3] engine_0: 38 : ... 2 2 2 2 2 3 3 2 2 2 2 2 3 2 2 2 1 1 1 1 2 1 -5 ~224      0   438     24.10 sec  T/O = 23  PRV = 39
+SBY 10:18:47 [tcim_core_safety_1of3] engine_0: All outputs solved or timed out in frame 38.
+SBY 10:18:47 [tcim_core_safety_1of3] engine_0: Starting new anytime pass, reusing clauses.
+SBY 10:18:47 [tcim_core_safety_1of3] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 10:18:48 [tcim_core_safety_1of3] engine_0: 1 : 0 645 ~224                                                           0     0      0.49 sec  T/O =  0  PRV = 39
+SBY 10:18:48 [tcim_core_safety_1of3] engine_0: 2 : 0 57 588 ~224                                                        0     0      0.52 sec  T/O =  0  PRV = 39
+SBY 10:18:48 [tcim_core_safety_1of3] engine_0: 3 : 0 57 121 506 ~224                                                    2    70      0.82 sec  T/O =  0  PRV = 39
+SBY 10:18:48 [tcim_core_safety_1of3] engine_0: Timing out on output  3 in frame 3 (retrying in next anytime pass).
+SBY 10:18:48 [tcim_core_safety_1of3] engine_0: 3 : 0 57 156 542 ~224                                                    2   106      1.18 sec  T/O =  1  PRV = 39
+SBY 10:18:48 [tcim_core_safety_1of3] engine_0: Timing out on output 58 in frame 3 (retrying in next anytime pass).
+SBY 10:18:48 [tcim_core_safety_1of3] engine_0: 3 : 0 57 156 542 ~224                                                    0   106      1.18 sec  T/O =  2  PRV = 39
+SBY 10:18:49 [tcim_core_safety_1of3] engine_0: 4 : 0 57 156 300 291 ~224                                                3   139      2.33 sec  T/O =  2  PRV = 39
+SBY 10:18:49 [tcim_core_safety_1of3] engine_0: Timing out on output  7 in frame 4 (retrying in next anytime pass).
+SBY 10:18:50 [tcim_core_safety_1of3] engine_0: 4 : 0 57 156 324 315 ~224                                                3   167      2.53 sec  T/O =  3  PRV = 39
+SBY 10:18:50 [tcim_core_safety_1of3] engine_0: Timing out on output  9 in frame 4 (retrying in next anytime pass).
+SBY 10:18:50 [tcim_core_safety_1of3] engine_0: 4 : 0 57 156 325 334 ~224                                                2   190      2.76 sec  T/O =  4  PRV = 39
+SBY 10:18:50 [tcim_core_safety_1of3] engine_0: Timing out on output 17 in frame 4 (retrying in next anytime pass).
+SBY 10:18:50 [tcim_core_safety_1of3] engine_0: 4 : 0 57 156 336 343 ~224                                                3   208      2.96 sec  T/O =  5  PRV = 39
+SBY 10:18:50 [tcim_core_safety_1of3] engine_0: Timing out on output 18 in frame 4 (retrying in next anytime pass).
+SBY 10:18:50 [tcim_core_safety_1of3] engine_0: 4 : 0 57 156 353 358 ~224                                                4   213      3.16 sec  T/O =  6  PRV = 39
+SBY 10:18:50 [tcim_core_safety_1of3] engine_0: Timing out on output 19 in frame 4 (retrying in next anytime pass).
+SBY 10:18:50 [tcim_core_safety_1of3] engine_0: 4 : 0 57 156 369 376 ~224                                                3   217      3.30 sec  T/O =  7  PRV = 39
+SBY 10:18:50 [tcim_core_safety_1of3] engine_0: Timing out on output 44 in frame 4 (retrying in next anytime pass).
+SBY 10:18:51 [tcim_core_safety_1of3] engine_0: 4 : 0 57 156 374 377 ~224                                                4   217      3.40 sec  T/O =  8  PRV = 39
+SBY 10:18:51 [tcim_core_safety_1of3] engine_0: Timing out on output 49 in frame 4 (retrying in next anytime pass).
+SBY 10:18:51 [tcim_core_safety_1of3] engine_0: 4 : 0 57 156 382 386 ~224                                                3   221      3.53 sec  T/O =  9  PRV = 39
+SBY 10:18:53 [tcim_core_safety_1of3] engine_0: 5 : 0 57 156 380 151 194 ~297                                            6   230      5.72 sec  T/O =  9  PRV = 39
+SBY 10:18:53 [tcim_core_safety_1of3] engine_0: Timing out on output 16 in frame 5 (retrying in next anytime pass).
+SBY 10:18:53 [tcim_core_safety_1of3] engine_0: 5 : 0 57 156 380 152 194 ~297                                            3   230      5.80 sec  T/O = 10  PRV = 39
+SBY 10:18:53 [tcim_core_safety_1of3] engine_0: Timing out on output 50 in frame 5 (retrying in next anytime pass).
+SBY 10:18:53 [tcim_core_safety_1of3] engine_0: 5 : 0 57 156 380 152 194 ~297                                            0   230      5.81 sec  T/O = 11  PRV = 39
+SBY 10:18:54 [tcim_core_safety_1of3] engine_0: 6 : 0 57 156 380 151 30 168 ~307                                         3   230      7.06 sec  T/O = 11  PRV = 39
+SBY 10:18:54 [tcim_core_safety_1of3] engine_0: Timing out on output  6 in frame 6 (retrying in next anytime pass).
+SBY 10:18:54 [tcim_core_safety_1of3] engine_0: 6 : 0 57 156 380 151 30 192 ~307                                         3   240      7.27 sec  T/O = 12  PRV = 39
+SBY 10:18:54 [tcim_core_safety_1of3] engine_0: Timing out on output  8 in frame 6 (retrying in next anytime pass).
+SBY 10:18:54 [tcim_core_safety_1of3] engine_0: 6 : 0 57 156 380 151 37 201 ~307                                         4   244      7.33 sec  T/O = 13  PRV = 39
+SBY 10:18:55 [tcim_core_safety_1of3] engine_0: Proved output 1 in frame 6.
+SBY 10:18:56 [tcim_core_safety_1of3] engine_0: 7 : 0 57 156 380 151 34 77 113 ~328                                      4   245      8.65 sec  T/O = 13  PRV = 40
+SBY 10:18:57 [tcim_core_safety_1of3] engine_0: 8 : 0 57 156 380 151 34 75 19 107 ~328                                   2   245      9.54 sec  T/O = 13  PRV = 40
+SBY 10:18:57 [tcim_core_safety_1of3] engine_0: Timing out on output  2 in frame 8 (retrying in next anytime pass).
+SBY 10:18:57 [tcim_core_safety_1of3] engine_0: 8 : 0 57 156 380 151 34 75 22 112 ~328                                   3   293      9.80 sec  T/O = 14  PRV = 40
+SBY 10:18:57 [tcim_core_safety_1of3] engine_0: Timing out on output 51 in frame 8 (retrying in next anytime pass).
+SBY 10:18:57 [tcim_core_safety_1of3] engine_0: 8 : 0 57 156 380 151 34 75 22 112 ~328                                   0   293      9.80 sec  T/O = 15  PRV = 40
+SBY 10:18:57 [tcim_core_safety_1of3] engine_0: Proved output 5 in frame 8.
+SBY 10:18:58 [tcim_core_safety_1of3] engine_0: 9 : 0 57 156 380 151 34 75 18 16 87 ~341                                 2   295     11.15 sec  T/O = 15  PRV = 41
+SBY 10:19:00 [tcim_core_safety_1of3] engine_0: 10 : 0 57 156 380 151 35 77 20 19 24 76 ~342                              8   299     12.42 sec  T/O = 15  PRV = 41
+SBY 10:19:01 [tcim_core_safety_1of3] engine_0: 11 : 0 57 156 380 151 35 77 19 18 14 27 58 ~344                           6   307     13.40 sec  T/O = 15  PRV = 41
+SBY 10:19:01 [tcim_core_safety_1of3] engine_0: Timing out on output 45 in frame 11 (retrying in next anytime pass).
+SBY 10:19:01 [tcim_core_safety_1of3] engine_0: 11 : 0 57 156 380 151 35 77 19 18 14 27 58 ~344                           0   307     13.40 sec  T/O = 16  PRV = 41
+SBY 10:19:01 [tcim_core_safety_1of3] engine_0: 12 : 0 57 156 380 151 35 77 19 18 14 26 13 55 ~344                        4   309     14.16 sec  T/O = 16  PRV = 41
+SBY 10:19:02 [tcim_core_safety_1of3] engine_0: 13 : 0 57 156 380 151 35 77 19 18 14 26 11 16 54 ~345                     5   312     15.30 sec  T/O = 16  PRV = 41
+SBY 10:19:03 [tcim_core_safety_1of3] engine_0: 14 : 0 57 156 380 151 35 77 19 18 14 26 11 11 11 49 ~351                  3   312     16.36 sec  T/O = 16  PRV = 41
+SBY 10:19:04 [tcim_core_safety_1of3] engine_0: 15 : 0 57 156 380 151 35 77 19 18 14 26 11 11 7 7 45 ~352                 2   312     17.28 sec  T/O = 16  PRV = 41
+SBY 10:19:06 [tcim_core_safety_1of3] engine_0: 16 : 0 57 156 380 151 35 77 19 18 14 26 11 11 7 5 5 38 ~354               2   312     18.43 sec  T/O = 16  PRV = 41
+SBY 10:19:06 [tcim_core_safety_1of3] engine_0: Timing out on output 12 in frame 16 (retrying in next anytime pass).
+SBY 10:19:06 [tcim_core_safety_1of3] engine_0: 16 : 0 57 156 380 151 35 77 19 18 14 26 11 11 7 5 7 41 ~354               4   312     18.47 sec  T/O = 17  PRV = 41
+SBY 10:19:07 [tcim_core_safety_1of3] engine_0: 17 : 0 57 156 380 151 35 77 19 18 14 26 11 11 7 5 4 4 39 ~355             2   312     19.81 sec  T/O = 17  PRV = 41
+SBY 10:19:08 [tcim_core_safety_1of3] engine_0: 18 : 0 57 156 380 151 35 77 19 18 14 26 11 11 7 5 4 3 4 34 ~356           2   312     20.96 sec  T/O = 17  PRV = 41
+SBY 10:19:08 [tcim_core_safety_1of3] engine_0: Timing out on output 52 in frame 18 (retrying in next anytime pass).
+SBY 10:19:08 [tcim_core_safety_1of3] engine_0: 18 : 0 57 156 380 151 35 77 19 18 14 26 11 11 7 5 4 3 4 34 ~356           0   312     20.96 sec  T/O = 18  PRV = 41
+SBY 10:19:09 [tcim_core_safety_1of3] engine_0: 19 : ... 57 156 380 151 35 77 19 18 14 26 11 11 7 5 4 3 4 3 31 ~356       0   312     22.07 sec  T/O = 18  PRV = 41
+SBY 10:19:10 [tcim_core_safety_1of3] engine_0: 20 : ... 156 380 151 35 77 19 18 14 26 11 11 7 5 4 3 4 3 2 29 ~356        0   312     23.15 sec  T/O = 18  PRV = 41
+SBY 10:19:11 [tcim_core_safety_1of3] engine_0: 21 : ... 156 380 151 35 77 19 18 14 26 11 11 7 5 4 3 4 3 2 2 27 ~356      0   312     24.33 sec  T/O = 18  PRV = 41
+SBY 10:19:12 [tcim_core_safety_1of3] engine_0: 22 : ... 380 151 35 77 19 18 14 26 11 11 7 5 4 3 4 3 2 2 3 24 ~356        0   312     25.24 sec  T/O = 18  PRV = 41
+SBY 10:19:14 [tcim_core_safety_1of3] engine_0: 23 : ... 380 151 35 77 19 18 14 26 11 11 7 5 6 5 9 9 8 5 4 4 21 ~356     25   314     26.49 sec  T/O = 18  PRV = 41
+SBY 10:19:14 [tcim_core_safety_1of3] engine_0: Timing out on output 13 in frame 23 (retrying in next anytime pass).
+SBY 10:19:14 [tcim_core_safety_1of3] engine_0: 23 : ... 380 151 35 77 19 18 14 26 11 11 7 5 6 5 9 9 8 5 4 4 21 ~356      0   314     26.49 sec  T/O = 19  PRV = 41
+SBY 10:19:15 [tcim_core_safety_1of3] engine_0: 24 : ... 151 35 77 19 18 14 26 11 11 7 5 5 3 4 3 2 2 3 2 3 19 ~356        0   314     27.63 sec  T/O = 19  PRV = 41
+SBY 10:19:16 [tcim_core_safety_1of3] engine_0: 25 : ... 151 35 77 19 18 14 26 11 11 7 5 5 3 4 3 2 2 3 2 3 2 17 ~356      0   314     28.71 sec  T/O = 19  PRV = 41
+SBY 10:19:17 [tcim_core_safety_1of3] engine_0: 26 : ... 35 77 19 18 14 26 11 11 7 5 5 3 4 3 2 2 3 2 3 2 2 15 ~356        0   314     29.83 sec  T/O = 19  PRV = 41
+SBY 10:19:18 [tcim_core_safety_1of3] engine_0: 27 : ... 35 77 19 18 14 26 11 11 7 5 5 3 4 3 2 2 3 2 3 2 2 2 13 ~356      0   314     30.97 sec  T/O = 19  PRV = 41
+SBY 10:19:19 [tcim_core_safety_1of3] engine_0: 28 : ... 77 19 18 14 26 11 11 7 5 5 3 4 3 2 2 3 2 3 2 2 2 2 11 ~356       0   314     32.00 sec  T/O = 19  PRV = 41
+SBY 10:19:20 [tcim_core_safety_1of3] engine_0: 29 : ... 77 19 18 14 26 11 11 7 5 5 3 4 4 3 4 7 5 5 4 4 3 3 4 8 ~356     28   315     33.27 sec  T/O = 19  PRV = 41
+SBY 10:19:20 [tcim_core_safety_1of3] engine_0: Timing out on output 48 in frame 29 (retrying in next anytime pass).
+SBY 10:19:20 [tcim_core_safety_1of3] engine_0: 29 : ... 77 19 18 14 26 11 11 7 5 5 3 4 4 3 4 7 5 5 4 4 3 3 4 8 ~356      0   315     33.27 sec  T/O = 20  PRV = 41
+SBY 10:19:22 [tcim_core_safety_1of3] engine_0: 30 : ... 19 18 14 26 11 11 7 5 5 3 4 3 2 2 3 2 3 2 2 2 2 2 3 8 ~356       0   315     34.42 sec  T/O = 20  PRV = 41
+SBY 10:19:23 [tcim_core_safety_1of3] engine_0: 31 : ... 18 14 26 11 11 7 5 5 3 4 3 2 2 3 2 3 2 2 2 2 2 3 2 6 ~356        0   315     35.79 sec  T/O = 20  PRV = 41
+SBY 10:19:24 [tcim_core_safety_1of3] engine_0: 32 : ... 18 14 26 11 11 7 5 5 3 4 3 2 2 3 2 3 2 2 2 2 2 3 2 2 4 ~356      0   315     36.79 sec  T/O = 20  PRV = 41
+SBY 10:19:25 [tcim_core_safety_1of3] engine_0: 33 : ... 14 26 11 11 7 5 5 3 4 3 2 2 3 2 3 2 2 2 2 2 3 2 2 2 2 ~356       0   315     37.82 sec  T/O = 20  PRV = 41
+SBY 10:19:26 [tcim_core_safety_1of3] engine_0: 34 : ... 26 11 11 7 5 5 3 4 3 2 2 3 2 3 2 2 2 2 2 3 2 2 2 2 0 ~356        0   315     38.83 sec  T/O = 20  PRV = 41
+SBY 10:19:27 [tcim_core_safety_1of3] engine_0: 35 : ... 26 11 11 7 5 5 3 4 3 2 2 3 2 3 2 2 2 2 2 3 2 2 2 2 1 -1 ~356       0   315     39.98 sec  T/O = 20  PRV = 41
+SBY 10:19:28 [tcim_core_safety_1of3] engine_0: 36 : ... 5 5 3 4 3 2 2 3 2 3 2 2 2 2 2 3 2 2 2 2 1 1 -2 ~356      0   315     41.12 sec  T/O = 20  PRV = 41
+SBY 10:19:30 [tcim_core_safety_1of3] engine_0: 37 : ... 5 3 4 3 2 2 3 2 3 2 2 2 3 3 5 6 3 6 6 3 2 2 -4 ~356     26   316     42.42 sec  T/O = 20  PRV = 41
+SBY 10:19:30 [tcim_core_safety_1of3] engine_0: Timing out on output 11 in frame 37 (retrying in next anytime pass).
+SBY 10:19:30 [tcim_core_safety_1of3] engine_0: 37 : ... 5 3 4 3 2 2 3 2 3 2 2 2 3 3 5 6 3 6 6 3 2 2 -4 ~356      0   316     42.43 sec  T/O = 21  PRV = 41
+SBY 10:19:31 [tcim_core_safety_1of3] engine_0: 38 : ... 3 4 3 2 2 3 2 3 2 2 2 2 2 3 2 2 2 2 1 1 2 1 -5 ~356      0   316     43.58 sec  T/O = 21  PRV = 41
+SBY 10:19:31 [tcim_core_safety_1of3] engine_0: All outputs solved or timed out in frame 38.
+SBY 10:19:31 [tcim_core_safety_1of3] engine_0: Starting new anytime pass, reusing clauses.
+SBY 10:19:31 [tcim_core_safety_1of3] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 10:19:32 [tcim_core_safety_1of3] engine_0: 1 : 0 1015 ~356                                                          0     0      1.64 sec  T/O =  0  PRV = 41
+SBY 10:19:32 [tcim_core_safety_1of3] engine_0: 2 : 0 57 958 ~356                                                        0     0      1.69 sec  T/O =  0  PRV = 41
+SBY 10:19:33 [tcim_core_safety_1of3] engine_0: 3 : 0 57 176 841 ~356                                                    2    65      2.18 sec  T/O =  0  PRV = 41
+SBY 10:19:33 [tcim_core_safety_1of3] engine_0: 3 : 0 57 185 850 ~356                                                    2    69      2.26 sec  T/O =  0  PRV = 41
+SBY 10:19:33 [tcim_core_safety_1of3] engine_0: Timing out on output  3 in frame 3 (retrying in next anytime pass).
+SBY 10:19:33 [tcim_core_safety_1of3] engine_0: 3 : 0 57 218 883 ~356                                                    2    89      2.61 sec  T/O =  1  PRV = 41
+SBY 10:19:33 [tcim_core_safety_1of3] engine_0: 3 : 0 57 223 888 ~356                                                    2    89      2.66 sec  T/O =  1  PRV = 41
+SBY 10:19:33 [tcim_core_safety_1of3] engine_0: Timing out on output 58 in frame 3 (retrying in next anytime pass).
+SBY 10:19:33 [tcim_core_safety_1of3] engine_0: 3 : 0 57 223 888 ~356                                                    0    89      2.67 sec  T/O =  2  PRV = 41
+SBY 10:19:36 [tcim_core_safety_1of3] engine_0: 4 : 0 57 223 463 504 ~356                                                3   139      5.73 sec  T/O =  2  PRV = 41
+SBY 10:19:37 [tcim_core_safety_1of3] engine_0: Timing out on output  9 in frame 4 (retrying in next anytime pass).
+SBY 10:19:37 [tcim_core_safety_1of3] engine_0: 4 : 0 57 223 463 531 ~356                                                2   163      6.14 sec  T/O =  3  PRV = 41
+SBY 10:19:37 [tcim_core_safety_1of3] engine_0: Timing out on output 17 in frame 4 (retrying in next anytime pass).
+SBY 10:19:37 [tcim_core_safety_1of3] engine_0: 4 : 0 57 223 481 547 ~356                                                3   196      6.54 sec  T/O =  4  PRV = 41
+SBY 10:19:37 [tcim_core_safety_1of3] engine_0: Timing out on output 18 in frame 4 (retrying in next anytime pass).
+SBY 10:19:38 [tcim_core_safety_1of3] engine_0: 4 : 0 57 223 503 566 ~356                                                5   206      6.95 sec  T/O =  5  PRV = 41
+SBY 10:19:38 [tcim_core_safety_1of3] engine_0: Timing out on output 19 in frame 4 (retrying in next anytime pass).
+SBY 10:19:38 [tcim_core_safety_1of3] engine_0: 4 : 0 57 223 545 607 ~356                                                4   235      7.73 sec  T/O =  6  PRV = 41
+SBY 10:19:38 [tcim_core_safety_1of3] engine_0: Timing out on output 49 in frame 4 (retrying in next anytime pass).
+SBY 10:19:38 [tcim_core_safety_1of3] engine_0: 4 : 0 57 223 545 607 ~356                                                0   235      7.73 sec  T/O =  7  PRV = 41
+SBY 10:19:40 [tcim_core_safety_1of3] engine_0: Proved output 7 in frame 4.
+SBY 10:19:42 [tcim_core_safety_1of3] engine_0: 5 : 0 57 223 544 274 268 ~430                                            4   241     11.38 sec  T/O =  7  PRV = 42
+SBY 10:19:42 [tcim_core_safety_1of3] engine_0: Timing out on output 16 in frame 5 (retrying in next anytime pass).
+SBY 10:19:42 [tcim_core_safety_1of3] engine_0: 5 : 0 57 223 544 275 269 ~430                                            2   241     11.41 sec  T/O =  8  PRV = 42
+SBY 10:19:42 [tcim_core_safety_1of3] engine_0: Timing out on output 44 in frame 5 (retrying in next anytime pass).
+SBY 10:19:43 [tcim_core_safety_1of3] engine_0: 5 : 0 57 223 544 285 274 ~430                                            7   242     11.81 sec  T/O =  9  PRV = 42
+SBY 10:19:43 [tcim_core_safety_1of3] engine_0: Timing out on output 50 in frame 5 (retrying in next anytime pass).
+SBY 10:19:43 [tcim_core_safety_1of3] engine_0: 5 : 0 57 223 544 285 274 ~430                                            0   242     11.81 sec  T/O = 10  PRV = 42
+SBY 10:19:45 [tcim_core_safety_1of3] engine_0: 6 : 0 57 223 544 283 48 280 ~427                                         3   272     14.18 sec  T/O = 10  PRV = 42
+SBY 10:19:45 [tcim_core_safety_1of3] engine_0: Timing out on output  8 in frame 6 (retrying in next anytime pass).
+SBY 10:19:45 [tcim_core_safety_1of3] engine_0: 6 : 0 57 223 544 283 48 280 ~427                                         0   272     14.18 sec  T/O = 11  PRV = 42
+SBY 10:19:47 [tcim_core_safety_1of3] engine_0: 7 : 0 57 223 544 283 48 100 152 ~455                                     0   272     16.22 sec  T/O = 11  PRV = 42
+SBY 10:19:48 [tcim_core_safety_1of3] engine_0: 8 : 0 57 223 544 283 48 100 26 146 ~455                                  2   279     17.71 sec  T/O = 11  PRV = 42
+SBY 10:19:48 [tcim_core_safety_1of3] engine_0: Timing out on output  6 in frame 8 (retrying in next anytime pass).
+SBY 10:19:49 [tcim_core_safety_1of3] engine_0: 8 : 0 57 223 544 283 48 100 32 154 ~455                                  3   284     17.79 sec  T/O = 12  PRV = 42
+SBY 10:19:49 [tcim_core_safety_1of3] engine_0: Proved output 2 in frame 8.
+SBY 10:19:50 [tcim_core_safety_1of3] engine_0: 9 : 0 57 223 544 283 48 100 28 21 131 ~468                               3   284     19.65 sec  T/O = 12  PRV = 43
+SBY 10:19:52 [tcim_core_safety_1of3] engine_0: 10 : 0 57 223 544 283 48 100 28 17 18 123 ~468                            3   284     21.39 sec  T/O = 12  PRV = 43
+SBY 10:19:54 [tcim_core_safety_1of3] engine_0: 11 : 0 57 223 546 283 49 101 30 19 19 54 107 ~468                        10   291     23.46 sec  T/O = 12  PRV = 43
+SBY 10:19:56 [tcim_core_safety_1of3] engine_0: 12 : 0 57 223 546 283 49 97 29 21 18 14 24 118 ~469                       5   291     25.23 sec  T/O = 12  PRV = 43
+SBY 10:19:58 [tcim_core_safety_1of3] engine_0: 13 : 0 57 223 546 283 49 97 29 21 18 14 14 47 85 ~470                     3   292     27.04 sec  T/O = 12  PRV = 43
+SBY 10:20:00 [tcim_core_safety_1of3] engine_0: 14 : 0 57 223 546 283 49 97 29 21 18 16 14 46 28 64 ~469                  7   292     28.76 sec  T/O = 12  PRV = 43
+SBY 10:20:00 [tcim_core_safety_1of3] engine_0: Timing out on output 45 in frame 14 (retrying in next anytime pass).
+SBY 10:20:00 [tcim_core_safety_1of3] engine_0: 14 : 0 57 223 546 283 49 97 29 21 18 16 14 46 32 64 ~469                  6   292     28.80 sec  T/O = 13  PRV = 43
+SBY 10:20:00 [tcim_core_safety_1of3] engine_0: Timing out on output 51 in frame 14 (retrying in next anytime pass).
+SBY 10:20:00 [tcim_core_safety_1of3] engine_0: 14 : 0 57 223 546 283 49 97 29 21 18 16 14 46 32 64 ~469                  0   292     28.81 sec  T/O = 14  PRV = 43
+SBY 10:20:01 [tcim_core_safety_1of3] engine_0: 15 : 0 57 223 546 283 49 97 29 20 16 14 13 43 18 16 63 ~469               0   292     30.42 sec  T/O = 14  PRV = 43
+SBY 10:20:03 [tcim_core_safety_1of3] engine_0: 16 : 0 57 223 546 283 49 97 29 20 16 14 13 42 18 16 7 58 ~469             2   300     32.05 sec  T/O = 14  PRV = 43
+SBY 10:20:05 [tcim_core_safety_1of3] engine_0: 17 : 0 57 223 546 283 49 97 29 20 16 14 13 42 18 16 6 7 42 ~481           2   301     33.91 sec  T/O = 14  PRV = 43
+SBY 10:20:06 [tcim_core_safety_1of3] engine_0: 18 : ... 57 223 546 283 49 97 29 20 16 14 13 42 18 16 6 6 8 41 ~479       3   305     35.58 sec  T/O = 14  PRV = 43
+SBY 10:20:08 [tcim_core_safety_1of3] engine_0: 19 : ... 223 546 283 49 97 29 20 16 14 13 42 18 16 6 6 4 4 37 ~481        0   305     37.64 sec  T/O = 14  PRV = 43
+SBY 10:20:10 [tcim_core_safety_1of3] engine_0: 20 : ... 223 546 283 49 97 29 20 16 14 13 42 18 16 6 6 4 4 8 40 ~481      4   305     39.31 sec  T/O = 14  PRV = 43
+SBY 10:20:12 [tcim_core_safety_1of3] engine_0: 21 : ... 546 283 49 97 29 20 16 14 13 42 18 16 6 6 4 4 4 8 35 ~483        3   305     41.22 sec  T/O = 14  PRV = 43
+SBY 10:20:14 [tcim_core_safety_1of3] engine_0: 22 : ... 546 283 49 97 29 20 16 14 13 42 18 16 6 6 4 4 4 5 7 33 ~484      2   305     43.37 sec  T/O = 14  PRV = 43
+SBY 10:20:16 [tcim_core_safety_1of3] engine_0: 23 : ... 283 49 97 29 20 16 14 13 42 18 16 6 6 4 4 4 5 4 7 32 ~487        2   305     45.29 sec  T/O = 14  PRV = 43
+SBY 10:20:18 [tcim_core_safety_1of3] engine_0: 24 : ... 283 49 97 29 20 16 14 13 42 18 16 6 6 4 4 4 5 4 4 8 28 ~488      4   305     46.93 sec  T/O = 14  PRV = 43
+SBY 10:20:20 [tcim_core_safety_1of3] engine_0: 25 : ... 49 97 29 20 16 14 13 42 18 16 6 6 4 4 4 5 4 4 5 8 29 ~489        4   305     48.75 sec  T/O = 14  PRV = 43
+SBY 10:20:22 [tcim_core_safety_1of3] engine_0: 26 : ... 49 97 29 20 16 14 13 42 18 16 6 6 4 4 4 5 4 4 5 5 8 25 ~491      2   305     50.77 sec  T/O = 14  PRV = 43
+SBY 10:20:24 [tcim_core_safety_1of3] engine_0: 27 : ... 97 29 20 16 14 13 42 18 16 6 6 4 4 4 5 4 4 5 5 4 6 22 ~495       3   305     52.78 sec  T/O = 14  PRV = 43
+SBY 10:20:25 [tcim_core_safety_1of3] engine_0: 28 : ... 29 20 16 14 13 42 18 16 6 6 4 4 4 5 4 4 5 5 4 4 6 19 ~497        4   305     54.59 sec  T/O = 14  PRV = 43
+SBY 10:20:27 [tcim_core_safety_1of3] engine_0: 29 : ... 29 20 16 14 13 42 18 16 6 6 4 4 4 5 4 4 5 5 4 4 3 8 22 ~497      3   308     56.29 sec  T/O = 14  PRV = 43
+SBY 10:20:29 [tcim_core_safety_1of3] engine_0: 30 : ... 20 16 14 13 42 18 16 6 6 4 4 4 5 4 4 5 5 4 4 3 4 8 19 ~498       2   310     57.96 sec  T/O = 14  PRV = 43
+SBY 10:20:30 [tcim_core_safety_1of3] engine_0: 31 : ... 16 14 13 42 18 16 6 6 4 4 4 5 4 4 5 5 4 4 3 4 5 8 16 ~500        3   310     59.63 sec  T/O = 14  PRV = 43
+SBY 10:20:32 [tcim_core_safety_1of3] engine_0: 32 : ... 16 14 13 42 18 16 6 6 4 4 4 5 4 4 5 5 4 4 3 4 5 5 7 16 ~501      3   310     61.30 sec  T/O = 14  PRV = 43
+SBY 10:20:34 [tcim_core_safety_1of3] engine_0: 33 : ... 14 13 42 18 16 6 6 4 4 4 5 4 4 5 5 4 4 3 4 5 5 4 7 10 ~503       5   310     63.02 sec  T/O = 14  PRV = 43
+SBY 10:20:34 [tcim_core_safety_1of3] engine_0: Timing out on output 12 in frame 33 (retrying in next anytime pass).
+SBY 10:20:34 [tcim_core_safety_1of3] engine_0: 33 : ... 14 13 42 18 16 6 6 4 4 4 5 4 4 5 5 4 4 3 4 5 5 4 7 10 ~503       0   310     63.02 sec  T/O = 15  PRV = 43
+SBY 10:20:36 [tcim_core_safety_1of3] engine_0: 34 : ... 14 13 42 18 16 6 6 4 4 4 5 4 4 5 5 4 4 3 4 5 5 4 6 7 8 ~503      4   310     64.93 sec  T/O = 15  PRV = 43
+SBY 10:20:36 [tcim_core_safety_1of3] engine_0: Timing out on output 52 in frame 34 (retrying in next anytime pass).
+SBY 10:20:36 [tcim_core_safety_1of3] engine_0: 34 : ... 14 13 42 18 16 6 6 4 4 4 5 4 4 5 5 4 4 3 4 5 5 4 6 7 8 ~503      0   310     64.94 sec  T/O = 16  PRV = 43
+SBY 10:20:38 [tcim_core_safety_1of3] engine_0: 35 : ... 13 42 19 19 9 6 4 4 4 5 4 4 5 6 5 7 4 5 6 8 5 7 5 7 5 ~503      38   311     66.98 sec  T/O = 16  PRV = 43
+SBY 10:20:38 [tcim_core_safety_1of3] engine_0: Timing out on output 48 in frame 35 (retrying in next anytime pass).
+SBY 10:20:38 [tcim_core_safety_1of3] engine_0: 35 : ... 13 42 19 19 9 6 4 4 4 5 4 4 5 6 5 7 4 5 6 8 5 7 5 7 5 ~503       0   311     66.98 sec  T/O = 17  PRV = 43
+SBY 10:20:40 [tcim_core_safety_1of3] engine_0: 36 : ... 42 17 17 6 6 4 4 4 5 4 4 5 5 4 4 3 4 4 4 4 6 6 8 10 10 ~503     12   311     68.79 sec  T/O = 17  PRV = 43
+SBY 10:20:41 [tcim_core_safety_1of3] engine_0: 37 : ... 42 17 17 6 6 4 4 4 5 4 4 5 5 4 4 3 4 4 4 4 5 5 5 6 4 2 ~506      0   311     70.53 sec  T/O = 17  PRV = 43
+SBY 10:20:43 [tcim_core_safety_1of3] engine_0: 38 : ... 17 17 6 6 4 4 4 5 4 4 5 5 4 4 3 4 4 4 4 5 5 5 8 6 7 4 ~506       7   311     72.58 sec  T/O = 17  PRV = 43
+SBY 10:20:45 [tcim_core_safety_1of3] engine_0: 39 : ... 17 6 6 4 4 4 5 4 4 5 5 4 4 3 4 4 4 4 5 5 5 6 4 3 5 3 ~508        2   311     74.37 sec  T/O = 17  PRV = 43
+SBY 10:20:47 [tcim_core_safety_1of3] engine_0: 40 : ... 4 4 5 4 4 5 5 4 4 3 4 4 4 4 5 5 5 6 4 3 3 5 -2 ~509      0   311     76.06 sec  T/O = 17  PRV = 43
+SBY 10:20:49 [tcim_core_safety_1of3] engine_0: 41 : ... 6 6 4 4 4 5 4 4 5 5 4 4 3 4 4 4 4 5 5 5 6 4 3 3 6 9 4 ~509       7   311     77.84 sec  T/O = 17  PRV = 43
+SBY 10:20:49 [tcim_core_safety_1of3] engine_0: Timing out on output 13 in frame 41 (retrying in next anytime pass).
+SBY 10:20:49 [tcim_core_safety_1of3] engine_0: 41 : ... 6 6 4 4 4 5 4 4 5 5 4 4 3 4 4 4 4 5 5 5 6 4 3 3 6 9 4 ~509       0   311     77.84 sec  T/O = 18  PRV = 43
+SBY 10:20:51 [tcim_core_safety_1of3] engine_0: 42 : ... 6 4 4 4 5 4 4 5 5 4 4 3 4 4 4 4 5 5 5 6 4 3 3 3 3 3 0 ~513       0   311     79.75 sec  T/O = 18  PRV = 43
+SBY 10:20:52 [tcim_core_safety_1of3] engine_0: 43 : ... 4 4 5 5 4 4 3 4 4 4 4 5 5 5 6 4 3 3 3 3 3 2 -2 ~513      0   311     81.64 sec  T/O = 18  PRV = 43
+SBY 10:20:54 [tcim_core_safety_1of3] engine_0: 44 : ... 4 5 5 4 4 3 4 4 4 4 5 5 5 6 4 3 3 3 3 3 2 1 -3 ~513      0   311     83.28 sec  T/O = 18  PRV = 43
+SBY 10:20:56 [tcim_core_safety_1of3] engine_0: 45 : ... 4 4 5 4 4 5 5 4 4 3 4 4 4 4 5 5 5 6 4 3 3 3 3 3 2 1 2 -1 ~513      3   313     85.00 sec  T/O = 18  PRV = 43
+SBY 10:20:57 [tcim_core_safety_1of3] engine_0: 46 : ... 5 4 4 3 4 4 4 4 5 5 5 6 4 3 3 3 3 3 2 1 1 1 -4 ~514      0   313     86.70 sec  T/O = 18  PRV = 43
+SBY 10:20:59 [tcim_core_safety_1of3] engine_0: 47 : ... 4 4 3 4 4 4 4 5 5 5 6 4 3 3 3 3 3 2 1 1 1 4 -3 ~514      3   313     88.23 sec  T/O = 18  PRV = 43
+SBY 10:21:01 [tcim_core_safety_1of3] engine_0: 48 : ... 4 3 4 4 4 4 5 5 5 6 4 3 3 3 3 3 2 1 1 1 1 1 -3 ~513      0   313     89.85 sec  T/O = 18  PRV = 43
+SBY 10:21:03 [tcim_core_safety_1of3] engine_0: 49 : ... 3 4 4 4 4 5 5 5 6 4 3 3 3 3 3 2 1 3 6 7 5 4 -2 ~513     12   313     92.04 sec  T/O = 18  PRV = 43
+SBY 10:21:05 [tcim_core_safety_1of3] engine_0: 50 : ... 5 5 4 4 3 4 4 4 4 5 5 5 6 4 3 3 3 3 3 2 1 2 2 1 1 1 1 -1 ~514      0   313     93.75 sec  T/O = 18  PRV = 43
+SBY 10:21:06 [tcim_core_safety_1of3] engine_0: 51 : ... 4 4 4 5 5 5 6 4 3 3 3 3 3 2 1 2 2 1 1 1 1 1 -2 ~514      0   313     94.96 sec  T/O = 18  PRV = 43
+SBY 10:21:07 [tcim_core_safety_1of3] engine_0: 52 : ... 4 4 5 5 5 6 4 3 3 3 3 3 2 1 2 2 1 1 1 1 1 1 -3 ~514      0   313     96.08 sec  T/O = 18  PRV = 43
+SBY 10:21:08 [tcim_core_safety_1of3] engine_0: 53 : ... 4 5 5 5 6 4 3 3 3 3 3 2 1 2 2 1 1 1 1 1 1 1 -4 ~514      0   313     97.10 sec  T/O = 18  PRV = 43
+SBY 10:21:09 [tcim_core_safety_1of3] engine_0: 54 : ... 5 5 5 6 4 3 3 3 3 3 2 1 2 2 1 1 1 1 1 1 1 4 -3 ~514      3   313     98.35 sec  T/O = 18  PRV = 43
+SBY 10:21:10 [tcim_core_safety_1of3] engine_0: 55 : ... 5 5 6 4 3 3 3 3 3 2 1 2 2 1 1 1 1 1 1 1 1 1 -3 ~514      0   313     99.48 sec  T/O = 18  PRV = 43
+SBY 10:21:12 [tcim_core_safety_1of3] engine_0: 56 : ... 5 6 4 3 3 3 3 4 6 9 6 5 2 1 1 2 1 2 3 3 4 3 -5 ~514     35   313    101.16 sec  T/O = 18  PRV = 43
+SBY 10:21:12 [tcim_core_safety_1of3] engine_0: Timing out on output 11 in frame 56 (retrying in next anytime pass).
+SBY 10:21:12 [tcim_core_safety_1of3] engine_0: 56 : ... 5 6 4 3 3 3 3 4 6 9 6 5 2 1 1 2 1 2 3 3 4 3 -5 ~514      0   313    101.17 sec  T/O = 19  PRV = 43
+SBY 10:21:13 [tcim_core_safety_1of3] engine_0: 57 : ... 6 4 3 3 3 2 2 5 3 3 1 1 1 1 1 1 1 1 1 1 1 2 -6 ~514      0   313    102.59 sec  T/O = 19  PRV = 43
+SBY 10:21:13 [tcim_core_safety_1of3] engine_0: All outputs solved or timed out in frame 57.
+SBY 10:21:13 [tcim_core_safety_1of3] engine_0: Starting new anytime pass, reusing clauses.
+SBY 10:21:13 [tcim_core_safety_1of3] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 10:21:15 [tcim_core_safety_1of3] engine_0: 1 : 0 1553 ~514                                                          0     0      1.61 sec  T/O =  0  PRV = 43
+SBY 10:21:15 [tcim_core_safety_1of3] engine_0: 2 : 0 57 1496 ~514                                                       0     0      1.66 sec  T/O =  0  PRV = 43
+SBY 10:21:16 [tcim_core_safety_1of3] engine_0: 3 : 0 57 261 1313 ~514                                                   2    71      2.19 sec  T/O =  0  PRV = 43
+SBY 10:21:18 [tcim_core_safety_1of3] engine_0: 4 : 0 57 261 576 796 ~514                                                2   100      4.61 sec  T/O =  0  PRV = 43
+SBY 10:21:19 [tcim_core_safety_1of3] engine_0: 4 : 0 57 261 608 880 ~514                                                3   167      5.34 sec  T/O =  0  PRV = 43
+SBY 10:21:19 [tcim_core_safety_1of3] engine_0: 4 : 0 57 261 608 930 ~514                                                2   180      5.63 sec  T/O =  0  PRV = 43
+SBY 10:21:19 [tcim_core_safety_1of3] engine_0: 4 : 0 57 261 608 939 ~514                                                2   183      5.71 sec  T/O =  0  PRV = 43
+SBY 10:21:19 [tcim_core_safety_1of3] engine_0: Timing out on output 17 in frame 4 (retrying in next anytime pass).
+SBY 10:21:20 [tcim_core_safety_1of3] engine_0: 4 : 0 57 261 641 972 ~514                                                3   217      6.14 sec  T/O =  1  PRV = 43
+SBY 10:21:20 [tcim_core_safety_1of3] engine_0: 4 : 0 57 261 694 1023 ~514                                               4   253      6.82 sec  T/O =  1  PRV = 43
+SBY 10:21:21 [tcim_core_safety_1of3] engine_0: 4 : 0 57 261 712 1041 ~514                                               5   256      7.08 sec  T/O =  1  PRV = 43
+SBY 10:21:21 [tcim_core_safety_1of3] engine_0: Timing out on output 19 in frame 4 (retrying in next anytime pass).
+SBY 10:21:21 [tcim_core_safety_1of3] engine_0: 4 : 0 57 261 744 1073 ~514                                               4   279      7.89 sec  T/O =  2  PRV = 43
+SBY 10:21:21 [tcim_core_safety_1of3] engine_0: Timing out on output 49 in frame 4 (retrying in next anytime pass).
+SBY 10:21:21 [tcim_core_safety_1of3] engine_0: 4 : 0 57 261 755 1085 ~514                                               2   279      8.04 sec  T/O =  3  PRV = 43
+SBY 10:21:26 [tcim_core_safety_1of3] engine_0: 5 : 0 57 261 753 462 439 ~684                                            3   279     12.77 sec  T/O =  3  PRV = 43
+SBY 10:21:26 [tcim_core_safety_1of3] engine_0: Timing out on output  3 in frame 5 (retrying in next anytime pass).
+SBY 10:21:27 [tcim_core_safety_1of3] engine_0: 5 : 0 57 261 758 492 478 ~684                                            5   290     13.61 sec  T/O =  4  PRV = 43
+SBY 10:21:27 [tcim_core_safety_1of3] engine_0: Timing out on output 18 in frame 5 (retrying in next anytime pass).
+SBY 10:21:28 [tcim_core_safety_1of3] engine_0: 5 : 0 57 261 758 537 524 ~684                                            6   302     14.70 sec  T/O =  5  PRV = 43
+SBY 10:21:28 [tcim_core_safety_1of3] engine_0: Timing out on output 50 in frame 5 (retrying in next anytime pass).
+SBY 10:21:28 [tcim_core_safety_1of3] engine_0: 5 : 0 57 261 758 569 557 ~684                                            2   304     15.00 sec  T/O =  6  PRV = 43
+SBY 10:21:29 [tcim_core_safety_1of3] engine_0: 5 : 0 57 261 758 586 575 ~684                                            2   308     15.11 sec  T/O =  6  PRV = 43
+SBY 10:21:30 [tcim_core_safety_1of3] engine_0: Proved output 9 in frame 5.
+SBY 10:21:32 [tcim_core_safety_1of3] engine_0: 6 : 0 57 261 756 547 133 436 ~736                                        3   343     18.44 sec  T/O =  6  PRV = 44
+SBY 10:21:32 [tcim_core_safety_1of3] engine_0: 6 : 0 57 261 756 547 133 486 ~736                                        3   371     18.73 sec  T/O =  6  PRV = 44
+SBY 10:21:33 [tcim_core_safety_1of3] engine_0: 6 : 0 57 261 756 547 141 515 ~736                                        4   375     19.07 sec  T/O =  6  PRV = 44
+SBY 10:21:33 [tcim_core_safety_1of3] engine_0: Timing out on output 16 in frame 6 (retrying in next anytime pass).
+SBY 10:21:33 [tcim_core_safety_1of3] engine_0: 6 : 0 57 261 756 547 162 554 ~736                                        4   376     19.41 sec  T/O =  7  PRV = 44
+SBY 10:21:33 [tcim_core_safety_1of3] engine_0: 6 : 0 57 261 756 547 174 567 ~736                                        2   376     19.58 sec  T/O =  7  PRV = 44
+SBY 10:21:33 [tcim_core_safety_1of3] engine_0: Timing out on output 44 in frame 6 (retrying in next anytime pass).
+SBY 10:21:33 [tcim_core_safety_1of3] engine_0: 6 : 0 57 261 756 547 174 601 ~736                                        2   376     19.72 sec  T/O =  8  PRV = 44
+SBY 10:21:33 [tcim_core_safety_1of3] engine_0: Timing out on output 58 in frame 6 (retrying in next anytime pass).
+SBY 10:21:33 [tcim_core_safety_1of3] engine_0: 6 : 0 57 261 756 547 174 601 ~736                                        0   376     19.72 sec  T/O =  9  PRV = 44
+SBY 10:21:36 [tcim_core_safety_1of3] engine_0: 7 : 0 57 261 756 547 156 193 321 ~832                                    0   376     22.84 sec  T/O =  9  PRV = 44
+SBY 10:21:38 [tcim_core_safety_1of3] engine_0: 8 : 0 57 261 756 547 156 192 74 293 ~832                                 2   394     24.73 sec  T/O =  9  PRV = 44
+SBY 10:21:38 [tcim_core_safety_1of3] engine_0: Timing out on output  8 in frame 8 (retrying in next anytime pass).
+SBY 10:21:38 [tcim_core_safety_1of3] engine_0: 8 : 0 57 261 756 547 156 192 74 293 ~832                                 0   394     24.73 sec  T/O = 10  PRV = 44
+SBY 10:21:39 [tcim_core_safety_1of3] engine_0: Proved output 6 in frame 8.
+SBY 10:21:41 [tcim_core_safety_1of3] engine_0: 9 : 0 57 261 756 547 156 192 73 17 253 ~855                              0   394     27.15 sec  T/O = 10  PRV = 45
+SBY 10:21:42 [tcim_core_safety_1of3] engine_0: 10 : 0 57 261 756 547 156 192 73 17 11 242 ~855                           0   394     28.46 sec  T/O = 10  PRV = 45
+SBY 10:21:44 [tcim_core_safety_1of3] engine_0: 11 : 0 57 261 756 547 156 192 73 17 11 14 228 ~855                        0   394     30.06 sec  T/O = 10  PRV = 45
+SBY 10:21:45 [tcim_core_safety_1of3] engine_0: 12 : 0 57 261 756 547 156 192 73 17 11 14 12 216 ~855                     0   394     31.44 sec  T/O = 10  PRV = 45
+SBY 10:21:47 [tcim_core_safety_1of3] engine_0: 13 : 0 57 261 756 547 156 192 73 17 11 14 12 33 183 ~855                  0   394     33.26 sec  T/O = 10  PRV = 45
+SBY 10:21:49 [tcim_core_safety_1of3] engine_0: 14 : 0 57 261 756 547 156 192 73 17 11 14 12 33 46 178 ~855               6   400     35.09 sec  T/O = 10  PRV = 45
+SBY 10:21:51 [tcim_core_safety_1of3] engine_0: 15 : 0 57 262 756 547 157 193 75 18 14 19 16 38 35 38 156 ~855           19   405     37.54 sec  T/O = 10  PRV = 45
+SBY 10:21:51 [tcim_core_safety_1of3] engine_0: 15 : 0 57 262 756 547 157 193 75 18 14 20 17 39 35 42 165 ~855           13   406     37.65 sec  T/O = 10  PRV = 45
+SBY 10:21:53 [tcim_core_safety_1of3] engine_0: 16 : ... 57 261 756 547 157 192 57 23 16 16 13 14 10 29 48 175 ~855       4   406     39.49 sec  T/O = 10  PRV = 45
+SBY 10:21:55 [tcim_core_safety_1of3] engine_0: 17 : ... 261 756 547 157 192 57 23 16 16 13 14 10 29 45 26 158 ~860       3   406     41.97 sec  T/O = 10  PRV = 45
+SBY 10:21:57 [tcim_core_safety_1of3] engine_0: 18 : ... 756 547 157 192 57 23 16 16 13 14 10 29 33 10 59 133 ~859        3   407     43.95 sec  T/O = 10  PRV = 45
+SBY 10:22:00 [tcim_core_safety_1of3] engine_0: 19 : ... 547 157 192 57 23 16 17 14 15 10 30 36 11 62 51 147 ~859        24   408     46.19 sec  T/O = 10  PRV = 45
+SBY 10:22:00 [tcim_core_safety_1of3] engine_0: 19 : ... 547 157 192 57 23 16 17 14 15 10 30 36 11 62 56 154 ~859         3   408     46.22 sec  T/O = 10  PRV = 45
+SBY 10:22:02 [tcim_core_safety_1of3] engine_0: 20 : ... 547 157 192 57 23 16 16 14 14 10 9 36 18 49 30 40 145 ~859       3   408     48.06 sec  T/O = 10  PRV = 45
+SBY 10:22:02 [tcim_core_safety_1of3] engine_0: Timing out on output 51 in frame 20 (retrying in next anytime pass).
+SBY 10:22:02 [tcim_core_safety_1of3] engine_0: 20 : ... 547 157 192 57 23 16 16 14 14 10 9 36 18 49 30 40 145 ~859       0   408     48.06 sec  T/O = 11  PRV = 45
+SBY 10:22:04 [tcim_core_safety_1of3] engine_0: 21 : ... 157 192 57 23 16 16 15 15 10 10 37 20 53 34 34 26 136 ~859      25   409     50.12 sec  T/O = 11  PRV = 45
+SBY 10:22:04 [tcim_core_safety_1of3] engine_0: 21 : ... 157 192 57 23 16 16 15 15 10 10 37 20 53 34 34 26 137 ~859       0   409     50.12 sec  T/O = 11  PRV = 45
+SBY 10:22:05 [tcim_core_safety_1of3] engine_0: 22 : ... 157 192 57 23 16 16 14 15 10 9 15 28 18 9 7 7 47 150 ~859        0   409     52.00 sec  T/O = 11  PRV = 45
+SBY 10:22:07 [tcim_core_safety_1of3] engine_0: 23 : ... 192 57 23 16 16 14 15 10 9 15 28 18 9 7 7 34 36 114 ~859         0   409     53.73 sec  T/O = 11  PRV = 45
+SBY 10:22:09 [tcim_core_safety_1of3] engine_0: 24 : ... 192 57 23 16 16 14 15 10 9 15 28 18 9 7 7 29 36 7 107 ~859       0   409     55.63 sec  T/O = 11  PRV = 45
+SBY 10:22:11 [tcim_core_safety_1of3] engine_0: 25 : ... 57 23 16 16 14 15 10 9 15 28 18 9 7 7 29 36 7 17 90 ~859         0   409     57.37 sec  T/O = 11  PRV = 45
+SBY 10:22:12 [tcim_core_safety_1of3] engine_0: 26 : ... 57 23 16 16 14 15 10 9 15 28 18 9 7 7 29 36 7 18 14 80 ~859      4   409     59.04 sec  T/O = 11  PRV = 45
+SBY 10:22:14 [tcim_core_safety_1of3] engine_0: 27 : ... 57 23 16 16 14 15 10 9 15 28 18 9 7 7 29 36 7 6 5 5 94 ~859      0   409     60.66 sec  T/O = 11  PRV = 45
+SBY 10:22:16 [tcim_core_safety_1of3] engine_0: 28 : ... 23 16 16 14 15 10 9 15 28 18 9 7 7 29 36 7 6 5 5 15 79 ~859      0   409     62.38 sec  T/O = 11  PRV = 45
+SBY 10:22:17 [tcim_core_safety_1of3] engine_0: 29 : ... 16 16 14 15 10 9 15 28 18 9 7 7 29 36 8 6 5 6 16 14 67 ~859      9   409     64.05 sec  T/O = 11  PRV = 45
+SBY 10:22:17 [tcim_core_safety_1of3] engine_0: Timing out on output 45 in frame 29 (retrying in next anytime pass).
+SBY 10:22:17 [tcim_core_safety_1of3] engine_0: 29 : ... 16 16 14 15 10 9 15 28 18 9 7 7 29 36 8 6 5 6 16 14 67 ~859      0   409     64.05 sec  T/O = 12  PRV = 45
+SBY 10:22:19 [tcim_core_safety_1of3] engine_0: 30 : ... 16 14 15 10 9 15 28 18 9 7 7 29 36 8 6 5 5 4 5 16 71 ~859        0   409     65.84 sec  T/O = 12  PRV = 45
+SBY 10:22:21 [tcim_core_safety_1of3] engine_0: 31 : ... 14 15 10 9 15 28 18 9 7 7 29 36 8 6 5 5 4 5 16 13 58 ~859        0   409     67.57 sec  T/O = 12  PRV = 45
+SBY 10:22:23 [tcim_core_safety_1of3] engine_0: 32 : ... 14 15 10 9 15 28 18 9 7 7 29 36 8 6 5 5 4 5 16 13 4 54 ~859      0   409     69.62 sec  T/O = 12  PRV = 45
+SBY 10:22:25 [tcim_core_safety_1of3] engine_0: 33 : ... 15 10 9 15 28 18 9 7 7 29 36 8 6 5 5 4 5 16 13 4 5 49 ~859       0   409     71.40 sec  T/O = 12  PRV = 45
+SBY 10:22:27 [tcim_core_safety_1of3] engine_0: 34 : ... 10 9 15 28 18 9 7 7 29 36 8 6 5 5 4 5 16 13 4 5 6 47 ~859        2   411     73.33 sec  T/O = 12  PRV = 45
+SBY 10:22:29 [tcim_core_safety_1of3] engine_0: 35 : ... 10 9 15 28 18 9 7 7 29 36 8 6 5 5 4 5 16 13 4 5 4 5 41 ~861      0   411     75.42 sec  T/O = 12  PRV = 45
+SBY 10:22:30 [tcim_core_safety_1of3] engine_0: 36 : ... 9 15 28 18 9 7 7 29 36 8 6 5 5 4 5 16 13 4 5 4 7 11 42 ~861      6   413     77.04 sec  T/O = 12  PRV = 45
+SBY 10:22:32 [tcim_core_safety_1of3] engine_0: 37 : ... 15 28 18 9 7 7 29 36 8 6 5 5 4 5 16 13 4 5 4 5 6 6 38 ~862       2   413     78.88 sec  T/O = 12  PRV = 45
+SBY 10:22:34 [tcim_core_safety_1of3] engine_0: 38 : ... 28 18 9 7 7 29 36 8 6 5 5 4 5 16 13 4 5 4 5 6 5 6 35 ~863        2   413     80.90 sec  T/O = 12  PRV = 45
+SBY 10:22:36 [tcim_core_safety_1of3] engine_0: 39 : ... 28 18 9 7 7 29 36 8 6 5 5 4 5 16 13 4 5 4 5 6 5 4 4 30 ~865      0   413     82.68 sec  T/O = 12  PRV = 45
+SBY 10:22:38 [tcim_core_safety_1of3] engine_0: 40 : ... 18 9 7 7 29 36 8 6 5 5 4 5 16 13 4 5 4 5 6 5 4 4 9 30 ~865       4   413     84.80 sec  T/O = 12  PRV = 45
+SBY 10:22:41 [tcim_core_safety_1of3] engine_0: 41 : ... 9 7 7 29 36 11 9 6 8 7 9 21 15 5 5 6 6 7 5 4 5 5 7 25 ~866      31   413     87.32 sec  T/O = 12  PRV = 45
+SBY 10:22:41 [tcim_core_safety_1of3] engine_0: 41 : ... 7 29 36 11 11 6 8 7 9 22 18 10 7 10 8 11 8 5 6 5 7 25 ~866      31   413     87.46 sec  T/O = 12  PRV = 45
+SBY 10:22:41 [tcim_core_safety_1of3] engine_0: 41 : ... 30 37 12 15 7 8 7 10 23 21 15 10 12 10 11 8 6 6 5 7 25 ~866     51   413     87.68 sec  T/O = 12  PRV = 45
+SBY 10:22:41 [tcim_core_safety_1of3] engine_0: 41 : ... 37 12 15 8 9 8 12 24 21 15 11 13 14 14 11 8 6 5 7 25 ~866       39   413     87.79 sec  T/O = 12  PRV = 45
+SBY 10:22:41 [tcim_core_safety_1of3] engine_0: Timing out on output 48 in frame 41 (retrying in next anytime pass).
+SBY 10:22:41 [tcim_core_safety_1of3] engine_0: 41 : ... 37 12 15 8 9 8 12 24 21 15 11 13 14 14 11 8 6 5 7 27 ~866        2   413     87.80 sec  T/O = 13  PRV = 45
+SBY 10:22:43 [tcim_core_safety_1of3] engine_0: 42 : ... 9 7 28 26 10 5 4 10 4 6 7 7 6 18 14 5 7 5 4 5 5 4 7 38 ~867      2   413     89.92 sec  T/O = 13  PRV = 45
+SBY 10:22:46 [tcim_core_safety_1of3] engine_0: 43 : ... 28 26 10 5 4 10 4 6 7 7 6 18 14 5 7 5 4 5 4 4 4 10 29 ~872       2   423     92.18 sec  T/O = 13  PRV = 45
+SBY 10:22:46 [tcim_core_safety_1of3] engine_0: Proved output 12 in frame 43.
+SBY 10:22:48 [tcim_core_safety_1of3] engine_0: 44 : ... 28 26 10 5 4 10 4 6 7 7 6 18 14 5 7 5 4 5 4 4 4 6 9 27 ~873      3   426     94.53 sec  T/O = 13  PRV = 46
+SBY 10:22:50 [tcim_core_safety_1of3] engine_0: 45 : ... 26 10 5 4 10 4 6 7 7 6 18 14 5 7 5 4 5 4 4 4 6 4 6 15 ~880       0   426     96.45 sec  T/O = 13  PRV = 46
+SBY 10:22:52 [tcim_core_safety_1of3] engine_0: 46 : ... 10 5 4 10 4 6 7 7 6 18 14 5 7 5 4 5 4 4 4 6 4 6 8 14 ~880        3   426     98.35 sec  T/O = 13  PRV = 46
+SBY 10:22:54 [tcim_core_safety_1of3] engine_0: 47 : ... 10 5 4 10 4 6 7 7 6 18 14 5 7 5 4 5 4 4 4 6 4 6 4 5 7 ~883       0   426    100.42 sec  T/O = 13  PRV = 46
+SBY 10:22:56 [tcim_core_safety_1of3] engine_0: 48 : ... 5 4 10 4 6 7 7 6 18 14 5 7 5 4 5 4 4 4 6 4 6 4 5 9 14 ~883       4   428    102.64 sec  T/O = 13  PRV = 46
+SBY 10:22:58 [tcim_core_safety_1of3] engine_0: 49 : ... 5 4 10 4 6 7 7 6 18 14 5 7 5 4 5 4 4 4 6 4 6 4 5 3 3 6 ~888      0   428    104.65 sec  T/O = 13  PRV = 46
+SBY 10:23:00 [tcim_core_safety_1of3] engine_0: 50 : ... 4 10 4 6 7 7 6 18 14 5 7 5 4 5 4 4 4 6 4 6 4 5 3 3 6 7 ~888      3   428    106.41 sec  T/O = 13  PRV = 46
+SBY 10:23:02 [tcim_core_safety_1of3] engine_0: 51 : ... 10 4 6 7 7 6 18 14 5 7 5 4 5 4 4 4 6 4 6 4 5 3 3 2 2 3 ~891      0   428    108.26 sec  T/O = 13  PRV = 46
+SBY 10:23:04 [tcim_core_safety_1of3] engine_0: 52 : ... 4 6 7 7 6 18 14 5 7 5 4 5 4 4 4 6 4 6 4 5 3 3 2 2 7 8 ~891       4   428    110.05 sec  T/O = 13  PRV = 46
+SBY 10:23:05 [tcim_core_safety_1of3] engine_0: 53 : ... 6 7 7 6 18 14 5 7 5 4 5 4 4 4 6 4 6 4 5 3 3 2 2 2 3 4 ~894       2   428    111.86 sec  T/O = 13  PRV = 46
+SBY 10:23:07 [tcim_core_safety_1of3] engine_0: 54 : ... 7 7 6 18 14 5 7 5 4 5 4 4 4 6 4 6 4 5 3 3 2 2 2 2 5 4 ~895       2   428    113.88 sec  T/O = 13  PRV = 46
+SBY 10:23:09 [tcim_core_safety_1of3] engine_0: 55 : ... 7 6 18 14 5 7 5 4 5 4 4 4 6 4 6 4 5 3 3 2 2 2 2 2 4 6 ~898       3   429    115.87 sec  T/O = 13  PRV = 46
+SBY 10:23:11 [tcim_core_safety_1of3] engine_0: 56 : ... 6 18 14 5 7 5 4 5 4 4 4 6 4 6 4 5 3 3 2 2 2 2 2 2 5 4 ~901       3   429    117.77 sec  T/O = 13  PRV = 46
+SBY 10:23:13 [tcim_core_safety_1of3] engine_0: 57 : ... 18 14 5 7 5 4 5 4 4 4 6 4 6 4 5 3 3 2 2 2 2 2 2 2 4 2 ~903       3   429    120.00 sec  T/O = 13  PRV = 46
+SBY 10:23:16 [tcim_core_safety_1of3] engine_0: 58 : ... 14 5 7 5 4 5 4 4 4 6 4 6 4 5 3 3 2 2 2 2 2 2 2 2 4 2 ~904        2   429    122.07 sec  T/O = 13  PRV = 46
+SBY 10:23:18 [tcim_core_safety_1of3] engine_0: 59 : ... 14 5 7 5 4 5 4 4 4 6 4 6 4 5 3 3 2 2 2 2 2 2 2 2 2 4 2 ~906      3   429    124.31 sec  T/O = 13  PRV = 46
+SBY 10:23:20 [tcim_core_safety_1of3] engine_0: 60 : ... 5 7 5 4 5 4 4 4 6 4 6 4 5 3 3 2 2 2 2 2 2 2 2 2 2 5 1 ~908       4   429    126.15 sec  T/O = 13  PRV = 46
+SBY 10:23:22 [tcim_core_safety_1of3] engine_0: 61 : ... 7 5 4 5 4 4 4 6 4 6 4 5 3 3 2 2 2 2 2 2 2 2 2 2 2 5 2 ~909       3   429    128.29 sec  T/O = 13  PRV = 46
+SBY 10:23:24 [tcim_core_safety_1of3] engine_0: 62 : ... 5 4 5 4 4 4 6 4 6 4 5 3 3 2 2 2 2 2 2 2 2 2 2 2 2 4 1 ~911       2   429    130.17 sec  T/O = 13  PRV = 46
+SBY 10:23:26 [tcim_core_safety_1of3] engine_0: 63 : ... 4 5 4 4 4 6 4 6 4 5 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 4 3 ~913       3   429    132.33 sec  T/O = 13  PRV = 46
+SBY 10:23:28 [tcim_core_safety_1of3] engine_0: 64 : ... 5 4 4 4 6 4 6 4 5 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 5 2 ~916       3   429    134.26 sec  T/O = 13  PRV = 46
+SBY 10:23:30 [tcim_core_safety_1of3] engine_0: 65 : ... 4 4 4 6 4 6 4 5 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 4 0 ~918       3   429    136.23 sec  T/O = 13  PRV = 46
+SBY 10:23:31 [tcim_core_safety_1of3] engine_0: 66 : ... 4 4 6 4 6 4 5 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 4 0 ~919       2   429    138.06 sec  T/O = 13  PRV = 46
+SBY 10:23:33 [tcim_core_safety_1of3] engine_0: 67 : ... 4 6 4 6 4 5 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 4 0 ~921       3   429    140.01 sec  T/O = 13  PRV = 46
+SBY 10:23:35 [tcim_core_safety_1of3] engine_0: 68 : ... 6 4 6 4 5 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 7 3 ~923       4   429    142.03 sec  T/O = 13  PRV = 46
+SBY 10:23:37 [tcim_core_safety_1of3] engine_0: 69 : ... 4 6 4 5 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 5 3 ~924       3   429    143.96 sec  T/O = 13  PRV = 46
+SBY 10:23:39 [tcim_core_safety_1of3] engine_0: 70 : ... 6 4 5 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 4 2 ~926       2   429    145.73 sec  T/O = 13  PRV = 46
+SBY 10:23:41 [tcim_core_safety_1of3] engine_0: 71 : ... 4 5 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 7 5 ~928       3   430    147.87 sec  T/O = 13  PRV = 46
+SBY 10:23:44 [tcim_core_safety_1of3] engine_0: 72 : ... 5 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 4 3 ~931       3   430    150.07 sec  T/O = 13  PRV = 46
+SBY 10:23:45 [tcim_core_safety_1of3] engine_0: 73 : ... 3 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 5 3 ~932       3   430    151.94 sec  T/O = 13  PRV = 46
+SBY 10:23:47 [tcim_core_safety_1of3] engine_0: 74 : ... 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 4 2 ~934       2   430    153.72 sec  T/O = 13  PRV = 46
+SBY 10:23:49 [tcim_core_safety_1of3] engine_0: 75 : ... 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 5 0 ~939       4   430    155.69 sec  T/O = 13  PRV = 46
+SBY 10:23:49 [tcim_core_safety_1of3] engine_0: Proved output 52 in frame 75.
+SBY 10:23:51 [tcim_core_safety_1of3] engine_0: 76 : ... 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 -5 ~945      0   430    157.60 sec  T/O = 13  PRV = 47
+SBY 10:23:51 [tcim_core_safety_1of3] engine_0: Proved output 11 in frame 62 (converged).
+SBY 10:23:51 [tcim_core_safety_1of3] engine_0: Proved output 13 in frame 62 (converged).
+SBY 10:23:51 [tcim_core_safety_1of3] engine_0: Starting new anytime pass, reusing clauses.
+SBY 10:23:51 [tcim_core_safety_1of3] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 10:23:55 [tcim_core_safety_1of3] engine_0: 1 : 0 2094 ~948                                                          0     0      3.79 sec  T/O =  0  PRV = 49
+SBY 10:23:55 [tcim_core_safety_1of3] engine_0: 2 : 0 53 2041 ~948                                                       0     0      3.83 sec  T/O =  0  PRV = 49
+SBY 10:23:55 [tcim_core_safety_1of3] engine_0: 3 : 0 53 249 1792 ~948                                                   0     0      4.13 sec  T/O =  0  PRV = 49
+SBY 10:23:56 [tcim_core_safety_1of3] engine_0: 4 : 0 53 249 542 1331 ~948                                               6    45      5.25 sec  T/O =  0  PRV = 49
+SBY 10:23:57 [tcim_core_safety_1of3] engine_0: 4 : 0 53 249 575 1362 ~948                                               7    71      5.72 sec  T/O =  0  PRV = 49
+SBY 10:23:57 [tcim_core_safety_1of3] engine_0: 4 : 0 53 249 608 1394 ~948                                               4    83      6.13 sec  T/O =  0  PRV = 49
+SBY 10:23:58 [tcim_core_safety_1of3] engine_0: 4 : 0 53 249 627 1411 ~948                                               6    87      6.48 sec  T/O =  0  PRV = 49
+SBY 10:23:58 [tcim_core_safety_1of3] engine_0: Timing out on output 19 in frame 4 (retrying in next anytime pass).
+SBY 10:23:58 [tcim_core_safety_1of3] engine_0: 4 : 0 53 249 660 1442 ~948                                               5   105      7.06 sec  T/O =  1  PRV = 49
+SBY 10:23:59 [tcim_core_safety_1of3] engine_0: 4 : 0 53 249 694 1475 ~948                                               4   113      7.53 sec  T/O =  1  PRV = 49
+SBY 10:23:59 [tcim_core_safety_1of3] engine_0: 4 : 0 53 249 727 1509 ~948                                               3   114      8.00 sec  T/O =  1  PRV = 49
+SBY 10:23:59 [tcim_core_safety_1of3] engine_0: 4 : 0 53 249 732 1514 ~948                                               3   114      8.08 sec  T/O =  1  PRV = 49
+SBY 10:23:59 [tcim_core_safety_1of3] engine_0: Timing out on output 49 in frame 4 (retrying in next anytime pass).
+SBY 10:23:59 [tcim_core_safety_1of3] engine_0: 4 : 0 53 249 732 1514 ~948                                               0   114      8.08 sec  T/O =  2  PRV = 49
+SBY 10:24:02 [tcim_core_safety_1of3] engine_0: 5 : 0 53 249 729 728 816 ~966                                            3   186     10.86 sec  T/O =  2  PRV = 49
+SBY 10:24:02 [tcim_core_safety_1of3] engine_0: 5 : 0 53 249 729 728 866 ~966                                            2   204     10.99 sec  T/O =  2  PRV = 49
+SBY 10:24:03 [tcim_core_safety_1of3] engine_0: 5 : 0 53 249 729 729 965 ~966                                            2   221     11.40 sec  T/O =  2  PRV = 49
+SBY 10:24:03 [tcim_core_safety_1of3] engine_0: 5 : 0 53 249 729 730 1014 ~966                                           2   223     11.69 sec  T/O =  2  PRV = 49
+SBY 10:24:04 [tcim_core_safety_1of3] engine_0: 5 : 0 53 249 729 761 1085 ~966                                           5   237     12.45 sec  T/O =  2  PRV = 49
+SBY 10:24:08 [tcim_core_safety_1of3] engine_0: 6 : 0 53 191 787 547 201 913 ~1245                                       4   277     16.57 sec  T/O =  2  PRV = 49
+SBY 10:24:09 [tcim_core_safety_1of3] engine_0: 6 : 0 53 191 787 564 245 961 ~1245                                      20   304     17.78 sec  T/O =  2  PRV = 49
+SBY 10:24:09 [tcim_core_safety_1of3] engine_0: 6 : 0 53 191 787 564 253 967 ~1245                                      17   304     18.03 sec  T/O =  2  PRV = 49
+SBY 10:24:09 [tcim_core_safety_1of3] engine_0: Timing out on output 50 in frame 6 (retrying in next anytime pass).
+SBY 10:24:09 [tcim_core_safety_1of3] engine_0: 6 : 0 53 191 787 564 253 967 ~1245                                       0   304     18.03 sec  T/O =  3  PRV = 49
+SBY 10:24:11 [tcim_core_safety_1of3] engine_0: Proved output 3 in frame 6.
+SBY 10:24:11 [tcim_core_safety_1of3] engine_0: Proved output 17 in frame 6.
+SBY 10:24:14 [tcim_core_safety_1of3] engine_0: 7 : 0 53 191 787 557 218 297 605 ~1413                                   6   308     22.54 sec  T/O =  3  PRV = 51
+SBY 10:24:15 [tcim_core_safety_1of3] engine_0: Proved output 18 in frame 7.
+SBY 10:24:17 [tcim_core_safety_1of3] engine_0: 8 : 0 53 191 787 557 208 265 133 551 ~1419                               2   340     25.57 sec  T/O =  3  PRV = 52
+SBY 10:24:17 [tcim_core_safety_1of3] engine_0: 8 : 0 53 191 787 557 208 265 166 584 ~1419                               2   355     25.76 sec  T/O =  3  PRV = 52
+SBY 10:24:17 [tcim_core_safety_1of3] engine_0: 8 : 0 53 191 787 557 208 269 210 625 ~1419                               6   361     26.32 sec  T/O =  3  PRV = 52
+SBY 10:24:17 [tcim_core_safety_1of3] engine_0: Timing out on output 16 in frame 8 (retrying in next anytime pass).
+SBY 10:24:18 [tcim_core_safety_1of3] engine_0: 8 : 0 53 191 787 557 208 269 230 664 ~1419                               3   361     26.65 sec  T/O =  4  PRV = 52
+SBY 10:24:18 [tcim_core_safety_1of3] engine_0: 8 : 0 53 191 787 557 208 269 237 676 ~1419                               2   361     26.74 sec  T/O =  4  PRV = 52
+SBY 10:24:21 [tcim_core_safety_1of3] engine_0: 9 : 0 53 191 787 557 202 254 206 98 549 ~1509                            4   361     30.00 sec  T/O =  4  PRV = 52
+SBY 10:24:22 [tcim_core_safety_1of3] engine_0: Proved output 8 in frame 9.
+SBY 10:24:24 [tcim_core_safety_1of3] engine_0: 10 : 0 53 191 787 557 202 254 206 66 118 510 ~1511                        3   362     32.38 sec  T/O =  4  PRV = 53
+SBY 10:24:26 [tcim_core_safety_1of3] engine_0: 11 : 0 53 191 787 557 202 254 206 66 96 83 501 ~1511                      4   362     35.05 sec  T/O =  4  PRV = 53
+SBY 10:24:26 [tcim_core_safety_1of3] engine_0: 11 : 0 53 191 787 557 202 254 206 66 96 83 513 ~1511                      2   362     35.10 sec  T/O =  4  PRV = 53
+SBY 10:24:29 [tcim_core_safety_1of3] engine_0: 12 : 0 53 191 787 557 202 254 206 66 96 38 43 522 ~1511                   4   362     37.53 sec  T/O =  4  PRV = 53
+SBY 10:24:29 [tcim_core_safety_1of3] engine_0: Timing out on output 44 in frame 12 (retrying in next anytime pass).
+SBY 10:24:29 [tcim_core_safety_1of3] engine_0: 12 : 0 53 191 787 557 202 254 206 66 96 38 43 522 ~1511                   0   362     37.53 sec  T/O =  5  PRV = 53
+SBY 10:24:31 [tcim_core_safety_1of3] engine_0: 13 : 0 53 191 787 557 202 254 206 66 96 38 39 38 487 ~1511                0   362     39.71 sec  T/O =  5  PRV = 53
+SBY 10:24:32 [tcim_core_safety_1of3] engine_0: 14 : 0 53 191 787 557 202 254 206 66 96 38 39 38 19 468 ~1511             0   362     41.25 sec  T/O =  5  PRV = 53
+SBY 10:24:34 [tcim_core_safety_1of3] engine_0: 15 : 0 53 191 787 557 202 254 206 66 96 38 39 38 19 9 459 ~1511           0   362     42.63 sec  T/O =  5  PRV = 53
+SBY 10:24:35 [tcim_core_safety_1of3] engine_0: 16 : ... 53 191 787 557 202 254 206 66 96 38 39 38 19 9 6 453 ~1511       0   362     44.25 sec  T/O =  5  PRV = 53
+SBY 10:24:37 [tcim_core_safety_1of3] engine_0: 17 : ... 191 787 557 202 254 206 66 96 38 39 38 19 9 6 54 399 ~1511       0   362     45.90 sec  T/O =  5  PRV = 53
+SBY 10:24:39 [tcim_core_safety_1of3] engine_0: 18 : ... 787 557 202 254 206 66 96 38 39 38 19 9 6 54 6 393 ~1511         0   362     47.45 sec  T/O =  5  PRV = 53
+SBY 10:24:40 [tcim_core_safety_1of3] engine_0: 19 : ... 787 557 202 254 206 66 96 38 39 38 19 9 6 54 6 8 385 ~1511       0   362     49.14 sec  T/O =  5  PRV = 53
+SBY 10:24:42 [tcim_core_safety_1of3] engine_0: 20 : ... 557 202 254 206 66 96 38 39 38 19 9 6 54 6 8 10 384 ~1511        2   364     50.73 sec  T/O =  5  PRV = 53
+SBY 10:24:44 [tcim_core_safety_1of3] engine_0: 21 : ... 557 202 254 206 66 96 38 39 38 19 9 6 54 6 8 8 9 380 ~1511       2   364     52.73 sec  T/O =  5  PRV = 53
+SBY 10:24:46 [tcim_core_safety_1of3] engine_0: 22 : ... 202 254 206 66 96 38 39 38 19 9 6 54 6 8 8 7 9 378 ~1511         4   364     54.86 sec  T/O =  5  PRV = 53
+SBY 10:24:48 [tcim_core_safety_1of3] engine_0: 23 : ... 202 254 206 66 96 38 39 38 19 9 6 54 6 8 8 7 7 18 368 ~1511      3   364     56.94 sec  T/O =  5  PRV = 53
+SBY 10:24:50 [tcim_core_safety_1of3] engine_0: 24 : ... 254 206 66 96 38 39 38 19 9 6 54 6 8 8 7 7 15 19 372 ~1511       4   364     58.84 sec  T/O =  5  PRV = 53
+SBY 10:24:52 [tcim_core_safety_1of3] engine_0: 25 : ... 206 66 96 38 39 38 19 9 6 54 6 8 8 7 7 15 13 9 370 ~1511         2   364     60.69 sec  T/O =  5  PRV = 53
+SBY 10:24:54 [tcim_core_safety_1of3] engine_0: 26 : ... 206 66 96 38 39 38 19 9 6 54 6 8 8 7 7 15 13 7 12 366 ~1511      4   364     62.56 sec  T/O =  5  PRV = 53
+SBY 10:24:56 [tcim_core_safety_1of3] engine_0: 27 : ... 66 96 38 39 38 19 9 6 54 6 8 8 7 7 15 13 7 10 74 306 ~1511       4   365     64.40 sec  T/O =  5  PRV = 53
+SBY 10:24:58 [tcim_core_safety_1of3] engine_0: 28 : ... 96 38 39 38 19 9 6 54 6 8 8 7 7 15 13 7 10 71 45 323 ~1511       8   366     66.38 sec  T/O =  5  PRV = 53
+SBY 10:24:58 [tcim_core_safety_1of3] engine_0: 28 : ... 96 38 39 38 19 9 6 54 6 8 8 7 7 15 13 7 10 71 68 356 ~1511       4   366     66.53 sec  T/O =  5  PRV = 53
+SBY 10:24:59 [tcim_core_safety_1of3] engine_0: 29 : ... 38 39 38 19 9 6 54 6 8 8 7 7 15 13 7 10 71 41 34 349 ~1511       3   366     68.32 sec  T/O =  5  PRV = 53
+SBY 10:25:01 [tcim_core_safety_1of3] engine_0: 30 : ... 39 38 19 9 6 54 6 8 8 7 7 15 13 7 10 71 41 20 17 351 ~1511       2   366     70.26 sec  T/O =  5  PRV = 53
+SBY 10:25:03 [tcim_core_safety_1of3] engine_0: 31 : ... 38 19 9 6 54 6 8 8 7 7 15 13 7 10 71 41 19 11 15 350 ~1511       3   366     72.34 sec  T/O =  5  PRV = 53
+SBY 10:25:05 [tcim_core_safety_1of3] engine_0: 32 : ... 19 9 6 54 6 8 8 7 7 15 13 7 10 71 41 19 11 9 10 348 ~1511        2   366     74.25 sec  T/O =  5  PRV = 53
+SBY 10:25:08 [tcim_core_safety_1of3] engine_0: 33 : ... 9 6 54 6 8 8 7 7 15 13 7 10 71 41 19 11 9 9 130 224 ~1511        2   366     76.41 sec  T/O =  5  PRV = 53
+SBY 10:25:10 [tcim_core_safety_1of3] engine_0: 34 : ... 54 6 8 8 7 7 15 13 7 10 71 42 21 15 12 11 130 76 184 ~1511      13   372     78.44 sec  T/O =  5  PRV = 53
+SBY 10:25:11 [tcim_core_safety_1of3] engine_0: 35 : ... 6 54 6 8 8 7 7 15 13 7 10 71 32 20 7 12 7 9 7 47 314 ~1511       4   372     80.30 sec  T/O =  5  PRV = 53
+SBY 10:25:13 [tcim_core_safety_1of3] engine_0: 36 : ... 54 6 8 8 7 7 15 13 7 10 71 32 19 7 12 7 9 7 13 33 325 ~1511      4   372     82.30 sec  T/O =  5  PRV = 53
+SBY 10:25:16 [tcim_core_safety_1of3] engine_0: 37 : ... 6 8 8 7 7 15 13 7 10 71 32 19 7 12 7 9 7 12 30 25 327 ~1511      4   372     84.40 sec  T/O =  5  PRV = 53
+SBY 10:25:18 [tcim_core_safety_1of3] engine_0: 38 : ... 8 7 7 15 13 7 10 71 32 19 7 12 7 9 7 12 30 16 12 330 ~1511       4   372     86.38 sec  T/O =  5  PRV = 53
+SBY 10:25:20 [tcim_core_safety_1of3] engine_0: 39 : ... 7 7 15 13 7 10 71 32 19 7 12 7 9 7 12 30 16 8 221 119 ~1511      2   372     88.57 sec  T/O =  5  PRV = 53
+SBY 10:25:22 [tcim_core_safety_1of3] engine_0: 40 : ... 15 13 7 10 71 32 19 7 12 7 9 7 12 30 17 10 225 64 127 ~1511     12   374     90.76 sec  T/O =  5  PRV = 53
+SBY 10:25:22 [tcim_core_safety_1of3] engine_0: 40 : ... 15 13 7 10 71 32 19 7 12 7 9 7 12 30 17 10 225 82 165 ~1511      5   374     90.94 sec  T/O =  5  PRV = 53
+SBY 10:25:22 [tcim_core_safety_1of3] engine_0: Timing out on output 51 in frame 40 (retrying in next anytime pass).
+SBY 10:25:22 [tcim_core_safety_1of3] engine_0: 40 : ... 15 13 7 10 71 32 19 7 12 7 9 7 12 30 17 10 225 82 180 ~1511      2   374     90.99 sec  T/O =  6  PRV = 53
+SBY 10:25:24 [tcim_core_safety_1of3] engine_0: 41 : ... 15 13 7 10 71 32 19 7 12 7 9 7 12 30 11 7 7 11 11 324 ~1511      0   374     92.86 sec  T/O =  6  PRV = 53
+SBY 10:25:26 [tcim_core_safety_1of3] engine_0: 42 : ... 13 7 10 71 32 19 7 12 7 9 7 12 30 11 7 7 11 10 11 310 ~1511      0   374     94.55 sec  T/O =  6  PRV = 53
+SBY 10:25:27 [tcim_core_safety_1of3] engine_0: 43 : ... 7 10 71 32 19 7 12 7 9 7 12 30 11 7 7 11 10 11 53 256 ~1511      0   374     96.27 sec  T/O =  6  PRV = 53
+SBY 10:25:29 [tcim_core_safety_1of3] engine_0: 44 : ... 71 32 19 7 12 7 9 7 12 30 11 7 7 11 10 11 53 39 216 ~1511        0   374     97.88 sec  T/O =  6  PRV = 53
+SBY 10:25:31 [tcim_core_safety_1of3] engine_0: 45 : ... 32 19 7 12 7 9 7 12 30 11 7 7 11 10 11 53 39 130 86 ~1511        0   374     99.46 sec  T/O =  6  PRV = 53
+SBY 10:25:33 [tcim_core_safety_1of3] engine_0: 46 : ... 19 7 12 7 9 7 12 31 12 10 7 11 10 12 54 41 135 30 63 ~1511      30   374    101.67 sec  T/O =  6  PRV = 53
+SBY 10:25:33 [tcim_core_safety_1of3] engine_0: 46 : ... 19 7 12 7 9 7 12 31 12 10 7 11 10 12 54 41 135 31 81 ~1511       2   376    101.72 sec  T/O =  6  PRV = 53
+SBY 10:25:35 [tcim_core_safety_1of3] engine_0: 47 : ... 32 19 7 12 7 9 7 12 11 8 7 7 26 14 10 53 37 7 4 8 202 ~1511      0   376    103.43 sec  T/O =  6  PRV = 53
+SBY 10:25:36 [tcim_core_safety_1of3] engine_0: 48 : ... 19 7 12 7 9 7 12 11 8 7 7 26 14 10 53 37 7 4 8 126 79 ~1511      4   376    105.10 sec  T/O =  6  PRV = 53
+SBY 10:25:38 [tcim_core_safety_1of3] engine_0: 49 : ... 7 12 7 9 7 12 11 8 7 7 26 14 10 53 37 7 4 8 3 3 194 ~1515        0   376    106.90 sec  T/O =  6  PRV = 53
+SBY 10:25:40 [tcim_core_safety_1of3] engine_0: 50 : ... 12 7 9 7 12 11 8 7 7 26 14 10 53 37 7 4 8 3 3 122 72 ~1515       0   376    108.63 sec  T/O =  6  PRV = 53
+SBY 10:25:41 [tcim_core_safety_1of3] engine_0: 51 : ... 7 9 7 12 11 8 7 7 26 14 10 53 37 7 4 8 3 3 122 28 66 ~1515       4   377    110.36 sec  T/O =  6  PRV = 53
+SBY 10:25:42 [tcim_core_safety_1of3] engine_0: Proved output 58 in frame 51.
+SBY 10:25:44 [tcim_core_safety_1of3] engine_0: 52 : ... 9 7 12 11 8 7 7 26 14 10 53 37 7 4 8 4 4 123 24 7 50 ~1528       8   377    112.43 sec  T/O =  6  PRV = 54
+SBY 10:25:45 [tcim_core_safety_1of3] engine_0: 53 : ... 7 12 11 8 7 7 26 14 10 53 37 7 4 8 4 4 3 3 122 24 48 ~1531       2   377    114.32 sec  T/O =  6  PRV = 54
+SBY 10:25:47 [tcim_core_safety_1of3] engine_0: 54 : ... 12 11 8 7 7 26 14 10 53 37 7 4 8 4 4 3 3 122 23 5 43 ~1531       0   377    116.04 sec  T/O =  6  PRV = 54
+SBY 10:25:49 [tcim_core_safety_1of3] engine_0: 55 : ... 11 8 7 7 26 14 10 53 37 7 4 8 4 4 3 3 122 23 6 4 42 ~1531        3   377    117.79 sec  T/O =  6  PRV = 54
+SBY 10:25:49 [tcim_core_safety_1of3] engine_0: Proved output 45 in frame 55.
+SBY 10:25:51 [tcim_core_safety_1of3] engine_0: 56 : ... 11 8 7 7 26 14 10 53 37 7 4 8 4 4 3 3 122 23 5 2 2 27 ~1541      0   377    119.47 sec  T/O =  6  PRV = 55
+SBY 10:25:53 [tcim_core_safety_1of3] engine_0: 57 : ... 8 7 7 26 14 10 53 37 7 4 8 4 4 3 3 122 23 5 2 2 2 25 ~1541       0   377    121.44 sec  T/O =  6  PRV = 55
+SBY 10:25:54 [tcim_core_safety_1of3] engine_0: 58 : ... 7 7 26 14 10 53 37 7 4 8 4 4 3 3 122 23 5 2 2 2 2 23 ~1541       0   377    123.23 sec  T/O =  6  PRV = 55
+SBY 10:25:56 [tcim_core_safety_1of3] engine_0: 59 : ... 7 26 14 10 53 37 7 4 8 4 4 3 3 122 23 5 2 2 2 2 2 21 ~1541       0   377    125.00 sec  T/O =  6  PRV = 55
+SBY 10:25:58 [tcim_core_safety_1of3] engine_0: 60 : ... 26 14 10 53 37 7 4 8 4 4 3 3 122 23 5 2 2 2 2 2 2 19 ~1541       0   377    126.54 sec  T/O =  6  PRV = 55
+SBY 10:25:59 [tcim_core_safety_1of3] engine_0: 61 : ... 14 10 53 37 7 4 8 4 4 3 3 122 23 5 2 2 2 2 2 2 2 17 ~1541        0   377    128.14 sec  T/O =  6  PRV = 55
+SBY 10:26:01 [tcim_core_safety_1of3] engine_0: 62 : ... 14 10 53 37 7 4 8 4 4 3 3 122 23 5 2 2 2 2 2 2 2 2 15 ~1541      0   377    129.72 sec  T/O =  6  PRV = 55
+SBY 10:26:02 [tcim_core_safety_1of3] engine_0: 63 : ... 10 53 37 7 4 8 4 4 3 3 122 23 5 2 2 2 2 2 2 2 2 2 13 ~1541       0   377    131.32 sec  T/O =  6  PRV = 55
+SBY 10:26:04 [tcim_core_safety_1of3] engine_0: 64 : ... 53 37 7 4 8 4 4 3 3 122 23 5 2 2 2 2 2 2 2 2 2 2 11 ~1541        0   377    133.13 sec  T/O =  6  PRV = 55
+SBY 10:26:06 [tcim_core_safety_1of3] engine_0: 65 : ... 53 37 7 4 8 4 4 3 3 122 23 5 2 2 2 2 2 2 2 2 2 2 2 9 ~1541       0   377    134.68 sec  T/O =  6  PRV = 55
+SBY 10:26:07 [tcim_core_safety_1of3] engine_0: 66 : ... 37 7 4 8 4 4 3 3 122 23 5 2 2 2 2 2 2 2 2 2 2 2 2 7 ~1541        0   377    136.29 sec  T/O =  6  PRV = 55
+SBY 10:26:09 [tcim_core_safety_1of3] engine_0: 67 : ... 37 7 4 8 4 4 3 3 122 23 5 2 2 2 2 2 2 2 2 2 2 2 2 2 5 ~1541      0   377    138.17 sec  T/O =  6  PRV = 55
+SBY 10:26:11 [tcim_core_safety_1of3] engine_0: 68 : ... 7 4 8 4 4 3 3 122 23 5 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 ~1541       0   377    139.88 sec  T/O =  6  PRV = 55
+SBY 10:26:13 [tcim_core_safety_1of3] engine_0: 69 : ... 4 8 4 4 3 3 122 23 5 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 ~1541       0   377    141.46 sec  T/O =  6  PRV = 55
+SBY 10:26:14 [tcim_core_safety_1of3] engine_0: 70 : ... 4 8 4 4 3 3 122 23 5 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 -1 ~1541      0   377    143.05 sec  T/O =  6  PRV = 55
+SBY 10:26:16 [tcim_core_safety_1of3] engine_0: 71 : ... 122 23 5 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 -3 ~1541      0   377    144.65 sec  T/O =  6  PRV = 55
+SBY 10:26:17 [tcim_core_safety_1of3] engine_0: 72 : ... 23 5 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 -5 ~1541        0   377    146.33 sec  T/O =  6  PRV = 55
+SBY 10:26:19 [tcim_core_safety_1of3] engine_0: 73 : ... 23 5 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 -7 ~1541      0   377    147.93 sec  T/O =  6  PRV = 55
+SBY 10:26:21 [tcim_core_safety_1of3] engine_0: 74 : ... 5 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 -9 ~1541       0   377    149.54 sec  T/O =  6  PRV = 55
+SBY 10:26:22 [tcim_core_safety_1of3] engine_0: 75 : ... 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 -10 ~1541       0   377    151.10 sec  T/O =  6  PRV = 55
+SBY 10:26:24 [tcim_core_safety_1of3] engine_0: 76 : ... 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 0 -10 ~1541       0   377    152.67 sec  T/O =  6  PRV = 55
+SBY 10:26:24 [tcim_core_safety_1of3] engine_0: Proved output 48 in frame 62 (converged).
+SBY 10:26:24 [tcim_core_safety_1of3] engine_0: Starting new anytime pass, reusing clauses.
+SBY 10:26:24 [tcim_core_safety_1of3] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 10:26:27 [tcim_core_safety_1of3] engine_0: 1 : 0 2657 ~1536                                                         0     0      3.48 sec  T/O =  0  PRV = 56
+SBY 10:26:27 [tcim_core_safety_1of3] engine_0: 2 : 0 53 2604 ~1536                                                      0     0      3.53 sec  T/O =  0  PRV = 56
+SBY 10:26:28 [tcim_core_safety_1of3] engine_0: 3 : 0 53 190 2414 ~1536                                                  0     0      3.68 sec  T/O =  0  PRV = 56
+SBY 10:26:28 [tcim_core_safety_1of3] engine_0: 4 : 0 53 190 671 1805 ~1536                                              6    45      4.43 sec  T/O =  0  PRV = 56
+SBY 10:26:29 [tcim_core_safety_1of3] engine_0: 4 : 0 53 190 704 1838 ~1536                                              6    70      4.75 sec  T/O =  0  PRV = 56
+SBY 10:26:29 [tcim_core_safety_1of3] engine_0: 4 : 0 53 190 737 1870 ~1536                                              5    85      5.10 sec  T/O =  0  PRV = 56
+SBY 10:26:29 [tcim_core_safety_1of3] engine_0: 4 : 0 53 190 770 1905 ~1536                                              7   116      5.45 sec  T/O =  0  PRV = 56
+SBY 10:26:33 [tcim_core_safety_1of3] engine_0: 5 : 0 53 190 773 676 1324 ~1535                                          6   130      9.17 sec  T/O =  0  PRV = 56
+SBY 10:26:34 [tcim_core_safety_1of3] engine_0: 5 : 0 53 190 773 703 1360 ~1535                                          3   131      9.79 sec  T/O =  0  PRV = 56
+SBY 10:26:34 [tcim_core_safety_1of3] engine_0: 5 : 0 53 190 773 707 1366 ~1535                                          2   131      9.87 sec  T/O =  0  PRV = 56
+SBY 10:26:37 [tcim_core_safety_1of3] engine_0: 6 : 0 53 190 773 655 312 1141 ~1542                                      7   136     13.39 sec  T/O =  0  PRV = 56
+SBY 10:26:38 [tcim_core_safety_1of3] engine_0: 6 : 0 53 190 773 668 336 1164 ~1542                                      7   143     13.83 sec  T/O =  0  PRV = 56
+SBY 10:26:38 [tcim_core_safety_1of3] engine_0: 6 : 0 53 190 773 674 362 1196 ~1542                                      8   146     14.32 sec  T/O =  0  PRV = 56
+SBY 10:26:38 [tcim_core_safety_1of3] engine_0: 6 : 0 53 190 773 681 379 1211 ~1542                                      7   150     14.61 sec  T/O =  0  PRV = 56
+SBY 10:26:38 [tcim_core_safety_1of3] engine_0: Timing out on output 19 in frame 6 (retrying in next anytime pass).
+SBY 10:26:39 [tcim_core_safety_1of3] engine_0: 6 : 0 53 190 773 681 408 1242 ~1542                                      5   151     15.36 sec  T/O =  1  PRV = 56
+SBY 10:26:40 [tcim_core_safety_1of3] engine_0: 6 : 0 53 190 773 681 439 1277 ~1542                                      4   151     16.03 sec  T/O =  1  PRV = 56
+SBY 10:26:40 [tcim_core_safety_1of3] engine_0: 6 : 0 53 190 773 681 456 1294 ~1542                                      4   151     16.32 sec  T/O =  1  PRV = 56
+SBY 10:26:40 [tcim_core_safety_1of3] engine_0: Timing out on output 49 in frame 6 (retrying in next anytime pass).
+SBY 10:26:40 [tcim_core_safety_1of3] engine_0: 6 : 0 53 190 773 681 462 1303 ~1542                                      4   153     16.45 sec  T/O =  2  PRV = 56
+SBY 10:26:47 [tcim_core_safety_1of3] engine_0: 7 : 0 53 190 773 635 300 409 990 ~1580                                  18   155     23.23 sec  T/O =  2  PRV = 56
+SBY 10:26:48 [tcim_core_safety_1of3] engine_0: 7 : 0 53 190 773 635 300 424 1007 ~1580                                 18   155     24.15 sec  T/O =  2  PRV = 56
+SBY 10:26:48 [tcim_core_safety_1of3] engine_0: Timing out on output 50 in frame 7 (retrying in next anytime pass).
+SBY 10:26:48 [tcim_core_safety_1of3] engine_0: 7 : 0 53 190 773 635 300 424 1007 ~1580                                  0   155     24.15 sec  T/O =  3  PRV = 56
+SBY 10:26:57 [tcim_core_safety_1of3] engine_0: 8 : 0 53 190 773 635 261 400 271 721 ~1633                               0   155     32.96 sec  T/O =  3  PRV = 56
+SBY 10:26:59 [tcim_core_safety_1of3] engine_0: 9 : 0 53 190 773 635 261 396 272 71 664 ~1633                            9   157     35.02 sec  T/O =  3  PRV = 56
+SBY 10:27:03 [tcim_core_safety_1of3] engine_0: 10 : 0 53 190 773 635 261 396 268 78 73 649 ~1630                         8   157     38.67 sec  T/O =  3  PRV = 56
+SBY 10:27:03 [tcim_core_safety_1of3] engine_0: 10 : 0 53 190 773 635 261 396 268 79 76 658 ~1630                         7   157     38.77 sec  T/O =  3  PRV = 56
+SBY 10:27:06 [tcim_core_safety_1of3] engine_0: 11 : 0 53 190 773 635 261 396 267 75 56 72 605 ~1630                      2   157     41.79 sec  T/O =  3  PRV = 56
+SBY 10:27:09 [tcim_core_safety_1of3] engine_0: 12 : 0 53 190 773 635 261 396 267 75 56 73 86 574 ~1630                   9   157     45.27 sec  T/O =  3  PRV = 56
+SBY 10:27:10 [tcim_core_safety_1of3] engine_0: 12 : 0 53 190 773 635 261 396 268 77 61 86 102 592 ~1630                 14   157     46.11 sec  T/O =  3  PRV = 56
+SBY 10:27:11 [tcim_core_safety_1of3] engine_0: 12 : 0 53 190 773 635 261 396 268 79 69 101 123 601 ~1630                14   157     46.87 sec  T/O =  3  PRV = 56
+SBY 10:27:11 [tcim_core_safety_1of3] engine_0: Timing out on output 16 in frame 12 (retrying in next anytime pass).
+SBY 10:27:11 [tcim_core_safety_1of3] engine_0: 12 : 0 53 190 773 635 261 396 268 79 69 101 147 638 ~1630                 3   168     47.18 sec  T/O =  4  PRV = 56
+SBY 10:27:11 [tcim_core_safety_1of3] engine_0: 12 : 0 53 190 773 635 261 396 268 79 69 101 153 657 ~1630                 2   170     47.30 sec  T/O =  4  PRV = 56
+SBY 10:27:14 [tcim_core_safety_1of3] engine_0: 13 : 0 53 190 773 635 261 396 267 76 65 66 92 132 609 ~1630               3   170     50.59 sec  T/O =  4  PRV = 56
+SBY 10:27:18 [tcim_core_safety_1of3] engine_0: 14 : 0 53 190 773 635 261 396 267 76 65 66 92 96 103 600 ~1630            3   170     54.12 sec  T/O =  4  PRV = 56
+SBY 10:27:18 [tcim_core_safety_1of3] engine_0: 14 : 0 53 190 773 635 261 396 267 76 65 66 92 96 104 602 ~1630            2   170     54.13 sec  T/O =  4  PRV = 56
+SBY 10:27:21 [tcim_core_safety_1of3] engine_0: 15 : 0 53 190 773 635 261 396 267 76 65 66 92 96 94 87 563 ~1630          3   170     57.28 sec  T/O =  4  PRV = 56
+SBY 10:27:24 [tcim_core_safety_1of3] engine_0: 16 : ... 190 773 635 261 396 267 76 65 66 92 96 94 49 73 586 ~1630        3   170     60.45 sec  T/O =  4  PRV = 56
+SBY 10:27:24 [tcim_core_safety_1of3] engine_0: 16 : ... 190 773 635 261 396 267 76 65 66 92 96 94 49 81 609 ~1630        4   170     60.59 sec  T/O =  4  PRV = 56
+SBY 10:27:28 [tcim_core_safety_1of3] engine_0: 17 : ... 773 635 261 396 267 76 65 66 92 96 94 49 44 178 492 ~1630        2   170     63.88 sec  T/O =  4  PRV = 56
+SBY 10:27:31 [tcim_core_safety_1of3] engine_0: 18 : ... 635 261 396 267 76 65 66 92 96 94 49 44 37 157 520 ~1630         4   171     66.94 sec  T/O =  4  PRV = 56
+SBY 10:27:34 [tcim_core_safety_1of3] engine_0: 19 : ... 261 396 267 76 65 66 92 96 94 49 44 37 123 131 479 ~1630         7   171     70.08 sec  T/O =  4  PRV = 56
+SBY 10:27:34 [tcim_core_safety_1of3] engine_0: 19 : ... 261 396 267 76 65 66 92 96 94 49 44 37 123 147 522 ~1630         3   171     70.34 sec  T/O =  4  PRV = 56
+SBY 10:27:34 [tcim_core_safety_1of3] engine_0: 19 : ... 261 396 267 76 65 66 92 96 94 49 44 37 123 154 547 ~1630         3   171     70.49 sec  T/O =  4  PRV = 56
+SBY 10:27:38 [tcim_core_safety_1of3] engine_0: 20 : ... 261 396 267 76 65 66 92 96 94 49 44 37 123 57 113 558 ~1630      7   171     73.63 sec  T/O =  4  PRV = 56
+SBY 10:27:38 [tcim_core_safety_1of3] engine_0: Timing out on output 44 in frame 20 (retrying in next anytime pass).
+SBY 10:27:38 [tcim_core_safety_1of3] engine_0: 20 : ... 261 396 267 76 65 66 92 96 94 49 44 37 123 57 113 558 ~1630      0   171     73.63 sec  T/O =  5  PRV = 56
+SBY 10:27:41 [tcim_core_safety_1of3] engine_0: 21 : ... 396 267 76 65 66 92 96 94 49 44 37 123 57 86 107 470 ~1630       0   171     76.68 sec  T/O =  5  PRV = 56
+SBY 10:27:43 [tcim_core_safety_1of3] engine_0: 22 : ... 267 76 65 66 92 96 94 49 44 37 123 57 86 107 43 427 ~1630        0   171     78.66 sec  T/O =  5  PRV = 56
+SBY 10:27:45 [tcim_core_safety_1of3] engine_0: 23 : ... 76 65 66 92 96 94 49 44 37 123 57 86 107 43 11 416 ~1630         0   171     81.06 sec  T/O =  5  PRV = 56
+SBY 10:27:47 [tcim_core_safety_1of3] engine_0: 24 : ... 76 65 66 92 96 94 49 44 37 123 57 86 107 43 11 10 406 ~1630      0   171     83.24 sec  T/O =  5  PRV = 56
+SBY 10:27:49 [tcim_core_safety_1of3] engine_0: 25 : ... 65 66 92 96 94 49 44 37 123 57 86 107 43 11 10 7 399 ~1630       0   171     85.41 sec  T/O =  5  PRV = 56
+SBY 10:27:52 [tcim_core_safety_1of3] engine_0: 26 : ... 66 92 96 94 49 44 37 123 57 86 107 43 11 10 7 6 393 ~1630        0   171     87.77 sec  T/O =  5  PRV = 56
+SBY 10:27:54 [tcim_core_safety_1of3] engine_0: 27 : ... 92 96 94 49 44 37 123 57 86 107 43 11 10 7 6 36 357 ~1630        0   171     90.01 sec  T/O =  5  PRV = 56
+SBY 10:27:56 [tcim_core_safety_1of3] engine_0: 28 : ... 96 94 49 44 37 123 57 86 107 43 11 10 7 6 36 17 340 ~1630        0   171     92.16 sec  T/O =  5  PRV = 56
+SBY 10:27:58 [tcim_core_safety_1of3] engine_0: 29 : ... 94 49 44 37 123 57 86 107 43 11 10 7 6 36 17 14 326 ~1630        0   171     94.37 sec  T/O =  5  PRV = 56
+SBY 10:28:01 [tcim_core_safety_1of3] engine_0: 30 : ... 94 49 44 37 123 57 86 107 43 11 10 7 6 36 17 14 6 320 ~1630      0   171     96.65 sec  T/O =  5  PRV = 56
+SBY 10:28:03 [tcim_core_safety_1of3] engine_0: 31 : ... 49 44 37 123 57 86 107 43 11 10 7 6 36 17 14 6 9 311 ~1630       0   171     99.21 sec  T/O =  5  PRV = 56
+SBY 10:28:06 [tcim_core_safety_1of3] engine_0: 32 : ... 44 37 123 57 86 107 43 11 10 7 6 36 17 14 6 9 6 305 ~1630        0   171    101.63 sec  T/O =  5  PRV = 56
+SBY 10:28:08 [tcim_core_safety_1of3] engine_0: 33 : ... 44 37 123 57 86 107 43 11 10 7 6 36 17 14 6 9 6 8 297 ~1630      0   171    103.85 sec  T/O =  5  PRV = 56
+SBY 10:28:10 [tcim_core_safety_1of3] engine_0: 34 : ... 37 123 57 86 107 43 11 10 7 6 36 17 14 6 9 6 8 6 291 ~1630       0   171    106.17 sec  T/O =  5  PRV = 56
+SBY 10:28:12 [tcim_core_safety_1of3] engine_0: 35 : ... 123 57 86 107 43 11 10 7 6 36 17 14 6 9 6 8 6 8 283 ~1630        0   171    108.37 sec  T/O =  5  PRV = 56
+SBY 10:28:15 [tcim_core_safety_1of3] engine_0: 36 : ... 57 86 107 43 11 10 7 6 36 17 14 6 9 6 8 6 8 10 273 ~1630         0   171    110.89 sec  T/O =  5  PRV = 56
+SBY 10:28:17 [tcim_core_safety_1of3] engine_0: 37 : ... 57 86 107 43 11 10 7 6 36 17 14 6 9 6 8 6 8 10 8 265 ~1630       0   171    112.90 sec  T/O =  5  PRV = 56
+SBY 10:28:19 [tcim_core_safety_1of3] engine_0: 38 : ... 86 107 43 11 10 7 6 36 17 14 6 9 6 8 6 8 10 8 6 259 ~1630        0   171    115.13 sec  T/O =  5  PRV = 56
+SBY 10:28:21 [tcim_core_safety_1of3] engine_0: 39 : ... 86 107 43 11 10 7 6 36 17 14 6 9 6 8 6 8 10 8 6 7 252 ~1630      0   171    117.46 sec  T/O =  5  PRV = 56
+SBY 10:28:24 [tcim_core_safety_1of3] engine_0: 40 : ... 107 43 11 10 7 6 36 17 14 6 9 6 8 6 8 10 8 6 7 11 250 ~1630      3   173    119.81 sec  T/O =  5  PRV = 56
+SBY 10:28:27 [tcim_core_safety_1of3] engine_0: 41 : ... 43 11 10 7 6 36 17 14 6 9 6 8 6 8 10 8 6 7 9 16 240 ~1630        2   173    123.01 sec  T/O =  5  PRV = 56
+SBY 10:28:30 [tcim_core_safety_1of3] engine_0: 42 : ... 11 10 7 6 36 17 14 6 9 6 8 6 8 10 8 6 7 9 14 19 237 ~1630        4   173    126.06 sec  T/O =  5  PRV = 56
+SBY 10:28:33 [tcim_core_safety_1of3] engine_0: 43 : ... 10 7 6 36 17 14 6 9 6 8 6 8 10 8 6 7 9 14 10 19 234 ~1630        3   173    128.73 sec  T/O =  5  PRV = 56
+SBY 10:28:35 [tcim_core_safety_1of3] engine_0: 44 : ... 10 7 6 36 17 14 6 9 6 8 6 8 10 8 6 7 9 14 10 8 9 240 ~1630       3   173    131.20 sec  T/O =  5  PRV = 56
+SBY 10:28:38 [tcim_core_safety_1of3] engine_0: 45 : ... 7 6 36 17 14 6 9 6 8 6 8 10 8 6 7 9 14 10 8 7 8 239 ~1630        2   173    133.71 sec  T/O =  5  PRV = 56
+SBY 10:28:40 [tcim_core_safety_1of3] engine_0: 46 : ... 6 36 17 14 6 9 6 8 6 8 10 8 6 7 9 14 10 8 6 6 11 237 ~1630       4   173    135.99 sec  T/O =  5  PRV = 56
+SBY 10:28:42 [tcim_core_safety_1of3] engine_0: 47 : ... 36 17 14 6 9 6 8 6 8 10 8 6 7 9 14 10 8 6 6 6 123 123 ~1630      4   173    138.53 sec  T/O =  5  PRV = 56
+SBY 10:28:45 [tcim_core_safety_1of3] engine_0: 48 : ... 17 14 6 9 6 8 6 8 10 8 6 7 9 14 10 8 6 6 6 120 36 147 ~1630      5   175    140.93 sec  T/O =  5  PRV = 56
+SBY 10:28:45 [tcim_core_safety_1of3] engine_0: 48 : ... 17 14 6 9 6 8 6 8 10 8 6 7 9 14 10 8 6 6 6 120 66 179 ~1630      6   175    141.14 sec  T/O =  5  PRV = 56
+SBY 10:28:45 [tcim_core_safety_1of3] engine_0: 48 : ... 17 14 6 9 6 8 6 8 10 8 6 7 9 14 10 8 6 6 6 120 98 211 ~1630      6   175    141.42 sec  T/O =  5  PRV = 56
+SBY 10:28:45 [tcim_core_safety_1of3] engine_0: 48 : ... 14 6 9 6 8 6 8 10 8 6 7 9 14 10 8 6 6 6 120 114 237 ~1630        5   175    141.56 sec  T/O =  5  PRV = 56
+SBY 10:28:48 [tcim_core_safety_1of3] engine_0: 49 : ... 14 6 9 6 8 6 8 10 8 6 7 9 14 10 8 6 6 6 120 53 33 223 ~1634      2   175    143.99 sec  T/O =  5  PRV = 56
+SBY 10:28:50 [tcim_core_safety_1of3] engine_0: 50 : ... 6 9 6 8 6 8 10 8 6 7 9 14 10 8 6 6 6 120 53 28 41 205 ~1641      4   175    146.60 sec  T/O =  5  PRV = 56
+SBY 10:28:53 [tcim_core_safety_1of3] engine_0: 51 : ... 9 6 8 6 8 10 8 6 7 9 14 10 8 6 6 6 120 53 27 7 43 202 ~1640      3   175    148.95 sec  T/O =  5  PRV = 56
+SBY 10:28:55 [tcim_core_safety_1of3] engine_0: 52 : ... 8 6 8 10 8 6 7 9 14 10 8 6 6 6 120 53 27 7 27 69 173 ~1640       3   175    151.46 sec  T/O =  5  PRV = 56
+SBY 10:28:58 [tcim_core_safety_1of3] engine_0: 53 : ... 6 8 10 8 6 7 9 14 10 8 6 6 6 120 53 27 7 26 56 52 156 ~1640      4   175    153.85 sec  T/O =  5  PRV = 56
+SBY 10:29:00 [tcim_core_safety_1of3] engine_0: 54 : ... 10 8 6 7 9 14 10 8 6 6 6 120 53 27 7 26 56 35 13 168 ~1640       4   175    156.19 sec  T/O =  5  PRV = 56
+SBY 10:29:02 [tcim_core_safety_1of3] engine_0: 55 : ... 8 6 7 9 14 10 8 6 6 6 120 53 27 7 26 56 35 8 10 168 ~1640        4   175    158.48 sec  T/O =  5  PRV = 56
+SBY 10:29:05 [tcim_core_safety_1of3] engine_0: 56 : ... 8 6 7 9 14 10 8 6 6 6 120 53 27 7 26 56 35 8 5 6 170 ~1640       2   175    160.73 sec  T/O =  5  PRV = 56
+SBY 10:29:07 [tcim_core_safety_1of3] engine_0: 57 : ... 6 7 9 14 10 8 6 6 6 120 53 27 7 26 56 35 8 5 5 7 169 ~1640       2   175    163.16 sec  T/O =  5  PRV = 56
+SBY 10:29:10 [tcim_core_safety_1of3] engine_0: 58 : ... 7 9 14 10 8 6 6 6 120 53 27 7 26 56 35 8 5 5 5 15 161 ~1640      3   175    165.71 sec  T/O =  5  PRV = 56
+SBY 10:29:12 [tcim_core_safety_1of3] engine_0: 59 : ... 9 14 10 8 6 6 6 120 53 27 7 26 56 35 8 5 5 5 4 13 164 ~1640      4   175    168.22 sec  T/O =  5  PRV = 56
+SBY 10:29:15 [tcim_core_safety_1of3] engine_0: 60 : ... 14 10 8 6 6 6 120 53 27 7 26 56 35 8 5 5 5 4 4 7 171 ~1640       4   175    170.63 sec  T/O =  5  PRV = 56
+SBY 10:29:17 [tcim_core_safety_1of3] engine_0: 61 : ... 10 8 6 6 6 120 53 27 7 26 56 35 8 5 5 5 4 4 4 7 170 ~1640        4   175    173.07 sec  T/O =  5  PRV = 56
+SBY 10:29:19 [tcim_core_safety_1of3] engine_0: 62 : ... 10 8 6 6 6 120 53 27 7 26 56 35 8 5 5 5 4 4 4 4 9 170 ~1640      4   175    175.15 sec  T/O =  5  PRV = 56
+SBY 10:29:21 [tcim_core_safety_1of3] engine_0: 63 : ... 8 6 6 6 120 53 27 7 26 56 35 8 5 5 5 4 4 4 4 4 9 168 ~1640       3   175    177.46 sec  T/O =  5  PRV = 56
+SBY 10:29:24 [tcim_core_safety_1of3] engine_0: 64 : ... 6 6 6 120 53 27 7 26 56 35 8 5 5 5 4 4 4 4 4 4 6 172 ~1640       3   175    180.09 sec  T/O =  5  PRV = 56
+SBY 10:29:27 [tcim_core_safety_1of3] engine_0: 65 : ... 6 6 120 53 27 7 26 56 35 8 5 5 5 4 4 4 4 4 4 4 6 171 ~1640       2   175    182.62 sec  T/O =  5  PRV = 56
+SBY 10:29:29 [tcim_core_safety_1of3] engine_0: 66 : ... 6 120 53 27 7 26 56 35 8 5 5 5 4 4 4 4 4 4 4 4 97 87 ~1640       3   175    185.17 sec  T/O =  5  PRV = 56
+SBY 10:29:31 [tcim_core_safety_1of3] engine_0: 67 : ... 120 53 27 7 26 56 35 8 5 5 5 4 4 4 4 4 4 4 4 4 80 108 ~1640      3   175    187.42 sec  T/O =  5  PRV = 56
+SBY 10:29:34 [tcim_core_safety_1of3] engine_0: 68 : ... 53 27 7 26 56 35 8 5 5 5 4 4 4 4 4 4 4 4 4 4 8 180 ~1640         3   175    189.81 sec  T/O =  5  PRV = 56
+SBY 10:29:36 [tcim_core_safety_1of3] engine_0: 69 : ... 53 27 7 26 56 35 8 5 5 5 4 4 4 4 4 4 4 4 4 4 5 6 5 ~1814         2   175    192.32 sec  T/O =  5  PRV = 56
+SBY 10:29:39 [tcim_core_safety_1of3] engine_0: 70 : ... 53 27 7 26 56 35 8 5 5 5 4 4 4 4 4 4 4 4 4 4 4 4 9 4 ~1801       2   175    194.70 sec  T/O =  5  PRV = 56
+SBY 10:29:41 [tcim_core_safety_1of3] engine_0: 71 : ... 27 7 26 56 35 8 5 5 5 4 4 4 4 4 4 4 4 4 4 4 4 4 9 5 ~1801        4   175    197.01 sec  T/O =  5  PRV = 56
+SBY 10:29:43 [tcim_core_safety_1of3] engine_0: 72 : ... 27 7 26 56 35 8 5 5 5 4 4 4 4 4 4 4 4 4 4 4 4 4 4 5 6 ~1801      2   175    199.48 sec  T/O =  5  PRV = 56
+SBY 10:29:46 [tcim_core_safety_1of3] engine_0: 73 : ... 7 26 56 35 8 5 5 5 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 6 5 ~1801       2   175    201.70 sec  T/O =  5  PRV = 56
+SBY 10:29:48 [tcim_core_safety_1of3] engine_0: 74 : ... 26 56 35 8 5 5 5 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 3 3 4 ~1801       0   175    204.02 sec  T/O =  5  PRV = 56
+SBY 10:29:50 [tcim_core_safety_1of3] engine_0: 75 : ... 56 35 8 5 5 5 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 3 3 9 0 ~1801        2   175    206.22 sec  T/O =  5  PRV = 56
+SBY 10:29:53 [tcim_core_safety_1of3] engine_0: 76 : ... 56 35 8 5 5 5 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 3 3 1 0 7 ~1801      0   175    208.62 sec  T/O =  5  PRV = 56
+SBY 10:29:53 [tcim_core_safety_1of3] engine_0: Proved output 51 in frame 62 (converged).
+SBY 10:29:53 [tcim_core_safety_1of3] engine_0: Starting new anytime pass, reusing clauses.
+SBY 10:29:53 [tcim_core_safety_1of3] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 10:29:58 [tcim_core_safety_1of3] engine_0: 1 : 0 3432 ~1825                                                         0     0      5.77 sec  T/O =  0  PRV = 57
+SBY 10:29:58 [tcim_core_safety_1of3] engine_0: 2 : 0 53 3379 ~1825                                                      0     0      5.85 sec  T/O =  0  PRV = 57
+SBY 10:29:59 [tcim_core_safety_1of3] engine_0: 3 : 0 53 190 3189 ~1825                                                  0     0      5.99 sec  T/O =  0  PRV = 57
+SBY 10:29:59 [tcim_core_safety_1of3] engine_0: 4 : 0 53 190 656 2533 ~1825                                              0     0      6.50 sec  T/O =  0  PRV = 57
+SBY 10:30:00 [tcim_core_safety_1of3] engine_0: 5 : 0 53 190 656 580 1953 ~1825                                          0     0      7.37 sec  T/O =  0  PRV = 57
+SBY 10:30:02 [tcim_core_safety_1of3] engine_0: 6 : 0 53 190 656 585 237 1770 ~1825                                      6    59      9.02 sec  T/O =  0  PRV = 57
+SBY 10:30:02 [tcim_core_safety_1of3] engine_0: 6 : 0 53 190 656 589 262 1799 ~1825                                      7    72      9.42 sec  T/O =  0  PRV = 57
+SBY 10:30:02 [tcim_core_safety_1of3] engine_0: 6 : 0 53 190 656 595 289 1828 ~1825                                      8    83      9.91 sec  T/O =  0  PRV = 57
+SBY 10:30:03 [tcim_core_safety_1of3] engine_0: 6 : 0 53 190 656 595 306 1861 ~1825                                      5   110     10.45 sec  T/O =  0  PRV = 57
+SBY 10:30:08 [tcim_core_safety_1of3] engine_0: 7 : 0 53 190 656 563 207 413 1504 ~1845                                  8   126     15.54 sec  T/O =  0  PRV = 57
+SBY 10:30:09 [tcim_core_safety_1of3] engine_0: 7 : 0 53 190 656 564 220 430 1533 ~1845                                  7   133     16.05 sec  T/O =  0  PRV = 57
+SBY 10:30:09 [tcim_core_safety_1of3] engine_0: 7 : 0 53 190 656 564 232 441 1569 ~1845                                  6   142     16.47 sec  T/O =  0  PRV = 57
+SBY 10:30:10 [tcim_core_safety_1of3] engine_0: 7 : 0 53 190 656 565 248 453 1599 ~1845                                  7   149     16.98 sec  T/O =  0  PRV = 57
+SBY 10:30:11 [tcim_core_safety_1of3] engine_0: 7 : 0 53 190 656 565 256 496 1659 ~1845                                  7   156     18.13 sec  T/O =  0  PRV = 57
+SBY 10:30:11 [tcim_core_safety_1of3] engine_0: 7 : 0 53 190 656 565 256 499 1668 ~1845                                  3   158     18.26 sec  T/O =  0  PRV = 57
+SBY 10:30:17 [tcim_core_safety_1of3] engine_0: 8 : 0 53 190 656 563 153 309 396 1317 ~1977                              8   163     24.35 sec  T/O =  0  PRV = 57
+SBY 10:30:18 [tcim_core_safety_1of3] engine_0: 8 : 0 53 190 656 563 153 314 443 1362 ~1977                              8   163     25.31 sec  T/O =  0  PRV = 57
+SBY 10:30:18 [tcim_core_safety_1of3] engine_0: 8 : 0 53 190 656 563 153 314 471 1397 ~1977                              5   163     25.87 sec  T/O =  0  PRV = 57
+SBY 10:30:19 [tcim_core_safety_1of3] engine_0: 8 : 0 53 190 656 563 153 314 485 1417 ~1977                              4   164     26.21 sec  T/O =  0  PRV = 57
+SBY 10:30:24 [tcim_core_safety_1of3] engine_0: 9 : 0 53 190 656 563 138 279 237 247 1312 ~2053                          3   164     31.57 sec  T/O =  0  PRV = 57
+SBY 10:30:32 [tcim_core_safety_1of3] engine_0: 10 : 0 53 190 656 563 138 276 236 92 161 1274 ~2083                       4   164     39.72 sec  T/O =  0  PRV = 57
+SBY 10:30:40 [tcim_core_safety_1of3] engine_0: 11 : 0 53 190 656 563 138 276 236 90 49 268 1136 ~2093                    6   164     47.58 sec  T/O =  0  PRV = 57
+SBY 10:30:45 [tcim_core_safety_1of3] engine_0: 12 : 0 53 190 656 563 138 276 236 90 49 126 280 1014 ~2091                6   164     52.08 sec  T/O =  0  PRV = 57
+SBY 10:30:45 [tcim_core_safety_1of3] engine_0: 12 : 0 53 190 656 563 138 276 236 90 49 126 309 1050 ~2091                6   164     52.69 sec  T/O =  0  PRV = 57
+SBY 10:30:46 [tcim_core_safety_1of3] engine_0: 12 : 0 53 190 656 563 138 276 236 90 49 126 329 1078 ~2091                4   164     53.24 sec  T/O =  0  PRV = 57
+SBY 10:30:46 [tcim_core_safety_1of3] engine_0: Timing out on output 49 in frame 12 (retrying in next anytime pass).
+SBY 10:30:46 [tcim_core_safety_1of3] engine_0: 12 : 0 53 190 656 563 138 276 236 90 49 126 329 1078 ~2091                0   164     53.24 sec  T/O =  1  PRV = 57
+SBY 10:30:51 [tcim_core_safety_1of3] engine_0: 13 : 0 53 190 656 563 138 276 236 90 49 122 212 291 919 ~2091             6   169     58.25 sec  T/O =  1  PRV = 57
+SBY 10:30:52 [tcim_core_safety_1of3] engine_0: 13 : 0 53 190 656 563 138 276 236 90 49 122 214 321 953 ~2091             7   170     59.36 sec  T/O =  1  PRV = 57
+SBY 10:30:53 [tcim_core_safety_1of3] engine_0: 13 : 0 53 190 656 563 138 276 236 90 49 122 221 347 982 ~2091            11   170     60.55 sec  T/O =  1  PRV = 57
+SBY 10:30:54 [tcim_core_safety_1of3] engine_0: 13 : 0 53 190 656 563 138 276 236 90 49 122 221 363 1011 ~2091           12   170     61.50 sec  T/O =  1  PRV = 57
+SBY 10:30:59 [tcim_core_safety_1of3] engine_0: 14 : ... 53 190 656 563 138 276 236 90 49 122 175 222 218 937 ~2092       5   170     66.20 sec  T/O =  1  PRV = 57
+SBY 10:31:05 [tcim_core_safety_1of3] engine_0: 15 : ... 190 656 563 138 276 236 90 49 122 175 208 174 187 850 ~2094     13   171     72.50 sec  T/O =  1  PRV = 57
+SBY 10:31:06 [tcim_core_safety_1of3] engine_0: 15 : ... 190 656 563 138 276 236 90 49 122 175 208 175 198 864 ~2094     13   171     73.07 sec  T/O =  1  PRV = 57
+SBY 10:31:06 [tcim_core_safety_1of3] engine_0: Timing out on output 50 in frame 15 (retrying in next anytime pass).
+SBY 10:31:06 [tcim_core_safety_1of3] engine_0: 15 : ... 190 656 563 138 276 236 90 49 122 175 208 175 198 864 ~2094      0   171     73.07 sec  T/O =  2  PRV = 57
+SBY 10:31:11 [tcim_core_safety_1of3] engine_0: 16 : ... 656 563 138 276 236 90 49 122 175 206 107 146 126 813 ~2104      0   171     78.54 sec  T/O =  2  PRV = 57
+SBY 10:31:14 [tcim_core_safety_1of3] engine_0: 17 : ... 563 138 276 236 90 49 122 175 206 106 144 127 72 792 ~2104      13   171     81.40 sec  T/O =  2  PRV = 57
+SBY 10:31:14 [tcim_core_safety_1of3] engine_0: 17 : ... 563 138 276 236 90 49 122 175 206 106 144 128 89 813 ~2104       6   171     81.89 sec  T/O =  2  PRV = 57
+SBY 10:31:21 [tcim_core_safety_1of3] engine_0: 18 : ... 138 276 236 90 49 122 175 206 106 144 119 59 62 740 ~2146        4   171     88.69 sec  T/O =  2  PRV = 57
+SBY 10:31:26 [tcim_core_safety_1of3] engine_0: 19 : ... 276 236 90 49 122 175 206 106 144 119 63 72 86 692 ~2128        19   171     93.70 sec  T/O =  2  PRV = 57
+SBY 10:31:27 [tcim_core_safety_1of3] engine_0: 19 : ... 276 236 90 49 122 175 206 106 144 119 65 81 104 717 ~2128       20   171     94.27 sec  T/O =  2  PRV = 57
+SBY 10:31:27 [tcim_core_safety_1of3] engine_0: 19 : ... 276 236 90 49 122 175 206 106 144 119 72 92 117 735 ~2128       14   171     94.88 sec  T/O =  2  PRV = 57
+SBY 10:31:33 [tcim_core_safety_1of3] engine_0: 20 : ... 236 90 49 122 175 206 106 144 118 62 56 66 132 685 ~2131         4   183    100.24 sec  T/O =  2  PRV = 57
+SBY 10:31:33 [tcim_core_safety_1of3] engine_0: 20 : ... 236 90 49 122 175 206 106 144 118 62 56 66 152 725 ~2131         3   183    100.58 sec  T/O =  2  PRV = 57
+SBY 10:31:33 [tcim_core_safety_1of3] engine_0: 20 : ... 236 90 49 122 175 206 106 144 118 62 56 66 154 729 ~2131         2   185    100.61 sec  T/O =  2  PRV = 57
+SBY 10:31:39 [tcim_core_safety_1of3] engine_0: 21 : ... 236 90 49 122 175 206 106 144 118 63 58 69 96 155 670 ~2131     11   185    106.02 sec  T/O =  2  PRV = 57
+SBY 10:31:40 [tcim_core_safety_1of3] engine_0: 21 : ... 90 49 122 175 206 106 144 118 64 60 74 107 177 696 ~2131        12   185    107.16 sec  T/O =  2  PRV = 57
+SBY 10:31:40 [tcim_core_safety_1of3] engine_0: 21 : ... 90 49 122 175 206 106 144 118 64 60 75 110 202 741 ~2131         9   185    107.78 sec  T/O =  2  PRV = 57
+SBY 10:31:46 [tcim_core_safety_1of3] engine_0: 22 : ... 90 49 122 175 206 106 144 118 63 57 67 82 77 139 761 ~2138       3   185    113.87 sec  T/O =  2  PRV = 57
+SBY 10:31:47 [tcim_core_safety_1of3] engine_0: 22 : ... 90 49 122 175 206 106 144 118 63 57 67 82 77 144 767 ~2138       4   185    113.93 sec  T/O =  2  PRV = 57
+SBY 10:31:52 [tcim_core_safety_1of3] engine_0: 23 : ... 49 122 175 206 106 144 118 63 57 67 82 77 119 180 643 ~2139     10   185    119.27 sec  T/O =  2  PRV = 57
+SBY 10:31:52 [tcim_core_safety_1of3] engine_0: Timing out on output 16 in frame 23 (retrying in next anytime pass).
+SBY 10:31:52 [tcim_core_safety_1of3] engine_0: 23 : ... 49 122 175 206 106 144 118 63 57 67 82 77 119 191 686 ~2139      3   185    119.59 sec  T/O =  3  PRV = 57
+SBY 10:31:57 [tcim_core_safety_1of3] engine_0: 24 : ... 122 175 206 106 144 118 63 57 67 82 77 106 89 94 743 ~2138       4   185    124.65 sec  T/O =  3  PRV = 57
+SBY 10:31:57 [tcim_core_safety_1of3] engine_0: 24 : ... 122 175 206 106 144 118 63 57 67 82 77 106 89 96 748 ~2138       2   185    124.68 sec  T/O =  3  PRV = 57
+SBY 10:32:02 [tcim_core_safety_1of3] engine_0: 25 : ... 175 206 106 144 118 63 57 67 82 77 106 89 66 161 636 ~2138       2   185    129.17 sec  T/O =  3  PRV = 57
+SBY 10:32:06 [tcim_core_safety_1of3] engine_0: 26 : ... 206 106 144 118 63 57 67 82 77 106 89 66 42 125 666 ~2138        3   185    133.90 sec  T/O =  3  PRV = 57
+SBY 10:32:12 [tcim_core_safety_1of3] engine_0: 27 : ... 106 144 118 63 57 67 82 77 106 89 66 42 105 261 481 ~2138        4   186    138.94 sec  T/O =  3  PRV = 57
+SBY 10:32:12 [tcim_core_safety_1of3] engine_0: 27 : ... 106 144 118 63 57 67 82 77 106 89 66 42 105 284 514 ~2138        6   186    139.21 sec  T/O =  3  PRV = 57
+SBY 10:32:12 [tcim_core_safety_1of3] engine_0: 27 : ... 106 144 118 63 57 67 82 77 106 89 66 42 105 291 559 ~2138        3   186    139.51 sec  T/O =  3  PRV = 57
+SBY 10:32:17 [tcim_core_safety_1of3] engine_0: 28 : ... 144 118 63 57 67 81 77 106 89 66 42 105 48 123 708 ~2138         4   186    144.19 sec  T/O =  3  PRV = 57
+SBY 10:32:17 [tcim_core_safety_1of3] engine_0: 28 : ... 144 118 63 57 67 81 77 106 89 66 42 105 48 141 749 ~2138         3   186    144.51 sec  T/O =  3  PRV = 57
+SBY 10:32:17 [tcim_core_safety_1of3] engine_0: 28 : ... 144 118 63 57 67 81 77 106 89 66 42 105 48 152 769 ~2138         3   186    144.82 sec  T/O =  3  PRV = 57
+SBY 10:32:22 [tcim_core_safety_1of3] engine_0: 29 : ... 144 118 63 57 67 81 77 106 89 66 42 105 48 51 100 797 ~2138      3   186    149.88 sec  T/O =  3  PRV = 57
+SBY 10:32:27 [tcim_core_safety_1of3] engine_0: 30 : ... 118 63 57 67 81 77 106 89 66 42 105 48 51 42 73 824 ~2138        4   186    154.59 sec  T/O =  3  PRV = 57
+SBY 10:32:32 [tcim_core_safety_1of3] engine_0: 31 : ... 63 57 67 81 77 106 89 66 42 105 48 51 40 56 331 556 ~2138        3   186    159.23 sec  T/O =  3  PRV = 57
+SBY 10:32:36 [tcim_core_safety_1of3] engine_0: 32 : ... 63 57 67 81 77 106 89 66 42 105 48 51 40 56 42 60 835 ~2138      3   186    163.58 sec  T/O =  3  PRV = 57
+SBY 10:32:36 [tcim_core_safety_1of3] engine_0: 32 : ... 63 57 67 81 77 106 89 66 42 105 48 51 40 56 42 60 839 ~2138      2   186    163.60 sec  T/O =  3  PRV = 57
+SBY 10:32:41 [tcim_core_safety_1of3] engine_0: 33 : ... 67 81 77 106 89 66 42 105 48 51 40 56 42 36 279 604 ~2138        3   186    168.03 sec  T/O =  3  PRV = 57
+SBY 10:32:45 [tcim_core_safety_1of3] engine_0: 34 : ... 81 77 106 89 66 42 105 48 51 40 56 42 36 27 268 624 ~2138        4   186    172.39 sec  T/O =  3  PRV = 57
+SBY 10:32:49 [tcim_core_safety_1of3] engine_0: 35 : ... 77 106 89 66 42 105 48 51 40 56 42 36 27 197 265 482 ~2138       4   186    176.79 sec  T/O =  3  PRV = 57
+SBY 10:32:50 [tcim_core_safety_1of3] engine_0: 35 : ... 77 106 89 66 42 105 48 51 40 56 42 36 27 197 282 514 ~2138       4   186    177.05 sec  T/O =  3  PRV = 57
+SBY 10:32:50 [tcim_core_safety_1of3] engine_0: Timing out on output 44 in frame 35 (retrying in next anytime pass).
+SBY 10:32:50 [tcim_core_safety_1of3] engine_0: 35 : ... 77 106 89 66 42 105 48 51 40 56 42 36 27 197 282 514 ~2138       0   186    177.05 sec  T/O =  4  PRV = 57
+SBY 10:32:56 [tcim_core_safety_1of3] engine_0: 36 : ... 106 89 66 42 105 48 51 40 56 42 36 27 197 156 239 385 ~2138      0   186    183.22 sec  T/O =  4  PRV = 57
+SBY 10:33:00 [tcim_core_safety_1of3] engine_0: 37 : ... 89 66 42 105 48 51 40 56 42 36 27 197 156 239 93 290 ~2138       0   186    187.07 sec  T/O =  4  PRV = 57
+SBY 10:33:04 [tcim_core_safety_1of3] engine_0: 38 : ... 66 42 105 48 51 40 56 42 36 27 197 156 239 93 18 272 ~2138       0   186    191.07 sec  T/O =  4  PRV = 57
+SBY 10:33:08 [tcim_core_safety_1of3] engine_0: 39 : ... 42 105 48 51 40 56 42 36 27 197 156 239 93 18 8 264 ~2138        0   186    195.29 sec  T/O =  4  PRV = 57
+SBY 10:33:12 [tcim_core_safety_1of3] engine_0: 40 : ... 42 105 48 51 40 56 42 36 27 197 156 239 93 18 8 6 258 ~2138      0   186    199.49 sec  T/O =  4  PRV = 57
+SBY 10:33:16 [tcim_core_safety_1of3] engine_0: 41 : ... 105 48 51 40 56 42 36 27 197 156 239 93 18 8 6 7 251 ~2138       0   186    203.65 sec  T/O =  4  PRV = 57
+SBY 10:33:20 [tcim_core_safety_1of3] engine_0: 42 : ... 48 51 40 56 42 36 27 197 156 239 93 18 8 6 7 6 245 ~2138         0   186    207.67 sec  T/O =  4  PRV = 57
+SBY 10:33:25 [tcim_core_safety_1of3] engine_0: 43 : ... 48 51 40 56 42 36 27 197 156 239 93 18 8 6 7 6 15 229 ~2138      0   186    212.00 sec  T/O =  4  PRV = 57
+SBY 10:33:29 [tcim_core_safety_1of3] engine_0: 44 : ... 51 40 56 42 36 27 197 156 239 93 18 8 6 7 6 15 6 223 ~2138       0   186    216.07 sec  T/O =  4  PRV = 57
+SBY 10:33:32 [tcim_core_safety_1of3] engine_0: 45 : ... 40 56 42 36 27 197 156 239 93 18 8 6 7 6 15 6 7 216 ~2138        0   186    219.79 sec  T/O =  4  PRV = 57
+SBY 10:33:36 [tcim_core_safety_1of3] engine_0: 46 : ... 40 56 42 36 27 197 156 239 93 18 8 6 7 6 15 6 7 5 211 ~2138      0   186    223.71 sec  T/O =  4  PRV = 57
+SBY 10:33:41 [tcim_core_safety_1of3] engine_0: 47 : ... 56 42 36 27 197 156 239 93 18 8 6 7 6 15 6 7 5 6 203 ~2138       0   186    228.13 sec  T/O =  4  PRV = 57
+SBY 10:33:46 [tcim_core_safety_1of3] engine_0: 48 : ... 42 36 27 197 156 239 93 18 8 6 7 6 15 6 7 5 6 12 191 ~2138       0   186    233.74 sec  T/O =  4  PRV = 57
+SBY 10:33:52 [tcim_core_safety_1of3] engine_0: 49 : ... 36 27 197 156 239 93 18 8 6 7 6 15 6 7 5 6 12 8 183 ~2138        0   186    239.36 sec  T/O =  4  PRV = 57
+SBY 10:33:57 [tcim_core_safety_1of3] engine_0: 50 : ... 36 27 197 156 239 93 18 8 6 7 6 15 6 7 5 6 12 8 5 178 ~2138      0   186    243.93 sec  T/O =  4  PRV = 57
+SBY 10:34:01 [tcim_core_safety_1of3] engine_0: 51 : ... 27 197 156 239 93 18 8 6 7 6 15 6 7 5 6 12 8 5 6 172 ~2138       0   186    248.10 sec  T/O =  4  PRV = 57
+SBY 10:34:05 [tcim_core_safety_1of3] engine_0: 52 : ... 197 156 239 93 18 8 6 7 6 15 6 7 5 6 12 8 5 6 95 77 ~2138        0   186    252.06 sec  T/O =  4  PRV = 57
+SBY 10:34:09 [tcim_core_safety_1of3] engine_0: 53 : ... 156 239 93 18 8 6 7 6 15 6 7 5 6 12 8 5 6 95 39 87 ~2138         2   198    256.55 sec  T/O =  4  PRV = 57
+SBY 10:34:09 [tcim_core_safety_1of3] engine_0: 53 : ... 156 239 93 18 8 6 7 6 15 6 7 5 6 12 8 5 6 95 39 110 ~2138        2   206    256.76 sec  T/O =  4  PRV = 57
+SBY 10:34:10 [tcim_core_safety_1of3] engine_0: Proved output 19 in frame 53.
+SBY 10:34:16 [tcim_core_safety_1of3] engine_0: 54 : ... 156 239 93 18 8 6 7 6 15 6 7 5 6 12 8 5 6 95 38 7 31 ~2210       0   206    263.27 sec  T/O =  4  PRV = 58
+SBY 10:34:21 [tcim_core_safety_1of3] engine_0: 55 : ... 239 93 18 8 6 7 6 15 6 7 5 6 12 8 5 6 95 38 7 5 26 ~2210         0   206    268.87 sec  T/O =  4  PRV = 58
+SBY 10:34:21 [tcim_core_safety_1of3] engine_0: All outputs solved or timed out in frame 55.
+SBY 10:34:22 [tcim_core_safety_1of3] engine_0: Starting new anytime pass, reusing clauses.
+SBY 10:34:22 [tcim_core_safety_1of3] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 10:34:44 [tcim_core_safety_1of3] engine_0: 1 : 0 5146 ~2175                                                         0     0     22.69 sec  T/O =  0  PRV = 58
+SBY 10:34:45 [tcim_core_safety_1of3] engine_0: 2 : 0 53 5093 ~2175                                                      0     0     23.09 sec  T/O =  0  PRV = 58
+SBY 10:34:45 [tcim_core_safety_1of3] engine_0: 3 : 0 53 190 4903 ~2175                                                  0     0     23.60 sec  T/O =  0  PRV = 58
+SBY 10:34:47 [tcim_core_safety_1of3] engine_0: 4 : 0 53 190 656 4247 ~2175                                              0     0     24.77 sec  T/O =  0  PRV = 58
+SBY 10:34:48 [tcim_core_safety_1of3] engine_0: 5 : 0 53 190 656 563 3684 ~2175                                          0     0     26.66 sec  T/O =  0  PRV = 58
+SBY 10:34:50 [tcim_core_safety_1of3] engine_0: 6 : 0 53 190 656 563 138 3546 ~2175                                      0     0     28.59 sec  T/O =  0  PRV = 58
+SBY 10:34:52 [tcim_core_safety_1of3] engine_0: 7 : 0 53 190 656 563 138 276 3270 ~2175                                  0     0     30.65 sec  T/O =  0  PRV = 58
+SBY 10:34:55 [tcim_core_safety_1of3] engine_0: 8 : 0 53 190 656 563 138 276 236 3034 ~2175                              0     0     33.25 sec  T/O =  0  PRV = 58
+SBY 10:34:58 [tcim_core_safety_1of3] engine_0: 9 : 0 53 190 656 563 138 276 236 90 2944 ~2175                           0     0     36.19 sec  T/O =  0  PRV = 58
+SBY 10:35:01 [tcim_core_safety_1of3] engine_0: 10 : 0 53 190 656 563 138 276 236 90 49 2895 ~2175                        0     0     39.56 sec  T/O =  0  PRV = 58
+SBY 10:35:05 [tcim_core_safety_1of3] engine_0: 11 : 0 53 190 656 563 138 276 236 90 49 122 2773 ~2175                    0     0     42.92 sec  T/O =  0  PRV = 58
+SBY 10:35:10 [tcim_core_safety_1of3] engine_0: 12 : 0 53 190 656 563 138 276 236 90 49 122 201 2628 ~2175                5    27     47.89 sec  T/O =  0  PRV = 58
+SBY 10:35:10 [tcim_core_safety_1of3] engine_0: 12 : 0 53 190 656 563 138 276 236 90 49 122 208 2645 ~2175                3    29     48.49 sec  T/O =  0  PRV = 58
+SBY 10:35:27 [tcim_core_safety_1of3] engine_0: 13 : 0 53 190 656 563 138 276 236 90 49 122 110 159 2580 ~2175            3    29     65.26 sec  T/O =  0  PRV = 58
+SBY 10:35:47 [tcim_core_safety_1of3] engine_0: 14 : ... 53 190 656 563 138 276 236 90 49 122 110 89 186 1758 ~2199       3    29     85.48 sec  T/O =  0  PRV = 58
+SBY 10:35:47 [tcim_core_safety_1of3] engine_0: 14 : ... 53 190 656 563 138 276 236 90 49 122 110 89 189 1763 ~2199       2    29     85.58 sec  T/O =  0  PRV = 58
+SBY 10:35:58 [tcim_core_safety_1of3] engine_0: 15 : ... 190 656 563 138 276 236 90 49 122 110 88 70 190 1683 ~2182       3    29     96.58 sec  T/O =  0  PRV = 58
+SBY 10:36:10 [tcim_core_safety_1of3] engine_0: 16 : ... 656 563 138 276 236 90 49 122 110 88 70 95 121 1680 ~2182        4    30    107.95 sec  T/O =  0  PRV = 58
+SBY 10:36:10 [tcim_core_safety_1of3] engine_0: 16 : ... 656 563 138 276 236 90 49 122 110 88 70 95 123 1689 ~2182        3    30    108.15 sec  T/O =  0  PRV = 58
+SBY 10:36:20 [tcim_core_safety_1of3] engine_0: 17 : ... 563 138 276 236 90 49 122 110 88 70 93 60 112 1623 ~2182         2    30    118.72 sec  T/O =  0  PRV = 58
+SBY 10:36:32 [tcim_core_safety_1of3] engine_0: 18 : ... 563 138 276 236 90 49 122 110 88 70 93 60 48 88 1599 ~2182       2    30    129.78 sec  T/O =  0  PRV = 58
+SBY 10:36:42 [tcim_core_safety_1of3] engine_0: 19 : ... 138 276 236 90 49 122 110 88 70 93 60 46 46 257 1390 ~2182       4    30    140.63 sec  T/O =  0  PRV = 58
+SBY 10:36:54 [tcim_core_safety_1of3] engine_0: 20 : ... 276 236 90 49 122 110 88 70 93 60 46 46 166 274 1249 ~2182       6    30    151.86 sec  T/O =  0  PRV = 58
+SBY 10:36:55 [tcim_core_safety_1of3] engine_0: 20 : ... 276 236 90 49 122 110 88 70 93 60 46 46 166 301 1284 ~2182       5    31    153.57 sec  T/O =  0  PRV = 58
+SBY 10:36:57 [tcim_core_safety_1of3] engine_0: 20 : ... 276 236 90 49 122 110 88 70 93 60 46 46 166 322 1324 ~2182       3    31    154.98 sec  T/O =  0  PRV = 58
+SBY 10:36:57 [tcim_core_safety_1of3] engine_0: 20 : ... 276 236 90 49 122 110 88 70 93 60 46 46 166 324 1333 ~2182       3    31    155.31 sec  T/O =  0  PRV = 58
+SBY 10:37:07 [tcim_core_safety_1of3] engine_0: 21 : ... 236 90 49 122 110 88 70 93 60 46 46 165 102 168 1333 ~2182       3    31    165.23 sec  T/O =  0  PRV = 58
+SBY 10:37:16 [tcim_core_safety_1of3] engine_0: 22 : ... 90 49 122 110 88 70 93 60 46 46 165 102 43 137 1286 ~2182        2    31    174.48 sec  T/O =  0  PRV = 58
+SBY 10:37:16 [tcim_core_safety_1of3] engine_0: Timing out on output 49 in frame 22 (retrying in next anytime pass).
+SBY 10:37:16 [tcim_core_safety_1of3] engine_0: 22 : ... 90 49 122 110 88 70 93 60 46 46 165 102 43 137 1286 ~2182        0    31    174.48 sec  T/O =  1  PRV = 58
+SBY 10:37:27 [tcim_core_safety_1of3] engine_0: 23 : ... 49 122 110 88 70 93 60 46 46 165 102 42 130 241 1098 ~2182       7    37    184.96 sec  T/O =  1  PRV = 58
+SBY 10:37:35 [tcim_core_safety_1of3] engine_0: 24 : ... 122 110 88 70 93 60 46 46 165 102 42 73 133 150 1067 ~2182       0    37    193.68 sec  T/O =  1  PRV = 58
+SBY 10:37:43 [tcim_core_safety_1of3] engine_0: 25 : ... 110 88 70 93 60 46 46 165 102 42 73 133 158 160 971 ~2182       15    62    200.90 sec  T/O =  1  PRV = 58
+SBY 10:37:46 [tcim_core_safety_1of3] engine_0: 25 : ... 110 88 70 93 60 46 46 165 102 42 73 133 163 191 1000 ~2182      14   106    203.84 sec  T/O =  1  PRV = 58
+SBY 10:37:50 [tcim_core_safety_1of3] engine_0: 25 : ... 110 88 70 93 60 46 46 165 102 42 73 133 169 218 1034 ~2182      15   109    207.84 sec  T/O =  1  PRV = 58
+SBY 10:37:51 [tcim_core_safety_1of3] engine_0: 25 : ... 110 88 70 93 60 46 46 165 102 42 73 133 169 228 1048 ~2182      11   110    209.09 sec  T/O =  1  PRV = 58
+SBY 10:37:51 [tcim_core_safety_1of3] engine_0: Timing out on output 50 in frame 25 (retrying in next anytime pass).
+SBY 10:37:51 [tcim_core_safety_1of3] engine_0: 25 : ... 110 88 70 93 60 46 46 165 102 42 73 133 169 228 1048 ~2182       0   110    209.10 sec  T/O =  2  PRV = 58
+SBY 10:38:05 [tcim_core_safety_1of3] engine_0: 26 : ... 88 70 93 60 46 46 165 102 42 73 133 137 146 203 942 ~2211        9   110    223.16 sec  T/O =  2  PRV = 58
+SBY 10:38:14 [tcim_core_safety_1of3] engine_0: 27 : ... 70 93 60 46 46 165 102 42 73 133 137 141 178 109 897 ~2195       8   111    232.15 sec  T/O =  2  PRV = 58
+SBY 10:38:15 [tcim_core_safety_1of3] engine_0: 27 : ... 70 93 60 46 46 165 102 42 73 133 137 141 182 123 912 ~2195       6   111    233.00 sec  T/O =  2  PRV = 58
+SBY 10:38:24 [tcim_core_safety_1of3] engine_0: 28 : ... 93 60 46 46 165 102 42 73 133 137 140 174 110 89 879 ~2195      19   111    242.15 sec  T/O =  2  PRV = 58
+SBY 10:38:25 [tcim_core_safety_1of3] engine_0: 28 : ... 93 60 46 46 165 102 42 73 133 137 140 174 113 103 903 ~2195     19   111    242.85 sec  T/O =  2  PRV = 58
+SBY 10:38:35 [tcim_core_safety_1of3] engine_0: 29 : ... 60 46 46 165 102 42 73 133 137 140 168 95 81 76 882 ~2195       14   113    253.17 sec  T/O =  2  PRV = 58
+SBY 10:38:37 [tcim_core_safety_1of3] engine_0: 29 : ... 60 46 46 165 102 42 73 133 137 140 168 98 89 94 909 ~2195       17   113    255.14 sec  T/O =  2  PRV = 58
+SBY 10:38:47 [tcim_core_safety_1of3] engine_0: 30 : ... 46 46 165 102 42 73 133 137 140 168 95 75 79 94 849 ~2196       15   113    265.04 sec  T/O =  2  PRV = 58
+SBY 10:38:49 [tcim_core_safety_1of3] engine_0: 30 : ... 46 46 165 102 42 73 133 137 140 168 95 75 86 118 877 ~2196      14   115    266.95 sec  T/O =  2  PRV = 58
+SBY 10:38:49 [tcim_core_safety_1of3] engine_0: 30 : ... 46 46 165 102 42 73 133 137 140 168 95 75 86 118 881 ~2196       2   115    267.03 sec  T/O =  2  PRV = 58
+SBY 10:38:58 [tcim_core_safety_1of3] engine_0: 31 : ... 46 165 102 42 73 133 137 140 168 95 75 67 85 85 821 ~2198        6   115    275.85 sec  T/O =  2  PRV = 58
+SBY 10:38:58 [tcim_core_safety_1of3] engine_0: Timing out on output 16 in frame 31 (retrying in next anytime pass).
+SBY 10:38:58 [tcim_core_safety_1of3] engine_0: 31 : ... 46 165 102 42 73 133 137 140 168 95 75 67 85 85 821 ~2198        0   115    275.86 sec  T/O =  3  PRV = 58
+SBY 10:39:05 [tcim_core_safety_1of3] engine_0: 32 : ... 165 102 42 73 133 137 140 168 95 75 67 76 84 51 775 ~2198        0   115    283.46 sec  T/O =  3  PRV = 58
+SBY 10:39:11 [tcim_core_safety_1of3] engine_0: 33 : ... 102 42 73 133 137 140 168 95 75 67 76 84 51 16 759 ~2198         0   115    289.05 sec  T/O =  3  PRV = 58
+SBY 10:39:16 [tcim_core_safety_1of3] engine_0: 34 : ... 42 73 133 137 140 168 95 75 67 76 84 51 16 104 655 ~2198         0   115    294.45 sec  T/O =  3  PRV = 58
+SBY 10:39:22 [tcim_core_safety_1of3] engine_0: 35 : ... 73 133 137 140 168 95 75 67 76 84 51 16 104 150 561 ~2198        6   128    300.67 sec  T/O =  3  PRV = 58
+SBY 10:39:23 [tcim_core_safety_1of3] engine_0: 35 : ... 73 133 137 140 168 95 75 67 76 84 51 16 104 156 606 ~2198        4   128    301.12 sec  T/O =  3  PRV = 58
+SBY 10:39:23 [tcim_core_safety_1of3] engine_0: 35 : ... 73 133 137 140 168 95 75 67 76 84 51 16 104 157 630 ~2198        3   130    301.31 sec  T/O =  3  PRV = 58
+SBY 10:39:28 [tcim_core_safety_1of3] engine_0: 36 : ... 133 137 140 168 95 75 67 76 84 51 16 104 50 189 592 ~2198        3   130    306.71 sec  T/O =  3  PRV = 58
+SBY 10:39:29 [tcim_core_safety_1of3] engine_0: 36 : ... 133 137 140 168 95 75 67 76 84 51 16 104 50 208 633 ~2198        3   130    307.32 sec  T/O =  3  PRV = 58
+SBY 10:39:29 [tcim_core_safety_1of3] engine_0: 36 : ... 133 137 140 168 95 75 67 76 84 51 16 104 50 214 655 ~2198        2   130    307.68 sec  T/O =  3  PRV = 58
+SBY 10:39:35 [tcim_core_safety_1of3] engine_0: 37 : ... 133 137 140 168 95 75 67 76 84 51 16 104 50 63 90 754 ~2198      3   130    313.09 sec  T/O =  3  PRV = 58
+SBY 10:39:40 [tcim_core_safety_1of3] engine_0: 38 : ... 137 140 168 95 75 67 76 84 51 16 104 50 62 26 61 795 ~2198       3   130    318.69 sec  T/O =  3  PRV = 58
+SBY 10:39:46 [tcim_core_safety_1of3] engine_0: 39 : ... 140 168 95 75 67 76 84 51 16 104 50 62 26 47 169 677 ~2198       2   130    324.01 sec  T/O =  3  PRV = 58
+SBY 10:39:51 [tcim_core_safety_1of3] engine_0: 40 : ... 168 95 75 67 76 84 51 16 104 50 62 26 47 28 40 828 ~2198         3   130    329.14 sec  T/O =  3  PRV = 58
+SBY 10:39:56 [tcim_core_safety_1of3] engine_0: 41 : ... 95 75 67 76 84 51 16 104 50 62 26 47 28 27 151 713 ~2198         3   130    333.88 sec  T/O =  3  PRV = 58
+SBY 10:40:02 [tcim_core_safety_1of3] engine_0: 42 : ... 95 75 67 76 84 51 16 104 50 62 26 47 28 27 22 147 731 ~2198      4   130    340.18 sec  T/O =  3  PRV = 58
+SBY 10:40:11 [tcim_core_safety_1of3] engine_0: 43 : ... 67 76 84 51 16 104 50 62 26 47 28 27 22 108 257 568 ~2198        3   130    348.94 sec  T/O =  3  PRV = 58
+SBY 10:40:11 [tcim_core_safety_1of3] engine_0: 43 : ... 67 76 84 51 16 104 50 62 26 47 28 27 22 108 263 605 ~2198        5   130    349.48 sec  T/O =  3  PRV = 58
+SBY 10:40:19 [tcim_core_safety_1of3] engine_0: 44 : ... 67 76 84 51 16 104 50 62 26 47 28 27 22 108 35 79 807 ~2198      4   130    357.53 sec  T/O =  3  PRV = 58
+SBY 10:40:20 [tcim_core_safety_1of3] engine_0: 44 : ... 67 76 84 51 16 104 50 62 26 47 28 27 22 108 35 91 837 ~2198      3   130    357.99 sec  T/O =  3  PRV = 58
+SBY 10:40:28 [tcim_core_safety_1of3] engine_0: 45 : ... 76 84 51 16 104 50 62 26 47 28 27 22 108 35 35 65 850 ~2198      2   130    366.34 sec  T/O =  3  PRV = 58
+SBY 10:40:36 [tcim_core_safety_1of3] engine_0: 46 : ... 84 51 16 104 50 62 26 47 28 27 22 108 35 35 27 54 877 ~2198      4   130    374.39 sec  T/O =  3  PRV = 58
+SBY 10:40:44 [tcim_core_safety_1of3] engine_0: 47 : ... 16 104 50 62 26 47 28 27 22 108 35 35 27 46 314 623 ~2198        4   130    382.62 sec  T/O =  3  PRV = 58
+SBY 10:40:52 [tcim_core_safety_1of3] engine_0: 48 : ... 16 104 50 62 26 47 28 27 22 108 35 35 27 46 30 49 903 ~2198      4   130    390.39 sec  T/O =  3  PRV = 58
+SBY 10:40:52 [tcim_core_safety_1of3] engine_0: 48 : ... 16 104 50 62 26 47 28 27 22 108 35 35 27 46 30 49 905 ~2198      0   130    390.41 sec  T/O =  3  PRV = 58
+SBY 10:41:00 [tcim_core_safety_1of3] engine_0: 49 : ... 50 62 26 47 28 27 22 108 35 35 27 46 30 34 250 693 ~2198         2   130    398.43 sec  T/O =  3  PRV = 58
+SBY 10:41:08 [tcim_core_safety_1of3] engine_0: 50 : ... 62 26 47 28 27 22 108 35 35 27 46 30 33 206 321 473 ~2198        4   130    406.32 sec  T/O =  3  PRV = 58
+SBY 10:41:09 [tcim_core_safety_1of3] engine_0: 50 : ... 62 26 47 28 27 22 108 35 35 27 46 30 33 206 339 515 ~2198        4   130    407.02 sec  T/O =  3  PRV = 58
+SBY 10:41:09 [tcim_core_safety_1of3] engine_0: 50 : ... 62 26 47 28 27 22 108 35 35 27 46 30 33 206 361 551 ~2198        4   130    407.70 sec  T/O =  3  PRV = 58
+SBY 10:41:10 [tcim_core_safety_1of3] engine_0: 50 : ... 62 26 47 28 27 22 108 35 35 27 46 30 33 206 381 588 ~2198        4   130    408.29 sec  T/O =  3  PRV = 58
+SBY 10:41:10 [tcim_core_safety_1of3] engine_0: 50 : ... 62 26 47 28 27 22 108 35 35 27 46 30 33 206 388 606 ~2198        3   130    408.57 sec  T/O =  3  PRV = 58
+SBY 10:41:10 [tcim_core_safety_1of3] engine_0: Timing out on output 44 in frame 50 (retrying in next anytime pass).
+SBY 10:41:10 [tcim_core_safety_1of3] engine_0: 50 : ... 62 26 47 28 27 22 108 35 35 27 46 30 33 206 388 606 ~2198        0   130    408.57 sec  T/O =  4  PRV = 58
+SBY 10:41:18 [tcim_core_safety_1of3] engine_0: 51 : ... 26 47 28 27 22 108 35 35 27 46 30 33 206 137 306 507 ~2198       0   130    415.77 sec  T/O =  4  PRV = 58
+SBY 10:41:18 [tcim_core_safety_1of3] engine_0: All outputs solved or timed out in frame 51.
+SBY 10:41:18 [tcim_core_safety_1of3] engine_0: Starting new anytime pass, reusing clauses.
+SBY 10:41:18 [tcim_core_safety_1of3] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 10:41:50 [tcim_core_safety_1of3] engine_0: 1 : 0 6142 ~2198                                                         0     0     31.32 sec  T/O =  0  PRV = 58
+SBY 10:41:50 [tcim_core_safety_1of3] engine_0: 2 : 0 53 6089 ~2198                                                      0     0     31.81 sec  T/O =  0  PRV = 58
+SBY 10:41:51 [tcim_core_safety_1of3] engine_0: 3 : 0 53 190 5899 ~2198                                                  0     0     32.39 sec  T/O =  0  PRV = 58
+SBY 10:41:52 [tcim_core_safety_1of3] engine_0: 4 : 0 53 190 656 5243 ~2198                                              0     0     33.64 sec  T/O =  0  PRV = 58
+SBY 10:41:54 [tcim_core_safety_1of3] engine_0: 5 : 0 53 190 656 563 4680 ~2198                                          0     0     35.57 sec  T/O =  0  PRV = 58
+SBY 10:41:56 [tcim_core_safety_1of3] engine_0: 6 : 0 53 190 656 563 138 4542 ~2198                                      0     0     37.56 sec  T/O =  0  PRV = 58
+SBY 10:41:58 [tcim_core_safety_1of3] engine_0: 7 : 0 53 190 656 563 138 276 4266 ~2198                                  0     0     39.93 sec  T/O =  0  PRV = 58
+SBY 10:42:01 [tcim_core_safety_1of3] engine_0: 8 : 0 53 190 656 563 138 276 236 4030 ~2198                              0     0     42.43 sec  T/O =  0  PRV = 58
+SBY 10:42:04 [tcim_core_safety_1of3] engine_0: 9 : 0 53 190 656 563 138 276 236 90 3940 ~2198                           0     0     45.36 sec  T/O =  0  PRV = 58
+SBY 10:42:07 [tcim_core_safety_1of3] engine_0: 10 : 0 53 190 656 563 138 276 236 90 49 3891 ~2198                        0     0     48.39 sec  T/O =  0  PRV = 58
+SBY 10:42:10 [tcim_core_safety_1of3] engine_0: 11 : 0 53 190 656 563 138 276 236 90 49 122 3769 ~2198                    0     0     51.59 sec  T/O =  0  PRV = 58
+SBY 10:42:13 [tcim_core_safety_1of3] engine_0: 12 : 0 53 190 656 563 138 276 236 90 49 122 110 3659 ~2198                0     0     55.04 sec  T/O =  0  PRV = 58
+SBY 10:42:17 [tcim_core_safety_1of3] engine_0: 13 : 0 53 190 656 563 138 276 236 90 49 122 110 88 3571 ~2198             0     0     58.23 sec  T/O =  0  PRV = 58
+SBY 10:42:20 [tcim_core_safety_1of3] engine_0: 14 : 0 53 190 656 563 138 276 236 90 49 122 110 88 70 3501 ~2198          0     0     61.51 sec  T/O =  0  PRV = 58
+SBY 10:42:23 [tcim_core_safety_1of3] engine_0: 15 : ... 190 656 563 138 276 236 90 49 122 110 88 70 93 3408 ~2198        0     0     64.85 sec  T/O =  0  PRV = 58
+SBY 10:42:27 [tcim_core_safety_1of3] engine_0: 16 : ... 656 563 138 276 236 90 49 122 110 88 70 93 60 3348 ~2198         0     0     68.77 sec  T/O =  0  PRV = 58
+SBY 10:42:31 [tcim_core_safety_1of3] engine_0: 17 : ... 656 563 138 276 236 90 49 122 110 88 70 93 60 46 3302 ~2198      0     0     72.56 sec  T/O =  0  PRV = 58
+SBY 10:42:35 [tcim_core_safety_1of3] engine_0: 18 : ... 563 138 276 236 90 49 122 110 88 70 93 60 46 46 3256 ~2198       0     0     76.69 sec  T/O =  0  PRV = 58
+SBY 10:42:39 [tcim_core_safety_1of3] engine_0: 19 : ... 138 276 236 90 49 122 110 88 70 93 60 46 46 165 3091 ~2198       0     0     80.90 sec  T/O =  0  PRV = 58
+SBY 10:42:44 [tcim_core_safety_1of3] engine_0: 20 : ... 276 236 90 49 122 110 88 70 93 60 46 46 165 102 2989 ~2198       0     0     85.44 sec  T/O =  0  PRV = 58
+SBY 10:42:48 [tcim_core_safety_1of3] engine_0: 21 : ... 236 90 49 122 110 88 70 93 60 46 46 165 102 42 2947 ~2198        0     0     89.73 sec  T/O =  0  PRV = 58
+SBY 10:42:53 [tcim_core_safety_1of3] engine_0: 22 : ... 90 49 122 110 88 70 93 60 46 46 165 102 42 76 2889 ~2198         2    27     94.66 sec  T/O =  0  PRV = 58
+SBY 10:43:08 [tcim_core_safety_1of3] engine_0: 23 : ... 90 49 122 110 88 70 93 60 46 46 165 102 42 36 89 2844 ~2198      3    28    109.94 sec  T/O =  0  PRV = 58
+SBY 10:43:23 [tcim_core_safety_1of3] engine_0: 24 : ... 49 122 110 88 70 93 60 46 46 165 102 42 36 38 84 2797 ~2198      3    28    124.86 sec  T/O =  0  PRV = 58
+SBY 10:43:39 [tcim_core_safety_1of3] engine_0: 25 : ... 122 110 88 70 93 60 46 46 165 102 42 36 38 30 89 2726 ~2198      2    28    140.81 sec  T/O =  0  PRV = 58
+SBY 10:43:55 [tcim_core_safety_1of3] engine_0: 26 : ... 110 88 70 93 60 46 46 165 102 42 36 38 30 24 73 2687 ~2198       2    28    156.16 sec  T/O =  0  PRV = 58
+SBY 10:44:08 [tcim_core_safety_1of3] engine_0: 27 : ... 88 70 93 60 46 46 165 102 42 36 38 30 24 32 206 2526 ~2198       4    29    169.95 sec  T/O =  0  PRV = 58
+SBY 10:44:20 [tcim_core_safety_1of3] engine_0: 28 : ... 70 93 60 46 46 165 102 42 36 38 30 24 32 64 182 2480 ~2198       3    29    181.48 sec  T/O =  0  PRV = 58
+SBY 10:44:31 [tcim_core_safety_1of3] engine_0: 29 : ... 93 60 46 46 165 102 42 36 38 30 24 32 64 55 98 2454 ~2198        2    29    192.43 sec  T/O =  0  PRV = 58
+SBY 10:44:42 [tcim_core_safety_1of3] engine_0: 30 : ... 60 46 46 165 102 42 36 38 30 24 32 64 55 41 130 2374 ~2198       2    29    203.17 sec  T/O =  0  PRV = 58
+SBY 10:44:52 [tcim_core_safety_1of3] engine_0: 31 : ... 46 46 165 102 42 36 38 30 24 32 64 55 41 43 131 2318 ~2198       3    29    213.86 sec  T/O =  0  PRV = 58
+SBY 10:45:02 [tcim_core_safety_1of3] engine_0: 32 : ... 46 165 102 42 36 38 30 24 32 64 55 41 43 45 92 2333 ~2198        3    29    223.53 sec  T/O =  0  PRV = 58
+SBY 10:45:12 [tcim_core_safety_1of3] engine_0: 33 : ... 165 102 42 36 38 30 24 32 64 55 41 43 45 39 92 2317 ~2198        2    29    233.43 sec  T/O =  0  PRV = 58
+SBY 10:45:22 [tcim_core_safety_1of3] engine_0: 34 : ... 102 42 36 38 30 24 32 64 55 41 43 45 39 38 235 2169 ~2198        2    29    243.24 sec  T/O =  0  PRV = 58
+SBY 10:45:32 [tcim_core_safety_1of3] engine_0: 35 : ... 42 36 38 30 24 32 64 55 41 43 45 39 38 134 314 1994 ~2198        5    31    253.21 sec  T/O =  0  PRV = 58
+SBY 10:45:44 [tcim_core_safety_1of3] engine_0: 36 : ... 36 38 30 24 32 64 55 41 43 45 39 38 134 201 343 1206 ~2243       9    31    265.48 sec  T/O =  0  PRV = 58
+SBY 10:45:45 [tcim_core_safety_1of3] engine_0: 36 : ... 36 38 30 24 32 64 55 41 43 45 39 38 134 201 375 1239 ~2243       6    31    266.69 sec  T/O =  0  PRV = 58
+SBY 10:45:46 [tcim_core_safety_1of3] engine_0: 36 : ... 36 38 30 24 32 64 55 41 43 45 39 38 134 201 406 1272 ~2243       5    36    267.92 sec  T/O =  0  PRV = 58
+SBY 10:45:47 [tcim_core_safety_1of3] engine_0: 36 : ... 36 38 30 24 32 64 55 41 43 45 39 38 134 201 429 1309 ~2243       6    38    269.03 sec  T/O =  0  PRV = 58
+SBY 10:45:48 [tcim_core_safety_1of3] engine_0: 36 : ... 36 38 30 24 32 64 55 41 43 45 39 38 134 201 443 1350 ~2243       4    38    269.93 sec  T/O =  0  PRV = 58
+SBY 10:45:48 [tcim_core_safety_1of3] engine_0: 36 : ... 36 38 30 24 32 64 55 41 43 45 39 38 134 201 444 1354 ~2243       2    38    270.01 sec  T/O =  0  PRV = 58
+SBY 10:45:57 [tcim_core_safety_1of3] engine_0: 37 : ... 38 30 24 32 64 55 41 43 45 39 38 134 201 125 66 1533 ~2229       2    38    278.77 sec  T/O =  0  PRV = 58
+SBY 10:46:06 [tcim_core_safety_1of3] engine_0: 38 : ... 30 24 32 64 55 41 43 45 39 38 134 201 125 36 136 1460 ~2229      3    38    287.75 sec  T/O =  0  PRV = 58
+SBY 10:46:14 [tcim_core_safety_1of3] engine_0: 39 : ... 24 32 64 55 41 43 45 39 38 134 201 125 36 31 80 1490 ~2229       3    38    295.53 sec  T/O =  0  PRV = 58
+SBY 10:46:22 [tcim_core_safety_1of3] engine_0: 40 : ... 32 64 55 41 43 45 39 38 134 201 125 36 29 36 76 1497 ~2229       3    38    303.88 sec  T/O =  0  PRV = 58
+SBY 10:46:30 [tcim_core_safety_1of3] engine_0: 41 : ... 64 55 41 43 45 39 38 134 201 125 36 29 34 19 52 1499 ~2229       2    38    311.66 sec  T/O =  0  PRV = 58
+SBY 10:46:38 [tcim_core_safety_1of3] engine_0: 42 : ... 55 41 43 45 39 38 134 201 125 36 29 34 18 27 66 1480 ~2229       3    38    319.20 sec  T/O =  0  PRV = 58
+SBY 10:46:46 [tcim_core_safety_1of3] engine_0: 43 : ... 41 43 45 39 38 134 201 125 36 29 34 18 27 18 111 1428 ~2229      3    38    327.20 sec  T/O =  0  PRV = 58
+SBY 10:46:54 [tcim_core_safety_1of3] engine_0: 44 : ... 43 45 39 38 134 201 125 36 29 34 18 27 18 66 129 1403 ~2229      5    38    335.63 sec  T/O =  0  PRV = 58
+SBY 10:46:54 [tcim_core_safety_1of3] engine_0: 44 : ... 43 45 39 38 134 201 125 36 29 34 18 27 18 66 136 1420 ~2229      4    38    336.09 sec  T/O =  0  PRV = 58
+SBY 10:47:01 [tcim_core_safety_1of3] engine_0: 45 : ... 45 39 38 134 201 125 36 29 34 18 27 18 66 32 46 1464 ~2229       2    38    342.93 sec  T/O =  0  PRV = 58
+SBY 10:47:08 [tcim_core_safety_1of3] engine_0: 46 : ... 39 38 134 201 125 36 29 34 18 27 18 66 32 22 38 1457 ~2229       2    38    349.40 sec  T/O =  0  PRV = 58
+SBY 10:47:14 [tcim_core_safety_1of3] engine_0: 47 : ... 38 134 201 125 36 29 34 18 27 18 66 32 20 18 43 1446 ~2229       3    38    356.09 sec  T/O =  0  PRV = 58
+SBY 10:47:21 [tcim_core_safety_1of3] engine_0: 48 : ... 134 201 125 36 29 34 18 27 18 66 32 20 18 21 57 1425 ~2229       3    38    362.32 sec  T/O =  0  PRV = 58
+SBY 10:47:27 [tcim_core_safety_1of3] engine_0: 49 : ... 201 125 36 29 34 18 27 18 66 32 20 18 21 15 98 1374 ~2229        2    38    368.28 sec  T/O =  0  PRV = 58
+SBY 10:47:33 [tcim_core_safety_1of3] engine_0: 50 : ... 125 36 29 34 18 27 18 66 32 20 18 21 15 72 229 1220 ~2229        3    55    374.83 sec  T/O =  0  PRV = 58
+SBY 10:47:33 [tcim_core_safety_1of3] engine_0: 50 : ... 125 36 29 34 18 27 18 66 32 20 18 21 15 72 237 1239 ~2229        3    57    375.10 sec  T/O =  0  PRV = 58
+SBY 10:47:41 [tcim_core_safety_1of3] engine_0: 51 : ... 36 29 34 18 27 18 66 32 20 18 21 15 72 124 328 1063 ~2229        4    59    382.23 sec  T/O =  0  PRV = 58
+SBY 10:47:42 [tcim_core_safety_1of3] engine_0: 51 : ... 36 29 34 18 27 18 66 32 20 18 21 15 72 124 369 1118 ~2229        5    59    383.75 sec  T/O =  0  PRV = 58
+SBY 10:47:43 [tcim_core_safety_1of3] engine_0: 51 : ... 36 29 34 18 27 18 66 32 20 18 21 15 72 124 398 1153 ~2229        8    63    384.96 sec  T/O =  0  PRV = 58
+SBY 10:47:44 [tcim_core_safety_1of3] engine_0: 51 : ... 36 29 34 18 27 18 66 32 20 18 21 15 72 124 414 1175 ~2229        5    66    386.03 sec  T/O =  0  PRV = 58
+SBY 10:47:52 [tcim_core_safety_1of3] engine_0: 52 : ... 29 34 18 27 18 66 32 20 18 21 15 72 124 70 142 1377 ~2229        3    66    393.46 sec  T/O =  0  PRV = 58
+SBY 10:48:00 [tcim_core_safety_1of3] engine_0: 53 : ... 34 18 27 18 66 32 20 18 21 15 72 124 70 44 185 1367 ~2229        3    66    401.23 sec  T/O =  0  PRV = 58
+SBY 10:48:07 [tcim_core_safety_1of3] engine_0: 54 : ... 18 27 18 66 32 20 18 21 15 72 124 70 44 76 257 1281 ~2229        4    66    408.75 sec  T/O =  0  PRV = 58
+SBY 10:48:15 [tcim_core_safety_1of3] engine_0: 55 : ... 27 18 66 32 20 18 21 15 72 124 70 44 76 166 603 824 ~2229        5    66    416.70 sec  T/O =  0  PRV = 58
+SBY 10:48:16 [tcim_core_safety_1of3] engine_0: 55 : ... 27 18 66 32 20 18 21 15 72 124 70 44 76 166 628 862 ~2229        5    66    417.29 sec  T/O =  0  PRV = 58
+SBY 10:48:16 [tcim_core_safety_1of3] engine_0: 55 : ... 27 18 66 32 20 18 21 15 72 124 70 44 76 166 644 901 ~2229        5    67    417.78 sec  T/O =  0  PRV = 58
+SBY 10:48:17 [tcim_core_safety_1of3] engine_0: 55 : ... 27 18 66 32 20 18 21 15 72 124 70 44 76 166 662 941 ~2229        5    67    418.29 sec  T/O =  0  PRV = 58
+SBY 10:48:18 [tcim_core_safety_1of3] engine_0: 55 : ... 27 18 66 32 20 18 21 15 72 124 70 44 76 166 681 1001 ~2229       3    67    419.22 sec  T/O =  0  PRV = 58
+SBY 10:48:25 [tcim_core_safety_1of3] engine_0: 56 : ... 18 66 32 20 18 21 15 72 124 70 44 76 166 61 135 1488 ~2229       3    67    426.40 sec  T/O =  0  PRV = 58
+SBY 10:48:25 [tcim_core_safety_1of3] engine_0: 56 : ... 18 66 32 20 18 21 15 72 124 70 44 76 166 61 149 1517 ~2229       3    67    427.06 sec  T/O =  0  PRV = 58
+SBY 10:48:34 [tcim_core_safety_1of3] engine_0: 57 : ... 66 32 20 18 21 15 72 124 70 44 76 166 60 63 209 1441 ~2229       5    67    435.38 sec  T/O =  0  PRV = 58
+SBY 10:48:34 [tcim_core_safety_1of3] engine_0: 57 : ... 66 32 20 18 21 15 72 124 70 44 76 166 60 63 216 1457 ~2229       3    67    435.73 sec  T/O =  0  PRV = 58
+SBY 10:48:43 [tcim_core_safety_1of3] engine_0: 58 : ... 32 20 18 21 15 72 124 70 44 76 166 60 62 44 144 1539 ~2229       4    67    444.25 sec  T/O =  0  PRV = 58
+SBY 10:48:53 [tcim_core_safety_1of3] engine_0: 59 : ... 20 18 21 15 72 124 70 44 76 166 60 62 42 88 543 1041 ~2295       5    67    455.13 sec  T/O =  0  PRV = 58
+SBY 10:48:53 [tcim_core_safety_1of3] engine_0: Timing out on output 49 in frame 59 (retrying in next anytime pass).
+SBY 10:48:53 [tcim_core_safety_1of3] engine_0: 59 : ... 20 18 21 15 72 124 70 44 76 166 60 62 42 88 543 1041 ~2295       0    67    455.13 sec  T/O =  1  PRV = 58
+SBY 10:49:02 [tcim_core_safety_1of3] engine_0: 60 : ... 18 21 15 72 124 70 44 76 166 60 62 42 88 182 307 1152 ~2276     14    73    463.90 sec  T/O =  1  PRV = 58
+SBY 10:49:05 [tcim_core_safety_1of3] engine_0: 60 : ... 18 21 15 72 124 70 44 76 166 60 62 42 88 184 357 1227 ~2276      9    94    466.89 sec  T/O =  1  PRV = 58
+SBY 10:49:07 [tcim_core_safety_1of3] engine_0: 60 : ... 18 21 15 72 124 70 44 76 166 60 62 42 88 184 385 1263 ~2276      9   101    469.05 sec  T/O =  1  PRV = 58
+SBY 10:49:16 [tcim_core_safety_1of3] engine_0: 61 : ... 21 15 72 124 70 44 76 166 60 62 42 88 55 86 528 1110 ~2276       6   101    477.69 sec  T/O =  1  PRV = 58
+SBY 10:49:25 [tcim_core_safety_1of3] engine_0: 62 : ... 15 72 124 70 44 76 166 60 62 42 88 55 80 358 822 527 ~2276       5   103    486.23 sec  T/O =  1  PRV = 58
+SBY 10:49:25 [tcim_core_safety_1of3] engine_0: 62 : ... 15 72 124 70 44 76 166 60 62 42 88 55 80 358 848 562 ~2276       4   103    486.88 sec  T/O =  1  PRV = 58
+SBY 10:49:26 [tcim_core_safety_1of3] engine_0: 62 : ... 15 72 124 70 44 76 166 60 62 42 88 55 80 358 869 599 ~2276       5   103    487.39 sec  T/O =  1  PRV = 58
+SBY 10:49:27 [tcim_core_safety_1of3] engine_0: 62 : ... 15 72 124 70 44 76 166 60 62 42 88 55 80 358 890 638 ~2276       4   103    488.22 sec  T/O =  1  PRV = 58
+SBY 10:49:27 [tcim_core_safety_1of3] engine_0: 62 : ... 15 72 124 70 44 76 166 60 62 42 88 55 80 358 901 680 ~2276       4   103    488.76 sec  T/O =  1  PRV = 58
+SBY 10:49:28 [tcim_core_safety_1of3] engine_0: 62 : ... 15 72 124 70 44 76 166 60 62 42 88 55 80 358 905 728 ~2276       3   103    489.31 sec  T/O =  1  PRV = 58
+SBY 10:49:30 [tcim_core_safety_1of3] engine_0: 62 : ... 15 72 124 70 44 76 166 60 62 42 88 55 80 361 935 792 ~2276       8   103    491.40 sec  T/O =  1  PRV = 58
+SBY 10:49:38 [tcim_core_safety_1of3] engine_0: 63 : ... 124 70 44 76 166 60 62 42 88 55 78 331 158 353 1222 ~2279        8   103    499.67 sec  T/O =  1  PRV = 58
+SBY 10:49:39 [tcim_core_safety_1of3] engine_0: 63 : ... 124 70 44 76 166 60 62 42 88 55 78 331 162 378 1254 ~2279        9   103    500.53 sec  T/O =  1  PRV = 58
+SBY 10:49:40 [tcim_core_safety_1of3] engine_0: 63 : ... 124 70 44 76 166 60 62 42 88 55 78 331 169 410 1276 ~2279       12   108    501.90 sec  T/O =  1  PRV = 58
+SBY 10:49:41 [tcim_core_safety_1of3] engine_0: 63 : ... 124 70 44 76 166 60 62 42 88 55 78 331 174 438 1301 ~2279       12   115    502.96 sec  T/O =  1  PRV = 58
+SBY 10:49:42 [tcim_core_safety_1of3] engine_0: 63 : ... 124 70 44 76 166 60 62 42 88 55 78 331 176 474 1357 ~2279       11   115    504.08 sec  T/O =  1  PRV = 58
+SBY 10:49:43 [tcim_core_safety_1of3] engine_0: 63 : ... 124 70 44 76 166 60 62 42 88 55 78 331 176 490 1398 ~2279        3   115    504.67 sec  T/O =  1  PRV = 58
+SBY 10:49:44 [tcim_core_safety_1of3] engine_0: 63 : ... 124 70 44 76 166 60 62 42 88 55 78 331 179 509 1424 ~2279        7   115    506.00 sec  T/O =  1  PRV = 58
+SBY 10:49:55 [tcim_core_safety_1of3] engine_0: 64 : ... 70 44 76 166 60 62 42 88 55 78 330 127 233 388 1192 ~2347        3   115    517.04 sec  T/O =  1  PRV = 58
+SBY 10:50:04 [tcim_core_safety_1of3] engine_0: 65 : ... 44 76 166 60 62 42 88 55 78 330 127 230 294 229 1112 ~2295       5   115    525.92 sec  T/O =  1  PRV = 58
+SBY 10:50:06 [tcim_core_safety_1of3] engine_0: 65 : ... 44 76 166 60 62 42 88 55 78 330 127 230 294 262 1143 ~2295       5   115    527.21 sec  T/O =  1  PRV = 58
+SBY 10:50:07 [tcim_core_safety_1of3] engine_0: 65 : ... 44 76 166 60 62 42 88 55 78 330 127 230 294 295 1176 ~2295       5   115    528.73 sec  T/O =  1  PRV = 58
+SBY 10:50:08 [tcim_core_safety_1of3] engine_0: 65 : ... 44 76 166 60 62 42 88 55 78 330 127 230 303 325 1201 ~2295      13   115    530.02 sec  T/O =  1  PRV = 58
+SBY 10:50:10 [tcim_core_safety_1of3] engine_0: 65 : ... 44 76 166 60 62 42 88 55 78 330 127 230 306 357 1231 ~2295      17   128    531.30 sec  T/O =  1  PRV = 58
+SBY 10:50:11 [tcim_core_safety_1of3] engine_0: 65 : ... 44 76 166 60 62 42 88 55 78 330 127 230 316 387 1254 ~2295      14   128    532.36 sec  T/O =  1  PRV = 58
+SBY 10:50:12 [tcim_core_safety_1of3] engine_0: 65 : ... 44 76 166 60 62 42 88 55 78 330 127 230 321 416 1279 ~2295      14   128    533.56 sec  T/O =  1  PRV = 58
+SBY 10:50:13 [tcim_core_safety_1of3] engine_0: 65 : ... 44 76 166 60 62 42 88 55 78 330 127 230 322 446 1307 ~2295      15   128    534.82 sec  T/O =  1  PRV = 58
+SBY 10:50:14 [tcim_core_safety_1of3] engine_0: 65 : ... 44 76 166 60 62 42 88 55 78 330 127 230 324 476 1338 ~2295      16   128    536.07 sec  T/O =  1  PRV = 58
+SBY 10:50:16 [tcim_core_safety_1of3] engine_0: 65 : ... 44 76 166 60 62 42 88 55 78 330 127 230 329 515 1401 ~2295      14   128    537.58 sec  T/O =  1  PRV = 58
+SBY 10:50:18 [tcim_core_safety_1of3] engine_0: 65 : ... 44 76 166 60 62 42 88 55 78 330 127 230 329 549 1440 ~2295      10   128    539.76 sec  T/O =  1  PRV = 58
+SBY 10:50:20 [tcim_core_safety_1of3] engine_0: 65 : ... 44 76 166 60 62 42 88 55 78 330 127 230 332 577 1473 ~2295       7   128    541.60 sec  T/O =  1  PRV = 58
+SBY 10:50:22 [tcim_core_safety_1of3] engine_0: 65 : ... 44 76 166 60 62 42 88 55 78 330 127 230 333 607 1503 ~2295      15   130    543.55 sec  T/O =  1  PRV = 58
+SBY 10:50:23 [tcim_core_safety_1of3] engine_0: 65 : ... 44 76 166 60 62 42 88 55 78 330 127 230 334 616 1527 ~2295       6   130    544.35 sec  T/O =  1  PRV = 58
+SBY 10:50:34 [tcim_core_safety_1of3] engine_0: 66 : ... 76 166 60 62 42 88 55 78 330 127 230 158 200 383 1415 ~2295      3   130    555.43 sec  T/O =  1  PRV = 58
+SBY 10:50:43 [tcim_core_safety_1of3] engine_0: 67 : ... 60 62 42 88 55 78 330 127 230 158 198 196 200 1464 ~2295         5   130    564.77 sec  T/O =  1  PRV = 58
+SBY 10:50:44 [tcim_core_safety_1of3] engine_0: 67 : ... 60 62 42 88 55 78 330 127 230 158 198 201 215 1496 ~2295        11   130    565.70 sec  T/O =  1  PRV = 58
+SBY 10:50:54 [tcim_core_safety_1of3] engine_0: 68 : ... 62 42 88 55 78 330 127 230 158 198 160 103 338 1333 ~2295        3   130    575.89 sec  T/O =  1  PRV = 58
+SBY 10:50:54 [tcim_core_safety_1of3] engine_0: 68 : ... 62 42 88 55 78 330 127 230 158 198 160 103 338 1335 ~2295        2   130    575.91 sec  T/O =  1  PRV = 58
+SBY 10:51:04 [tcim_core_safety_1of3] engine_0: 69 : ... 42 88 55 78 332 134 240 165 199 157 103 211 318 1169 ~2295      16   130    585.49 sec  T/O =  1  PRV = 58
+SBY 10:51:05 [tcim_core_safety_1of3] engine_0: 69 : ... 42 88 55 78 332 134 242 171 207 166 117 219 321 1169 ~2295      18   130    586.51 sec  T/O =  1  PRV = 58
+SBY 10:51:06 [tcim_core_safety_1of3] engine_0: 69 : ... 42 88 55 78 332 134 242 176 215 174 124 225 328 1170 ~2295      25   130    587.41 sec  T/O =  1  PRV = 58
+SBY 10:51:07 [tcim_core_safety_1of3] engine_0: 69 : ... 42 88 55 78 332 134 242 179 228 199 137 227 328 1170 ~2295      41   130    588.63 sec  T/O =  1  PRV = 58
+SBY 10:51:09 [tcim_core_safety_1of3] engine_0: 69 : ... 42 88 55 78 332 134 242 181 236 215 159 237 328 1170 ~2295      49   130    590.49 sec  T/O =  1  PRV = 58
+SBY 10:51:09 [tcim_core_safety_1of3] engine_0: 69 : ... 42 88 55 78 332 134 242 182 237 219 162 242 328 1170 ~2295      47   130    590.84 sec  T/O =  1  PRV = 58
+SBY 10:51:09 [tcim_core_safety_1of3] engine_0: Timing out on output 16 in frame 69 (retrying in next anytime pass).
+SBY 10:51:11 [tcim_core_safety_1of3] engine_0: 69 : ... 42 88 55 78 332 142 257 194 237 219 162 243 349 1228 ~2295      23   130    592.73 sec  T/O =  2  PRV = 58
+SBY 10:51:13 [tcim_core_safety_1of3] engine_0: 69 : ... 42 88 55 78 333 152 269 211 257 227 163 243 349 1228 ~2295      46   130    595.08 sec  T/O =  2  PRV = 58
+SBY 10:51:16 [tcim_core_safety_1of3] engine_0: 69 : ... 42 88 55 78 335 156 284 233 281 232 163 243 349 1228 ~2295      58   130    597.48 sec  T/O =  2  PRV = 58
+SBY 10:51:18 [tcim_core_safety_1of3] engine_0: 69 : ... 42 88 55 78 335 156 288 243 302 262 168 243 349 1228 ~2295      82   130    600.15 sec  T/O =  2  PRV = 58
+SBY 10:51:21 [tcim_core_safety_1of3] engine_0: 69 : ... 42 88 55 78 335 157 294 258 317 289 175 243 349 1228 ~2295     100   130    602.40 sec  T/O =  2  PRV = 58
+SBY 10:51:21 [tcim_core_safety_1of3] engine_0: 69 : ... 42 88 55 78 335 157 294 258 317 292 176 243 349 1228 ~2295      96   130    602.48 sec  T/O =  2  PRV = 58
+SBY 10:51:21 [tcim_core_safety_1of3] engine_0: Timing out on output 50 in frame 69 (retrying in next anytime pass).
+SBY 10:51:21 [tcim_core_safety_1of3] engine_0: 69 : ... 42 88 55 78 335 157 294 258 317 292 176 243 349 1228 ~2295       0   130    602.48 sec  T/O =  3  PRV = 58
+SBY 10:51:32 [tcim_core_safety_1of3] engine_0: 70 : ... 88 55 78 326 136 283 227 295 233 152 221 270 1183 191 ~2295      4   130    613.97 sec  T/O =  3  PRV = 58
+SBY 10:51:32 [tcim_core_safety_1of3] engine_0: 70 : ... 88 55 78 326 136 283 227 295 233 152 221 270 1188 201 ~2295      3   130    614.10 sec  T/O =  3  PRV = 58
+SBY 10:51:41 [tcim_core_safety_1of3] engine_0: 71 : ... 55 78 326 136 283 225 291 230 151 221 270 143 12 1220 ~2295      2   130    622.32 sec  T/O =  3  PRV = 58
+SBY 10:51:49 [tcim_core_safety_1of3] engine_0: 72 : ... 136 283 225 291 229 151 221 270 142 11 12 -48 ~3553       2   130    631.11 sec  T/O =  3  PRV = 58
+SBY 10:51:58 [tcim_core_safety_1of3] engine_0: 73 : ... 136 283 225 291 229 151 221 270 142 11 6 7 -46 ~3463      2   130    639.20 sec  T/O =  3  PRV = 58
+SBY 10:52:05 [tcim_core_safety_1of3] engine_0: 74 : ... 283 225 291 229 151 221 270 142 11 6 5 6 -53 ~3467        2   130    646.86 sec  T/O =  3  PRV = 58
+SBY 10:52:13 [tcim_core_safety_1of3] engine_0: 75 : ... 283 225 291 229 151 221 270 142 11 6 5 4 2 -55 ~3470      2   130    654.94 sec  T/O =  3  PRV = 58
+SBY 10:52:13 [tcim_core_safety_1of3] engine_0: Proved output 44 in frame 75.
+SBY 10:52:21 [tcim_core_safety_1of3] engine_0: 76 : ... 225 291 229 151 221 270 142 11 6 5 4 1 0 -59 ~3474        0   130    662.27 sec  T/O =  3  PRV = 59
+SBY 10:52:21 [tcim_core_safety_1of3] engine_0: Starting new anytime pass, reusing clauses.
+SBY 10:52:21 [tcim_core_safety_1of3] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY 10:53:15 [tcim_core_safety_1of3] engine_0: 1 : 0 7653 ~3474                                                         0     0     54.19 sec  T/O =  0  PRV = 59
+SBY 10:53:16 [tcim_core_safety_1of3] engine_0: 2 : 0 53 7600 ~3474                                                      0     0     54.76 sec  T/O =  0  PRV = 59
+SBY 10:53:16 [tcim_core_safety_1of3] engine_0: 3 : 0 53 190 7410 ~3474                                                  0     0     55.39 sec  T/O =  0  PRV = 59
+SBY 10:53:17 [tcim_core_safety_1of3] engine_0: 4 : 0 53 190 656 6754 ~3474                                              0     0     56.33 sec  T/O =  0  PRV = 59
+SBY 10:53:19 [tcim_core_safety_1of3] engine_0: 5 : 0 53 190 656 563 6191 ~3474                                          0     0     57.73 sec  T/O =  0  PRV = 59
+SBY 10:53:20 [tcim_core_safety_1of3] engine_0: 6 : 0 53 190 656 563 138 6053 ~3474                                      0     0     58.96 sec  T/O =  0  PRV = 59
+SBY 10:53:21 [tcim_core_safety_1of3] engine_0: 7 : 0 53 190 656 563 138 276 5777 ~3474                                  0     0     60.42 sec  T/O =  0  PRV = 59
+SBY 10:53:23 [tcim_core_safety_1of3] engine_0: 8 : 0 53 190 656 563 138 276 236 5541 ~3474                              0     0     62.12 sec  T/O =  0  PRV = 59
+SBY 10:53:25 [tcim_core_safety_1of3] engine_0: 9 : 0 53 190 656 563 138 276 236 90 5451 ~3474                           0     0     64.03 sec  T/O =  0  PRV = 59
+SBY 10:53:27 [tcim_core_safety_1of3] engine_0: 10 : 0 53 190 656 563 138 276 236 90 49 5402 ~3474                        0     0     65.80 sec  T/O =  0  PRV = 59
+SBY 10:53:29 [tcim_core_safety_1of3] engine_0: 11 : 0 53 190 656 563 138 276 236 90 49 122 5280 ~3474                    0     0     67.79 sec  T/O =  0  PRV = 59
+SBY 10:53:31 [tcim_core_safety_1of3] engine_0: 12 : 0 53 190 656 563 138 276 236 90 49 122 110 5170 ~3474                0     0     70.57 sec  T/O =  0  PRV = 59
+SBY 10:53:34 [tcim_core_safety_1of3] engine_0: 13 : 0 53 190 656 563 138 276 236 90 49 122 110 88 5082 ~3474             0     0     73.61 sec  T/O =  0  PRV = 59
+SBY 10:53:38 [tcim_core_safety_1of3] engine_0: 14 : 0 53 190 656 563 138 276 236 90 49 122 110 88 70 5012 ~3474          0     0     77.05 sec  T/O =  0  PRV = 59
+SBY 10:53:41 [tcim_core_safety_1of3] engine_0: 15 : ... 190 656 563 138 276 236 90 49 122 110 88 70 93 4919 ~3474        0     0     79.99 sec  T/O =  0  PRV = 59
+SBY 10:53:44 [tcim_core_safety_1of3] engine_0: 16 : ... 656 563 138 276 236 90 49 122 110 88 70 93 60 4859 ~3474         0     0     82.85 sec  T/O =  0  PRV = 59
+SBY 10:53:47 [tcim_core_safety_1of3] engine_0: 17 : ... 656 563 138 276 236 90 49 122 110 88 70 93 60 46 4813 ~3474      0     0     85.91 sec  T/O =  0  PRV = 59
+SBY 10:53:50 [tcim_core_safety_1of3] engine_0: 18 : ... 563 138 276 236 90 49 122 110 88 70 93 60 46 46 4767 ~3474       0     0     89.11 sec  T/O =  0  PRV = 59
+SBY 10:53:53 [tcim_core_safety_1of3] engine_0: 19 : ... 138 276 236 90 49 122 110 88 70 93 60 46 46 165 4602 ~3474       0     0     92.27 sec  T/O =  0  PRV = 59
+SBY 10:53:56 [tcim_core_safety_1of3] engine_0: 20 : ... 276 236 90 49 122 110 88 70 93 60 46 46 165 102 4500 ~3474       0     0     95.41 sec  T/O =  0  PRV = 59
+SBY 10:54:00 [tcim_core_safety_1of3] engine_0: 21 : ... 236 90 49 122 110 88 70 93 60 46 46 165 102 42 4458 ~3474        0     0     99.20 sec  T/O =  0  PRV = 59
+SBY 10:54:04 [tcim_core_safety_1of3] engine_0: 22 : ... 90 49 122 110 88 70 93 60 46 46 165 102 42 36 4422 ~3474         0     0    102.73 sec  T/O =  0  PRV = 59
+SBY 10:54:07 [tcim_core_safety_1of3] engine_0: 23 : ... 90 49 122 110 88 70 93 60 46 46 165 102 42 36 38 4384 ~3474      0     0    106.13 sec  T/O =  0  PRV = 59
+SBY 10:54:10 [tcim_core_safety_1of3] engine_0: 24 : ... 49 122 110 88 70 93 60 46 46 165 102 42 36 38 30 4354 ~3474      0     0    109.48 sec  T/O =  0  PRV = 59
+SBY 10:54:14 [tcim_core_safety_1of3] engine_0: 25 : ... 122 110 88 70 93 60 46 46 165 102 42 36 38 30 24 4330 ~3474      0     0    112.87 sec  T/O =  0  PRV = 59
+SBY 10:54:17 [tcim_core_safety_1of3] engine_0: 26 : ... 110 88 70 93 60 46 46 165 102 42 36 38 30 24 32 4298 ~3474       0     0    116.52 sec  T/O =  0  PRV = 59
+SBY 10:54:21 [tcim_core_safety_1of3] engine_0: 27 : ... 88 70 93 60 46 46 165 102 42 36 38 30 24 32 64 4234 ~3474        0     0    120.43 sec  T/O =  0  PRV = 59
+SBY 10:54:25 [tcim_core_safety_1of3] engine_0: 28 : ... 70 93 60 46 46 165 102 42 36 38 30 24 32 64 55 4179 ~3474        0     0    124.30 sec  T/O =  0  PRV = 59
+SBY 10:54:29 [tcim_core_safety_1of3] engine_0: 29 : ... 93 60 46 46 165 102 42 36 38 30 24 32 64 55 41 4138 ~3474        0     0    127.82 sec  T/O =  0  PRV = 59
+SBY 10:54:32 [tcim_core_safety_1of3] engine_0: 30 : ... 60 46 46 165 102 42 36 38 30 24 32 64 55 41 43 4095 ~3474        0     0    131.51 sec  T/O =  0  PRV = 59
+SBY 10:54:36 [tcim_core_safety_1of3] engine_0: 31 : ... 46 46 165 102 42 36 38 30 24 32 64 55 41 43 45 4050 ~3474        0     0    135.20 sec  T/O =  0  PRV = 59
+SBY 10:54:40 [tcim_core_safety_1of3] engine_0: 32 : ... 46 165 102 42 36 38 30 24 32 64 55 41 43 45 39 4011 ~3474        0     0    138.81 sec  T/O =  0  PRV = 59
+SBY 10:54:44 [tcim_core_safety_1of3] engine_0: 33 : ... 165 102 42 36 38 30 24 32 64 55 41 43 45 39 38 3973 ~3474        0     0    142.66 sec  T/O =  0  PRV = 59
+SBY 10:54:48 [tcim_core_safety_1of3] engine_0: 34 : ... 102 42 36 38 30 24 32 64 55 41 43 45 39 38 134 3839 ~3474        0     0    146.84 sec  T/O =  0  PRV = 59
+SBY 10:54:52 [tcim_core_safety_1of3] engine_0: 35 : ... 42 36 38 30 24 32 64 55 41 43 45 39 38 134 201 3638 ~3474        0     0    151.08 sec  T/O =  0  PRV = 59
+SBY 10:54:56 [tcim_core_safety_1of3] engine_0: 36 : ... 36 38 30 24 32 64 55 41 43 45 39 38 134 201 125 3513 ~3474       0     0    155.39 sec  T/O =  0  PRV = 59
+SBY 10:55:01 [tcim_core_safety_1of3] engine_0: 37 : ... 38 30 24 32 64 55 41 43 45 39 38 134 201 125 36 3477 ~3474       0     0    160.24 sec  T/O =  0  PRV = 59
+SBY 10:55:06 [tcim_core_safety_1of3] engine_0: 38 : ... 30 24 32 64 55 41 43 45 39 38 134 201 125 36 29 3448 ~3474       0     0    164.83 sec  T/O =  0  PRV = 59
+SBY 10:55:10 [tcim_core_safety_1of3] engine_0: 39 : ... 24 32 64 55 41 43 45 39 38 134 201 125 36 29 34 3414 ~3474       0     0    169.47 sec  T/O =  0  PRV = 59
+SBY 10:55:15 [tcim_core_safety_1of3] engine_0: 40 : ... 32 64 55 41 43 45 39 38 134 201 125 36 29 34 18 3396 ~3474       0     0    174.48 sec  T/O =  0  PRV = 59
+SBY 10:55:21 [tcim_core_safety_1of3] engine_0: 41 : ... 64 55 41 43 45 39 38 134 201 125 36 29 34 18 27 3369 ~3474       0     0    179.79 sec  T/O =  0  PRV = 59
+SBY 10:55:25 [tcim_core_safety_1of3] engine_0: 42 : ... 55 41 43 45 39 38 134 201 125 36 29 34 18 27 18 3351 ~3474       0     0    184.43 sec  T/O =  0  PRV = 59
+SBY 10:55:31 [tcim_core_safety_1of3] engine_0: 43 : ... 41 43 45 39 38 134 201 125 36 29 34 18 27 18 66 3285 ~3474       0     0    190.20 sec  T/O =  0  PRV = 59
+SBY 10:55:36 [tcim_core_safety_1of3] engine_0: 44 : ... 43 45 39 38 134 201 125 36 29 34 18 27 18 66 32 3253 ~3474       0     0    195.45 sec  T/O =  0  PRV = 59
+SBY 10:55:41 [tcim_core_safety_1of3] engine_0: 45 : ... 45 39 38 134 201 125 36 29 34 18 27 18 66 32 20 3233 ~3474       0     0    200.40 sec  T/O =  0  PRV = 59
+SBY 10:55:46 [tcim_core_safety_1of3] engine_0: 46 : ... 39 38 134 201 125 36 29 34 18 27 18 66 32 20 18 3215 ~3474       0     0    204.96 sec  T/O =  0  PRV = 59
+SBY 10:55:50 [tcim_core_safety_1of3] engine_0: 47 : ... 38 134 201 125 36 29 34 18 27 18 66 32 20 18 21 3194 ~3474       0     0    209.57 sec  T/O =  0  PRV = 59
+SBY 10:55:56 [tcim_core_safety_1of3] engine_0: 48 : ... 134 201 125 36 29 34 18 27 18 66 32 20 18 21 15 3179 ~3474       0     0    214.79 sec  T/O =  0  PRV = 59
+SBY 10:56:00 [tcim_core_safety_1of3] engine_0: 49 : ... 201 125 36 29 34 18 27 18 66 32 20 18 21 15 72 3107 ~3474        0     0    219.01 sec  T/O =  0  PRV = 59
+SBY 10:56:05 [tcim_core_safety_1of3] engine_0: 50 : ... 125 36 29 34 18 27 18 66 32 20 18 21 15 72 124 2983 ~3474        0     0    223.75 sec  T/O =  0  PRV = 59
+SBY 10:56:10 [tcim_core_safety_1of3] engine_0: 51 : ... 36 29 34 18 27 18 66 32 20 18 21 15 72 124 70 2913 ~3474         0     0    228.98 sec  T/O =  0  PRV = 59
+SBY 10:56:15 [tcim_core_safety_1of3] engine_0: 52 : ... 36 29 34 18 27 18 66 32 20 18 21 15 72 124 70 44 2869 ~3474      0     0    233.85 sec  T/O =  0  PRV = 59
+SBY 10:56:19 [tcim_core_safety_1of3] engine_0: 53 : ... 29 34 18 27 18 66 32 20 18 21 15 72 124 70 44 76 2793 ~3474      0     0    238.49 sec  T/O =  0  PRV = 59
+SBY 10:56:24 [tcim_core_safety_1of3] engine_0: 54 : ... 18 27 18 66 32 20 18 21 15 72 124 70 44 76 166 2627 ~3474        0     0    243.51 sec  T/O =  0  PRV = 59
+SBY 10:56:30 [tcim_core_safety_1of3] engine_0: 55 : ... 27 18 66 32 20 18 21 15 72 124 70 44 76 166 60 2567 ~3474        0     0    248.99 sec  T/O =  0  PRV = 59
+SBY 10:56:35 [tcim_core_safety_1of3] engine_0: 56 : ... 18 66 32 20 18 21 15 72 124 70 44 76 166 60 62 2505 ~3474        0     0    254.17 sec  T/O =  0  PRV = 59
+SBY 10:56:40 [tcim_core_safety_1of3] engine_0: 57 : ... 66 32 20 18 21 15 72 124 70 44 76 166 60 62 42 2463 ~3474        0     0    259.10 sec  T/O =  0  PRV = 59
+SBY 10:56:45 [tcim_core_safety_1of3] engine_0: 58 : ... 32 20 18 21 15 72 124 70 44 76 166 60 62 42 88 2375 ~3474        0     0    264.38 sec  T/O =  0  PRV = 59
+SBY 10:56:51 [tcim_core_safety_1of3] engine_0: 59 : ... 20 18 21 15 72 124 70 44 76 166 60 62 42 88 56 2322 ~3474        2    12    270.34 sec  T/O =  0  PRV = 59
+SBY 10:57:05 [tcim_core_safety_1of3] engine_0: 60 : ... 18 21 15 72 124 70 44 76 166 60 62 42 88 45 54 2284 ~3474        2    22    284.32 sec  T/O =  0  PRV = 59
+SBY 10:57:18 [tcim_core_safety_1of3] engine_0: 61 : ... 21 15 72 124 70 44 76 166 60 62 42 88 45 40 303 1994 ~3474       2    23    297.15 sec  T/O =  0  PRV = 59
+SBY 10:57:30 [tcim_core_safety_1of3] engine_0: 62 : ... 15 72 124 70 44 76 166 60 62 42 88 45 40 272 100 1908 ~3474      2    23    309.63 sec  T/O =  0  PRV = 59
+SBY 10:57:42 [tcim_core_safety_1of3] engine_0: 63 : ... 72 124 70 44 76 166 60 62 42 88 45 40 272 88 167 1712 ~3474      3    24    321.14 sec  T/O =  0  PRV = 59
+SBY 10:57:53 [tcim_core_safety_1of3] engine_0: 64 : ... 70 44 76 166 60 62 42 88 45 40 272 88 153 140 1519 ~3474         2    24    332.10 sec  T/O =  0  PRV = 59
+SBY 10:58:03 [tcim_core_safety_1of3] engine_0: 65 : ... 44 76 166 60 62 42 88 45 40 272 88 153 126 308 1194 ~3474        2    25    342.23 sec  T/O =  0  PRV = 59
+SBY 10:58:13 [tcim_core_safety_1of3] engine_0: 66 : ... 76 166 60 62 42 88 45 40 272 88 153 126 299 300 956 ~3474        9    32    352.50 sec  T/O =  0  PRV = 59
+SBY 10:58:14 [tcim_core_safety_1of3] engine_0: 66 : ... 76 166 60 62 42 88 45 40 272 88 153 126 299 328 993 ~3474       10    32    353.49 sec  T/O =  0  PRV = 59
+SBY 10:58:16 [tcim_core_safety_1of3] engine_0: 66 : ... 76 166 60 62 42 88 45 40 272 88 153 126 299 355 1028 ~3474       5    32    354.71 sec  T/O =  0  PRV = 59
+SBY 10:58:16 [tcim_core_safety_1of3] engine_0: 66 : ... 76 166 60 62 42 88 45 40 272 88 153 126 299 362 1059 ~3474       6    32    355.59 sec  T/O =  0  PRV = 59
+SBY 10:58:26 [tcim_core_safety_1of3] engine_0: 67 : ... 166 60 62 42 88 45 40 272 88 153 126 297 174 241 920 ~3474       4    32    365.10 sec  T/O =  0  PRV = 59
+SBY 10:58:37 [tcim_core_safety_1of3] engine_0: 68 : ... 60 62 42 88 45 40 272 88 153 126 297 174 151 432 485 ~3480       5    32    375.95 sec  T/O =  0  PRV = 59
+SBY 10:58:38 [tcim_core_safety_1of3] engine_0: 68 : ... 60 62 42 88 45 40 272 88 153 126 297 174 151 445 519 ~3480       3    32    376.70 sec  T/O =  0  PRV = 59
+SBY 10:58:47 [tcim_core_safety_1of3] engine_0: 69 : ... 62 42 88 45 40 272 88 153 126 297 174 151 217 137 568 ~3475      2    32    386.30 sec  T/O =  0  PRV = 59
+SBY 10:58:57 [tcim_core_safety_1of3] engine_0: 70 : ... 42 88 45 40 272 88 153 126 297 174 151 217 69 63 600 ~3475       3    32    396.21 sec  T/O =  0  PRV = 59
+SBY 10:59:06 [tcim_core_safety_1of3] engine_0: 71 : ... 88 45 40 272 88 153 126 297 174 151 217 66 26 44 588 ~3475       2    32    404.95 sec  T/O =  0  PRV = 59
+SBY 10:59:15 [tcim_core_safety_1of3] engine_0: 72 : ... 45 40 272 88 153 126 297 174 151 217 65 26 15 41 584 ~3475       2    32    413.81 sec  T/O =  0  PRV = 59
+SBY 10:59:24 [tcim_core_safety_1of3] engine_0: 73 : ... 40 272 88 153 126 297 174 151 217 65 26 15 25 20 581 ~3475       2    32    422.74 sec  T/O =  0  PRV = 59
+SBY 10:59:33 [tcim_core_safety_1of3] engine_0: 74 : ... 272 88 153 126 297 174 151 217 65 26 15 25 6 27 570 ~3475        2    32    432.58 sec  T/O =  0  PRV = 59
+SBY 10:59:43 [tcim_core_safety_1of3] engine_0: 75 : ... 272 88 153 126 297 174 151 217 65 26 15 25 6 15 1 579 ~3475      0    32    441.87 sec  T/O =  0  PRV = 59
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: 76 : ... 88 153 126 297 174 151 217 65 26 15 25 6 15 1 0 579 ~3475        0    32    449.41 sec  T/O =  0  PRV = 59
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: Proved output 16 in frame 62 (converged).
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: Proved output 49 in frame 62 (converged).
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: Proved output 50 in frame 62 (converged).
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: Block =  664  Oblig = 35311  Clause = 20374  Call =2301077 (sat=89.2%)  Cex =   0  Start =7377
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: SAT solving =  1718.96 sec ( 69.11 %)
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: unsat     =    87.05 sec (  3.50 %)
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: sat       =  1631.91 sec ( 65.61 %)
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: Generalize  =   214.82 sec (  8.64 %)
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: Push clause =  1636.32 sec ( 65.79 %)
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: Ternary sim =    15.12 sec (  0.61 %)
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: Containment =     5.08 sec (  0.20 %)
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: CNF compute =    99.71 sec (  4.01 %)
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: Refinement  =     0.00 sec (  0.00 %)
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: TOTAL       =  2487.31 sec (100.00 %)
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: Property proved.  Time =  2487.51 sec
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: Counter-example is not available.
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: finished (returncode=0)
+SBY 10:59:50 [tcim_core_safety_1of3] engine_0: Status returned by engine: PASS
+SBY 10:59:50 [tcim_core_safety_1of3] summary: Elapsed clock time [H:MM:SS (secs)]: 0:41:52 (2512)
+SBY 10:59:50 [tcim_core_safety_1of3] summary: Elapsed process time [H:MM:SS (secs)]: 0:29:12 (1752)
+SBY 10:59:50 [tcim_core_safety_1of3] summary: engine_0 (abc pdr) returned PASS
+SBY 10:59:50 [tcim_core_safety_1of3] summary: engine_0 did not produce any traces
+SBY 10:59:50 [tcim_core_safety_1of3] DONE (PASS, rc=0)

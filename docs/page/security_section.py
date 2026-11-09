@@ -262,8 +262,9 @@ it; the block was routed again, and every check after routing was run again).</p
 <h3>What this does not fix</h3>
 <ul>
 <li>The 2T2R array shows the weights' sparsity in the read current, and since the rotation is the same for every row of a product, an attacker who
-realigns the traces can see each row's count of non-zero weights, not only the total. The one-of-three cell removes this (next chip,
-<code>studies/hw-security-2026-11/NEXT_CHIP_SPEC.md</code>), at +50 % array area and 24 more bit-line slices.</li>
+realigns the traces can see each row's count of non-zero weights, not only the total. The one-of-three cell removes the count (next chip,
+<code>studies/hw-security-2026-11/NEXT_CHIP_SPEC.md</code>), at +50 % array area and 24 more bit-line slices; a chip-specific residual from
+sense-amplifier mismatch remains (13d).</li>
 <li>The LFSR is deterministic after reset (the chip has no random source): the same firmware gets the same start rows and offsets on every boot, and
 whoever controls the timing of GO controls them.</li>
 <li>LOCK is cleared by reset, and the weights stay in the array: anyone who can reset the chip and use the bus can read them. On this test chip the board

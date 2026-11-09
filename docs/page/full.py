@@ -59,7 +59,7 @@ every number <code>docs/STATUS.md</code> quotes); design facts come from the des
 <nav class="toc" aria-label="Contents"><a href="#status">Status: done, remaining, next</a><a href="#revisions">Revisions</a><a href="#verified">Is everything verified?</a><a href="#tell">What can be claimed</a><a href="#files">Files</a>
 <a href="#idea">1 The idea</a><a href="#weight">2 One weight</a><a href="#structure">3 Layers and materials</a><a href="#handson">Hands-on models</a><a href="#read">4 Reading</a><a href="#program">5 Programming</a><a href="#chip">6 The chip</a>
 <a href="#controller">7 Controller</a><a href="#logic">8 Logic design</a><a href="#fpga">9 FPGA proof</a><a href="#layout">10 Layout and sign-off</a><a href="#cf">11 ChipFoundry's tools</a>
-<a href="#limits">12 Limits</a><a href="#security">13 Security</a><a href="#open">13b Open issues</a><a href="#cells">13c Next-chip cell (3T3R)</a><a href="#ttpu">14 TPU Gen2</a><a href="#next">15 Next: system, USN</a><a href="#nov8">Corrections</a><a href="#glossary">Glossary</a></nav>""" + s[b:]
+<a href="#limits">12 Limits</a><a href="#security">13 Security</a><a href="#open">13b Open issues</a><a href="#cells">13c Next-chip cell (3T3R)</a><a href="#leak3">13d 3T3R leakage</a><a href="#ttpu">14 TPU Gen2</a><a href="#next">15 Next: system, USN</a><a href="#nov8">Corrections</a><a href="#glossary">Glossary</a></nav>""" + s[b:]
 
 # ---------------------------------------------------------------- new opening (replaces ready / verified / tell / files)
 a, b = cut("ready", "idea")
@@ -262,24 +262,46 @@ if None not in t3:
 if eqd:
     done3.append(f"<li><b>This chip unchanged</b>: without the option the logic is proven equivalent to the verified revision 4.7 "
                  f"({int(eqd.group(1)):,} points, {eqd.group(2)} unproven).</li>")
-done3.append("<li><b>Leak model</b>: weights and inputs pass (table above).</li>")
+m3 = J("next_chip/macro3_layout.json"); ms3 = J("next_chip/macro_sim3.json"); mc3 = J("next_chip/mutation_chip_1of3.json")
+ch3 = B.checks(T("next_chip/rtl_chip_1of3_110.log")); fl3 = T("next_chip/formal_1of3.log"); ff3 = J("next_chip/formal_faults_1of3.json")
+mf3 = J("rtl_mutation_1of3full.json")
+if m3:
+    done3.append(f"<li><b>Analog macro</b> for 3T3R (<code>macro3.py</code>: 72 row slices, 72 bit-line slices, 24 source-line drivers, control): "
+                 f"{m3['width_um']} × {m3['height_um']} µm (2T2R macro {m3['macro_2t2r_um'][0]} × {m3['macro_2t2r_um'][1]} µm); DRC {m3['drc_errors']}, "
+                 f"LVS {'match' if m3['lvs_match'] else 'MISMATCH'}, planted LVS fault {'caught' if not m3['fault_lvs_match'] else 'NOT caught'}.</li>")
+if ms3:
+    sp = ", ".join(f"{r['corner']} {r['pulses']}" for r in ms3["set"])
+    done3.append(f"<li><b>Programming through the drawn drivers</b> (<code>macro_sim3.py</code>, 12 devices): set at 2.0 V word line in {sp} pulses; "
+                 f"reset of cells up to three decades slower in at most {max(r['pulses'] for r in ms3['reset'])} pulses; largest change of any "
+                 f"other device {ms3['max_disturb_uS']} µS.</li>")
+if ch3 and mc3:
+    done3.append(f"<li><b>Array controller with the Z bit line</b>: chip test bench through the line-level macro model {ch3[0]:,} checks, "
+                 f"{ch3[1]} failures; {mc3['detected']} of {mc3['faults']} controller faults in the Z logic caught.</li>")
+if "DONE (PASS" in fl3:
+    done3.append("<li><b>Formal safety proof on the option</b> (<code>tcim_core.sby safety_1of3</code>, with Z pulse-mask and decode properties): PASS"
+                 + (f"; {sum(x['caught'] for x in ff3)} of {len(ff3)} planted Z faults make it fail" if ff3 else "") + ".</li>")
+if mf3:
+    done3.append(f"<li><b>Full mutation test on the option</b> (every 2T2R fault plus the Z faults): {mf3['detected']} of {mf3['run']} " + ("run so far caught" + f", of {mf3['faults']} planned (in progress)" if mf3['run'] < mf3['faults'] else "faults caught") + ".</li>")
 cells_html += f"""
 <figure>{cells_figure()}<figcaption>The two cells to scale, every rectangle from their GDS. The 3T3R cell adds a third select transistor and
 ReRAM element (Z) with its own bit line; the source line and word line are shared. Exactly one of P, Z, N is low-resistance.</figcaption></figure>
 <div class="board">
 <div class="col"><h3><span class="tag t-ok">3T3R: done</span></h3><ul>{"".join(done3)}</ul></div>
 <div class="col"><h3><span class="tag t-warn">3T3R: still to do</span></h3><ul>
-<li>Periphery: 24 more bit-line slices and sense amplifiers; analog macro, chip layout and sign-off.</li>
-<li>Array controller and chip test bench with the Z bit line; formal proofs and the full mutation test on the option.</li>
-<li>Transistor-level read and programming simulation of the 3T3R cell; its supply current in the leak model at 1 µA noise.</li>
+<li>Chip assembly: the digital block placed and routed again with 48 more macro pins, the user area rebuilt, sign-off and ChipFoundry's precheck (on the PC, after ChipFoundry answers on ReRAM).</li>
+<li>The progress and two-copy timing proofs on the option.</li>
+<li>Sense-amplifier rotation (proposal; removes the row-aligned position residual in the model, 13d): draw it and add it to the RTL.</li>
+<li>Refuse programming under LOCK (or erase the whole array first): revision 4.7 lets an attacker reprogram a row and calibrate the sense amplifiers.</li>
+<li>Silicon: the leakage results are about the model.</li>
 </ul></div>
 <div class="col"><h3><span class="tag t-you">prior art to cite</span></h3><ul>
-<li>One-hot ternary codes, and dual-rail / one-of-n encodings as side-channel countermeasures in logic.</li>
-<li>Fixed-weight codewords for ternary memory cells (Micron, US 11,811,424; for read reliability, not security).</li>
-<li>Power-analysis attacks and countermeasures for CIM (TU Delft, 2025–26; other methods).</li>
-<li>A literature search is needed before claiming novelty.</li></ul></div>
+<li>Literature search done (8 November, 70 entries, <code>studies/paper-2026-11/LITERATURE.md</code>): no one-of-three ReRAM cell for side-channel resistance found; IEEE Xplore and patent databases still to search.</li>
+<li>Closest: ternary ReRAM weight extraction by power (Goudzwaard, TU Delft 2025); dual-rail ReRAM CAM (Sapui and Tahoori, ASP-DAC 2025); the 2T2R ternary code (Laborieux et al.); dual-rail and one-of-n logic (WDDL, Moore et al. 2003).</li>
+<li>Fixed-weight codewords for ternary memory cells (Micron, US 11,811,424; for read reliability, not security).</li></ul></div>
 </div>
 """
+import leak3_section
+cells_html += leak3_section.section()
 s = s[:h] + f"""</section>
 
 <section id="open">
@@ -360,6 +382,15 @@ repository has REBEL-6's specification, assembler and a debugger that talks to a
 
 """
 s = s[:a] + ttpu + s[b:]
+
+# ---------------------------------------------------------------- Fig A': the next-chip 3T3R cell in 3D, after Fig A
+import fig3d_3t3r
+_h3, _j3 = fig3d_3t3r.build(Path(__file__).with_name("base_rev45.html").read_text())
+_c = s.index('<div class="iso iso-embed" data-fig="cell2t2r">')
+_d = s.index("</figure></div>", _c) + len("</figure></div>")
+s = s[:_d] + '\n<p>The same view of the next-chip cell (section 13c): three devices per weight, exactly one of them set.</p>\n' + _h3 + s[_d:]
+_k = s.index("\nshow(0);\n}", s.index('[data-fig="cell2t2r"]', s.index('<script type="module">'))) + len("\nshow(0);\n}")
+s = s[:_k] + "\n" + _j3 + s[_k:]
 
 # ---------------------------------------------------------------- tighter prose (trim.py), corrections sections dropped
 import hashlib

@@ -1,6 +1,6 @@
 # TCIM0: a balanced-ternary ReRAM compute-in-memory tile for REBEL-6, and its SKY130 test chip
 
-**Design status report, revision 4.8, 8 November 2026** (sections 1–14 as of revision 4.5, 12 October, except where marked; section 15 gives the security changes of revisions 4.6 and 4.7, their verification, revision 4.8 and the cell options).
+**Design status report, revision 4.8, 8 November 2026** (sections 1–14 as of revision 4.5, 12 October, except where marked; section 15 gives the security changes of revisions 4.6 and 4.7, their verification, revision 4.8, the cell options and the 3T3R study of 8 November).
 Repository `reram-ternary`. Every number in this report is produced by a script in the repository and stored in
 `results/`; the file is named where the number is quoted, or in the validation table (section 12). `make test` re-derives
 key results by a second method and compares every number the roadmap quotes with the stored files. The roadmap
@@ -39,7 +39,9 @@ TCIM0 logic with its serial port, pads, supplies, and one separate 2T2R cell wir
   (section 9.10; for revision 4.7, PC batch 28c, section 15.3).
 - *Security* (revisions 4.6 and 4.7, section 15). Products take the same time whatever the inputs, programming takes
   the same time whatever the devices do, LOCK blocks the debug paths, and the leak model shows no input leak. The
-  weights still leak through the 2T2R cell in the model; a one-of-three cell for the next chip closes that in the model.
+  weights still leak through the 2T2R cell in the model. A one-of-three cell for the next chip removes the zero-count leak in the
+  model; a chip-specific residual from sense-amplifier mismatch remains, and a sense-amplifier rotation (proposal) removes it in
+  the model (section 15.8).
 
 **What is not established.** Everything about the memory devices themselves rests on models: the device model is fitted
 to published data, and SkyWater's public yield statistics cannot pin the device-to-device spread down to better than a
@@ -1222,10 +1224,67 @@ the set target); the 2T2R builds were run again with it: 97,463 checks, 0 failur
 predate this change). The mutation and formal fault lists were updated to the renamed decode signals; their runs predate
 the edit, which is proven not to change the default logic.
 
-Still to do for the 3T3R chip: periphery (24 more bit-line slices and sense amplifiers), macro, array controller with the
-Z line, chip layout and sign-off; formal proofs and the full mutation test on the option; transistor-level simulation of
-the cell. Prior art to cite: one-hot ternary codes and one-of-n / dual-rail side-channel encodings; fixed-weight codewords
+Still to do for the 3T3R chip: see section 15.8 (macro, controller, proofs and transistor-level study done on 8 November). Prior art to cite: one-hot ternary codes and one-of-n / dual-rail side-channel encodings; fixed-weight codewords
 for ternary memory cells (Micron, US 11,811,424, read reliability); CIM power-analysis countermeasures (TU Delft, 2025–26).
+
+### 15.8 The 3T3R chip parts and the transistor-level leakage study (8 November 2026)
+
+Everything here is about the next chip (build option `TCIM_CELL_1OF3`, 3T3R layout); this chip is unchanged. Leakage
+results are about the model, not silicon.
+
+| Item | Result | Files |
+|---|---|---|
+| Analog macro for 3T3R (`layout/sky130/next_3t3r/macro3.py`: the 3T3R array, 72 row slices, 72 bit-line slices, 24 source-line drivers, control) | 1566.3 × 1950.5 µm (2T2R macro 1436.7 × 1391.7 µm); DRC 0 (full rules), LVS match, a planted LVS fault caught (Magic 8.3.685, netgen 1.5.272, sky130B of 3e0e31d) | `results/next_chip/macro3_layout.json` |
+| Programming through the drawn drivers, 3T3R (quasi-static, 12 devices, `chip/sky130/sim/macro_sim3.py`) | set at a 2.0 V word line: tt 7, ss 8, ff 7 pulses; reset of cells 0 to 3 decades slower than the fit: at most 7 pulses; largest change of any other device 0.0 µS. The same pulse counts as the 2T2R macro (section 9.6) | `results/next_chip/macro_sim3.json` |
+| Array controller with the Z bit line (`rtl/chip/tcim_actl.sv`, macro `ZA`); chip test bench with the line-level model extended to the Z line (`make rtl-chip-1of3`) | 92,076 checks, 0 failures (settings 1,1,0); 6 of 6 controller faults in the Z logic caught (`CHIP_CELL=1of3 tb/chip/mutation_chip.py`) | `results/next_chip/rtl_chip_1of3_110.log`, `mutation_chip_1of3.json` |
+| Formal safety proof on the option (`tcim_core.sby safety_1of3`; Z pulse-mask properties and an independent decode of the Z sense bits) | PASS; 3 of 3 planted Z faults make it fail (`FAULTS=1of3 formal/check_faults.py`) | `results/next_chip/formal_1of3.log`, `formal_faults_1of3.json` |
+| Full mutation test on the option (every fault of the 2T2R list plus the Z faults, `TB_CELL=1of3full`) | 122 of 122 faults caught | `results/rtl_mutation_1of3full.json` |
+| Sense-amplifier read transients (`chip/sky130/sim/sa_transient.py`; ngspice, CF PDK 3e0e31d, 250 ns read, 40 mismatch samples) | mean supply current 2.25 µA on a 60 µS LRS read, 1.00 µA on 4.5 µS HRS; mismatch sd 0.126 µA (LRS), 0.044 µA (HRS); every read correct | `results/security/sa_transient.*` |
+
+**Leakage with transistor-level waveforms** (`tools/tvla_circuit.py`: every sense amplifier one frozen mismatch sample,
+lognormal device conductances, revision 4.7 logic, 5 µA rms noise per 50 ns window, 150,000 traces per group):
+
+| Cell | Shuffled, one programmed instance frozen | Shuffled, fixed group reprogrammed every trace | Row-aligned, reprogrammed | Row-aligned, reprogrammed, sense-amplifier rotation (proposal) | Inputs (shuffled, frozen) |
+|---|---|---|---|---|---|
+| 2T2R | 12.14 (leaks) | 11.94 (leaks) | 394.41 (leaks) | 387.06 (leaks) | 3.42 (passes) |
+| 3T3R one-of-three | 22.16 (leaks) | 3.18 (passes) | 26.32 (leaks) | 2.70 (passes) | 3.17 (passes) |
+| 4T4R as proposed (one of four) | 21.54 (leaks) | 3.09 (passes) | not run | not run | 3.79 (passes) |
+
+How to read it (council red team, `studies/paper-2026-11/council/03_red_team.md`):
+- The frozen test also sees one programmed instance's conductances, a fingerprint present for every cell.
+- With a random start row every sample sees the matrix average, so the shuffled tests see only the matrix-wide zero count (the
+  fixed matrix has 565 zeros against 576 expected).
+- Row-aligned tests see each row and position. Row-aligned, one-of-three still leaks: each sense amplifier's own mismatch makes
+  the current depend on which device holds the LRS. This is a chip-specific, first-order residual.
+- Rotating at random, on every read, which of a cell's three sense amplifiers reads which device removes it in the model (proposal:
+  a 3:1 switch per amplifier, decode rotated back in logic; `--sa-rotate`).
+
+**Attack** (`tools/attack_sparsity.py`, row-aligned, profiled on another device): estimating each row's number of zero
+weights reaches a correlation of 0.901 on 2T2R (35 % of rows exact) at 4,096 reads per row; on
+3T3R the correlation stays between -0.046 and 0.038. A second attacker using all
+five windows: 2T2R 0.971 (70 % exact), 3T3R -0.018 (17 %, the best-guess rate).
+
+**Cost and gain.**
+- Read current per weight, at SkyWater's published states: 4.25 µA for 3T3R, against 3.25 µA (±1) and 2.00 µA (0) for
+  2T2R. The ratio is 1.31× with no zero weights, 1.50× at one third and 1.79× at 70 %.
+- At the states the drawn drivers program (about 30 µS and 0.31 µS; `results/security/sa_programmed_states.json`) the ratio at one
+  third zeros is the same; at 70 % zeros it is 2.72×.
+- Every single-device flip gives an invalid 3T3R code (9 of 9). In 2T2R
+only 2 of 6 do, and the other 4 turn into another valid weight.
+
+**Found on the way** (council, `studies/paper-2026-11/council/`):
+- The margin check reads the row in PROW also under LOCK (it only stops writing PDATA), so an attacker gets row-aligned reads.
+- Programming is not refused under LOCK, so an attacker can reprogram a row with known weights and calibrate every sense amplifier.
+  Proposal for the next revision: refuse PCMD + under LOCK, or erase the whole array first.
+- The tile's results Y are readable, and with chosen inputs they give the weights directly. The side-channel threat model therefore
+  assumes the tile's results go only to the host.
+- The sense register's switching depends on whether vertically adjacent weights are equal. Clearing it between reads is proposed,
+  not done.
+
+Still to do for the 3T3R chip: the sense-amplifier rotation (draw it, add it to the RTL); refusing programming under LOCK; the digital block placed and routed with the 48 extra macro pins, the user area, sign-off
+and ChipFoundry's precheck; the progress and two-copy timing proofs on the option; the experiments listed by the council
+(nested specific tests, second-order tests, a current-DAC flattener baseline, extracted bit-line parasitics, programming
+leak with reprogrammed groups); silicon. Paper: `studies/paper-2026-11/` (plan, literature, council, `DRAFT.md`).
 
 ---
 

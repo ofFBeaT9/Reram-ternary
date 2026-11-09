@@ -1,0 +1,62 @@
+{
+ "note": "Leakage of the array read current with transistor-level waveforms (8 November 2026; paper study).",
+ "assumptions": {
+  "noise_uA_rms_per_window": 5.0,
+  "k_dig_uA": 0.15,
+  "windows_per_read": 5,
+  "window_ns": 50.0,
+  "mismatch_samples": 40,
+  "source": "results/security/sa_transient.npz"
+ },
+ "threshold": 4.5,
+ "cases": [
+  {
+   "encoding": "2T2R",
+   "secret": "weights",
+   "traces_per_group": 150000,
+   "max_abs_t": 12.14,
+   "leaks": true,
+   "seconds": 440
+  },
+  {
+   "encoding": "2T2R",
+   "secret": "inputs",
+   "traces_per_group": 150000,
+   "max_abs_t": 3.42,
+   "leaks": false,
+   "seconds": 370
+  },
+  {
+   "encoding": "1of3",
+   "secret": "weights",
+   "traces_per_group": 150000,
+   "max_abs_t": 22.16,
+   "leaks": true,
+   "seconds": 595
+  },
+  {
+   "encoding": "1of3",
+   "secret": "inputs",
+   "traces_per_group": 150000,
+   "max_abs_t": 3.17,
+   "leaks": false,
+   "seconds": 845
+  },
+  {
+   "encoding": "4T4R",
+   "secret": "weights",
+   "traces_per_group": 150000,
+   "max_abs_t": 21.54,
+   "leaks": true,
+   "seconds": 959
+  },
+  {
+   "encoding": "4T4R",
+   "secret": "inputs",
+   "traces_per_group": 150000,
+   "max_abs_t": 3.79,
+   "leaks": false,
+   "seconds": 819
+  }
+ ]
+}

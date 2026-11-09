@@ -49,11 +49,22 @@ F = [
      "if (1'b1) begin                           // (revision 4.7: not under LOCK)"),
     ("miter: start row from the input of row 0", "miter:prove", "assign start_row  = noshuf_e ? 7'd0 :", "assign start_row  = r_noshuf ? {6'd0, x_nz[0]} :"),
 ]
+# next-chip cell (3T3R, 8 November 2026): faults in the Z logic, for the task safety_1of3 (FAULTS=1of3 runs only these)
+F3 = [
+    ("1of3: set pulses reach Z for a weight +1 or -1", "safety_1of3", "`Z(pend_z <= w_zer;)   // devices that must be LRS", "`Z(pend_z <= '1;)   // devices that must be LRS"),
+    ("1of3: P with Z decoded as +1", "safety_1of3", "assign sa_p_d = arr_sa_p & ~arr_sa_z;", "assign sa_p_d = arr_sa_p;"),
+    ("1of3: reset pulses reach Z for a weight 0", "safety_1of3", "`Z(pend_z <= ~w_zer;)   // devices that must be HRS", "`Z(pend_z <= '1;)   // devices that must be HRS"),
+]
+if os.environ.get("FAULTS") == "1of3":
+    F = F3
 # the unfaulted proofs must have passed first (results/formal.log from make formal, the miter logs from the miter runs)
 base = (ROOT / "results" / "formal.log").read_text() if (ROOT / "results" / "formal.log").exists() else ""
-for t in ("tcim_core_safety", "tcim_core_safety_pnx", "tcim_core_progress", "tcim_core_lfsr"):
+if os.environ.get("FAULTS") == "1of3":
+    base3 = (ROOT / "results" / "next_chip" / "formal_1of3.log")
+    assert base3.exists() and "DONE (PASS" in base3.read_text(), "safety_1of3 has not passed (results/next_chip/formal_1of3.log)"
+for t in (() if os.environ.get("FAULTS") == "1of3" else ("tcim_core_safety", "tcim_core_safety_pnx", "tcim_core_progress", "tcim_core_lfsr")):
     assert f"[{t}] DONE (PASS" in base, f"{t} has not passed in results/formal.log: run make formal first"
-for t in ("prove", "prove_pnx"):
+for t in (() if os.environ.get("FAULTS") == "1of3" else ("prove", "prove_pnx")):
     m = ROOT / "results" / "security" / f"miter_{t}.log"
     assert m.exists() and "DONE (PASS" in m.read_text(), f"miter {t} has not passed ({m})"
 # each fault runs in its own folder, so they can run side by side (JOBS, default 1)
@@ -81,5 +92,5 @@ def one(item):
 from concurrent.futures import ThreadPoolExecutor
 with ThreadPoolExecutor(max_workers=int(os.environ.get("JOBS", "1"))) as ex:
     res = list(ex.map(one, F))
-(ROOT / "results" / "formal_faults.json").write_text(json.dumps(res, indent=1))
+(ROOT / "results" / ("next_chip/formal_faults_1of3.json" if os.environ.get("FAULTS") == "1of3" else "formal_faults.json")).write_text(json.dumps(res, indent=1))
 print(sum(r["caught"] for r in res), "of", len(res), "faults make a proof fail")

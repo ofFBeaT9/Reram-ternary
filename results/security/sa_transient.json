@@ -1,0 +1,36 @@
+{
+ "note": "Supply current of one sense amplifier during a read, as a waveform (8 November 2026; paper study, item H8).",
+ "window_ns": 10.0,
+ "read_ns": 250.0,
+ "mismatch_samples": 40,
+ "mean_uA_nominal": {
+  "2uS": 0.5295,
+  "3uS": 0.7262,
+  "4.5uS": 1.0013,
+  "6uS": 1.2576,
+  "7.93uS": 1.5657,
+  "30uS": 2.2761,
+  "45uS": 2.2568,
+  "60uS": 2.2517,
+  "90uS": 2.2472,
+  "120uS": 2.2481
+ },
+ "peak_uA_nominal": {
+  "2uS": 1.266,
+  "3uS": 1.3516,
+  "4.5uS": 1.4821,
+  "6uS": 1.6134,
+  "7.93uS": 1.7812,
+  "30uS": 4.0237,
+  "45uS": 3.5452,
+  "60uS": 3.4213,
+  "90uS": 3.3127,
+  "120uS": 3.336
+ },
+ "lrs_spread_over_G_uA": 0.4959,
+ "hrs_spread_over_G_uA": 0.6174,
+ "mismatch_sd_uA_LRS60": 0.1261,
+ "mismatch_sd_uA_HRS4p5": 0.044,
+ "lrs_minus_hrs_uA": 2.0289,
+ "reads_correct": true
+}

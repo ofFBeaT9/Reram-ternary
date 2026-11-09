@@ -1,0 +1,19 @@
+{
+ "note": "sense-amplifier mean supply current over the 250 ns read, tt 27 C, nominal; programmed states of macro_sim3 (set 28.4-29.9 uS, reset 0.31 uS) and SkyWater's published states (60 uS, 4.5 uS)",
+ "mean_uA": {
+  "0.31uS": 0.1614,
+  "1uS": 0.3181,
+  "4.5uS": 1.0013,
+  "28uS": 2.2828,
+  "29.9uS": 2.2764,
+  "60uS": 2.2517
+ },
+ "read_correct": {
+  "0.31uS": true,
+  "1uS": true,
+  "4.5uS": true,
+  "28uS": true,
+  "29.9uS": true,
+  "60uS": true
+ }
+}

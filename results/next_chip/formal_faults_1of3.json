@@ -1,0 +1,20 @@
+[
+ {
+  "fault": "1of3: set pulses reach Z for a weight +1 or -1",
+  "proof": "safety_1of3",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "1of3: P with Z decoded as +1",
+  "proof": "safety_1of3",
+  "result": "FAIL",
+  "caught": true
+ },
+ {
+  "fault": "1of3: reset pulses reach Z for a weight 0",
+  "proof": "safety_1of3",
+  "result": "FAIL",
+  "caught": true
+ }
+]

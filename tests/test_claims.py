@@ -636,6 +636,40 @@ claim('3T3R Z-logic faults caught (of 7)', 7, sum(1 for r in mz7 if r["status"] 
 mq = _re.search(r"Of those cells (\d+) are proven and (\d+) are unproven", (R / "next_chip/equiv_default_build_unchanged.log").read_text())
 claim('default build = revision 4.7 core: points proven', 2718, int(mq.group(1)), 0); claim('default build = revision 4.7 core: unproven', 0, int(mq.group(2)), 0)
 
+# ---- next chip (8 November 2026): 3T3R periphery, controller, proofs, transistor-level leakage (docs/STATUS.md, section 15.8)
+m3 = J7("next_chip/macro3_layout.json")
+claim('3T3R macro width (um)', 1566.3, m3["width_um"], 0.06); claim('3T3R macro height (um)', 1950.5, m3["height_um"], 0.06)
+claim('3T3R macro DRC errors', 0, m3["drc_errors"], 0); claim('3T3R macro LVS match, planted fault caught (2 = both)', 2, int(m3["lvs_match"]) + int(not m3["fault_lvs_match"]), 0)
+ms3 = J7("next_chip/macro_sim3.json")
+for cr, q in (("tt", 7), ("ss", 8), ("ff", 7)):
+    claim(f'3T3R set pulses at 2.0 V, {cr}', q, next(r["pulses"] for r in ms3["set"] if r["corner"] == cr), 0)
+claim('3T3R reset pulses, worst (0-3 decades slower)', 7, max(r["pulses"] for r in ms3["reset"]), 0); claim('3T3R programming disturb (uS)', 0.0, ms3["max_disturb_uS"], 0)
+c, f = chk7("next_chip/rtl_chip_1of3_110.log"); claim('3T3R chip test bench: checks', 92076, c, 0); claim('3T3R chip test bench: failures', 0, f, 0)
+mc3 = J7("next_chip/mutation_chip_1of3.json"); claim('3T3R controller Z faults caught (of 6)', 6, mc3["detected"] if mc3["faults"] == 6 else -1, 0)
+claim('3T3R formal safety proof passes (1 = yes)', 1, int("DONE (PASS" in (R / "next_chip/formal_1of3.log").read_text()), 0)
+ff3 = J7("next_chip/formal_faults_1of3.json"); claim('3T3R formal Z faults caught (of 3)', 3, sum(x["caught"] for x in ff3) if len(ff3) == 3 else -1, 0)
+mf8 = J("rtl_mutation_1of3full.json"); claim('3T3R full mutation test: faults caught (of 122 run)', 122, mf8["detected"] if mf8["run"] == 122 and not mf8["missing"] else -1, 0)
+sa8 = J7("security/sa_transient.json")
+claim('SA mean current, 60 uS LRS (uA)', 2.25, sa8["mean_uA_nominal"]["60uS"], 0.006); claim('SA mean current, 4.5 uS HRS (uA)', 1.00, sa8["mean_uA_nominal"]["4.5uS"], 0.006)
+claim('SA mismatch sd on LRS (uA)', 0.126, sa8["mismatch_sd_uA_LRS60"], 0.0006)
+at8 = J7("security/attack_sparsity.json")
+claim('attack 2T2R correlation, 4096 reads per row', 0.90, at8["results"]["2T2R"][-1]["corr_mean"], 0.006)
+claim('attack 3T3R |correlation| max over N', 0.05, max(abs(r["corr_mean"]) for r in at8["results"]["1of3"]), 0.0041)
+claim('attack, all windows, 2T2R correlation at 4096', 0.97, at8["results_all_windows"]["2T2R"][-1]["corr_mean"], 0.006)
+claim('attack, all windows, 3T3R correlation at 4096', -0.02, at8["results_all_windows"]["1of3"][-1]["corr_mean"], 0.006)
+tc8 = J7("security/tvla_circuit.json")
+for enc, q in (("2T2R", 12.14), ("1of3", 22.16), ("4T4R", 21.54)):
+    claim(f'circuit TVLA, frozen instance, weights, {enc}', q, next(r["max_abs_t"] for r in tc8["cases"] if r["encoding"] == enc and r["secret"] == "weights"), 0.006)
+for enc, q in (("2T2R", 3.42), ("1of3", 3.17), ("4T4R", 3.79)):
+    claim(f'circuit TVLA, inputs, {enc}', q, next(r["max_abs_t"] for r in tc8["cases"] if r["encoding"] == enc and r["secret"] == "inputs"), 0.006)
+for fn, enc, q in (("tvla_circuit_redraw", "2T2R", 11.94), ("tvla_circuit_redraw", "1of3", 3.18), ("tvla_circuit_redraw", "4T4R", 3.09),
+                   ("tvla_circuit_redraw_aligned", "2T2R", 394.41), ("tvla_circuit_redraw_aligned", "1of3", 26.32),
+                   ("tvla_circuit_redraw_aligned_rot", "1of3", 2.70), ("tvla_circuit_redraw_aligned_rot", "2T2R", 387.06)):
+    claim(f'circuit TVLA {fn[13:]}, weights, {enc}', q, next(r["max_abs_t"] for r in J7(f"security/{fn}.json")["cases"] if r["encoding"] == enc), 0.006)
+sp8 = J7("security/sa_programmed_states.json")
+claim('SA mean current, 29.9 uS (uA)', 2.2764, sp8["mean_uA"]["29.9uS"], 0.00005); claim('SA mean current, 0.31 uS (uA)', 0.1614, sp8["mean_uA"]["0.31uS"], 0.00005)
+claim('SA mean current, 60 uS, second run (uA)', 2.2517, sp8["mean_uA"]["60uS"], 0.00005)
+
 (R / "audit_claims.json").write_text(json.dumps(dict(numbers=N_CLAIMS, stale=bad), indent=1))
 print(f"\n{N_CLAIMS} numbers checked, {len(bad)} stale" + (": " + "; ".join(bad) if bad else ""))
 sys.exit(1 if bad else 0)

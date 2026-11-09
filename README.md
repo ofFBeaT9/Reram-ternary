@@ -25,7 +25,7 @@ be ordered until ChipFoundry confirms ReRAM on a shuttle. Everything is simulati
 | 4.6 | 4 Nov 2026 | Fixed-latency products, dummy accumulators, constant-time programming, SEC/LOCK register, margin check |
 | 4.7 | 6 Nov 2026 | Uniform start row (LFSR mod 72), random accumulator offset, LOCK refuses read-back; block routed again |
 | 4.8 | 7 Nov 2026 | Serial-port fuzzing; no design change |
-| next chip | 8 Nov 2026 | 3T3R one-of-three cell: build option `TCIM_CELL_1OF3`, test bench, drawn cell and array (DRC, LVS) in `layout/sky130/next_3t3r/` |
+| next chip | 8 Nov 2026 | 3T3R one-of-three cell: build option `TCIM_CELL_1OF3` (core and array controller), test benches, formal safety proof, fault campaigns; drawn cell, array and analog macro (DRC, LVS) in `layout/sky130/next_3t3r/`; transistor-level leakage study and paper draft in `studies/paper-2026-11/` |
 
 ## Map
 
@@ -52,6 +52,9 @@ make mutation mutation-pnx  # do the tests notice injected faults?
 make equiv equiv-chip       # netlist = RTL
 make fuzz                   # serial-port fuzzing
 make rtl-1of3               # the test bench on the next-chip 3T3R cell option
+make rtl-chip-1of3          # the chip test bench with the Z bit line (line-level macro model)
+python3 tools/tvla_circuit.py --redraw   # leakage with transistor-level sense-amplifier waveforms
+python3 studies/paper-2026-11/make_draft.py   # the paper draft, numbers read from results/
 make test                   # every quoted number against results/
 ```
 

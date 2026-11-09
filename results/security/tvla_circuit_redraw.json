@@ -1,0 +1,42 @@
+{
+ "note": "Leakage of the array read current with transistor-level waveforms (8 November 2026; paper study).",
+ "assumptions": {
+  "noise_uA_rms_per_window": 5.0,
+  "k_dig_uA": 0.15,
+  "windows_per_read": 5,
+  "window_ns": 50.0,
+  "lrs_sigma_ln": 0.35,
+  "k_sense_uA": 0.0,
+  "fixed_group_reprogrammed": true,
+  "row_aligned": false,
+  "mismatch_samples": 40,
+  "source": "results/security/sa_transient.npz"
+ },
+ "threshold": 4.5,
+ "cases": [
+  {
+   "encoding": "2T2R",
+   "secret": "weights",
+   "traces_per_group": 150000,
+   "max_abs_t": 11.94,
+   "leaks": true,
+   "seconds": 376
+  },
+  {
+   "encoding": "1of3",
+   "secret": "weights",
+   "traces_per_group": 150000,
+   "max_abs_t": 3.18,
+   "leaks": false,
+   "seconds": 527
+  },
+  {
+   "encoding": "4T4R",
+   "secret": "weights",
+   "traces_per_group": 150000,
+   "max_abs_t": 3.09,
+   "leaks": false,
+   "seconds": 781
+  }
+ ]
+}

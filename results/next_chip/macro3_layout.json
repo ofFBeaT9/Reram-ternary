@@ -1,0 +1,18 @@
+{
+ "ybot": -1734.5200000000002,
+ "xright": 1564.530000000006,
+ "ytop": 216.0,
+ "slices": 168,
+ "lv_pins": 223,
+ "drc_errors": 0,
+ "drc_why": "",
+ "width_um": 1566.3,
+ "height_um": 1950.5,
+ "lvs_match": true,
+ "fault_lvs_match": false,
+ "tools": "Magic 8.3.685 (as the 2T2R macro of 11 October), netgen 1.5.272, sky130B of open_pdks 3e0e31d; periphery cells from the PC run of gen.py (layout/sky130/periph/work)",
+ "macro_2t2r_um": [
+  1436.7,
+  1391.7
+ ]
+}
