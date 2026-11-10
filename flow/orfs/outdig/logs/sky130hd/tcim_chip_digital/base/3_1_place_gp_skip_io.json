@@ -1,8 +1,8 @@
 {
-	"gpl__convergence__iteration": 409,
-	"gpl__area__final": 111743,
+	"gpl__convergence__iteration": 412,
+	"gpl__area__final": 108083,
 	"gpl__area__final__percent": 0,
-	"route__wirelength__estimated": 323572,
+	"route__wirelength__estimated": 288700,
 	"flow__warnings__count": 0,
 	"flow__errors__count": 0,
 	"flow__warnings__type_count": 0

@@ -6,7 +6,8 @@ sec = subprocess.run([sys.executable, str(ROOT / "studies/paper-2026-11/status_1
 p = ROOT / "docs/STATUS.md"; s = p.read_text()
 end = s.index("\n---\n\n## Appendix A")
 if "### 15.8 " in s:
-    s = s[:s.index("### 15.8 ")] + sec.rstrip() + "\n" + s[end:]
+    e8 = s.index("### 15.9 ") if "### 15.9 " in s else end          # revision 4.9 added section 15.9 after it
+    s = s[:s.index("### 15.8 ")] + sec.rstrip() + "\n" + ("\n" if e8 != end else "") + s[e8:]
 else:
     s = s[:end] + "\n" + sec.rstrip() + "\n" + s[end:]
 p.write_text(s)

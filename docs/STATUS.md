@@ -1,6 +1,6 @@
 # TCIM0: a balanced-ternary ReRAM compute-in-memory tile for REBEL-6, and its SKY130 test chip
 
-**Design status report, revision 4.8, 8 November 2026** (sections 1–14 as of revision 4.5, 12 October, except where marked; section 15 gives the security changes of revisions 4.6 and 4.7, their verification, revision 4.8, the cell options and the 3T3R study of 8 November).
+**Design status report, revision 4.9, 9 November 2026** (sections 1–14 as of revision 4.5, 12 October, except where marked; section 15 gives the security changes of revisions 4.6 and 4.7, their verification, revision 4.8, the cell options and the 3T3R study of 8 November, and revision 4.9 (section 15.9): LOCK set by reset and cleared only by an erase of the whole array).
 Repository `reram-ternary`. Every number in this report is produced by a script in the repository and stored in
 `results/`; the file is named where the number is quoted, or in the validation table (section 12). `make test` re-derives
 key results by a second method and compares every number the roadmap quotes with the stored files. The roadmap
@@ -1236,9 +1236,9 @@ results are about the model, not silicon.
 |---|---|---|
 | Analog macro for 3T3R (`layout/sky130/next_3t3r/macro3.py`: the 3T3R array, 72 row slices, 72 bit-line slices, 24 source-line drivers, control) | 1566.3 × 1950.5 µm (2T2R macro 1436.7 × 1391.7 µm); DRC 0 (full rules), LVS match, a planted LVS fault caught (Magic 8.3.685, netgen 1.5.272, sky130B of 3e0e31d) | `results/next_chip/macro3_layout.json` |
 | Programming through the drawn drivers, 3T3R (quasi-static, 12 devices, `chip/sky130/sim/macro_sim3.py`) | set at a 2.0 V word line: tt 7, ss 8, ff 7 pulses; reset of cells 0 to 3 decades slower than the fit: at most 7 pulses; largest change of any other device 0.0 µS. The same pulse counts as the 2T2R macro (section 9.6) | `results/next_chip/macro_sim3.json` |
-| Array controller with the Z bit line (`rtl/chip/tcim_actl.sv`, macro `ZA`); chip test bench with the line-level model extended to the Z line (`make rtl-chip-1of3`) | 92,076 checks, 0 failures (settings 1,1,0); 6 of 6 controller faults in the Z logic caught (`CHIP_CELL=1of3 tb/chip/mutation_chip.py`) | `results/next_chip/rtl_chip_1of3_110.log`, `mutation_chip_1of3.json` |
+| Array controller with the Z bit line (`rtl/chip/tcim_actl.sv`, macro `ZA`); chip test bench with the line-level model extended to the Z line (`make rtl-chip-1of3`) | 101,737 checks, 0 failures (settings 1,1,0); 6 of 6 controller faults in the Z logic caught (`CHIP_CELL=1of3 tb/chip/mutation_chip.py`) | `results/next_chip/rtl_chip_1of3_110.log`, `mutation_chip_1of3.json` |
 | Formal safety proof on the option (`tcim_core.sby safety_1of3`; Z pulse-mask properties and an independent decode of the Z sense bits) | PASS; 3 of 3 planted Z faults make it fail (`FAULTS=1of3 formal/check_faults.py`) | `results/next_chip/formal_1of3.log`, `formal_faults_1of3.json` |
-| Full mutation test on the option (every fault of the 2T2R list plus the Z faults, `TB_CELL=1of3full`) | 122 of 122 faults caught | `results/rtl_mutation_1of3full.json` |
+| Full mutation test on the option (every fault of the 2T2R list plus the Z faults, `TB_CELL=1of3full`) | 133 of 133 faults caught | `results/rtl_mutation_1of3full.json` |
 | Sense-amplifier read transients (`chip/sky130/sim/sa_transient.py`; ngspice, CF PDK 3e0e31d, 250 ns read, 40 mismatch samples) | mean supply current 2.25 µA on a 60 µS LRS read, 1.00 µA on 4.5 µS HRS; mismatch sd 0.126 µA (LRS), 0.044 µA (HRS); every read correct | `results/security/sa_transient.*` |
 
 **Leakage with transistor-level waveforms** (`tools/tvla_circuit.py`: every sense amplifier one frozen mismatch sample,
@@ -1285,6 +1285,58 @@ Still to do for the 3T3R chip: the sense-amplifier rotation (draw it, add it to 
 and ChipFoundry's precheck; the progress and two-copy timing proofs on the option; the experiments listed by the council
 (nested specific tests, second-order tests, a current-DAC flattener baseline, extracted bit-line parasitics, programming
 leak with reprogrammed groups); silicon. Paper: `studies/paper-2026-11/` (plan, literature, council, `DRAFT.md`).
+
+### 15.9 Revision 4.9 (9 November 2026): LOCK that survives a reset
+
+The paper study's red team (`studies/paper-2026-11/council/03_red_team.md`, finding 3) found two ways around LOCK in revision 4.7:
+programming still ran under LOCK, and a reset cleared LOCK while the weights stayed in the array. Revision 4.9 closes both, and
+every other gap a design can close, in `rtl/tcim_core.sv`; the rest of the design is unchanged.
+
+- **Locked at reset.** A reset, power-up included, leaves the tile locked. There is no window before firmware sets LOCK. Products run as before, on the weights already in the array. Read-back and programming are refused (WERR, no array access), the options (ZSKIP, VARPROG, NOSHUF) cannot be set, and PITER and ACT read 0.
+- **Unlocking erases the whole array.** The only way to clear LOCK is a new command, PCMD 0,0,+. It programs all 72 rows to weight 0, in order, each with the fixed 21 + 21 pulse steps whatever the options and the old weights, so its length reveals nothing. It clears LOCK only if every device verified; with WERR the tile stays locked. Unlocking can never expose the old weights. This is how flash microcontrollers implement read-out protection.
+- **Programming is refused under LOCK.** So no row can be overwritten with known weights to calibrate each sense amplifier, the calibration the position residual of 13d needs.
+- **LOCK is held three times.** LOCK is three flip-flops and the tile is locked while any of them is set, so one upset (two, in the test bench) cannot clear it.
+
+| Check | Result |
+|---|---|
+| Test bench, both trit codes, CXXRTL (`make rtl rtl-pnx`) | 107,134 checks, 0 failures; BSD-PNX 107,134 checks, 0 failures |
+| Same test bench on Verilator (`make rtl-verilator`) | 107,059 checks, 0 failures; BSD-PNX 107,059 checks, 0 failures |
+| 3T3R build (`make rtl-1of3`) | 107,302 checks, 0 failures; BSD-PNX 107,302 checks, 0 failures |
+| Chip test bench with the array controller (`make rtl-chip`, settings 0,0,0 / 1,1,0 / 3,2,1) | 99,792 checks, 0 failures / 101,504 checks, 0 failures / 103,659 checks, 0 failures |
+| Chip test bench, 3T3R (`make rtl-chip-1of3`) | 101,737 checks, 0 failures |
+| Mutation test (`tb/mutation_test.py`) | 126 of 126 caught; the 12 new faults: 12 caught |
+| Mutation test, BSD-PNX | 132 of 132 caught; the 12 new faults: 12 caught |
+| Mutation test, 3T3R build with every fault | 133 of 133 caught; the 12 new faults: 12 caught |
+| Controller faults, chip test bench (2T2R / 3T3R) | 26 of 26 caught / 6 of 6 caught |
+| Formal proofs that closed (SymbiYosys; the PDR tasks with FORMAL_ANYLOCK, a superset of the design's states) | serial port (tcim_spi): PASS; start row = LFSR mod 72 (lfsr): PASS; LOCK set by reset (lock): PASS; timing miter (prove): PASS; timing miter, BSD-PNX (prove_pnx): PASS; safety, revision 4.7 properties (variant A): PASS; safety, + under LOCK no pulse or read-back, erase writes weight 0 (variant B): PASS; safety, + erase visits rows 0 to 71 in order and ends after 71 (variant C): PASS |
+| Formal proofs still open when revision 4.9 was committed (PDR did not close in 3 h on the PC) | safety with the unlock property (LOCK clears only after an erase of all 72 rows without WERR); safety, BSD-PNX code; progress (every command ends in bounded time); safety on the 3T3R build; planted proof faults (check_faults.py) for the revision 4.9 properties |
+| Comparison with the revision 4.8 logic (`tests/equiv/run_equiv_rev49.sh`) | default cell: 2,615 points proven, 175 unproven, all in: amp, arr_mask_n, arr_mask_p, arr_op, arr_req, arr_row, pend_n, pend_p, r_lock, r_piter, req, s_done, s_sat, s_werr, state, varprog_e, w_neg, w_pos. 3T3R: 2,639 points proven, 223 unproven, all in: amp, arr_mask_n, arr_mask_p, arr_mask_z, arr_op, arr_req, arr_row, pend_n, pend_p, pend_z, r_lock, r_piter, req, s_done, s_sat, s_werr, state, varprog_e, w_neg, w_pos |
+| Verilator lint, all warnings, both codes | 0 warnings |
+| Serial-port fuzzing (`make fuzz`) | FUZZ PASSED |
+| Chip block placed and routed again (OpenROAD-flow-scripts, PC batch 29; same die as revision 4.5) | 14,736 cells, 1,380 flip-flops, DRC 0, netlist equal to the RTL; timing after layout met at every corner (worst setup slack 8.90 ns at the slow corner, worst hold slack 0.203 ns); shortest period 16.12 ns (16.94 ns with parasitics x1.2) |
+| Routed netlist through the chip test bench (gate level) | 101,506 checks, 0 failures; 2 of 2 planted gate faults caught |
+| Top level and sign-off (top.py, Magic, netgen, ChipFoundry's precheck in their pinned versions) | LVS match, planted swap caught; Magic DRC 0, antenna 0; precheck 14 of 14 |
+
+The revision 4.7 / 4.8 files quoted in sections 15.1 to 15.8 are kept in `results/rev48`. New proof properties, written from what
+the array is asked to do rather than from the new registers:
+- LOCK is set in the cycle after a reset;
+- LOCK clears only in the cycle an erase ends, if the array was asked to verify the set phase of all 72 rows in that erase and no
+  device failed;
+- under LOCK a pulse happens only inside an erase, and no read-back runs;
+- an erase sends no set pulse to a P or N device (one-of-three: no reset pulse to Z);
+- an erase visits rows 0 to 71 in order and ends after row 71.
+
+Found on the way:
+- The 3T3R safety proof failed on a property written before the erase existed (a Z pulse must match the weight in PDATA; an erase writes weight 0 whatever PDATA holds). The property now covers program commands only, and a planted fault shows the erase's own Z property can fail.
+- The mutation test found two checks of the test bench that could not fail: PITER under LOCK read 0 either way (a refused program command clears it; the test now reads PITER right after LOCK), and in the 3T3R build the stuck-reset test's random weight left the device it watches already set (the test now forces it to HRS first).
+- The precheck of the first revision 4.9 chip failed Magic DRC (met3.2, 8 markers) and KLayout BEOL (m3.2, 4): two block pins came within 1.2 um of the macro pins above them, and the 0.4 um track between the two via pads left 0.1 um notches. top.py now fills such gaps; the rebuilt chip passes all 14 checks.
+- The timing miter found two copies that differ after 6,270 cycles: an erase whose (secret) verify answers differ leaves one copy locked and the other unlocked. Whether an erase succeeded is public (STAT.WERR, SEC.LOCK), so the miter now assumes both copies hold the same LOCK; with that, both miters pass. What a failed erase reveals about the devices is the WERR fault oracle, out of scope.
+- The PDR proofs did not close, even with lemmas for the erase: with the design's reset no unlocked state is reachable before a whole erase, about 3,300 cycles, and PDR walked it about one frame at a time. The PDR tasks now let a reset leave the tile locked or unlocked (FORMAL_ANYLOCK, proofs only: a superset of the design's states, so what holds there holds for the design), and a separate task proves that the design's reset leaves it locked. Even so, the safety task with every new property did not close in 3 hours on the PC; split into subsets, the revision 4.7 properties (61 min), the under-LOCK and erase-writes-zero properties (81 min) and the erase-order properties (70 min) each close; the unlock property, the BSD-PNX and 3T3R safety tasks and the progress task are still open, and so are the planted proof faults for the new properties. The lemmas written to help PDR made it slower and were taken out of the runs.
+
+What this does not fix:
+- Products cannot be refused: a tile that computes on secret weights, with readable results and chosen inputs, gives every weight back after 72 one-hot products. This is model extraction (Tramèr et al., USENIX Security 2016), true of any accelerator whose outputs are visible, and no register can stop it. The threat model keeps the results with the host.
+- Cost: after every power-up, firmware must erase and reprogram before it can read weights back or use the options; inference on the stored weights works without that. The erase takes 72 × (21 + 21) pulse steps. Logic: three flip-flops for LOCK, one for the erase.
+- The upset test changes the LOCK flip-flops in the CXXRTL model directly; an upset elsewhere (an option flip-flop, the state register) is not covered by any test, and fault injection is out of scope.
 
 ---
 

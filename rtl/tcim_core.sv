@@ -11,15 +11,26 @@
 //                        t1 VARPROG (+ : programming stops as soon as every device verifies; otherwise every program
 //                                    command runs 21 reset steps and 21 set steps, padding with empty pulses)
 //                        t2 NOSHUF  (+ : fixed-latency products start at row 0)
-//                        t3 LOCK    (+ : set-only until reset; clears t0-t2, ignores later SEC writes, PITER and ACT read
+//                        t3 LOCK    (+ : set-only; clears t0-t2, ignores later SEC writes, PITER and ACT read
 //                                    0; revision 4.7: also refuses read-back, keeps the margin check from writing PDATA,
-//                                    and gates every use of t0-t2). A SEC write while BUSY is ignored: read SEC back.
+//                                    and gates every use of t0-t2; revision 4.9: also refuses programming, is SET by reset,
+//                                    and is cleared only by an erase of the whole array, PCMD 0,0,+). A SEC write while BUSY
+//                                    is ignored: read SEC back.
+// Revision 4.9 (9 November 2026; the LOCK gaps found by the paper study's red team), read-out protection as flash
+// microcontrollers do it: a reset (power-up included) leaves the tile LOCKED, and the only way to clear LOCK is the erase
+// command, which programs every one of the 72 rows to weight 0 with the constant-time sequence (21 + 21 pulse steps per row,
+// whatever the options) and clears LOCK only if every device verified (no WERR). So no weight written before a reset can be
+// read back, reprogrammed one row at a time, or measured with the options on. Products run under LOCK as before. LOCK is
+// held in three flip-flops and is set while any of them is set, so one upset cannot clear it.
 //   +4/+8/+12  X0..X2 RW word   input vector, row r = trit (r mod 24) of word (r div 24)
 //   +16..+39   Y[0..23] RO tryte column results (digital: exact sum; analog: raw converter count); valid while BUSY = 0
 //                        (revision 4.7: during a digital product they hold the sum plus a random offset)
 //   +40 PROW   RW tryte  row index 0..71 for programming and read-back
 //   +44 PDATA  RW word   24 weights of the selected row
-//   +48 PCMD   W  tryte  t0 = + : program row from PDATA with verify ; t0 = - : read row into PDATA (refused under LOCK) ;
+//   +48 PCMD   W  tryte  t0 = + : program row from PDATA with verify (revision 4.9: refused under LOCK) ;
+//                        t0 = - : read row into PDATA (refused under LOCK) ;
+//                        t0 = 0, t1 = 0, t2 = + : erase (revision 4.9): rows 0 to 71 programmed to weight 0, constant time;
+//                        LOCK cleared at the end if no device failed (WERR); PITER then holds the last row's count ;
 //                        t0 = 0, t1 = + : margin check of the row (revision 4.6): PDATA <- the weights read (not under
 //                        LOCK), MARG <- +
 //                        for each column with a device inside the margin band (WERR if any)
@@ -61,6 +72,12 @@ module tcim_core
 (
     input  logic                    clk,
     input  logic                    rst_n,
+`ifdef FORMAL_ANYLOCK
+    // proofs only (revision 4.9): the LOCK state a reset leaves is a free input (0: locked as in the design, 1: unlocked), so the
+    // PDR proofs reach the unlocked states without walking a whole erase (about 3,300 cycles). The reachable states are a superset
+    // of the design's; the design's own reset value is proved in the task lock (property p_lock_reset)
+    input  logic                    f_anylock,
+`endif
     // register bus
     input  logic                    bus_we,
     input  logic                    bus_re,
@@ -97,6 +114,9 @@ module tcim_core
     logic [2*WORD-1:0]      r_pdata;
     logic [5:0]             r_piter;
     logic                   r_zskip, r_varprog, r_noshuf, r_lock;     // SEC (revision 4.6)
+    logic [2:0]             r_lk;                                     // LOCK, three copies (revision 4.9)
+    logic                   e_run;                                    // an erase is running (revision 4.9)
+    assign r_lock = |r_lk;                                            // locked while any copy is set
     logic [15:0]            lfsr;                                     // free-running, x^16 + x^14 + x^13 + x^11 + 1
     logic [6:0]             lfsr_m72;                                 // lfsr mod 72, kept step by step (revision 4.7)
     logic signed [ACCW-1:0] r_off;                                    // offset of the result accumulators (revision 4.7)
@@ -139,13 +159,14 @@ module tcim_core
     assign wr = bus_we & a_valid;
     assign rd = bus_re & a_valid;
 
-    logic go_cmd, go_analog, prog_cmd, rdbk_cmd, mchk_cmd;
+    logic go_cmd, go_analog, prog_cmd, rdbk_cmd, mchk_cmd, ers_cmd;
     // GO takes effect together with the EN and MODE trits written in the same access
     assign go_cmd    = wr & a_ctrl & is_pos(bus_wdata[7:6]) & is_pos(bus_wdata[1:0]) & ~s_busy;
     assign go_analog = is_pos(bus_wdata[5:4]);
     assign prog_cmd  = wr & a_pcmd & is_pos(bus_wdata[1:0]) & ~s_busy & r_en;
     assign rdbk_cmd  = wr & a_pcmd & is_neg(bus_wdata[1:0]) & ~s_busy & r_en;
     assign mchk_cmd  = wr & a_pcmd & (bus_wdata[1:0] == T_ZERO) & is_pos(bus_wdata[3:2]) & ~s_busy & r_en;
+    assign ers_cmd   = wr & a_pcmd & (bus_wdata[1:0] == T_ZERO) & (bus_wdata[3:2] == T_ZERO) & is_pos(bus_wdata[5:4]) & ~s_busy & r_en;
 
     // read data
     always_comb begin
@@ -184,7 +205,7 @@ module tcim_core
     // (rows 1-15 come up 911 times and the others 910 times in the LFSR's 65,535 states) instead of its low 7 bits
     // folded once (rows 0-55 twice as often as rows 56-71)
     logic zskip_e, varprog_e, noshuf_e;
-    assign zskip_e = r_zskip & ~r_lock; assign varprog_e = r_varprog & ~r_lock; assign noshuf_e = r_noshuf & ~r_lock;
+    assign zskip_e = r_zskip & ~r_lock; assign varprog_e = r_varprog & ~r_lock & ~e_run; assign noshuf_e = r_noshuf & ~r_lock;
     // lfsr' = 2 lfsr + fb - 65536 lfsr[15], and 65536 = 16 (mod 72): lfsr_m72' = (2 lfsr_m72 + fb - 16 lfsr[15]) mod 72
     logic       lfsr_fb;
     logic signed [8:0] m72_t;
@@ -200,8 +221,8 @@ module tcim_core
     assign next_row  = zskip_e ? next_nz(x_nz, {1'b0, arr_row} + 8'd1) : fixed_next;
     logic [COLS-1:0] w_pos, w_neg;
     always_comb for (int c = 0; c < COLS; c++) begin
-        w_pos[c] = is_pos(r_pdata[2*c +: 2]);
-        w_neg[c] = is_neg(r_pdata[2*c +: 2]);
+        w_pos[c] = is_pos(r_pdata[2*c +: 2]) & ~e_run;     // revision 4.9: an erase programs weight 0
+        w_neg[c] = is_neg(r_pdata[2*c +: 2]) & ~e_run;
     end
     // sense bits as weights: sa_p_d / sa_n_d mark +1 / -1, sa_inv an invalid code (2T2R: both devices LRS; one-of-three:
     // not exactly one of P, N, Z LRS). An invalid weight counts as 0 and sets WERR.
@@ -277,7 +298,10 @@ module tcim_core
             state <= S_IDLE; pend_p <= '0; pend_n <= '0; `Z(pend_z <= '0; arr_mask_z <= '0;) amp <= '0; req <= 1'b0;
             arr_op <= OP_READ; arr_row <= '0; arr_row_mask <= '0; arr_mask_p <= '0; arr_mask_n <= '0; arr_amp <= '0;
             acc <= '0;
-            r_zskip <= 1'b0; r_varprog <= 1'b0; r_noshuf <= 1'b0; r_lock <= 1'b0;
+            r_zskip <= 1'b0; r_varprog <= 1'b0; r_noshuf <= 1'b0; r_lk <= 3'b111; e_run <= 1'b0;   // revision 4.9: locked at reset
+`ifdef FORMAL_ANYLOCK
+            if (f_anylock) r_lk <= 3'b000;
+`endif
             lfsr <= 16'hace1; lfsr_m72 <= 7'd49; r_off <= '0; r_cnt <= '0; m_fail <= '0; d_acc <= '0;   // 0xace1 = 44257 = 49 mod 72
         end else begin
             lfsr <= {lfsr[14:0], lfsr_fb}; lfsr_m72 <= m72_next;
@@ -296,7 +320,7 @@ module tcim_core
                         r_zskip <= is_pos(bus_wdata[1:0]); r_varprog <= is_pos(bus_wdata[3:2]); r_noshuf <= is_pos(bus_wdata[5:4]);
                     end
                     if (is_pos(bus_wdata[7:6])) begin
-                        r_lock <= 1'b1; r_zskip <= 1'b0; r_varprog <= 1'b0; r_noshuf <= 1'b0;
+                        r_lk <= 3'b111; r_zskip <= 1'b0; r_varprog <= 1'b0; r_noshuf <= 1'b0;
                     end
                 end
             end
@@ -320,8 +344,9 @@ module tcim_core
                             state <= S_READ;
                         end else state <= S_FINISH;                  // all inputs 0: the result is 0
                     end else if (prog_cmd) begin
-                        s_done <= 1'b0; s_sat <= 1'b0; s_werr <= ~prow_ok; r_piter <= '0; amp <= '0;
-                        if (prow_ok) begin
+                        // revision 4.9: under LOCK programming is refused (WERR, no array access)
+                        s_done <= 1'b0; s_sat <= 1'b0; s_werr <= ~prow_ok | r_lock; r_piter <= '0; amp <= '0;
+                        if (prow_ok && !r_lock) begin
                             arr_row <= prow_int[6:0];
                             pend_p <= ~w_pos; pend_n <= ~w_neg; `Z(pend_z <= ~w_zer;)   // devices that must be HRS
                             arr_op <= OP_VFY_RESET; arr_mask_p <= ~w_pos; arr_mask_n <= ~w_neg; `Z(arr_mask_z <= ~w_zer;) req <= 1'b1;
@@ -341,6 +366,12 @@ module tcim_core
                             arr_row <= prow_int[6:0]; arr_op <= OP_READ; arr_mask_p <= '1; arr_mask_n <= '1; `Z(arr_mask_z <= '1;) req <= 1'b1;
                             state <= S_MC_RD;
                         end else state <= S_FINISH;
+                    end else if (ers_cmd) begin
+                        // revision 4.9: erase, row 0 first; every P and N device must end in HRS (and Z in LRS)
+                        s_werr <= 1'b0; s_done <= 1'b0; s_sat <= 1'b0; r_piter <= '0; amp <= '0; e_run <= 1'b1;
+                        arr_row <= 7'd0; pend_p <= '1; pend_n <= '1; `Z(pend_z <= '0;)
+                        arr_op <= OP_VFY_RESET; arr_mask_p <= '1; arr_mask_n <= '1; `Z(arr_mask_z <= '0;) req <= 1'b1;
+                        state <= S_RST_VFY;
                     end
                 end
 
@@ -432,7 +463,15 @@ module tcim_core
                 end
 
                 S_FINISH: begin
-                    req <= 1'b0; s_done <= 1'b1; state <= S_IDLE;
+                    if (e_run && arr_row != 7'(ROWS - 1)) begin        // revision 4.9: the erase goes on with the next row
+                        arr_row <= arr_row + 7'd1; r_piter <= '0; amp <= '0;
+                        pend_p <= '1; pend_n <= '1; `Z(pend_z <= '0;)
+                        arr_op <= OP_VFY_RESET; arr_mask_p <= '1; arr_mask_n <= '1; `Z(arr_mask_z <= '0;) req <= 1'b1;
+                        state <= S_RST_VFY;
+                    end else begin
+                        if (e_run && !s_werr) r_lk <= 3'b000;           // every row erased and verified: unlocked
+                        e_run <= 1'b0; req <= 1'b0; s_done <= 1'b1; state <= S_IDLE;
+                    end
                 end
                 default: state <= S_IDLE;
             endcase
@@ -444,7 +483,10 @@ module tcim_core
     // only for the proofs. With FORMAL_ACK defined the array is assumed to answer every request at once, and the
     // progress property (every command ends within a bounded time) is checked.
     logic       f_init = 1'b1;
-    logic [2:0] f_cmd;                   // last accepted command: 1 digital, 2 analog, 3 program, 4 read-back, 5 margin check
+    logic [2:0] f_cmd;                   // last accepted command: 1 digital, 2 analog, 3 program, 4 read-back, 5 margin check, 6 erase
+    logic            f_inrst;            // reset was asserted in the previous cycle (revision 4.9)
+    logic [ROWS-1:0] f_erows;            // rows whose set phase the array was asked to verify in the present erase (4.9)
+    logic [7:0]      f_erlast;           // row of the last S_FINISH in the present erase (8'hff before the first)
     logic       f_lock;                  // LOCK in the previous cycle
     logic [6:0] f_row;                   // row of the last program or read-back command
     logic       f_seen_set;              // a set pulse has been issued in the present command
@@ -479,18 +521,23 @@ module tcim_core
 `endif
         if (!rst_n) begin
             f_cmd <= '0; f_row <= '0; f_seen_set <= 1'b0; f_busy_cnt <= '0; f_pdata <= '0; f_read <= '0; f_last <= 8'hff; f_was_busy <= 1'b0; f_start <= 1'b0;
-            f_lock <= 1'b0; f_srow <= '0; f_cnt <= '0; f_sum0 <= '0;
+            f_lock <= 1'b0; f_srow <= '0; f_cnt <= '0; f_sum0 <= '0; f_inrst <= 1'b1; f_erows <= '0; f_erlast <= 8'hff;
         end else begin
+            f_inrst <= 1'b0;
             f_was_busy <= s_busy;
             f_lock <= r_lock;
-            f_start <= go_cmd | prog_cmd | rdbk_cmd | mchk_cmd;
+            f_start <= go_cmd | prog_cmd | rdbk_cmd | mchk_cmd | ers_cmd;
             if (go_cmd)        begin f_cmd <= go_analog ? 3'd2 : 3'd1; f_seen_set <= 1'b0; f_busy_cnt <= '0; f_read <= '0; f_last <= 8'hff; f_srow <= first_row; f_cnt <= '0; f_sum0 <= '0; end
             else if (prog_cmd) begin f_cmd <= 3'd3; f_row <= prow_int[6:0]; f_seen_set <= 1'b0; f_busy_cnt <= '0; f_pdata <= r_pdata; end
             else if (rdbk_cmd) begin f_cmd <= 3'd4; f_row <= prow_int[6:0]; f_seen_set <= 1'b0; f_busy_cnt <= '0; end
             else if (mchk_cmd) begin f_cmd <= 3'd5; f_row <= prow_int[6:0]; f_seen_set <= 1'b0; f_busy_cnt <= '0; f_pdata <= r_pdata; end
+            else if (ers_cmd)  begin f_cmd <= 3'd6; f_seen_set <= 1'b0; f_busy_cnt <= '0; f_pdata <= r_pdata; f_erows <= '0; f_erlast <= 8'hff; end
             else begin
                 if (s_busy && f_busy_cnt != 9'h1ff) f_busy_cnt <= f_busy_cnt + 9'd1;
                 if (f_pulse && arr_op == OP_PULSE_SET) f_seen_set <= 1'b1;
+                // erase (revision 4.9): one row at a time; the bound on the time and the order of pulses hold per row
+                if (f_cmd == 3'd6 && req && arr_ack && arr_op == OP_VFY_SET && arr_row < 7'(ROWS)) f_erows[arr_row] <= 1'b1;
+                if (f_cmd == 3'd6 && state == S_FINISH) begin f_erlast <= {1'b0, arr_row}; f_busy_cnt <= '0; f_seen_set <= 1'b0; end
                 if (f_cmd == 3'd1 && state == S_READ && arr_ack) begin
                     f_read[arr_row] <= 1'b1; f_last <= {1'b0, arr_row}; f_cnt <= f_cnt + 8'd1;
                     // +1 when input and weight have the same sign, -1 when opposite; nothing for input 0 or weight 0
@@ -508,20 +555,21 @@ module tcim_core
             // the array is never asked about a row that does not exist
             if (req && arr_op != OP_SUM) assert (arr_row < 7'(ROWS));
             // pulses happen only inside a program command, on its row, with the stored weights unchanged
-            if (f_pulse) assert (s_busy && f_cmd == 3'd3 && arr_row == f_row);
+            if (f_pulse) assert (s_busy && ((f_cmd == 3'd3 && arr_row == f_row) || f_cmd == 3'd6));
             // verify reads only inside a program command or a margin check (revision 4.6), on its row
-            if (f_vfy)   assert (s_busy && (f_cmd == 3'd3 || f_cmd == 3'd5) && arr_row == f_row);
-            if (f_cmd == 3'd3 && s_busy) assert (r_pdata == f_pdata);
+            if (f_vfy)   assert (s_busy && (((f_cmd == 3'd3 || f_cmd == 3'd5) && arr_row == f_row) || f_cmd == 3'd6));
+            if ((f_cmd == 3'd3 || f_cmd == 3'd6) && s_busy) assert (r_pdata == f_pdata);
             // pulse amplitude stays inside the published scheme (and, with VARPROG, every pulse selects at least one device)
             if (f_pulse) assert (arr_amp < 5'(AMP_STEPS));
             // (revision 4.6: empty padding pulses only in constant-time programming)
 `ifdef TCIM_CELL_1OF3
-            if (f_pulse && r_varprog) assert ((arr_mask_p | arr_mask_n | arr_mask_z) != '0);
-            // the Z device is set only for a weight 0 and reset only for a weight +1 or -1
-            if (f_pulse && arr_op == OP_PULSE_SET) assert ((arr_mask_z & ~f_wz) == '0);
-            if (f_pulse && arr_op == OP_PULSE_RST) assert ((arr_mask_z & f_wz) == '0);
+            if (f_pulse && r_varprog && !r_lock && f_cmd == 3'd3) assert ((arr_mask_p | arr_mask_n | arr_mask_z) != '0);
+            // in a program command the Z device is set only for a weight 0 and reset only for a weight +1 or -1 (an erase
+            // writes weight 0 whatever PDATA holds: its own properties are below; batch 29 found this one unscoped)
+            if (f_cmd == 3'd3 && f_pulse && arr_op == OP_PULSE_SET) assert ((arr_mask_z & ~f_wz) == '0);
+            if (f_cmd == 3'd3 && f_pulse && arr_op == OP_PULSE_RST) assert ((arr_mask_z & f_wz) == '0);
 `else
-            if (f_pulse && r_varprog) assert ((arr_mask_p | arr_mask_n) != '0);
+            if (f_pulse && r_varprog && !r_lock && f_cmd == 3'd3) assert ((arr_mask_p | arr_mask_n) != '0);
 `endif
             // a pulse only reaches devices that must change: set only where the weight needs LRS, reset only where HRS
             if (f_pulse && arr_op == OP_PULSE_SET) assert ((arr_mask_p & ~w_pos) == '0 && (arr_mask_n & ~w_neg) == '0);
@@ -531,8 +579,8 @@ module tcim_core
             // at most 21 reset and 21 set pulses per command
             assert (r_piter <= 6'(2 * AMP_STEPS));
             // (lemmas for it: one pulse step raises the amplitude by one and the count by at most one)
-            if (f_cmd == 3'd3 && (state == S_RST_VFY || state == S_RST_PULSE)) assert (amp <= 5'(AMP_STEPS) && {1'b0, r_piter} <= {2'b0, amp});
-            if (f_cmd == 3'd3 && (state == S_SET_VFY || state == S_SET_PULSE)) assert (amp <= 5'(AMP_STEPS) && {1'b0, r_piter} <= 7'(AMP_STEPS) + {2'b0, amp});
+            if ((f_cmd == 3'd3 || f_cmd == 3'd6) && (state == S_RST_VFY || state == S_RST_PULSE)) assert (amp <= 5'(AMP_STEPS) && {1'b0, r_piter} <= {2'b0, amp});
+            if ((f_cmd == 3'd3 || f_cmd == 3'd6) && (state == S_SET_VFY || state == S_SET_PULSE)) assert (amp <= 5'(AMP_STEPS) && {1'b0, r_piter} <= 7'(AMP_STEPS) + {2'b0, amp});
             // products and read-back never write the array
             if (f_cmd == 3'd1 || f_cmd == 3'd2 || f_cmd == 3'd4 || f_cmd == 3'd5) assert (!f_pulse);
             if (f_cmd == 3'd5 && req) assert (arr_row == f_row);
@@ -570,13 +618,30 @@ module tcim_core
             if (f_cmd == 3'd1 && state != S_READ) assert (acc[ACCW-1:0] == ACCW'(f_sum0));
             if (f_cmd == 3'd1) assert ($signed({f_sum0[7], f_sum0}) <= $signed({1'b0, f_cnt}) && $signed({f_sum0[7], f_sum0}) >= -$signed({1'b0, f_cnt}));
             if (f_cmd == 3'd1 && r_zskip && state == S_READ) assert (f_cnt <= {1'b0, arr_row});
-            // LOCK is set-only, and while it is set the options are off and PITER reads 0
-            if (f_lock) assert (r_lock);
+            // revision 4.9: a reset leaves the tile locked; LOCK clears only in the cycle an erase ends, when the array was asked
+            // to verify the set phase of every one of the 72 rows in that erase and no device failed; while LOCK is set the
+            // options are off and PITER reads 0
+`ifndef FORMAL_ANYLOCK
+            p_lock_reset: assert (!f_inrst || r_lock);
+`endif
+            if (f_lock && !r_lock) p49_unlock: assert (f_cmd == 3'd6 && f_was_busy && !s_busy && f_erows == '1 && !s_werr);
+            // under LOCK nothing is programmed: a pulse only inside an erase
+            if (r_lock && f_pulse) p49_noprog: assert (f_cmd == 3'd6);
+            if (r_lock) p49_nordbk: assert (state != S_RDBK);
+            // an erase writes weight 0: no set pulse reaches a P or N device (one-of-three: and no reset pulse reaches Z)
+            if (f_cmd == 3'd6 && f_pulse && arr_op == OP_PULSE_SET) p49_erzero: assert ((arr_mask_p | arr_mask_n) == '0);
+`ifdef TCIM_CELL_1OF3
+            if (f_cmd == 3'd6 && f_pulse && arr_op == OP_PULSE_RST) p49_erz: assert (arr_mask_z == '0);
+`endif
+            // an erase visits the rows 0, 1, ..., 71 in order, one at a time, and ends after row 71
+            if (f_cmd == 3'd6 && s_busy && req) p49_order1: assert ({1'b0, arr_row} == f_erlast + 8'd1);
+            if (f_cmd == 3'd6 && state == S_FINISH) p49_order2: assert ({1'b0, arr_row} == f_erlast + 8'd1);
+            if (f_cmd == 3'd6 && f_was_busy && !s_busy) p49_end: assert (f_erlast == 8'(ROWS - 1));
+            // (lemmas for these properties were tried in batches 29f-29h; they made PDR slower and were taken out; batch 29i)
             if (r_lock) assert (!r_zskip && !r_varprog && !r_noshuf);
             if (r_lock && a_piter) assert (bus_rdata == ZERO_WORD);
             if (r_lock && a_act) assert (bus_rdata == ZERO_WORD);
-            // revision 4.7: under LOCK no read-back runs, and a margin check leaves PDATA as it was
-            if (r_lock) assert (state != S_RDBK);
+            // revision 4.7: under LOCK a margin check leaves PDATA as it was (no read-back: above)
             if (r_lock && f_cmd == 3'd5 && s_busy) assert (r_pdata == f_pdata);
             // revision 4.7: the start-row register is the LFSR value modulo 72 (proved by k-induction in the task lfsr of
             // formal/tcim_core.sby; the other tasks drop this one property, which PDR does not close)

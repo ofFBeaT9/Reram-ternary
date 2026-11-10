@@ -1,0 +1,14 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 32 thread(s).
+read_liberty /w/flow/orfs/platforms_b/sky130hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib
+read_db /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/5_route.odb
+read_sdc /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/5_route.sdc
+source /w/flow/orfs/platforms_b/sky130hd/setRC.tcl
+exec cp /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/5_route.odb /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/6_1_fill.odb
+Elapsed time: 0:04.28[h:]min:sec. CPU time: user 0.53 sys 0.63 (27%). Peak memory: 139776KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+6_1_fill               .odb          4        1     0.27      136 e2af065c82

@@ -1,4 +1,4 @@
-icg fault in _21049_ gating 157 flip-flops
+icg fault in _20898_ gating 153 flip-flops
 Warning: Latch inferred for signal `\icg_model.\q' from process `\icg_model.$proc$/w/flow/orfs/post/icg_models.v:8$1': $auto$proc_dlatch.cc:559:proc_dlatch$21
   FAIL: X0 readback
 TEST FAILED

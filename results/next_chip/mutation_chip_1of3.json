@@ -6,49 +6,49 @@
   {
    "name": "1of3: set pulse, Z bit lines follow the P mask",
    "status": "caught",
-   "first_failure": "FAIL: PITER 21 differs from the 16 device-selecting pulses the array received (row 0)",
-   "in_test": "2. programming all 72 rows with verify",
-   "seconds": 1,
+   "first_failure": "FAIL: first erase: WERR 1",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 2,
    "id": 0
   },
   {
    "name": "1of3: reset pulse, Z bit-line polarity inverted",
    "status": "caught",
-   "first_failure": "FAIL: PITER 15 differs from the 36 device-selecting pulses the array received (row 0)",
-   "in_test": "2. programming all 72 rows with verify",
-   "seconds": 1,
+   "first_failure": "FAIL: first erase: a set pulse reached a device that weight 0 keeps in HRS (36288 times)",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 2,
    "id": 1
   },
   {
    "name": "1of3: Z sense output never sampled",
    "status": "caught",
-   "first_failure": "FAIL: pulse on a device that had already passed verify (row 0, 57 times)",
-   "in_test": "2. programming all 72 rows with verify",
-   "seconds": 1,
+   "first_failure": "FAIL: first erase: WERR 1",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 2,
    "id": 2
   },
   {
    "name": "1of3: Z sampled after the word line (second flip-flop bypassed)",
    "status": "caught",
-   "first_failure": "FAIL: pulse on a device that had already passed verify (row 0, 57 times)",
-   "in_test": "2. programming all 72 rows with verify",
+   "first_failure": "FAIL: first erase: WERR 1",
+   "in_test": "1b. locked at reset; erase of the whole ",
    "seconds": 2,
    "id": 3
   },
   {
    "name": "1of3: Z bit line not released",
    "status": "caught",
-   "first_failure": "FAIL: 142508 electrical or timing violations at the macro interface",
+   "first_failure": "FAIL: 329166 electrical or timing violations at the macro interface",
    "in_test": "6. ternary digits network through the RT",
-   "seconds": 857,
+   "seconds": 457,
    "id": 4
   },
   {
    "name": "1of3: Z mask of the request not taken",
    "status": "caught",
-   "first_failure": "FAIL: PITER 21 differs from the 15 device-selecting pulses the array received (row 0)",
-   "in_test": "2. programming all 72 rows with verify",
-   "seconds": 1,
+   "first_failure": "FAIL: first erase: WERR 1",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 2,
    "id": 5
   }
  ]

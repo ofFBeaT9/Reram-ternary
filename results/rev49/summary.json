@@ -1,0 +1,173 @@
+{
+ "revision": "4.9",
+ "date": "2026-11-09",
+ "erase_cycles": 18541,
+ "tb": {
+  "rtl_test.log": {
+   "checks": 107134,
+   "failures": 0,
+   "passed": true
+  },
+  "rtl_test_pnx.log": {
+   "checks": 107134,
+   "failures": 0,
+   "passed": true
+  },
+  "rtl_test_verilator.log": {
+   "checks": 107059,
+   "failures": 0,
+   "passed": true
+  },
+  "rtl_test_verilator_pnx.log": {
+   "checks": 107059,
+   "failures": 0,
+   "passed": true
+  },
+  "next_chip/rtl_test_1of3.log": {
+   "checks": 107302,
+   "failures": 0,
+   "passed": true
+  },
+  "next_chip/rtl_test_1of3_pnx.log": {
+   "checks": 107302,
+   "failures": 0,
+   "passed": true
+  },
+  "sky130_chip/rtl_chip_000.log": {
+   "checks": 99792,
+   "failures": 0,
+   "passed": true
+  },
+  "sky130_chip/rtl_chip_110.log": {
+   "checks": 101504,
+   "failures": 0,
+   "passed": true
+  },
+  "sky130_chip/rtl_chip_321.log": {
+   "checks": 103659,
+   "failures": 0,
+   "passed": true
+  },
+  "next_chip/rtl_chip_1of3_110.log": {
+   "checks": 101737,
+   "failures": 0,
+   "passed": true
+  }
+ },
+ "mutation": {
+  "rtl_mutation.json": {
+   "faults": 126,
+   "run": 126,
+   "detected": 126,
+   "not_detected": [],
+   "new_faults": 12,
+   "new_caught": 12
+  },
+  "rtl_mutation_pnx.json": {
+   "faults": 132,
+   "run": 132,
+   "detected": 132,
+   "not_detected": [],
+   "new_faults": 12,
+   "new_caught": 12
+  },
+  "rtl_mutation_1of3full.json": {
+   "faults": 133,
+   "run": 133,
+   "detected": 133,
+   "not_detected": [],
+   "new_faults": 12,
+   "new_caught": 12
+  }
+ },
+ "mutation_chip": {
+  "sky130_chip/mutation_chip.json": {
+   "faults": 26,
+   "detected": 26
+  },
+  "next_chip/mutation_chip_1of3.json": {
+   "faults": 6,
+   "detected": 6
+  }
+ },
+ "formal": {
+  "passed": {
+   "serial port (tcim_spi)": true,
+   "start row = LFSR mod 72 (lfsr)": true,
+   "LOCK set by reset (lock)": true,
+   "timing miter (prove)": true,
+   "timing miter, BSD-PNX (prove_pnx)": true,
+   "safety, revision 4.7 properties (variant A)": true,
+   "safety, + under LOCK no pulse or read-back, erase writes weight 0 (variant B)": true,
+   "safety, + erase visits rows 0 to 71 in order and ends after 71 (variant C)": true
+  },
+  "n_passed": 8,
+  "variant_seconds": {
+   "A": 3653,
+   "B": 4863,
+   "C": 4210
+  },
+  "open": [
+   "safety with the unlock property (LOCK clears only after an erase of all 72 rows without WERR)",
+   "safety, BSD-PNX code",
+   "progress (every command ends in bounded time)",
+   "safety on the 3T3R build",
+   "planted proof faults (check_faults.py) for the revision 4.9 properties"
+  ],
+  "miter_counterexample_before_fix": true
+ },
+ "equiv_vs_rev48": {
+  "default": {
+   "proven": 2615,
+   "unproven": 175,
+   "signals": [
+    "amp",
+    "arr_mask_n",
+    "arr_mask_p",
+    "arr_op",
+    "arr_req",
+    "arr_row",
+    "pend_n",
+    "pend_p",
+    "r_lock",
+    "r_piter",
+    "req",
+    "s_done",
+    "s_sat",
+    "s_werr",
+    "state",
+    "varprog_e",
+    "w_neg",
+    "w_pos"
+   ]
+  },
+  "1of3": {
+   "proven": 2639,
+   "unproven": 223,
+   "signals": [
+    "amp",
+    "arr_mask_n",
+    "arr_mask_p",
+    "arr_mask_z",
+    "arr_op",
+    "arr_req",
+    "arr_row",
+    "pend_n",
+    "pend_p",
+    "pend_z",
+    "r_lock",
+    "r_piter",
+    "req",
+    "s_done",
+    "s_sat",
+    "s_werr",
+    "state",
+    "varprog_e",
+    "w_neg",
+    "w_pos"
+   ]
+  }
+ },
+ "lint_warnings": 0,
+ "fuzz": "FUZZ PASSED"
+}

@@ -62,6 +62,7 @@ struct Array {
     bool adc_force = false; long adc_p = 0, adc_n = 0; int sum_phase = 0;   // directed test of the analog saturation path
     uint64_t n_read = 0, n_pulse = 0, n_sum = 0, bad_row = 0;
     uint64_t n_pulse_real = 0;                    // pulses that selected at least one device (revision 4.6: empty padding pulses)
+    bool erase = false; int erase_prev = -1, erase_order_err = 0;   // revision 4.9: an erase runs; rows in order 0 ... 71
     int row_reads[ROWS] = {0}; int last_read_row = -1; uint64_t order_breaks = 0;   // reads at the mid reference, per row
     // monitor of back-to-back requests (revision 4.2): clock cycles with arr_req low between two requests
     bool gap_mon = false, seen_req = false; uint64_t low_run = 0, gaps = 0;
@@ -115,6 +116,10 @@ static void sense_row(unsigned op, unsigned row, bool *bp, bool *bn, bool *bz = 
 static void apply_pulse(unsigned op, unsigned row, unsigned amp, const bool *mp, const bool *mn, const bool *mz = nullptr) {
     // monitors: amplitude must start at 0 in each phase and rise by one per pulse; reset pulses come before set pulses;
     // a pulse must go only to devices that have to change and that failed the verify read just before it
+    if (arr.erase && (int)row != arr.erase_prev) {   // erase: the next row, and its pulse sequence starts again
+        if ((int)row != arr.erase_prev + 1) arr.erase_order_err++;
+        arr.erase_prev = row; arr.seq_set = arr.seq_rst = 0;
+    }
     if (op == 3) { if ((int)amp != arr.seq_set++) arr.amp_err++; }
     else         { if ((int)amp != arr.seq_rst++) arr.amp_err++; if (arr.seq_set > 0) arr.order_err++; }
     if (arr.exp_row >= 0 && (int)row != arr.exp_row) arr.wrong_row++;
@@ -484,6 +489,51 @@ static bool program_row(int r, const int *w, int *iters = nullptr) {
     if (iters) *iters = it;
     return ok && !((s >> 4) & 3);
 }
+// ---- revision 4.9: an upset of the LOCK flip-flops, injected where the model exposes them (CXXRTL build of tcim_top; the
+// other builds skip this test, and the report says so)
+template <class T> auto upset_lk(T &t, unsigned v, int) -> decltype(t.p_u__core_2e_r__lk, bool()) {
+    t.p_u__core_2e_r__lk.curr.template set<unsigned>(v); t.p_u__core_2e_r__lk.next.template set<unsigned>(v); return true;
+}
+template <class T> bool upset_lk(T &, unsigned, long) { return false; }
+// ---- revision 4.9: erase of the whole array (PCMD 0,0,+), the only way to clear LOCK
+static int ZERO_W[COLS] = {0};
+static uint64_t erase_cycles = 0;
+static bool erase_all(bool expect_unlock, const char *what) {
+    uint64_t p0 = arr.n_pulse, v0 = arr.n_read;
+    arr.tgt = ZERO_W; arr.exp_row = -1; arr.erase = true; arr.erase_prev = -1; arr.erase_order_err = 0;
+    arr.amp_err = arr.order_err = arr.overpulse = arr.wrong_dev = 0;
+    wr_tryte(0, EN | IE); bool up = timed(48, (uint64_t)enc(+1) << 4); uint64_t cyc = last_cmd_cycles; wr_tryte(0, EN);
+    arr.tgt = nullptr; arr.erase = false;
+    unsigned s = stat(); bool werr = (s >> 4) & 1;
+    CHECK(up, "%s: erase did not end", what);
+    CHECK(arr.n_pulse - p0 == (uint64_t)ROWS * 42, "%s: %d pulses instead of 72 x (21 + 21)", what, (int)(arr.n_pulse - p0));
+    CHECK(arr.n_read - v0 == (uint64_t)ROWS * 44, "%s: %d verify reads instead of 72 x 44", what, (int)(arr.n_read - v0));
+    CHECK(arr.erase_order_err == 0 && arr.erase_prev == ROWS - 1, "%s: rows not erased in order 0 ... 71 (last %d)", what, arr.erase_prev);
+    CHECK(arr.amp_err == 0 && arr.order_err == 0, "%s: pulse amplitudes or order wrong", what);
+    CHECK(arr.wrong_dev == 0, "%s: a set pulse reached a device that weight 0 keeps in HRS (%d times)", what, (int)arr.wrong_dev);
+    if (erase_cycles == 0) erase_cycles = cyc;
+    else CHECK(cyc == erase_cycles, "%s: erase took %llu cycles, an earlier one %llu (not constant time)", what,
+               (unsigned long long)cyc, (unsigned long long)erase_cycles);
+    CHECK(werr != expect_unlock, "%s: WERR %d", what, (int)werr);
+    if (expect_unlock)
+        for (int r = 0; r < ROWS; r++) for (int c = 0; c < COLS; c++) CHECK(arr.state_ok(r, c, 0), "%s: r%d c%d not weight 0", what, r, c);
+    return up && !werr;
+}
+// under LOCK: programming and read-back refused with WERR and no array access, the options cannot be set
+static void locked_checks(const char *what, int row) {
+    int k[COLS]; for (int c = 0; c < COLS; c++) k[c] = 1 - (c % 3);
+    wr_tryte(40, int_to_tryte(row)); wr_word(44, pack(k, COLS));
+    uint64_t p0 = arr.n_pulse, v0 = arr.n_read;
+    wr_tryte(48, enc(+1)); CHECK(wait_done(), "%s: program command stuck", what);
+    CHECK((stat() >> 4) & 1, "%s: programming not refused (no WERR)", what);
+    wr_tryte(48, enc(-1)); CHECK(wait_done(), "%s: read-back command stuck", what);
+    CHECK((stat() >> 4) & 1, "%s: read-back not refused (no WERR)", what);
+    CHECK(arr.n_pulse == p0 && arr.n_read == v0, "%s: a refused command reached the array (%d pulses, %d reads)", what,
+          (int)(arr.n_pulse - p0), (int)(arr.n_read - v0));
+    CHECK(rd_word(44) == pack(k, COLS), "%s: a refused command changed PDATA", what);
+    wr_tryte(3, ZSKIP | VARPROG | NOSHUF); CHECK(rd_tryte(3) == (uint64_t)LOCK, "%s: options set under LOCK", what);
+}
+
 static void product(const int *x, int *y, bool analog = false) {
     for (int k = 0; k < 3; k++) wr_word(4 + 4 * k, pack(x + 24 * k, 24));
     wr_tryte(0, EN | (analog ? MODE : 0) | GO);
@@ -520,7 +570,8 @@ int main(int argc, char **argv) {
     printf("1. register access\n");
     {   // after reset every register holds zero trits; the whole 48-bit field is checked, so the trits a register
         // does not use must be zero trits as well (in BSD-PNX a field of 0 bits would be 24 illegal pairs)
-        for (unsigned a : {0u, 1u, 2u, 3u, 40u, 49u, 50u}) CHECK(spi_xfer(false, false, a, 0) == 0, "tryte register %u not zero after reset", a);
+        for (unsigned a : {0u, 1u, 2u, 40u, 49u, 50u}) CHECK(spi_xfer(false, false, a, 0) == 0, "tryte register %u not zero after reset", a);
+        CHECK(spi_xfer(false, false, 3, 0) == (uint64_t)LOCK, "SEC does not read LOCK alone after reset (revision 4.9)");
         for (unsigned a = 16; a < 40; a++)        CHECK(spi_xfer(false, false, a, 0) == 0, "Y%u not zero after reset", a - 16);
         for (unsigned a : {4u, 8u, 12u, 44u, 52u}) CHECK(spi_xfer(false, true, a, 0) == 0, "word register %u not zero after reset", a);
         CHECK(spi_xfer(false, false, 41, 0) == 0 && last_err, "unmapped address 41: data not zero or error flag missing");
@@ -541,6 +592,16 @@ int main(int argc, char **argv) {
     rd_tryte(41); CHECK(last_err, "unmapped tryte read not flagged");
     rd_tryte(4); CHECK(last_err, "tryte access to a word register not flagged");
     rd_tryte(1); CHECK(!last_err, "valid access flagged as error");
+
+    // ---- 1b. revision 4.9: the tile comes out of reset LOCKED; an erase of the whole array unlocks it
+    printf("1b. locked at reset; erase of the whole array\n");
+    locked_checks("at power-up", 0);
+    CHECK(erase_all(true, "first erase"), "first erase failed");
+    CHECK(rd_tryte(3) == 0, "LOCK not cleared by the first erase");
+    set_sec(VARPROG);                                  // an erase is constant time whatever the options
+    CHECK(erase_all(true, "erase with VARPROG set"), "erase with VARPROG set failed");
+    set_sec(0);
+    printf("   erase: 72 rows x (21 + 21) pulse steps, %llu cycles, LOCK cleared\n", (unsigned long long)erase_cycles);
 
     // ---- 2. programming with verify, and read-back
     printf("2. programming all %d rows with verify\n", ROWS);
@@ -725,6 +786,9 @@ int main(int argc, char **argv) {
     for (int mode = 0; mode < 2; mode++) {   // variable: the command ends after the reset phase; constant: the set phase
       set_sec(mode ? VARPROG : 0);           // still runs, with 21 empty pulses and no device-selecting set pulse
       int w[COLS]; for (int c = 0; c < COLS; c++) w[c] = W[6][c]; w[2] = -1;          // BL+ device of column 2 must become HRS
+      // the BL- device of column 2 starts in HRS, so a set pulse after the failed reset phase would reach it (batch 29: in the 3T3R
+      // build W[6][2] came out -1, the device was already LRS, and a fault that sends those set pulses went unseen)
+      arr.in[6][2] = arr.sample_hrs();
       arr.ip[6][2] = 43.6; arr.stuck_rst_p[6][2] = true; uint64_t q0 = arr.n_pulse_real; int it; bool ok = program_row(6, w, &it);
       CHECK(!ok, "device that never resets not reported"); CHECK(it == 21, "stuck reset: %d pulses instead of 21", it);
       if (mode) CHECK(arr.seq_rst == 21 && arr.seq_set == 0, "stuck reset: %d reset and %d set pulses instead of 21 and 0", arr.seq_rst, arr.seq_set);
@@ -1022,27 +1086,43 @@ int main(int argc, char **argv) {
         wr_tryte(40, int_to_tryte(r)); wr_tryte(48, (uint64_t)enc(-1) << 2); for (int i = 0; i < 400; i++) tick();
         CHECK(arr.n_read == r0 && !(stat() & 1), "PCMD 0, - started a command");
     }
-    {   // LOCK: set-only, clears the options, ignores later writes, hides PITER; only a reset clears it
+    {   // LOCK: set-only, clears the options, ignores later writes, hides PITER; (revision 4.9) only an erase clears it
+        // revision 4.9: programming is refused under LOCK, so PITER must hold a non-zero count from before LOCK for the
+        // check that LOCK hides it to mean anything (the mutation test of batch 29 found it could not fail otherwise)
+        { int w[COLS]; for (int c = 0; c < COLS; c++) w[c] = (W[31][c] == 0) ? 1 : -W[31][c];
+          CHECK(program_row(31, w), "row 31: programming before LOCK");
+          for (int c = 0; c < COLS; c++) W[31][c] = w[c];
+          CHECK(rd_tryte(49) != 0, "PITER zero after a program command that changed every device of row 31"); }
         set_sec(ZSKIP | VARPROG | NOSHUF);
         wr_tryte(3, LOCK | ZSKIP | VARPROG);        // the options written with LOCK are cleared as well
         CHECK(rd_tryte(3) == (uint64_t)LOCK, "LOCK: SEC reads 0x%llx instead of LOCK alone", (unsigned long long)rd_tryte(3));
         wr_tryte(3, ZSKIP | VARPROG | NOSHUF); CHECK(rd_tryte(3) == (uint64_t)LOCK, "LOCK: options written after LOCK");
         wr_tryte(3, 0); CHECK(rd_tryte(3) == (uint64_t)LOCK, "LOCK cleared by a write");
+        CHECK(rd_tryte(49) == 0, "LOCK: PITER not hidden (it held the count of the program command before LOCK)");
+        // revision 4.9: LOCK is held three times; an upset that clears two of the copies leaves the tile locked
+        for (unsigned v : {1u, 2u, 4u}) if (upset_lk(top, v, 0)) {
+            CHECK(rd_tryte(3) == (uint64_t)LOCK, "LOCK lost after an upset of two of its copies (left 0x%x)", v);
+            locked_checks("after an upset of two LOCK copies", 31);
+            upset_lk(top, 7u, 0);
+        }
+        printf("   LOCK upset test: %s\n", upset_lk(top, 7u, 0) ? "run (two of three copies cleared, still locked)" : "not run in this build");
         sec = 0;
-        // locked: products have fixed latency, programming constant time, PITER reads 0
+        // locked: products have fixed latency, programming is refused (revision 4.9), PITER reads 0
         for (int r = 0; r < ROWS; r++) x[r] = (r < 3) ? 1 : 0;
         uint64_t r0 = arr.n_read; product(x, y);
         CHECK(arr.n_read - r0 == (uint64_t)ROWS, "LOCK: product read %d rows instead of 72", (int)(arr.n_read - r0));
         for (int c = 0; c < COLS; c++) CHECK(y[c] == exact(x, c), "LOCK product column %d", c);
         int w[COLS]; for (int c = 0; c < COLS; c++) w[c] = -W[31][c];
-        uint64_t p0 = arr.n_pulse, q0 = arr.n_pulse_real;
+        uint64_t p0 = arr.n_pulse, v0 = arr.n_read;
+        // revision 4.9: under LOCK a program command is refused: WERR, no array access, the weights unchanged
         wr_tryte(40, int_to_tryte(31)); wr_word(44, pack(w, COLS)); wr_tryte(48, enc(+1)); CHECK(wait_done(), "LOCK: program stuck");
-        CHECK(!((stat() >> 4) & 1), "LOCK: programming failed");
-        CHECK(arr.n_pulse - p0 == 42 && arr.n_pulse_real > q0, "LOCK: %d pulses (42 expected), %d selecting", (int)(arr.n_pulse - p0), (int)(arr.n_pulse_real - q0));
+        CHECK((stat() >> 4) & 1, "LOCK: programming not refused (no WERR)");
+        CHECK(arr.n_pulse == p0 && arr.n_read == v0, "LOCK: a refused program command reached the array (%d pulses, %d reads)",
+              (int)(arr.n_pulse - p0), (int)(arr.n_read - v0));
+        for (int c = 0; c < COLS; c++) CHECK(arr.state_ok(31, c, W[31][c]), "LOCK: row 31 column %d changed by a refused program command", c);
         CHECK(rd_tryte(49) == 0, "LOCK: PITER not hidden");
         { bool any = false; for (int n = 0; n < 6; n++) { for (int r = 0; r < ROWS; r++) x[r] = tri(rng); product(x, y); any |= rd_tryte(50) != 0; }
           CHECK(!any, "LOCK: ACT not hidden"); }
-        for (int c = 0; c < COLS; c++) W[31][c] = w[c];
         // revision 4.7: under LOCK read-back is refused (WERR, no array access, PDATA kept), and a margin check runs but
         // does not write the weights into PDATA
         { int k[COLS]; for (int c = 0; c < COLS; c++) k[c] = (c % 3) - 1;
@@ -1055,15 +1135,29 @@ int main(int argc, char **argv) {
           CHECK(arr.n_read > rr, "LOCK: margin check did not run");
           CHECK(rd_word(44) == pack(k, COLS), "LOCK: margin check wrote the weights into PDATA");
           CHECK(rd_word(52) == 0, "LOCK: margin check flagged a freshly programmed row"); }
-        // reset clears LOCK (and every register); the array keeps its weights
+        // revision 4.9: a reset leaves the tile LOCKED (every other register zero); the array keeps its weights, products use
+        // them, but read-back and programming are refused and the options cannot be set; only an erase of the whole array unlocks
         top.p_rst__n.set<bool>(false); for (int i = 0; i < 5; i++) tick(); top.p_rst__n.set<bool>(true); for (int i = 0; i < 5; i++) tick();
-        CHECK(rd_tryte(3) == 0, "LOCK not cleared by reset");
+        CHECK(rd_tryte(3) == (uint64_t)LOCK, "LOCK not set by reset (SEC 0x%llx)", (unsigned long long)rd_tryte(3));
         CHECK(rd_word(52) == 0 && rd_tryte(49) == 0 && rd_tryte(50) == 0, "MARG, PITER or ACT not zero after reset");
         wr_tryte(0, EN);
-        wr_tryte(40, int_to_tryte(31)); wr_tryte(48, enc(-1)); CHECK(wait_done(), "read-back stuck");
-        CHECK(rd_word(44) == pack(W[31], COLS), "LOCK: row 31 read-back after reset");
+        locked_checks("after reset", 31);
+        for (int r = 0; r < ROWS; r++) {      // the weights are still there and usable: one input +1 at a time (this is also
+            for (int q = 0; q < ROWS; q++) x[q] = (q == r);   // how a bus user recovers them: products cannot be refused)
+            product(x, y);
+            bool same = true; for (int c = 0; c < COLS; c++) same &= (y[c] == W[r][c]);
+            CHECK(same, "row %d changed during the directed tests, or not usable under LOCK after reset", r);
+        }
+        // an erase that cannot verify a device leaves the tile locked (WERR); one that verifies every device unlocks it
+        arr.ip[40][9] = arr.sample_lrs(); arr.stuck_rst_p[40][9] = true;
+        CHECK(!erase_all(false, "erase with a device stuck in LRS"), "erase with a stuck device: no WERR");
+        CHECK(rd_tryte(3) == (uint64_t)LOCK, "erase with a stuck device cleared LOCK");
+        arr.stuck_rst_p[40][9] = false;
+        CHECK(erase_all(true, "erase after reset"), "erase after reset failed");
+        CHECK(rd_tryte(3) == 0, "LOCK not cleared by a complete erase");
+        for (int r = 0; r < ROWS; r++) CHECK(program_row(r, W[r]), "row %d: programming after the erase", r);
     }
-    {   // all weights still in place after the directed tests
+    {   // all weights in place after the directed tests (programmed again after the erase above)
         for (int r = 0; r < ROWS; r++) {
             wr_tryte(40, int_to_tryte(r)); wr_word(44, 0); wr_tryte(48, enc(-1)); CHECK(wait_done(), "read-back stuck");
             CHECK(!((stat() >> 4) & 1), "WERR in the final read-back of row %d", r);

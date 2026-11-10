@@ -1,0 +1,42 @@
+gls rc=0
+gls xnor rc=1
+gls icg rc=1
+top rc=0
+signoff rc=0
+antenna crosscheck rc=0
+==> results/sky130_chip/gls_chip_fault_icg.log <==
+  FAIL: X0 readback
+TEST FAILED
+EXIT=1
+
+==> results/sky130_chip/gls_chip_fault_xnor.log <==
+  FAIL: product 0 column 23: got -226 expected -9
+TEST FAILED
+EXIT=1
+
+==> results/sky130_chip/gls_chip_routed.log <==
+101484 checks, 0 failures
+TEST PASSED
+EXIT=0
+Device classes user_analog_project_wrapper and user_analog_project_wrapper are equivalent.
+
+Final result: Circuits match uniquely.
+.
+
+  [ 1/14] Top Cell .......................................... PASS  (0.7s)
+  [ 2/14] GPIO Defines ...................................... PASS  (0.7s)
+  [ 3/14] XOR ............................................... PASS  (5.3s)
+  [ 4/14] Magic DRC ......................................... FAIL  (32.2s)
+  [ 5/14] Klayout FEOL ...................................... PASS  (15.9s)
+  [ 6/14] Klayout BEOL ...................................... FAIL  (44.8s)
+  [ 7/14] Klayout Offgrid ................................... PASS  (10.9s)
+  [ 8/14] Klayout Metal Density ............................. PASS  (6.2s)
+  [ 9/14] Klayout Pin Label ................................. PASS  (3.9s)
+  [10/14] Klayout ZeroArea .................................. PASS  (3.3s)
+  [11/14] Spike Check ....................................... PASS  (2.9s)
+  [12/14] Illegal Cellname .................................. PASS  (0.9s)
+  [13/14] LVS ............................................... PASS  (466.0s)
+  [14/14] OEB ............................................... PASS  (4.8s)
+PRECHECK_CFENV_RC=2
+SIGNOFF_CFENV_RC=0
+POST29_DONE

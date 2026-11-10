@@ -1,0 +1,5 @@
+xnor fault in _11540_ output _06106_
+Warning: Latch inferred for signal `\icg_model.\q' from process `\icg_model.$proc$/w/flow/orfs/post/icg_models.v:8$1': $auto$proc_dlatch.cc:559:proc_dlatch$21
+  FAIL: product 1 column 23: got 222 expected 5
+TEST FAILED
+EXIT=1

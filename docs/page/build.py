@@ -48,7 +48,8 @@ def compact_ver():
         rows.append(f'<tr><td>{esc(lab)}</td>' + (f'<td class="{"ok" if ok else "bad"}">{esc(val)}</td>' if ok is not None else '<td class="bad">not run</td>') + "</tr>")
     tb = [checks(T(f)) for f in ("rtl_test.log", "rtl_test_pnx.log", "rtl_test_verilator.log", "rtl_test_verilator_pnx.log")]
     row("Test bench against exact arithmetic: 2 simulators × 2 trit codes", None if None in tb else all(c[1] == 0 for c in tb),
-        f"4 runs × {tb[0][0]:,} checks, 0 failures" if None not in tb and len({c[0] for c in tb}) == 1 else "")
+        (f"4 runs × {tb[0][0]:,} checks, 0 failures" if len({c[0] for c in tb}) == 1 else
+         f"CXXRTL {tb[0][0]:,} checks (with the LOCK upset test), Verilator {tb[2][0]:,}; both codes, 0 failures") if None not in tb else "")
     fl = T("formal.log")
     st = [re.search(r"\[" + n + r"\] DONE \((\w+)", fl) for n in ("tcim_spi", "tcim_core_safety", "tcim_core_safety_pnx", "tcim_core_progress", "tcim_core_lfsr")]
     st += [re.search(r"DONE \((\w+)", T(f"security/miter_{t}.log")) for t in ("prove", "prove_pnx")]
@@ -111,7 +112,7 @@ TRIAGE = [
     ("Weight read-back over the bus under LOCK", "closed", "4.7: read-back refused (WERR), margin check does not copy weights; tests and proof."),
     ("Weights recoverable through products, even under LOCK", "stands", "72 products with one-hot inputs return every weight; true of any accelerator a bus user can run. Keep the bus trusted."),
     ("One upset after LOCK re-enables an option", "closed", "4.7: every option use gated by LOCK. Cannot be shown by a functional test (needs an upset)."),
-    ("LOCK itself is one flip-flop: an upset clears it", "next", "Redundant or non-volatile LOCK (NEXT_CHIP_SPEC.md section 5)."),
+    ("LOCK itself is one flip-flop: an upset clears it", "closed", "4.9 (RTL): three flip-flops, locked while any is set; test bench clears two of them and checks the tile stays locked. Section 13e."),
     ("A fault in the row counter can end a product early, without WERR", "next", "Redundant count of row answers (NEXT_CHIP_SPEC.md section 5)."),
     ("Serial port: cut frames, chip-select glitches, junk writes (logic level)", "closed",
      f"4.8: fuzzed, {fz[0]['frames']:,} + 1,000,000 frames, 0 errors; {sum(x['ok'] for x in fz[1:])} of {len(fz) - 1} planted faults caught." if fz else "not run"),
@@ -124,7 +125,8 @@ TRIAGE = [
     ("Programming profile leaks which devices change", "stands",
      f"Model |t| {pv['constant2T2R']['max_abs_t_samples']:g} (2T2R), {pv['constant1of3']['max_abs_t_samples']:g} (one-of-three). Program the weights in a trusted place."),
     ("LFSR is deterministic after reset (no random source)", "next", "Same start rows every boot. Needs a true random source (next chip)."),
-    ("Reset clears LOCK; weights stay in the array", "next", "Whoever owns reset and the serial port can read them: keep the board trusted. Next chip: a LOCK that survives reset."),
+    ("Reset clears LOCK; weights stay in the array", "closed", "4.9 (RTL): a reset leaves the tile LOCKED; only an erase of the whole array (constant time) clears LOCK, and only if every device verified. Section 13e."),
+    ("Programming runs under LOCK (an attacker can calibrate the sense amplifiers)", "closed", "4.9 (RTL): PCMD + refused under LOCK (WERR, no array access). Section 13e."),
     ("A SEC write while a command runs is ignored", "stands", "Documented; firmware reads SEC back after setting LOCK."),
     ("The 21 + 21 step count is tested, not proved", "stands", "The miter proves that timing does not depend on the data; the exact step count is only tested."),
     ("Side channels not modelled: idle impedance of an unpowered chip and package, sense-amplifier read transients, EM by location (ACT parity, clock gates)", "stands",

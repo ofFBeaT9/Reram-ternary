@@ -1,0 +1,4 @@
+Warning: Latch inferred for signal `\icg_model.\q' from process `\icg_model.$proc$/w/flow/orfs/post/icg_models.v:8$1': $auto$proc_dlatch.cc:559:proc_dlatch$21
+91846 checks, 0 failures
+TEST PASSED
+EXIT=0

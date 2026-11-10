@@ -43,14 +43,17 @@ The attacker:
   LOCK, so row-aligned reads are available.
 
 The attacker does **not** read the tile's results. In a deployment the tile sits inside a larger network, and its results go only to
-the host. With readable results, 72 chosen input vectors would give the weights directly, and no side channel would be needed.
+the host. With readable results, 72 chosen input vectors would give the weights directly, and no side channel would be needed. This is
+model extraction through the prediction interface [Tramèr et al., USENIX Security 2016]; it holds for any accelerator whose outputs are
+visible, and no on-chip mechanism prevents it.
 
-Two gaps in revision 4.7's logic contradict this model. They are stated here, not solved:
-- Programming is not refused under LOCK. An attacker can reprogram one row with known patterns (erasing 24 weights) and calibrate
-  every sense amplifier.
-- Reset clears LOCK while the weights persist, so the system must set LOCK before any external access after reset.
-
-The fix proposed for the next revision refuses programming under LOCK, or erases the whole array first.
+Revision 4.7's logic had two gaps that contradicted this model. Revision 4.9 closes both in the RTL (§3; verification in
+`results/rev49/summary.json`), following the read-out protection of flash microcontrollers:
+- Programming ran under LOCK, so an attacker could reprogram one row with known patterns (erasing 24 weights) and calibrate
+  every sense amplifier. Revision 4.9 refuses programming under LOCK (WERR, no array access).
+- A reset cleared LOCK while the weights persisted. Revision 4.9 sets LOCK at reset. The only way to clear it is an erase of the whole
+  array, which programs every row to weight 0 in a fixed number of pulse steps and clears LOCK only if every device verified.
+- LOCK is held in three flip-flops, so a single upset cannot clear it.
 
 ## 3. The TCIM0 tile
 
@@ -59,13 +62,15 @@ TCIM0 is a 72 × 24 ternary tile presented to a host as a memory-mapped device. 
 run with ChipFoundry's pinned tool versions. The one-of-three variant is drawn and verified at block level; it is not yet assembled
 into a chip.
 
-Revision 4.7's security features:
+Security features (revision 4.7, with the two additions of revision 4.9):
 - fixed-latency products that read all 72 rows from an LFSR-chosen start row;
 - a random result-accumulator offset, removed with the last row;
 - dummy accumulators;
 - fixed-length programming (21 + 21 pulse steps);
 - a set-only LOCK;
-- refusal of read-back under LOCK.
+- refusal of read-back under LOCK;
+- (revision 4.9) LOCK set by reset and cleared only by a constant-time erase of the whole array; refusal of programming under LOCK;
+  LOCK held in three flip-flops.
 
 ## 4. Leakage, layer by layer (behavioural model)
 
@@ -121,11 +126,11 @@ Transient programming and disturb are not simulated. From an erased array, one-o
 
 **Logic.** Build option `TCIM_CELL_1OF3`. Without the option, the core is proven equivalent to the verified revision 4.7 core
 (2,718 points, 0 unproven). With it:
-- RTL test bench: 97,631 and 97,631 checks in the two trit codes, 0 failures.
-- Chip test bench through a line-level macro model: 92,076 checks, 0 failures.
+- RTL test bench: 107,302 and 107,302 checks in the two trit codes, 0 failures.
+- Chip test bench through a line-level macro model: 101,737 checks, 0 failures.
 - Planted controller faults in the Z logic: 6 of 6 caught.
 - Formal safety proof: passes; 3 of 3 planted Z faults make it fail.
-- Full mutation campaign: 122 of 122 faults caught.
+- Full mutation campaign: 133 of 133 faults caught.
 
 The progress and two-copy timing proofs do not yet cover the option.
 

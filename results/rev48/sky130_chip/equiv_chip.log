@@ -1,0 +1,6 @@
+lint (Verilator -Wall, tcim_chip_digital): 0 warnings
+place-and-route source of the chip block: Of those cells 3021 are proven and 0 are unproven.
+d3d6a187c5f1cb1ac5436f19a84755a9  rtl/chip/tcim_actl.sv
+d5f694e1af23799b1e46e5667d9c125a  rtl/chip/tcim_chip_core.sv
+b924a9d534e76f0f8f4663765b53092e  rtl/chip/tcim_chip_digital.sv
+58fff6d62fef845ffc81f7d0f4eed21c  flow/orfs/src/tcim_chip_digital.v

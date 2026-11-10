@@ -1,4 +1,4 @@
-"""docs/TCIM0_explainer.html, the full page (8 November 2026, revision 4.8).
+"""docs/TCIM0_explainer.html, the full page (9 November 2026, revision 4.9).
 
 The full explainer of revision 4.5 (every figure, 3D view and hands-on model; assemble.py) brought up to date: a new opening
 (status, what is done, what remains, what can be done now, revisions, verification), a short "now" box in each section
@@ -30,7 +30,7 @@ def sub(old, new, count=1):
 
 
 def now(html):
-    return f'<div class="note"><b>Now (revision 4.7/4.8).</b> {html}</div>\n'
+    return f'<div class="note"><b>Now (revision 4.9).</b> {html}</div>\n'
 
 
 def after_h2(sec_id, html):
@@ -51,7 +51,7 @@ ntri = B.triage_html()[0]
 
 # ---------------------------------------------------------------- header
 sub('<div class="kicker">ReRAM ternary · design status · 12 October 2026</div>',
-    '<div class="kicker">ReRAM ternary · design status · 8 November 2026 · revision 4.8</div>')
+    '<div class="kicker">ReRAM ternary · design status · 9 November 2026 · revision 4.9</div>')
 a = s.index('<p class="lede">'); b = s.index("</nav>", a) + len("</nav>")
 s = s[:a] + """<p class="lede">What the design is, how every part works, what has been checked and how, what is done, what is still open, and what
 can be done next. Test and simulation results are read from the repository's result files (<code>make test</code> checks
@@ -59,7 +59,7 @@ every number <code>docs/STATUS.md</code> quotes); design facts come from the des
 <nav class="toc" aria-label="Contents"><a href="#status">Status: done, remaining, next</a><a href="#revisions">Revisions</a><a href="#verified">Is everything verified?</a><a href="#tell">What can be claimed</a><a href="#files">Files</a>
 <a href="#idea">1 The idea</a><a href="#weight">2 One weight</a><a href="#structure">3 Layers and materials</a><a href="#handson">Hands-on models</a><a href="#read">4 Reading</a><a href="#program">5 Programming</a><a href="#chip">6 The chip</a>
 <a href="#controller">7 Controller</a><a href="#logic">8 Logic design</a><a href="#fpga">9 FPGA proof</a><a href="#layout">10 Layout and sign-off</a><a href="#cf">11 ChipFoundry's tools</a>
-<a href="#limits">12 Limits</a><a href="#security">13 Security</a><a href="#open">13b Open issues</a><a href="#cells">13c Next-chip cell (3T3R)</a><a href="#leak3">13d 3T3R leakage</a><a href="#ttpu">14 TPU Gen2</a><a href="#next">15 Next: system, USN</a><a href="#nov8">Corrections</a><a href="#glossary">Glossary</a></nav>""" + s[b:]
+<a href="#limits">12 Limits</a><a href="#security">13 Security</a><a href="#open">13b Open issues</a><a href="#cells">13c Next-chip cell (3T3R)</a><a href="#leak3">13d 3T3R leakage</a><a href="#lock49">13e LOCK gaps closed (4.9)</a><a href="#ttpu">14 TPU Gen2</a><a href="#next">15 Next: system, USN</a><a href="#nov8">Corrections</a><a href="#glossary">Glossary</a></nav>""" + s[b:]
 
 # ---------------------------------------------------------------- new opening (replaces ready / verified / tell / files)
 a, b = cut("ready", "idea")
@@ -105,6 +105,7 @@ foundry's precheck, waiting for the foundry's confirmation of ReRAM", not "ready
 <tr><td>4.6</td><td>4 Nov</td><td>Fixed-latency products (all 72 rows, LFSR start row); dummy accumulators; constant-time programming (21 + 21 steps); SEC register with set-only LOCK; margin check</td><td>Timing and power leaks found in the security review</td></tr>
 <tr><td>4.7</td><td>6 Nov</td><td>Start row = LFSR mod 72; random accumulator offset; LOCK refuses read-back; options gated by LOCK; block placed and routed again</td><td>Four gaps found by the independent review of 4.6</td></tr>
 <tr><td>4.8</td><td>7 Nov</td><td>No design change: serial-port fuzzing (<code>make fuzz</code>)</td><td>Show the port survives cut frames, glitches and junk writes</td></tr>
+<tr><td>4.9</td><td>9 Nov</td><td>Locked at reset; erase of the whole array (constant time) is the only way to unlock; programming refused under LOCK; LOCK in three flip-flops</td><td>The two LOCK gaps found by the paper study's red team (13e)</td></tr>
 </tbody></table></div>
 <p class="note">The chip layout of 4.8 is that of 4.7 (GDS md5 <code>{pc["gds_md5"]}</code>). Sections 1–12 explain the design as built in 4.5;
 a "Now" box in each section says what changed since.</p>
@@ -112,7 +113,7 @@ a "Now" box in each section says what changed since.</p>
 
 <section id="verified">
 <h2>Is everything verified?</h2>
-<div class="tbl"><table><thead><tr><th>Check (revision 4.7 logic, 4.8 checks)</th><th>Result</th></tr></thead><tbody>{B.compact_ver()}</tbody></table></div>
+<div class="tbl"><table><thead><tr><th>Check (revision 4.9)</th><th>Result</th></tr></thead><tbody>{B.compact_ver()}</tbody></table></div>
 <p class="note">Commands for each check: section 13. Last full re-run of every suite: revision 4.5, 12 October (12 of 12). The 4.7 benches ran on a
 <code>tcim_core.sv</code> with identical logic (<code>results/rev47/same_logic.json</code>).</p>
 <h3>What "verified" means here, and what it cannot mean</h3>
@@ -172,15 +173,15 @@ after_h2("layout", now(f"Revision 4.7's logic block was placed and routed again 
                        f"(setup ≥ {blk['setup_wns_min_ns']} ns, hold ≥ {blk['hold_wns_min_ns'] * 1000:.0f} ps). The first routing left one net 5 % over the antenna limit "
                        "in Magic; a final repair pass at a 15 % margin removed it, and every check after routing was run again: "
                        f"antenna {ac['magic']['violations']} in Magic, {ac['openroad']['net_violations']} in OpenROAD; LVS match; DRC {so['drc_markers']}."))
-after_h2("cf", now(f"On the revision 4.7 GDS (md5 <code>{pc['gds_md5']}</code>) the precheck in ChipFoundry's pinned versions passes {B.pre} "
+after_h2("cf", now(f"On the revision 4.9 GDS (md5 <code>{pc['gds_md5']}</code>) the precheck in ChipFoundry's pinned versions passes {B.pre} "
                    "(PC batch 28c, 7 November). The description below is the October work that set up these versions."))
-after_h2("chip", now("The chip is unchanged outside the logic block. Its digital block now holds revision 4.7's logic (section 10)."))
+after_h2("chip", now("The chip is unchanged outside the logic block. Its digital block now holds revision 4.9's logic (section 10)."))
 
 # ---------------------------------------------------------------- logic section: registers, steps, checks, timing for 4.7
 s = re.sub(r'(<tr><td class="num">\+4, \+8, \+12</td>)',
-           r'<tr><td class="num">+3</td><td>SEC</td><td>read/write</td><td>(4.6) t0 ZSKIP, t1 VARPROG, t2 NOSHUF: opt-ins to the old behaviour; t3 LOCK: set-only, cleared by reset; under LOCK the opt-ins are off, read-back is refused and PITER, ACT read 0</td></tr>\1', s, count=1)
+           r'<tr><td class="num">+3</td><td>SEC</td><td>read/write</td><td>(4.6) t0 ZSKIP, t1 VARPROG, t2 NOSHUF: opt-ins to the old behaviour; t3 LOCK: set-only; (4.9) set by reset, cleared only by an erase of the whole array; under LOCK the opt-ins are off, read-back and (4.9) programming are refused and PITER, ACT read 0</td></tr>\1', s, count=1)
 sub("<td>+ : program the row from PDATA with verify; − : read the row into PDATA</td>",
-    "<td>+ : program the row from PDATA (21 + 21 steps); − : read the row into PDATA (refused under LOCK); 0,+ : margin check (4.6)</td>")
+    "<td>+ : program the row from PDATA (21 + 21 steps; 4.9: refused under LOCK); − : read the row into PDATA (refused under LOCK); 0,+ : margin check (4.6); 0,0,+ : erase all rows to 0 and unlock (4.9)</td>")
 s = re.sub(r"(<td>pulses the last program command used</td></tr>)",
            r"\1<tr><td class=\"num\">+50</td><td>ACT</td><td>read</td><td>(4.6) parity of the dummy accumulators; 0 under LOCK</td></tr>"
            r"<tr><td class=\"num\">+52</td><td>MARG</td><td>read (word)</td><td>(4.6) + for each column with a device in the margin band at the last margin check</td></tr>", s, count=1)
@@ -188,14 +189,14 @@ sub("then runs pulse-and-verify (section 5)\nin two phases, reset first and set 
     "then runs pulse-and-verify (section 5)\nin two phases, reset first and set second, pulsing only the devices that still fail their verify, at amplitude steps 0 to 20; since 4.6 every\nstep is run, with an empty pulse once all devices have verified, so every command takes the same time. If a device has not passed after the last\nstep, WERR is set. PITER reports how many real pulses the row took.")
 m = re.search(r'(<h3>How the logic was checked</h3>)(.*?)(<p><b>Why fault injection)', s, re.S)
 s = s[:m.start(2)] + f"""
-<div class="kv"><div class="num">{c_rtl[0]:,}</div><div>self-checking tests per run, 0 failures, CXXRTL and Verilator, both trit codes (revision 4.7)</div>
+<div class="kv"><div class="num">{c_rtl[0]:,}</div><div>self-checking tests per run, 0 failures, CXXRTL and Verilator, both trit codes (revision 4.9)</div>
 <div class="num">{mt["detected"]} / {mt["faults"]}</div><div>injected faults detected ({mp["detected"]} / {mp["faults"]} in the BSD-PNX build)</div>
 <div class="num">7 / 7</div><div>formal proofs, including the start-row proof and the two-copy timing miter; {sum(x["caught"] for x in ff)} of {len(ff)} planted faults make a proof fail</div>
 <div class="num">{gls[0]:,}</div><div>checks on the routed netlist (gate level), 0 failures</div></div>
 """ + s[m.start(3):]
 s = re.sub(r"<b>The logic block on the chip</b> is placed and routed with OpenROAD-flow-scripts on sky130B: .*?utilization\.",
            f"<b>The logic block on the chip</b> is placed and routed with OpenROAD-flow-scripts on sky130B: {blk['stdcells']:,} cells including antenna diodes "
-           f"({blk['sequential']:,} flip-flops, {blk['clock_gates']} clock gates), {blk['utilization']:.1%} utilization (revision 4.7; 4.5 had 9,638 logic cells).", s, count=1, flags=re.S)
+           f"({blk['sequential']:,} flip-flops, {blk['clock_gates']} clock gates), {blk['utilization']:.1%} utilization (revision 4.9; 4.5 had 9,638 logic cells).", s, count=1, flags=re.S)
 
 
 s = s.replace("input 0: row not read, costs no cycle", "input 0: read anyway (since 4.6), adds 0")
@@ -204,7 +205,7 @@ s = s.replace("only rows with input ≠ 0 are read: about 49.7 core clock cycles
 s = s.replace("product sequencer: rows with input ≠ 0", "product sequencer: all 72 rows (4.6+)")
 after_h2("logic", now("Every product reads all 72 rows from a random start row (LFSR mod 72) and starts its accumulators at a random offset, so "
                       "its duration and switching do not follow the inputs; programming takes a constant 21 + 21 steps; the SEC register adds a "
-                      "set-only LOCK. The tables, checks and timing below are revision 4.7's; the worked example keeps 4.5's rule for clarity of the sums."))
+                      "set-only LOCK. The tables, checks and timing below are revision 4.9's; the worked example keeps 4.5's rule for clarity of the sums."))
 
 
 def timing_chart():
@@ -212,7 +213,7 @@ def timing_chart():
     W, x0, x1 = 760, 210, 720
     H = 40 + 26 * len(cs) + 30
     sx = lambda v: x0 + v / 25.0 * (x1 - x0)
-    o = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="Setup slack of the revision 4.7 logic block at a 25 ns clock in nine cases, all positive; '
+    o = [f'<svg viewBox="0 0 {W} {H}" role="img" aria-label="Setup slack of the revision 4.9 logic block at a 25 ns clock in nine cases, all positive; '
          f'worst {cs[0][1]["setup_wns_ns"]} ns.">']
     for v in (0, 5, 10, 15, 20, 25):
         o.append(f'<line x1="{sx(v):.1f}" y1="24" x2="{sx(v):.1f}" y2="{H - 30}" stroke="var(--grid)"/><text x="{sx(v):.1f}" y="{H - 14}" text-anchor="middle" class="tick">{v}</text>')
@@ -224,7 +225,7 @@ def timing_chart():
                  f'<text x="{sx(v["setup_wns_ns"]) + 6:.1f}" y="{y + 13}" class="sm">{v["setup_wns_ns"]} ns</text>')
     o.append(f'<text x="{(x0 + x1) / 2}" y="{H - 1}" text-anchor="middle" class="axl">setup slack, ns (25 ns clock); k = wire parasitics scale</text></svg>')
     hold = min(v["hold_wns_ns"] for _, v in cs)
-    return (f'<figure>{"".join(o)}<figcaption>Time to spare at a 25 ns clock (40 MHz), revision 4.7 block, nine cases: three corners × wire '
+    return (f'<figure>{"".join(o)}<figcaption>Time to spare at a 25 ns clock (40 MHz), revision 4.9 block, nine cases: three corners × wire '
             f'parasitics 0.8 / 1.0 / 1.2. All positive; hold slack ≥ +{hold * 1000:.0f} ps. The shortest working period at the slow corner is '
             f'{mp_[1.0]} ns ({mp_[1.2]} ns with parasitics × 1.2).</figcaption></figure>')
 
@@ -243,7 +244,7 @@ from fig_cells import figure as cells_figure
 a3 = J("next_chip/array3.json")
 t3 = [B.checks(T(f"next_chip/rtl_test_1of3{x}.log")) for x in ("", "_pnx")]
 mz = []
-for f in sorted(glob.glob("results/rtl_mutation_1of3_*.json")):
+for f in sorted(glob.glob("results/rev48/mutation_parts/rtl_mutation_1of3_*.json")):
     mz += json.loads(Path(f).read_text())
 mz_ok = sum(1 for r in mz if r["status"] == "caught")
 eqd = re.search(r"Of those cells (\d+) are proven and (\d+) are unproven", T("next_chip/equiv_default_build_unchanged.log"))
@@ -291,7 +292,6 @@ ReRAM element (Z) with its own bit line; the source line and word line are share
 <li>Chip assembly: the digital block placed and routed again with 48 more macro pins, the user area rebuilt, sign-off and ChipFoundry's precheck (on the PC, after ChipFoundry answers on ReRAM).</li>
 <li>The progress and two-copy timing proofs on the option.</li>
 <li>Sense-amplifier rotation (proposal; removes the row-aligned position residual in the model, 13d): draw it and add it to the RTL.</li>
-<li>Refuse programming under LOCK (or erase the whole array first): revision 4.7 lets an attacker reprogram a row and calibrate the sense amplifiers.</li>
 <li>Silicon: the leakage results are about the model.</li>
 </ul></div>
 <div class="col"><h3><span class="tag t-you">prior art to cite</span></h3><ul>
@@ -300,8 +300,8 @@ ReRAM element (Z) with its own bit line; the source line and word line are share
 <li>Fixed-weight codewords for ternary memory cells (Micron, US 11,811,424; for read reliability, not security).</li></ul></div>
 </div>
 """
-import leak3_section
-cells_html += leak3_section.section()
+import leak3_section, lock49_section
+cells_html += leak3_section.section() + lock49_section.section()
 s = s[:h] + f"""</section>
 
 <section id="open">

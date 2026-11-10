@@ -5,6 +5,10 @@ import hashlib, json, math, re, sys
 from pathlib import Path
 
 R = Path("results")
+# revision 4.9 (9 November 2026) re-ran the test benches, fault campaigns, proofs and the chip; this section describes revisions 4.6
+# and 4.7, so it reads their files from results/rev48 (the commit of 8 November) when they are kept there (revision 4.9: section 13e)
+R48 = Path("results/rev48")
+P = lambda p: (R48 / p) if (R48 / p).exists() else (R / p)
 
 
 def esc(s):
@@ -12,12 +16,12 @@ def esc(s):
 
 
 def J(p):
-    f = R / p
+    f = P(p)
     return json.loads(f.read_text()) if f.exists() else None
 
 
 def T(p):
-    f = R / p
+    f = P(p)
     return f.read_text(errors="ignore") if f.exists() else ""
 
 
@@ -267,8 +271,8 @@ realigns the traces can see each row's count of non-zero weights, not only the t
 sense-amplifier mismatch remains (13d).</li>
 <li>The LFSR is deterministic after reset (the chip has no random source): the same firmware gets the same start rows and offsets on every boot, and
 whoever controls the timing of GO controls them.</li>
-<li>LOCK is cleared by reset, and the weights stay in the array: anyone who can reset the chip and use the bus can read them. On this test chip the board
-owns both.</li>
+<li>LOCK is cleared by reset, and the weights stay in the array. Revision 4.9 (13e) leaves the tile locked after a reset and unlocks it only by erasing
+the whole array; a bus user can still recover the weights through products.</li>
 <li>The programming profile leaks; an empty pulse puts no steady-state voltage across a device, but the switching transients at the cell nodes were not
 simulated.</li>
 <li>Supply sensors, decoupling and a separate array supply need new drawn circuits: specified, not drawn.</li>

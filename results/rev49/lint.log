@@ -1,0 +1,8 @@
+/opt/oss-cad-suite/share/verilator/bin/verilator --lint-only -Wall --top-module tcim_top rtl/tcim_pkg.sv rtl/tcim_core.sv rtl/tcim_spi.sv rtl/tcim_top.sv
+- V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-346-gc57441178 (mod)
+- Verilator: Built from 0.160 MB sources in 6 modules, into 0.537 MB in 4 C++ files needing 0.000 MB
+- Verilator: Walltime 0.731 s (elab=0.559, cvt=0.074, bld=0.000); cpu 0.650 s on 1 threads; allocated 247.750 MB
+/opt/oss-cad-suite/share/verilator/bin/verilator --lint-only -Wall +define+TCIM_ENC_PNX --top-module tcim_top rtl/tcim_pkg.sv rtl/tcim_core.sv rtl/tcim_spi.sv rtl/tcim_top.sv
+- V e r i l a t i o n   R e p o r t: Verilator 5.053 devel rev v5.052-346-gc57441178 (mod)
+- Verilator: Built from 0.160 MB sources in 6 modules, into 0.541 MB in 4 C++ files needing 0.000 MB
+- Verilator: Walltime 0.371 s (elab=0.241, cvt=0.049, bld=0.000); cpu 0.309 s on 1 threads; allocated 248.250 MB

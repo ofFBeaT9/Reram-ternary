@@ -1,25 +1,25 @@
 {
- "test_bench": "tb/tb_tcim.cc",
- "faults": 115,
- "run": 115,
- "detected": 115,
+ "test_bench": "tb/tb_tcim.cc (revision 4.9, PC batch 29)",
+ "faults": 126,
+ "run": 126,
+ "detected": 126,
  "not_detected": [],
  "missing": [],
  "results": [
   {
    "name": "sign of a +1 weight in the accumulator",
    "status": "caught",
-   "first_failure": "FAIL: product 0 column 0: got -45 expected 7",
+   "first_failure": "FAIL: product 0 column 0: got -54 expected -18",
    "in_test": "3. digital products against the exact do",
-   "seconds": 13,
+   "seconds": 14,
    "id": 0
   },
   {
    "name": "sign of a -1 weight in the accumulator",
    "status": "caught",
-   "first_failure": "FAIL: product 0 column 0: got 45 expected 7",
+   "first_failure": "FAIL: product 0 column 0: got 54 expected -18",
    "in_test": "3. digital products against the exact do",
-   "seconds": 13,
+   "seconds": 23,
    "id": 1
   },
   {
@@ -27,31 +27,31 @@
    "status": "caught",
    "first_failure": "FAIL: cell with both devices in LRS not counted as 0 (got 1)",
    "in_test": "5. error paths",
-   "seconds": 166,
+   "seconds": 236,
    "id": 2
   },
   {
    "name": "last row never read",
    "status": "caught",
-   "first_failure": "FAIL: product 0 column 11: got -6 expected -5",
+   "first_failure": "FAIL: product 0 column 0: got -17 expected -18",
    "in_test": "3. digital products against the exact do",
-   "seconds": 86,
+   "seconds": 133,
    "id": 3
   },
   {
    "name": "rows with a -1 input skipped",
    "status": "caught",
-   "first_failure": "FAIL: product 1 column 0: got 0 expected -7",
+   "first_failure": "FAIL: product 1 column 0: got 0 expected 18",
    "in_test": "3. digital products against the exact do",
-   "seconds": 13,
+   "seconds": 16,
    "id": 4
   },
   {
    "name": "rows with a 0 input read as well",
    "status": "caught",
-   "first_failure": "FAIL: product 2 column 0: got -7 expected 0",
+   "first_failure": "FAIL: product 2 column 0: got 18 expected 0",
    "in_test": "3. digital products against the exact do",
-   "seconds": 13,
+   "seconds": 16,
    "id": 5
   },
   {
@@ -59,7 +59,7 @@
    "status": "caught",
    "first_failure": "FAIL: invalid cell not reported",
    "in_test": "5. error paths",
-   "seconds": 167,
+   "seconds": 218,
    "id": 6
   },
   {
@@ -67,7 +67,7 @@
    "status": "caught",
    "first_failure": "FAIL: invalid cell not reported by read-back",
    "in_test": "5. error paths",
-   "seconds": 166,
+   "seconds": 149,
    "id": 7
   },
   {
@@ -75,7 +75,7 @@
    "status": "caught",
    "first_failure": "FAIL: only 1 different start rows in 40 products",
    "in_test": "3. digital products against the exact do",
-   "seconds": 86,
+   "seconds": 92,
    "id": 8
   },
   {
@@ -83,7 +83,7 @@
    "status": "caught",
    "first_failure": "FAIL: fixed-latency product 0: 72 rows not read exactly once",
    "in_test": "3. digital products against the exact do",
-   "seconds": 13,
+   "seconds": 22,
    "id": 9
   },
   {
@@ -91,15 +91,15 @@
    "status": "caught",
    "first_failure": "FAIL: WERR not cleared by the next GO",
    "in_test": "5. error paths",
-   "seconds": 169,
+   "seconds": 235,
    "id": 10
   },
   {
    "name": "set phase programs the wrong side",
    "status": "caught",
-   "first_failure": "FAIL: pulse on a device that must not change (row 0, 167 times)",
+   "first_failure": "FAIL: pulse on a device that must not change (row 0, 171 times)",
    "in_test": "2. programming all 72 rows with verify",
-   "seconds": 1,
+   "seconds": 2,
    "id": 11
   },
   {
@@ -107,15 +107,15 @@
    "status": "caught",
    "first_failure": "FAIL: WERR not cleared by the next GO",
    "in_test": "5. error paths",
-   "seconds": 169,
+   "seconds": 115,
    "id": 12
   },
   {
    "name": "set verify polarity",
    "status": "caught",
-   "first_failure": "FAIL: device state after programming r0 c1",
+   "first_failure": "FAIL: device state after programming r0 c2",
    "in_test": "2. programming all 72 rows with verify",
-   "seconds": 8,
+   "seconds": 15,
    "id": 13
   },
   {
@@ -123,15 +123,15 @@
    "status": "caught",
    "first_failure": "FAIL: PITER 61 differs from the 52143 device-selecting pulses the array received (row 6)",
    "in_test": "5. error paths",
-   "seconds": 173,
+   "seconds": 142,
    "id": 14
   },
   {
    "name": "no pulse limit in the set phase",
    "status": "caught",
-   "first_failure": "FAIL: PITER 7 differs from the 67065 device-selecting pulses the array received (row 5)",
+   "first_failure": "FAIL: PITER 6 differs from the 67064 device-selecting pulses the array received (row 5)",
    "in_test": "5. error paths",
-   "seconds": 173,
+   "seconds": 140,
    "id": 15
   },
   {
@@ -145,9 +145,9 @@
   {
    "name": "pulse amplitude not driven",
    "status": "caught",
-   "first_failure": "FAIL: pulse amplitude did not start at 0 and rise by one per pulse (row 0, 20 pulses out of sequence)",
-   "in_test": "2. programming all 72 rows with verify",
-   "seconds": 1,
+   "first_failure": "FAIL: first erase: pulse amplitudes or order wrong",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 2,
    "id": 17
   },
   {
@@ -155,31 +155,31 @@
    "status": "caught",
    "first_failure": "FAIL: PITER 0 differs from the 15 device-selecting pulses the array received (row 0)",
    "in_test": "2. programming all 72 rows with verify",
-   "seconds": 1,
+   "seconds": 2,
    "id": 18
   },
   {
    "name": "reset pulses not counted in PITER",
    "status": "caught",
-   "first_failure": "FAIL: PITER 21 differs from the 34 device-selecting pulses the array received (row 5)",
+   "first_failure": "FAIL: PITER 21 differs from the 33 device-selecting pulses the array received (row 5)",
    "in_test": "5. error paths",
-   "seconds": 166,
+   "seconds": 227,
    "id": 19
   },
   {
    "name": "analog difference has the wrong sign",
    "status": "caught",
-   "first_failure": "FAIL: analog count 0 column 0: got 17 expected -1",
+   "first_failure": "FAIL: analog count 0 column 0: got -53 expected -3",
    "in_test": "4. analog-mode raw counts",
-   "seconds": 152,
+   "seconds": 247,
    "id": 20
   },
   {
    "name": "analog phases use the same rows",
    "status": "caught",
-   "first_failure": "FAIL: analog count 0 column 0: got 0 expected -1",
+   "first_failure": "FAIL: analog count 0 column 0: got 0 expected -3",
    "in_test": "4. analog-mode raw counts",
-   "seconds": 154,
+   "seconds": 200,
    "id": 21
   },
   {
@@ -187,7 +187,7 @@
    "status": "caught",
    "first_failure": "FAIL: 365 not clipped, column 0: -364",
    "in_test": "5b. directed tests: read reference, satu",
-   "seconds": 172,
+   "seconds": 158,
    "id": 22
   },
   {
@@ -195,7 +195,7 @@
    "status": "caught",
    "first_failure": "FAIL: -365 not clipped, column 0: 364",
    "in_test": "5b. directed tests: read reference, satu",
-   "seconds": 188,
+   "seconds": 234,
    "id": 23
   },
   {
@@ -203,7 +203,7 @@
    "status": "caught",
    "first_failure": "FAIL: SAT not set on positive overflow",
    "in_test": "5b. directed tests: read reference, satu",
-   "seconds": 184,
+   "seconds": 240,
    "id": 24
   },
   {
@@ -211,7 +211,7 @@
    "status": "caught",
    "first_failure": "FAIL: interrupt not cleared by reading STAT",
    "in_test": "3. digital products against the exact do",
-   "seconds": 153,
+   "seconds": 200,
    "id": 25
   },
   {
@@ -219,7 +219,7 @@
    "status": "caught",
    "first_failure": "FAIL: interrupt raised with IE = 0",
    "in_test": "5b. directed tests: read reference, satu",
-   "seconds": 189,
+   "seconds": 229,
    "id": 26
   },
   {
@@ -227,7 +227,7 @@
    "status": "caught",
    "first_failure": "FAIL: row index 72 accepted",
    "in_test": "5. error paths",
-   "seconds": 186,
+   "seconds": 215,
    "id": 27
   },
   {
@@ -235,7 +235,7 @@
    "status": "caught",
    "first_failure": "FAIL: row index -1 accepted",
    "in_test": "5. error paths",
-   "seconds": 185,
+   "seconds": 228,
    "id": 28
   },
   {
@@ -243,7 +243,7 @@
    "status": "caught",
    "first_failure": "FAIL: read-back row 0",
    "in_test": "2. programming all 72 rows with verify",
-   "seconds": 8,
+   "seconds": 11,
    "id": 29
   },
   {
@@ -251,7 +251,7 @@
    "status": "caught",
    "first_failure": "FAIL: result changed by writes during BUSY, column 0",
    "in_test": "5b. directed tests: read reference, satu",
-   "seconds": 191,
+   "seconds": 144,
    "id": 30
   },
   {
@@ -259,7 +259,7 @@
    "status": "caught",
    "first_failure": "FAIL: array accessed with EN = 0",
    "in_test": "5b. directed tests: read reference, satu",
-   "seconds": 199,
+   "seconds": 144,
    "id": 31
   },
   {
@@ -267,15 +267,15 @@
    "status": "caught",
    "first_failure": "FAIL: array accessed with EN = 0",
    "in_test": "5b. directed tests: read reference, satu",
-   "seconds": 217,
+   "seconds": 145,
    "id": 32
   },
   {
    "name": "MODE read from the wrong trit",
    "status": "caught",
-   "first_failure": "FAIL: product 0 column 0: got 29 expected 7",
+   "first_failure": "FAIL: product 0 column 0: got -74 expected -18",
    "in_test": "3. digital products against the exact do",
-   "seconds": 13,
+   "seconds": 12,
    "id": 33
   },
   {
@@ -283,23 +283,23 @@
    "status": "caught",
    "first_failure": "FAIL: WERR not cleared by the next GO",
    "in_test": "5. error paths",
-   "seconds": 223,
+   "seconds": 218,
    "id": 34
   },
   {
    "name": "X1 and X2 exchanged",
    "status": "caught",
-   "first_failure": "FAIL: product 3 column 0: got 2 expected -1",
+   "first_failure": "FAIL: product 3 column 0: got 6 expected 1",
    "in_test": "3. digital products against the exact do",
-   "seconds": 16,
+   "seconds": 17,
    "id": 35
   },
   {
    "name": "Y index off by one",
    "status": "caught",
-   "first_failure": "FAIL: product 0 column 0: got 2 expected 7",
+   "first_failure": "FAIL: product 0 column 0: got -7 expected -18",
    "in_test": "3. digital products against the exact do",
-   "seconds": 18,
+   "seconds": 19,
    "id": 36
   },
   {
@@ -315,7 +315,7 @@
    "status": "caught",
    "first_failure": "FAIL: PITER 39 differs from the 15 device-selecting pulses the array received (row 0)",
    "in_test": "2. programming all 72 rows with verify",
-   "seconds": 1,
+   "seconds": 2,
    "id": 38
   },
   {
@@ -331,15 +331,15 @@
    "status": "caught",
    "first_failure": "FAIL: pulse on another row than 2",
    "in_test": "2. programming all 72 rows with verify",
-   "seconds": 2,
+   "seconds": 3,
    "id": 40
   },
   {
    "name": "code 10 treated as -1",
    "status": "caught",
-   "first_failure": "FAIL: X with code 10: column 0 got 5 expected 3",
+   "first_failure": "FAIL: X with code 10: column 0 got 10 expected -1",
    "in_test": "5c. illegal code, exhaustive conversions",
-   "seconds": 219,
+   "seconds": 240,
    "id": 41
   },
   {
@@ -355,7 +355,7 @@
    "status": "caught",
    "first_failure": "FAIL: interrupt not reported in the serial status byte",
    "in_test": "3. digital products against the exact do",
-   "seconds": 194,
+   "seconds": 233,
    "id": 43
   },
   {
@@ -369,17 +369,17 @@
   {
    "name": "serial port: address bit lost",
    "status": "caught",
-   "first_failure": "FAIL: unmapped address 41: data not zero or error flag missing",
+   "first_failure": "FAIL: SEC does not read LOCK alone after reset (revision 4.9)",
    "in_test": "1. register access",
-   "seconds": 1,
+   "seconds": 0,
    "id": 45
   },
   {
    "name": "serial port: read data shifted by one bit",
    "status": "caught",
-   "first_failure": "FAIL: CTRL EN readback",
+   "first_failure": "FAIL: SEC does not read LOCK alone after reset (revision 4.9)",
    "in_test": "1. register access",
-   "seconds": 1,
+   "seconds": 0,
    "id": 46
   },
   {
@@ -387,7 +387,7 @@
    "status": "caught",
    "first_failure": "FAIL: word access to SEC not flagged",
    "in_test": "1. register access",
-   "seconds": 0,
+   "seconds": 1,
    "id": 47
   },
   {
@@ -395,7 +395,7 @@
    "status": "caught",
    "first_failure": "FAIL: interrupt after a failed command not cleared by reading STAT",
    "in_test": "5c. illegal code, exhaustive conversions",
-   "seconds": 308,
+   "seconds": 284,
    "id": 48
   },
   {
@@ -403,39 +403,39 @@
    "status": "caught",
    "first_failure": "FAIL: clocks after the 8-byte frame were decoded as another frame",
    "in_test": "5c. illegal code, exhaustive conversions",
-   "seconds": 296,
+   "seconds": 279,
    "id": 49
   },
   {
    "name": "set pulses repeated on devices that already passed verify",
    "status": "caught",
-   "first_failure": "FAIL: pulse on a device that had already passed verify (row 0, 154 times)",
+   "first_failure": "FAIL: pulse on a device that had already passed verify (row 0, 136 times)",
    "in_test": "2. programming all 72 rows with verify",
-   "seconds": 2,
+   "seconds": 3,
    "id": 50
   },
   {
    "name": "reset pulses repeated on devices that already passed verify",
    "status": "caught",
-   "first_failure": "FAIL: pulse on a device that had already passed verify (row 0, 651 times)",
+   "first_failure": "FAIL: pulse on a device that had already passed verify (row 0, 693 times)",
    "in_test": "2. programming all 72 rows with verify",
-   "seconds": 2,
+   "seconds": 3,
    "id": 51
   },
   {
    "name": "set amplitude not restarted after the reset phase",
    "status": "caught",
-   "first_failure": "FAIL: constant-time programming: 21 pulses instead of 21 + 21 (row 0)",
-   "in_test": "2. programming all 72 rows with verify",
-   "seconds": 1,
+   "first_failure": "FAIL: first erase: 1512 pulses instead of 72 x (21 + 21)",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 2,
    "id": 52
   },
   {
    "name": "amplitude not restarted by a new program command",
    "status": "caught",
-   "first_failure": "FAIL: constant-time programming: 21 pulses instead of 21 + 21 (row 1)",
+   "first_failure": "FAIL: constant-time programming: 21 pulses instead of 21 + 21 (row 0)",
    "in_test": "2. programming all 72 rows with verify",
-   "seconds": 2,
+   "seconds": 4,
    "id": 53
   },
   {
@@ -443,15 +443,15 @@
    "status": "caught",
    "first_failure": "FAIL: PITER 30 differs from the 15 device-selecting pulses the array received (row 1)",
    "in_test": "2. programming all 72 rows with verify",
-   "seconds": 3,
+   "seconds": 4,
    "id": 54
   },
   {
    "name": "accumulators not cleared by GO",
    "status": "caught",
-   "first_failure": "FAIL: product 2 column 0: got -7 expected 0",
+   "first_failure": "FAIL: product 2 column 0: got 18 expected 0",
    "in_test": "3. digital products against the exact do",
-   "seconds": 112,
+   "seconds": 110,
    "id": 55
   },
   {
@@ -459,7 +459,7 @@
    "status": "caught",
    "first_failure": "FAIL: SAT not cleared by a digital product",
    "in_test": "5c. illegal code, exhaustive conversions",
-   "seconds": 295,
+   "seconds": 304,
    "id": 56
   },
   {
@@ -467,7 +467,7 @@
    "status": "caught",
    "first_failure": "FAIL: SAT not cleared by a read-back command",
    "in_test": "5c. illegal code, exhaustive conversions",
-   "seconds": 301,
+   "seconds": 345,
    "id": 57
   },
   {
@@ -475,15 +475,15 @@
    "status": "caught",
    "first_failure": "FAIL: DONE not cleared by GO",
    "in_test": "5c. illegal code, exhaustive conversions",
-   "seconds": 306,
+   "seconds": 312,
    "id": 58
   },
   {
    "name": "DONE never set",
    "status": "caught",
-   "first_failure": "FAIL: row 0 failed to program",
-   "in_test": "2. programming all 72 rows with verify",
-   "seconds": 16,
+   "first_failure": "FAIL: first erase: erase did not end",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 11,
    "id": 59
   },
   {
@@ -491,7 +491,7 @@
    "status": "caught",
    "first_failure": "FAIL: MODE changed while BUSY",
    "in_test": "5b. directed tests: read reference, satu",
-   "seconds": 214,
+   "seconds": 189,
    "id": 60
   },
   {
@@ -507,7 +507,7 @@
    "status": "caught",
    "first_failure": "FAIL: array accessed with EN = 0",
    "in_test": "5b. directed tests: read reference, satu",
-   "seconds": 217,
+   "seconds": 246,
    "id": 62
   },
   {
@@ -515,23 +515,23 @@
    "status": "caught",
    "first_failure": "FAIL: DONE cleared by a write to STAT",
    "in_test": "5c. illegal code, exhaustive conversions",
-   "seconds": 302,
+   "seconds": 323,
    "id": 63
   },
   {
    "name": "first row never read",
    "status": "caught",
-   "first_failure": "FAIL: product 0 column 0: got 6 expected 7",
+   "first_failure": "FAIL: product 0 column 0: got -19 expected -18",
    "in_test": "3. digital products against the exact do",
-   "seconds": 102,
+   "seconds": 118,
    "id": 64
   },
   {
    "name": "pulse limit one step short",
    "status": "caught",
-   "first_failure": "FAIL: constant-time programming: 40 pulses instead of 21 + 21 (row 0)",
-   "in_test": "2. programming all 72 rows with verify",
-   "seconds": 1,
+   "first_failure": "FAIL: first erase: 2880 pulses instead of 72 x (21 + 21)",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 2,
    "id": 65
   },
   {
@@ -539,7 +539,7 @@
    "status": "caught",
    "first_failure": "FAIL: read-back of a row with an invalid cell",
    "in_test": "5. error paths",
-   "seconds": 202,
+   "seconds": 248,
    "id": 66
   },
   {
@@ -547,21 +547,21 @@
    "status": "caught",
    "first_failure": "FAIL: PITER 39 differs from the 15 device-selecting pulses the array received (row 0)",
    "in_test": "2. programming all 72 rows with verify",
-   "seconds": 1,
+   "seconds": 2,
    "id": 67
   },
   {
    "name": "result conversion: table read with a signed index (negative results read as 0)",
    "status": "caught",
-   "first_failure": "FAIL: product 0 column 3: got 0 expected -1",
+   "first_failure": "FAIL: product 0 column 0: got 0 expected -18",
    "in_test": "3. digital products against the exact do",
-   "seconds": 13,
+   "seconds": 21,
    "id": 68
   },
   {
    "name": "result conversion: table read one entry too high",
    "status": "caught",
-   "first_failure": "FAIL: tryte register 49 not zero after reset",
+   "first_failure": "FAIL: Y0 not zero after reset",
    "in_test": "1. register access",
    "seconds": 0,
    "id": 69
@@ -569,9 +569,9 @@
   {
    "name": "product: the row after a read is the next row, not the next non-zero row",
    "status": "caught",
-   "first_failure": "FAIL: product 0 column 0: got 16 expected 7",
+   "first_failure": "FAIL: product 0 column 0: got 25 expected -18",
    "in_test": "3. digital products against the exact do",
-   "seconds": 13,
+   "seconds": 27,
    "id": 70
   },
   {
@@ -579,7 +579,7 @@
    "status": "caught",
    "first_failure": "FAIL: product did not finish",
    "in_test": "3. digital products against the exact do",
-   "seconds": 108,
+   "seconds": 101,
    "id": 71
   },
   {
@@ -587,7 +587,7 @@
    "status": "caught",
    "first_failure": "FAIL: product 0 did not finish",
    "in_test": "3. digital products against the exact do",
-   "seconds": 25,
+   "seconds": 33,
    "id": 72
   },
   {
@@ -595,39 +595,39 @@
    "status": "caught",
    "first_failure": "FAIL: DONE not set at the end of a product",
    "in_test": "3. digital products against the exact do",
-   "seconds": 107,
+   "seconds": 96,
    "id": 73
   },
   {
    "name": "product: accumulation uses the input of the next row",
    "status": "caught",
-   "first_failure": "FAIL: product 3 column 1: got 7 expected 3",
+   "first_failure": "FAIL: product 3 column 0: got 5 expected 1",
    "in_test": "3. digital products against the exact do",
-   "seconds": 21,
+   "seconds": 22,
    "id": 74
   },
   {
    "name": "fixed latency: rows with input 0 change the result",
    "status": "caught",
-   "first_failure": "FAIL: product 2 column 0: got -7 expected 0",
+   "first_failure": "FAIL: product 2 column 0: got 18 expected 0",
    "in_test": "3. digital products against the exact do",
-   "seconds": 21,
+   "seconds": 20,
    "id": 75
   },
   {
    "name": "fixed latency: product ends one row early",
    "status": "caught",
-   "first_failure": "FAIL: product 0 column 2: got 0 expected 1",
+   "first_failure": "FAIL: product 0 column 0: got -17 expected -18",
    "in_test": "3. digital products against the exact do",
-   "seconds": 13,
+   "seconds": 23,
    "id": 76
   },
   {
    "name": "fixed latency: no wrap from row 71 to row 0",
    "status": "caught",
-   "first_failure": "FAIL: product 0 column 0: got 6 expected 7",
+   "first_failure": "FAIL: product 0 column 0: got -10 expected -18",
    "in_test": "3. digital products against the exact do",
-   "seconds": 13,
+   "seconds": 19,
    "id": 77
   },
   {
@@ -635,15 +635,15 @@
    "status": "caught",
    "first_failure": "FAIL: product 0 did not finish",
    "in_test": "3. digital products against the exact do",
-   "seconds": 22,
+   "seconds": 35,
    "id": 78
   },
   {
    "name": "fixed latency: read counter not cleared by GO",
    "status": "caught",
-   "first_failure": "FAIL: product 1 column 0: got -13 expected -7",
+   "first_failure": "FAIL: product 1 column 0: got 35 expected 18",
    "in_test": "3. digital products against the exact do",
-   "seconds": 21,
+   "seconds": 26,
    "id": 79
   },
   {
@@ -651,15 +651,15 @@
    "status": "caught",
    "first_failure": "FAIL: only 1 different start rows in 40 products",
    "in_test": "3. digital products against the exact do",
-   "seconds": 102,
+   "seconds": 127,
    "id": 80
   },
   {
    "name": "shuffle: start row may exceed 71",
    "status": "caught",
-   "first_failure": "FAIL: product 0 column 0: got 21 expected 7",
+   "first_failure": "FAIL: product 0 column 0: got 6 expected -18",
    "in_test": "3. digital products against the exact do",
-   "seconds": 14,
+   "seconds": 23,
    "id": 81
   },
   {
@@ -667,7 +667,7 @@
    "status": "caught",
    "first_failure": "FAIL: only 1 different start rows in 40 products",
    "in_test": "3. digital products against the exact do",
-   "seconds": 86,
+   "seconds": 109,
    "id": 82
   },
   {
@@ -675,31 +675,31 @@
    "status": "caught",
    "first_failure": "FAIL: NOSHUF: product 0 not read from row 0 in order",
    "in_test": "3. digital products against the exact do",
-   "seconds": 104,
+   "seconds": 130,
    "id": 83
   },
   {
    "name": "ZSKIP ignored",
    "status": "caught",
-   "first_failure": "FAIL: product 0 column 0: got 3 expected 7",
+   "first_failure": "FAIL: product 0 column 0: got -13 expected -18",
    "in_test": "3. digital products against the exact do",
-   "seconds": 105,
+   "seconds": 115,
    "id": 84
   },
   {
    "name": "constant time: reset phase stops at verify",
    "status": "caught",
-   "first_failure": "FAIL: constant-time programming: 21 pulses instead of 21 + 21 (row 0)",
-   "in_test": "2. programming all 72 rows with verify",
-   "seconds": 1,
+   "first_failure": "FAIL: first erase: 1512 pulses instead of 72 x (21 + 21)",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 2,
    "id": 85
   },
   {
    "name": "constant time: set phase stops at verify",
    "status": "caught",
-   "first_failure": "FAIL: constant-time programming: 36 pulses instead of 21 + 21 (row 0)",
-   "in_test": "2. programming all 72 rows with verify",
-   "seconds": 1,
+   "first_failure": "FAIL: first erase: 1512 pulses instead of 72 x (21 + 21)",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 2,
    "id": 86
   },
   {
@@ -707,7 +707,7 @@
    "status": "caught",
    "first_failure": "FAIL: constant-time programming: 21 pulses instead of 21 + 21 (row 6)",
    "in_test": "5. error paths",
-   "seconds": 206,
+   "seconds": 217,
    "id": 87
   },
   {
@@ -715,7 +715,7 @@
    "status": "caught",
    "first_failure": "FAIL: stuck reset: 33 pulses instead of 21",
    "in_test": "5. error paths",
-   "seconds": 201,
+   "seconds": 219,
    "id": 88
   },
   {
@@ -723,7 +723,7 @@
    "status": "caught",
    "first_failure": "FAIL: device that never resets not reported",
    "in_test": "5. error paths",
-   "seconds": 206,
+   "seconds": 209,
    "id": 89
   },
   {
@@ -731,7 +731,7 @@
    "status": "caught",
    "first_failure": "FAIL: PITER 36 differs from the 15 device-selecting pulses the array received (row 0)",
    "in_test": "2. programming all 72 rows with verify",
-   "seconds": 1,
+   "seconds": 5,
    "id": 90
   },
   {
@@ -739,31 +739,31 @@
    "status": "caught",
    "first_failure": "FAIL: SEC NOSHUF readback",
    "in_test": "3. digital products against the exact do",
-   "seconds": 103,
+   "seconds": 113,
    "id": 91
   },
   {
    "name": "SEC: address not mapped",
    "status": "caught",
-   "first_failure": "FAIL: SEC NOSHUF readback",
-   "in_test": "3. digital products against the exact do",
-   "seconds": 110,
+   "first_failure": "FAIL: SEC does not read LOCK alone after reset (revision 4.9)",
+   "in_test": "1. register access",
+   "seconds": 1,
    "id": 92
   },
   {
    "name": "LOCK cleared by a write",
    "status": "caught",
-   "first_failure": "FAIL: LOCK: options written after LOCK",
-   "in_test": "5d. security options: SEC register, marg",
-   "seconds": 294,
+   "first_failure": "FAIL: at power-up: options set under LOCK",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 2,
    "id": 93
   },
   {
    "name": "LOCK does not block option writes",
    "status": "caught",
-   "first_failure": "FAIL: LOCK: options written after LOCK",
-   "in_test": "5d. security options: SEC register, marg",
-   "seconds": 287,
+   "first_failure": "FAIL: at power-up: options set under LOCK",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 2,
    "id": 94
   },
   {
@@ -771,23 +771,23 @@
    "status": "caught",
    "first_failure": "FAIL: LOCK: SEC reads 0x45 instead of LOCK alone",
    "in_test": "5d. security options: SEC register, marg",
-   "seconds": 288,
+   "seconds": 268,
    "id": 95
   },
   {
    "name": "LOCK does not hide PITER",
    "status": "caught",
-   "first_failure": "FAIL: LOCK: PITER not hidden",
+   "first_failure": "FAIL: LOCK: PITER not hidden (it held the count of the program command before LOCK)",
    "in_test": "5d. security options: SEC register, marg",
-   "seconds": 294,
+   "seconds": 269,
    "id": 96
   },
   {
-   "name": "LOCK not cleared by reset",
+   "name": "LOCK not set by reset (revision 4.9)",
    "status": "caught",
-   "first_failure": "FAIL: LOCK not cleared by reset",
-   "in_test": "5d. security options: SEC register, marg",
-   "seconds": 298,
+   "first_failure": "FAIL: SEC does not read LOCK alone after reset (revision 4.9)",
+   "in_test": "1. register access",
+   "seconds": 0,
    "id": 97
   },
   {
@@ -795,7 +795,7 @@
    "status": "caught",
    "first_failure": "FAIL: margin check: MARG 100 instead of columns 0 and 4",
    "in_test": "5d. security options: SEC register, marg",
-   "seconds": 292,
+   "seconds": 268,
    "id": 98
   },
   {
@@ -803,7 +803,7 @@
    "status": "caught",
    "first_failure": "FAIL: margin check of a BL- device",
    "in_test": "5d. security options: SEC register, marg",
-   "seconds": 289,
+   "seconds": 269,
    "id": 99
   },
   {
@@ -811,7 +811,7 @@
    "status": "caught",
    "first_failure": "FAIL: margin check: MARG 1 instead of columns 0 and 4",
    "in_test": "5d. security options: SEC register, marg",
-   "seconds": 287,
+   "seconds": 266,
    "id": 100
   },
   {
@@ -819,7 +819,7 @@
    "status": "caught",
    "first_failure": "FAIL: margin check: drifted devices not reported by WERR",
    "in_test": "5d. security options: SEC register, marg",
-   "seconds": 288,
+   "seconds": 258,
    "id": 101
   },
   {
@@ -827,7 +827,7 @@
    "status": "caught",
    "first_failure": "FAIL: margin check: MARG 100 instead of columns 0 and 4",
    "in_test": "5d. security options: SEC register, marg",
-   "seconds": 287,
+   "seconds": 263,
    "id": 102
   },
   {
@@ -835,7 +835,7 @@
    "status": "caught",
    "first_failure": "FAIL: array accessed by a refused margin check",
    "in_test": "5d. security options: SEC register, marg",
-   "seconds": 292,
+   "seconds": 261,
    "id": 103
   },
   {
@@ -843,7 +843,7 @@
    "status": "caught",
    "first_failure": "FAIL: margin check: PDATA is not the row read",
    "in_test": "5d. security options: SEC register, marg",
-   "seconds": 288,
+   "seconds": 256,
    "id": 104
   },
   {
@@ -851,7 +851,7 @@
    "status": "caught",
    "first_failure": "FAIL: MARG not cleared by a refused margin check: 105",
    "in_test": "5d. security options: SEC register, marg",
-   "seconds": 293,
+   "seconds": 255,
    "id": 105
   },
   {
@@ -859,7 +859,7 @@
    "status": "caught",
    "first_failure": "FAIL: margin check: MARG 303 instead of columns 0 and 4",
    "in_test": "5d. security options: SEC register, marg",
-   "seconds": 290,
+   "seconds": 255,
    "id": 106
   },
   {
@@ -867,7 +867,7 @@
    "status": "caught",
    "first_failure": "FAIL: dummy accumulators: ACT changed only 0 times in 40 products",
    "in_test": "3. digital products against the exact do",
-   "seconds": 100,
+   "seconds": 107,
    "id": 107
   },
   {
@@ -875,23 +875,23 @@
    "status": "caught",
    "first_failure": "FAIL: LOCK: ACT not hidden",
    "in_test": "5d. security options: SEC register, marg",
-   "seconds": 275,
+   "seconds": 259,
    "id": 108
   },
   {
    "name": "read-back runs under LOCK",
    "status": "caught",
-   "first_failure": "FAIL: LOCK: read-back reached the array",
-   "in_test": "5d. security options: SEC register, marg",
-   "seconds": 297,
+   "first_failure": "FAIL: at power-up: a refused command reached the array (0 pulses, 1 reads)",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 2,
    "id": 109
   },
   {
    "name": "read-back under LOCK without WERR",
    "status": "caught",
-   "first_failure": "FAIL: LOCK: read-back not refused (no WERR)",
-   "in_test": "5d. security options: SEC register, marg",
-   "seconds": 295,
+   "first_failure": "FAIL: at power-up: read-back not refused (no WERR)",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 2,
    "id": 110
   },
   {
@@ -899,32 +899,120 @@
    "status": "caught",
    "first_failure": "FAIL: LOCK: margin check wrote the weights into PDATA",
    "in_test": "5d. security options: SEC register, marg",
-   "seconds": 309,
+   "seconds": 243,
    "id": 111
+  },
+  {
+   "name": "programming runs under LOCK",
+   "status": "caught",
+   "first_failure": "FAIL: at power-up: a refused command reached the array (42 pulses, 44 reads)",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 3,
+   "id": 112
+  },
+  {
+   "name": "programming under LOCK without WERR",
+   "status": "caught",
+   "first_failure": "FAIL: at power-up: programming not refused (no WERR)",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 1,
+   "id": 113
+  },
+  {
+   "name": "erase never clears LOCK",
+   "status": "caught",
+   "first_failure": "FAIL: LOCK not cleared by the first erase",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 3,
+   "id": 114
+  },
+  {
+   "name": "erase clears LOCK despite WERR",
+   "status": "caught",
+   "first_failure": "FAIL: erase with a stuck device cleared LOCK",
+   "in_test": "5d. security options: SEC register, marg",
+   "seconds": 269,
+   "id": 115
+  },
+  {
+   "name": "erase ends before the last row",
+   "status": "caught",
+   "first_failure": "FAIL: first erase: 2982 pulses instead of 72 x (21 + 21)",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 3,
+   "id": 116
+  },
+  {
+   "name": "erase skips every other row",
+   "status": "caught",
+   "first_failure": "FAIL: first erase: 1554 pulses instead of 72 x (21 + 21)",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 2,
+   "id": 117
+  },
+  {
+   "name": "erase programs PDATA instead of weight 0",
+   "status": "caught",
+   "first_failure": "FAIL: first erase: a set pulse reached a device that weight 0 keeps in HRS (5884 times)",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 2,
+   "id": 118
+  },
+  {
+   "name": "erase stops at verify with VARPROG (not constant time)",
+   "status": "caught",
+   "first_failure": "FAIL: erase with VARPROG set: 0 pulses instead of 72 x (21 + 21)",
+   "in_test": "1b. locked at reset; erase of the whole ",
+   "seconds": 2,
+   "id": 119
+  },
+  {
+   "name": "LOCK held in one copy only",
+   "status": "caught",
+   "first_failure": "FAIL: LOCK lost after an upset of two of its copies (left 0x2)",
+   "in_test": "5d. security options: SEC register, marg",
+   "seconds": 228,
+   "id": 120
+  },
+  {
+   "name": "erase starts row 0 without resetting P",
+   "status": "caught",
+   "first_failure": "FAIL: erase after reset: r0 c0 not weight 0",
+   "in_test": "5d. security options: SEC register, marg",
+   "seconds": 246,
+   "id": 121
+  },
+  {
+   "name": "erase rows after the first without resetting N",
+   "status": "caught",
+   "first_failure": "FAIL: erase after reset: r1 c0 not weight 0",
+   "in_test": "5d. security options: SEC register, marg",
+   "seconds": 225,
+   "id": 122
   },
   {
    "name": "offset not taken off at the end of a product",
    "status": "caught",
-   "first_failure": "FAIL: product 0 column 0: got 79 expected 7",
+   "first_failure": "FAIL: product 0 column 0: got -7 expected -18",
    "in_test": "3. digital products against the exact do",
-   "seconds": 16,
-   "id": 112
+   "seconds": 12,
+   "id": 123
   },
   {
    "name": "offset taken off with the wrong sign",
    "status": "caught",
-   "first_failure": "FAIL: product 0 column 0: got 151 expected 7",
+   "first_failure": "FAIL: product 0 column 0: got 4 expected -18",
    "in_test": "3. digital products against the exact do",
    "seconds": 14,
-   "id": 113
+   "id": 124
   },
   {
    "name": "offset register not loaded at GO",
    "status": "caught",
-   "first_failure": "FAIL: product 0 column 0: got 0 expected 7",
+   "first_failure": "FAIL: product 0 column 0: got 0 expected -18",
    "in_test": "3. digital products against the exact do",
-   "seconds": 11,
-   "id": 114
+   "seconds": 12,
+   "id": 125
   }
  ]
 }

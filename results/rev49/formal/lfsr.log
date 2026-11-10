@@ -1,0 +1,71 @@
+SBY 20:13:41 [tcim_core_lfsr] Removing directory '/tmp/k_lfsr/formal/tcim_core_lfsr'.
+SBY 20:13:41 [tcim_core_lfsr] Copy '/tmp/k_lfsr/formal/../rtl/tcim_pkg.sv' to '/tmp/k_lfsr/formal/tcim_core_lfsr/src/tcim_pkg.sv'.
+SBY 20:13:41 [tcim_core_lfsr] Copy '/tmp/k_lfsr/formal/../rtl/tcim_core.sv' to '/tmp/k_lfsr/formal/tcim_core_lfsr/src/tcim_core.sv'.
+SBY 20:13:41 [tcim_core_lfsr] engine_0: smtbmc yices
+SBY 20:13:41 [tcim_core_lfsr] base: starting process "cd tcim_core_lfsr/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 20:13:52 [tcim_core_lfsr] base: finished (returncode=0)
+SBY 20:13:52 [tcim_core_lfsr] prep: starting process "cd tcim_core_lfsr/model; yosys -ql design_prep.log design_prep.ys"
+SBY 20:13:54 [tcim_core_lfsr] prep: finished (returncode=0)
+SBY 20:13:54 [tcim_core_lfsr] smt2: starting process "cd tcim_core_lfsr/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 20:13:54 [tcim_core_lfsr] smt2: finished (returncode=0)
+SBY 20:13:54 [tcim_core_lfsr] engine_0.basecase: starting process "cd tcim_core_lfsr; yosys-smtbmc -s yices --presat --unroll --noprogress -t 20  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 20:13:54 [tcim_core_lfsr] engine_0.induction: starting process "cd tcim_core_lfsr; yosys-smtbmc -s yices --presat --unroll -i --noprogress -t 20  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2"
+SBY 20:13:55 [tcim_core_lfsr] engine_0.basecase: ##   0:00:00  Solver: yices
+SBY 20:13:55 [tcim_core_lfsr] engine_0.induction: ##   0:00:00  Solver: yices
+SBY 20:13:57 [tcim_core_lfsr] engine_0.induction: ##   0:00:01  Trying induction in step 20..
+SBY 20:13:57 [tcim_core_lfsr] engine_0.basecase: ##   0:00:02  Checking assumptions in step 0..
+SBY 20:13:57 [tcim_core_lfsr] engine_0.basecase: ##   0:00:02  Checking assertions in step 0..
+SBY 20:13:58 [tcim_core_lfsr] engine_0.induction: ##   0:00:03  Trying induction in step 19..
+SBY 20:13:58 [tcim_core_lfsr] engine_0.basecase: ##   0:00:03  Checking assumptions in step 1..
+SBY 20:13:58 [tcim_core_lfsr] engine_0.basecase: ##   0:00:03  Checking assertions in step 1..
+SBY 20:13:59 [tcim_core_lfsr] engine_0.induction: ##   0:00:03  Trying induction in step 18..
+SBY 20:13:59 [tcim_core_lfsr] engine_0.induction: ##   0:00:04  Temporal induction successful.
+SBY 20:13:59 [tcim_core_lfsr] engine_0.induction: ##   0:00:04  Status: passed
+SBY 20:13:59 [tcim_core_lfsr] engine_0.induction: finished (returncode=0)
+SBY 20:13:59 [tcim_core_lfsr] engine_0.induction: Status returned by engine for induction: pass
+SBY 20:14:00 [tcim_core_lfsr] engine_0.basecase: ##   0:00:05  Checking assumptions in step 2..
+SBY 20:14:00 [tcim_core_lfsr] engine_0.basecase: ##   0:00:05  Checking assertions in step 2..
+SBY 20:14:01 [tcim_core_lfsr] engine_0.basecase: ##   0:00:06  Checking assumptions in step 3..
+SBY 20:14:01 [tcim_core_lfsr] engine_0.basecase: ##   0:00:06  Checking assertions in step 3..
+SBY 20:14:02 [tcim_core_lfsr] engine_0.basecase: ##   0:00:06  Checking assumptions in step 4..
+SBY 20:14:02 [tcim_core_lfsr] engine_0.basecase: ##   0:00:07  Checking assertions in step 4..
+SBY 20:14:03 [tcim_core_lfsr] engine_0.basecase: ##   0:00:07  Checking assumptions in step 5..
+SBY 20:14:03 [tcim_core_lfsr] engine_0.basecase: ##   0:00:07  Checking assertions in step 5..
+SBY 20:14:04 [tcim_core_lfsr] engine_0.basecase: ##   0:00:09  Checking assumptions in step 6..
+SBY 20:14:04 [tcim_core_lfsr] engine_0.basecase: ##   0:00:09  Checking assertions in step 6..
+SBY 20:14:06 [tcim_core_lfsr] engine_0.basecase: ##   0:00:11  Checking assumptions in step 7..
+SBY 20:14:07 [tcim_core_lfsr] engine_0.basecase: ##   0:00:11  Checking assertions in step 7..
+SBY 20:14:08 [tcim_core_lfsr] engine_0.basecase: ##   0:00:12  Checking assumptions in step 8..
+SBY 20:14:08 [tcim_core_lfsr] engine_0.basecase: ##   0:00:12  Checking assertions in step 8..
+SBY 20:14:12 [tcim_core_lfsr] engine_0.basecase: ##   0:00:16  Checking assumptions in step 9..
+SBY 20:14:12 [tcim_core_lfsr] engine_0.basecase: ##   0:00:16  Checking assertions in step 9..
+SBY 20:14:13 [tcim_core_lfsr] engine_0.basecase: ##   0:00:18  Checking assumptions in step 10..
+SBY 20:14:13 [tcim_core_lfsr] engine_0.basecase: ##   0:00:18  Checking assertions in step 10..
+SBY 20:14:14 [tcim_core_lfsr] engine_0.basecase: ##   0:00:18  Checking assumptions in step 11..
+SBY 20:14:14 [tcim_core_lfsr] engine_0.basecase: ##   0:00:19  Checking assertions in step 11..
+SBY 20:14:14 [tcim_core_lfsr] engine_0.basecase: ##   0:00:19  Checking assumptions in step 12..
+SBY 20:14:14 [tcim_core_lfsr] engine_0.basecase: ##   0:00:19  Checking assertions in step 12..
+SBY 20:14:14 [tcim_core_lfsr] engine_0.basecase: ##   0:00:19  Checking assumptions in step 13..
+SBY 20:14:14 [tcim_core_lfsr] engine_0.basecase: ##   0:00:19  Checking assertions in step 13..
+SBY 20:14:15 [tcim_core_lfsr] engine_0.basecase: ##   0:00:20  Checking assumptions in step 14..
+SBY 20:14:15 [tcim_core_lfsr] engine_0.basecase: ##   0:00:20  Checking assertions in step 14..
+SBY 20:14:20 [tcim_core_lfsr] engine_0.basecase: ##   0:00:22  Checking assumptions in step 15..
+SBY 20:14:20 [tcim_core_lfsr] engine_0.basecase: ##   0:00:22  Checking assertions in step 15..
+SBY 20:14:21 [tcim_core_lfsr] engine_0.basecase: ##   0:00:23  Checking assumptions in step 16..
+SBY 20:14:21 [tcim_core_lfsr] engine_0.basecase: ##   0:00:23  Checking assertions in step 16..
+SBY 20:14:22 [tcim_core_lfsr] engine_0.basecase: ##   0:00:23  Checking assumptions in step 17..
+SBY 20:14:23 [tcim_core_lfsr] engine_0.basecase: ##   0:00:23  Checking assertions in step 17..
+SBY 20:14:24 [tcim_core_lfsr] engine_0.basecase: ##   0:00:24  Checking assumptions in step 18..
+SBY 20:14:24 [tcim_core_lfsr] engine_0.basecase: ##   0:00:24  Checking assertions in step 18..
+SBY 20:14:25 [tcim_core_lfsr] engine_0.basecase: ##   0:00:24  Checking assumptions in step 19..
+SBY 20:14:25 [tcim_core_lfsr] engine_0.basecase: ##   0:00:24  Checking assertions in step 19..
+SBY 20:14:25 [tcim_core_lfsr] engine_0.basecase: ##   0:00:24  Status: passed
+SBY 20:14:26 [tcim_core_lfsr] engine_0.basecase: finished (returncode=0)
+SBY 20:14:27 [tcim_core_lfsr] engine_0.basecase: Status returned by engine for basecase: pass
+SBY 20:14:29 [tcim_core_lfsr] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:47 (47)
+SBY 20:14:29 [tcim_core_lfsr] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:22 (22)
+SBY 20:14:29 [tcim_core_lfsr] summary: engine_0 (smtbmc yices) returned pass for basecase
+SBY 20:14:29 [tcim_core_lfsr] summary: engine_0 (smtbmc yices) returned pass for induction
+SBY 20:14:29 [tcim_core_lfsr] summary: engine_0 did not produce any traces
+SBY 20:14:29 [tcim_core_lfsr] summary: successful proof by k-induction.
+SBY 20:14:29 [tcim_core_lfsr] DONE (PASS, rc=0)

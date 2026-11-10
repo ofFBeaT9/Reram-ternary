@@ -1,0 +1,81 @@
+violation type: Metal Spacing
+	srcs: net:net812 net:u_core.u_top.u_core.r_pdata\[44\]
+	bbox = (349.4400, 224.1700) - (349.5350, 224.2400) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812 net:u_core.u_top.u_core.r_pdata\[44\]
+	bbox = (349.4400, 224.1700) - (349.5350, 224.3000) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812 net:u_core.u_top.u_core.r_pdata\[44\]
+	bbox = (349.4400, 224.1700) - (349.5350, 224.4000) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812 net:u_core.u_top.u_core.r_pdata\[44\]
+	bbox = (349.5300, 224.4000) - (349.5350, 224.4400) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812 net:u_core.u_top.u_core.r_pdata\[44\]
+	bbox = (349.5300, 224.4000) - (349.6100, 224.4400) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812
+	bbox = (368.3250, 227.2800) - (368.4500, 227.7000) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812
+	bbox = (368.3250, 227.3250) - (368.4500, 227.7000) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812
+	bbox = (368.3250, 227.5600) - (368.4500, 227.7000) on Layer met1
+violation type: Metal Spacing
+	srcs: net:u_core.u_top.u_core.r_pdata\[30\]
+	bbox = (368.7750, 227.0200) - (368.9300, 227.1200) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812
+	bbox = (373.2950, 222.0700) - (373.4950, 222.1200) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812
+	bbox = (377.7250, 221.8250) - (377.8200, 221.9900) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812 net:u_core.u_top.u_core.r_pdata\[10\]
+	bbox = (377.9600, 221.8400) - (378.0550, 221.9650) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812 net:u_core.u_top.u_core.r_pdata\[10\]
+	bbox = (377.9600, 221.8400) - (378.0550, 222.0700) on Layer met1
+violation type: Metal Spacing
+	srcs: net:u_core.u_top.bus_wdata\[19\] net:u_core.u_top.u_core.r_pdata\[19\]
+	bbox = (398.5500, 223.9600) - (398.8400, 224.0950) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812
+	bbox = (413.0100, 227.0200) - (413.2150, 227.1200) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812
+	bbox = (413.2150, 227.0200) - (413.2400, 227.1200) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812
+	bbox = (415.6850, 222.0700) - (415.9100, 222.1200) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812
+	bbox = (422.1300, 227.0200) - (422.3450, 227.1200) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812
+	bbox = (422.5850, 224.4000) - (422.8100, 224.5000) on Layer met1
+violation type: Metal Spacing
+	srcs: net:net812
+	bbox = (427.4250, 227.0800) - (427.7150, 227.1750) on Layer met1
+violation type: Short
+	srcs: net:net812 net:u_core.u_top.u_core.r_pdata\[46\]
+	bbox = (374.1400, 222.4600) - (374.2050, 222.6000) on Layer met1
+violation type: Short
+	srcs: net:net812 net:u_core.u_top.u_core.r_pdata\[46\]
+	bbox = (374.1400, 222.4600) - (374.2800, 222.6000) on Layer met1
+violation type: Short
+	srcs: net:net812 net:u_core.u_top.u_core.r_pdata\[46\]
+	bbox = (374.1400, 222.4600) - (374.6400, 222.6000) on Layer met1
+violation type: Short
+	srcs: net:net812 net:u_core.u_top.u_core.r_pdata\[46\]
+	bbox = (374.5000, 222.4600) - (374.6400, 222.6000) on Layer met1
+violation type: Short
+	srcs: net:net813 net:u_core.u_top.u_spi.shift_in\[18\]
+	bbox = (373.6800, 221.7800) - (373.8200, 221.9200) on Layer met2
+violation type: Short
+	srcs: net:net813 net:u_core.u_top.u_spi.shift_in\[18\]
+	bbox = (373.6800, 221.7800) - (373.8200, 222.2600) on Layer met2
+violation type: Short
+	srcs: net:net813 net:u_core.u_top.u_spi.shift_in\[18\]
+	bbox = (373.6800, 222.1200) - (373.8200, 222.2600) on Layer met2

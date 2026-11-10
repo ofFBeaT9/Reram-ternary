@@ -18,10 +18,10 @@ Using 2 tracks default min distance between IO pins.
 [INFO PPL-0004] Number of I/O w/o sink    0
 [INFO PPL-0005] Slots per section         200
 [INFO PPL-0008] Successfully assigned pins to sections.
-[INFO PPL-0012] I/O nets HPWL: 33010.55 um.
-Design area 105305 um^2 66% utilization.
+[INFO PPL-0012] I/O nets HPWL: 30427.27 um.
+Design area 101989 um^2 64% utilization.
 write_db /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/3_2_place_iop.odb
-Elapsed time: 0:01.75[h:]min:sec. CPU time: user 0.44 sys 0.09 (30%). Peak memory: 121600KB.
+Elapsed time: 0:02.53[h:]min:sec. CPU time: user 0.54 sys 0.16 (27%). Peak memory: 120576KB.
 Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
                                      s        s  Elapsed       MB [0:10)
-3_2_place_iop          .odb          1        1     0.30      118 29969b3c36
+3_2_place_iop          .odb          2        1     0.28      117 215d47d001

@@ -22,9 +22,9 @@ F = [
     # ---- revision 4.6 (security study): properties of the fixed-latency product, LOCK, margin check, empty pulses
     ("fixed latency: the same row read twice", "safety", "((arr_row == 7'(ROWS - 1)) ? 7'd0 : arr_row + 7'd1)", "arr_row"),
     ("fixed latency: product ends one row early", "safety", "(r_cnt == 7'(ROWS - 1)) ? 7'(ROWS)", "(r_cnt == 7'(ROWS - 2)) ? 7'(ROWS)"),
-    ("LOCK cleared by a write", "safety", "                    if (is_pos(bus_wdata[7:6])) begin\n                        r_lock <= 1'b1;",
-     "                    r_lock <= is_pos(bus_wdata[7:6]);\n                    if (is_pos(bus_wdata[7:6])) begin\n                        r_lock <= 1'b1;"),
-    ("LOCK does not clear the options", "safety", "r_lock <= 1'b1; r_zskip <= 1'b0; r_varprog <= 1'b0; r_noshuf <= 1'b0;", "r_lock <= 1'b1;"),
+    ("LOCK cleared by a write", "safety", "                    if (is_pos(bus_wdata[7:6])) begin\n                        r_lk <= 3'b111;",
+     "                    r_lk <= {3{is_pos(bus_wdata[7:6])}};\n                    if (is_pos(bus_wdata[7:6])) begin\n                        r_lk <= 3'b111;"),
+    ("LOCK does not clear the options", "safety", "r_lk <= 3'b111; r_zskip <= 1'b0; r_varprog <= 1'b0; r_noshuf <= 1'b0;", "r_lk <= 3'b111;"),
     ("LOCK does not hide PITER", "safety", "r_lock ? ZERO_TRYTE : int_to_tryte({4'b0, r_piter})", "int_to_tryte({4'b0, r_piter})"),
     ("margin check pulses the array", "safety", "arr_op <= OP_VFY_SET; state <= S_MC_SET;", "arr_op <= OP_PULSE_SET; state <= S_MC_SET;"),
     ("empty pulses in stop-at-verify programming", "safety",
@@ -44,9 +44,19 @@ F = [
     # revision 4.7 (6 November 2026)
     ("start row: LFSR mod 72 without the 65536 term", "lfsr", "(lfsr[15] ? 9'sd16 : 9'sd0)", "9'sd0"),
     ("result accumulators keep the offset", "safety", "state <= S_FINISH; acc <= acc_fin;", "state <= S_FINISH; acc <= acc_upd;"),
-    ("read-back runs under LOCK", "safety", "if (prow_ok && !r_lock) begin", "if (prow_ok) begin"),
+    ("read-back runs under LOCK", "safety", "if (prow_ok && !r_lock) begin\n                            arr_row <= prow_int[6:0]; arr_op <= OP_READ;",
+     "if (prow_ok) begin\n                            arr_row <= prow_int[6:0]; arr_op <= OP_READ;"),
     ("margin check writes PDATA under LOCK", "safety", "if (!r_lock) begin                           // (revision 4.7: not under LOCK)",
      "if (1'b1) begin                           // (revision 4.7: not under LOCK)"),
+    # revision 4.9 (9 November 2026): locked at reset, programming refused under LOCK, erase of the whole array to unlock
+    ("LOCK not set by reset", "lock", "r_lk <= 3'b111; e_run <= 1'b0;", "r_lk <= 3'b000; e_run <= 1'b0;"),
+    ("programming runs under LOCK", "safety", "if (prow_ok && !r_lock) begin\n                            arr_row <= prow_int[6:0];\n",
+     "if (prow_ok) begin\n                            arr_row <= prow_int[6:0];\n"),
+    ("erase clears LOCK despite WERR", "safety", "if (e_run && !s_werr) r_lk <= 3'b000;", "if (e_run) r_lk <= 3'b000;"),
+    ("erase ends before the last row", "safety", "if (e_run && arr_row != 7'(ROWS - 1)) begin", "if (e_run && arr_row != 7'(ROWS - 2)) begin"),
+    ("erase skips every other row", "safety", "arr_row <= arr_row + 7'd1; r_piter <= '0;", "arr_row <= (arr_row == 7'd70) ? 7'd71 : arr_row + 7'd2; r_piter <= '0;"),
+    ("erase programs PDATA instead of weight 0", "safety", "w_pos[c] = is_pos(r_pdata[2*c +: 2]) & ~e_run;", "w_pos[c] = is_pos(r_pdata[2*c +: 2]);"),
+    ("erase never ends (repeats row 0)", "safety", "arr_row <= arr_row + 7'd1; r_piter <= '0;", "arr_row <= arr_row; r_piter <= '0;"),
     ("miter: start row from the input of row 0", "miter:prove", "assign start_row  = noshuf_e ? 7'd0 :", "assign start_row  = r_noshuf ? {6'd0, x_nz[0]} :"),
 ]
 # next-chip cell (3T3R, 8 November 2026): faults in the Z logic, for the task safety_1of3 (FAULTS=1of3 runs only these)
@@ -54,6 +64,8 @@ F3 = [
     ("1of3: set pulses reach Z for a weight +1 or -1", "safety_1of3", "`Z(pend_z <= w_zer;)   // devices that must be LRS", "`Z(pend_z <= '1;)   // devices that must be LRS"),
     ("1of3: P with Z decoded as +1", "safety_1of3", "assign sa_p_d = arr_sa_p & ~arr_sa_z;", "assign sa_p_d = arr_sa_p;"),
     ("1of3: reset pulses reach Z for a weight 0", "safety_1of3", "`Z(pend_z <= ~w_zer;)   // devices that must be HRS", "`Z(pend_z <= '1;)   // devices that must be HRS"),
+    ("1of3: erase sends reset pulses to Z (revision 4.9)", "safety_1of3", "arr_row <= 7'd0; pend_p <= '1; pend_n <= '1; `Z(pend_z <= '0;)",
+     "arr_row <= 7'd0; pend_p <= '1; pend_n <= '1; `Z(pend_z <= '1;)"),
 ]
 if os.environ.get("FAULTS") == "1of3":
     F = F3
@@ -62,7 +74,7 @@ base = (ROOT / "results" / "formal.log").read_text() if (ROOT / "results" / "for
 if os.environ.get("FAULTS") == "1of3":
     base3 = (ROOT / "results" / "next_chip" / "formal_1of3.log")
     assert base3.exists() and "DONE (PASS" in base3.read_text(), "safety_1of3 has not passed (results/next_chip/formal_1of3.log)"
-for t in (() if os.environ.get("FAULTS") == "1of3" else ("tcim_core_safety", "tcim_core_safety_pnx", "tcim_core_progress", "tcim_core_lfsr")):
+for t in (() if os.environ.get("FAULTS") == "1of3" else ("tcim_core_safety", "tcim_core_safety_pnx", "tcim_core_progress", "tcim_core_lfsr", "tcim_core_lock")):
     assert f"[{t}] DONE (PASS" in base, f"{t} has not passed in results/formal.log: run make formal first"
 for t in (() if os.environ.get("FAULTS") == "1of3" else ("prove", "prove_pnx")):
     m = ROOT / "results" / "security" / f"miter_{t}.log"

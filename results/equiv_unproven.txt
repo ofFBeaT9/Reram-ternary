@@ -27,4 +27,6 @@ u_core.s_done
 u_core.s_sat
 u_core.s_werr
 u_core.state
+u_core.w_neg
+u_core.w_pos
 u_spi.bus_rdata

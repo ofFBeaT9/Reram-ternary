@@ -1,0 +1,10 @@
+[
+ {
+  "name": "LOCK does not hide PITER",
+  "status": "caught",
+  "first_failure": "FAIL: LOCK: PITER not hidden (it held the count of the program command before LOCK)",
+  "in_test": "5d. security options: SEC register, marg",
+  "seconds": 155,
+  "id": 96
+ }
+]

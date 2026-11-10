@@ -1,0 +1,46 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 32 thread(s).
+read_liberty /w/flow/orfs/platforms_b/sky130hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib
+read_db /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/3_3_place_gp.odb
+read_sdc /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/2_floorplan.sdc
+source /w/flow/orfs/platforms_b/sky130hd/setRC.tcl
+estimate_parasitics -placement
+Perform buffer insertion and gate resizing...
+repair_design -verbose -match_cell_footprint
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     12180
+     1000 |     +0.0% |       0 |       0 |             0 |     11180
+     2000 |     +0.0% |       0 |       0 |             0 |     10180
+     3000 |     +0.0% |       0 |       0 |             0 |      9180
+     4000 |     +0.0% |       0 |       0 |             0 |      8180
+     5000 |     +0.0% |       0 |       0 |             0 |      7180
+     6000 |     +0.0% |       1 |       0 |             1 |      6180
+     7000 |     +0.0% |       1 |       0 |             1 |      5180
+     8000 |     +0.0% |       1 |       0 |             1 |      4180
+     9000 |     +0.0% |       1 |       0 |             1 |      3180
+    10000 |     +0.0% |       1 |       0 |             1 |      2180
+    11000 |     +0.0% |       1 |       0 |             1 |      1180
+    12000 |     +0.0% |       1 |       0 |             1 |       180
+    final |     +0.0% |       1 |       0 |             1 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 1 slew violations.
+[INFO RSZ-0039] Resized 1 instances.
+[INFO RSZ-0504] Runtime: 0.89s
+Floating nets: 
+Report metrics stage 3, resizer...
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 106938 um^2 67% utilization.
+Instance count before 13579, after 13579
+Pin count before 42439, after 42439
+write_db /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/3_4_place_resized.odb
+Elapsed time: 0:07.31[h:]min:sec. CPU time: user 5.97 sys 3.89 (135%). Peak memory: 183808KB.
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+3_4_place_resized      .odb          7       10     1.35      179 140324dc5c

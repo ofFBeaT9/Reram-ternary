@@ -1,8 +1,10 @@
 {
  "tool": "cf-precheck 1.3.7, --magic-drc, all checks",
- "run": "PC batch 28c, 7 November 2026: revision 4.7 GDS (block placed and routed again with the final antenna pass), ChipFoundry's pinned versions, CF PDK 3e0e31d sky130B (local mirror)",
- "gds_md5": "08e7dea2f49d61ebdab198c39b2ea571",
- "gds_md5_here": "08e7dea2f49d61ebdab198c39b2ea571",
+ "run": "PC batch 29c, 9 November 2026: revision 4.9 GDS (block placed and routed again with the 4.9 logic in batch 29; top level rebuilt after the met3.2 fix of top.py), ChipFoundry's pinned versions, CF PDK 3e0e31d sky130B (local mirror)",
+ "gds_md5": "f0e56b075b81e3e767d393c7aa35c7e3",
+ "gds_md5_here": "f0e56b075b81e3e767d393c7aa35c7e3",
+ "passed": 14,
+ "total": 14,
  "checks": {
   "Top Cell": "PASS",
   "GPIO Defines": "PASS",
@@ -19,11 +21,23 @@
   "LVS": "PASS",
   "OEB": "PASS"
  },
- "passed": 14,
- "total": 14,
  "tools_info": "KLayout: 0.29.12\nMagic: 8.3.471",
  "pdks_info": "Open PDKs 3e0e31dcce8519a7dbb82590346db16d91b7244f\nSKY130B PDK unknown",
  "history": [
+  {
+   "run": "PC batch 29, 9 November 2026: revision 4.9 GDS before the top.py fix",
+   "passed": 12,
+   "total": 14,
+   "failed": "Magic DRC (met3.2 x8), KLayout BEOL (m3.2 x4)",
+   "evidence": "flow/eda/pc_batch29_precheck.log"
+  },
+  {
+   "tool": "cf-precheck 1.3.7, --magic-drc, all checks",
+   "run": "PC batch 28c, 7 November 2026: revision 4.7 GDS (block placed and routed again with the final antenna pass), ChipFoundry's pinned versions, CF PDK 3e0e31d sky130B (local mirror)",
+   "gds_md5": "08e7dea2f49d61ebdab198c39b2ea571",
+   "passed": 14,
+   "total": 14
+  },
   {
    "tool": "cf-precheck 1.3.7, --magic-drc, all checks",
    "run": "PC batch 27, revision 4.7 GDS, ChipFoundry pinned versions, CF PDK 3e0e31d sky130B (local mirror)",

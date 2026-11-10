@@ -12,30 +12,30 @@ write_sdc -no_timestamp /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/b
 Deleted 0 routing obstructions
 Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
 Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
-Elapsed time: 0:04.33[h:]min:sec. CPU time: user 1.43 sys 0.70 (49%). Peak memory: 95712KB.
+Elapsed time: 0:02.43[h:]min:sec. CPU time: user 0.95 sys 0.12 (43%). Peak memory: 90296KB.
 Global output passed lec test
 [INFO RCX-0431] Defined process_corner X with ext_model_index 0
 [INFO RCX-0029] Defined extraction corner X
 [INFO RCX-0435] Reading extraction model file /w/flow/orfs/platforms_b/sky130hd/rcx_patterns.rules ...
 [INFO RCX-0436] RC segment generation tcim_chip_digital (max_merge_res 50.0) ...
-[INFO RCX-0040] Final 54056 rc segments
+[INFO RCX-0040] Final 51634 rc segments
 [INFO RCX-0439] Coupling Cap extraction tcim_chip_digital ...
 [INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
-[INFO RCX-0442] 52% of 119005 wires extracted
-[INFO RCX-0442] 100% of 119005 wires extracted
-[INFO RCX-0045] Extract 12477 nets, 66415 rsegs, 66415 caps, 154486 ccs
-[INFO RCX-0443] 12477 nets finished
+[INFO RCX-0442] 52% of 111432 wires extracted
+[INFO RCX-0442] 100% of 111432 wires extracted
+[INFO RCX-0045] Extract 12294 nets, 63815 rsegs, 63815 caps, 143657 ccs
+[INFO RCX-0443] 12294 nets finished
 [INFO PSM-0040] All shapes on net VDD are connected.
 [INFO PSM-0073] Using bump pattern on met5 with x-pitch 140.0000um, y-pitch 140.0000um, and size 70.0000um with a reduction factor of 3x.
 ########## IR report #################
 Net              : VDD
 Corner           : default
-Total power      : 9.78e-04 W
+Total power      : 9.96e-04 W
 Supply voltage   : 1.80e+00 V
 Worstcase voltage: 1.80e+00 V
 Average voltage  : 1.80e+00 V
-Average IR drop  : 6.05e-05 V
-Worstcase IR drop: 1.85e-04 V
+Average IR drop  : 6.42e-05 V
+Worstcase IR drop: 2.12e-04 V
 Percentage drop  : 0.01 %
 ######################################
 [INFO PSM-0040] All shapes on net VSS are connected.
@@ -43,32 +43,32 @@ Percentage drop  : 0.01 %
 ########## IR report #################
 Net              : VSS
 Corner           : default
-Total power      : 9.78e-04 W
+Total power      : 9.96e-04 W
 Supply voltage   : 0.00e+00 V
-Worstcase voltage: 1.51e-04 V
-Average voltage  : 5.78e-05 V
-Average IR drop  : 5.78e-05 V
-Worstcase IR drop: 1.51e-04 V
+Worstcase voltage: 1.39e-04 V
+Average voltage  : 5.57e-05 V
+Average IR drop  : 5.57e-05 V
+Worstcase IR drop: 1.39e-04 V
 Percentage drop  : 0.01 %
 ######################################
 Cell type report:                       Count        Area
-  Fill cell                             10068    41920.20
+  Fill cell                             10853    45642.52
   Tap cell                               2146     2685.08
-  Antenna cell                           1123     2810.20
-  Clock buffer                            345     8076.50
-  Timing Repair Buffer                    608     4217.80
-  Inverter                                505     1895.57
-  Clock inverter                           90      800.77
+  Antenna cell                            903     2259.67
+  Clock buffer                            347     8096.52
+  Timing Repair Buffer                    603     4163.99
+  Inverter                                507     1908.08
+  Clock inverter                           88      689.41
   Clock gate cell                          85     1488.93
-  Sequential cell                        1377    34489.33
-  Multi-Input combinational cell         8861    62224.68
-  Total                                 25208   160609.04
+  Sequential cell                        1380    34570.66
+  Multi-Input combinational cell         8677    59104.19
+  Total                                 25589   160609.04
 Report metrics stage 6, finish...
 
 ==========================================================================
 finish report_design_area
 --------------------------------------------------------------------------
-Design area 118689 um^2 74% utilization.
+Design area 114967 um^2 72% utilization.
 [WARNING GUI-0010] File path does not end with a valid extension, new path is: /w/flow/orfs/outdig/reports/sky130hd/tcim_chip_digital/base/final_all.webp.png
 [WARNING GUI-0010] File path does not end with a valid extension, new path is: /w/flow/orfs/outdig/reports/sky130hd/tcim_chip_digital/base/final_routing.webp.png
 [WARNING GUI-0010] File path does not end with a valid extension, new path is: /w/flow/orfs/outdig/reports/sky130hd/tcim_chip_digital/base/final_placement.webp.png
@@ -79,7 +79,7 @@ Design area 118689 um^2 74% utilization.
 [WARNING GUI-0010] File path does not end with a valid extension, new path is: /w/flow/orfs/outdig/reports/sky130hd/tcim_chip_digital/base/final_resizer.webp.png
 [WARNING GUI-0010] File path does not end with a valid extension, new path is: /w/flow/orfs/outdig/reports/sky130hd/tcim_chip_digital/base/final_congestion.webp.png
 [WARNING GUI-0010] File path does not end with a valid extension, new path is: /w/flow/orfs/outdig/reports/sky130hd/tcim_chip_digital/base/final_worst_path.webp.png
-Elapsed time: 0:37.54[h:]min:sec. CPU time: user 17.93 sys 13.84 (84%). Peak memory: 374112KB.
+Elapsed time: 0:30.40[h:]min:sec. CPU time: user 13.62 sys 7.79 (70%). Peak memory: 370392KB.
 Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
                                      s        s  Elapsed       MB [0:10)
-6_report                             4        2     0.49       93 N/A
+6_report                             2        1     0.44       88 N/A

@@ -1,0 +1,37 @@
+SBY 20:13:41 [tcim_core_lock] Removing directory '/tmp/k_lock/formal/tcim_core_lock'.
+SBY 20:13:41 [tcim_core_lock] Copy '/tmp/k_lock/formal/../rtl/tcim_pkg.sv' to '/tmp/k_lock/formal/tcim_core_lock/src/tcim_pkg.sv'.
+SBY 20:13:41 [tcim_core_lock] Copy '/tmp/k_lock/formal/../rtl/tcim_core.sv' to '/tmp/k_lock/formal/tcim_core_lock/src/tcim_core.sv'.
+SBY 20:13:41 [tcim_core_lock] engine_0: smtbmc yices
+SBY 20:13:41 [tcim_core_lock] base: starting process "cd tcim_core_lock/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 20:13:51 [tcim_core_lock] base: finished (returncode=0)
+SBY 20:13:52 [tcim_core_lock] prep: starting process "cd tcim_core_lock/model; yosys -ql design_prep.log design_prep.ys"
+SBY 20:13:55 [tcim_core_lock] prep: finished (returncode=0)
+SBY 20:13:55 [tcim_core_lock] smt2: starting process "cd tcim_core_lock/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 20:14:29 [tcim_core_lock] smt2: finished (returncode=0)
+SBY 20:14:29 [tcim_core_lock] engine_0.basecase: starting process "cd tcim_core_lock; yosys-smtbmc -s yices --presat --unroll --noprogress -t 3  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 20:14:29 [tcim_core_lock] engine_0.induction: starting process "cd tcim_core_lock; yosys-smtbmc -s yices --presat --unroll -i --noprogress -t 3  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2"
+SBY 20:14:30 [tcim_core_lock] engine_0.induction: ##   0:00:00  Solver: yices
+SBY 20:14:30 [tcim_core_lock] engine_0.basecase: ##   0:00:00  Solver: yices
+SBY 20:14:31 [tcim_core_lock] engine_0.basecase: ##   0:00:01  Checking assumptions in step 0..
+SBY 20:14:31 [tcim_core_lock] engine_0.basecase: ##   0:00:01  Checking assertions in step 0..
+SBY 20:14:31 [tcim_core_lock] engine_0.induction: ##   0:00:01  Trying induction in step 3..
+SBY 20:14:31 [tcim_core_lock] engine_0.basecase: ##   0:00:01  Checking assumptions in step 1..
+SBY 20:14:31 [tcim_core_lock] engine_0.basecase: ##   0:00:01  Checking assertions in step 1..
+SBY 20:14:31 [tcim_core_lock] engine_0.induction: ##   0:00:01  Trying induction in step 2..
+SBY 20:14:32 [tcim_core_lock] engine_0.basecase: ##   0:00:02  Checking assumptions in step 2..
+SBY 20:14:32 [tcim_core_lock] engine_0.basecase: ##   0:00:02  Checking assertions in step 2..
+SBY 20:14:32 [tcim_core_lock] engine_0.basecase: ##   0:00:02  Status: passed
+SBY 20:14:32 [tcim_core_lock] engine_0.induction: ##   0:00:02  Trying induction in step 1..
+SBY 20:14:32 [tcim_core_lock] engine_0.induction: ##   0:00:02  Temporal induction successful.
+SBY 20:14:32 [tcim_core_lock] engine_0.induction: ##   0:00:02  Status: passed
+SBY 20:14:32 [tcim_core_lock] engine_0.basecase: finished (returncode=0)
+SBY 20:14:32 [tcim_core_lock] engine_0.basecase: Status returned by engine for basecase: pass
+SBY 20:14:32 [tcim_core_lock] engine_0.induction: finished (returncode=0)
+SBY 20:14:32 [tcim_core_lock] engine_0.induction: Status returned by engine for induction: pass
+SBY 20:14:32 [tcim_core_lock] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:51 (51)
+SBY 20:14:32 [tcim_core_lock] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:15 (15)
+SBY 20:14:32 [tcim_core_lock] summary: engine_0 (smtbmc yices) returned pass for basecase
+SBY 20:14:32 [tcim_core_lock] summary: engine_0 (smtbmc yices) returned pass for induction
+SBY 20:14:32 [tcim_core_lock] summary: engine_0 did not produce any traces
+SBY 20:14:32 [tcim_core_lock] summary: successful proof by k-induction.
+SBY 20:14:32 [tcim_core_lock] DONE (PASS, rc=0)

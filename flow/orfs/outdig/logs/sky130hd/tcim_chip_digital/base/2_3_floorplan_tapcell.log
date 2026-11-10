@@ -8,9 +8,9 @@ read_db /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/2_2_floorpla
 read_sdc /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/2_1_floorplan.sdc
 source /w/flow/orfs/platforms_b/sky130hd/setRC.tcl
 [INFO TAP-0005] Inserted 2146 tapcells.
-Design area 105305 um^2 66% utilization.
+Design area 101989 um^2 64% utilization.
 write_db /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/2_3_floorplan_tapcell.odb
-Elapsed time: 0:01.89[h:]min:sec. CPU time: user 0.35 sys 0.19 (28%). Peak memory: 118272KB.
+Elapsed time: 0:02.10[h:]min:sec. CPU time: user 0.47 sys 0.13 (28%). Peak memory: 116224KB.
 Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
                                      s        s  Elapsed       MB [0:10)
-2_3_floorplan_tapcell  .odb          1        1     0.29      115 800dc4dabf
+2_3_floorplan_tapcell  .odb          2        1     0.29      113 e73dc68a8e

@@ -1,6 +1,8 @@
 chip build: controller configuration ts 3 tp 2 tr 1
 trit code of the device under test: two's complement (+1 = 01, 0 = 00, -1 = 11, 10 illegal)
 1. register access
+1b. locked at reset; erase of the whole array
+   erase: 72 rows x (21 + 21) pulse steps, 216109 cycles, LOCK cleared
 2. programming all 72 rows with verify
    pulses per row: mean 15.1, max 18
    constant time: every program command 2896 cycles (21 + 21 pulse steps; pulses selecting a device as above)
@@ -12,10 +14,11 @@ trit code of the device under test: two's complement (+1 = 01, 0 = 00, -1 = 11, 
 5b. directed tests: read reference, saturation, interrupt enable, busy and enable guards
 5c. illegal code, exhaustive conversions, flag and interrupt behaviour, serial frame lengths
 5d. security options: SEC register, margin check, LOCK
+   LOCK upset test: not run in this build
 6. ternary digits network through the RTL
    360 samples: RTL correct 341, software correct 341, same class as software 360, layer-1 mismatches 0
 chip (cfg ts 3 tp 2 tr 1): electrical violations: short 0, two word lines 0, floating 0, switching under a word line 0,
    read setup 0, program setup 0, strobe 0, reference 0, sense time 0, pulse time 0, settle time 0, mixed pulse 0, pk 0, break-before-make 0, flt order 0
-array operations: 138940 reads, 11282 pulses, 0 sums; 51014368 clock cycles
-93928 checks, 0 failures
+array operations: 159855 reads, 26360 pulses, 0 sums; 54364306 clock cycles
+103659 checks, 0 failures
 TEST PASSED

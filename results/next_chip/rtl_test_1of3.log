@@ -1,18 +1,21 @@
 trit code of the device under test: two's complement (+1 = 01, 0 = 00, -1 = 11, 10 illegal)
 1. register access
+1b. locked at reset; erase of the whole array
+   erase: 72 rows x (21 + 21) pulse steps, 18541 cycles, LOCK cleared
 2. programming all 72 rows with verify
-   pulses per row: mean 15.4, max 17
+   pulses per row: mean 27.9, max 30
    constant time: every program command 152 cycles (21 + 21 pulse steps; pulses selecting a device as above)
 3. digital products against the exact dot product
    fixed latency: 150 products of 110 cycles each (inputs 0 to 72 non-zero)
-   start rows: 34 different in 40 products; NOSHUF: from row 0
+   start rows: 31 different in 40 products; NOSHUF: from row 0
 4. analog-mode raw counts
 5. error paths
 5b. directed tests: read reference, saturation, interrupt enable, busy and enable guards
 5c. illegal code, exhaustive conversions, flag and interrupt behaviour, serial frame lengths
 5d. security options: SEC register, margin check, LOCK
+   LOCK upset test: run (two of three copies cleared, still locked)
 6. ternary digits network through the RTL
    360 samples: RTL correct 341, software correct 341, same class as software 360, layer-1 mismatches 0
-array operations: 139370 reads, 11434 pulses, 1558 sums; 50007874 clock cycles
-97631 checks, 0 failures
+array operations: 160342 reads, 26545 pulses, 1558 sums; 52290206 clock cycles
+107302 checks, 0 failures
 TEST PASSED

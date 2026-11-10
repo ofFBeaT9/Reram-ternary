@@ -1,0 +1,2 @@
+spi fuzz: 1000000 frames (249292 aborted, 260023 writes, 251282 reads), 78125 read-back checks, 0 mismatches, 0 bad status bytes, 371706488 clock cycles
+FUZZ PASSED

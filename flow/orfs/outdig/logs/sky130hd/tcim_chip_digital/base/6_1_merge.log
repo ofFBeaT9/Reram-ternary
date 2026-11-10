@@ -3,4 +3,4 @@ KLayout 0.30.12
 	/w/flow/orfs/platforms_b/sky130hd/gds/sky130_fd_sc_hd.gds
 [INFO] All LEF cells have matching GDS/OAS cells
 [INFO] No orphan cells in the final layout
-Elapsed time: 0:11.60[h:]min:sec. CPU time: user 2.71 sys 5.90 (74%). Peak memory: 498776KB.
+Elapsed time: 0:03.36[h:]min:sec. CPU time: user 1.68 sys 0.38 (61%). Peak memory: 497672KB.

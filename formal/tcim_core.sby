@@ -2,6 +2,9 @@
 #   safety:   any bus traffic, any array answers
 #   progress: the array answers every request at once; every command must end in a bounded time
 #   safety_1of3: the safety properties on the next-chip 3T3R build (TCIM_CELL_1OF3), with the Z properties (8 Nov 2026)
+#   lock:     revision 4.9: a reset leaves the tile locked (property p_lock_reset alone, k-induction). The other tasks are read
+#             with FORMAL_ANYLOCK, which lets a reset leave the tile locked or unlocked (a superset of the design's states), because
+#             with the design's reset PDR walks a whole erase (about 3,300 cycles) before any unlocked state is reachable
 #   lfsr:     the start-row register equals the LFSR value modulo 72 (revision 4.7), by k-induction; PDR does not close this
 #             arithmetic property, so the other tasks drop it (it is the assertion labelled p_lfsr_m72). Depth 20, not 3: at
 #             depth 3 the base case ends before the planted fault of check_faults.py shows (it fails at step 3; batch 28)
@@ -12,10 +15,12 @@ safety_pnx
 progress
 lfsr
 safety_1of3
+lock
 
 [options]
 mode prove
 lfsr: depth 20
+lock: depth 3
 
 [engines]
 safety: abc pdr
@@ -23,13 +28,15 @@ safety_pnx: abc pdr
 progress: abc pdr
 safety_1of3: abc pdr
 lfsr: smtbmc yices
+lock: smtbmc yices
 
 [script]
-safety:     read_slang -D FORMAL --top tcim_core tcim_pkg.sv tcim_core.sv
-safety_pnx: read_slang -D FORMAL -D TCIM_ENC_PNX --top tcim_core tcim_pkg.sv tcim_core.sv
-progress:   read_slang -D FORMAL -D FORMAL_ACK --top tcim_core tcim_pkg.sv tcim_core.sv
+safety:     read_slang -D FORMAL -D FORMAL_ANYLOCK --top tcim_core tcim_pkg.sv tcim_core.sv
+safety_pnx: read_slang -D FORMAL -D FORMAL_ANYLOCK -D TCIM_ENC_PNX --top tcim_core tcim_pkg.sv tcim_core.sv
+progress:   read_slang -D FORMAL -D FORMAL_ANYLOCK -D FORMAL_ACK --top tcim_core tcim_pkg.sv tcim_core.sv
 lfsr:       read_slang -D FORMAL --top tcim_core tcim_pkg.sv tcim_core.sv
-safety_1of3: read_slang -D FORMAL -D TCIM_CELL_1OF3 --top tcim_core tcim_pkg.sv tcim_core.sv
+lock:       read_slang -D FORMAL --top tcim_core tcim_pkg.sv tcim_core.sv
+safety_1of3: read_slang -D FORMAL -D FORMAL_ANYLOCK -D TCIM_CELL_1OF3 --top tcim_core tcim_pkg.sv tcim_core.sv
 prep -top tcim_core
 # out-of-range part-selects ($shiftx) produce x once mapped; map them here and let the solver choose any value
 # for such bits (conservative: a property that holds with free values holds with any value)
@@ -43,6 +50,7 @@ safety_pnx: chformal -remove c:p_lfsr_m72
 progress: chformal -remove c:p_lfsr_m72
 safety_1of3: chformal -remove c:p_lfsr_m72
 lfsr: chformal -assert -remove c:p_lfsr_m72 %n
+lock: chformal -assert -remove c:p_lock_reset %n
 
 [files]
 ../rtl/tcim_pkg.sv

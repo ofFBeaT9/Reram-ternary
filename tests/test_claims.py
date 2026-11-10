@@ -527,13 +527,16 @@ claim('4.5 worst wiring: reset 4 decades slower fails only at ss -40 C (1 = yes)
 
 # ---- section 26 (revisions 4.6 and 4.7, 4-7 November 2026): hardware security (docs/STATUS.md, section 15; the explainer's
 # section 13). Against the live results/ (revision 4.7 is the present one).
-J7 = lambda n: json.loads((R / n).read_text())
+# revision 4.9 (9 November 2026) re-ran the test benches, fault campaigns and proofs: the revision 4.7 / 4.8 files these claims
+# quote are kept in results/rev48 (from the commit of 8 November) and read from there when present
+P48 = lambda n: (R / "rev48" / n) if (R / "rev48" / n).exists() else (R / n)
+J7 = lambda n: json.loads(P48(n).read_text())
 def chk7(n):
-    t = (R / n).read_text(); m = _re.findall(r"(\d+) checks, (\d+) failures", t)
+    t = P48(n).read_text(); m = _re.findall(r"(\d+) checks, (\d+) failures", t)
     return (int(m[-1][0]), int(m[-1][1])) if m and "TEST PASSED" in t else (-1, -1)
 for n in ("rtl_test.log", "rtl_test_pnx.log", "rtl_test_verilator.log", "rtl_test_verilator_pnx.log"):
     c, f = chk7(n); claim(f'4.7 {n}: checks', 97463, c, 0); claim(f'4.7 {n}: failures', 0, f, 0)
-rt7 = (R / "rtl_test.log").read_text()
+rt7 = P48("rtl_test.log").read_text()
 claim('4.7 every program command (cycles)', 152, int(_re.search(r"every program command (\d+) cycles", rt7).group(1)), 0)
 claim('4.7 fixed-latency product (cycles)', 110, int(_re.search(r"products of (\d+) cycles each", rt7).group(1)), 0)
 claim('4.7 same logic as the file the simulations ran on (1 = yes)', 1, int(J7("rev47/same_logic.json")["same_logic_outside_formal_block_and_comments"]), 0)
@@ -541,16 +544,16 @@ for tg, q in (("", 115), ("_pnx", 121)):
     mt7 = J7(f"rtl_mutation{tg}.json"); claim(f'4.7 mutation{tg}: faults', q, mt7["faults"], 0); claim(f'4.7 mutation{tg}: detected', q, mt7["detected"], 0)
 claim('4.7 netlist for place and route = RTL: points proven', 2764, J7("equiv.json")["place_and_route_source"]["proven"], 0)
 claim('4.7 netlist for place and route = RTL: unproven', 0, J7("equiv.json")["place_and_route_source"]["unproven"], 0)
-m7 = _re.search(r"(\d+) are proven and (\d+) are unproven", (R / "sky130_chip/equiv_chip.log").read_text())
+m7 = _re.search(r"(\d+) are proven and (\d+) are unproven", P48("sky130_chip/equiv_chip.log").read_text())
 claim('4.7 chip block netlist = chip RTL: proven', 3021, int(m7.group(1)), 0); claim('4.7 chip block netlist = chip RTL: unproven', 0, int(m7.group(2)), 0)
 for n, q in (("rtl_chip_000.log", 90196), ("rtl_chip_110.log", 91844), ("rtl_chip_321.log", 93928), ("rtl_chip_verilator_110.log", 91844)):
     c, f = chk7("sky130_chip/" + n); claim(f'4.7 chip {n}: checks', q, c, 0); claim(f'4.7 chip {n}: failures', 0, f, 0)
 mc7 = J7("sky130_chip/mutation_chip.json")
 claim('4.7 controller faults detected (of 26)', 26, mc7["detected"] if mc7["faults"] == 26 else -1, 0)
-fl7 = (R / "formal.log").read_text()
+fl7 = P48("formal.log").read_text()
 claim('4.7 formal proofs passed (spi, safety, safety_pnx, progress, lfsr)', 5,
       sum(f"[{t}] DONE (PASS, rc=0)" in fl7 for t in ("tcim_spi", "tcim_core_safety", "tcim_core_safety_pnx", "tcim_core_progress", "tcim_core_lfsr")), 0)
-claim('4.7 timing miters passed (prove, prove_pnx)', 2, sum("DONE (PASS" in (R / f"security/miter_{t}.log").read_text() for t in ("prove", "prove_pnx")), 0)
+claim('4.7 timing miters passed (prove, prove_pnx)', 2, sum("DONE (PASS" in P48(f"security/miter_{t}.log").read_text() for t in ("prove", "prove_pnx")), 0)
 ff7 = J7("formal_faults.json")
 claim('4.7 planted proof faults', 28, len(ff7), 0); claim('4.7 planted proof faults caught', 28, sum(x["caught"] for x in ff7), 0)
 tv7 = J7("security/tvla.json")
@@ -578,17 +581,18 @@ claim('4.7 chip block worst setup slack (ns)', 7.59, db7["setup_wns_min_ns"], 0.
 claim('4.7 chip block worst hold slack (ps)', 68, db7["hold_wns_min_ns"] * 1000, 0.6)
 mp7 = {r["spef_scale"]: r["min_period_ns"] for r in db7["min_period"]}
 claim('4.7 chip block shortest period (ns)', 16.62, mp7[1.0], 0.006); claim('4.7 chip block shortest period x1.2 (ns)', 17.44, mp7[1.2], 0.006)
-claim('4.7 chip block antenna diodes (DEF)', 1123, len(_re.findall(r"- \S+ sky130_fd_sc_hd__diode_2 ", (R.parent / "flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/6_final.def").read_text())), 0)
+claim('4.7 chip block antenna diodes (DEF)', 1123, len(_re.findall(r"- \S+ sky130_fd_sc_hd__diode_2 ", (R.parent / "flow/orfs/outdig_rev47/results/sky130hd/tcim_chip_digital/base/6_final.def").read_text())), 0)
 c, f = chk7("sky130_chip/gls_chip_routed.log"); claim('4.7 routed block, gate level: checks', 91846, c, 0); claim('4.7 routed block, gate level: failures', 0, f, 0)
 claim('4.7 gate-level faults detected (xnor, icg; 2 = both)', 2,
-      sum(int("TEST FAILED" in (R / "sky130_chip" / n).read_text()) for n in ("gls_chip_fault_xnor.log", "gls_chip_fault_icg.log")), 0)
+      sum(int("TEST FAILED" in P48("sky130_chip/" + n).read_text()) for n in ("gls_chip_fault_xnor.log", "gls_chip_fault_icg.log")), 0)
 tl7, so7, ax7 = J7("sky130_chip/top_layout.json"), J7("sky130_chip/top_signoff.json"), J7("sky130_chip/antenna_crosscheck.json")
 claim('4.7 chip LVS match and planted swap caught (2 = both)', 2, int(tl7["lvs_match"]) + int(not tl7["fault_lvs_match"]), 0)
 claim('4.7 chip Magic DRC markers (full rules)', 0, so7["drc_markers"], 0)
 claim('4.7 chip Magic antenna violations', 0, so7["antenna_violation_count"], 0)
 claim('4.7 block OpenROAD antenna violations (nets + pins)', 0, ax7["openroad"]["net_violations"] + ax7["openroad"]["pin_violations"], 0)
 import hashlib as _hl7
-g7 = _hl7.md5((R.parent / "chip/sky130/caravan/gds/user_analog_project_wrapper.gds").read_bytes()).hexdigest()
+# (revision 4.9 rebuilt the GDS; the revision 4.7 sign-off and precheck are compared with each other through their recorded md5)
+g7 = J7("sky130_chip/precheck.json")["gds_md5"]
 claim('4.7 sign-off ran on the GDS in the project folder (1 = same md5)', 1, int(so7["gds_md5"] == g7), 0)
 pc7 = J7("sky130_chip/precheck.json")
 claim('4.7 ChipFoundry precheck on that GDS: checks passed of 14', 14, pc7["passed"] if pc7["total"] == 14 and pc7["gds_md5"] == g7 else -1, 0)
@@ -605,7 +609,7 @@ claim('4.7 batch 27 Magic antenna violations', 1, J7("rev47/batch27/top_signoff.
 fz8 = J7("spi_fuzz.json")
 claim('4.8 fuzz: the design passes 200,000 frames (1 = yes)', 1, int(fz8[0]["fuzz_passed"] and fz8[0]["frames"] == 200000), 0)
 claim('4.8 fuzz: planted faults that make it fail (of 4)', 4, sum(int(x["ok"]) for x in fz8[1:]) if len(fz8) == 5 else -1, 0)
-f8 = (R / "spi_fuzz_1M.log").read_text()
+f8 = P48("spi_fuzz_1M.log").read_text()
 claim('4.8 fuzz: 1,000,000 frames pass (1 = yes)', 1, int("1000000 frames" in f8 and "FUZZ PASSED" in f8), 0)
 
 # ---- 8 November 2026: 4T4R in the leak model (docs/STATUS.md, section 15.6)
@@ -631,7 +635,7 @@ claim('3T3R DRC clean, LVS match, both planted faults caught (4 = all)', 4,
 for x in ("", "_pnx"):
     c, f = chk7(f"next_chip/rtl_test_1of3{x}.log"); claim(f'3T3R test bench{x}: checks', 97631, c, 0); claim(f'3T3R test bench{x}: failures', 0, f, 0)
 import glob as _g
-mz7 = sum((json.loads(open(f).read()) for f in sorted(_g.glob(str(R / "rtl_mutation_1of3_*.json")))), [])
+mz7 = sum((json.loads(open(f).read()) for f in sorted(_g.glob(str(R / "rev48" / "mutation_parts" / "rtl_mutation_1of3_*.json")))), [])
 claim('3T3R Z-logic faults caught (of 7)', 7, sum(1 for r in mz7 if r["status"] == "caught") if len(mz7) == 7 else -1, 0)
 mq = _re.search(r"Of those cells (\d+) are proven and (\d+) are unproven", (R / "next_chip/equiv_default_build_unchanged.log").read_text())
 claim('default build = revision 4.7 core: points proven', 2718, int(mq.group(1)), 0); claim('default build = revision 4.7 core: unproven', 0, int(mq.group(2)), 0)
@@ -646,9 +650,9 @@ for cr, q in (("tt", 7), ("ss", 8), ("ff", 7)):
 claim('3T3R reset pulses, worst (0-3 decades slower)', 7, max(r["pulses"] for r in ms3["reset"]), 0); claim('3T3R programming disturb (uS)', 0.0, ms3["max_disturb_uS"], 0)
 c, f = chk7("next_chip/rtl_chip_1of3_110.log"); claim('3T3R chip test bench: checks', 92076, c, 0); claim('3T3R chip test bench: failures', 0, f, 0)
 mc3 = J7("next_chip/mutation_chip_1of3.json"); claim('3T3R controller Z faults caught (of 6)', 6, mc3["detected"] if mc3["faults"] == 6 else -1, 0)
-claim('3T3R formal safety proof passes (1 = yes)', 1, int("DONE (PASS" in (R / "next_chip/formal_1of3.log").read_text()), 0)
+claim('3T3R formal safety proof passes (1 = yes)', 1, int("DONE (PASS" in P48("next_chip/formal_1of3.log").read_text()), 0)
 ff3 = J7("next_chip/formal_faults_1of3.json"); claim('3T3R formal Z faults caught (of 3)', 3, sum(x["caught"] for x in ff3) if len(ff3) == 3 else -1, 0)
-mf8 = J("rtl_mutation_1of3full.json"); claim('3T3R full mutation test: faults caught (of 122 run)', 122, mf8["detected"] if mf8["run"] == 122 and not mf8["missing"] else -1, 0)
+mf8 = J7("rtl_mutation_1of3full.json"); claim('3T3R full mutation test: faults caught (of 122 run)', 122, mf8["detected"] if mf8["run"] == 122 and not mf8["missing"] else -1, 0)
 sa8 = J7("security/sa_transient.json")
 claim('SA mean current, 60 uS LRS (uA)', 2.25, sa8["mean_uA_nominal"]["60uS"], 0.006); claim('SA mean current, 4.5 uS HRS (uA)', 1.00, sa8["mean_uA_nominal"]["4.5uS"], 0.006)
 claim('SA mismatch sd on LRS (uA)', 0.126, sa8["mismatch_sd_uA_LRS60"], 0.0006)
@@ -669,6 +673,56 @@ for fn, enc, q in (("tvla_circuit_redraw", "2T2R", 11.94), ("tvla_circuit_redraw
 sp8 = J7("security/sa_programmed_states.json")
 claim('SA mean current, 29.9 uS (uA)', 2.2764, sp8["mean_uA"]["29.9uS"], 0.00005); claim('SA mean current, 0.31 uS (uA)', 0.1614, sp8["mean_uA"]["0.31uS"], 0.00005)
 claim('SA mean current, 60 uS, second run (uA)', 2.2517, sp8["mean_uA"]["60uS"], 0.00005)
+
+Q9 = dict(tb=107134, tb_vl=107059, tb3=107302, c000=99792, c110=101504, c321=103659, c3=101737)   # PC batch 29d
+# ---- section 15.9 (revision 4.9, 9 November 2026): locked at reset, erase of the whole array to unlock, programming refused under
+# LOCK, LOCK in three flip-flops (docs/STATUS.md 15.9; page 13e). Against the live results/ (revision 4.9 is the present one).
+S9 = J("rev49/summary.json")
+claim('4.9 erase: clock cycles (72 rows x 42 pulse steps)', 18541, S9["erase_cycles"], 0)
+for n, q in (("rtl_test.log", Q9["tb"]), ("rtl_test_pnx.log", Q9["tb"]), ("rtl_test_verilator.log", Q9["tb_vl"]), ("rtl_test_verilator_pnx.log", Q9["tb_vl"]),
+             ("next_chip/rtl_test_1of3.log", Q9["tb3"]), ("next_chip/rtl_test_1of3_pnx.log", Q9["tb3"]),
+             ("sky130_chip/rtl_chip_000.log", Q9["c000"]), ("sky130_chip/rtl_chip_110.log", Q9["c110"]), ("sky130_chip/rtl_chip_321.log", Q9["c321"]),
+             ("next_chip/rtl_chip_1of3_110.log", Q9["c3"])):
+    t9 = S9["tb"][n]; claim(f'4.9 {n}: checks', q, t9["checks"] if t9 and t9["passed"] else -1, 0); claim(f'4.9 {n}: failures', 0, t9["failures"] if t9 else -1, 0)
+for n, q in (("rtl_mutation.json", 126), ("rtl_mutation_pnx.json", 132), ("rtl_mutation_1of3full.json", 133)):
+    m9 = S9["mutation"][n]; claim(f'4.9 {n}: faults', q, m9["faults"], 0); claim(f'4.9 {n}: caught', q, m9["detected"] if m9["run"] == q else -1, 0)
+    claim(f'4.9 {n}: new faults caught (of 12)', 12, m9["new_caught"] if m9["new_faults"] == 12 else -1, 0)
+for n, q in (("sky130_chip/mutation_chip.json", 26), ("next_chip/mutation_chip_1of3.json", 6)):
+    claim(f'4.9 {n}: caught', q, S9["mutation_chip"][n]["detected"] if S9["mutation_chip"][n]["faults"] == q else -1, 0)
+f9 = S9["formal"]
+claim('4.9 proofs passed (spi, lfsr, lock, two miters, safety variants A, B, C)', 8, f9["n_passed"], 0)
+claim('4.9 proofs listed as open', 5, len(f9["open"]), 0)
+claim('4.9 safety variant A (4.7 properties) proof time (s)', 3653, f9["variant_seconds"]["A"], 0)
+claim('4.9 timing miter counterexample before the LOCK-public assumption (1 = yes)', 1, int(f9["miter_counterexample_before_fix"]), 0)
+e9 = S9["equiv_vs_rev48"]
+claim('4.9 vs 4.8 logic, default cell: points proven', 2615, e9["default"]["proven"], 0); claim('4.9 vs 4.8 logic, default cell: unproven', 175, e9["default"]["unproven"], 0)
+claim('4.9 vs 4.8 logic, 3T3R: points proven', 2639, e9["1of3"]["proven"], 0); claim('4.9 vs 4.8 logic, 3T3R: unproven', 223, e9["1of3"]["unproven"], 0)
+claim('4.9 lint warnings', 0, S9["lint_warnings"], 0)
+claim('4.9 netlist for place and route = RTL: unproven', 0, J("equiv.json")["place_and_route_source"]["unproven"], 0)
+m9c = _re.search(r"(\d+) are proven and (\d+) are unproven", (R / "sky130_chip/equiv_chip.log").read_text())
+claim('4.9 chip block netlist = chip RTL: proven', 3050, int(m9c.group(1)), 0); claim('4.9 chip block netlist = chip RTL: unproven', 0, int(m9c.group(2)), 0)
+fz9 = (R / "spi_fuzz_1M.log").read_text()
+claim('4.9 serial-port fuzzing: frames, mismatches', 1000000, int(_re.search(r"(\d+) frames", fz9).group(1)) if "0 mismatches" in fz9 and "FUZZ PASSED" in fz9 else -1, 0)
+db9 = J("sky130_chip/digital_block.json")
+claim('4.9 chip block stdcells', 14736, db9["stdcells"], 0); claim('4.9 chip block flip-flops', 1380, db9["sequential"], 0)
+claim('4.9 chip block clock gates', 85, db9["clock_gates"], 0); claim('4.9 chip block utilization', 0.716, db9["utilization"], 0.0006)
+claim('4.9 chip block DRC', 0, db9["drc_violations"], 0); claim('4.9 chip block equivalence (1 = identical)', 1, int(db9["lec_identical"]), 0)
+claim('4.9 chip block worst setup slack, slow corner (ns)', 8.905, db9["corners"]["ss_100C_1v60"]["setup_wns_ns"], 0.0006)
+claim('4.9 chip block worst hold slack, all corners (ns)', 0.203, min(c["hold_wns_ns"] for c in db9["corners"].values()), 0.0006)
+mp9 = {r["spef_scale"]: r["min_period_ns"] for r in db9["min_period"]}
+claim('4.9 chip block shortest period (ns)', 16.12, mp9[1.0], 0.006); claim('4.9 chip block shortest period x1.2 (ns)', 16.94, mp9[1.2], 0.006)
+c9 = (R / "sky130_chip/gls_chip_routed.log").read_text()
+claim('4.9 routed block, gate level, final test bench (sandbox): checks', 101506, int(_re.findall(r"(\d+) checks", c9)[-1]), 0)
+claim('4.9 routed block, gate level: failures', 0, int(_re.findall(r"(\d+) failures", c9)[-1]) if "TEST PASSED" in c9 else -1, 0)
+claim('4.9 gate-level faults detected (xnor, icg)', 2, sum(int("TEST FAILED" in (R / "sky130_chip" / n).read_text()) for n in ("gls_chip_fault_xnor.log", "gls_chip_fault_icg.log")), 0)
+tl9, so9, ax9, pc9 = J("sky130_chip/top_layout.json"), J("sky130_chip/top_signoff.json"), J("sky130_chip/antenna_crosscheck.json"), J("sky130_chip/precheck.json")
+claim('4.9 chip LVS match and planted swap caught (2 = both)', 2, int(tl9["lvs_match"]) + int(not tl9["fault_lvs_match"]), 0)
+claim('4.9 chip Magic DRC markers (full rules)', 0, so9["drc_markers"], 0); claim('4.9 chip Magic antenna violations', 0, so9["antenna_violation_count"], 0)
+claim('4.9 block OpenROAD antenna violations', 0, ax9["openroad"]["net_violations"] + ax9["openroad"]["pin_violations"], 0)
+g9 = _hl7.md5((R.parent / "chip/sky130/caravan/gds/user_analog_project_wrapper.gds").read_bytes()).hexdigest()
+claim('4.9 sign-off and precheck on the GDS in the project folder (2 = both md5 match)', 2, int(so9["gds_md5"] == g9) + int(pc9["gds_md5"] == g9), 0)
+claim('4.9 ChipFoundry precheck: checks passed of 14', 14, pc9["passed"] if pc9["total"] == 14 else -1, 0)
+claim('4.9 batch 29 precheck before the top.py fix: checks passed of 14', 12, pc9["history"][0]["passed"], 0)
 
 (R / "audit_claims.json").write_text(json.dumps(dict(numbers=N_CLAIMS, stale=bad), indent=1))
 print(f"\n{N_CLAIMS} numbers checked, {len(bad)} stale" + (": " + "; ".join(bad) if bad else ""))

@@ -108,14 +108,14 @@ matrix-wide zero count. <b>Row-aligned</b>: each row and each position; a margin
 <p class="sm">Max Welch |t| over 360 samples, {ntr:,} traces per group; leaks above 4.5.</p>
 <p><b>What the row-aligned test found</b> (council red team, 8 November). One-of-three removes the zero count, but each sense amplifier's own
 mismatch makes the current depend on <i>which</i> device holds the LRS: {a1['max_abs_t'] if a1 else 'not run'} row-aligned. That residual is specific
-to one chip: profiling another chip does not calibrate it, but reprogramming a row of the victim does (programming is not refused under LOCK in
-revision 4.7), and so do collisions between rows. <b>Proposal:</b> rotate at random, on every read, which of a cell's three sense amplifiers reads
+to one chip: profiling another chip does not calibrate it, but reprogramming a row of the victim would (revision 4.7 ran programming under LOCK; revision 4.9 refuses it,
+13e), and so do collisions between rows. <b>Proposal:</b> rotate at random, on every read, which of a cell's three sense amplifiers reads
 which device (a 3:1 switch per amplifier, decode rotated back in logic): {r1['max_abs_t'] if r1 else 'not run'} in the model. Not drawn, not in the RTL.</p>
 {attack_chart(att)}
 {mw_txt(att)}
 <p>Cost of a constant LRS count: the one-of-three read current is {r(il + 2 * ih, 1 / 3, (il + ih, 2 * ih)):.2f}× the 2T2R mean at one third zero weights,
 {r(il + 2 * ih, 0.7, (il + ih, 2 * ih)):.2f}× at 70 % zeros (SkyWater's published states).{prog} Gain besides security: every single-device flip gives an invalid code
-(9 of 9; 2 of 6 in 2T2R, where the other 4 become another valid weight). Still open: refuse programming under LOCK; LOCK after reset; the
+(9 of 9; 2 of 6 in 2T2R, where the other 4 become another valid weight). Still open (the two LOCK gaps are closed in revision 4.9, 13e): the
 sense register's switching; the programming profile with reprogrammed groups; localized EM on the separate bit lines; trained weights.</p>
 </section>
 """

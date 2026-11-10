@@ -8,9 +8,9 @@ read_db /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/2_1_floorpla
 read_sdc /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/2_1_floorplan.sdc
 source /w/flow/orfs/platforms_b/sky130hd/setRC.tcl
 No macros found: Skipping macro_placement
-Design area 102620 um^2 64% utilization.
+Design area 99304 um^2 62% utilization.
 write_db /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/2_2_floorplan_macro.odb
-Elapsed time: 0:01.79[h:]min:sec. CPU time: user 0.40 sys 0.12 (28%). Peak memory: 117504KB.
+Elapsed time: 0:02.24[h:]min:sec. CPU time: user 0.51 sys 0.16 (29%). Peak memory: 116992KB.
 Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
                                      s        s  Elapsed       MB [0:10)
-2_2_floorplan_macro    .odb          1        1     0.29      114 5fa9683bdd
+2_2_floorplan_macro    .odb          2        1     0.30      114 5e33bc625c

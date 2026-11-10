@@ -1,0 +1,215 @@
+{
+ "faults": 26,
+ "run": 26,
+ "detected": 26,
+ "results": [
+  {
+   "name": "reset pulse: bit-line polarity of P devices inverted",
+   "status": "caught",
+   "first_failure": "FAIL: PITER 15 differs from the 36 device-selecting pulses the array received (row 0)",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 1,
+   "id": 0
+  },
+  {
+   "name": "reset pulse: source lines not at the program rail",
+   "status": "caught",
+   "first_failure": "FAIL: PITER 13 differs from the 34 device-selecting pulses the array received (row 0)",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 1,
+   "id": 1
+  },
+  {
+   "name": "set pulse: N bit lines follow the P mask",
+   "status": "caught",
+   "first_failure": "FAIL: PITER 21 differs from the 15 device-selecting pulses the array received (row 0)",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 1,
+   "id": 2
+  },
+  {
+   "name": "word line off and lines released in the same cycle (no WLOFF)",
+   "status": "caught",
+   "first_failure": "FAIL: pulse on a device that had already passed verify (row 0, 154 times)",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 1,
+   "id": 3
+  },
+  {
+   "name": "no settling time before the word line",
+   "status": "caught",
+   "first_failure": "FAIL: result changed by writes during BUSY, column 0",
+   "in_test": "5b. directed tests: read reference, satu",
+   "seconds": 89,
+   "id": 4
+  },
+  {
+   "name": "pulse one power of two too short",
+   "status": "caught",
+   "first_failure": "FAIL: 11282 electrical or timing violations at the macro interface",
+   "in_test": "6. ternary digits network through the RT",
+   "seconds": 429,
+   "id": 5
+  },
+  {
+   "name": "sense time one power of two too short",
+   "status": "caught",
+   "first_failure": "FAIL: pulse on a device that had already passed verify (row 0, 30 times)",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 1,
+   "id": 6
+  },
+  {
+   "name": "set verify uses the mid reference",
+   "status": "caught",
+   "first_failure": "FAIL: device state after programming r1 c15",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 5,
+   "id": 7
+  },
+  {
+   "name": "reset verify uses the mid reference",
+   "status": "caught",
+   "first_failure": "FAIL: 15 uA device passed the reset verify (15.0 uA after programming)",
+   "in_test": "5b. directed tests: read reference, satu",
+   "seconds": 90,
+   "id": 8
+  },
+  {
+   "name": "read uses the set-target reference",
+   "status": "caught",
+   "first_failure": "FAIL: fixed-latency product 0: 72 rows not read exactly once",
+   "in_test": "3. digital products against the exact do",
+   "seconds": 8,
+   "id": 9
+  },
+  {
+   "name": "second sampling flip-flop bypassed (samples after the word line)",
+   "status": "caught",
+   "first_failure": "FAIL: pulse on a device that had already passed verify (row 0, 53 times)",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 1,
+   "id": 10
+  },
+  {
+   "name": "sense outputs of P and N exchanged",
+   "status": "caught",
+   "first_failure": "FAIL: pulse on a device that had already passed verify (row 0, 154 times)",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 1,
+   "id": 11
+  },
+  {
+   "name": "word line of the neighbouring row",
+   "status": "caught",
+   "first_failure": "FAIL: pulse on another row than 0",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 1,
+   "id": 12
+  },
+  {
+   "name": "pulses on the read rail",
+   "status": "caught",
+   "first_failure": "FAIL: PITER 21 differs from the 0 device-selecting pulses the array received (row 0)",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 1,
+   "id": 13
+  },
+  {
+   "name": "pulse strobe never raised",
+   "status": "caught",
+   "first_failure": "FAIL: 90256 electrical or timing violations at the macro interface",
+   "in_test": "6. ternary digits network through the RT",
+   "seconds": 441,
+   "id": 14
+  },
+  {
+   "name": "pulse kind output always set",
+   "status": "caught",
+   "first_failure": "FAIL: 5363 electrical or timing violations at the macro interface",
+   "in_test": "6. ternary digits network through the RT",
+   "seconds": 441,
+   "id": 15
+  },
+  {
+   "name": "amplitude output one step high",
+   "status": "caught",
+   "first_failure": "FAIL: pulse amplitude did not start at 0 and rise by one per pulse (row 0, 42 pulses out of sequence)",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 1,
+   "id": 16
+  },
+  {
+   "name": "bit lines on the sense amplifiers during pulses",
+   "status": "caught",
+   "first_failure": "FAIL: 420376 electrical or timing violations at the macro interface",
+   "in_test": "6. ternary digits network through the RT",
+   "seconds": 464,
+   "id": 17
+  },
+  {
+   "name": "lines left floating after an operation",
+   "status": "caught",
+   "first_failure": "FAIL: 10815984 electrical or timing violations at the macro interface",
+   "in_test": "6. ternary digits network through the RT",
+   "seconds": 470,
+   "id": 18
+  },
+  {
+   "name": "no break before make when lines leave ground",
+   "status": "caught",
+   "first_failure": "FAIL: 7220031 electrical or timing violations at the macro interface",
+   "in_test": "6. ternary digits network through the RT",
+   "seconds": 456,
+   "id": 19
+  },
+  {
+   "name": "no break before make when lines return to ground",
+   "status": "caught",
+   "first_failure": "FAIL: 7220031 electrical or timing violations at the macro interface",
+   "in_test": "6. ternary digits network through the RT",
+   "seconds": 444,
+   "id": 20
+  },
+  {
+   "name": "flt dropped in the cycle the rails switch on",
+   "status": "caught",
+   "first_failure": "FAIL: 149666 electrical or timing violations at the macro interface",
+   "in_test": "6. ternary digits network through the RT",
+   "seconds": 438,
+   "id": 21
+  },
+  {
+   "name": "lines float after reset",
+   "status": "caught",
+   "first_failure": "FAIL: 144 electrical or timing violations at the macro interface",
+   "in_test": "6. ternary digits network through the RT",
+   "seconds": 450,
+   "id": 22
+  },
+  {
+   "name": "acknowledge one cycle early (before the lines are grounded)",
+   "status": "caught",
+   "first_failure": "FAIL: constant-time programming: 21 pulses instead of 21 + 21 (row 0)",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 1,
+   "id": 23
+  },
+  {
+   "name": "an analog-sum request drives the array",
+   "status": "caught",
+   "first_failure": "FAIL: chip analog product 0 touched the array",
+   "in_test": "4. analog-mode raw counts",
+   "seconds": 90,
+   "id": 24
+  },
+  {
+   "name": "request parameters not latched (mask read live)",
+   "status": "caught",
+   "first_failure": "FAIL: PITER 21 differs from the 36 device-selecting pulses the array received (row 0)",
+   "in_test": "2. programming all 72 rows with verify",
+   "seconds": 1,
+   "id": 25
+  }
+ ]
+}

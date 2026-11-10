@@ -11,8 +11,8 @@ mode prove
 abc pdr
 
 [script]
-prove:     read_slang --top tcim_miter tcim_pkg.sv tcim_core.sv tcim_miter.sv
-prove_pnx: read_slang -D TCIM_ENC_PNX --top tcim_miter tcim_pkg.sv tcim_core.sv tcim_miter.sv
+prove:     read_slang -D FORMAL_ANYLOCK --top tcim_miter tcim_pkg.sv tcim_core.sv tcim_miter.sv
+prove_pnx: read_slang -D FORMAL_ANYLOCK -D TCIM_ENC_PNX --top tcim_miter tcim_pkg.sv tcim_core.sv tcim_miter.sv
 prep -top tcim_miter
 memory_map
 techmap -map +/techmap.v t:$shiftx t:$shift

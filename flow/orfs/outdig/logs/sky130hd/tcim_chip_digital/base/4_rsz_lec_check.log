@@ -1,21 +1,21 @@
-[2026-11-07 13:20:40.582] [miter_logger] [info] MiterStrategy::run starting
-[2026-11-07 13:20:40.583] [miter_logger] [info] Collecting POs for design 0: tcim_chip_digital
+[2026-11-09 15:23:51.323] [miter_logger] [info] MiterStrategy::run starting
+[2026-11-09 15:23:51.324] [miter_logger] [info] Collecting POs for design 0: tcim_chip_digital
 
-[2026-11-07 13:20:40.620] [miter_logger] [info] Collected 1595 PIs for design 0
+[2026-11-09 15:23:51.373] [miter_logger] [info] Collected 1596 PIs for design 0
 
-[2026-11-07 13:20:40.621] [miter_logger] [info] Collected 4472 POs for design 0
+[2026-11-09 15:23:51.373] [miter_logger] [info] Collected 4481 POs for design 0
 
-[2026-11-07 13:20:40.622] [miter_logger] [info] design 0 PI summary by model/term (1595 total terminals, 17 unique rows):
+[2026-11-09 15:23:51.374] [miter_logger] [info] design 0 PI summary by model/term (1596 total terminals, 17 unique rows):
 | Model                     | Term   | Count |
 |---------------------------|--------|-------|
-| sky130_fd_sc_hd__dfrtp_1  | Q      |  1354 |
+| sky130_fd_sc_hd__dfrtp_1  | Q      |  1352 |
 | sky130_fd_sc_hd__dlclkp_1 | GCLK   |    85 |
-| sky130_fd_sc_hd__conb_1   | HI     |    36 |
-| sky130_fd_sc_hd__conb_1   | LO     |    36 |
+| sky130_fd_sc_hd__conb_1   | HI     |    35 |
+| sky130_fd_sc_hd__conb_1   | LO     |    35 |
 | tcim_chip_digital         | sa_n   |    24 |
 | tcim_chip_digital         | sa_p   |    24 |
-| sky130_fd_sc_hd__dfstp_2  | Q      |    13 |
-| sky130_fd_sc_hd__dfrtp_2  | Q      |     9 |
+| sky130_fd_sc_hd__dfstp_2  | Q      |    16 |
+| sky130_fd_sc_hd__dfrtp_2  | Q      |    11 |
 | tcim_chip_digital         | cfg_tp |     3 |
 | tcim_chip_digital         | cfg_ts |     3 |
 | tcim_chip_digital         | cfg_tr |     2 |
@@ -26,25 +26,25 @@
 | tcim_chip_digital         | rst_n  |     1 |
 | tcim_chip_digital         | sck    |     1 |
 
-[2026-11-07 13:20:40.624] [miter_logger] [info] design 0 PO summary by model/term (4472 total terminals, 29 unique rows):
+[2026-11-09 15:23:51.375] [miter_logger] [info] design 0 PO summary by model/term (4481 total terminals, 29 unique rows):
 | Model                     | Term    | Count |
 |---------------------------|---------|-------|
-| sky130_fd_sc_hd__dfrtp_1  | CLK     |  1354 |
-| sky130_fd_sc_hd__dfrtp_1  | D       |  1354 |
-| sky130_fd_sc_hd__dfrtp_1  | RESET_B |  1354 |
+| sky130_fd_sc_hd__dfrtp_1  | CLK     |  1352 |
+| sky130_fd_sc_hd__dfrtp_1  | D       |  1352 |
+| sky130_fd_sc_hd__dfrtp_1  | RESET_B |  1352 |
 | sky130_fd_sc_hd__dlclkp_1 | CLK     |    85 |
 | sky130_fd_sc_hd__dlclkp_1 | GATE    |    85 |
 | tcim_chip_digital         | wl_on   |    72 |
 | tcim_chip_digital         | bln_prg |    24 |
 | tcim_chip_digital         | blp_prg |    24 |
 | tcim_chip_digital         | tie_lo  |    22 |
-| sky130_fd_sc_hd__dfstp_2  | CLK     |    13 |
-| sky130_fd_sc_hd__dfstp_2  | D       |    13 |
-| sky130_fd_sc_hd__dfstp_2  | SET_B   |    13 |
+| sky130_fd_sc_hd__dfstp_2  | CLK     |    16 |
+| sky130_fd_sc_hd__dfstp_2  | D       |    16 |
+| sky130_fd_sc_hd__dfstp_2  | SET_B   |    16 |
 | tcim_chip_digital         | tie_hi  |    13 |
-| sky130_fd_sc_hd__dfrtp_2  | CLK     |     9 |
-| sky130_fd_sc_hd__dfrtp_2  | D       |     9 |
-| sky130_fd_sc_hd__dfrtp_2  | RESET_B |     9 |
+| sky130_fd_sc_hd__dfrtp_2  | CLK     |    11 |
+| sky130_fd_sc_hd__dfrtp_2  | D       |    11 |
+| sky130_fd_sc_hd__dfrtp_2  | RESET_B |    11 |
 | tcim_chip_digital         | pamp    |     5 |
 | tcim_chip_digital         | ref_sel |     3 |
 | sky130_fd_sc_hd__dfrtp_4  | CLK     |     1 |
@@ -59,26 +59,26 @@
 | tcim_chip_digital         | sl_prg  |     1 |
 | tcim_chip_digital         | wl_prog |     1 |
 
-[2026-11-07 13:20:40.626] [miter_logger] [info] Collecting POs for design 1: tcim_chip_digital
+[2026-11-09 15:23:51.377] [miter_logger] [info] Collecting POs for design 1: tcim_chip_digital
 
-[2026-11-07 13:20:40.655] [miter_logger] [info] size of common inputs: 1438
-[2026-11-07 13:20:40.655] [miter_logger] [info] size of diff0 inputs: 0
-[2026-11-07 13:20:40.656] [miter_logger] [info] size of diff1 inputs: 0
-[2026-11-07 13:20:40.656] [miter_logger] [info] Collected 1595 PIs for design 1
+[2026-11-09 15:23:51.410] [miter_logger] [info] size of common inputs: 1441
+[2026-11-09 15:23:51.411] [miter_logger] [info] size of diff0 inputs: 0
+[2026-11-09 15:23:51.411] [miter_logger] [info] size of diff1 inputs: 0
+[2026-11-09 15:23:51.412] [miter_logger] [info] Collected 1596 PIs for design 1
 
-[2026-11-07 13:20:40.657] [miter_logger] [info] Collected 4472 POs for design 1
+[2026-11-09 15:23:51.412] [miter_logger] [info] Collected 4481 POs for design 1
 
-[2026-11-07 13:20:40.657] [miter_logger] [info] design 1 PI summary by model/term (1595 total terminals, 17 unique rows):
+[2026-11-09 15:23:51.413] [miter_logger] [info] design 1 PI summary by model/term (1596 total terminals, 17 unique rows):
 | Model                     | Term   | Count |
 |---------------------------|--------|-------|
-| sky130_fd_sc_hd__dfrtp_1  | Q      |  1354 |
+| sky130_fd_sc_hd__dfrtp_1  | Q      |  1352 |
 | sky130_fd_sc_hd__dlclkp_1 | GCLK   |    85 |
-| sky130_fd_sc_hd__conb_1   | HI     |    36 |
-| sky130_fd_sc_hd__conb_1   | LO     |    36 |
+| sky130_fd_sc_hd__conb_1   | HI     |    35 |
+| sky130_fd_sc_hd__conb_1   | LO     |    35 |
 | tcim_chip_digital         | sa_n   |    24 |
 | tcim_chip_digital         | sa_p   |    24 |
-| sky130_fd_sc_hd__dfstp_2  | Q      |    13 |
-| sky130_fd_sc_hd__dfrtp_2  | Q      |     9 |
+| sky130_fd_sc_hd__dfstp_2  | Q      |    16 |
+| sky130_fd_sc_hd__dfrtp_2  | Q      |    11 |
 | tcim_chip_digital         | cfg_tp |     3 |
 | tcim_chip_digital         | cfg_ts |     3 |
 | tcim_chip_digital         | cfg_tr |     2 |
@@ -89,25 +89,25 @@
 | tcim_chip_digital         | rst_n  |     1 |
 | tcim_chip_digital         | sck    |     1 |
 
-[2026-11-07 13:20:40.659] [miter_logger] [info] design 1 PO summary by model/term (4472 total terminals, 29 unique rows):
+[2026-11-09 15:23:51.414] [miter_logger] [info] design 1 PO summary by model/term (4481 total terminals, 29 unique rows):
 | Model                     | Term    | Count |
 |---------------------------|---------|-------|
-| sky130_fd_sc_hd__dfrtp_1  | CLK     |  1354 |
-| sky130_fd_sc_hd__dfrtp_1  | D       |  1354 |
-| sky130_fd_sc_hd__dfrtp_1  | RESET_B |  1354 |
+| sky130_fd_sc_hd__dfrtp_1  | CLK     |  1352 |
+| sky130_fd_sc_hd__dfrtp_1  | D       |  1352 |
+| sky130_fd_sc_hd__dfrtp_1  | RESET_B |  1352 |
 | sky130_fd_sc_hd__dlclkp_1 | CLK     |    85 |
 | sky130_fd_sc_hd__dlclkp_1 | GATE    |    85 |
 | tcim_chip_digital         | wl_on   |    72 |
 | tcim_chip_digital         | bln_prg |    24 |
 | tcim_chip_digital         | blp_prg |    24 |
 | tcim_chip_digital         | tie_lo  |    22 |
-| sky130_fd_sc_hd__dfstp_2  | CLK     |    13 |
-| sky130_fd_sc_hd__dfstp_2  | D       |    13 |
-| sky130_fd_sc_hd__dfstp_2  | SET_B   |    13 |
+| sky130_fd_sc_hd__dfstp_2  | CLK     |    16 |
+| sky130_fd_sc_hd__dfstp_2  | D       |    16 |
+| sky130_fd_sc_hd__dfstp_2  | SET_B   |    16 |
 | tcim_chip_digital         | tie_hi  |    13 |
-| sky130_fd_sc_hd__dfrtp_2  | CLK     |     9 |
-| sky130_fd_sc_hd__dfrtp_2  | D       |     9 |
-| sky130_fd_sc_hd__dfrtp_2  | RESET_B |     9 |
+| sky130_fd_sc_hd__dfrtp_2  | CLK     |    11 |
+| sky130_fd_sc_hd__dfrtp_2  | D       |    11 |
+| sky130_fd_sc_hd__dfrtp_2  | RESET_B |    11 |
 | tcim_chip_digital         | pamp    |     5 |
 | tcim_chip_digital         | ref_sel |     3 |
 | sky130_fd_sc_hd__dfrtp_4  | CLK     |     1 |
@@ -122,20 +122,20 @@
 | tcim_chip_digital         | sl_prg  |     1 |
 | tcim_chip_digital         | wl_prog |     1 |
 
-[2026-11-07 13:20:40.661] [miter_logger] [info] normalizeInputs: starting
-[2026-11-07 13:20:40.663] [miter_logger] [info] size of common inputs: 1595
-[2026-11-07 13:20:40.663] [miter_logger] [info] size of diff0 inputs: 0
-[2026-11-07 13:20:40.664] [miter_logger] [info] size of diff1 inputs: 0
-[2026-11-07 13:20:40.665] [miter_logger] [info] normalizeOutputs: starting
-[2026-11-07 13:20:40.670] [miter_logger] [info] size of common outputs: 4472
-[2026-11-07 13:20:40.670] [miter_logger] [info] size of diff0 outputs: 0
-[2026-11-07 13:20:40.671] [miter_logger] [info] size of diff1 outputs: 0
-[2026-11-07 13:20:40.672] [miter_logger] [info] size of PIs in circuit 0: 1595
-[2026-11-07 13:20:40.673] [miter_logger] [info] size of PIs in circuit 1: 1595
-[2026-11-07 13:20:40.673] [miter_logger] [info] size of POs in circuit 0: 4472
-[2026-11-07 13:20:40.674] [miter_logger] [info] size of POs in circuit 1: 4472
-[2026-11-07 13:20:40.848] [miter_logger] [info] Building miter expression
-[2026-11-07 13:20:40.849] [miter_logger] [info] Finished building miter expression
-[2026-11-07 13:20:40.852] [miter_logger] [info] Starting solver
-[2026-11-07 13:20:40.852] [miter_logger] [info] SAT solver finished: UNSAT
-[2026-11-07 13:20:40.853] [miter_logger] [info] Circuits are IDENTICAL
+[2026-11-09 15:23:51.416] [miter_logger] [info] normalizeInputs: starting
+[2026-11-09 15:23:51.419] [miter_logger] [info] size of common inputs: 1596
+[2026-11-09 15:23:51.419] [miter_logger] [info] size of diff0 inputs: 0
+[2026-11-09 15:23:51.420] [miter_logger] [info] size of diff1 inputs: 0
+[2026-11-09 15:23:51.420] [miter_logger] [info] normalizeOutputs: starting
+[2026-11-09 15:23:51.426] [miter_logger] [info] size of common outputs: 4481
+[2026-11-09 15:23:51.426] [miter_logger] [info] size of diff0 outputs: 0
+[2026-11-09 15:23:51.427] [miter_logger] [info] size of diff1 outputs: 0
+[2026-11-09 15:23:51.427] [miter_logger] [info] size of PIs in circuit 0: 1596
+[2026-11-09 15:23:51.428] [miter_logger] [info] size of PIs in circuit 1: 1596
+[2026-11-09 15:23:51.428] [miter_logger] [info] size of POs in circuit 0: 4481
+[2026-11-09 15:23:51.429] [miter_logger] [info] size of POs in circuit 1: 4481
+[2026-11-09 15:23:51.612] [miter_logger] [info] Building miter expression
+[2026-11-09 15:23:51.613] [miter_logger] [info] Finished building miter expression
+[2026-11-09 15:23:51.614] [miter_logger] [info] Starting solver
+[2026-11-09 15:23:51.614] [miter_logger] [info] SAT solver finished: UNSAT
+[2026-11-09 15:23:51.615] [miter_logger] [info] Circuits are IDENTICAL

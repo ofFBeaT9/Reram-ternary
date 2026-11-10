@@ -8,10 +8,10 @@ read_db /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/5_2_route.od
 read_sdc /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/5_1_grt.sdc
 source /w/flow/orfs/platforms_b/sky130hd/setRC.tcl
 filler_placement "sky130_fd_sc_hd__fill_1 sky130_fd_sc_hd__fill_2 sky130_fd_sc_hd__fill_4 sky130_fd_sc_hd__fill_8"
-[INFO DPL-0001] Placed 10068 filler instances.
-Design area 118689 um^2 74% utilization.
+[INFO DPL-0001] Placed 10853 filler instances.
+Design area 114967 um^2 72% utilization.
 write_db /w/flow/orfs/outdig/results/sky130hd/tcim_chip_digital/base/5_3_fillcell.odb
-Elapsed time: 0:05.55[h:]min:sec. CPU time: user 0.90 sys 1.11 (36%). Peak memory: 160768KB.
+Elapsed time: 0:03.98[h:]min:sec. CPU time: user 0.36 sys 0.17 (13%). Peak memory: 161024KB.
 Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
                                      s        s  Elapsed       MB [0:10)
-5_3_fillcell           .odb          5        2     0.36      157 e2af065c82
+5_3_fillcell           .odb          3        1     0.13      157 36b6cbb9ad

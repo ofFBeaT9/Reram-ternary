@@ -8,9 +8,8 @@ about 0 on 3T3R. The red team found a chip-specific residual in row-aligned read
 with which device holds the LRS, gives |t| 26.32 at 150,000 traces per group. A new proposal removes that residual in the model:
 rotate at random, on every read, which of a cell's three sense amplifiers reads which device (|t| 2.70).
 
-Two logic gaps must close before the security claim holds for the system:
-- programming runs under LOCK;
-- reset clears LOCK.
+Two logic gaps had to close before the security claim holds for the system (programming under LOCK; reset clearing LOCK). Revision
+4.9 closes both (docs/STATUS.md 15.9).
 
 All results are about the model, not silicon.
 
@@ -38,8 +37,9 @@ TCHES 2027/3 (deadline 15 January 2027) needs the open items below.
 
 1. Draw the sense-amplifier rotation (a 3:1 switch per amplifier) and put it in the RTL with its decode; then test, prove and mutate
    it.
-2. Refuse programming under LOCK, or erase the whole array first. This changes revision 4.7's signed-off logic, so it is the owner's
-   decision.
+2. Done in revision 4.9 (9 November, owner's decision): LOCK set by reset, cleared only by a constant-time erase of the whole array;
+   programming refused under LOCK; LOCK in three flip-flops. Test benches, all fault campaigns, place and route, gate level and
+   ChipFoundry's precheck (14 of 14) pass; some proofs were still open at commit (docs/STATUS.md 15.9).
 3. Tests the red team asked for:
    - matched-zero-count and multi-matrix tests;
    - more than 150,000 traces;

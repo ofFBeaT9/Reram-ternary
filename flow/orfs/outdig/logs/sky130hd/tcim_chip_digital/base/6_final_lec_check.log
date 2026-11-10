@@ -1,18 +1,18 @@
-[2026-11-07 14:15:10.334] [miter_logger] [info] MiterStrategy::run starting
-[2026-11-07 14:15:10.335] [miter_logger] [info] Collecting POs for design 0: tcim_chip_digital
+[2026-11-09 15:49:32.615] [miter_logger] [info] MiterStrategy::run starting
+[2026-11-09 15:49:32.616] [miter_logger] [info] Collecting POs for design 0: tcim_chip_digital
 
-[2026-11-07 14:15:10.485] [miter_logger] [info] Collected 1527 PIs for design 0
+[2026-11-09 15:49:32.691] [miter_logger] [info] Collected 1530 PIs for design 0
 
-[2026-11-07 14:15:10.486] [miter_logger] [info] Collected 4472 POs for design 0
+[2026-11-09 15:49:32.692] [miter_logger] [info] Collected 4481 POs for design 0
 
-[2026-11-07 14:15:10.486] [miter_logger] [info] design 0 PI summary by model/term (1527 total terminals, 15 unique rows):
+[2026-11-09 15:49:32.693] [miter_logger] [info] design 0 PI summary by model/term (1530 total terminals, 15 unique rows):
 | Model                     | Term   | Count |
 |---------------------------|--------|-------|
 | sky130_fd_sc_hd__dfrtp_1  | Q      |  1364 |
 | sky130_fd_sc_hd__dlclkp_1 | GCLK   |    85 |
 | tcim_chip_digital         | sa_n   |    24 |
 | tcim_chip_digital         | sa_p   |    24 |
-| sky130_fd_sc_hd__dfstp_2  | Q      |    13 |
+| sky130_fd_sc_hd__dfstp_2  | Q      |    16 |
 | tcim_chip_digital         | cfg_tp |     3 |
 | tcim_chip_digital         | cfg_ts |     3 |
 | sky130_fd_sc_hd__conb_1   | HI     |     2 |
@@ -24,7 +24,7 @@
 | tcim_chip_digital         | rst_n  |     1 |
 | tcim_chip_digital         | sck    |     1 |
 
-[2026-11-07 14:15:10.561] [miter_logger] [info] design 0 PO summary by model/term (4472 total terminals, 23 unique rows):
+[2026-11-09 15:49:32.695] [miter_logger] [info] design 0 PO summary by model/term (4481 total terminals, 23 unique rows):
 | Model                     | Term    | Count |
 |---------------------------|---------|-------|
 | sky130_fd_sc_hd__dfrtp_1  | CLK     |  1364 |
@@ -36,9 +36,9 @@
 | tcim_chip_digital         | bln_prg |    24 |
 | tcim_chip_digital         | blp_prg |    24 |
 | tcim_chip_digital         | tie_lo  |    22 |
-| sky130_fd_sc_hd__dfstp_2  | CLK     |    13 |
-| sky130_fd_sc_hd__dfstp_2  | D       |    13 |
-| sky130_fd_sc_hd__dfstp_2  | SET_B   |    13 |
+| sky130_fd_sc_hd__dfstp_2  | CLK     |    16 |
+| sky130_fd_sc_hd__dfstp_2  | D       |    16 |
+| sky130_fd_sc_hd__dfstp_2  | SET_B   |    16 |
 | tcim_chip_digital         | tie_hi  |    13 |
 | tcim_chip_digital         | pamp    |     5 |
 | tcim_chip_digital         | ref_sel |     3 |
@@ -51,26 +51,26 @@
 | tcim_chip_digital         | sl_prg  |     1 |
 | tcim_chip_digital         | wl_prog |     1 |
 
-[2026-11-07 14:15:10.563] [miter_logger] [info] Collecting POs for design 1: tcim_chip_digital
+[2026-11-09 15:49:32.697] [miter_logger] [info] Collecting POs for design 1: tcim_chip_digital
 
-[2026-11-07 14:15:10.589] [miter_logger] [info] size of common inputs: 1438
-[2026-11-07 14:15:10.590] [miter_logger] [info] size of diff0 inputs: 0
-[2026-11-07 14:15:10.590] [miter_logger] [info] size of diff1 inputs: 0
-[2026-11-07 14:15:10.591] [miter_logger] [info] Collected 1595 PIs for design 1
+[2026-11-09 15:49:32.721] [miter_logger] [info] size of common inputs: 1441
+[2026-11-09 15:49:32.722] [miter_logger] [info] size of diff0 inputs: 0
+[2026-11-09 15:49:32.722] [miter_logger] [info] size of diff1 inputs: 0
+[2026-11-09 15:49:32.723] [miter_logger] [info] Collected 1596 PIs for design 1
 
-[2026-11-07 14:15:10.591] [miter_logger] [info] Collected 4472 POs for design 1
+[2026-11-09 15:49:32.723] [miter_logger] [info] Collected 4481 POs for design 1
 
-[2026-11-07 14:15:10.592] [miter_logger] [info] design 1 PI summary by model/term (1595 total terminals, 17 unique rows):
+[2026-11-09 15:49:32.724] [miter_logger] [info] design 1 PI summary by model/term (1596 total terminals, 17 unique rows):
 | Model                     | Term   | Count |
 |---------------------------|--------|-------|
-| sky130_fd_sc_hd__dfrtp_1  | Q      |  1354 |
+| sky130_fd_sc_hd__dfrtp_1  | Q      |  1352 |
 | sky130_fd_sc_hd__dlclkp_1 | GCLK   |    85 |
-| sky130_fd_sc_hd__conb_1   | HI     |    36 |
-| sky130_fd_sc_hd__conb_1   | LO     |    36 |
+| sky130_fd_sc_hd__conb_1   | HI     |    35 |
+| sky130_fd_sc_hd__conb_1   | LO     |    35 |
 | tcim_chip_digital         | sa_n   |    24 |
 | tcim_chip_digital         | sa_p   |    24 |
-| sky130_fd_sc_hd__dfstp_2  | Q      |    13 |
-| sky130_fd_sc_hd__dfrtp_2  | Q      |     9 |
+| sky130_fd_sc_hd__dfstp_2  | Q      |    16 |
+| sky130_fd_sc_hd__dfrtp_2  | Q      |    11 |
 | tcim_chip_digital         | cfg_tp |     3 |
 | tcim_chip_digital         | cfg_ts |     3 |
 | tcim_chip_digital         | cfg_tr |     2 |
@@ -81,25 +81,25 @@
 | tcim_chip_digital         | rst_n  |     1 |
 | tcim_chip_digital         | sck    |     1 |
 
-[2026-11-07 14:15:10.593] [miter_logger] [info] design 1 PO summary by model/term (4472 total terminals, 29 unique rows):
+[2026-11-09 15:49:32.725] [miter_logger] [info] design 1 PO summary by model/term (4481 total terminals, 29 unique rows):
 | Model                     | Term    | Count |
 |---------------------------|---------|-------|
-| sky130_fd_sc_hd__dfrtp_1  | CLK     |  1354 |
-| sky130_fd_sc_hd__dfrtp_1  | D       |  1354 |
-| sky130_fd_sc_hd__dfrtp_1  | RESET_B |  1354 |
+| sky130_fd_sc_hd__dfrtp_1  | CLK     |  1352 |
+| sky130_fd_sc_hd__dfrtp_1  | D       |  1352 |
+| sky130_fd_sc_hd__dfrtp_1  | RESET_B |  1352 |
 | sky130_fd_sc_hd__dlclkp_1 | CLK     |    85 |
 | sky130_fd_sc_hd__dlclkp_1 | GATE    |    85 |
 | tcim_chip_digital         | wl_on   |    72 |
 | tcim_chip_digital         | bln_prg |    24 |
 | tcim_chip_digital         | blp_prg |    24 |
 | tcim_chip_digital         | tie_lo  |    22 |
-| sky130_fd_sc_hd__dfstp_2  | CLK     |    13 |
-| sky130_fd_sc_hd__dfstp_2  | D       |    13 |
-| sky130_fd_sc_hd__dfstp_2  | SET_B   |    13 |
+| sky130_fd_sc_hd__dfstp_2  | CLK     |    16 |
+| sky130_fd_sc_hd__dfstp_2  | D       |    16 |
+| sky130_fd_sc_hd__dfstp_2  | SET_B   |    16 |
 | tcim_chip_digital         | tie_hi  |    13 |
-| sky130_fd_sc_hd__dfrtp_2  | CLK     |     9 |
-| sky130_fd_sc_hd__dfrtp_2  | D       |     9 |
-| sky130_fd_sc_hd__dfrtp_2  | RESET_B |     9 |
+| sky130_fd_sc_hd__dfrtp_2  | CLK     |    11 |
+| sky130_fd_sc_hd__dfrtp_2  | D       |    11 |
+| sky130_fd_sc_hd__dfrtp_2  | RESET_B |    11 |
 | tcim_chip_digital         | pamp    |     5 |
 | tcim_chip_digital         | ref_sel |     3 |
 | sky130_fd_sc_hd__dfrtp_4  | CLK     |     1 |
@@ -114,96 +114,94 @@
 | tcim_chip_digital         | sl_prg  |     1 |
 | tcim_chip_digital         | wl_prog |     1 |
 
-[2026-11-07 14:15:10.596] [miter_logger] [info] normalizeInputs: starting
-[2026-11-07 14:15:10.597] [miter_logger] [info] diff0 input: 22770.183.0.
-[2026-11-07 14:15:10.598] [miter_logger] [info] diff0 input: 22769.182.0.
-[2026-11-07 14:15:10.598] [miter_logger] [info] diff0 input: 22769.183.0.
-[2026-11-07 14:15:10.599] [miter_logger] [info] diff0 input: 22770.182.0.
-[2026-11-07 14:15:10.599] [miter_logger] [info] diff1 input: 26198.183.0.
-[2026-11-07 14:15:10.599] [miter_logger] [info] diff1 input: 25148.182.0.
-[2026-11-07 14:15:10.599] [miter_logger] [info] diff1 input: 25122.182.0.
-[2026-11-07 14:15:10.600] [miter_logger] [info] diff1 input: 25126.182.0.
-[2026-11-07 14:15:10.600] [miter_logger] [info] diff1 input: 25125.182.0.
-[2026-11-07 14:15:10.600] [miter_logger] [info] diff1 input: 25140.183.0.
-[2026-11-07 14:15:10.600] [miter_logger] [info] diff1 input: 25134.183.0.
-[2026-11-07 14:15:10.601] [miter_logger] [info] diff1 input: 25151.183.0.
-[2026-11-07 14:15:10.601] [miter_logger] [info] diff1 input: 25151.182.0.
-[2026-11-07 14:15:10.601] [miter_logger] [info] diff1 input: 25154.182.0.
-[2026-11-07 14:15:10.601] [miter_logger] [info] diff1 input: 25137.183.0.
-[2026-11-07 14:15:10.601] [miter_logger] [info] diff1 input: 25135.182.0.
-[2026-11-07 14:15:10.601] [miter_logger] [info] diff1 input: 25141.182.0.
-[2026-11-07 14:15:10.602] [miter_logger] [info] diff1 input: 25139.182.0.
-[2026-11-07 14:15:10.602] [miter_logger] [info] diff1 input: 25123.183.0.
-[2026-11-07 14:15:10.602] [miter_logger] [info] diff1 input: 25144.183.0.
-[2026-11-07 14:15:10.602] [miter_logger] [info] diff1 input: 25122.183.0.
-[2026-11-07 14:15:10.602] [miter_logger] [info] diff1 input: 25133.183.0.
-[2026-11-07 14:15:10.602] [miter_logger] [info] diff1 input: 25153.183.0.
-[2026-11-07 14:15:10.603] [miter_logger] [info] diff1 input: 25136.182.0.
-[2026-11-07 14:15:10.603] [miter_logger] [info] diff1 input: 25156.183.0.
-[2026-11-07 14:15:10.603] [miter_logger] [info] diff1 input: 25132.182.0.
-[2026-11-07 14:15:10.603] [miter_logger] [info] diff1 input: 25143.183.0.
-[2026-11-07 14:15:10.603] [miter_logger] [info] diff1 input: 25132.183.0.
-[2026-11-07 14:15:10.604] [miter_logger] [info] diff1 input: 25130.183.0.
-[2026-11-07 14:15:10.604] [miter_logger] [info] diff1 input: 25123.182.0.
-[2026-11-07 14:15:10.604] [miter_logger] [info] diff1 input: 25146.183.0.
-[2026-11-07 14:15:10.604] [miter_logger] [info] diff1 input: 25130.182.0.
-[2026-11-07 14:15:10.604] [miter_logger] [info] diff1 input: 25143.182.0.
-[2026-11-07 14:15:10.604] [miter_logger] [info] diff1 input: 25155.183.0.
-[2026-11-07 14:15:10.604] [miter_logger] [info] diff1 input: 25147.183.0.
-[2026-11-07 14:15:10.605] [miter_logger] [info] diff1 input: 25138.182.0.
-[2026-11-07 14:15:10.605] [miter_logger] [info] diff1 input: 25152.183.0.
-[2026-11-07 14:15:10.605] [miter_logger] [info] diff1 input: 25146.182.0.
-[2026-11-07 14:15:10.605] [miter_logger] [info] diff1 input: 25138.183.0.
-[2026-11-07 14:15:10.605] [miter_logger] [info] diff1 input: 25155.182.0.
-[2026-11-07 14:15:10.605] [miter_logger] [info] diff1 input: 25124.182.0.
-[2026-11-07 14:15:10.605] [miter_logger] [info] diff1 input: 25136.183.0.
-[2026-11-07 14:15:10.606] [miter_logger] [info] diff1 input: 25124.183.0.
-[2026-11-07 14:15:10.606] [miter_logger] [info] diff1 input: 25144.182.0.
-[2026-11-07 14:15:10.606] [miter_logger] [info] diff1 input: 25140.182.0.
-[2026-11-07 14:15:10.606] [miter_logger] [info] diff1 input: 25128.182.0.
-[2026-11-07 14:15:10.606] [miter_logger] [info] diff1 input: 25128.183.0.
-[2026-11-07 14:15:10.606] [miter_logger] [info] diff1 input: 25133.182.0.
-[2026-11-07 14:15:10.606] [miter_logger] [info] diff1 input: 25134.182.0.
-[2026-11-07 14:15:10.606] [miter_logger] [info] diff1 input: 25137.182.0.
-[2026-11-07 14:15:10.607] [miter_logger] [info] diff1 input: 25141.183.0.
-[2026-11-07 14:15:10.607] [miter_logger] [info] diff1 input: 25142.183.0.
-[2026-11-07 14:15:10.607] [miter_logger] [info] diff1 input: 25152.182.0.
-[2026-11-07 14:15:10.607] [miter_logger] [info] diff1 input: 25131.183.0.
-[2026-11-07 14:15:10.607] [miter_logger] [info] diff1 input: 25145.182.0.
-[2026-11-07 14:15:10.607] [miter_logger] [info] diff1 input: 25156.182.0.
-[2026-11-07 14:15:10.607] [miter_logger] [info] diff1 input: 25129.182.0.
-[2026-11-07 14:15:10.607] [miter_logger] [info] diff1 input: 25147.182.0.
-[2026-11-07 14:15:10.607] [miter_logger] [info] diff1 input: 25148.183.0.
-[2026-11-07 14:15:10.607] [miter_logger] [info] diff1 input: 25131.182.0.
-[2026-11-07 14:15:10.608] [miter_logger] [info] diff1 input: 25150.182.0.
-[2026-11-07 14:15:10.608] [miter_logger] [info] diff1 input: 25127.183.0.
-[2026-11-07 14:15:10.608] [miter_logger] [info] diff1 input: 25153.182.0.
-[2026-11-07 14:15:10.608] [miter_logger] [info] diff1 input: 25127.182.0.
-[2026-11-07 14:15:10.608] [miter_logger] [info] diff1 input: 25139.183.0.
-[2026-11-07 14:15:10.608] [miter_logger] [info] diff1 input: 25154.183.0.
-[2026-11-07 14:15:10.608] [miter_logger] [info] diff1 input: 25149.182.0.
-[2026-11-07 14:15:10.608] [miter_logger] [info] diff1 input: 25126.183.0.
-[2026-11-07 14:15:10.609] [miter_logger] [info] diff1 input: 25145.183.0.
-[2026-11-07 14:15:10.609] [miter_logger] [info] diff1 input: 25142.182.0.
-[2026-11-07 14:15:10.609] [miter_logger] [info] diff1 input: 25150.183.0.
-[2026-11-07 14:15:10.609] [miter_logger] [info] diff1 input: 26198.182.0.
-[2026-11-07 14:15:10.609] [miter_logger] [info] diff1 input: 25125.183.0.
-[2026-11-07 14:15:10.609] [miter_logger] [info] diff1 input: 25129.183.0.
-[2026-11-07 14:15:10.609] [miter_logger] [info] diff1 input: 25135.183.0.
-[2026-11-07 14:15:10.609] [miter_logger] [info] diff1 input: 25149.183.0.
-[2026-11-07 14:15:10.610] [miter_logger] [info] size of common inputs: 1523
-[2026-11-07 14:15:10.610] [miter_logger] [info] size of diff0 inputs: 4
-[2026-11-07 14:15:10.610] [miter_logger] [info] size of diff1 inputs: 72
-[2026-11-07 14:15:10.610] [miter_logger] [info] normalizeOutputs: starting
-[2026-11-07 14:15:10.614] [miter_logger] [info] size of common outputs: 4472
-[2026-11-07 14:15:10.614] [miter_logger] [info] size of diff0 outputs: 0
-[2026-11-07 14:15:10.615] [miter_logger] [info] size of diff1 outputs: 0
-[2026-11-07 14:15:10.615] [miter_logger] [info] size of PIs in circuit 0: 1527
-[2026-11-07 14:15:10.615] [miter_logger] [info] size of PIs in circuit 1: 1595
-[2026-11-07 14:15:10.615] [miter_logger] [info] size of POs in circuit 0: 4472
-[2026-11-07 14:15:10.616] [miter_logger] [info] size of POs in circuit 1: 4472
-[2026-11-07 14:15:10.815] [miter_logger] [info] Building miter expression
-[2026-11-07 14:15:10.815] [miter_logger] [info] Finished building miter expression
-[2026-11-07 14:15:10.827] [miter_logger] [info] Starting solver
-[2026-11-07 14:15:10.827] [miter_logger] [info] SAT solver finished: UNSAT
-[2026-11-07 14:15:10.828] [miter_logger] [info] Circuits are IDENTICAL
+[2026-11-09 15:49:32.727] [miter_logger] [info] normalizeInputs: starting
+[2026-11-09 15:49:32.728] [miter_logger] [info] diff0 input: 22249.182.0.
+[2026-11-09 15:49:32.728] [miter_logger] [info] diff0 input: 22249.183.0.
+[2026-11-09 15:49:32.729] [miter_logger] [info] diff0 input: 22250.182.0.
+[2026-11-09 15:49:32.730] [miter_logger] [info] diff0 input: 22250.183.0.
+[2026-11-09 15:49:32.730] [miter_logger] [info] diff1 input: 24631.182.0.
+[2026-11-09 15:49:32.731] [miter_logger] [info] diff1 input: 24625.183.0.
+[2026-11-09 15:49:32.732] [miter_logger] [info] diff1 input: 24624.183.0.
+[2026-11-09 15:49:32.732] [miter_logger] [info] diff1 input: 24609.183.0.
+[2026-11-09 15:49:32.733] [miter_logger] [info] diff1 input: 24620.182.0.
+[2026-11-09 15:49:32.733] [miter_logger] [info] diff1 input: 24627.182.0.
+[2026-11-09 15:49:32.734] [miter_logger] [info] diff1 input: 24613.182.0.
+[2026-11-09 15:49:32.734] [miter_logger] [info] diff1 input: 24610.183.0.
+[2026-11-09 15:49:32.735] [miter_logger] [info] diff1 input: 24613.183.0.
+[2026-11-09 15:49:32.735] [miter_logger] [info] diff1 input: 24606.183.0.
+[2026-11-09 15:49:32.736] [miter_logger] [info] diff1 input: 24604.183.0.
+[2026-11-09 15:49:32.736] [miter_logger] [info] diff1 input: 24605.183.0.
+[2026-11-09 15:49:32.737] [miter_logger] [info] diff1 input: 24602.183.0.
+[2026-11-09 15:49:32.737] [miter_logger] [info] diff1 input: 24607.182.0.
+[2026-11-09 15:49:32.738] [miter_logger] [info] diff1 input: 24632.183.0.
+[2026-11-09 15:49:32.738] [miter_logger] [info] diff1 input: 24610.182.0.
+[2026-11-09 15:49:32.739] [miter_logger] [info] diff1 input: 24627.183.0.
+[2026-11-09 15:49:32.739] [miter_logger] [info] diff1 input: 24618.182.0.
+[2026-11-09 15:49:32.740] [miter_logger] [info] diff1 input: 24611.183.0.
+[2026-11-09 15:49:32.740] [miter_logger] [info] diff1 input: 24624.182.0.
+[2026-11-09 15:49:32.741] [miter_logger] [info] diff1 input: 24599.183.0.
+[2026-11-09 15:49:32.741] [miter_logger] [info] diff1 input: 24608.183.0.
+[2026-11-09 15:49:32.742] [miter_logger] [info] diff1 input: 24603.182.0.
+[2026-11-09 15:49:32.742] [miter_logger] [info] diff1 input: 24618.183.0.
+[2026-11-09 15:49:32.742] [miter_logger] [info] diff1 input: 24614.183.0.
+[2026-11-09 15:49:32.743] [miter_logger] [info] diff1 input: 24612.183.0.
+[2026-11-09 15:49:32.743] [miter_logger] [info] diff1 input: 24628.183.0.
+[2026-11-09 15:49:32.743] [miter_logger] [info] diff1 input: 24626.183.0.
+[2026-11-09 15:49:32.744] [miter_logger] [info] diff1 input: 24615.182.0.
+[2026-11-09 15:49:32.744] [miter_logger] [info] diff1 input: 24629.182.0.
+[2026-11-09 15:49:32.744] [miter_logger] [info] diff1 input: 24599.182.0.
+[2026-11-09 15:49:32.744] [miter_logger] [info] diff1 input: 24601.183.0.
+[2026-11-09 15:49:32.744] [miter_logger] [info] diff1 input: 24609.182.0.
+[2026-11-09 15:49:32.745] [miter_logger] [info] diff1 input: 24623.183.0.
+[2026-11-09 15:49:32.745] [miter_logger] [info] diff1 input: 24608.182.0.
+[2026-11-09 15:49:32.745] [miter_logger] [info] diff1 input: 24602.182.0.
+[2026-11-09 15:49:32.745] [miter_logger] [info] diff1 input: 24612.182.0.
+[2026-11-09 15:49:32.745] [miter_logger] [info] diff1 input: 24625.182.0.
+[2026-11-09 15:49:32.746] [miter_logger] [info] diff1 input: 24606.182.0.
+[2026-11-09 15:49:32.746] [miter_logger] [info] diff1 input: 24616.183.0.
+[2026-11-09 15:49:32.747] [miter_logger] [info] diff1 input: 24615.183.0.
+[2026-11-09 15:49:32.747] [miter_logger] [info] diff1 input: 24616.182.0.
+[2026-11-09 15:49:32.748] [miter_logger] [info] diff1 input: 24617.183.0.
+[2026-11-09 15:49:32.748] [miter_logger] [info] diff1 input: 24619.183.0.
+[2026-11-09 15:49:32.749] [miter_logger] [info] diff1 input: 24619.182.0.
+[2026-11-09 15:49:32.749] [miter_logger] [info] diff1 input: 24620.183.0.
+[2026-11-09 15:49:32.750] [miter_logger] [info] diff1 input: 24621.183.0.
+[2026-11-09 15:49:32.750] [miter_logger] [info] diff1 input: 24630.183.0.
+[2026-11-09 15:49:32.751] [miter_logger] [info] diff1 input: 24626.182.0.
+[2026-11-09 15:49:32.751] [miter_logger] [info] diff1 input: 24631.183.0.
+[2026-11-09 15:49:32.752] [miter_logger] [info] diff1 input: 24633.182.0.
+[2026-11-09 15:49:32.752] [miter_logger] [info] diff1 input: 24633.183.0.
+[2026-11-09 15:49:32.753] [miter_logger] [info] diff1 input: 24622.183.0.
+[2026-11-09 15:49:32.753] [miter_logger] [info] diff1 input: 24622.182.0.
+[2026-11-09 15:49:32.754] [miter_logger] [info] diff1 input: 24607.183.0.
+[2026-11-09 15:49:32.754] [miter_logger] [info] diff1 input: 24632.182.0.
+[2026-11-09 15:49:32.754] [miter_logger] [info] diff1 input: 24600.183.0.
+[2026-11-09 15:49:32.755] [miter_logger] [info] diff1 input: 24623.182.0.
+[2026-11-09 15:49:32.755] [miter_logger] [info] diff1 input: 24604.182.0.
+[2026-11-09 15:49:32.755] [miter_logger] [info] diff1 input: 24629.183.0.
+[2026-11-09 15:49:32.756] [miter_logger] [info] diff1 input: 24605.182.0.
+[2026-11-09 15:49:32.756] [miter_logger] [info] diff1 input: 24611.182.0.
+[2026-11-09 15:49:32.757] [miter_logger] [info] diff1 input: 24614.182.0.
+[2026-11-09 15:49:32.757] [miter_logger] [info] diff1 input: 24600.182.0.
+[2026-11-09 15:49:32.758] [miter_logger] [info] diff1 input: 24603.183.0.
+[2026-11-09 15:49:32.758] [miter_logger] [info] diff1 input: 24630.182.0.
+[2026-11-09 15:49:32.759] [miter_logger] [info] diff1 input: 24628.182.0.
+[2026-11-09 15:49:32.760] [miter_logger] [info] diff1 input: 24621.182.0.
+[2026-11-09 15:49:32.760] [miter_logger] [info] diff1 input: 24601.182.0.
+[2026-11-09 15:49:32.761] [miter_logger] [info] diff1 input: 24617.182.0.
+[2026-11-09 15:49:32.761] [miter_logger] [info] size of common inputs: 1526
+[2026-11-09 15:49:32.762] [miter_logger] [info] size of diff0 inputs: 4
+[2026-11-09 15:49:32.763] [miter_logger] [info] size of diff1 inputs: 70
+[2026-11-09 15:49:32.763] [miter_logger] [info] normalizeOutputs: starting
+[2026-11-09 15:49:32.767] [miter_logger] [info] size of common outputs: 4481
+[2026-11-09 15:49:32.767] [miter_logger] [info] size of diff0 outputs: 0
+[2026-11-09 15:49:32.768] [miter_logger] [info] size of diff1 outputs: 0
+[2026-11-09 15:49:32.769] [miter_logger] [info] size of PIs in circuit 0: 1530
+[2026-11-09 15:49:32.769] [miter_logger] [info] size of PIs in circuit 1: 1596
+[2026-11-09 15:49:32.770] [miter_logger] [info] size of POs in circuit 0: 4481
+[2026-11-09 15:49:32.770] [miter_logger] [info] size of POs in circuit 1: 4481
+[2026-11-09 15:49:32.916] [miter_logger] [info] Building miter expression
+[2026-11-09 15:49:32.917] [miter_logger] [info] Finished building miter expression
+[2026-11-09 15:49:32.919] [miter_logger] [info] Starting solver
+[2026-11-09 15:49:32.919] [miter_logger] [info] SAT solver finished: UNSAT
+[2026-11-09 15:49:32.920] [miter_logger] [info] Circuits are IDENTICAL

@@ -1,0 +1,159 @@
+f0e56b075b81e3e767d393c7aa35c7e3  /w/chip/sky130/caravan/gds/user_analog_project_wrapper.gds
+=== build Magic 8.3.471, netgen 1.5.272, CVC v1.1.7
+Note: switching to '60049f3702ec4b87ea1a2befaed937719fdb4958'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+Note: switching to '178af5f493e628427db53a1233c0719b1e322a7a'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+Note: switching to '23c3867bb9c227ec395e2812b318379ffb9a0df9'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+/opt/cf/bin/magic
+/opt/cf/bin/netgen
+/opt/cf/bin/cvc_rv
+/usr/bin/klayout
+=== PDK open_pdks 3e0e31d through ciel
+common.tar.zst: OK
+sky130_fd_io.tar.zst: OK
+sky130_fd_pr.tar.zst: OK
+sky130_fd_pr_reram.tar.zst: OK
+sky130_fd_sc_hd.tar.zst: OK
+sky130_fd_sc_hvl.tar.zst: OK
+sky130_ml_xx_hd.tar.zst: OK
+sky130_sram_macros.tar.zst: OK
+sky130_fd_io
+sky130_fd_pr
+sky130_fd_pr_reram
+sky130_fd_sc_hd
+sky130_fd_sc_hvl
+sky130_ml_xx_hd
+sky130_sram_macros
+open_pdks 3e0e31dcce8519a7dbb82590346db16d91b7244f
+
+cf-precheck 1.3.7
+=== 1. precheck, ChipFoundry tool versions, sky130B
+
+╭────────────────────────────────── Precheck ──────────────────────────────────╮
+│ CF Precheck v1.3.7                                                           │
+│ Project: caravan (analog, sky130B)                                           │
+│ Checks:  14                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+  [ 1/14] Top Cell .......................................... PASS  (0.9s)
+  [ 2/14] GPIO Defines ...................................... PASS  (0.9s)
+  [ 3/14] XOR ............................................... PASS  (10.1s)
+  [ 4/14] Magic DRC ......................................... PASS  (49.6s)
+  [ 5/14] Klayout FEOL ...................................... PASS  (29.5s)
+  [ 6/14] Klayout BEOL ...................................... PASS  (434.6s)
+  [ 7/14] Klayout Offgrid ................................... PASS  (113.6s)
+  [ 8/14] Klayout Metal Density ............................. PASS  (59.8s)
+  [ 9/14] Klayout Pin Label ................................. PASS  (22.9s)
+  [10/14] Klayout ZeroArea .................................. PASS  (38.5s)
+  [11/14] Spike Check ....................................... PASS  (22.8s)
+  [12/14] Illegal Cellname .................................. PASS  (4.2s)
+  [13/14] LVS ............................................... PASS  (535.6s)
+  [14/14] OEB ............................................... PASS  (7.9s)
+
+                Precheck Summary                 
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Check                 ┃  Status  ┃   Duration ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━┩
+│ Top Cell              │   PASS   │       0.9s │
+│ GPIO Defines          │   PASS   │       0.9s │
+│ XOR                   │   PASS   │      10.1s │
+│ Magic DRC             │   PASS   │      49.6s │
+│ Klayout FEOL          │   PASS   │      29.5s │
+│ Klayout BEOL          │   PASS   │     434.6s │
+│ Klayout Offgrid       │   PASS   │     113.6s │
+│ Klayout Metal Density │   PASS   │      59.8s │
+│ Klayout Pin Label     │   PASS   │      22.9s │
+│ Klayout ZeroArea      │   PASS   │      38.5s │
+│ Spike Check           │   PASS   │      22.8s │
+│ Illegal Cellname      │   PASS   │       4.2s │
+│ LVS                   │   PASS   │     535.6s │
+│ OEB                   │   PASS   │       7.9s │
+└───────────────────────┴──────────┴────────────┘
+Results saved to /w/chip/sky130/caravan/.cf/project.json
+Full log at /w/chip/sky130/caravan/precheck_results
+PRECHECK_CFENV_RC=0
+KLayout: 0.29.12
+Magic: 8.3.471Open PDKs 3e0e31dcce8519a7dbb82590346db16d91b7244f
+SKY130B PDK unknown
+No property value found for device sky130_fd_pr__res_generic_po
+No property mult found for device sky130_fd_pr__res_generic_po
+No property value found for device sky130_fd_pr__res_generic_po
+No property mult found for device sky130_fd_pr__res_generic_po
+No property mult found for device sky130_fd_pr__nfet_01v8
+No property sa found for device sky130_fd_pr__nfet_01v8
+No property sb found for device sky130_fd_pr__nfet_01v8
+No property sd found for device sky130_fd_pr__nfet_01v8
+No property nf found for device sky130_fd_pr__nfet_01v8
+No property nrd found for device sky130_fd_pr__nfet_01v8
+No property nrs found for device sky130_fd_pr__nfet_01v8
+No property area found for device sky130_fd_pr__nfet_01v8
+No property perim found for device sky130_fd_pr__nfet_01v8
+No property topography found for device sky130_fd_pr__nfet_01v8
+No property mult found for device sky130_fd_pr__nfet_01v8
+No property sa found for device sky130_fd_pr__nfet_01v8
+No property sb found for device sky130_fd_pr__nfet_01v8
+No property sd found for device sky130_fd_pr__nfet_01v8
+No property nf found for device sky130_fd_pr__nfet_01v8
+No property nrd found for device sky130_fd_pr__nfet_01v8
+=== 2. Magic DRC and antenna check, ChipFoundry's Magic 8.3.471 and sky130B tech
+8.3.471
+{
+ "gds": "chip/sky130/caravan/gds/user_analog_project_wrapper.gds",
+ "gds_md5": "f0e56b075b81e3e767d393c7aa35c7e3",
+ "drc_rules": "Magic drc(full), sky130B, commands of cf-precheck magic_drc_check.tcl",
+ "drc_markers": 0,
+ "drc_by_rule": {},
+ "antenna_rules": "Magic antennacheck, sky130B tech (partial model)",
+ "antenna_violations": [],
+ "antenna_violation_count": 0,
+ "antenna_feedback_count": 103
+}
+SIGNOFF_CFENV_RC=0
+BATCH24_DONE

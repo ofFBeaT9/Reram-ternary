@@ -1,52 +1,52 @@
 {
  "flow_library": "sky130_fd_sc_hd__ss_100C_1v60 (flow optimised at the slow corner)",
  "clock_period_ns": 25.0,
- "stdcells": 15140,
- "sequential": 1377,
+ "stdcells": 14736,
+ "sequential": 1380,
  "clock_gates": 85,
  "die_area_um2": 188757,
- "utilization": 0.739,
- "flow_setup_ws_ns": 8.133,
- "flow_hold_ws_ns": 0.406,
- "ir_drop_worst_mV": 0.185,
+ "utilization": 0.716,
+ "flow_setup_ws_ns": 8.819,
+ "flow_hold_ws_ns": 0.693,
+ "ir_drop_worst_mV": 0.212,
  "drc_violations": 0,
  "lec_identical": true,
  "corners": {
   "ff_n40C_1v95": {
-   "setup_wns_ns": 15.851,
-   "hold_wns_ns": 0.084
+   "setup_wns_ns": 15.896,
+   "hold_wns_ns": 0.205
   },
   "k0.8_ff_n40C_1v95": {
-   "setup_wns_ns": 15.978,
-   "hold_wns_ns": 0.099
+   "setup_wns_ns": 16.012,
+   "hold_wns_ns": 0.206
   },
   "k0.8_ss_100C_1v60": {
-   "setup_wns_ns": 9.212,
-   "hold_wns_ns": 0.464
+   "setup_wns_ns": 9.594,
+   "hold_wns_ns": 0.697
   },
   "k0.8_tt_025C_1v80": {
-   "setup_wns_ns": 15.216,
-   "hold_wns_ns": 0.193
+   "setup_wns_ns": 15.26,
+   "hold_wns_ns": 0.334
   },
   "k1.2_ff_n40C_1v95": {
-   "setup_wns_ns": 15.726,
-   "hold_wns_ns": 0.068
+   "setup_wns_ns": 15.782,
+   "hold_wns_ns": 0.203
   },
   "k1.2_ss_100C_1v60": {
-   "setup_wns_ns": 7.586,
-   "hold_wns_ns": 0.39
+   "setup_wns_ns": 8.075,
+   "hold_wns_ns": 0.689
   },
   "k1.2_tt_025C_1v80": {
-   "setup_wns_ns": 14.827,
-   "hold_wns_ns": 0.148
+   "setup_wns_ns": 14.907,
+   "hold_wns_ns": 0.33
   },
   "ss_100C_1v60": {
-   "setup_wns_ns": 8.396,
-   "hold_wns_ns": 0.427
+   "setup_wns_ns": 8.905,
+   "hold_wns_ns": 0.693
   },
   "tt_025C_1v80": {
-   "setup_wns_ns": 15.024,
-   "hold_wns_ns": 0.171
+   "setup_wns_ns": 15.083,
+   "hold_wns_ns": 0.332
   }
  },
  "min_period": [
@@ -54,21 +54,21 @@
    "platform": "sky130hd",
    "liberty": "sky130_fd_sc_hd__ss_100C_1v60.lib",
    "spef_scale": 1.0,
-   "min_period_ns": 16.62,
-   "f_max_MHz": 60.2,
-   "setup_wns_ns": 0.021,
-   "hold_wns_ns": 0.427
+   "min_period_ns": 16.12,
+   "f_max_MHz": 62.0,
+   "setup_wns_ns": 0.03,
+   "hold_wns_ns": 0.693
   },
   {
    "platform": "sky130hd",
    "liberty": "sky130_fd_sc_hd__ss_100C_1v60.lib",
    "spef_scale": 1.2,
-   "min_period_ns": 17.44,
-   "f_max_MHz": 57.3,
-   "setup_wns_ns": 0.023,
-   "hold_wns_ns": 0.39
+   "min_period_ns": 16.94,
+   "f_max_MHz": 59.0,
+   "setup_wns_ns": 0.012,
+   "hold_wns_ns": 0.689
   }
  ],
- "setup_wns_min_ns": 7.586,
- "hold_wns_min_ns": 0.068
+ "setup_wns_min_ns": 8.075,
+ "hold_wns_min_ns": 0.203
 }

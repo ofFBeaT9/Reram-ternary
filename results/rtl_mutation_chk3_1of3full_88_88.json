@@ -1,0 +1,10 @@
+[
+ {
+  "name": "constant time: set pulses after a failed reset phase",
+  "status": "caught",
+  "first_failure": "FAIL: stuck reset: 33 pulses instead of 21",
+  "in_test": "5. error paths",
+  "seconds": 97,
+  "id": 88
+ }
+]

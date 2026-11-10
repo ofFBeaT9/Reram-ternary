@@ -131,12 +131,25 @@ Nothing is "done" until a script in this repository reproduces the number and th
 - Serial-port fuzzing (revision 4.8): `make fuzz` (`tb/extra/spi_fuzz.cc`, faults in `tb/extra/spi_fuzz_faults.py`).
   Rerun it after any change to `rtl/tcim_spi.sv` or the register map.
 - Next-chip cell (8 November 2026): 3T3R one-of-three, build option `TCIM_CELL_1OF3` (ports `arr_mask_z`, `arr_sa_z`; the
-  `Z(...)` macro in `tcim_core.sv` expands only in that build). Without it the core is proven equal to revision 4.7
-  (`results/next_chip/equiv_default_build_unchanged.*`): keep it so. `make rtl-1of3`; Z-logic faults: `TB_CELL=1of3 tb/mutation_test.py`.
+  `Z(...)` macro in `tcim_core.sv` expands only in that build). Without it the core was proven equal to revision 4.7
+  (`results/next_chip/equiv_default_build_unchanged.*`); revision 4.9 changes both builds alike: keep the option confined to `Z(...)`. `make rtl-1of3`; Z-logic faults: `TB_CELL=1of3 tb/mutation_test.py`.
   Layout: `layout/sky130/next_3t3r/run3.sh` (Magic 8.3.471 and netgen 1.5.272 built in the sandbox under ~/opt; PDK_ROOT ~/pdk3e).
   Array controller: `ZA(...)` in `tcim_actl.sv`, `make rtl-chip-1of3`, `CHIP_CELL=1of3 tb/chip/mutation_chip.py`. Formal: task
   `safety_1of3` (`FAULTS=1of3 formal/check_faults.py`); the progress and miter proofs do not cover the option yet. Macro:
   `layout/sky130/next_3t3r/macro3.py` needs Magic 8.3.685 (8.3.471 fails on getcell); the 3T3R chip is not assembled.
+- Revision 4.9 (9 November 2026, the LOCK gaps of the paper study's red team), read-out protection as flash microcontrollers do it:
+  LOCK (`r_lk`, three flip-flops, locked while any is set) is SET by reset; the only way to clear it is the erase command PCMD 0,0,+
+  (`e_run`: rows 0-71 programmed to weight 0, constant time whatever VARPROG; LOCK cleared only without WERR); programming is refused
+  under LOCK. The test bench erases first (section 1b) and again after its reset test; never write a test that programs before an
+  erase. `upset_lk` in tb_tcim.cc clears LOCK copies in the CXXRTL model (other builds skip it). Comparison with the 4.8 logic:
+  `tests/equiv/run_equiv_rev49.sh` (reference `tests/equiv/rtl_rev48`); summary of every check: `tools/collect_rev49.py` ->
+  `results/rev49/summary.json`; page 13e and STATUS 15.9 from it (`docs/page/lock49_section.py`, `docs/put_status_15_9.py`). The
+  4.7 / 4.8 files that sections 15.1-15.8 quote are in `results/rev48`. PC batch 29 (`flow/eda/pc_batch29*.{bat,sh}`) runs the
+  verification on the PC's cores, place and route, gate level, sign-off and the precheck. The FPGA host tool and bitstream are
+  still revision 4.5 (no erase step).
+  Formal (revision 4.9): the PDR tasks (safety, safety_pnx, progress, safety_1of3, the miters) read the RTL with FORMAL_ANYLOCK (port
+  `f_anylock`: a reset may leave the tile unlocked; a superset of the design's states), because with the real reset PDR must walk a whole
+  erase (~3,300 cycles) before any unlocked state exists and does not close; task `lock` (k-induction) proves `p_lock_reset` alone.
 - Leakage at transistor level (8 November 2026, paper study): `tools/tvla_circuit.py` (use `--redraw` for a weight test; without
   it the test also sees one frozen device instance), `--aligned` (margin-check reads, row-aligned even under LOCK),
   `tools/attack_sparsity.py`. The paper draft is generated: `studies/paper-2026-11/make_draft.py` -> `DRAFT.md`.

@@ -132,6 +132,11 @@ def build():
         W.v34(xm, yt)
         W.h("metal3", xm, xd, yt, 0.4)
         W.v23(xd, yt)
+        if abs(xm - xd) < 1.2:
+            # the two 0.6 um via pads closer than 1.2 um: a 0.4 um track between them leaves 0.1 um notches narrower than
+            # met3.2 (0.3 um). Fill the gap at the pads' height (batch 29: 8 Magic / 4 KLayout met3.2 markers, where the
+            # revision 4.9 block put two pins within 0.85 and 0.71 um of the macro pins above them)
+            W.h("metal3", xm, xd, yt, 0.6)
         if p.startswith("out_"):
             # sense output -> input buffer of the digital block: until metal4 joins it to the sense amplifier, the
             # buffer's gate sees only this metal3 track, up to 1 mm long. A diode at the end of the track, right of the

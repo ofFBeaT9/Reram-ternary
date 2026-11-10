@@ -32,13 +32,15 @@
   "u_core.s_sat",
   "u_core.s_werr",
   "u_core.state",
+  "u_core.w_neg",
+  "u_core.w_pos",
   "u_spi.bus_rdata"
  ],
  "equivalence_points": 2478,
- "proven": 1656,
- "unproven": 822,
+ "proven": 1608,
+ "unproven": 870,
  "place_and_route_source": {
-  "proven": 2764,
+  "proven": 2793,
   "unproven": 0
  }
 }
