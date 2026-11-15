@@ -9,7 +9,8 @@ Prepared 14 November 2026. Numbers are from `results/` in the repository `Reram-
   digital read is exact whenever every device is read correctly.
 - The 2T2R test chip is drawn on SKY130 with SkyWater's ReRAM layer and passes ChipFoundry's precheck (14 of 14). Revision 4.9
   of the logic is locked at reset and unlocks only by erasing the array.
-- Nothing is measured. No shuttle has confirmed the ReRAM layer.
+- Nothing of TCIM0 is measured, and no shuttle has confirmed the ReRAM layer. REBEL-6 exists as silicon, which gives the
+  project a measured platform now (section 8).
 - A paper is drafted: the 2T2R ternary code leaks each row's zero count in a single read, and a one-of-three cell fixes that
   only if its bit lines are balanced.
 
@@ -51,6 +52,8 @@ Honest ceiling: without silicon this is a simulation paper (DATE, HOST, ASP-DAC,
 
 ## 4. What to ask him
 
+0. **The REBEL-6 chips.** How many there are, where they are, on which board, what has been brought up so far, and how much
+   bench time is possible (section 8).
 1. **REBEL-6 interface.** Slot 11 and interrupt source 7 for TCIM0; the wire code of a trit (BSD-PNX or two's complement, both
    builds are verified); access to the current executor with TMAC.T and memory-mapped devices, for a recorded co-simulation.
 2. **Wording.** How REBEL-6 may be described in the paper, and whether he wants to see the text before a preprint.
@@ -91,6 +94,7 @@ Honest ceiling: without silicon this is a simulation paper (DATE, HOST, ASP-DAC,
 
 ## 7. Proposed next six weeks
 
+0. The three measurements on REBEL-6 silicon of section 8, as far as the bench allows.
 1. Send the three sets of questions (this week).
 2. Draw the balanced cell or the transposed column, extract it, and re-run the attack on the extracted values.
 3. Put the rotation in the RTL (controller option), with tests, injected faults and proofs; draw the switch.
@@ -98,7 +102,28 @@ Honest ceiling: without silicon this is a simulation paper (DATE, HOST, ASP-DAC,
 5. Recorded FPGA re-run with the byte-level transcript; co-simulation with the REBEL-6 executor once the interface is agreed.
 6. Preprint of the security paper; decide the silicon route with what ChipFoundry and IHP answer.
 
-## 8. One thing to settle before the meeting
+## 8. What the REBEL-6 silicon is for
 
-The project documents treat REBEL-6 as USN's specification and claim no silicon. If a fabricated REBEL-6 chip is available to
-you or to USN, say so at the start: measurements on it would come before everything in section 7.
+Confirmed by the owner on 14 November: REBEL-6 exists as fabricated chips. Everything else in this project is simulation, so
+these three measurements come before the simulation work of section 7. Each needs only the chip, a board and a bench.
+
+1. **The noise floor.** Record the supply current of a running REBEL-6 on the bench that would later measure TCIM0, and
+   report its rms per 62.5 ns. Every read count in the paper scales with the square of an assumed 5 µA. A measured figure for
+   the bench and probe replaces the largest free parameter of the paper. It is a figure for the bench, not for the TCIM0 chip.
+2. **Does TMAC.T leak zeros?** Run the ternary multiply-accumulate with fixed against random operands and test timing and
+   supply current (Welch t, as in the paper). A measured leak of zeros in the software path is the motivation of the paper in
+   silicon, and it is the first result of a hardware-security review of REBEL-6.
+3. **REBEL-6 silicon with the TCIM0 logic.** Connect the chip to the tile's logic on the FPGA (Tang Nano 9K, emulated array)
+   through the serial bridge, and record products against exact arithmetic with the byte-level transcript. This is the first
+   measured system result and the core of an ISMVL paper. It needs slot 11, interrupt 7 and the trit wire code agreed first.
+
+What the chip cannot give: anything about ReRAM devices, the 2T2R leak or the one-of-three cell. Those still need the TCIM0
+chip.
+
+To find out before or at the meeting:
+
+- process, package and board; whether the core supply has its own pin, so that a shunt or current probe can sit on it;
+- clock source and range; I/O levels and how a trit appears on the pins;
+- which instructions and devices have been verified on silicon, TMAC.T in particular;
+- whether the MIS manuscript's sentence that REBEL-6 is used "as a specification, no silicon claimed" should now change, and
+  with what wording and whose permission.
