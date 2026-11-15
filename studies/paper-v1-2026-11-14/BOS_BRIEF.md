@@ -13,6 +13,8 @@ Prepared 14 November 2026. Numbers are from `results/` in the repository `Reram-
   project a measured platform now (section 8).
 - A paper is drafted: the 2T2R ternary code leaks each row's zero count in a single read, and a one-of-three cell fixes that
   only if its bit lines are balanced.
+- Two further programmes use the same hardware line and are covered in section 9: the minimum intelligence scale (how small
+  a model can be, in bits) and KAIROS (a benchtop living-cell pharmacology instrument). Both are at the in-silico stage.
 
 ## 2. What is new this week
 
@@ -65,6 +67,8 @@ Honest ceiling: without silicon this is a simulation paper (DATE, HOST, ASP-DAC,
    another ReRAM run through Europractice?
 6. **Venue.** His view on ISMVL for a system paper (REBEL-6 + TCIM0) beside the security paper.
 7. **REBEL-6 itself.** Whether a hardware-security review of REBEL-6 is of interest to the group.
+8. **KAIROS and the scale.** Who at USN or elsewhere in Norway works on microsystems, organ-on-a-chip or pharmacology and
+   could advise or host the first barrier study; and whether he sees the ternary array of the instrument as work for his group.
 
 ## 5. Questions he may ask, and short answers
 
@@ -81,6 +85,10 @@ Honest ceiling: without silicon this is a simulation paper (DATE, HOST, ASP-DAC,
 - *What stops the attacker from reading the weights directly?* Revision 4.9: locked at reset, read-back and programming refused,
   unlock only by erasing. The tile's results must stay with the host; with readable results and chosen inputs no side channel
   is needed.
+- *How do the three programmes fit together?* The scale asks how few bits a model of a physical system needs. The tile and the
+  ternary array are the hardware that would run such small models. KAIROS is the instrument in which their forecasts are
+  scored against tissue. Each can be judged alone, and the tile paper does not depend on the other two.
+- *Does the scale need ternary hardware?* On the evidence so far, no. In the pilot, ternary weights were not free (section 9.1).
 - *What is verified, and how?* Logic: about 107,000 checks in two simulators, 126 of 126 injected faults caught, formal proofs
   with four tasks still open. Layout: DRC, LVS and the foundry's precheck, each shown able to fail.
 
@@ -127,3 +135,80 @@ To find out before or at the meeting:
 - which instructions and devices have been verified on silicon, TMAC.T in particular;
 - whether the MIS manuscript's sentence that REBEL-6 is used "as a specification, no silicon claimed" should now change, and
   with what wording and whose permission.
+
+## 9. The two other programmes
+
+Both are designs and simulations. Neither has a measurement on tissue or silicon. Numbers are from the project's records of
+29 October to 13 November 2026 (the audit of the scale's dossier, the KAIROS design article and its revisions).
+
+### 9.1 The minimum intelligence scale
+
+**Claim.** The size of a model can be measured in bits, as the length of its description, and set against its error outside
+the range it was trained on. The physical equations of a system give a reference length; for the textbook model of the pilot,
+a count under an explicit code gives 610.4 bits.
+
+**What a pilot shows** (three seeds, 33 trained configurations, 231 evaluated models; simulation only):
+
+| Model family | Result |
+|---|---|
+| Structured like the physics (conductances) | 3.6 % out-of-range error in 3.2 kbit; 9.8 % in 0.88 kbit, which is 5.3 and 1.4 times the length of the equations |
+| Unconstrained networks | never below 15.6 % at any size up to 285 kbit, and worse outside the range as they grow |
+| Ternary weights after training | fail (above 85 % error) |
+| Ternary weights with training | 8.9 % only at 23 kbit |
+| 8-bit / 6-bit / 4-bit weights | free / already costs / fails without retraining |
+
+**What it means for the hardware.** Physical structure is supported. "Ternary for free" is not: the model the tile would run is
+not shown to be ternary. Either ternary training is made to work at small size, or a weight is stored as several ternary digits,
+which the tile's exact digital read allows in principle and which is not designed.
+
+**State.** A manuscript in article format exists (13 November). It is an honest preprint, not a journal article yet: one
+three-seed pilot on one textbook model, with all four state variables observed and no noise. An earlier dossier's benchmark
+results (its gates t01 to t15) have no code or logs and are not used.
+
+**Next.** Ten seeds with intervals; training from voltage alone; a fair trial of ternary (longer schedules, distillation, mixed
+precision); symbolic regression as the baseline that could beat every network; two more systems, one of them the barrier
+transport model of KAIROS.
+
+### 9.2 KAIROS
+
+**What it is.** A proposed benchtop instrument for living-cell pharmacology (organ-on-a-chip): cells on a perfused chip, sensors,
+a time base, mechanistic models and an assistant layer, aimed in the long run at qualified digital twins from molecule to organ.
+The instrument was called TRITONE until 3 November; TRITONE is now only the name of the ternary processor project.
+
+**Design rule.** Only the time base, the models, the assistant layer and the data contract are the project's own. Everything
+else is bought, borrowed or outsourced until a measurement shows that it limits the science. No exotic substrate (ternary ReRAM,
+nanotube logic, photonic computing) is on the critical path to the first study.
+
+**First study (M0).** An instrument-qualification claim: a transport model calibrated to the delivered dose predicts the parent
+drug recovered on the receiver side of a qualified Caco-2 barrier better than a prediction from the nominal dose. The forecast is
+sealed before dosing and scored afterwards; 27 to 56 complete pairs. Caco-2 limits this to passive and paracellular transport.
+The second study is CYP3A induction in organoids from 6 to 9 donors.
+
+**Schedule** (judgements, not results). At the present scale M0 falls in the first quarter of 2030. Four levers together (a
+host laboratory, a contract research organization, a commercial perfused chip first, automated sampling) move it to the second
+quarter of 2028; none alone gains more than about half a year. A research-use instrument moves from 2035 to late 2032.
+
+**The ternary part.**
+
+- A 13-bit ternary × INT8 array (v2.2-GW) fits the Tang Nano 9K in the open tool flow at 79 % of the LUTs and passes 24,976 of
+  24,976 array tests in simulation. It is not built in the vendor tool, not flashed and not measured.
+- A light-scattering classifier with ternary weights loses about 2 points against floating point; its 144,000 lane results
+  replayed through the array's RTL give 0 mismatches.
+- Low-precision solves for stiff models: a one-trit-plane solver fails as plain refinement from 1,600 unknowns and works as a
+  preconditioner inside flexible GMRES (119 iterations at 6,400 unknowns). The CPU baseline is strong, so this is a research
+  benchmark, not a bottleneck.
+
+**Assistant layer.** Agents propose, a versioned deterministic verifier checks, a named person approves; agents cannot write to
+sealed forecasts, the data contract or the analysis plan.
+
+**State.** A design article (31 October) with twelve synthetic studies, and a full-system manuscript (13 November). Not done: any
+wet-lab result, the vendor build of the array, board timing and power. Open needs: a host pharmacology laboratory, LC-MS/MS
+access, a Caco-2 bank, the pre-registered analysis.
+
+### 9.3 What to say about these two, in one minute
+
+- The scale is a definition with a pilot. It already told the hardware something useful and unwelcome: structure matters more
+  than ternary weights.
+- KAIROS is a design with a first study that is small, falsifiable and needs a host laboratory more than it needs new hardware.
+- The link to his group is the ternary array and REBEL-6. The existing chip is where a first measured number can come from.
+
