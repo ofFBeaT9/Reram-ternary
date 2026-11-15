@@ -1,0 +1,22 @@
+{
+ "design": "1of3 drawn rot",
+ "test": "fixed vs fixed, columns of every row permuted",
+ "traces_per_group": 50000,
+ "matrices": 3,
+ "max_abs_t_first": [
+  15.03,
+  13.87,
+  19.28
+ ],
+ "max_abs_t_second": [
+  4.09,
+  3.79,
+  3.46
+ ],
+ "assumptions": {
+  "noise_uA_rms_per_window": 5.0,
+  "k_dig_uA": 0.15,
+  "windows": 12,
+  "window_ns": 62.5
+ }
+}

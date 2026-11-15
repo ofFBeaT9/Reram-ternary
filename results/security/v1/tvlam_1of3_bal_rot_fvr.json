@@ -1,0 +1,22 @@
+{
+ "design": "1of3 balanced rot",
+ "test": "fixed vs random weights",
+ "traces_per_group": 50000,
+ "matrices": 3,
+ "max_abs_t_first": [
+  3.6,
+  3.53,
+  3.23
+ ],
+ "max_abs_t_second": [
+  3.48,
+  3.43,
+  3.44
+ ],
+ "assumptions": {
+  "noise_uA_rms_per_window": 5.0,
+  "k_dig_uA": 0.15,
+  "windows": 12,
+  "window_ns": 62.5
+ }
+}

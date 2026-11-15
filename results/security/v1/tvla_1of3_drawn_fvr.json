@@ -1,0 +1,47 @@
+{
+ "design": "1of3 drawn",
+ "test": "fixed vs random weights",
+ "traces_per_group": 150000,
+ "matrix_seed": 7,
+ "fixed_group_frozen": false,
+ "zeros_in_fixed": 548,
+ "max_abs_t_first": 25.35,
+ "max_abs_t_second": 4.68,
+ "window_of_max_first": 4,
+ "leaks_first": true,
+ "leaks_second": true,
+ "curve": [
+  {
+   "traces": 10000,
+   "t1": 6.61,
+   "t2": 4.17
+  },
+  {
+   "traces": 20000,
+   "t1": 8.72,
+   "t2": 4.04
+  },
+  {
+   "traces": 50000,
+   "t1": 14.23,
+   "t2": 3.41
+  },
+  {
+   "traces": 100000,
+   "t1": 19.84,
+   "t2": 3.37
+  },
+  {
+   "traces": 150000,
+   "t1": 25.35,
+   "t2": 4.68
+  }
+ ],
+ "seconds": 195,
+ "assumptions": {
+  "noise_uA_rms_per_window": 5.0,
+  "k_dig_uA": 0.15,
+  "windows": 12,
+  "window_ns": 62.5
+ }
+}

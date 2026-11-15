@@ -153,6 +153,21 @@ Nothing is "done" until a script in this repository reproduces the number and th
 - Leakage at transistor level (8 November 2026, paper study): `tools/tvla_circuit.py` (use `--redraw` for a weight test; without
   it the test also sees one frozen device instance), `--aligned` (margin-check reads, row-aligned even under LOCK),
   `tools/attack_sparsity.py`. The paper draft is generated: `studies/paper-2026-11/make_draft.py` -> `DRAFT.md`.
+- Leakage model v1 (14 November 2026, `studies/paper-v1-2026-11-14/`): `chip/sky130/sim/seq_read.py` simulates a read in the
+  controller's order (precharge with the word line off, read, recharge; 12 samples of one clock cycle), one line with 400
+  mismatch samples (`mm shared`: reference bias shared by all amplifiers, as on the chip; `mm full`: bias mismatch per sample, the
+  8 November convention, about four times the spread) and the coupled lines of a column with the drawn capacitances (`cell`).
+  `tools/leak_v1.py` is the tile model (`tvla`, `zeros`, `bound`); `run_v1.py` the experiment list; `make_paper.py` -> `PAPER.md`,
+  `figures.py`, `build_pdf.sh`. The numbers of `tools/tvla_circuit.py` and `studies/paper-2026-11/DRAFT.md` are superseded:
+  do not mix the two sets. Finding to keep in mind: the drawn 3T3R cell's Z bit line has a different
+  capacitance from P and N, which gives a profiling attacker the zero count back at about 1e5 to 1e6 reads per row; rotation
+  does not fix it, equal bit-line capacitances do. ngspice 42 from apt and ChipFoundry's PDK assets from
+  github.com/chipfoundry/ciel-releases (sky130_fd_pr, common; unpack with python zstandard) are enough for these decks:
+  SKY130_NGSPICE_LIB=<root>/sky130B/libs.tech/ngspice/sky130.lib.spice.
+- Mismatch seeds: `set rndseed` in `.spiceinit` (what `chip/sky130/sim/spice.py` `run(seed=)` writes) has NO effect with ngspice 42:
+  two runs with one seed differ (found 14 November). Use `.option seed=<n>` in the deck (as `seq_read.py` does) whenever a seed must
+  mean "the same sample", and assert it. `results/security/sa_transient.npz` (8 November) has this fault: its samples at different
+  conductances are different amplifiers, so the position numbers of `tvla_circuit.py` (26.32 / 2.70) are withdrawn.
 - US spelling in documents. Units with every number.
 
 ## Layout

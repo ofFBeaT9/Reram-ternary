@@ -1,0 +1,47 @@
+{
+ "design": "1of3 balanced rot",
+ "test": "fixed vs fixed, columns of every row permuted",
+ "traces_per_group": 150000,
+ "matrix_seed": 7,
+ "fixed_group_frozen": false,
+ "zeros_in_fixed": 548,
+ "max_abs_t_first": 3.22,
+ "max_abs_t_second": 3.95,
+ "window_of_max_first": 0,
+ "leaks_first": false,
+ "leaks_second": false,
+ "curve": [
+  {
+   "traces": 10000,
+   "t1": 3.21,
+   "t2": 4.43
+  },
+  {
+   "traces": 20000,
+   "t1": 3.09,
+   "t2": 3.24
+  },
+  {
+   "traces": 50000,
+   "t1": 3.51,
+   "t2": 3.47
+  },
+  {
+   "traces": 100000,
+   "t1": 3.79,
+   "t2": 3.39
+  },
+  {
+   "traces": 150000,
+   "t1": 3.22,
+   "t2": 3.95
+  }
+ ],
+ "seconds": 208,
+ "assumptions": {
+  "noise_uA_rms_per_window": 5.0,
+  "k_dig_uA": 0.15,
+  "windows": 12,
+  "window_ns": 62.5
+ }
+}

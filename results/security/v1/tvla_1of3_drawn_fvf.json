@@ -1,0 +1,47 @@
+{
+ "design": "1of3 drawn",
+ "test": "fixed vs fixed, columns of every row permuted",
+ "traces_per_group": 150000,
+ "matrix_seed": 7,
+ "fixed_group_frozen": false,
+ "zeros_in_fixed": 548,
+ "max_abs_t_first": 37.87,
+ "max_abs_t_second": 3.14,
+ "window_of_max_first": 4,
+ "leaks_first": true,
+ "leaks_second": false,
+ "curve": [
+  {
+   "traces": 10000,
+   "t1": 11.36,
+   "t2": 3.01
+  },
+  {
+   "traces": 20000,
+   "t1": 14.95,
+   "t2": 3.57
+  },
+  {
+   "traces": 50000,
+   "t1": 21.74,
+   "t2": 3.4
+  },
+  {
+   "traces": 100000,
+   "t1": 31.6,
+   "t2": 2.94
+  },
+  {
+   "traces": 150000,
+   "t1": 37.87,
+   "t2": 3.14
+  }
+ ],
+ "seconds": 193,
+ "assumptions": {
+  "noise_uA_rms_per_window": 5.0,
+  "k_dig_uA": 0.15,
+  "windows": 12,
+  "window_ns": 62.5
+ }
+}

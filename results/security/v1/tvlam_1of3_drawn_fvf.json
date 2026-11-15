@@ -1,0 +1,22 @@
+{
+ "design": "1of3 drawn",
+ "test": "fixed vs fixed, columns of every row permuted",
+ "traces_per_group": 50000,
+ "matrices": 3,
+ "max_abs_t_first": [
+  22.51,
+  18.75,
+  22.21
+ ],
+ "max_abs_t_second": [
+  3.89,
+  3.35,
+  3.31
+ ],
+ "assumptions": {
+  "noise_uA_rms_per_window": 5.0,
+  "k_dig_uA": 0.15,
+  "windows": 12,
+  "window_ns": 62.5
+ }
+}

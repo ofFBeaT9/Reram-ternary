@@ -1,0 +1,47 @@
+{
+ "design": "2T2R drawn dC=extracted",
+ "test": "fixed vs fixed, columns of every row permuted",
+ "traces_per_group": 150000,
+ "matrix_seed": 7,
+ "fixed_group_frozen": false,
+ "zeros_in_fixed": 562,
+ "max_abs_t_first": 39.53,
+ "max_abs_t_second": 3.37,
+ "window_of_max_first": 4,
+ "leaks_first": true,
+ "leaks_second": false,
+ "curve": [
+  {
+   "traces": 10000,
+   "t1": 10.42,
+   "t2": 3.65
+  },
+  {
+   "traces": 20000,
+   "t1": 13.33,
+   "t2": 4.12
+  },
+  {
+   "traces": 50000,
+   "t1": 21.82,
+   "t2": 2.94
+  },
+  {
+   "traces": 100000,
+   "t1": 31.43,
+   "t2": 3.65
+  },
+  {
+   "traces": 150000,
+   "t1": 39.53,
+   "t2": 3.37
+  }
+ ],
+ "seconds": 225,
+ "assumptions": {
+  "noise_uA_rms_per_window": 5.0,
+  "k_dig_uA": 0.15,
+  "windows": 12,
+  "window_ns": 62.5
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "design": "2T2R drawn dC=extracted",
+ "chips": 20,
+ "profiling_chips": 8,
+ "results": [
+  {
+   "reads_per_row": 1,
+   "corr_mean": 0.796,
+   "corr_se": 0.008,
+   "rows_exact_mean": 0.296
+  },
+  {
+   "reads_per_row": 16,
+   "corr_mean": 0.931,
+   "corr_se": 0.003,
+   "rows_exact_mean": 0.495
+  },
+  {
+   "reads_per_row": 256,
+   "corr_mean": 0.988,
+   "corr_se": 0.001,
+   "rows_exact_mean": 0.874
+  },
+  {
+   "reads_per_row": 4096,
+   "corr_mean": 0.999,
+   "corr_se": 0.0,
+   "rows_exact_mean": 0.992
+  },
+  {
+   "reads_per_row": 65536,
+   "corr_mean": 1.0,
+   "corr_se": 0.0,
+   "rows_exact_mean": 0.999
+  },
+  {
+   "reads_per_row": 1048576,
+   "corr_mean": 1.0,
+   "corr_se": 0.0,
+   "rows_exact_mean": 1.0
+  },
+  {
+   "reads_per_row": 16777216,
+   "corr_mean": 1.0,
+   "corr_se": 0.0,
+   "rows_exact_mean": 1.0
+  }
+ ],
+ "states": "published",
+ "assumptions": {
+  "noise_uA_rms_per_window": 5.0,
+  "k_dig_uA": 0.15,
+  "windows": 12,
+  "window_ns": 62.5
+ }
+}

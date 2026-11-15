@@ -1,0 +1,47 @@
+{
+ "design": "1of3 drawn rot",
+ "test": "fixed vs random weights",
+ "traces_per_group": 150000,
+ "matrix_seed": 7,
+ "fixed_group_frozen": false,
+ "zeros_in_fixed": 548,
+ "max_abs_t_first": 23.84,
+ "max_abs_t_second": 4.01,
+ "window_of_max_first": 4,
+ "leaks_first": true,
+ "leaks_second": false,
+ "curve": [
+  {
+   "traces": 10000,
+   "t1": 6.31,
+   "t2": 3.63
+  },
+  {
+   "traces": 20000,
+   "t1": 7.95,
+   "t2": 3.85
+  },
+  {
+   "traces": 50000,
+   "t1": 12.84,
+   "t2": 3.67
+  },
+  {
+   "traces": 100000,
+   "t1": 18.91,
+   "t2": 3.19
+  },
+  {
+   "traces": 150000,
+   "t1": 23.84,
+   "t2": 4.01
+  }
+ ],
+ "seconds": 215,
+ "assumptions": {
+  "noise_uA_rms_per_window": 5.0,
+  "k_dig_uA": 0.15,
+  "windows": 12,
+  "window_ns": 62.5
+ }
+}

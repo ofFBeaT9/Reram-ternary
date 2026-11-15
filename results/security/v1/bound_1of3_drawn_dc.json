@@ -1,0 +1,32 @@
+{
+ "calibrated": {
+  "design": "1of3 drawn dC=5.5",
+  "attacker": "knows the victim's sense amplifiers",
+  "bits_per_row": {
+   "1": 0.003,
+   "100.0": 0.17,
+   "10000.0": 2.069,
+   "1000000.0": 5.423,
+   "100000000.0": 9.632
+  },
+  "row_entropy_bits": 38.04
+ },
+ "profiled": {
+  "design": "1of3 drawn dC=5.5",
+  "attacker": "profiles other chips only",
+  "bits_per_row": {
+   "1": 0.001,
+   "100.0": 0.086,
+   "10000.0": 1.327,
+   "1000000.0": 3.87,
+   "100000000.0": 5.788
+  },
+  "row_entropy_bits": 38.04
+ },
+ "assumptions": {
+  "noise_uA_rms_per_window": 5.0,
+  "k_dig_uA": 0.15,
+  "windows": 12,
+  "window_ns": 62.5
+ }
+}

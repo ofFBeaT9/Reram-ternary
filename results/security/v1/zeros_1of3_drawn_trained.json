@@ -1,0 +1,57 @@
+{
+ "design": "1of3 drawn",
+ "chips": 20,
+ "profiling_chips": 8,
+ "results": [
+  {
+   "reads_per_row": 1,
+   "corr_mean": 0.0,
+   "corr_se": 0.0,
+   "rows_exact_mean": 0.041
+  },
+  {
+   "reads_per_row": 16,
+   "corr_mean": 0.005,
+   "corr_se": 0.023,
+   "rows_exact_mean": 0.045
+  },
+  {
+   "reads_per_row": 256,
+   "corr_mean": 0.128,
+   "corr_se": 0.03,
+   "rows_exact_mean": 0.073
+  },
+  {
+   "reads_per_row": 4096,
+   "corr_mean": 0.413,
+   "corr_se": 0.032,
+   "rows_exact_mean": 0.132
+  },
+  {
+   "reads_per_row": 65536,
+   "corr_mean": 0.721,
+   "corr_se": 0.014,
+   "rows_exact_mean": 0.185
+  },
+  {
+   "reads_per_row": 1048576,
+   "corr_mean": 0.944,
+   "corr_se": 0.004,
+   "rows_exact_mean": 0.383
+  },
+  {
+   "reads_per_row": 16777216,
+   "corr_mean": 0.976,
+   "corr_se": 0.001,
+   "rows_exact_mean": 0.53
+  }
+ ],
+ "weights": "digits network, layer 1 (16.7 % zeros)",
+ "zero_count_sd": 3.28,
+ "assumptions": {
+  "noise_uA_rms_per_window": 5.0,
+  "k_dig_uA": 0.15,
+  "windows": 12,
+  "window_ns": 62.5
+ }
+}

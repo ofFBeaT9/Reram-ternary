@@ -1,0 +1,56 @@
+{
+ "design": "1of3 balanced rot",
+ "chips": 20,
+ "profiling_chips": 8,
+ "results": [
+  {
+   "reads_per_row": 1,
+   "corr_mean": 0.0,
+   "corr_se": 0.0,
+   "rows_exact_mean": 0.179
+  },
+  {
+   "reads_per_row": 16,
+   "corr_mean": 0.014,
+   "corr_se": 0.015,
+   "rows_exact_mean": 0.18
+  },
+  {
+   "reads_per_row": 256,
+   "corr_mean": -0.016,
+   "corr_se": 0.014,
+   "rows_exact_mean": 0.181
+  },
+  {
+   "reads_per_row": 4096,
+   "corr_mean": -0.015,
+   "corr_se": 0.024,
+   "rows_exact_mean": 0.178
+  },
+  {
+   "reads_per_row": 65536,
+   "corr_mean": -0.017,
+   "corr_se": 0.031,
+   "rows_exact_mean": 0.179
+  },
+  {
+   "reads_per_row": 1048576,
+   "corr_mean": -0.01,
+   "corr_se": 0.026,
+   "rows_exact_mean": 0.177
+  },
+  {
+   "reads_per_row": 16777216,
+   "corr_mean": -0.017,
+   "corr_se": 0.024,
+   "rows_exact_mean": 0.18
+  }
+ ],
+ "states": "published",
+ "assumptions": {
+  "noise_uA_rms_per_window": 5.0,
+  "k_dig_uA": 0.15,
+  "windows": 12,
+  "window_ns": 62.5
+ }
+}

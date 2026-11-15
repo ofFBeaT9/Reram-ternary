@@ -1,0 +1,47 @@
+{
+ "design": "2T2R drawn dC=extracted",
+ "test": "fixed vs random weights",
+ "traces_per_group": 150000,
+ "matrix_seed": 7,
+ "fixed_group_frozen": false,
+ "zeros_in_fixed": 562,
+ "max_abs_t_first": 529.55,
+ "max_abs_t_second": 106.06,
+ "window_of_max_first": 4,
+ "leaks_first": true,
+ "leaks_second": true,
+ "curve": [
+  {
+   "traces": 10000,
+   "t1": 137.39,
+   "t2": 29.27
+  },
+  {
+   "traces": 20000,
+   "t1": 193.42,
+   "t2": 39.92
+  },
+  {
+   "traces": 50000,
+   "t1": 305.16,
+   "t2": 61.43
+  },
+  {
+   "traces": 100000,
+   "t1": 431.57,
+   "t2": 86.21
+  },
+  {
+   "traces": 150000,
+   "t1": 529.55,
+   "t2": 106.06
+  }
+ ],
+ "seconds": 408,
+ "assumptions": {
+  "noise_uA_rms_per_window": 5.0,
+  "k_dig_uA": 0.15,
+  "windows": 12,
+  "window_ns": 62.5
+ }
+}

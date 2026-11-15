@@ -1,0 +1,57 @@
+{
+ "design": "2T2R drawn dC=extracted",
+ "chips": 20,
+ "profiling_chips": 8,
+ "results": [
+  {
+   "reads_per_row": 1,
+   "corr_mean": 0.87,
+   "corr_se": 0.006,
+   "rows_exact_mean": 0.232
+  },
+  {
+   "reads_per_row": 16,
+   "corr_mean": 0.973,
+   "corr_se": 0.001,
+   "rows_exact_mean": 0.53
+  },
+  {
+   "reads_per_row": 256,
+   "corr_mean": 0.994,
+   "corr_se": 0.0,
+   "rows_exact_mean": 0.87
+  },
+  {
+   "reads_per_row": 4096,
+   "corr_mean": 1.0,
+   "corr_se": 0.0,
+   "rows_exact_mean": 0.99
+  },
+  {
+   "reads_per_row": 65536,
+   "corr_mean": 1.0,
+   "corr_se": 0.0,
+   "rows_exact_mean": 0.994
+  },
+  {
+   "reads_per_row": 1048576,
+   "corr_mean": 1.0,
+   "corr_se": 0.0,
+   "rows_exact_mean": 1.0
+  },
+  {
+   "reads_per_row": 16777216,
+   "corr_mean": 1.0,
+   "corr_se": 0.0,
+   "rows_exact_mean": 1.0
+  }
+ ],
+ "weights": "digits network, layer 1 (16.7 % zeros)",
+ "zero_count_sd": 3.28,
+ "assumptions": {
+  "noise_uA_rms_per_window": 5.0,
+  "k_dig_uA": 0.15,
+  "windows": 12,
+  "window_ns": 62.5
+ }
+}

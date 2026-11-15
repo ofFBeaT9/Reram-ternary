@@ -1,0 +1,203 @@
+{
+ "mismatch_shared": {
+  "sd_read_mean_uA": {
+   "LRS60": 0.012,
+   "HRS4p5": 0.0063
+  },
+  "reads_correct": true,
+  "samples": 400
+ },
+ "mismatch_full": {
+  "sd_read_mean_uA": {
+   "LRS60": 0.0366,
+   "HRS4p5": 0.0079
+  },
+  "reads_correct": true,
+  "samples": 400
+ },
+ "charge_fC_per_read": {
+  "0.31uS": 113.07,
+  "4.5uS": 357.85,
+  "30uS": 769.81,
+  "60uS": 776.47
+ },
+ "precharge_fC": 83.63,
+ "read_charge_cost": {
+  "published": {
+   "one_of_three_fC": 1492.17,
+   "t2t2r_nonzero_fC": 1134.32,
+   "t2t2r_zero_fC": 715.7,
+   "ratio_at_0pct_zeros": 1.315,
+   "ratio_at_33pct_zeros": 1.5,
+   "ratio_at_50pct_zeros": 1.613,
+   "ratio_at_70pct_zeros": 1.774
+  },
+  "programmed": {
+   "one_of_three_fC": 995.95,
+   "t2t2r_nonzero_fC": 882.88,
+   "t2t2r_zero_fC": 226.14,
+   "ratio_at_0pct_zeros": 1.128,
+   "ratio_at_33pct_zeros": 1.5,
+   "ratio_at_50pct_zeros": 1.796,
+   "ratio_at_70pct_zeros": 2.354
+  }
+ },
+ "layout_term_nA": {
+  "zero_minus_nonzero": [
+   0.0,
+   -0.28,
+   0.0,
+   0.01,
+   29.13,
+   1.15,
+   -0.08,
+   -0.09,
+   -27.37,
+   -5.25,
+   -0.22,
+   -0.04
+  ],
+  "plus_minus_minus": [
+   0.0,
+   0.01,
+   -0.0,
+   0.0,
+   0.11,
+   0.02,
+   0.0,
+   -0.0,
+   2.64,
+   0.28,
+   0.09,
+   0.02
+  ]
+ },
+ "routing_sensitivity_nA_per_fF": {
+  "LRS": [
+   0.0,
+   8.021,
+   0.576,
+   0.282,
+   -0.251,
+   0.001,
+   0.0,
+   0.0,
+   4.171,
+   0.694,
+   0.041,
+   -0.001
+  ],
+  "HRS": [
+   0.0,
+   8.021,
+   0.576,
+   0.282,
+   -1.107,
+   -0.036,
+   -0.001,
+   -0.0,
+   0.865,
+   0.397,
+   0.019,
+   0.002
+  ],
+  "lrs_minus_hrs": [
+   0.0,
+   -0.0,
+   0.0,
+   0.0,
+   0.857,
+   0.037,
+   0.001,
+   0.0,
+   3.306,
+   0.296,
+   0.022,
+   -0.002
+  ]
+ },
+ "t2t2r_zero_minus_nonzero_uA": [
+  -0.0,
+  0.0,
+  0.0,
+  0.0,
+  -1.65,
+  -1.316,
+  -1.31,
+  -1.31,
+  -1.088,
+  -0.022,
+  -0.002,
+  0.0
+ ],
+ "mismatch_sd_lrs_minus_hrs_uA": [
+  0.0,
+  0.0002,
+  0.0,
+  0.0,
+  0.029,
+  0.0302,
+  0.0301,
+  0.0301,
+  0.0419,
+  0.0006,
+  0.0001,
+  0.0
+ ],
+ "conductance_fixed_pattern_sd_uA": {
+  "HRS": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.2242,
+   0.2613,
+   0.2597,
+   0.2597,
+   0.0509,
+   0.0016,
+   0.0002,
+   0.0
+  ],
+  "LRS": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0056,
+   0.0002,
+   0.0002,
+   0.0002,
+   0.0434,
+   0.0018,
+   0.0002,
+   0.0
+  ]
+ },
+ "error_detection_per_weight": {
+  "pl=0.0001,ph=0.0001": {
+   "t2t2r_silent": 0.000133,
+   "t2t2r_detected": 6.67e-05,
+   "one_of_three_silent": 2e-08,
+   "one_of_three_detected": 0.0003
+  },
+  "pl=0.001,ph=0.0001": {
+   "t2t2r_silent": 0.000733,
+   "t2t2r_detected": 6.66e-05,
+   "one_of_three_silent": 2e-07,
+   "one_of_three_detected": 0.0012
+  },
+  "pl=0.0001,ph=1e-06": {
+   "t2t2r_silent": 6.73e-05,
+   "t2t2r_detected": 6.67e-07,
+   "one_of_three_silent": 2e-10,
+   "one_of_three_detected": 0.000102
+  }
+ },
+ "assumptions": {
+  "noise_uA_rms_per_window": 5.0,
+  "k_dig_uA": 0.15,
+  "windows": 12,
+  "window_ns": 62.5
+ }
+}

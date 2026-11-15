@@ -1,0 +1,91 @@
+{
+ "note": "sense-amplifier supply current over one read in the controller's sequence, 12 windows of 62.5 ns; tt 27 C; local mismatch Monte Carlo, one seed = one physical amplifier",
+ "variant": "shared",
+ "bias_V": [
+  0.518624,
+  0.9120251
+ ],
+ "mismatch_samples": 400,
+ "line_capacitance_fF": 145.5,
+ "mean_uA_nominal": {
+  "0.31uS": 0.1508,
+  "1uS": 0.214,
+  "2uS": 0.2965,
+  "3uS": 0.3722,
+  "4.5uS": 0.4771,
+  "6uS": 0.5744,
+  "7.93uS": 0.6908,
+  "24uS": 1.0243,
+  "30uS": 1.0264,
+  "45uS": 1.0315,
+  "60uS": 1.0353,
+  "90uS": 1.0395,
+  "120uS": 1.0401
+ },
+ "windows_uA_nominal": {
+  "4.5uS": [
+   0.0003,
+   1.2098,
+   0.0833,
+   0.0446,
+   0.7142,
+   1.07,
+   1.0659,
+   1.0659,
+   0.3582,
+   0.0738,
+   0.0373,
+   0.0023
+  ],
+  "60uS": [
+   0.0003,
+   1.2097,
+   0.0833,
+   0.0446,
+   2.3644,
+   2.3857,
+   2.3762,
+   2.3762,
+   1.4461,
+   0.0954,
+   0.0395,
+   0.0021
+  ]
+ },
+ "mismatch_sd_uA_per_window": {
+  "LRS60": [
+   0.0001,
+   0.0527,
+   0.0011,
+   0.0005,
+   0.0274,
+   0.0272,
+   0.0271,
+   0.0271,
+   0.0427,
+   0.0014,
+   0.0003,
+   0.0001
+  ],
+  "HRS4p5": [
+   0.0001,
+   0.0527,
+   0.0011,
+   0.0005,
+   0.0077,
+   0.0112,
+   0.0112,
+   0.0112,
+   0.004,
+   0.0008,
+   0.0003,
+   0.0001
+  ]
+ },
+ "mismatch_sd_uA_read_mean": {
+  "LRS60": 0.012,
+  "HRS4p5": 0.0063
+ },
+ "reads_correct": true,
+ "seed_check_max_precharge_difference_uA": 0.00379
+}
