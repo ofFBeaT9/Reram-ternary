@@ -287,8 +287,8 @@ worth a paper is storing a multi-bit weight as two or three trits (section 10.2)
 
 ![](fig/brief_maturity.png)
 
-- **2D semiconductors.** A 32-bit RISC-V processor in MoS2 with 5,900 transistors (Fudan, Nature 2025). This is the largest 2D
-  circuit reported so far.
+- **2D semiconductors.** A 32-bit RISC-V processor in MoS2 with 5,900 transistors (Fudan, Nature 2025). At publication it was the largest 2D-semiconductor
+  processor; the previous record was 115 transistors.
 - **Carbon nanotubes.** A RISC-V processor (2019) and a 2-bit tensor processor (2024). In 2025–26, CNFETs on 200 mm wafers in a
   commercial silicon foundry's flow, and flexible radio-frequency transistors above 100 GHz (Nature Electronics 2026). Logic is
   still at the processor-demonstration stage.
@@ -314,7 +314,8 @@ worth a paper is storing a multi-bit weight as two or three trits (section 10.2)
 ### 11.4 General trends
 
 1. Density now comes from stacking (CFET, 3D integration, chiplets), not from shorter gates.
-2. New materials (2D, nanotubes) have reached processor demonstrations, ten or more years from volume production.
+2. New materials (2D, nanotubes) have reached processor demonstrations. By the roadmap above they are a decade or more
+   from volume production.
 3. Computing is moving toward the data: compute-in-memory, in-sensor computing, photonic links.
 4. Every new paradigm is limited by the conversions around it (analog to digital, optical to electrical, level to level). This
    is the mixed-radix question of section 10.2 in another form.
