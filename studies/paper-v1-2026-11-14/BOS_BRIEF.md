@@ -254,3 +254,92 @@ bits, it can be stored as two or three trits, and the tile's exact digital read 
 What counts as proof in each: a falsifiable claim, files that reproduce every number, and peer review. The security and scale
 papers are model results and say so; the REBEL-6 paper would be the first measured one.
 
+
+## 11. Where the field stands: nodes, new devices, radix (searched 17 November 2026)
+
+Sources are listed at the end of this section. Company statements are used for production status; journal articles for
+everything else. Years after 2026 are projections.
+
+### 11.1 Do we need another radix?
+
+No, not for these projects. Ternary is used where it fits (network weights, the REBEL-6 interface), and binary everywhere else.
+The radices beyond three that matter today are already in use elsewhere: flash memory stores up to four bits per cell, and
+quantum labs run qutrits, ququarts and qudits up to d = 7. A higher radix only helps where the device has that many states that
+can be told apart reliably. TCIM0 deliberately uses two-state devices because two states are robust. The one radix question
+worth a paper is storing a multi-bit weight as two or three trits (section 10.2).
+
+### 11.2 Silicon nodes, and what "sub-1 nm" means
+
+![](fig/brief_nodes.png)
+
+- **In production:** TSMC's N2 has been in volume production since late 2025. Samsung's SF2 has been in production since 2025.
+  Intel's 18A has been in high-volume production since late 2025. All three use gate-all-around nanosheet transistors.
+- **Next:** TSMC has scheduled A14 for risk production in 2027 and volume in 2028. Intel's 14A has the same dates. A16 is
+  reported for late 2026 but not announced.
+- **imec roadmap:** the outer-wall forksheet carries nanosheets to A10. The complementary FET (CFET), with n and p transistors
+  stacked, arrives at A7. 2D-material channels are projected for the A2 node in the 2040s.
+- **"Sub-1 nm" is a name, not a size.** imec projects the contacted gate pitch to stay near 42 nm from A10 to A5. Density will
+  come from stacking and smaller cells, not from shorter gates.
+- **A roadmap slip to note:** an earlier imec roadmap put A2 at 2036 to 2039. The 2026 version reported in the press puts it in
+  the 2040s.
+
+### 11.3 Beyond silicon, and the other computing paradigms
+
+![](fig/brief_maturity.png)
+
+- **2D semiconductors.** A 32-bit RISC-V processor in MoS2 with 5,900 transistors (Fudan, Nature 2025). This is the largest 2D
+  circuit reported so far.
+- **Carbon nanotubes.** A RISC-V processor (2019) and a 2-bit tensor processor (2024). In 2025–26, CNFETs on 200 mm wafers in a
+  commercial silicon foundry's flow, and flexible radio-frequency transistors above 100 GHz (Nature Electronics 2026). Logic is
+  still at the processor-demonstration stage.
+- **Ternary devices.** Many devices and small gates, no product: wafer-scale tunnelling ternary CMOS (Nature Electronics 2019),
+  reconfigurable binary–ternary transistors (Nature Communications 2025), wafer-scale stacked ternary logic (Advanced Science 2026).
+- **Photonic computing.** Two Nature papers in 2025:
+  - a processor with four 128 × 128 photonic tensor cores that ran ResNet and BERT, at 65.5 TOPS and 78 W of electronic power;
+  - a 64 × 64 matrix accelerator with more than 16,000 photonic components.
+
+  The electronics around the optics still sets much of the energy.
+- **Neuromorphic computing.**
+  - Intel's Hala Point: 1,152 Loihi 2 chips, 1.15 billion neurons, at most 2,600 W.
+  - A system of about 2 billion neurons was reported in China in 2025 (secondary source).
+  - Memristor compute-in-memory chips in 2026 papers still use 32 × 32 to 64 × 64 arrays.
+- **Quantum, and why it counts as higher radix.**
+  - Google's Willow ran a distance-7 surface code below threshold, at 0.143 % error per cycle (Nature 2025).
+  - Qudits are quantum systems with d > 2 levels. A trapped-ion processor computed with up to 7 levels per ion (Nature Physics 2022).
+  - An error-corrected qutrit and ququart outlived their best physical counterparts by factors of 1.82 and 1.87 (Nature 2025).
+
+  This is a different physics from classical ternary. Its lesson for us is the same one: a higher radix pays only where the
+  hardware has the levels anyway.
+
+### 11.4 General trends
+
+1. Density now comes from stacking (CFET, 3D integration, chiplets), not from shorter gates.
+2. New materials (2D, nanotubes) have reached processor demonstrations, ten or more years from volume production.
+3. Computing is moving toward the data: compute-in-memory, in-sensor computing, photonic links.
+4. Every new paradigm is limited by the conversions around it (analog to digital, optical to electrical, level to level). This
+   is the mixed-radix question of section 10.2 in another form.
+5. Higher radix is succeeding where the physics gives the levels for free: multi-level flash, qudits, ternary network weights.
+   It is not succeeding as general-purpose logic.
+
+### 11.5 What this means for the meeting
+
+- TCIM0 sits in trend 3 and is open and verified at the design level, which most compute-in-memory work is not.
+- REBEL-6 is real ternary silicon in a field where most ternary work stops at small gates. That is the strongest reason to
+  measure it.
+- The honest pitch is not "ternary will replace binary". It is "ternary where the data are ternary, and measured".
+
+**Sources (opened or read from the publisher's page or abstract, 17 November 2026):**
+
+- Ao et al., "A RISC-V 32-bit microprocessor based on two-dimensional semiconductors," Nature 640 (2025), doi:10.1038/s41586-025-08759-9.
+- Google Quantum AI and Collaborators, "Quantum error correction below the surface code threshold," Nature 638, 920–926 (2025), doi:10.1038/s41586-024-08449-y.
+- Brock et al., "Quantum error correction of qudits beyond break-even," Nature 641, 612–618 (2025), doi:10.1038/s41586-025-08899-y.
+- Ringbauer et al., "A universal qudit quantum processor with trapped ions," Nature Physics 18, 1053–1057 (2022).
+- Ahmed et al., "Universal photonic artificial intelligence acceleration," Nature 640, 368–374 (2025); Hua et al., "An integrated large-scale photonic accelerator with ultralow latency," Nature 640, 361–367 (2025). Numbers as summarized in arXiv 2509.01262.
+- "Tunnelling-based ternary metal–oxide–semiconductor technology," Nature Electronics (2019), doi:10.1038/s41928-019-0272-8.
+- "Reconfigurable binary and ternary logic devices enabling logic state modulation," Nature Communications (2025), doi:10.1038/s41467-025-62116-y.
+- Kim et al., "Wafer-Scale 3D Integration for High-Density Multi-Valued Neuromorphic Logic," Advanced Science (2026).
+- "Flexible radio-frequency carbon nanotube transistors operating at frequencies above 100 GHz," Nature Electronics 9, 788–796 (2026).
+- Review: "Enabling the Angstrom Era: 2D material-based multi-bridge-channel CFETs," npj 2D Materials and Applications (2025), doi:10.1038/s41699-025-00591-z.
+- imec, "Advancing the development of monolithic CFETs" (2025); TrendForce, "imec roadmap extends to A3 by 2038" (9 July 2026).
+- Production status: TSMC, Samsung and Intel statements as collected by penchan.co (October 2026) and Wikipedia, "2 nm process".
+- Intel, "Intel builds world's largest neuromorphic system" (Hala Point, 2024).
