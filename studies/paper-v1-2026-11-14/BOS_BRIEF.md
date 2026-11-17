@@ -16,6 +16,8 @@ Prepared 14 November 2026. Numbers are from `results/` in the repository `Reram-
 - Two further programmes use the same hardware line and are covered in section 9: the minimum intelligence scale (how small
   a model can be, in bits) and KAIROS (a benchtop living-cell pharmacology instrument). Both are at the in-silico stage.
 
+![](fig/brief_map.png)
+
 ## 2. What is new this week
 
 | Finding | Number |
@@ -29,6 +31,10 @@ Prepared 14 November 2026. Numbers are from `results/` in the repository `Reram-
 | Fault found in the earlier study | the mismatch seed had no effect in ngspice 42, so every (sample, conductance) pair was a different amplifier; the 8 November position numbers (26.32, 2.70) are withdrawn |
 | Cost of one-of-three | 1.56× cell area, 1.53× macro area, 1.50× read charge at one third zeros |
 | Side benefit | 9 of 9 single-device flips are detected (2T2R: 2 of 6); silent weight errors fall from 1.3e-4 to 2e-8 at a flip probability of 1e-4 |
+
+![](fig/fig2_attack.png)
+
+*The key result: how many reads of every row an attacker needs to recover its zero count. Model, not silicon.*
 
 The model changed too: waveforms now follow the controller's read sequence (precharge, read, recharge), 400 independent
 amplifier samples replace 40, and the extracted bit-line capacitances are in. The numbers of the 8 November draft are superseded.
@@ -157,6 +163,8 @@ a count under an explicit code gives 610.4 bits.
 | Ternary weights with training | 8.9 % only at 23 kbit |
 | 8-bit / 6-bit / 4-bit weights | free / already costs / fails without retraining |
 
+![](fig/brief_mis.png)
+
 **What it means for the hardware.** Physical structure is supported. "Ternary for free" is not: the model the tile would run is
 not shown to be ternary. Either ternary training is made to work at small size, or a weight is stored as several ternary digits,
 which the tile's exact digital read allows in principle and which is not designed.
@@ -211,4 +219,38 @@ access, a Caco-2 bank, the pre-registered analysis.
   than ternary weights.
 - KAIROS is a design with a first study that is small, falsifiable and needs a host laboratory more than it needs new hardware.
 - The link to his group is the ternary array and REBEL-6. The existing chip is where a first measured number can come from.
+
+## 10. Why ternary, why mixed radix, and the publication plan
+
+### 10.1 Why ternary, said honestly
+
+General-purpose ternary computing is a niche. Binary won because a transistor is most reliable with two states, and the
+radix-economy argument for base 3 does not survive real device costs. Two places are different:
+
+- **Ternary network weights (−1, 0, +1).** A multiplication becomes a sign choice and a weight needs about 1.6 bits. This is an
+  active field, and its zeros are what the security paper is about.
+- **Devices with three natural states** (ReRAM levels, some nanotube transistors), where a binary code wastes the device.
+
+### 10.2 Mixed radix
+
+Use each radix where the physics and the data favor it, and count the conversions. TCIM0 already works this way:
+
+![](fig/brief_radix.png)
+
+The research question is when the conversion cost pays for itself. The scale pilot adds a concrete case: if a weight needs a few
+bits, it can be stored as two or three trits, and the tile's exact digital read allows that. That variant is not designed.
+
+### 10.3 Publication plan
+
+| Project | Output | Venue (examples) | Time |
+|---|---|---|---|
+| TCIM0 security | preprint, then a peer-reviewed paper | arXiv; HOST, DATE, ASP-DAC, IEEE TCAS | 1–2 months |
+| REBEL-6 measurements | short measured paper, with USN | ISMVL (2027 deadline to check) | 2–3 months |
+| Minimum intelligence scale | preprint, then a workshop paper | arXiv; an ML-for-science workshop | 2–4 months |
+| KAIROS | design preprint; the experiments become a PhD direction | arXiv or bioRxiv; later Lab on a Chip | years |
+
+![](fig/brief_plan.png)
+
+What counts as proof in each: a falsifiable claim, files that reproduce every number, and peer review. The security and scale
+papers are model results and say so; the REBEL-6 paper would be the first measured one.
 
